@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<font>
+<info zoom="1.0" lspace="0" space="4" line="39" bg="none" face="0" size="16" bold="0" italic="0" charset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="1,1"/>
+<common lineHeight="39" base="26" scaleW="1536" scaleH="48" pages="1" packed="0"/>
+<pages>
+<page id="0" file="font-54.png"/>
+</pages>
+<chars count="27">
+<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="23" xadvance="4" page="0" chnl="0"/>
+<char character="a" id="97" x="0" y="0" width="21" height="30" xoffset="0" yoffset="0" padding="0" xadvance="21" page="0" chnl="0"/>
+<char character="b" id="98" x="19" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="c" id="99" x="39" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="d" id="100" x="54" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="e" id="101" x="69" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="f" id="102" x="82" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="g" id="103" x="100" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="h" id="104" x="118" y="0" width="19" height="30" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="i" id="105" x="133" y="0" width="13" height="30" xoffset="0" yoffset="0" padding="0" xadvance="13" page="0" chnl="0"/>
+<char character="j" id="106" x="144" y="0" width="16" height="30" xoffset="0" yoffset="0" padding="0" xadvance="16" page="0" chnl="0"/>
+<char character="k" id="107" x="159" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="l" id="108" x="174" y="0" width="16" height="30" xoffset="0" yoffset="0" padding="0" xadvance="16" page="0" chnl="0"/>
+<char character="m" id="109" x="190" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="n" id="110" x="208" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="o" id="111" x="226" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="p" id="112" x="244" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="q" id="113" x="262" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="r" id="114" x="280" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="s" id="115" x="298" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="t" id="116" x="312" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="u" id="117" x="325" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="v" id="118" x="343" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="w" id="119" x="361" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="x" id="120" x="379" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="y" id="121" x="397" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+<char character="z" id="122" x="411" y="0" width="18" height="30" xoffset="0" yoffset="0" padding="0" xadvance="18" page="0" chnl="0"/>
+</chars>
+</font>

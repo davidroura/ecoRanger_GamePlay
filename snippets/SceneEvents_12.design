@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-mouse-press-release comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <save-game comment="false" x="26" y="42">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="1" id="-1">
+                                <scene-change-through comment="false" x="48" y="92">
+                                    <scene eid="2" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </scene-change-through>
+                            </group>
+                            <save-success comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="131">
+                            <group eventID="1" id="-1"/>
+                        </else>
+                    </group>
+                </save-game>
+            </group>
+            <int id="0" val="0"/>
+        </event-mouse-press-release>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-43-2 comment="false" x="26" y="40">
+                    <int id="0" val="10"/>
+                </set-val-43-2>
+                <if comment="false" x="26" y="60">
+                    <group eventID="2" id="-1">
+                        <set-val-43-3 comment="false" x="37" y="90">
+                            <div comment="false" id="0" x="0" y="0">
+                                <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                            </div>
+                        </set-val-43-3>
+                        <set-val-43-4 comment="false" x="37" y="120">
+                            <roundnew comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <get-val-43-3 comment="false" id="1" x="0" y="0"/>
+                            </roundnew>
+                        </set-val-43-4>
+                        <set-val-43-5 comment="false" x="37" y="158">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                            </mod>
+                        </set-val-43-5>
+                        <set-game-val-14 comment="false" x="37" y="188">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-game-val-14>
+                        <set-game-val-7 comment="false" x="37" y="218">
+                            <get-val-43-5 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-7>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                        <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+                <if comment="false" x="26" y="255">
+                    <group eventID="2" id="-1">
+                        <set-val-43-3 comment="false" x="37" y="285">
+                            <div comment="false" id="0" x="0" y="0">
+                                <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                            </div>
+                        </set-val-43-3>
+                        <set-val-43-4 comment="false" x="37" y="315">
+                            <roundnew comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <get-val-43-3 comment="false" id="1" x="0" y="0"/>
+                            </roundnew>
+                        </set-val-43-4>
+                        <set-val-43-5 comment="false" x="37" y="361">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                            </mod>
+                        </set-val-43-5>
+                        <set-game-val-16 comment="false" x="37" y="391">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-16 comment="false" id="0" x="0" y="0"/>
+                                <get-val-43-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-game-val-16>
+                        <set-game-val-8 comment="false" x="37" y="421">
+                            <get-val-43-5 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-8>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                        <get-val-43-2 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

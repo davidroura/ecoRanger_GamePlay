@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="5" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="2" name="start" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="startBG" opacity="100" order="1" rid="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="20" id="2" name="buyMaterial" pts="4,-112.5,10.0,112.5,10.0,112.5,-10.0,-112.5,-10.0" r="64" type="box" w="224" x="36" y="46"/>
+        <region b="64" g="64" h="20" id="3" name="buyBlocks" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="36" y="68"/>
+        <region b="64" g="64" h="20" id="4" name="deleteMaterial" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="36" y="91"/>
+        <region b="64" g="64" h="20" id="5" name="deleteBlock" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="36" y="113"/>
+        <region b="64" g="64" h="20" id="6" name="save" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="36" y="135"/>
+    </regions>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="43" name="playButton 1" sx="0.44886363" sy="0.46153846" x="-20" y="327" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.43076923" sy="0.43076923" x="216" y="-29" z="0"/>
+    </actors>
+    <snippets/>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>

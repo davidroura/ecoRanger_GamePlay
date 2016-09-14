@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenes>
+    <scene desc="" format="3.4.0" id="0" name="level 1"/>
+    <scene desc="" format="3.4.0" id="2" name="start"/>
+    <scene desc="" format="3.4.0" id="3" name="options"/>
+    <scene desc="" format="3.4.0" id="4" name="gameOver"/>
+    <scene desc="" format="3.4.0" id="5" name="newsRoom1"/>
+    <scene desc="" format="3.4.0" id="7" name="maker"/>
+    <scene desc="" format="3.4.0" id="8" name="upgrades"/>
+    <scene desc="" format="3.4.0" id="9" name="glassRecycle"/>
+    <scene desc="" format="3.4.0" id="11" name="melting"/>
+    <scene desc="" format="3.4.0" id="12" name="endShot"/>
+    <scene desc="" format="3.4.0" id="13" name="buildPick"/>
+    <scene desc="" format="3.4.0" id="14" name="buildComplete"/>
+    <scene desc="" format="3.4.0" id="15" name="presentation"/>
+    <scene desc="" format="3.4.0" id="16" name="tutorial"/>
+</scenes>

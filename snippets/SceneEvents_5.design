@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <create-region comment="false" x="37" y="65">
+                            <int id="0" val="130"/>
+                            <int id="1" val="390"/>
+                            <int id="2" val="50"/>
+                            <int id="3" val="20"/>
+                        </create-region>
+                        <set-val-17-1 comment="false" x="37" y="85">
+                            <REGION eid="lastcreated" id="0"/>
+                        </set-val-17-1>
+                    </group>
+                    <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <play-sound-channel comment="false" x="26" y="124">
+                    <int id="0" val="0"/>
+                    <sound eid="78" id="1"/>
+                    <int id="2" val="0"/>
+                </play-sound-channel>
+                <dolater comment="false" x="26" y="151">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="178">
+                            <int id="0" val="newsRoom"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="0"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="210">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="237">
+                            <int id="0" val="newsRoom"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="269">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="296">
+                            <int id="0" val="audobonMess"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="10"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="328">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="355">
+                            <int id="0" val="newsRoom"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="15"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="387">
+                    <group eventID="1" id="-1">
+                        <play-sound-channel comment="false" x="37" y="414">
+                            <int id="0" val="0"/>
+                            <sound eid="80" id="1"/>
+                            <int id="2" val="0"/>
+                        </play-sound-channel>
+                        <say-this comment="false" x="37" y="441">
+                            <int id="0" val="introHQBG"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="28"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="473">
+                    <group eventID="1" id="-1">
+                        <set-game-val-25 comment="false" x="37" y="500">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-25>
+                        <scene-change-through comment="false" x="37" y="525">
+                            <scene eid="2" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1"/>
+                        </scene-change-through>
+                    </group>
+                    <int id="0" val="34"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="removeAllBG"/>
+                </say-this>
+                <create-bglayer-from-bg comment="false" x="26" y="60">
+                    <int id="0" val="audobonMessBG"/>
+                    <int id="1" val="audobonMessBG"/>
+                    <int id="2" val="1"/>
+                </create-bglayer-from-bg>
+            </group>
+            <int id="0" val="audobonMess"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="removeAllBG"/>
+                </say-this>
+                <create-bglayer-from-bg comment="false" x="26" y="60">
+                    <int id="0" val="newsRoomBG"/>
+                    <int id="1" val="newsRoomBG"/>
+                    <int id="2" val="1"/>
+                </create-bglayer-from-bg>
+            </group>
+            <int id="0" val="newsRoom"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <set-font-new comment="false" x="37" y="65">
+                            <font eid="54" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="92">
+                            <int id="0" val="Skip News"/>
+                            <int id="1" val="140"/>
+                            <int id="2" val="400"/>
+                        </draw-text>
+                    </group>
+                    <get-game-val-25 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-game-val-25 comment="false" x="26" y="42">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-25>
+                <control-sound-channel comment="false" x="26" y="67">
+                    <int id="0" val="0"/>
+                    <int id="1" val="0"/>
+                </control-sound-channel>
+                <scene-change-through comment="false" x="26" y="94">
+                    <scene eid="2" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </scene-change-through>
+            </group>
+            <REGION eid="var" id="0" vid="1"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="removeAllBG"/>
+                </say-this>
+                <create-bglayer-from-bg comment="false" x="26" y="60">
+                    <int id="0" val="introHQBG"/>
+                    <int id="1" val="introHQBG"/>
+                    <int id="2" val="1"/>
+                </create-bglayer-from-bg>
+            </group>
+            <int id="0" val="introHQBG"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <remove-bglayer comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <int id="1" val="introHQBG"/>
+                </remove-bglayer>
+                <remove-bglayer comment="false" x="26" y="67">
+                    <int id="0" val="1"/>
+                    <int id="1" val="newsRoomBG"/>
+                </remove-bglayer>
+                <remove-bglayer comment="false" x="26" y="94">
+                    <int id="0" val="1"/>
+                    <int id="1" val="audobonMessBG"/>
+                </remove-bglayer>
+            </group>
+            <int id="0" val="removeAllBG"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+</groups>

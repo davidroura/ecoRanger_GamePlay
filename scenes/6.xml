@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="21" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="6" name="workshop" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="3" locked="true" name="workshopBG" opacity="100" order="1" rid="22" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="38" id="0" name="boosterUpgrade" pts="4,0.0,0.0,0.0,38.0,198.0,38.0,198.0,0.0" r="64" type="box" w="198" x="68" y="172"/>
+        <region b="64" g="64" h="50" id="1" name="botUpgrade" pts="4,0.0,0.0,0.0,50.0,198.0,50.0,198.0,0.0" r="64" type="box" w="198" x="70" y="283"/>
+    </regions>
+    <terrainRegions/>
+    <actors/>
+    <snippets/>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>

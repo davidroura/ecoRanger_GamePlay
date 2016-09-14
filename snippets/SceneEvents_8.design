@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-device-swipe comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <vibrate comment="false" x="26" y="42">
+                    <int id="0" val="0.2"/>
+                </vibrate>
+                <scene-change-through comment="false" x="26" y="62">
+                    <scene eid="7" id="0"/>
+                    <int id="1" val="3"/>
+                    <int id="2" val="0.3"/>
+                </scene-change-through>
+            </group>
+            <int id="0" val="3"/>
+        </event-device-swipe>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <scene-change-through comment="false" x="26" y="42">
+                    <scene eid="13" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </scene-change-through>
+            </group>
+            <REGION eid="0" id="0"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="declareVariables"/>
+                </say-this>
+                <set-font-new comment="false" x="26" y="60">
+                    <font eid="54" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="87">
+                    <get-val-23-8 comment="false" id="0" x="0" y="0"/>
+                    <get-val-23-2 comment="false" id="1" x="0" y="0"/>
+                    <get-val-23-1 comment="false" id="2" x="0" y="0"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="112">
+                    <get-val-23-5 comment="false" id="0" x="0" y="0"/>
+                    <get-val-23-3 comment="false" id="1" x="0" y="0"/>
+                    <get-val-23-1 comment="false" id="2" x="0" y="0"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="137">
+                    <get-val-23-6 comment="false" id="0" x="0" y="0"/>
+                    <get-val-23-4 comment="false" id="1" x="0" y="0"/>
+                    <get-val-23-1 comment="false" id="2" x="0" y="0"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-23-5 comment="false" x="26" y="40">
+                    <int id="0" val="50"/>
+                </set-val-23-5>
+                <set-val-23-6 comment="false" x="26" y="60">
+                    <int id="0" val="50"/>
+                </set-val-23-6>
+                <set-val-23-7 comment="false" x="26" y="80">
+                    <int id="0" val="0"/>
+                </set-val-23-7>
+                <set-val-23-8 comment="false" x="26" y="100">
+                    <int id="0" val="Dozer Strength"/>
+                </set-val-23-8>
+                <say-this comment="false" x="26" y="120">
+                    <int id="0" val="declareVariables"/>
+                </say-this>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-23-1 comment="false" x="26" y="40">
+                    <int id="0" val="60"/>
+                </set-val-23-1>
+                <set-val-23-2 comment="false" x="26" y="60">
+                    <int id="0" val="52"/>
+                </set-val-23-2>
+                <set-val-23-3 comment="false" x="26" y="80">
+                    <int id="0" val="195"/>
+                </set-val-23-3>
+                <set-val-23-4 comment="false" x="26" y="100">
+                    <int id="0" val="260"/>
+                </set-val-23-4>
+            </group>
+            <int id="0" val="declareVariables"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1"/>
+            <int id="0" val="addItemY"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+</groups>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-12-1 comment="false" x="26" y="40">
+                    <int id="0" val="60"/>
+                </set-val-12-1>
+                <set-val-12-2 comment="false" x="26" y="60">
+                    <int id="0" val="1"/>
+                </set-val-12-2>
+                <set-val-12-3 comment="false" x="26" y="80">
+                    <int id="0" val="0"/>
+                </set-val-12-3>
+                <set-val-12-10 comment="false" x="26" y="100">
+                    <int id="0" val="0.3"/>
+                </set-val-12-10>
+                <say-this comment="false" x="26" y="120">
+                    <int id="0" val="doAfter"/>
+                </say-this>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="timeCount"/>
+                </say-this>
+                <if comment="false" x="26" y="60">
+                    <group eventID="3" id="-1">
+                        <say-this comment="false" x="37" y="90">
+                            <int id="0" val="doAfter"/>
+                        </say-this>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-12-5 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-12-2 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-12-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-12-2>
+                <if comment="false" x="26" y="70">
+                    <group eventID="4" id="-1">
+                        <set-val-12-3 comment="false" x="37" y="100">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-12-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-val-12-3>
+                        <set-val-12-2 comment="false" x="37" y="130">
+                            <int id="0" val="0"/>
+                        </set-val-12-2>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-12-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-12-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+            </group>
+            <int id="0" val="timeCount"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-12-5 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-12-5>
+                <dolater comment="false" x="26" y="65">
+                    <group eventID="5" id="-1">
+                        <set-val-12-4 comment="false" x="37" y="97">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="2"/>
+                            </randint>
+                        </set-val-12-4>
+                        <say-this comment="false" x="37" y="122">
+                            <int id="0" val="blockAlign"/>
+                        </say-this>
+                    </group>
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <int id="1" val="5"/>
+                    </randint>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="doAfter"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-12-9 comment="false" x="26" y="40">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <int id="1" val="5"/>
+                    </randint>
+                </set-val-12-9>
+                <set-val-12-8 comment="false" x="26" y="65">
+                    <int id="0" val="0"/>
+                </set-val-12-8>
+                <set-val-12-7 comment="false" x="26" y="85">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-12-7>
+                <set-val-12-11 comment="false" x="26" y="110">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="50"/>
+                        <int id="1" val="250"/>
+                    </randint>
+                </set-val-12-11>
+                <while comment="false" x="26" y="135">
+                    <group eventID="6" id="-1">
+                        <say-this comment="false" x="37" y="165">
+                            <int id="0" val="dropTrash"/>
+                        </say-this>
+                        <if comment="false" x="37" y="185">
+                            <group eventID="6" id="-1">
+                                <set-val-12-7 comment="false" x="48" y="215">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-12-7>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-12-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-12-9 comment="false" id="1" x="0" y="0"/>
+                            </moreeq>
+                        </if>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-12-7 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </while>
+                <set-val-12-9 comment="false" x="26" y="264">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-12-9 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-12-9>
+                <dolater comment="false" x="26" y="294">
+                    <group eventID="6" id="-1">
+                        <set-val-12-5 comment="false" x="37" y="331">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-12-5>
+                    </group>
+                    <times comment="false" id="0" x="0" y="0">
+                        <get-val-12-9 comment="false" id="0" x="0" y="0"/>
+                        <get-val-12-10 comment="false" id="1" x="0" y="0"/>
+                    </times>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="blockAlign"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="7" id="-1">
+                        <if comment="false" x="37" y="77">
+                            <group eventID="7" id="-1"/>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-12-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </eq>
+                        </if>
+                        <else-if comment="false" x="37" y="139">
+                            <group eventID="7" id="-1">
+                                <set-val-12-11 comment="false" x="48" y="169">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-12-11 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="15"/>
+                                    </plus>
+                                </set-val-12-11>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-12-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </else-if>
+                        <else-if comment="false" x="37" y="211">
+                            <group eventID="7" id="-1">
+                                <set-val-12-11 comment="false" x="48" y="241">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-val-12-11 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="15"/>
+                                    </minus>
+                                </set-val-12-11>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-12-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </eq>
+                        </else-if>
+                        <set-val-12-12 comment="false" x="37" y="283">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <int id="1" val="3"/>
+                            </randint>
+                        </set-val-12-12>
+                        <if comment="false" x="37" y="308">
+                            <group eventID="7" id="-1">
+                                <create-actor-on-layer comment="false" x="48" y="338">
+                                    <actortype eid="8" id="0"/>
+                                    <get-val-12-11 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="-5"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="gamePlay"/>
+                                </create-actor-on-layer>
+                                <scaleTo comment="false" x="48" y="370">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="70"/>
+                                    <int id="2" val="70"/>
+                                    <int id="3" val="0"/>
+                                    <int id="4" val="0"/>
+                                </scaleTo>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-12-12 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else-if comment="false" x="37" y="409">
+                            <group eventID="7" id="-1">
+                                <create-actor-on-layer comment="false" x="48" y="439">
+                                    <actortype eid="104" id="0"/>
+                                    <get-val-12-11 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="-5"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="gamePlay"/>
+                                </create-actor-on-layer>
+                                <scaleTo comment="false" x="48" y="471">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="30"/>
+                                    <int id="3" val="0"/>
+                                    <int id="4" val="0"/>
+                                </scaleTo>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-12-12 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </eq>
+                        </else-if>
+                        <else comment="false" x="37" y="510">
+                            <group eventID="7" id="-1">
+                                <create-actor-on-layer comment="false" x="48" y="530">
+                                    <actortype eid="15" id="0"/>
+                                    <get-val-12-11 comment="false" id="1" x="0" y="0"/>
+                                    <int id="2" val="-5"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="gamePlay"/>
+                                </create-actor-on-layer>
+                                <scaleTo comment="false" x="48" y="562">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="70"/>
+                                    <int id="2" val="70"/>
+                                    <int id="3" val="0"/>
+                                    <int id="4" val="0"/>
+                                </scaleTo>
+                            </group>
+                        </else>
+                    </group>
+                    <times comment="false" id="0" x="0" y="0">
+                        <get-val-12-8 comment="false" id="0" x="0" y="0"/>
+                        <get-val-12-10 comment="false" id="1" x="0" y="0"/>
+                    </times>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <set-val-12-8 comment="false" x="26" y="613">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-12-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-12-8>
+            </group>
+            <int id="0" val="dropTrash"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+</groups>

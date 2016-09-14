@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-device-swipe comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <scene-change-through comment="false" x="26" y="42">
+                    <scene eid="2" id="0"/>
+                    <int id="1" val="4"/>
+                    <int id="2" val="0.3"/>
+                </scene-change-through>
+            </group>
+            <int id="0" val="2"/>
+        </event-device-swipe>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-color comment="false" x="26" y="40">
+                    <color b="51" g="51" id="0" r="51"/>
+                </set-color>
+                <set-val-6-1 comment="false" x="26" y="67">
+                    <int id="0" val="68"/>
+                </set-val-6-1>
+                <if comment="false" x="26" y="87">
+                    <group eventID="2" id="-1">
+                        <set-val-6-2 comment="false" x="37" y="112">
+                            <int id="0" val="230"/>
+                        </set-val-6-2>
+                    </group>
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="144">
+                    <group eventID="2" id="-1">
+                        <set-val-6-2 comment="false" x="37" y="164">
+                            <int id="0" val="266"/>
+                        </set-val-6-2>
+                    </group>
+                </else>
+                <drawfill-rect comment="false" x="26" y="196">
+                    <int id="0" val="1"/>
+                    <get-val-6-1 comment="false" id="1" x="0" y="0"/>
+                    <get-val-6-2 comment="false" id="2" x="0" y="0"/>
+                    <int id="3" val="17"/>
+                    <int id="4" val="18"/>
+                </drawfill-rect>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <scene-change-through comment="false" x="26" y="42">
+                    <scene eid="2" id="0"/>
+                    <int id="1" val="4"/>
+                    <int id="2" val="0.3"/>
+                </scene-change-through>
+            </group>
+            <REGION eid="0" id="0"/>
+            <int id="1" val="0"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-game-val-0 comment="false" x="26" y="42">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-0>
+            </group>
+            <REGION eid="1" id="0"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-game-val-0 comment="false" x="26" y="42">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-0>
+            </group>
+            <REGION eid="2" id="0"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

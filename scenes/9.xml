@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="25" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="85.0" height="480" id="9" name="glassRecycle" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="2" locked="true" name="recyclingdesk" opacity="100" order="1" rid="28" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="54" id="0" name="Region 0" pts="4,0.0,0.0,0.0,54.0,169.0,54.0,169.0,0.0" r="64" type="box" w="169" x="111" y="281"/>
+    </regions>
+    <terrainRegions>
+        <terrainRegion b="64" g="64" group="1" h="100" id="0" name="Terrain 0" pts="4,-160.0,-50.0,160.0,-50.0,160.0,50.0,-160.0,50.0" r="64" type="box" w="320" x="2" y="340"/>
+    </terrainRegions>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="25" name="recycleBottles1 1" sx="1.9166666" sy="1.9166666" x="23" y="281" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="89" name="recycleBottles3 2" sx="2.3214285" sy="2.3214285" x="65" y="260" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="91" name="recycleBottles4 3" sx="2.1111112" sy="2.1111112" x="97" y="281" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="93" name="recycleBottles5 4" sx="2.4444444" sy="2.4444444" x="132" y="289" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="95" name="recycleBottles6 5" sx="2.0" sy="2.0" x="169" y="252" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="97" name="recycleBottles7 6" sx="2.375" sy="2.375" x="202" y="269" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="3" id="99" name="recycleBottles8 7" sx="2.857143" sy="2.857143" x="234" y="249" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="3" id="101" name="recycleBottles9 8" sx="2.6666667" sy="2.6666667" x="269" y="288" z="0"/>
+    </actors>
+    <snippets>
+        <s enabled="true" id="57">
+            <prop id="1" list="0" val="-1"/>
+            <prop id="2" list="0" val="-1"/>
+            <prop id="3" list="0" val="0.0"/>
+            <prop id="4" list="0" val="false"/>
+            <prop id="5" list="0" val="0"/>
+            <prop id="6" list="0" val="0.0"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val=""/>
+        </s>
+    </snippets>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>

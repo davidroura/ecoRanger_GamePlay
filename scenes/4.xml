@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="10" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="4" name="gameOver" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="emptyRoom" opacity="100" order="2" rid="6" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="2" locked="true" name="UIEnd" opacity="100" order="1" rid="7" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="49" name="retryButton 1" sx="0.51428574" sy="0.54285717" x="141" y="259" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="47" name="recycleButton 2" sx="0.21022727" sy="0.2" x="-77" y="231" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="51" name="homeButton 3" sx="0.5675676" sy="0.5" x="200" y="257" z="0"/>
+    </actors>
+    <snippets/>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>

@@ -1,0 +1,15 @@
+#
+#Tue May 10 17:35:54 CEST 2016
+style=bold
+alphabet=
+color=\#00ccff
+shadow.y=1
+family=SansSerif
+shadow.x=1
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=1
+chars=all
+stroke.size=0
+antialias=true
+size=12

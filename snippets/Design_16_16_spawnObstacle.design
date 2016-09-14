@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-16-1 comment="false" x="26" y="40">
+                    <int id="0" val="60"/>
+                </set-val-16-1>
+                <set-val-16-2 comment="false" x="26" y="60">
+                    <int id="0" val="1"/>
+                </set-val-16-2>
+                <set-val-16-3 comment="false" x="26" y="80">
+                    <int id="0" val="0"/>
+                </set-val-16-3>
+                <periodic comment="false" x="26" y="100">
+                    <group eventID="1" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="132">
+                            <actortype eid="12" id="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="50"/>
+                                <int id="1" val="280"/>
+                            </randint>
+                            <int id="2" val="-5"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                        <scaleTo comment="false" x="37" y="164">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="70"/>
+                            <int id="2" val="70"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                    </group>
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="4"/>
+                        <int id="1" val="6"/>
+                    </randint>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-16-2 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-16-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-16-2>
+                <if comment="false" x="26" y="70">
+                    <group eventID="2" id="-1">
+                        <set-val-16-3 comment="false" x="37" y="100">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-16-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-val-16-3>
+                        <set-val-16-2 comment="false" x="37" y="130">
+                            <int id="0" val="0"/>
+                        </set-val-16-2>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-16-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-16-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+            </group>
+            <int id="0" val="timeCount"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="timeCount"/>
+                </say-this>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

@@ -1,0 +1,15 @@
+#
+#Fri Apr 29 11:48:34 CEST 2016
+style=plain
+alphabet=
+color=\#ff0000
+shadow.y=1
+family=SansSerif
+shadow.x=1
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=1
+chars=all
+stroke.size=0
+antialias=true
+size=13

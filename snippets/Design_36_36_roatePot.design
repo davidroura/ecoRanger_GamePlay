@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-36-1 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-36-1>
+                <set-val-36-7 comment="false" x="26" y="60">
+                    <int id="0" val="0"/>
+                </set-val-36-7>
+                <set-val-36-5 comment="false" x="26" y="80">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-36-5>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <setangle comment="false" x="37" y="75">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                        </setangle>
+                        <if comment="false" x="37" y="107">
+                            <group eventID="2" id="-1">
+                                <set-val-36-1 comment="false" x="48" y="140">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-val-36-1 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="10"/>
+                                    </minus>
+                                </set-val-36-1>
+                            </group>
+                            <swipe-detect comment="false" id="0" x="0" y="0">
+                                <int id="0" val="3"/>
+                            </swipe-detect>
+                        </if>
+                        <if comment="false" x="37" y="182">
+                            <group eventID="2" id="-1">
+                                <set-val-36-1 comment="false" x="48" y="215">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-36-1 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="10"/>
+                                    </plus>
+                                </set-val-36-1>
+                            </group>
+                            <swipe-detect comment="false" id="0" x="0" y="0">
+                                <int id="0" val="2"/>
+                            </swipe-detect>
+                        </if>
+                        <set-val-36-1 comment="false" x="37" y="257">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-36-1 comment="false" id="0" x="0" y="0"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <accelerometer comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </accelerometer>
+                                    <int id="1" val="-1"/>
+                                </times>
+                            </plus>
+                        </set-val-36-1>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                            <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-val-36-1 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="-120"/>
+                        </more>
+                    </or>
+                </if>
+                <if comment="false" x="26" y="312">
+                    <group eventID="2" id="-1">
+                        <set-val-36-7 comment="false" x="37" y="342">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-36-7 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-val-36-7>
+                        <if comment="false" x="37" y="372">
+                            <group eventID="2" id="-1">
+                                <scene-change-through comment="false" x="48" y="402">
+                                    <scene eid="12" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </scene-change-through>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-36-7 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="300"/>
+                            </more>
+                        </if>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="-120"/>
+                        <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </if>
+                <else-if comment="false" x="26" y="453">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="483">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-36-6 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="-119"/>
+                        <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </else-if>
+                <else-if comment="false" x="26" y="527">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="557">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-36-4 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="-109"/>
+                        <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </else-if>
+                <else-if comment="false" x="26" y="601">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="631">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-36-3 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="-99"/>
+                        <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </else-if>
+                <else-if comment="false" x="26" y="675">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="705">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-36-2 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="-89"/>
+                        <get-val-36-1 comment="false" id="1" x="0" y="0"/>
+                    </more>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="3" id="-1"/>
+        </draw>
+    </group>
+    <group eventID="3" id="2">
+        <set-font-new comment="false" x="65" y="116">
+            <font eid="20" id="0"/>
+        </set-font-new>
+        <draw-text comment="false" x="65" y="143">
+            <get-val-36-1 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="0"/>
+        </draw-text>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

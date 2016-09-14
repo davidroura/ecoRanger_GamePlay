@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="2" desc="" eventsnippetid="23" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="8" name="upgrades" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="upgradesBG" opacity="100" order="2" rid="24" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Layer 2" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="61" id="0" name="dozerStrength" pts="4,321.0,0.0,321.0,61.0,0.0,61.0,0.0,0.0" r="64" type="box" w="321" x="-2" y="35"/>
+    </regions>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="55" name="dozerButton 1" sx="0.47826087" sy="0.47826087" x="-184" y="-1" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="55" name="dozerButton 2" sx="0.4750733" sy="0.4750733" x="-183" y="64" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="57" name="dozer 3" sx="0.2" sy="0.2" x="-98" y="-11" z="2"/>
+    </actors>
+    <snippets/>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="31" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="10" name="upgradeDozer" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="upgradeDozerBG" opacity="100" order="0" rid="35" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="27" id="0" name="buyDozer" pts="4,130.0,0.0,130.0,27.0,0.0,27.0,0.0,0.0" r="64" type="box" w="130" x="99" y="234"/>
+        <region b="64" g="64" h="70" id="1" name="back1" pts="4,320.0,0.0,320.0,70.0,0.0,70.0,0.0,0.0" r="64" type="box" w="320" x="-1" y="1"/>
+        <region b="64" g="64" h="197" id="2" name="back2" pts="4,56.0,0.0,56.0,197.0,0.0,197.0,0.0,0.0" r="64" type="box" w="56" x="-2" y="72"/>
+        <region b="64" g="64" h="197" id="3" name="back3" pts="4,49.0,0.0,49.0,197.0,0.0,197.0,0.0,0.0" r="64" type="box" w="49" x="271" y="72"/>
+        <region b="64" g="64" h="208" id="4" name="back4" pts="4,321.0,0.0,321.0,208.0,0.0,208.0,0.0,0.0" r="64" type="box" w="321" x="-1" y="271"/>
+    </regions>
+    <terrainRegions/>
+    <actors/>
+    <snippets/>
+    <terrain/>
+    <atlases members="" retainAtlases="true"/>
+</scene>
