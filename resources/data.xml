@@ -160,8 +160,8 @@
             <poly data="4,0,0,200,0,200,121,0,121" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="180" id="40" name="meltingPot2" shared="false" width="250">
-        <anim across="1" down="1" durations="100" height="180" id="0" loop="true" name="Animation 0" numframes="1" originx="125" originy="90" sync="false" version="2" width="250">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="40" name="meltingPot2" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="1" id="0" loop="true" name="0" numframes="1" originx="125" originy="90" sync="false" version="2" width="1">
             <poly data="4,0,0,250,0,250,180,0,180" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="180" id="1" loop="true" name="Animation 1" numframes="1" originx="125" originy="90" sync="false" version="2" width="250">
