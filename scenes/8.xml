@@ -8,13 +8,13 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="61" id="0" name="dozerStrength" pts="4,321.0,0.0,321.0,61.0,0.0,61.0,0.0,0.0" r="64" type="box" w="321" x="-2" y="35"/>
+        <region b="64" g="64" h="61" id="0" name="dozerStrength" pts="4,0.0,0.0,0.0,61.0,321.0,61.0,321.0,0.0" r="64" type="box" w="321" x="-2" y="35"/>
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="55" name="dozerButton 1" sx="0.47826087" sy="0.47826087" x="-184" y="-1" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="3" id="55" name="dozerButton 2" sx="0.4750733" sy="0.4750733" x="-183" y="64" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="57" name="dozer 3" sx="0.2" sy="0.2" x="-98" y="-11" z="2"/>
+        <actor a="0.0" aid="1" c="false" group="3" id="55" name="dozerButton 1" sx="2.0" sy="2.0" x="79" y="97" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="55" name="dozerButton 2" sx="2.0125" sy="2.0125" x="80" y="274" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="57" name="dozer 3" sx="0.42105263" sy="0.42105263" x="-64" y="42" z="2"/>
     </actors>
     <snippets/>
     <terrain/>
