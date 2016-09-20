@@ -109,30 +109,28 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <create-actor3 comment="false" x="26" y="40">
+                <create-actor-on-layer comment="false" x="26" y="40">
                     <actortype eid="70" id="0"/>
-                    <randint comment="false" id="1" x="0" y="0">
-                        <int id="0" val="-50"/>
-                        <int id="1" val="-30"/>
-                    </randint>
+                    <int id="1" val="-60"/>
                     <int id="2" val="0"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <ignore-screen-tolerance comment="false" x="26" y="72">
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
                     <ACTOR eid="lastcreated" id="0"/>
                 </ignore-screen-tolerance>
-                <set-xy comment="false" x="26" y="99">
+                <set-xy comment="false" x="26" y="94">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <int id="2" val="-200"/>
                 </set-xy>
-                <say-this comment="false" x="26" y="126">
+                <say-this comment="false" x="26" y="121">
                     <int id="0" val="treeType"/>
                 </say-this>
-                <set-val-53-2 comment="false" x="26" y="146">
+                <set-val-53-2 comment="false" x="26" y="141">
                     <int id="0" val="0"/>
                 </set-val-53-2>
-                <set-val-53-4 comment="false" x="26" y="166">
+                <set-val-53-4 comment="false" x="26" y="161">
                     <randint comment="false" id="0" x="0" y="0">
                         <get-val-53-6 comment="false" id="0" x="0" y="0"/>
                         <get-val-53-7 comment="false" id="1" x="0" y="0"/>
@@ -146,30 +144,28 @@
     <group eventID="5" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <create-actor3 comment="false" x="26" y="40">
+                <create-actor-on-layer comment="false" x="26" y="40">
                     <actortype eid="70" id="0"/>
-                    <randint comment="false" id="1" x="0" y="0">
-                        <int id="0" val="230"/>
-                        <int id="1" val="270"/>
-                    </randint>
+                    <int id="1" val="250"/>
                     <int id="2" val="0"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <ignore-screen-tolerance comment="false" x="26" y="72">
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
                     <ACTOR eid="lastcreated" id="0"/>
                 </ignore-screen-tolerance>
-                <set-xy comment="false" x="26" y="99">
+                <set-xy comment="false" x="26" y="94">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <int id="2" val="-200"/>
                 </set-xy>
-                <say-this comment="false" x="26" y="126">
+                <say-this comment="false" x="26" y="121">
                     <int id="0" val="treeType"/>
                 </say-this>
-                <set-val-53-8 comment="false" x="26" y="146">
+                <set-val-53-8 comment="false" x="26" y="141">
                     <int id="0" val="0"/>
                 </set-val-53-8>
-                <set-val-53-5 comment="false" x="26" y="166">
+                <set-val-53-5 comment="false" x="26" y="161">
                     <randint comment="false" id="0" x="0" y="0">
                         <get-val-53-6 comment="false" id="0" x="0" y="0"/>
                         <get-val-53-7 comment="false" id="1" x="0" y="0"/>

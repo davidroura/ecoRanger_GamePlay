@@ -5,22 +5,19 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-color comment="false" x="37" y="70">
-                            <color b="0" g="0" id="0" r="255"/>
-                        </set-color>
-                        <if comment="false" x="37" y="97">
+                        <if comment="false" x="37" y="70">
                             <group eventID="1" id="-1">
-                                <set-font-new comment="false" x="48" y="127">
+                                <set-font-new comment="false" x="48" y="100">
                                     <font eid="20" id="0"/>
                                 </set-font-new>
-                                <draw-text comment="false" x="48" y="154">
+                                <draw-text comment="false" x="48" y="127">
                                     <int id="0" val="Low Fuel!!!"/>
                                     <int id="1" val="150"/>
                                     <int id="2" val="200"/>
                                 </draw-text>
-                                <dolater comment="false" x="48" y="174">
+                                <dolater comment="false" x="48" y="147">
                                     <group eventID="1" id="-1">
-                                        <set-val-8-4 comment="false" x="59" y="201">
+                                        <set-val-8-4 comment="false" x="59" y="174">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-8-4>
                                     </group>
@@ -38,20 +35,17 @@
                         <int id="1" val="30"/>
                     </less>
                 </if>
-                <else comment="false" x="26" y="262">
+                <else comment="false" x="26" y="235">
                     <group eventID="1" id="-1">
-                        <set-color comment="false" x="37" y="282">
-                            <color b="51" g="204" id="0" r="0"/>
-                        </set-color>
-                        <set-val-8-4 comment="false" x="37" y="309">
+                        <set-val-8-4 comment="false" x="37" y="255">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-8-4>
                     </group>
                 </else>
-                <set-font-new comment="false" x="26" y="346">
+                <set-font-new comment="false" x="26" y="292">
                     <font eid="19" id="0"/>
                 </set-font-new>
-                <drawfill-roundrect comment="false" x="26" y="373">
+                <drawfill-roundrect comment="false" x="26" y="319">
                     <int id="0" val="1"/>
                     <int id="1" val="7"/>
                     <int id="2" val="447"/>
@@ -59,20 +53,20 @@
                     <int id="4" val="20"/>
                     <int id="5" val="5"/>
                 </drawfill-roundrect>
-                <set-font-new comment="false" x="26" y="405">
+                <set-font-new comment="false" x="26" y="351">
                     <font eid="19" id="0"/>
                 </set-font-new>
-                <draw-text comment="false" x="26" y="432">
+                <draw-text comment="false" x="26" y="378">
                     <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="190"/>
-                    <int id="2" val="447"/>
+                    <int id="1" val="160"/>
+                    <int id="2" val="10"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="457">
+                <draw-text comment="false" x="26" y="403">
                     <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="250"/>
-                    <int id="2" val="447"/>
+                    <int id="1" val="180"/>
+                    <int id="2" val="10"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="482">
+                <draw-text comment="false" x="26" y="428">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <int id="0" val="Distance:"/>
                         <str-combine comment="false" id="1" x="0" y="0">
@@ -141,16 +135,19 @@
                                 <get-val-8-1 comment="false" id="1" x="0" y="0"/>
                             </times>
                         </set-game-val-3>
-                        <say-this comment="false" x="37" y="130">
+                        <set-game-val-28 comment="false" x="37" y="130">
+                            <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-28>
+                        <say-this comment="false" x="37" y="155">
                             <int id="0" val="extraLife"/>
                         </say-this>
-                        <say-this comment="false" x="37" y="150">
+                        <say-this comment="false" x="37" y="175">
                             <int id="0" val="calculateLifeBar"/>
                         </say-this>
-                        <say-this comment="false" x="37" y="170">
+                        <say-this comment="false" x="37" y="195">
                             <int id="0" val="distance"/>
                         </say-this>
-                        <say-this comment="false" x="37" y="190">
+                        <say-this comment="false" x="37" y="215">
                             <int id="0" val="bonusCard"/>
                         </say-this>
                     </group>
@@ -159,9 +156,9 @@
                         <int id="1" val="0"/>
                     </more>
                 </if>
-                <else comment="false" x="26" y="222">
+                <else comment="false" x="26" y="247">
                     <group eventID="3" id="-1">
-                        <scene-change-through comment="false" x="37" y="242">
+                        <scene-change-through comment="false" x="37" y="267">
                             <scene eid="4" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1.5"/>

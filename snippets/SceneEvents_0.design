@@ -163,4 +163,18 @@
         </event-type-region>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <scaleTo comment="false" x="26" y="40">
+                    <ACTOR eid="5" id="0"/>
+                    <int id="1" val="100"/>
+                    <get-game-val-28 comment="false" id="2" x="0" y="0"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+        </step>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

@@ -6,13 +6,14 @@
         <blocks/>
         <events>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="11" repeats="true"/>
-            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="12" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="13" repeats="true"/>
+            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="12" repeats="true"/>
+            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="13" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="14" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="7" name="draw" order="5" repeats="true"/>
-            <event displayName="dozeyClick" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="7" repeats="true"/>
+            <event displayName="dozeyClick" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
             <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="12" name="step" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">
@@ -598,6 +599,10 @@
         <events/>
     </snippet>
     <snippet actorid="112" attachedevent="true" class="scripts.ActorEvents_112" classname="scripts.ActorEvents_112" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="76" name="ActorEvents_112" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="116" attachedevent="true" class="scripts.ActorEvents_116" classname="scripts.ActorEvents_116" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="77" name="ActorEvents_116" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
