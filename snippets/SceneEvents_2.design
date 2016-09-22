@@ -165,7 +165,7 @@
             <group eventID="10" id="-1">
                 <stop-sounds comment="false" x="26" y="42"/>
                 <scene-change-through comment="false" x="26" y="62">
-                    <scene eid="16" id="0"/>
+                    <scene eid="0" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>
                 </scene-change-through>

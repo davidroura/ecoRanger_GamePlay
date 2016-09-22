@@ -14,23 +14,28 @@
                 </set-val-16-3>
                 <periodic comment="false" x="26" y="100">
                     <group eventID="1" id="-1">
-                        <create-actor-on-layer comment="false" x="37" y="132">
-                            <actortype eid="12" id="0"/>
-                            <randint comment="false" id="1" x="0" y="0">
-                                <int id="0" val="50"/>
-                                <int id="1" val="260"/>
-                            </randint>
-                            <int id="2" val="-5"/>
-                            <int id="3" val="1"/>
-                            <int id="4" val="gamePlay"/>
-                        </create-actor-on-layer>
-                        <scaleTo comment="false" x="37" y="164">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="70"/>
-                            <int id="2" val="70"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0"/>
-                        </scaleTo>
+                        <if comment="false" x="37" y="132">
+                            <group eventID="1" id="-1">
+                                <create-actor-on-layer comment="false" x="48" y="157">
+                                    <actortype eid="12" id="0"/>
+                                    <randint comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="50"/>
+                                        <int id="1" val="260"/>
+                                    </randint>
+                                    <int id="2" val="-5"/>
+                                    <int id="3" val="1"/>
+                                    <int id="4" val="gamePlay"/>
+                                </create-actor-on-layer>
+                                <scaleTo comment="false" x="48" y="189">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="70"/>
+                                    <int id="2" val="70"/>
+                                    <int id="3" val="0"/>
+                                    <int id="4" val="0"/>
+                                </scaleTo>
+                            </group>
+                            <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                        </if>
                     </group>
                     <randint comment="false" id="0" x="0" y="0">
                         <int id="0" val="4"/>
@@ -76,9 +81,14 @@
     <group eventID="3" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <say-this comment="false" x="26" y="40">
-                    <int id="0" val="timeCount"/>
-                </say-this>
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <say-this comment="false" x="37" y="65">
+                            <int id="0" val="timeCount"/>
+                        </say-this>
+                    </group>
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </step>
     </group>

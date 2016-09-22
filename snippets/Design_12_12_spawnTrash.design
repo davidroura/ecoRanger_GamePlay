@@ -25,18 +25,23 @@
     <group eventID="3" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <say-this comment="false" x="26" y="40">
-                    <int id="0" val="timeCount"/>
-                </say-this>
-                <if comment="false" x="26" y="60">
+                <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="90">
-                            <int id="0" val="doAfter"/>
+                        <say-this comment="false" x="37" y="65">
+                            <int id="0" val="timeCount"/>
                         </say-this>
+                        <if comment="false" x="37" y="85">
+                            <group eventID="3" id="-1">
+                                <say-this comment="false" x="48" y="115">
+                                    <int id="0" val="doAfter"/>
+                                </say-this>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-12-5 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
                     </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-val-12-5 comment="false" id="0" x="0" y="0"/>
-                    </not>
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </step>
