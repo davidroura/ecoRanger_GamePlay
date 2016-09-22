@@ -90,7 +90,6 @@ class SceneEvents_0 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
 		Engine.engine.setGameAttribute("sceneSpeed", 15);
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		Engine.engine.setGameAttribute("playerControl", true);

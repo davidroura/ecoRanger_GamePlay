@@ -87,23 +87,24 @@ class SceneEvents_4 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		setScrollSpeedForBackground(1, "" + "gameplay", 0, 0);
 		_points = asNumber((Engine.engine.getGameAttribute("bottleColleted") + Engine.engine.getGameAttribute("canCollected")));
 		propertyChanged("_points", _points);
 		Engine.engine.setGameAttribute("gameBottles", (Engine.engine.getGameAttribute("gameBottles") + Engine.engine.getGameAttribute("bottleColleted")));
 		Engine.engine.setGameAttribute("gameCans", (Engine.engine.getGameAttribute("gameCans") + Engine.engine.getGameAttribute("canCollected")));
 		if((_points > 1))
 		{
-			createRecycledActor(getActorType(17), -10, 80, Script.FRONT);
+			createRecycledActor(getActorType(17), -10, 40, Script.FRONT);
 			getLastCreatedActor().setAnimation("" + "1");
 		}
 		if((_points > 2))
 		{
-			createRecycledActor(getActorType(17), 100, 80, Script.FRONT);
+			createRecycledActor(getActorType(17), 100, 40, Script.FRONT);
 			getLastCreatedActor().setAnimation("" + "2");
 		}
 		if((_points > 3))
 		{
-			createRecycledActor(getActorType(17), 190, 80, Script.FRONT);
+			createRecycledActor(getActorType(17), 190, 40, Script.FRONT);
 			getLastCreatedActor().setAnimation("" + "3");
 		}
 		saveGame("mySave", function(success:Bool):Void

@@ -84,10 +84,6 @@ class SceneEvents_2 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		if(!())
-		{
-			playSound(getSound(118));
-		}
 		saveGame("mySave", function(success:Bool):Void
 		{
 			

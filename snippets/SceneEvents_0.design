@@ -42,33 +42,25 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <comment-wrapper comment="false" x="26" y="40">
-                    <group eventID="4" id="-1">
-                        <set-game-val-0 comment="false" x="37" y="60">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-0>
-                    </group>
-                    <int id="0" val="debug always set to click movement"/>
-                </comment-wrapper>
-                <set-game-val-3 comment="false" x="26" y="97">
+                <set-game-val-3 comment="false" x="26" y="40">
                     <int id="0" val="15"/>
                 </set-game-val-3>
-                <set-game-val-22 comment="false" x="26" y="117">
+                <set-game-val-22 comment="false" x="26" y="60">
                     <int id="0" val="0"/>
                 </set-game-val-22>
-                <set-game-val-4 comment="false" x="26" y="137">
+                <set-game-val-4 comment="false" x="26" y="80">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-game-val-4>
-                <set-game-val-21 comment="false" x="26" y="162">
+                <set-game-val-21 comment="false" x="26" y="105">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-21>
-                <setanim comment="false" x="26" y="187">
+                <setanim comment="false" x="26" y="130">
                     <ACTOR eid="1" id="0"/>
                     <int id="1" val="Animation Up"/>
                 </setanim>
-                <dolater comment="false" x="26" y="214">
+                <dolater comment="false" x="26" y="157">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="241">
+                        <setanim comment="false" x="37" y="184">
                             <ACTOR eid="1" id="0"/>
                             <int id="1" val="Animation Up"/>
                         </setanim>
@@ -76,7 +68,7 @@
                     <int id="0" val="0.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <play-sound-channel comment="false" x="26" y="280">
+                <play-sound-channel comment="false" x="26" y="223">
                     <int id="0" val="1"/>
                     <sound eid="103" id="1"/>
                     <int id="2" val="5"/>

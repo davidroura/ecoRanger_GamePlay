@@ -101,7 +101,7 @@ class Design_53_53_spawnTrees extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_leftTrees():Void
 	{
-		createRecycledActorOnLayer(getActorType(70), -60, 0, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(-200);
 		_customEvent_treeType();
@@ -130,7 +130,7 @@ class Design_53_53_spawnTrees extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_rightTrees():Void
 	{
-		createRecycledActorOnLayer(getActorType(70), 250, 0, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(70), 240, 0, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(-200);
 		_customEvent_treeType();

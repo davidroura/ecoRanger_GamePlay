@@ -115,7 +115,7 @@ class Design_16_16_spawnObstacle extends SceneScript
 		propertyChanged("_time", _time);
 		runPeriodically(1000 * randomInt(Math.floor(4), Math.floor(6)), function(timeTask:TimedTask):Void
 		{
-			createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(50), Math.floor(280)), -5, 1, "" + "gamePlay");
+			createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(50), Math.floor(260)), -5, 1, "" + "gamePlay");
 			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
 		}, null);
 		
