@@ -542,6 +542,7 @@
         <blocks/>
         <events>
             <event displayName="Click" enabled="true" id="1" name="event-mouse-press-release" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="89" attachedevent="true" class="scripts.ActorEvents_89" classname="scripts.ActorEvents_89" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="64" name="ActorEvents_89" oid="-1" package="scripts." shared="false" type="actor">
@@ -603,6 +604,10 @@
         <events/>
     </snippet>
     <snippet actorid="116" attachedevent="true" class="scripts.ActorEvents_116" classname="scripts.ActorEvents_116" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="77" name="ActorEvents_116" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="119" attachedevent="true" class="scripts.ActorEvents_119" classname="scripts.ActorEvents_119" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="78" name="ActorEvents_119" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
