@@ -159,11 +159,37 @@
                 <else comment="false" x="26" y="247">
                     <group eventID="3" id="-1">
                         <stop-sounds comment="false" x="37" y="267"/>
-                        <scene-change-through comment="false" x="37" y="287">
-                            <scene eid="4" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="1.5"/>
-                        </scene-change-through>
+                        <if comment="false" x="37" y="287">
+                            <group eventID="3" id="-1">
+                                <play-sound4 comment="false" x="48" y="317">
+                                    <int id="0" val="1"/>
+                                    <sound eid="119" id="1"/>
+                                </play-sound4>
+                                <create-actor3 comment="false" x="48" y="344">
+                                    <actortype eid="51" id="0"/>
+                                    <int id="1" val="50"/>
+                                    <int id="2" val="280"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <create-actor3 comment="false" x="48" y="371">
+                                    <actortype eid="49" id="0"/>
+                                    <int id="1" val="140"/>
+                                    <int id="2" val="280"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-val-8-11 comment="false" x="48" y="398">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-8-11>
+                                <create-bglayer-from-bg comment="false" x="48" y="423">
+                                    <int id="0" val="UIEnd"/>
+                                    <int id="1" val="UIEnd"/>
+                                    <int id="2" val="6"/>
+                                </create-bglayer-from-bg>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-8-11 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
                     </group>
                 </else>
             </group>

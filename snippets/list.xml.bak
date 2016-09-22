@@ -105,6 +105,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceMacro" hidden="false" id="8" name="_distanceMacro" order="7"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceBy100" hidden="false" id="9" name="_distanceBy100" order="8"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="bonusCard" hidden="true" id="10" name="_bonusCard" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="endUI_Created" hidden="false" id="11" name="_endUICreated" order="10"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>

@@ -146,7 +146,7 @@
             <group eventID="5" id="-1">
                 <create-actor-on-layer comment="false" x="26" y="40">
                     <actortype eid="70" id="0"/>
-                    <int id="1" val="265"/>
+                    <int id="1" val="200"/>
                     <int id="2" val="0"/>
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
