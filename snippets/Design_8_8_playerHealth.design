@@ -45,28 +45,20 @@
                 <set-font-new comment="false" x="26" y="292">
                     <font eid="19" id="0"/>
                 </set-font-new>
-                <drawfill-roundrect comment="false" x="26" y="319">
-                    <int id="0" val="1"/>
-                    <int id="1" val="7"/>
-                    <int id="2" val="447"/>
-                    <get-val-8-1 comment="false" id="3" x="0" y="0"/>
-                    <int id="4" val="20"/>
-                    <int id="5" val="5"/>
-                </drawfill-roundrect>
-                <set-font-new comment="false" x="26" y="351">
+                <set-font-new comment="false" x="26" y="319">
                     <font eid="19" id="0"/>
                 </set-font-new>
-                <draw-text comment="false" x="26" y="378">
+                <draw-text comment="false" x="26" y="346">
                     <get-game-val-6 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="160"/>
                     <int id="2" val="10"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="403">
+                <draw-text comment="false" x="26" y="371">
                     <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="10"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="428">
+                <draw-text comment="false" x="26" y="396">
                     <str-combine comment="false" id="0" x="0" y="0">
                         <int id="0" val="Distance:"/>
                         <str-combine comment="false" id="1" x="0" y="0">

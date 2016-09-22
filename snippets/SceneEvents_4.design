@@ -29,39 +29,39 @@
     <group eventID="3" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                </set-game-val-3>
-                <set-game-val-22 comment="false" x="26" y="60">
-                    <int id="0" val="0"/>
-                </set-game-val-22>
-                <set-val-10-1 comment="false" x="26" y="80">
+                <set-bg-speed comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <int id="1" val="gameplay"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </set-bg-speed>
+                <set-val-10-1 comment="false" x="26" y="67">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-6 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-val-10-1>
-                <set-game-val-7 comment="false" x="26" y="110">
+                <set-game-val-7 comment="false" x="26" y="97">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-7 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-1 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-7>
-                <set-game-val-8 comment="false" x="26" y="140">
+                <set-game-val-8 comment="false" x="26" y="127">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-8 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-6 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-8>
-                <if comment="false" x="26" y="170">
+                <if comment="false" x="26" y="157">
                     <group eventID="3" id="-1">
-                        <create-actor3 comment="false" x="37" y="200">
+                        <create-actor3 comment="false" x="37" y="187">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="-10"/>
-                            <int id="2" val="60"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="227">
+                        <setanim comment="false" x="37" y="214">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                         </setanim>
@@ -71,15 +71,15 @@
                         <int id="1" val="1"/>
                     </more>
                 </if>
-                <if comment="false" x="26" y="266">
+                <if comment="false" x="26" y="253">
                     <group eventID="3" id="-1">
-                        <create-actor3 comment="false" x="37" y="296">
+                        <create-actor3 comment="false" x="37" y="283">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="100"/>
-                            <int id="2" val="60"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="323">
+                        <setanim comment="false" x="37" y="310">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="2"/>
                         </setanim>
@@ -89,15 +89,15 @@
                         <int id="1" val="2"/>
                     </more>
                 </if>
-                <if comment="false" x="26" y="362">
+                <if comment="false" x="26" y="349">
                     <group eventID="3" id="-1">
-                        <create-actor3 comment="false" x="37" y="392">
+                        <create-actor3 comment="false" x="37" y="379">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="190"/>
-                            <int id="2" val="60"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="419">
+                        <setanim comment="false" x="37" y="406">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="3"/>
                         </setanim>
@@ -107,13 +107,13 @@
                         <int id="1" val="3"/>
                     </more>
                 </if>
-                <save-game comment="false" x="26" y="458">
+                <save-game comment="false" x="26" y="445">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="483">
+                        <if comment="false" x="37" y="470">
                             <group eventID="3" id="-1"/>
                             <save-success comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="540">
+                        <else comment="false" x="37" y="527">
                             <group eventID="3" id="-1"/>
                         </else>
                     </group>

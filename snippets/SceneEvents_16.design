@@ -16,12 +16,12 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                </set-game-val-3>
-                <set-game-val-22 comment="false" x="26" y="60">
-                    <int id="0" val="0"/>
-                </set-game-val-22>
+                <set-bg-speed comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <int id="1" val="bgLong"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="0"/>
+                </set-bg-speed>
             </group>
         </init>
     </group>
