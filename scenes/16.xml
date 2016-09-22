@@ -17,12 +17,23 @@
         <actor a="0.0" aid="2" c="false" group="3" id="108" name="powerUpDozey 2" sx="2.0344827" sy="2.0344827" x="251" y="386" z="3"/>
         <actor a="0.0" aid="3" c="false" group="3" id="112" name="powerUpGadget 3" sx="1.9666667" sy="1.9666667" x="15" y="384" z="3"/>
         <actor a="0.0" aid="4" c="false" group="3" id="110" name="powerUpSucker 4" sx="1.3965517" sy="1.3965517" x="101" y="425" z="3"/>
-        <actor a="0.0" aid="5" c="false" group="3" id="1" name="spaceShip 5" sx="0.37333333" sy="0.37333333" x="98" y="255" z="3"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="1" name="spaceShip 5" sx="0.32" sy="0.32" x="100" y="269" z="3"/>
         <actor a="0.0" aid="6" c="false" group="3" id="116" name="fuelBar 6" sx="1.0" sy="1.2372881" x="306" y="130" z="5"/>
-        <actor a="0.0" aid="7" c="false" group="3" id="70" name="tree 7" sx="1.0" sy="1.0" x="-70" y="49" z="5"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="70" name="tree 8" sx="1.0" sy="1.0" x="220" y="54" z="6"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="53">
+            <prop id="1" list="0" val="0.0"/>
+            <prop id="2" list="0" val="0.0"/>
+            <prop id="3" list="0" val="0.0"/>
+            <prop id="4" list="0" val="0.0"/>
+            <prop id="5" list="0" val="0"/>
+            <prop id="6" list="0" val="0"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val="0.0"/>
+            <prop id="9" list="0" val="0.0"/>
+        </s>
+        <s enabled="true" id="9"/>
+    </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

@@ -19,10 +19,21 @@
         <actor a="0.0" aid="5" c="false" group="3" id="112" name="powerUpGadget 5" sx="1.8" sy="1.8" x="19" y="389" z="5"/>
         <actor a="0.0" aid="6" c="false" group="3" id="110" name="powerUpSucker 6" sx="1.4705882" sy="1.4705882" x="106" y="426" z="5"/>
         <actor a="0.0" aid="7" c="false" group="3" id="1" name="spaceShip 7" sx="0.31683168" sy="0.31683168" x="95" y="268" z="5"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="70" name="tree 8" sx="1.0" sy="1.0" x="-68" y="45" z="5"/>
-        <actor a="0.0" aid="9" c="false" group="3" id="70" name="tree 9" sx="1.0" sy="1.0" x="228" y="42" z="5"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="53">
+            <prop id="1" list="0" val="0.0"/>
+            <prop id="2" list="0" val="0.0"/>
+            <prop id="3" list="0" val="0.0"/>
+            <prop id="4" list="0" val="0.0"/>
+            <prop id="5" list="0" val="0"/>
+            <prop id="6" list="0" val="0"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val="0.0"/>
+            <prop id="9" list="0" val="0.0"/>
+        </s>
+        <s enabled="true" id="9"/>
+    </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>
