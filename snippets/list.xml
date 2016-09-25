@@ -112,28 +112,31 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceMacro" hidden="false" id="8" name="_distanceMacro" order="7"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceBy100" hidden="false" id="9" name="_distanceBy100" order="8"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="bonusCard" hidden="true" id="10" name="_bonusCard" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="endUI_Created" hidden="false" id="11" name="_endUICreated" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="12" name="_points" order="11"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="11" repeats="true"/>
             <event displayName="Updated" enabled="true" id="3" name="step" order="12" repeats="true"/>
-            <event displayName="calculateLifeBar" enabled="true" id="4" name="event-custom" order="26" repeats="true"/>
-            <event displayName="player - bottle" enabled="true" id="5" name="event-collide-typetotype" order="19" repeats="true"/>
-            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="23" repeats="true"/>
-            <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="22" repeats="true"/>
+            <event displayName="calculateLifeBar" enabled="true" id="4" name="event-custom" order="27" repeats="true"/>
+            <event displayName="player - bottle" enabled="true" id="5" name="event-collide-typetotype" order="20" repeats="true"/>
+            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="24" repeats="true"/>
+            <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="23" repeats="true"/>
             <event displayName="player - can" enabled="true" id="8" name="event-collide-typetotype" order="9" repeats="true"/>
             <event displayName="dozer - rock" enabled="true" id="9" name="event-collide-typetotype" order="4" repeats="true"/>
             <event displayName="dozer - bottle" enabled="true" id="10" name="event-collide-typetotype" order="5" repeats="false"/>
             <event displayName="dozer - banana" enabled="true" id="11" name="event-collide-typetotype" order="6" repeats="true"/>
             <event displayName="tookBanana" enabled="true" id="12" name="event-custom" order="8" repeats="true"/>
             <event displayName="dozer - can" enabled="true" id="13" name="event-collide-typetotype" order="7" repeats="true"/>
-            <event displayName="distance" enabled="true" id="14" name="event-custom" order="17" repeats="true"/>
-            <event displayName="extraLife" enabled="true" id="15" name="event-custom" order="16" repeats="true"/>
-            <event displayName="bonusCard" enabled="true" id="16" name="event-custom" order="13" repeats="true"/>
-            <event displayName="player - bonusCard" enabled="true" id="17" name="event-collide-typetotype" order="14" repeats="true"/>
-            <event displayName="dozer - bonusCard" enabled="true" id="18" name="event-collide-typetotype" order="15" repeats="true"/>
+            <event displayName="distance" enabled="true" id="14" name="event-custom" order="18" repeats="true"/>
+            <event displayName="extraLife" enabled="true" id="15" name="event-custom" order="17" repeats="true"/>
+            <event displayName="bonusCard" enabled="true" id="16" name="event-custom" order="14" repeats="true"/>
+            <event displayName="player - bonusCard" enabled="true" id="17" name="event-collide-typetotype" order="15" repeats="true"/>
+            <event displayName="dozer - bonusCard" enabled="true" id="18" name="event-collide-typetotype" order="16" repeats="true"/>
             <event displayName="player - plastic" enabled="true" id="19" name="event-collide-typetotype" order="2" repeats="true"/>
             <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="true"/>
+            <event displayName="gameOver" enabled="true" id="21" name="event-custom" order="13" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
