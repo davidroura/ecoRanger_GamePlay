@@ -105,6 +105,15 @@
             </group>
         </step>
     </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="246" y="171">
+            <group eventID="3" id="-1"/>
+            <more comment="false" id="0" x="0" y="0">
+                <get-val-53-10 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0"/>
+            </more>
+        </if>
+    </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">

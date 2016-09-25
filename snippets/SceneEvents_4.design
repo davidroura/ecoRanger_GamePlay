@@ -7,18 +7,12 @@
                     <font eid="19" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="67">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val=" bottles"/>
-                    </str-combine>
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="150"/>
                     <int id="2" val="220"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="97">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val=" cans"/>
-                    </str-combine>
+                <draw-text comment="false" x="26" y="92">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="150"/>
                     <int id="2" val="250"/>
                 </draw-text>

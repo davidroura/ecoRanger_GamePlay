@@ -52,5 +52,10 @@
             </group>
         </step>
     </group>
+    <group eventID="2" id="1">
+        <set-game-val-22 comment="false" x="398" y="283">
+            <int id="0" val=""/>
+        </set-game-val-22>
+    </group>
     <group eventID="2" id="-1"/>
 </groups>

@@ -83,6 +83,7 @@ class Design_12_12_spawnTrash extends SceneScript
 	public var _timeBetweenTrash:Float;
 	public var _trashXPos:Float;
 	public var _trashType:Float;
+	public var _playerHealth:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_doAfter():Void
@@ -207,6 +208,8 @@ class Design_12_12_spawnTrash extends SceneScript
 		_trashXPos = 0.0;
 		nameMap.set("trashType", "_trashType");
 		_trashType = 0.0;
+		nameMap.set("playerHealth", "_playerHealth");
+		_playerHealth = 0.0;
 		
 	}
 	
@@ -230,7 +233,12 @@ class Design_12_12_spawnTrash extends SceneScript
 			if(wrapper.enabled)
 			{
 				_customEvent_timeCount();
-				if(!(_processBusy))
+				trace("" + Engine.engine.getGameAttribute("playerHealth"));
+				if(_processBusy)
+				{
+					trace("" + "process busy true");
+				}
+				if((!(_processBusy) && (Engine.engine.getGameAttribute("playerHealth") <= 0)))
 				{
 					_customEvent_doAfter();
 				}

@@ -175,7 +175,7 @@ class Design_7_7_movement extends ActorScript
 	{
 		if(((actor.getX() > 0) && (480 > actor.getX())))
 		{
-			actor.setX((actor.getX() + 1));
+			actor.setX((actor.getX() + 1.3));
 		}
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		_customEvent_right();
@@ -186,7 +186,7 @@ class Design_7_7_movement extends ActorScript
 	{
 		if(((480 > actor.getX()) && ((actor.getWidth()) > 0)))
 		{
-			actor.setX((actor.getX() - 1));
+			actor.setX((actor.getX() - 1.3));
 		}
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		_customEvent_left();
