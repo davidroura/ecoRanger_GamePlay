@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="1" desc="" eventsnippetid="10" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="4" name="gameOver" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
+<scene depth="2" desc="" eventsnippetid="10" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="4" name="gameOver" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
-        <background blendMode="normal" customScrollFactor="false" id="3" locked="true" name="gamplay" opacity="100" order="2" rid="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="3" locked="true" name="gamplay" opacity="100" order="4" rid="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="4" locked="true" name="HUD" opacity="100" order="3" rid="5" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="0,255,0" id="5" locked="false" name="Layer 5" opacity="100" order="2" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <background blendMode="normal" customScrollFactor="false" id="2" locked="true" name="UIEnd" opacity="100" order="1" rid="7" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
@@ -13,8 +15,25 @@
         <actor a="0.0" aid="1" c="false" group="3" id="49" name="retryButton 1" sx="0.51428574" sy="0.54285717" x="141" y="259" z="0"/>
         <actor a="0.0" aid="2" c="false" group="3" id="47" name="recycleButton 2" sx="0.21022727" sy="0.2" x="-77" y="231" z="0"/>
         <actor a="0.0" aid="3" c="false" group="3" id="51" name="homeButton 3" sx="0.5675676" sy="0.5" x="200" y="257" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="108" name="powerUpDozey 4" sx="1.6896552" sy="1.6896552" x="240" y="393" z="5"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="112" name="powerUpGadget 5" sx="1.8" sy="1.8" x="19" y="389" z="5"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="110" name="powerUpSucker 6" sx="1.4705882" sy="1.4705882" x="106" y="426" z="5"/>
+        <actor a="0.0" aid="7" c="false" group="3" id="1" name="spaceShip 7" sx="0.31683168" sy="0.31683168" x="95" y="268" z="5"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="53">
+            <prop id="1" list="0" val="0.0"/>
+            <prop id="2" list="0" val="0.0"/>
+            <prop id="3" list="0" val="0.0"/>
+            <prop id="4" list="0" val="0.0"/>
+            <prop id="5" list="0" val="0"/>
+            <prop id="6" list="0" val="0"/>
+            <prop id="7" list="0" val="0"/>
+            <prop id="8" list="0" val="0.0"/>
+            <prop id="9" list="0" val="0.0"/>
+        </s>
+        <s enabled="true" id="9"/>
+    </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

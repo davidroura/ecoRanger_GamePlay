@@ -25,6 +25,7 @@
     <group eventID="3" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
+<<<<<<< HEAD
                 <say-this comment="false" x="26" y="40">
                     <int id="0" val="timeCount"/>
                 </say-this>
@@ -43,8 +44,25 @@
                     <group eventID="3" id="-1">
                         <say-this comment="false" x="37" y="177">
                             <int id="0" val="doAfter"/>
+=======
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <say-this comment="false" x="37" y="65">
+                            <int id="0" val="timeCount"/>
+>>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
                         </say-this>
+                        <if comment="false" x="37" y="85">
+                            <group eventID="3" id="-1">
+                                <say-this comment="false" x="48" y="115">
+                                    <int id="0" val="doAfter"/>
+                                </say-this>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-12-5 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
                     </group>
+<<<<<<< HEAD
                     <and comment="false" id="0" x="0" y="0">
                         <not comment="false" id="0" x="0" y="0">
                             <get-val-12-5 comment="false" id="0" x="0" y="0"/>
@@ -54,6 +72,9 @@
                             <int id="1" val="0"/>
                         </lesseq>
                     </and>
+=======
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+>>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
                 </if>
             </group>
         </step>

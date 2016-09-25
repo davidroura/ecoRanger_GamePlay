@@ -10,7 +10,7 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="26" id="11" name="banana" shared="false" width="41">
         <anim across="1" down="1" durations="100" height="26" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="41">
-            <poly data="4,0,0,41,0,41,26,0,26" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,0,0,41,0,41,26,0,26" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="86" loop="true" name="bananaS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -20,7 +20,7 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="53" id="75" name="bonusCard" shared="false" width="40">
         <anim across="1" down="1" durations="100" height="53" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="26" sync="false" version="2" width="40">
-            <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="false" fric="0.2" gid="3" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="bottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
@@ -33,10 +33,9 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="54" fixedrot="true" fric="0.2" gid="3" id="72" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="bridge" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="73" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="213" id="73" name="bridge" shared="false" width="320">
-        <anim across="1" down="1" durations="100" height="213" id="0" loop="true" name="Animation 0" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
-            <poly data="4,0,71,50,71,50,111,0,111" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-            <poly data="3,105,65,105,105,320,180" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="153" id="73" name="bridge" shared="false" width="320">
+        <anim across="1" down="1" durations="100" height="153" id="0" loop="true" name="Animation 0" numframes="1" originx="160" originy="76" sync="false" version="2" width="320">
+            <poly data="4,0,0,320,0,320,153,0,153" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="50" fixedrot="false" fric="0.2" gid="3" id="67" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="buildButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="68" static="false">
@@ -50,7 +49,7 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="69" name="buildCompleteBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="28" id="9" name="can" shared="false" width="48">
         <anim across="1" down="1" durations="100" height="28" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="48">
-            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="3" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="canCoke" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
@@ -62,7 +61,7 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="28" id="16" name="canCoke" shared="false" width="48">
         <anim across="1" down="1" durations="100" height="28" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="48">
-            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="87" loop="true" name="CollectTrashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -126,7 +125,7 @@
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="115" name="fuelBarBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
-    <music atlasID="0" desc="" id="103" loop="true" name="gamePlay" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="103" loop="true" name="gamePlay" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="26" fixedrot="false" fric="0.2" gid="3" id="29" ignoreg="true" inertia="1.0" ldamp="0.0" mass="5.0" name="hammer" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="30" static="false">
         <snippets>
             <s enabled="true" id="27">
@@ -157,7 +156,6 @@
             <poly data="4,0,0,75,0,75,76,0,76" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <music atlasID="0" desc="" id="118" loop="true" name="HQ_Music" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="5" name="HUD" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="79" name="introHQBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="3" name="mainBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
@@ -520,18 +518,27 @@
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="71" name="tree" shared="false" width="238">
-        <anim across="1" down="1" durations="100" height="480" id="0" loop="false" name="tree1" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
-            <poly data="4,90,71,130,71,130,351,90,351" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="false"/>
-            <poly data="3,130,350,90,350,110,450" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="315" id="71" name="tree" shared="false" width="156">
+        <anim across="1" down="1" durations="100" height="315" id="0" loop="false" name="tree1" numframes="1" originx="0" originy="0" sync="false" version="2" width="156">
+            <poly data="4,53,12,60,180,127,83,110,13" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+            <poly data="4,54,184,76,299,123,198,79,148" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="480" id="1" loop="true" name="tree2" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
-            <poly data="4,108,3,158,3,158,333,108,333" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="false"/>
-            <poly data="3,160,330,90,330,110,450" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="315" id="1" loop="true" name="tree2" numframes="1" originx="0" originy="0" sync="false" version="2" width="156">
+            <poly data="4,57,5,19,36,51,134,119,61" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="5,82,107,47,132,57,206,86,178,107,144" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+            <poly data="3,91,167,56,204,107,199" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
+            <poly data="4,86,201,4,217,84,304,120,272" density="0.1" fric="0.2" gid="-1000" id="3" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="85" name="tutorialBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="7" name="UIEnd" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="78" fixedrot="false" fric="0.2" gid="3" id="119" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="UITutorialBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="120" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="256" id="120" name="UITutorialBG" shared="false" width="171">
+        <anim across="1" down="1" durations="100" height="256" id="0" loop="true" name="Animation 0" numframes="1" originx="85" originy="128" sync="false" version="2" width="171">
+            <poly data="4,0,0,171,0,171,256,0,256" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="47" fixedrot="true" fric="0.2" gid="3" id="60" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="upgradeBoxes" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="61" static="false">
         <snippets/>
     </actor>

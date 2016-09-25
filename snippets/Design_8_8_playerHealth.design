@@ -94,6 +94,36 @@
                         </draw-text>
                     </group>
                 </else>
+<<<<<<< HEAD
+=======
+                <set-font-new comment="false" x="26" y="292">
+                    <font eid="19" id="0"/>
+                </set-font-new>
+                <set-font-new comment="false" x="26" y="319">
+                    <font eid="19" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="346">
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="160"/>
+                    <int id="2" val="10"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="371">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="180"/>
+                    <int id="2" val="10"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="396">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Distance:"/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <get-val-8-9 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="mts"/>
+                        </str-combine>
+                    </str-combine>
+                    <int id="1" val="50"/>
+                    <int id="2" val="50"/>
+                </draw-text>
+>>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
             </group>
         </draw>
     </group>
@@ -103,32 +133,40 @@
             <group eventID="2" id="-1">
                 <set-game-val-28 comment="false" x="26" y="40">
                     <int id="0" val="100"/>
+<<<<<<< HEAD
                 </set-game-val-28>
                 <set-val-8-2 comment="false" x="26" y="60">
+=======
+                </set-val-8-1>
+                <set-game-val-28 comment="false" x="26" y="60">
+                    <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-28>
+                <set-val-8-2 comment="false" x="26" y="85">
+>>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
                     <int id="0" val="0.05"/>
                 </set-val-8-2>
-                <set-game-val-1 comment="false" x="26" y="80">
+                <set-game-val-1 comment="false" x="26" y="105">
                     <int id="0" val="0"/>
                 </set-game-val-1>
-                <set-game-val-6 comment="false" x="26" y="100">
+                <set-game-val-6 comment="false" x="26" y="125">
                     <int id="0" val="0"/>
                 </set-game-val-6>
-                <set-game-val-2 comment="false" x="26" y="120">
+                <set-game-val-2 comment="false" x="26" y="145">
                     <int id="0" val="0"/>
                 </set-game-val-2>
-                <set-val-8-4 comment="false" x="26" y="140">
+                <set-val-8-4 comment="false" x="26" y="165">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-4>
-                <set-val-8-5 comment="false" x="26" y="165">
+                <set-val-8-5 comment="false" x="26" y="190">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-8-5>
-                <set-val-8-6 comment="false" x="26" y="190">
+                <set-val-8-6 comment="false" x="26" y="215">
                     <int id="0" val="0"/>
                 </set-val-8-6>
-                <set-val-8-7 comment="false" x="26" y="210">
+                <set-val-8-7 comment="false" x="26" y="235">
                     <int id="0" val="0"/>
                 </set-val-8-7>
-                <set-val-8-10 comment="false" x="26" y="230">
+                <set-val-8-10 comment="false" x="26" y="255">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-10>
             </group>
@@ -175,6 +213,7 @@
                 </if>
                 <else comment="false" x="26" y="247">
                     <group eventID="3" id="-1">
+<<<<<<< HEAD
                         <stop-sounds comment="false" x="37" y="267"/>
                         <if comment="false" x="37" y="287">
                             <group eventID="3" id="-1">
@@ -192,6 +231,13 @@
                                 <get-val-8-11 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </if>
+=======
+                        <scene-change-through comment="false" x="37" y="267">
+                            <scene eid="4" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="1.5"/>
+                        </scene-change-through>
+>>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
                     </group>
                 </else>
             </group>

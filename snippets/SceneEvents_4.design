@@ -46,7 +46,7 @@
                         <create-actor3 comment="false" x="37" y="160">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="-10"/>
-                            <int id="2" val="80"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
                         <setanim comment="false" x="37" y="187">
@@ -64,7 +64,7 @@
                         <create-actor3 comment="false" x="37" y="256">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="100"/>
-                            <int id="2" val="80"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
                         <setanim comment="false" x="37" y="283">
@@ -82,7 +82,7 @@
                         <create-actor3 comment="false" x="37" y="352">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="190"/>
-                            <int id="2" val="80"/>
+                            <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
                         <setanim comment="false" x="37" y="379">

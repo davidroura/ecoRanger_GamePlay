@@ -111,21 +111,7 @@
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="5" id="-1">
-                        <play-sound4 comment="false" x="37" y="70">
-                            <int id="0" val="0"/>
-                            <sound eid="118" id="1"/>
-                        </play-sound4>
-                        <set-game-val-29 comment="false" x="37" y="97">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-29>
-                    </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-game-val-29 comment="false" id="0" x="0" y="0"/>
-                    </not>
-                </if>
-                <save-game comment="false" x="26" y="134">
+                <save-game comment="false" x="26" y="40">
                     <group eventID="5" id="-1"/>
                 </save-game>
             </group>
@@ -178,11 +164,8 @@
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="10" id="-1">
                 <stop-sounds comment="false" x="26" y="42"/>
-                <set-game-val-29 comment="false" x="26" y="62">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-29>
-                <scene-change-through comment="false" x="26" y="87">
-                    <scene eid="16" id="0"/>
+                <scene-change-through comment="false" x="26" y="62">
+                    <scene eid="0" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>
                 </scene-change-through>
