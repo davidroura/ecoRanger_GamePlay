@@ -75,8 +75,6 @@ class Design_16_16_spawnObstacle extends SceneScript
 	public var _frameRate:Float;
 	public var _frameCount:Float;
 	public var _time:Float;
-	public var _processBusy:Bool;
-	public var _playerHealth:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_timeCount():Void
@@ -102,10 +100,6 @@ class Design_16_16_spawnObstacle extends SceneScript
 		_frameCount = 0.0;
 		nameMap.set("time", "_time");
 		_time = 0.0;
-		nameMap.set("processBusy", "_processBusy");
-		_processBusy = false;
-		nameMap.set("playerHealth", "_playerHealth");
-		_playerHealth = 0.0;
 		
 	}
 	
@@ -121,11 +115,8 @@ class Design_16_16_spawnObstacle extends SceneScript
 		propertyChanged("_time", _time);
 		runPeriodically(1000 * randomInt(Math.floor(4), Math.floor(6)), function(timeTask:TimedTask):Void
 		{
-			if((_playerHealth > 0))
-			{
-				createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(50), Math.floor(280)), -5, 1, "" + "gamePlay");
-				getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
-			}
+			createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(50), Math.floor(280)), -5, 1, "" + "gamePlay");
+			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
 		}, null);
 		
 		/* ======================== When Updating ========================= */

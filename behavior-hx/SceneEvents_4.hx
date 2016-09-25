@@ -151,8 +151,8 @@ class SceneEvents_4 extends SceneScript
 			if(wrapper.enabled)
 			{
 				g.setFont(getFont(19));
-				g.drawString("" + Engine.engine.getGameAttribute("canCollected"), 150, 220);
-				g.drawString("" + Engine.engine.getGameAttribute("bottleColleted"), 150, 250);
+				g.drawString("" + (("" + Engine.engine.getGameAttribute("bottleColleted")) + ("" + " bottles")), 150, 220);
+				g.drawString("" + (("" + Engine.engine.getGameAttribute("canCollected")) + ("" + " cans")), 150, 250);
 			}
 		});
 		
