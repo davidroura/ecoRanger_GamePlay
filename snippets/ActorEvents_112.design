@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups>
-    <group eventID="1" id="0">
-        <event-mouse-enter-exit-actor comment="false" x="15" y="16">
-            <group eventID="1" id="-1"/>
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="4"/>
-        </event-mouse-enter-exit-actor>
-    </group>
-    <group eventID="1" id="-1"/>
-</groups>
+<groups/>

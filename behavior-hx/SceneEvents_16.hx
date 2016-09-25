@@ -70,16 +70,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_4 extends SceneScript
+class SceneEvents_16 extends SceneScript
 {
-	public var _points:Float;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("points", "_points");
-		_points = 0.0;
 		
 	}
 	
@@ -87,72 +84,15 @@ class SceneEvents_4 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_points = asNumber((Engine.engine.getGameAttribute("bottleColleted") + Engine.engine.getGameAttribute("canCollected")));
-		propertyChanged("_points", _points);
-		Engine.engine.setGameAttribute("gameBottles", (Engine.engine.getGameAttribute("gameBottles") + Engine.engine.getGameAttribute("bottleColleted")));
-		Engine.engine.setGameAttribute("gameCans", (Engine.engine.getGameAttribute("gameCans") + Engine.engine.getGameAttribute("canCollected")));
-		if((_points > 1))
-		{
-			createRecycledActor(getActorType(17), -10, 40, Script.FRONT);
-			getLastCreatedActor().setAnimation("" + "1");
-		}
-		if((_points > 2))
-		{
-			createRecycledActor(getActorType(17), 100, 40, Script.FRONT);
-			getLastCreatedActor().setAnimation("" + "2");
-		}
-		if((_points > 3))
-		{
-			createRecycledActor(getActorType(17), 190, 40, Script.FRONT);
-			getLastCreatedActor().setAnimation("" + "3");
-		}
-		saveGame("mySave", function(success:Bool):Void
-		{
-			if(success)
-			{
-				
-			}
-			else
-			{
-				
-			}
-		});
+		Engine.engine.setGameAttribute("sceneSpeed", 15);
+		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(9).getID(), null, createCrossfadeTransition(0));
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(1), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(3), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(0));
-			}
-		});
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ============================ Click ============================= */
+		addMouseReleasedListener(function(list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				g.setFont(getFont(19));
-				g.drawString("" + (("" + Engine.engine.getGameAttribute("bottleColleted")) + ("" + " bottles")), 150, 220);
-				g.drawString("" + (("" + Engine.engine.getGameAttribute("canCollected")) + ("" + " cans")), 150, 250);
+				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		

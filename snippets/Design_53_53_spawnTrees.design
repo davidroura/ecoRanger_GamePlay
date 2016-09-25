@@ -105,15 +105,6 @@
             </group>
         </step>
     </group>
-    <group eventID="3" id="1">
-        <if comment="false" x="246" y="171">
-            <group eventID="3" id="-1"/>
-            <more comment="false" id="0" x="0" y="0">
-                <get-val-53-10 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="0"/>
-            </more>
-        </if>
-    </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
@@ -155,11 +146,7 @@
             <group eventID="5" id="-1">
                 <create-actor-on-layer comment="false" x="26" y="40">
                     <actortype eid="70" id="0"/>
-<<<<<<< HEAD
-                    <int id="1" val="200"/>
-=======
                     <int id="1" val="240"/>
->>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
                     <int id="2" val="0"/>
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>

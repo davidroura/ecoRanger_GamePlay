@@ -568,7 +568,7 @@
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </get-xy>
-                                <int id="1" val="1.3"/>
+                                <int id="1" val="1"/>
                             </minus>
                         </set-xy>
                     </group>
@@ -613,7 +613,7 @@
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </get-xy>
-                                <int id="1" val="1.3"/>
+                                <int id="1" val="1"/>
                             </plus>
                         </set-xy>
                     </group>

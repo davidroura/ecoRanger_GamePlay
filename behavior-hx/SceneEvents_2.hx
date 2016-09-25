@@ -84,11 +84,14 @@ class SceneEvents_2 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
+<<<<<<< HEAD
 		if(!(Engine.engine.getGameAttribute("musicOn")))
 		{
 			playSound(getSound(118));
 			Engine.engine.setGameAttribute("musicOn", true);
 		}
+=======
+>>>>>>> parent of a064428... Debug force accelerometer off in gp, updated bridge art, updated tree size, added hq music, corrected gp music,  added banana sound
 		saveGame("mySave", function(success:Bool):Void
 		{
 			
@@ -151,8 +154,11 @@ class SceneEvents_2 extends SceneScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
+<<<<<<< HEAD
 				stopAllSounds();
 				Engine.engine.setGameAttribute("musicOn", false);
+=======
+>>>>>>> parent of a064428... Debug force accelerometer off in gp, updated bridge art, updated tree size, added hq music, corrected gp music,  added banana sound
 				switchScene(GameModel.get().scenes.get(16).getID(), null, createCrossfadeTransition(0));
 			}
 		});

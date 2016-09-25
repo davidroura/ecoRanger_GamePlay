@@ -42,25 +42,8 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-<<<<<<< HEAD
-                <comment-wrapper comment="false" x="26" y="40">
-                    <group eventID="4" id="-1">
-                        <set-game-val-0 comment="false" x="37" y="60">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-0>
-                    </group>
-                    <int id="0" val="debug always set to click movement"/>
-                </comment-wrapper>
-                <set-game-val-3 comment="false" x="26" y="97">
-<<<<<<< HEAD
-                    <int id="0" val="20"/>
-=======
                 <set-game-val-3 comment="false" x="26" y="40">
                     <int id="0" val="15"/>
->>>>>>> 89da7e026120f41061524a0f7f223d1fa0e4e543
-=======
-                    <int id="0" val="15"/>
->>>>>>> parent of afeb829... fixing game over screen in gameplay, added longer bar
                 </set-game-val-3>
                 <set-game-val-22 comment="false" x="26" y="60">
                     <int id="0" val="0"/>

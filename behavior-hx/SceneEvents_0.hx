@@ -74,6 +74,55 @@ class SceneEvents_0 extends SceneScript
 {
 	public var _dozerArrive:Bool;
 	public var _dozerClick:Bool;
+	public var _points:Float;
+	public var _gameOverShown:Bool;
+	public var _tutorialShown:Bool;
+	public var _UITutorial:Actor;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_tutorial():Void
+	{
+		Engine.engine.setGameAttribute("spawnThings", false);
+		createRecycledActor(getActorType(119), 0, 60, Script.FRONT);
+		_UITutorial = getLastCreatedActor();
+		propertyChanged("_UITutorial", _UITutorial);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_gameOverIU():Void
+	{
+		addBackground("UIEnd", "UIEnd", 7);
+		_points = asNumber((Engine.engine.getGameAttribute("bottleColleted") + Engine.engine.getGameAttribute("canCollected")));
+		propertyChanged("_points", _points);
+		Engine.engine.setGameAttribute("gameBottles", (Engine.engine.getGameAttribute("gameBottles") + Engine.engine.getGameAttribute("bottleColleted")));
+		Engine.engine.setGameAttribute("gameCans", (Engine.engine.getGameAttribute("gameCans") + Engine.engine.getGameAttribute("canCollected")));
+		if((_points > 1))
+		{
+			createRecycledActor(getActorType(17), -10, 40, Script.FRONT);
+			getLastCreatedActor().setAnimation("" + "1");
+		}
+		if((_points > 2))
+		{
+			createRecycledActor(getActorType(17), 100, 40, Script.FRONT);
+			getLastCreatedActor().setAnimation("" + "2");
+		}
+		if((_points > 3))
+		{
+			createRecycledActor(getActorType(17), 190, 40, Script.FRONT);
+			getLastCreatedActor().setAnimation("" + "3");
+		}
+		saveGame("mySave", function(success:Bool):Void
+		{
+			if(success)
+			{
+				
+			}
+			else
+			{
+				
+			}
+		});
+	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
@@ -83,6 +132,13 @@ class SceneEvents_0 extends SceneScript
 		_dozerArrive = false;
 		nameMap.set("dozerClick", "_dozerClick");
 		_dozerClick = false;
+		nameMap.set("points", "_points");
+		_points = 0.0;
+		nameMap.set("gameOverShown", "_gameOverShown");
+		_gameOverShown = false;
+		nameMap.set("tutorialShown", "_tutorialShown");
+		_tutorialShown = false;
+		nameMap.set("UITutorial", "_UITutorial");
 		
 	}
 	
@@ -90,11 +146,16 @@ class SceneEvents_0 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
-		Engine.engine.setGameAttribute("sceneSpeed", 20);
+		Engine.engine.setGameAttribute("sceneSpeed", 15);
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		Engine.engine.setGameAttribute("playerControl", true);
 		Engine.engine.setGameAttribute("dozerPlaying", false);
+		Engine.engine.setGameAttribute("gameStart", false);
+		Engine.engine.setGameAttribute("spawnThings", false);
+		_gameOverShown = false;
+		propertyChanged("_gameOverShown", _gameOverShown);
+		_tutorialShown = false;
+		propertyChanged("_tutorialShown", _tutorialShown);
 		getActor(1).setAnimation("" + "Animation Up");
 		runLater(1000 * 0.5, function(timeTask:TimedTask):Void
 		{
@@ -135,6 +196,28 @@ class SceneEvents_0 extends SceneScript
 			if(wrapper.enabled)
 			{
 				getActor(5).growTo(100/100, Engine.engine.getGameAttribute("playerHealth")/100, 0, Linear.easeNone);
+				if((!(_tutorialShown) && (0 < Engine.engine.getGameAttribute("playerHealth"))))
+				{
+					_tutorialShown = true;
+					propertyChanged("_tutorialShown", _tutorialShown);
+					_customEvent_tutorial();
+				}
+				if((!(_gameOverShown) && (Engine.engine.getGameAttribute("playerHealth") < 1)))
+				{
+					_gameOverShown = true;
+					propertyChanged("_gameOverShown", _gameOverShown);
+					_customEvent_gameOverIU();
+				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(_UITutorial, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				recycleActor(_UITutorial);
+				Engine.engine.setGameAttribute("spawnThings", true);
 			}
 		});
 		
