@@ -8,8 +8,8 @@
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="26" id="11" name="banana" shared="false" width="41">
-        <anim across="1" down="1" durations="100" height="26" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="41">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="11" name="banana" shared="false" width="67">
+        <anim across="1" down="1" durations="100" height="42" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="67">
             <poly data="4,0,0,41,0,41,26,0,26" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -543,11 +543,19 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="78" fixedrot="false" fric="0.2" gid="3" id="119" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="UITutorialBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="120" static="true">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="256" id="120" name="UITutorialBG" shared="false" width="171">
-        <anim across="1" down="1" durations="100" height="256" id="0" loop="true" name="Animation 0" numframes="1" originx="85" originy="128" sync="false" version="2" width="171">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="120" name="UITutorialBG" shared="false" width="320">
+        <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="Animation 0" numframes="1" originx="85" originy="128" sync="false" version="2" width="320">
             <poly data="4,0,0,171,0,171,256,0,256" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="123" name="UITutorialBG" shared="false" width="320">
+        <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="Animation 0" numframes="1" originx="85" originy="128" sync="false" version="2" width="320">
+            <poly data="4,0,0,171,0,171,256,0,256" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="79" fixedrot="false" fric="0.2" gid="3" id="122" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="UITutorialBG2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="123" static="true">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="47" fixedrot="true" fric="0.2" gid="3" id="60" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="upgradeBoxes" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="61" static="false">
         <snippets/>
     </actor>

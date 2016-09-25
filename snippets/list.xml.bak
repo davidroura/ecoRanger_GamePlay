@@ -13,7 +13,6 @@
             <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="15" repeats="true"/>
             <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="16" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="17" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="7" name="draw" order="5" repeats="true"/>
             <event displayName="dozeyClick" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="11" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
             <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="2" repeats="true"/>
@@ -102,8 +101,7 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_8_8_playerHealth" classname="scripts.Design_8_8_playerHealth" desc="" description="" design="true" drawOrder="0" id="8" name="playerHealth" oid="-1" package="scripts" shared="false" type="scene">
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="playerHealth" hidden="true" id="1" name="_playerHealth" order="0"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="healthFactor" hidden="true" id="2" name="_healthFactor" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="healthFactor" hidden="true" id="2" name="_healthFactor" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="lifeBar" hidden="true" id="3" name="_lifeBar" order="2"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="warning" hidden="true" id="4" name="_warning" order="3"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="playerBoost" hidden="false" id="5" name="_playerBoost" order="4"/>
@@ -119,7 +117,6 @@
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="11" repeats="true"/>
             <event displayName="Updated" enabled="true" id="3" name="step" order="12" repeats="true"/>
-            <event displayName="calculateLifeBar" enabled="true" id="4" name="event-custom" order="27" repeats="true"/>
             <event displayName="player - bottle" enabled="true" id="5" name="event-collide-typetotype" order="20" repeats="true"/>
             <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="24" repeats="true"/>
             <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="23" repeats="true"/>
@@ -136,7 +133,6 @@
             <event displayName="dozer - bonusCard" enabled="true" id="18" name="event-collide-typetotype" order="16" repeats="true"/>
             <event displayName="player - plastic" enabled="true" id="19" name="event-collide-typetotype" order="2" repeats="true"/>
             <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="true"/>
-            <event displayName="gameOver" enabled="true" id="21" name="event-custom" order="13" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
@@ -396,11 +392,15 @@
     </snippet>
     <snippet actorid="49" attachedevent="true" class="scripts.ActorEvents_49" classname="scripts.ActorEvents_49" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="41" name="ActorEvents_49" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="51" attachedevent="true" class="scripts.ActorEvents_51" classname="scripts.ActorEvents_51" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="42" name="ActorEvents_51" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_12" classname="scripts.SceneEvents_12" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="43" name="SceneEvents_12" oid="-1" package="scripts." sceneid="12" shared="false" type="scene">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="1" name="_points" order="0"/>
@@ -619,6 +619,10 @@
         <events/>
     </snippet>
     <snippet actorid="119" attachedevent="true" class="scripts.ActorEvents_119" classname="scripts.ActorEvents_119" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="78" name="ActorEvents_119" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="119" attachedevent="true" class="scripts.ActorEvents_122" classname="scripts.ActorEvents_122" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="79" name="ActorEvents_122" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
