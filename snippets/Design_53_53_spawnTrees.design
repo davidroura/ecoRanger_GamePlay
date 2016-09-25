@@ -41,10 +41,10 @@
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
                 <set-val-53-6 comment="false" x="26" y="40">
-                    <int id="0" val="2"/>
+                    <int id="0" val="4"/>
                 </set-val-53-6>
                 <set-val-53-7 comment="false" x="26" y="60">
-                    <int id="0" val="3.5"/>
+                    <int id="0" val="5"/>
                 </set-val-53-7>
                 <set-val-53-3 comment="false" x="26" y="80">
                     <int id="0" val="60"/>
