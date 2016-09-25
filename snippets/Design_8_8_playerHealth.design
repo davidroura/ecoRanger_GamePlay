@@ -118,48 +118,53 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <set-val-8-1 comment="false" x="37" y="70">
-                            <minus comment="false" id="0" x="0" y="0">
+                        <if comment="false" x="37" y="65">
+                            <group eventID="3" id="-1">
+                                <set-val-8-1 comment="false" x="48" y="95">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-8-2 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                </set-val-8-1>
+                                <set-game-val-3 comment="false" x="48" y="125">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0.20"/>
+                                        <get-val-8-1 comment="false" id="1" x="0" y="0"/>
+                                    </times>
+                                </set-game-val-3>
+                                <set-game-val-28 comment="false" x="48" y="155">
+                                    <get-val-8-1 comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-28>
+                                <say-this comment="false" x="48" y="180">
+                                    <int id="0" val="extraLife"/>
+                                </say-this>
+                                <say-this comment="false" x="48" y="200">
+                                    <int id="0" val="calculateLifeBar"/>
+                                </say-this>
+                                <say-this comment="false" x="48" y="220">
+                                    <int id="0" val="distance"/>
+                                </say-this>
+                                <say-this comment="false" x="48" y="240">
+                                    <int id="0" val="bonusCard"/>
+                                </say-this>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
                                 <get-val-8-1 comment="false" id="0" x="0" y="0"/>
-                                <get-val-8-2 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-val-8-1>
-                        <set-game-val-3 comment="false" x="37" y="100">
-                            <times comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0.20"/>
-                                <get-val-8-1 comment="false" id="1" x="0" y="0"/>
-                            </times>
-                        </set-game-val-3>
-                        <set-game-val-28 comment="false" x="37" y="130">
-                            <get-val-8-1 comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-28>
-                        <say-this comment="false" x="37" y="155">
-                            <int id="0" val="extraLife"/>
-                        </say-this>
-                        <say-this comment="false" x="37" y="175">
-                            <int id="0" val="calculateLifeBar"/>
-                        </say-this>
-                        <say-this comment="false" x="37" y="195">
-                            <int id="0" val="distance"/>
-                        </say-this>
-                        <say-this comment="false" x="37" y="215">
-                            <int id="0" val="bonusCard"/>
-                        </say-this>
+                                <int id="1" val="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="272">
+                            <group eventID="3" id="-1">
+                                <scene-change-through comment="false" x="48" y="292">
+                                    <scene eid="4" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1.5"/>
+                                </scene-change-through>
+                            </group>
+                        </else>
                     </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-val-8-1 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </more>
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="247">
-                    <group eventID="3" id="-1">
-                        <scene-change-through comment="false" x="37" y="267">
-                            <scene eid="4" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="1.5"/>
-                        </scene-change-through>
-                    </group>
-                </else>
             </group>
         </step>
     </group>

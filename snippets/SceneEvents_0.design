@@ -331,7 +331,7 @@
                 </set-game-val-30>
                 <create-actor3 comment="false" x="26" y="65">
                     <actortype eid="119" id="0"/>
-                    <int id="1" val="140"/>
+                    <int id="1" val="100"/>
                     <int id="2" val="60"/>
                     <int id="3" val="0"/>
                 </create-actor3>
