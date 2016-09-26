@@ -72,6 +72,7 @@
         <cat id="1" name="Position"/>
         <cat id="2" name="game"/>
         <cat id="3" name="main menu"/>
+        <cat id="4" name="Upgrade Menu"/>
     </attcats>
     <props/>
     <attributes>
@@ -86,6 +87,7 @@
         <number cid="1" id="20" name="playerXPos" save="true" value="0.0"/>
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <boolean cid="-1" id="29" name="gameStart" save="true" value="false"/>
+        <number cid="4" id="32" name="totalUpgrades" save="true" value="9"/>
         <number cid="-1" id="18" name="dozerStrength" save="true" value="0.0"/>
         <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
         <boolean cid="-1" id="17" name="boosted" save="true" value="false"/>

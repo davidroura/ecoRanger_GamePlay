@@ -16,20 +16,6 @@
         </event-device-swipe>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-mouse-enter-exit-region comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <scene-change-through comment="false" x="26" y="42">
-                    <scene eid="13" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="0"/>
-                </scene-change-through>
-            </group>
-            <REGION eid="0" id="0"/>
-            <int id="1" val="2"/>
-        </event-mouse-enter-exit-region>
-    </group>
-    <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="3" id="-1">
@@ -61,20 +47,11 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-val-23-5 comment="false" x="26" y="40">
-                    <int id="0" val="50"/>
-                </set-val-23-5>
-                <set-val-23-6 comment="false" x="26" y="60">
-                    <int id="0" val="50"/>
-                </set-val-23-6>
-                <set-val-23-7 comment="false" x="26" y="80">
-                    <int id="0" val="0"/>
-                </set-val-23-7>
-                <set-val-23-8 comment="false" x="26" y="100">
-                    <int id="0" val="Dozer Strength"/>
-                </set-val-23-8>
-                <say-this comment="false" x="26" y="120">
+                <say-this comment="false" x="26" y="40">
                     <int id="0" val="declareVariables"/>
+                </say-this>
+                <say-this comment="false" x="26" y="60">
+                    <int id="0" val="fillUpgrades"/>
                 </say-this>
             </group>
         </init>
@@ -107,4 +84,52 @@
         </event-custom>
     </group>
     <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <repeat comment="false" x="26" y="40">
+                    <group eventID="7" id="-1">
+                        <create-actor3 comment="false" x="37" y="65">
+                            <actortype eid="55" id="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <mod comment="false" id="0" x="0" y="0">
+                                    <loopindex comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="2"/>
+                                </mod>
+                                <int id="1" val="160"/>
+                            </times>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-val-23-9 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="90"/>
+                            </plus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <if comment="false" x="37" y="107">
+                            <group eventID="7" id="-1">
+                                <set-val-23-9 comment="false" x="48" y="142">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <div comment="false" id="0" x="0" y="0">
+                                            <loopindex comment="false" id="0" x="0" y="0"/>
+                                            <int id="1" val="2"/>
+                                        </div>
+                                        <int id="1" val="85"/>
+                                    </times>
+                                </set-val-23-9>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <mod comment="false" id="0" x="0" y="0">
+                                    <loopindex comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="2"/>
+                                </mod>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <get-game-val-32 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+            </group>
+            <int id="0" val="fillUpgrades"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
 </groups>

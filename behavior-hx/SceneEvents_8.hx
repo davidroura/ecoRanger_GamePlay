@@ -80,11 +80,26 @@ class SceneEvents_8 extends SceneScript
 	public var _dozerGlass:Float;
 	public var _dozerPlastic:Float;
 	public var _dozerName:String;
+	public var _buttonY:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_addItemY():Void
 	{
 		
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_fillUpgrades():Void
+	{
+		for(index0 in 0...Std.int(Engine.engine.getGameAttribute("totalUpgrades")))
+		{
+			createRecycledActor(getActorType(55), ((index0 % 2) * 160), (_buttonY + 90), Script.FRONT);
+			if(((index0 % 2) == 1))
+			{
+				_buttonY = asNumber(((index0 / 2) * 85));
+				propertyChanged("_buttonY", _buttonY);
+			}
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -120,6 +135,8 @@ class SceneEvents_8 extends SceneScript
 		_dozerPlastic = 0.0;
 		nameMap.set("dozerName", "_dozerName");
 		_dozerName = "";
+		nameMap.set("buttonY", "_buttonY");
+		_buttonY = 0;
 		
 	}
 	
@@ -127,15 +144,8 @@ class SceneEvents_8 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_dozerMetal = asNumber(50);
-		propertyChanged("_dozerMetal", _dozerMetal);
-		_dozerGlass = asNumber(50);
-		propertyChanged("_dozerGlass", _dozerGlass);
-		_dozerPlastic = asNumber(0);
-		propertyChanged("_dozerPlastic", _dozerPlastic);
-		_dozerName = "Dozer Strength";
-		propertyChanged("_dozerName", _dozerName);
 		_customEvent_declareVariables();
+		_customEvent_fillUpgrades();
 		
 		/* ============================ Swipe ============================= */
 		addSwipeListener(function(list:Array<Dynamic>):Void
@@ -157,15 +167,6 @@ class SceneEvents_8 extends SceneScript
 				g.drawString("" + _dozerName, _itemNameX, _itemY);
 				g.drawString("" + _dozerMetal, _itemMetalX, _itemY);
 				g.drawString("" + _dozerGlass, _itemGlassX, _itemY);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(13).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		

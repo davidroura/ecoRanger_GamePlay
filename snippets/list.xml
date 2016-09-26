@@ -256,14 +256,15 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="dozerGlass" hidden="false" id="6" name="_dozerGlass" order="5"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="dozerPlastic" hidden="false" id="7" name="_dozerPlastic" order="6"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="dozerName" hidden="false" id="8" name="_dozerName" order="7"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="buttonY" hidden="false" id="9" name="_buttonY" order="8"/>
         <blocks/>
         <events>
             <event displayName="Swipe" enabled="true" id="1" name="event-device-swipe" order="1" repeats="true"/>
-            <event displayName="dozerSelected" enabled="true" id="2" name="event-mouse-enter-exit-region" order="7" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="3" name="draw" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="4" repeats="true"/>
-            <event displayName="declareVariables" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="declareVariables" enabled="true" id="5" name="event-custom" order="6" repeats="true"/>
             <event displayName="addItemY" enabled="true" id="6" name="event-custom" order="3" repeats="true"/>
+            <event displayName="fillUpgrades" enabled="true" id="7" name="event-custom" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="25" attachedevent="true" class="scripts.ActorEvents_25" classname="scripts.ActorEvents_25" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="24" name="ActorEvents_25" oid="-1" package="scripts." shared="false" type="actor">
@@ -623,6 +624,10 @@
         <events/>
     </snippet>
     <snippet actorid="119" attachedevent="true" class="scripts.ActorEvents_122" classname="scripts.ActorEvents_122" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="79" name="ActorEvents_122" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_80_80_UpgradeUIButtons" classname="scripts.Design_80_80_UpgradeUIButtons" desc="" description="" design="true" drawOrder="0" id="80" name="UpgradeUIButtons" oid="-1" package="scripts" shared="false" type="scene">
         <blocks/>
         <events/>
     </snippet>
