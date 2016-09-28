@@ -203,6 +203,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="frameRate" hidden="true" id="1" name="_frameRate" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="frameCount" hidden="true" id="2" name="_frameCount" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="time" hidden="true" id="3" name="_time" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="wait4Obstale" hidden="false" id="4" name="_wait4Obstale" order="3"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
