@@ -44,7 +44,7 @@
             <event displayName="Drawing" enabled="true" id="4" name="draw" order="11" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="12" repeats="true"/>
             <event displayName="Swipe-left" enabled="true" id="6" name="event-device-swipe" order="14" repeats="true"/>
-            <event displayName="buyMaterial" enabled="true" id="8" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
+            <event displayName="buyDozy" enabled="true" id="8" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
             <event displayName="playBPressed" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="playBReleased" enabled="true" id="10" name="event-mouse-enter-exit-actor" order="9" repeats="true"/>
             <event displayName="buyBlok" enabled="true" id="11" name="event-mouse-enter-exit-region" order="4" repeats="true"/>

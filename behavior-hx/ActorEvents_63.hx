@@ -201,7 +201,7 @@ class ActorEvents_63 extends ActorScript
 				}
 				if(_dozerPlaying)
 				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") - 25));
+					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 10));
 				}
 			}
 		});
@@ -221,6 +221,7 @@ class ActorEvents_63 extends ActorScript
 				propertyChanged("_dozerLeave", _dozerLeave);
 				_dozerRecharge = true;
 				propertyChanged("_dozerRecharge", _dozerRecharge);
+				recycleActor(event.otherActor);
 			}
 		});
 		

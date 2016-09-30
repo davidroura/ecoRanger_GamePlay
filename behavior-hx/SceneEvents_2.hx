@@ -103,8 +103,7 @@ class SceneEvents_2 extends SceneScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				Engine.engine.setGameAttribute("gameBottles", (Engine.engine.getGameAttribute("gameBottles") + 100));
-				Engine.engine.setGameAttribute("gameCans", (Engine.engine.getGameAttribute("gameCans") + 100));
+				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") + 1));
 			}
 		});
 		
@@ -168,13 +167,13 @@ class SceneEvents_2 extends SceneScript
 			{
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(19));
-				g.drawString("" + (("" + "bottles: ") + ("" + Engine.engine.getGameAttribute("gameBottles"))), 40, 10);
+				g.drawString("" + (("" + "dozy:") + ("" + Engine.engine.getGameAttribute("dozerStrength"))), 40, 10);
 				g.drawString("" + (("" + "cans: ") + ("" + Engine.engine.getGameAttribute("gameCans"))), 140, 10);
 				g.drawString("" + (("" + "Glass: ") + ("" + Engine.engine.getGameAttribute("gameCubeGlass"))), 140, 30);
 				g.drawString("" + (("" + "Metal: ") + ("" + Engine.engine.getGameAttribute("gameCubeMetal"))), 40, 30);
 				g.drawString("" + (("" + "Dozers:") + ("" + Engine.engine.getGameAttribute("dozerStrength"))), 40, 50);
 				g.setFont(getFont(20));
-				g.drawString("" + "Add Materials (test)", 40, 70);
+				g.drawString("" + "Add dozy (test)", 40, 70);
 				g.drawString("" + "Add Blocks Materials (test)", 40, 90);
 				g.drawString("" + "Remove Materials (test)", 40, 110);
 				g.drawString("" + "Remove Blocks Materials (test)", 40, 130);

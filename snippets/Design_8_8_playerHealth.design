@@ -146,29 +146,20 @@
                                     </minus>
                                 </set-game-val-28>
                                 <set-game-val-3 comment="false" x="48" y="125">
-                                    <int id="0" val="25"/>
+                                    <sqrt comment="false" id="0" x="0" y="0">
+                                        <times comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="10"/>
+                                            <get-game-val-28 comment="false" id="1" x="0" y="0"/>
+                                        </times>
+                                    </sqrt>
                                 </set-game-val-3>
-                                <if comment="false" x="48" y="145">
-                                    <group eventID="3" id="-1">
-                                        <set-game-val-3 comment="false" x="59" y="175">
-                                            <times comment="false" id="0" x="0" y="0">
-                                                <int id="0" val="0.20"/>
-                                                <get-game-val-28 comment="false" id="1" x="0" y="0"/>
-                                            </times>
-                                        </set-game-val-3>
-                                    </group>
-                                    <more comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="15"/>
-                                        <get-game-val-28 comment="false" id="1" x="0" y="0"/>
-                                    </more>
-                                </if>
-                                <say-this comment="false" x="48" y="217">
+                                <say-this comment="false" x="48" y="160">
                                     <int id="0" val="extraLife"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="237">
+                                <say-this comment="false" x="48" y="180">
                                     <int id="0" val="distance"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="257">
+                                <say-this comment="false" x="48" y="200">
                                     <int id="0" val="bonusCard"/>
                                 </say-this>
                             </group>

@@ -83,10 +83,10 @@
                         <set-xy comment="false" x="37" y="368">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                            <minus comment="false" id="2" x="0" y="0">
+                            <plus comment="false" id="2" x="0" y="0">
                                 <get-game-val-20 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="25"/>
-                            </minus>
+                                <int id="1" val="10"/>
+                            </plus>
                         </set-xy>
                     </group>
                     <get-val-48-4 comment="false" id="0" x="0" y="0"/>
@@ -113,6 +113,9 @@
                 <set-val-48-6 comment="false" x="21" y="143">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-48-6>
+                <die comment="false" x="21" y="168">
+                    <second-actor comment="false" id="0" x="0" y="0"/>
+                </die>
             </group>
             <actortype eid="63" id="0"/>
             <actortype eid="12" id="1"/>

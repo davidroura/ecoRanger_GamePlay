@@ -142,13 +142,15 @@
                         </not>
                     </and>
                 </if>
-                <set-val-0-2 comment="false" x="26" y="255">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-0-2>
             </group>
             <ACTOR eid="2" id="0"/>
             <int id="1" val="2"/>
         </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="9" id="1">
+        <set-val-0-2 comment="false" x="150" y="326">
+            <false comment="false" id="0" x="0" y="0"/>
+        </set-val-0-2>
     </group>
     <group eventID="9" id="-1"/>
     <group eventID="10" id="0">
@@ -413,7 +415,15 @@
                             <font eid="20" id="0"/>
                         </set-font-new>
                         <draw-text comment="false" x="37" y="92">
-                            <int id="0" val="Dozer Clicked"/>
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="dozer clicked ("/>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <tostring comment="false" id="0" x="0" y="0">
+                                        <get-game-val-18 comment="false" id="0" x="0" y="0"/>
+                                    </tostring>
+                                    <int id="1" val=")"/>
+                                </str-combine>
+                            </str-combine>
                             <int id="1" val="150"/>
                             <int id="2" val="150"/>
                         </draw-text>
