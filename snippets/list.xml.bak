@@ -9,10 +9,11 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="UITutorial" hidden="false" id="6" name="_UITutorial" order="5"/>
         <blocks/>
         <events>
+            <event displayName="Drawing" enabled="true" id="16" name="draw" order="17" repeats="true"/>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="15" repeats="true"/>
-            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="16" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="17" repeats="true"/>
+            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="16" repeats="true"/>
+            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="18" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="19" repeats="true"/>
             <event displayName="dozeyClick" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="11" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
             <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="2" repeats="true"/>

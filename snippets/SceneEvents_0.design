@@ -404,4 +404,24 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="15" id="-1"/>
+    <group eventID="16" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="16" id="-1">
+                        <set-font-new comment="false" x="37" y="65">
+                            <font eid="20" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="92">
+                            <int id="0" val="Dozer Clicked"/>
+                            <int id="1" val="150"/>
+                            <int id="2" val="150"/>
+                        </draw-text>
+                    </group>
+                    <get-val-0-2 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="16" id="-1"/>
 </groups>
