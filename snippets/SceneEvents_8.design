@@ -142,7 +142,7 @@
                                 </get-item>
                             </tostring>
                         </print>
-                        <print comment="false" x="37" y="306">
+                        <print comment="false" x="37" y="301">
                             <tostring comment="false" id="0" x="0" y="0">
                                 <str-combine comment="false" id="0" x="0" y="0">
                                     <str-combine comment="false" id="0" x="0" y="0">
@@ -162,9 +162,9 @@
                                 </str-combine>
                             </tostring>
                         </print>
-                        <if comment="false" x="37" y="356">
+                        <if comment="false" x="37" y="351">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="391">
+                                <set-val-23-9 comment="false" x="48" y="386">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <int id="0" val="90"/>
                                         <get-val-23-9 comment="false" id="1" x="0" y="0"/>
@@ -189,6 +189,10 @@
         </event-custom>
     </group>
     <group eventID="7" id="-1">
+        <mod comment="false" x="470" y="608">
+            <loopindex comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="2"/>
+        </mod>
         <times comment="false" x="141" y="616">
             <div comment="false" id="0" x="0" y="0">
                 <loopindex comment="false" id="0" x="0" y="0"/>
@@ -196,10 +200,6 @@
             </div>
             <int id="1" val="87"/>
         </times>
-        <mod comment="false" x="470" y="608">
-            <loopindex comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="2"/>
-        </mod>
     </group>
     <group eventID="8" id="0">
         <event-custom comment="false" x="15" y="15">
