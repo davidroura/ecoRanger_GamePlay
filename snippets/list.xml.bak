@@ -262,6 +262,8 @@
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="upgradeList" hidden="false" id="10" name="_upgradeList" order="9">
             <text order="0" value="windTunnel"/>
             <text order="1" value="stampede"/>
+            <text order="2" value="windTunnelII"/>
+            <text order="3" value="stampedeII"/>
         </list>
         <blocks/>
         <events>
