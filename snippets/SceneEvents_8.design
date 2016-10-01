@@ -188,19 +188,7 @@
             <int id="0" val="fillUpgrades"/>
         </event-custom>
     </group>
-    <group eventID="7" id="-1">
-        <mod comment="false" x="470" y="608">
-            <loopindex comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="2"/>
-        </mod>
-        <times comment="false" x="141" y="616">
-            <div comment="false" id="0" x="0" y="0">
-                <loopindex comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="2"/>
-            </div>
-            <int id="1" val="87"/>
-        </times>
-    </group>
+    <group eventID="7" id="-1"/>
     <group eventID="8" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="8" id="-1">
