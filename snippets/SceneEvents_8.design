@@ -43,6 +43,11 @@
             </group>
         </draw>
     </group>
+    <group eventID="3" id="1">
+        <say-this comment="false" x="104" y="234">
+            <int id="0" val="declareVariables"/>
+        </say-this>
+    </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
@@ -87,9 +92,23 @@
     <group eventID="7" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <repeat comment="false" x="26" y="40">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="createList"/>
+                </say-this>
+                <repeat comment="false" x="26" y="60">
                     <group eventID="7" id="-1">
-                        <create-actor3 comment="false" x="37" y="65">
+                        <if comment="false" x="37" y="90">
+                            <group eventID="7" id="-1">
+                                <set-val-23-9 comment="false" x="48" y="120">
+                                    <int id="0" val="52"/>
+                                </set-val-23-9>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <loopindex comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </eq>
+                        </if>
+                        <create-actor3 comment="false" x="37" y="152">
                             <actortype eid="55" id="0"/>
                             <times comment="false" id="1" x="0" y="0">
                                 <mod comment="false" id="0" x="0" y="0">
@@ -98,21 +117,41 @@
                                 </mod>
                                 <int id="1" val="160"/>
                             </times>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-val-23-9 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="90"/>
-                            </plus>
+                            <get-val-23-9 comment="false" id="2" x="0" y="0"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <if comment="false" x="37" y="107">
+                        <setanim comment="false" x="37" y="194">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <tostring comment="false" id="1" x="0" y="0">
+                                <get-item comment="false" id="0" x="0" y="0">
+                                    <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                    <mod comment="false" id="1" x="0" y="0">
+                                        <loopindex comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="2"/>
+                                    </mod>
+                                </get-item>
+                            </tostring>
+                        </setanim>
+                        <print comment="false" x="37" y="241">
+                            <tostring comment="false" id="0" x="0" y="0">
+                                <get-item comment="false" id="0" x="0" y="0">
+                                    <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                    <mod comment="false" id="1" x="0" y="0">
+                                        <loopindex comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="2"/>
+                                    </mod>
+                                </get-item>
+                            </tostring>
+                        </print>
+                        <if comment="false" x="37" y="281">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="142">
+                                <set-val-23-9 comment="false" x="48" y="316">
                                     <times comment="false" id="0" x="0" y="0">
                                         <div comment="false" id="0" x="0" y="0">
                                             <loopindex comment="false" id="0" x="0" y="0"/>
                                             <int id="1" val="2"/>
                                         </div>
-                                        <int id="1" val="85"/>
+                                        <int id="1" val="87"/>
                                     </times>
                                 </set-val-23-9>
                             </group>
@@ -125,11 +164,37 @@
                             </eq>
                         </if>
                     </group>
-                    <get-game-val-32 comment="false" id="0" x="0" y="0"/>
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
                 </repeat>
             </group>
             <int id="0" val="fillUpgrades"/>
         </event-custom>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <set-val-23-10 comment="false" x="26" y="40">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-23-10>
+                <comment-wrapper comment="false" x="26" y="65">
+                    <group eventID="8" id="-1">
+                        <add-list comment="false" x="37" y="85">
+                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Stampede"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="110">
+                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="windTunnel"/>
+                        </add-list>
+                    </group>
+                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation names"/>
+                </comment-wrapper>
+            </group>
+            <int id="0" val="createList"/>
+        </event-custom>
+    </group>
+    <group eventID="8" id="-1"/>
 </groups>
