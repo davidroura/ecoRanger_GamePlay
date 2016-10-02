@@ -363,7 +363,7 @@
                             <ACTOR eid="var" id="0" vid="6"/>
                         </die>
                     </group>
-                    <int id="0" val="2"/>
+                    <int id="0" val="1.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
                 <dolater comment="false" x="26" y="185">
@@ -378,7 +378,7 @@
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-0-6>
                     </group>
-                    <int id="0" val="2.5"/>
+                    <int id="0" val="2"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
                 <dolater comment="false" x="26" y="278">
@@ -390,7 +390,7 @@
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-30>
                     </group>
-                    <int id="0" val="4.5"/>
+                    <int id="0" val="3.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
             </group>

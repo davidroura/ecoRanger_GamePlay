@@ -34,76 +34,89 @@
                     <color b="0" g="200" id="0" r="255"/>
                 </set-color>
                 <set-font-new comment="false" x="26" y="67">
-                    <font eid="19" id="0"/>
+                    <font eid="128" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="94">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="dozy:"/>
-                        <get-game-val-18 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="40"/>
-                    <int id="2" val="10"/>
+                    <get-game-val-33 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="60"/>
+                    <int id="2" val="15"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="124">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="cans: "/>
-                        <get-game-val-8 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="140"/>
-                    <int id="2" val="10"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="154">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="Glass: "/>
-                        <get-game-val-14 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="140"/>
-                    <int id="2" val="30"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="184">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="Metal: "/>
-                        <get-game-val-16 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="40"/>
-                    <int id="2" val="30"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="214">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="Dozers:"/>
-                        <get-game-val-18 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="40"/>
-                    <int id="2" val="50"/>
-                </draw-text>
-                <set-font-new comment="false" x="26" y="244">
-                    <font eid="20" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="271">
-                    <int id="0" val="Add dozy (test)"/>
-                    <int id="1" val="40"/>
-                    <int id="2" val="70"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="291">
-                    <int id="0" val="Add Blocks Materials (test)"/>
-                    <int id="1" val="40"/>
-                    <int id="2" val="90"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="311">
-                    <int id="0" val="Remove Materials (test)"/>
-                    <int id="1" val="40"/>
-                    <int id="2" val="110"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="331">
-                    <int id="0" val="Remove Blocks Materials (test)"/>
-                    <int id="1" val="40"/>
-                    <int id="2" val="130"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="351">
-                    <int id="0" val="save"/>
-                    <int id="1" val="40"/>
-                    <int id="2" val="150"/>
-                </draw-text>
+                <if comment="false" x="26" y="119">
+                    <group eventID="4" id="-1">
+                        <set-font-new comment="false" x="37" y="144">
+                            <font eid="19" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="171">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="dozy:"/>
+                                <get-game-val-18 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                            <int id="1" val="40"/>
+                            <int id="2" val="10"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="201">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="cans: "/>
+                                <get-game-val-8 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                            <int id="1" val="140"/>
+                            <int id="2" val="10"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="231">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Glass: "/>
+                                <get-game-val-14 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                            <int id="1" val="140"/>
+                            <int id="2" val="30"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="261">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Metal: "/>
+                                <get-game-val-16 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                            <int id="1" val="40"/>
+                            <int id="2" val="30"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="291">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Dozers:"/>
+                                <get-game-val-18 comment="false" id="1" x="0" y="0"/>
+                            </str-combine>
+                            <int id="1" val="40"/>
+                            <int id="2" val="50"/>
+                        </draw-text>
+                        <set-font-new comment="false" x="37" y="321">
+                            <font eid="20" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="348">
+                            <int id="0" val="Add dozy (test)"/>
+                            <int id="1" val="40"/>
+                            <int id="2" val="70"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="368">
+                            <int id="0" val="Add Blocks Materials (test)"/>
+                            <int id="1" val="40"/>
+                            <int id="2" val="90"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="388">
+                            <int id="0" val="Remove Materials (test)"/>
+                            <int id="1" val="40"/>
+                            <int id="2" val="110"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="408">
+                            <int id="0" val="Remove Blocks Materials (test)"/>
+                            <int id="1" val="40"/>
+                            <int id="2" val="130"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="428">
+                            <int id="0" val="save"/>
+                            <int id="1" val="40"/>
+                            <int id="2" val="150"/>
+                        </draw-text>
+                    </group>
+                    <get-game-val-34 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </draw>
     </group>
@@ -111,13 +124,16 @@
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="40">
+                <set-game-val-33 comment="false" x="26" y="40">
+                    <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-33>
+                <if comment="false" x="26" y="65">
                     <group eventID="5" id="-1">
-                        <play-sound4 comment="false" x="37" y="70">
+                        <play-sound4 comment="false" x="37" y="95">
                             <int id="0" val="0"/>
                             <sound eid="121" id="1"/>
                         </play-sound4>
-                        <set-game-val-31 comment="false" x="37" y="97">
+                        <set-game-val-31 comment="false" x="37" y="122">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-31>
                     </group>
@@ -125,10 +141,10 @@
                         <get-game-val-31 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <save-game comment="false" x="26" y="134">
+                <save-game comment="false" x="26" y="159">
                     <group eventID="5" id="-1"/>
                 </save-game>
-                <save-game comment="false" x="26" y="191">
+                <save-game comment="false" x="26" y="216">
                     <group eventID="5" id="-1"/>
                 </save-game>
             </group>

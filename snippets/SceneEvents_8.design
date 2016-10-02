@@ -97,7 +97,7 @@
                 </say-this>
                 <print comment="false" x="26" y="60">
                     <length-list comment="false" id="0" x="0" y="0">
-                        <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                     </length-list>
                 </print>
                 <repeat comment="false" x="26" y="90">
@@ -131,7 +131,7 @@
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <tostring comment="false" id="0" x="0" y="0">
                                             <get-item comment="false" id="0" x="0" y="0">
-                                                <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                                <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                                                 <loopindex comment="false" id="1" x="0" y="0"/>
                                             </get-item>
                                         </tostring>
@@ -144,7 +144,7 @@
                                     <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                                     <loopindex comment="false" id="1" x="0" y="0"/>
                                 </get-item>
-                                <int id="1" val="65"/>
+                                <get-game-val-33 comment="false" id="1" x="0" y="0"/>
                             </more>
                         </if>
                         <else comment="false" x="37" y="311">
@@ -152,20 +152,20 @@
                                 <set-val-23-11 comment="false" x="48" y="331">
                                     <tostring comment="false" id="0" x="0" y="0">
                                         <get-item comment="false" id="0" x="0" y="0">
-                                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                                             <loopindex comment="false" id="1" x="0" y="0"/>
                                         </get-item>
                                     </tostring>
                                 </set-val-23-11>
                             </group>
                         </else>
-                        <setanim comment="false" x="37" y="383">
+                        <setanim comment="false" x="37" y="378">
                             <ACTOR eid="lastcreated" id="0"/>
                             <get-val-23-11 comment="false" id="1" x="0" y="0"/>
                         </setanim>
-                        <if comment="false" x="37" y="415">
+                        <if comment="false" x="37" y="410">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="450">
+                                <set-val-23-9 comment="false" x="48" y="445">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <int id="0" val="90"/>
                                         <get-val-23-9 comment="false" id="1" x="0" y="0"/>
@@ -182,7 +182,7 @@
                         </if>
                     </group>
                     <length-list comment="false" id="0" x="0" y="0">
-                        <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                     </length-list>
                 </repeat>
             </group>
@@ -193,25 +193,25 @@
     <group eventID="8" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="8" id="-1">
-                <set-val-23-10 comment="false" x="26" y="40">
+                <set-game-val-35 comment="false" x="26" y="40">
                     <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-23-10>
+                </set-game-val-35>
                 <comment-wrapper comment="false" x="26" y="65">
                     <group eventID="8" id="-1">
                         <add-list comment="false" x="37" y="85">
-                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="stampede"/>
                         </add-list>
                         <add-list comment="false" x="37" y="110">
-                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="windTunnel"/>
                         </add-list>
                         <add-list comment="false" x="37" y="135">
-                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="stampedeII"/>
                         </add-list>
                         <add-list comment="false" x="37" y="160">
-                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="windTunnelII"/>
                         </add-list>
                     </group>

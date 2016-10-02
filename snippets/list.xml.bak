@@ -650,4 +650,12 @@
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="126" attachedevent="true" class="scripts.ActorEvents_126" classname="scripts.ActorEvents_126" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="82" name="ActorEvents_126" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="129" attachedevent="true" class="scripts.ActorEvents_129" classname="scripts.ActorEvents_129" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="83" name="ActorEvents_129" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
 </pack>
