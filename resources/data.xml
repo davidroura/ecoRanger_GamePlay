@@ -104,6 +104,18 @@
         <anim across="1" down="1" durations="100" height="89" id="3" loop="true" name="windTunnelII" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
             <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="89" id="4" loop="true" name="stampedeGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="89" id="5" loop="true" name="stampedeIIGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="89" id="6" loop="true" name="windTunnelGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 6" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="89" id="7" loop="true" name="windTunnelIIGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 7" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="48" fixedrot="true" fric="0.2" gid="3" id="63" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="dozerTop" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="64" static="false">
         <snippets/>
@@ -597,8 +609,17 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="241" id="125" name="upgradeNotificationActor" shared="false" width="232">
-        <anim across="1" down="1" durations="100" height="241" id="0" loop="true" name="Animation 0" numframes="1" originx="71" originy="74" sync="false" version="2" width="232">
+        <anim across="1" down="1" durations="100" height="241" id="0" loop="true" name="stampede" numframes="1" originx="71" originy="74" sync="false" version="2" width="232">
             <poly data="4,8,42,150,42,150,190,8,190" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="218" id="1" loop="true" name="stampedeII" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
+            <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="218" id="2" loop="true" name="windTunnel" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
+            <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="218" id="3" loop="true" name="windTunnelII" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
+            <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="24" name="upgradesBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="323" xpf="1.0" ypf="1.0"/>

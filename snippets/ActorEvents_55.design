@@ -3,22 +3,18 @@
     <group eventID="1" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="42">
-                    <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="80">
-                            <actortype eid="124" id="0"/>
-                            <int id="1" val="50"/>
-                            <int id="2" val="100"/>
-                            <int id="3" val="0"/>
-                        </create-actor3>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <getanim comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </getanim>
-                        <int id="1" val="stampede"/>
-                    </eq>
-                </if>
+                <create-actor3 comment="false" x="26" y="42">
+                    <actortype eid="124" id="0"/>
+                    <int id="1" val="50"/>
+                    <int id="2" val="100"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <setanim comment="false" x="26" y="69">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <getanim comment="false" id="1" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                    </getanim>
+                </setanim>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="4"/>
@@ -28,6 +24,17 @@
         <print comment="false" x="455" y="251">
             <int id="0" val="dozey upgrade"/>
         </print>
+    </group>
+    <group eventID="1" id="2">
+        <if comment="false" x="49" y="237">
+            <group eventID="1" id="-1"/>
+            <eq comment="false" id="0" x="0" y="0">
+                <getanim comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                </getanim>
+                <int id="1" val="stampede"/>
+            </eq>
+        </if>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

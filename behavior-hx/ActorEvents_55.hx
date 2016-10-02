@@ -87,10 +87,8 @@ class ActorEvents_55 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				if((actor.getAnimation() == "stampede"))
-				{
-					createRecycledActor(getActorType(124), 50, 100, Script.FRONT);
-				}
+				createRecycledActor(getActorType(124), 50, 100, Script.FRONT);
+				getLastCreatedActor().setAnimation("" + actor.getAnimation());
 			}
 		});
 		

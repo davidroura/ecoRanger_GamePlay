@@ -265,6 +265,8 @@
             <text order="2" value="windTunnelII"/>
             <text order="3" value="stampedeII"/>
         </list>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="currentButton" hidden="false" id="11" name="_currentButton" order="10"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="upgradeCost" hidden="false" id="12" name="_upgradeCost" order="11"/>
         <blocks/>
         <events>
             <event displayName="Swipe" enabled="true" id="1" name="event-device-swipe" order="1" repeats="true"/>

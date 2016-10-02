@@ -125,46 +125,47 @@
                             <get-val-23-9 comment="false" id="2" x="0" y="0"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="224">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <tostring comment="false" id="1" x="0" y="0">
-                                <get-item comment="false" id="0" x="0" y="0">
-                                    <get-val-23-10 comment="false" id="0" x="0" y="0"/>
-                                    <loopindex comment="false" id="1" x="0" y="0"/>
-                                </get-item>
-                            </tostring>
-                        </setanim>
-                        <print comment="false" x="37" y="266">
-                            <tostring comment="false" id="0" x="0" y="0">
-                                <get-item comment="false" id="0" x="0" y="0">
-                                    <get-val-23-10 comment="false" id="0" x="0" y="0"/>
-                                    <loopindex comment="false" id="1" x="0" y="0"/>
-                                </get-item>
-                            </tostring>
-                        </print>
-                        <print comment="false" x="37" y="301">
-                            <tostring comment="false" id="0" x="0" y="0">
-                                <str-combine comment="false" id="0" x="0" y="0">
-                                    <str-combine comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="x "/>
-                                        <times comment="false" id="1" x="0" y="0">
-                                            <mod comment="false" id="0" x="0" y="0">
-                                                <loopindex comment="false" id="0" x="0" y="0"/>
-                                                <int id="1" val="2"/>
-                                            </mod>
-                                            <int id="1" val="160"/>
-                                        </times>
-                                    </str-combine>
-                                    <str-combine comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="; y "/>
-                                        <get-val-23-9 comment="false" id="1" x="0" y="0"/>
-                                    </str-combine>
-                                </str-combine>
-                            </tostring>
-                        </print>
-                        <if comment="false" x="37" y="351">
+                        <if comment="false" x="37" y="224">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="386">
+                                <set-val-23-11 comment="false" x="48" y="259">
+                                    <str-combine comment="false" id="0" x="0" y="0">
+                                        <tostring comment="false" id="0" x="0" y="0">
+                                            <get-item comment="false" id="0" x="0" y="0">
+                                                <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                                <loopindex comment="false" id="1" x="0" y="0"/>
+                                            </get-item>
+                                        </tostring>
+                                        <int id="1" val="Gray"/>
+                                    </str-combine>
+                                </set-val-23-11>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-item comment="false" id="0" x="0" y="0">
+                                    <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                                    <loopindex comment="false" id="1" x="0" y="0"/>
+                                </get-item>
+                                <int id="1" val="65"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="311">
+                            <group eventID="7" id="-1">
+                                <set-val-23-11 comment="false" x="48" y="331">
+                                    <tostring comment="false" id="0" x="0" y="0">
+                                        <get-item comment="false" id="0" x="0" y="0">
+                                            <get-val-23-10 comment="false" id="0" x="0" y="0"/>
+                                            <loopindex comment="false" id="1" x="0" y="0"/>
+                                        </get-item>
+                                    </tostring>
+                                </set-val-23-11>
+                            </group>
+                        </else>
+                        <setanim comment="false" x="37" y="383">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <get-val-23-11 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <if comment="false" x="37" y="415">
+                            <group eventID="7" id="-1">
+                                <set-val-23-9 comment="false" x="48" y="450">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <int id="0" val="90"/>
                                         <get-val-23-9 comment="false" id="1" x="0" y="0"/>
@@ -212,6 +213,30 @@
                         <add-list comment="false" x="37" y="160">
                             <get-val-23-10 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="windTunnelII"/>
+                        </add-list>
+                    </group>
+                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation names"/>
+                </comment-wrapper>
+                <set-val-23-12 comment="false" x="26" y="197">
+                    <create-list comment="false" id="0" x="0" y="0"/>
+                </set-val-23-12>
+                <comment-wrapper comment="false" x="26" y="222">
+                    <group eventID="8" id="-1">
+                        <add-list comment="false" x="37" y="242">
+                            <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="50"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="267">
+                            <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="65"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="292">
+                            <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="60"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="317">
+                            <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="85"/>
                         </add-list>
                     </group>
                     <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation names"/>

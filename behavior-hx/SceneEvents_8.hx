@@ -82,6 +82,8 @@ class SceneEvents_8 extends SceneScript
 	public var _dozerName:String;
 	public var _buttonY:Float;
 	public var _upgradeList:Array<Dynamic>;
+	public var _currentButton:String;
+	public var _upgradeCost:Array<Dynamic>;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_createList():Void
@@ -92,6 +94,12 @@ class SceneEvents_8 extends SceneScript
 		_upgradeList.push("windTunnel");
 		_upgradeList.push("stampedeII");
 		_upgradeList.push("windTunnelII");
+		_upgradeCost = new Array<Dynamic>();
+		propertyChanged("_upgradeCost", _upgradeCost);
+		/* "these additions have to match upgradeButtonActor's animation names" */ _upgradeCost.push(50);
+		_upgradeCost.push(65);
+		_upgradeCost.push(60);
+		_upgradeCost.push(85);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -113,9 +121,17 @@ class SceneEvents_8 extends SceneScript
 				propertyChanged("_buttonY", _buttonY);
 			}
 			createRecycledActor(getActorType(55), ((index0 % 2) * 160), _buttonY, Script.FRONT);
-			getLastCreatedActor().setAnimation("" + ("" + _upgradeList[Std.int(index0)]));
-			trace("" + ("" + _upgradeList[Std.int(index0)]));
-			trace("" + ("" + (("" + (("" + "x ") + ("" + ((index0 % 2) * 160)))) + ("" + (("" + "; y ") + ("" + _buttonY))))));
+			if((_upgradeCost[Std.int(index0)] > 65))
+			{
+				_currentButton = (("" + ("" + _upgradeList[Std.int(index0)])) + ("" + "Gray"));
+				propertyChanged("_currentButton", _currentButton);
+			}
+			else
+			{
+				_currentButton = ("" + _upgradeList[Std.int(index0)]);
+				propertyChanged("_currentButton", _currentButton);
+			}
+			getLastCreatedActor().setAnimation("" + _currentButton);
 			if(((index0 % 2) == 1))
 			{
 				_buttonY = asNumber((90 + _buttonY));
@@ -161,6 +177,9 @@ class SceneEvents_8 extends SceneScript
 		_buttonY = 0.0;
 		nameMap.set("upgradeList", "_upgradeList");
 		_upgradeList = ["windTunnel", "stampede", "windTunnelII", "stampedeII"];
+		nameMap.set("currentButton", "_currentButton");
+		_currentButton = "";
+		nameMap.set("upgradeCost", "_upgradeCost");
 		
 	}
 	
