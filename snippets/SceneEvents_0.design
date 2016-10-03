@@ -42,53 +42,19 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <comment-wrapper comment="false" x="26" y="40">
-                    <group eventID="4" id="-1">
-                        <set-game-val-0 comment="false" x="37" y="60">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-0>
-                    </group>
-                    <int id="0" val="debug always set to click movement"/>
-                </comment-wrapper>
-                <set-game-val-3 comment="false" x="26" y="97">
-                    <int id="0" val="15"/>
-                </set-game-val-3>
-                <set-game-val-22 comment="false" x="26" y="117">
-                    <int id="0" val="0"/>
-                </set-game-val-22>
-                <set-game-val-4 comment="false" x="26" y="137">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-game-val-4>
-                <set-game-val-21 comment="false" x="26" y="162">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-21>
-                <set-game-val-29 comment="false" x="26" y="187">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-29>
-                <set-game-val-30 comment="false" x="26" y="212">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-30>
-                <if comment="false" x="26" y="237">
-                    <group eventID="4" id="-1">
-                        <set-game-val-30 comment="false" x="37" y="262">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-30>
-                    </group>
-                    <get-game-val-26 comment="false" id="0" x="0" y="0"/>
-                </if>
-                <set-val-0-4 comment="false" x="26" y="299">
+                <set-val-0-4 comment="false" x="26" y="40">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-0-4>
-                <set-val-0-5 comment="false" x="26" y="324">
+                <set-val-0-5 comment="false" x="26" y="65">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-0-5>
-                <setanim comment="false" x="26" y="349">
+                <setanim comment="false" x="26" y="90">
                     <ACTOR eid="1" id="0"/>
                     <int id="1" val="Animation Up"/>
                 </setanim>
-                <dolater comment="false" x="26" y="376">
+                <dolater comment="false" x="26" y="117">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="403">
+                        <setanim comment="false" x="37" y="144">
                             <ACTOR eid="1" id="0"/>
                             <int id="1" val="Animation Up"/>
                         </setanim>
@@ -96,7 +62,7 @@
                     <int id="0" val="0.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <play-sound-channel comment="false" x="26" y="442">
+                <play-sound-channel comment="false" x="26" y="183">
                     <int id="0" val="1"/>
                     <sound eid="103" id="1"/>
                     <int id="2" val="5"/>

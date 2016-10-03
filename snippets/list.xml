@@ -644,4 +644,10 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_88_88_globalSettings" classname="scripts.Design_88_88_globalSettings" desc="" description="" design="true" drawOrder="0" id="88" name="globalSettings" oid="-1" package="scripts" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
 </pack>
