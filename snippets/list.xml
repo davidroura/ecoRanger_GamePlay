@@ -9,11 +9,10 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="UITutorial" hidden="false" id="6" name="_UITutorial" order="5"/>
         <blocks/>
         <events>
-            <event displayName="Drawing" enabled="true" id="16" name="draw" order="17" repeats="true"/>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="16" repeats="true"/>
-            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="18" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="19" repeats="true"/>
+            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="17" repeats="true"/>
+            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="19" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="20" repeats="true"/>
             <event displayName="dozeyClick" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="11" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
             <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="2" repeats="true"/>
@@ -21,6 +20,8 @@
             <event displayName="gameOverIU" enabled="true" id="13" name="event-custom" order="9" repeats="true"/>
             <event displayName="tutorial" enabled="true" id="14" name="event-custom" order="7" repeats="true"/>
             <event displayName="clickOnTutorial" enabled="true" id="15" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="16" name="draw" order="18" repeats="true"/>
+            <event displayName="dozyClickRelease" enabled="true" id="17" name="event-mouse-enter-exit-actor" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">

@@ -60,27 +60,34 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="73">
-                            <int id="0" val="touchLeftRight"/>
-                        </say-this>
-                        <set-val-7-17 comment="false" x="37" y="93">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-7-17>
+                        <if comment="false" x="37" y="70">
+                            <group eventID="3" id="-1">
+                                <say-this comment="false" x="48" y="103">
+                                    <int id="0" val="touchLeftRight"/>
+                                </say-this>
+                                <set-val-7-17 comment="false" x="48" y="123">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-7-17>
+                            </group>
+                            <mousestate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </mousestate>
+                        </if>
+                        <else comment="false" x="37" y="160">
+                            <group eventID="3" id="-1">
+                                <say-this comment="false" x="48" y="180">
+                                    <int id="0" val="stand"/>
+                                </say-this>
+                                <set-val-7-17 comment="false" x="48" y="200">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-7-17>
+                            </group>
+                        </else>
                     </group>
-                    <mousestate comment="false" id="0" x="0" y="0">
-                        <int id="0" val="0"/>
-                    </mousestate>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-36 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
-                <else comment="false" x="26" y="130">
-                    <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="150">
-                            <int id="0" val="stand"/>
-                        </say-this>
-                        <set-val-7-17 comment="false" x="37" y="170">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-7-17>
-                    </group>
-                </else>
             </group>
             <int id="0" val="touchControl"/>
         </event-custom>
