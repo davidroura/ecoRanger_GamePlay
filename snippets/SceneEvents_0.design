@@ -345,54 +345,64 @@
     <group eventID="14" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="14" id="-1">
-                <set-game-val-30 comment="false" x="26" y="40">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-30>
-                <create-actor3 comment="false" x="26" y="65">
-                    <actortype eid="119" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <set-val-0-6 comment="false" x="26" y="92">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </set-val-0-6>
-                <dolater comment="false" x="26" y="119">
+                <if comment="false" x="26" y="40">
                     <group eventID="14" id="-1">
-                        <die comment="false" x="37" y="146">
-                            <ACTOR eid="var" id="0" vid="6"/>
-                        </die>
-                    </group>
-                    <int id="0" val="1.5"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
-                <dolater comment="false" x="26" y="185">
-                    <group eventID="14" id="-1">
-                        <create-actor3 comment="false" x="37" y="212">
-                            <actortype eid="122" id="0"/>
+                        <set-game-val-30 comment="false" x="37" y="70">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-30>
+                        <create-actor3 comment="false" x="37" y="95">
+                            <actortype eid="119" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <set-val-0-6 comment="false" x="37" y="239">
+                        <set-val-0-6 comment="false" x="37" y="122">
                             <ACTOR eid="lastcreated" id="0"/>
                         </set-val-0-6>
-                    </group>
-                    <int id="0" val="2"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
-                <dolater comment="false" x="26" y="278">
-                    <group eventID="14" id="-1">
-                        <die comment="false" x="37" y="305">
-                            <ACTOR eid="var" id="0" vid="6"/>
-                        </die>
-                        <set-game-val-30 comment="false" x="37" y="332">
+                        <dolater comment="false" x="37" y="149">
+                            <group eventID="14" id="-1">
+                                <die comment="false" x="48" y="176">
+                                    <ACTOR eid="var" id="0" vid="6"/>
+                                </die>
+                            </group>
+                            <int id="0" val="1.5"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="215">
+                            <group eventID="14" id="-1">
+                                <create-actor3 comment="false" x="48" y="242">
+                                    <actortype eid="122" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-val-0-6 comment="false" x="48" y="269">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </set-val-0-6>
+                            </group>
+                            <int id="0" val="2"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="308">
+                            <group eventID="14" id="-1">
+                                <die comment="false" x="48" y="335">
+                                    <ACTOR eid="var" id="0" vid="6"/>
+                                </die>
+                                <set-game-val-30 comment="false" x="48" y="362">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-30>
+                            </group>
+                            <int id="0" val="3.5"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <set-game-val-26 comment="false" x="37" y="399">
                             <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-30>
+                        </set-game-val-26>
                     </group>
-                    <int id="0" val="3.5"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
             <int id="0" val="tutorial"/>
         </event-custom>
@@ -430,6 +440,19 @@
                     </group>
                     <get-val-0-2 comment="false" id="0" x="0" y="0"/>
                 </if>
+                <set-font-new comment="false" x="26" y="144">
+                    <font eid="136" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="171">
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="140"/>
+                    <int id="2" val="7"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="196">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="110"/>
+                    <int id="2" val="7"/>
+                </draw-text>
             </group>
         </draw>
     </group>

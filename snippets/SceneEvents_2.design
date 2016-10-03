@@ -124,16 +124,13 @@
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
-                <set-game-val-33 comment="false" x="26" y="40">
-                    <get-game-val-7 comment="false" id="0" x="0" y="0"/>
-                </set-game-val-33>
-                <if comment="false" x="26" y="65">
+                <if comment="false" x="26" y="40">
                     <group eventID="5" id="-1">
-                        <play-sound4 comment="false" x="37" y="95">
+                        <play-sound4 comment="false" x="37" y="70">
                             <int id="0" val="0"/>
                             <sound eid="121" id="1"/>
                         </play-sound4>
-                        <set-game-val-31 comment="false" x="37" y="122">
+                        <set-game-val-31 comment="false" x="37" y="97">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-31>
                     </group>
@@ -141,14 +138,19 @@
                         <get-game-val-31 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <save-game comment="false" x="26" y="159">
+                <save-game comment="false" x="26" y="134">
                     <group eventID="5" id="-1"/>
                 </save-game>
-                <save-game comment="false" x="26" y="216">
+                <save-game comment="false" x="26" y="191">
                     <group eventID="5" id="-1"/>
                 </save-game>
             </group>
         </init>
+    </group>
+    <group eventID="5" id="1">
+        <set-game-val-33 comment="false" x="585" y="341">
+            <get-game-val-7 comment="false" id="0" x="0" y="0"/>
+        </set-game-val-33>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">

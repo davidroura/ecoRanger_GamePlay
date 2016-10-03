@@ -133,24 +133,13 @@
             <event displayName="player - bonusCard" enabled="true" id="17" name="event-collide-typetotype" order="15" repeats="true"/>
             <event displayName="dozer - bonusCard" enabled="true" id="18" name="event-collide-typetotype" order="16" repeats="true"/>
             <event displayName="player - plastic" enabled="true" id="19" name="event-collide-typetotype" order="2" repeats="true"/>
-            <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="true"/>
+            <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="false"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
-        </events>
-    </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="10" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="1" name="_points" order="0"/>
-        <blocks/>
-        <events>
-            <event displayName="Drawing" enabled="true" id="2" name="draw" order="6" repeats="true"/>
-            <event displayName="Created" enabled="true" id="3" name="init" order="2" repeats="true"/>
-            <event displayName="recycleBReleased" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
-            <event displayName="retryBReleased" enabled="true" id="5" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
-            <event displayName="homeBReleased" enabled="true" id="6" name="event-mouse-enter-exit-actor" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="11" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
@@ -400,7 +389,9 @@
     </snippet>
     <snippet actorid="47" attachedevent="true" class="scripts.ActorEvents_47" classname="scripts.ActorEvents_47" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="40" name="ActorEvents_47" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="49" attachedevent="true" class="scripts.ActorEvents_49" classname="scripts.ActorEvents_49" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="41" name="ActorEvents_49" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -414,18 +405,6 @@
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_12" classname="scripts.SceneEvents_12" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="43" name="SceneEvents_12" oid="-1" package="scripts." sceneid="12" shared="false" type="scene">
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="1" name="_points" order="0"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashPerCubes" hidden="false" id="2" name="_trashPerCubes" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="aux" hidden="false" id="3" name="_aux" order="2"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="aux2" hidden="false" id="4" name="_aux2" order="3"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="aux3" hidden="false" id="5" name="_aux3" order="4"/>
-        <blocks/>
-        <events>
-            <event displayName="Click" enabled="true" id="1" name="event-mouse-press-release" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
-        </events>
-    </snippet>
     <snippet actorid="55" attachedevent="true" class="scripts.ActorEvents_55" classname="scripts.ActorEvents_55" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="44" name="ActorEvents_55" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
@@ -435,17 +414,6 @@
     <snippet actorid="57" attachedevent="true" class="scripts.ActorEvents_57" classname="scripts.ActorEvents_57" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="45" name="ActorEvents_57" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
-    </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_13" classname="scripts.SceneEvents_13" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="46" name="SceneEvents_13" oid="-1" package="scripts." sceneid="13" shared="false" type="scene">
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="dozerMetal" hidden="false" id="1" name="_dozerMetal" order="0"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="dozerGlass" hidden="false" id="2" name="_dozerGlass" order="1"/>
-        <blocks/>
-        <events>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="6" repeats="true"/>
-            <event displayName="Swipe" enabled="true" id="4" name="event-device-swipe" order="5" repeats="true"/>
-            <event displayName="On Actor" enabled="true" id="5" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
-            <event displayName="Created" enabled="true" id="6" name="init" order="4" repeats="true"/>
-        </events>
     </snippet>
     <snippet actorid="60" attachedevent="true" class="scripts.ActorEvents_60" classname="scripts.ActorEvents_60" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="47" name="ActorEvents_60" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -563,13 +531,6 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_16" classname="scripts.SceneEvents_16" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="63" name="SceneEvents_16" oid="-1" package="scripts." sceneid="16" shared="false" type="scene">
-        <blocks/>
-        <events>
-            <event displayName="Click" enabled="true" id="1" name="event-mouse-press-release" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
-        </events>
-    </snippet>
     <snippet actorid="89" attachedevent="true" class="scripts.ActorEvents_89" classname="scripts.ActorEvents_89" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="64" name="ActorEvents_89" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
@@ -655,6 +616,30 @@
         <events/>
     </snippet>
     <snippet actorid="129" attachedevent="true" class="scripts.ActorEvents_129" classname="scripts.ActorEvents_129" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="83" name="ActorEvents_129" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_17" classname="scripts.SceneEvents_17" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="84" name="SceneEvents_17" oid="-1" package="scripts." sceneid="17" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_85_85_sendRecycling" classname="scripts.Design_85_85_sendRecycling" desc="" description="" design="true" drawOrder="0" id="85" name="sendRecycling" oid="-1" package="scripts" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_131" classname="scripts.ActorEvents_131" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="86" name="ActorEvents_131" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Actor - Group" enabled="true" id="2" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="4" repeats="true"/>
+            <event displayName="Keyboard Copy" enabled="true" id="4" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="133" attachedevent="true" class="scripts.ActorEvents_133" classname="scripts.ActorEvents_133" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="87" name="ActorEvents_133" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>

@@ -229,16 +229,6 @@ class Design_8_8_playerHealth extends SceneScript
 						_warning = false;
 						propertyChanged("_warning", _warning);
 					}
-					g.setFont(getFont(19));
-					g.setFont(getFont(19));
-					g.drawString("" + Engine.engine.getGameAttribute("canCollected"), 160, 10);
-					g.drawString("" + Engine.engine.getGameAttribute("bottleColleted"), 180, 10);
-					g.drawString("" + (("" + "Distance:") + ("" + (("" + _distanceBy100) + ("" + "mts")))), 50, 50);
-				}
-				else
-				{
-					g.drawString("" + Engine.engine.getGameAttribute("bottleColleted"), 180, 250);
-					g.drawString("" + Engine.engine.getGameAttribute("canCollected"), 130, 250);
 				}
 			}
 		});

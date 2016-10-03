@@ -1,0 +1,17 @@
+#
+#Sun Oct 02 22:09:08 EDT 2016
+style=bold
+alphabet=
+stroke.color=\#6989ba
+color=\#8bb8f4
+shadow.y=0
+family=Oswald-Bold.ttf
+shadow.x=0
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=all
+gradient.color=\#6989ba
+stroke.size=1
+antialias=true
+size=20

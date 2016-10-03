@@ -44,53 +44,12 @@
                                 </set-val-8-4>
                             </group>
                         </else>
-                        <set-font-new comment="false" x="37" y="322">
-                            <font eid="19" id="0"/>
-                        </set-font-new>
-                        <set-font-new comment="false" x="37" y="349">
-                            <font eid="19" id="0"/>
-                        </set-font-new>
-                        <draw-text comment="false" x="37" y="376">
-                            <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="160"/>
-                            <int id="2" val="10"/>
-                        </draw-text>
-                        <draw-text comment="false" x="37" y="401">
-                            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="180"/>
-                            <int id="2" val="10"/>
-                        </draw-text>
-                        <draw-text comment="false" x="37" y="426">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="Distance:"/>
-                                <str-combine comment="false" id="1" x="0" y="0">
-                                    <get-val-8-9 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="mts"/>
-                                </str-combine>
-                            </str-combine>
-                            <int id="1" val="50"/>
-                            <int id="2" val="50"/>
-                        </draw-text>
                     </group>
                     <moreeq comment="false" id="0" x="0" y="0">
                         <get-game-val-28 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </moreeq>
                 </if>
-                <else comment="false" x="26" y="473">
-                    <group eventID="1" id="-1">
-                        <draw-text comment="false" x="37" y="493">
-                            <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="180"/>
-                            <int id="2" val="250"/>
-                        </draw-text>
-                        <draw-text comment="false" x="37" y="518">
-                            <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="130"/>
-                            <int id="2" val="250"/>
-                        </draw-text>
-                    </group>
-                </else>
             </group>
         </draw>
     </group>

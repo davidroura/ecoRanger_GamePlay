@@ -51,7 +51,9 @@
     </androidScales>
     <folders/>
     <packs/>
-    <groups/>
+    <groups>
+        <group desc="" id="4" name="recyclingPad"/>
+    </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
         <cgroup g1="1" g2="3"/>
@@ -93,7 +95,7 @@
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <number cid="2" id="18" name="dozerStrength" save="true" value="0.0"/>
-        <number cid="3" id="33" name="totalPlastic" save="true" value="0"/>
+        <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
         <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
@@ -143,7 +145,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,17,19,20,23,24,25,28,29,31,33,35,36,37,39,43,45,47,49,51,53,54,55,57,59,60,63,65,67,69,70,72,74,76,77,78,79,80,81,83,86,87,88,89,91,93,95,97,99,101,103,104,108,110,112,114,115,116,119,121,122,124,126,128,129," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,17,19,20,23,24,25,28,29,31,33,35,36,37,39,43,45,47,49,51,53,54,55,57,59,60,63,65,67,69,70,72,74,76,77,78,79,80,81,83,86,87,88,89,91,93,95,97,99,101,103,104,108,110,112,114,115,116,119,121,122,124,126,128,129,131,133,135,136," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
