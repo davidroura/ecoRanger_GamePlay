@@ -84,139 +84,47 @@ class Design_12_12_spawnTrash extends SceneScript
 	public var _trashXPos:Float;
 	public var _trashType:Float;
 	public var _currentDistance:Float;
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_doAfter():Void
-	{
-		_processBusy = true;
-		propertyChanged("_processBusy", _processBusy);
-		runLater(1000 * randomInt(Math.floor(1), Math.floor(5)), function(timeTask:TimedTask):Void
-		{
-			_ramdomBlock = asNumber(randomInt(Math.floor(0), Math.floor(2)));
-			propertyChanged("_ramdomBlock", _ramdomBlock);
-			_customEvent_blockAlign();
-		}, null);
-	}
+	public var _trashYPos:Float;
+	public var _spawning:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashByDistance():Void
 	{
-		if(((Engine.engine.getGameAttribute("playerDistance") % 20) == 0))
+		if(((Engine.engine.getGameAttribute("playerDistance") % 100) == 0))
 		{
-			createRecycledActorOnLayer(getActorType(8), _trashXPos, -5, 1, "" + "gamePlay");
-			if((_trashType == 0))
+			if(!(_spawning))
 			{
-				_trashXPos = asNumber((_trashXPos + 20));
+				_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
+				propertyChanged("_trashType", _trashType);
+				_spawning = true;
+				propertyChanged("_spawning", _spawning);
+				_trashXPos = asNumber(5);
 				propertyChanged("_trashXPos", _trashXPos);
+				for(index0 in 0...Std.int(5))
+				{
+					createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
+					getLastCreatedActor().makeAlwaysSimulate();
+					if((_trashType == 0))
+					{
+						_trashYPos = asNumber((Math.pow(_trashXPos, 2) + ((5 * _trashXPos) + 100)));
+						propertyChanged("_trashYPos", _trashYPos);
+					}
+					else
+					{
+						_trashYPos = asNumber((Math.pow(_trashXPos, 2) - ((5 * _trashXPos) + 100)));
+						propertyChanged("_trashYPos", _trashYPos);
+					}
+					_trashXPos = asNumber((_trashXPos + 5));
+					propertyChanged("_trashXPos", _trashXPos);
+					getLastCreatedActor().setX(_trashXPos);
+					getLastCreatedActor().setY(_trashYPos);
+				}
 			}
-			else
-			{
-				_trashXPos = asNumber((_trashXPos - 20));
-				propertyChanged("_trashXPos", _trashXPos);
-			}
-		}
-		if((200 < _trashXPos))
-		{
-			_trashXPos = asNumber(randomInt(Math.floor(50), Math.floor(200)));
-			propertyChanged("_trashXPos", _trashXPos);
-			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
-			propertyChanged("_trashType", _trashType);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_blockAlign():Void
-	{
-		_ramdomBlockNumber = asNumber(randomInt(Math.floor(4), Math.floor(5)));
-		propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
-		_trashCounter = asNumber(0);
-		propertyChanged("_trashCounter", _trashCounter);
-		_creatingTrash = true;
-		propertyChanged("_creatingTrash", _creatingTrash);
-		_trashXPos = asNumber(randomInt(Math.floor(50), Math.floor(250)));
-		propertyChanged("_trashXPos", _trashXPos);
-		while((_creatingTrash == true))
-		{
-			_customEvent_dropTrash();
-			if((_trashCounter >= _ramdomBlockNumber))
-			{
-				_creatingTrash = false;
-				propertyChanged("_creatingTrash", _creatingTrash);
-			}
-		}
-		_ramdomBlockNumber = asNumber((_ramdomBlockNumber + 1));
-		propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
-		runLater(1000 * (_ramdomBlockNumber * _timeBetweenTrash), function(timeTask:TimedTask):Void
-		{
-			_processBusy = false;
-			propertyChanged("_processBusy", _processBusy);
-		}, null);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_dropTrash():Void
-	{
-		runLater(1000 * (_trashCounter * _timeBetweenTrash), function(timeTask:TimedTask):Void
-		{
-			if((_ramdomBlock == 0))
-			{
-				
-			}
-			else if((_ramdomBlock == 1))
-			{
-				_trashXPos = asNumber((_trashXPos + 20));
-				propertyChanged("_trashXPos", _trashXPos);
-			}
-			else if((_ramdomBlock == 2))
-			{
-				_trashXPos = asNumber((_trashXPos - 20));
-				propertyChanged("_trashXPos", _trashXPos);
-			}
-			if(Engine.engine.getGameAttribute("spawnThings"))
-			{
-				_customEvent_trashType();
-			}
-		}, null);
-		_trashCounter = asNumber((_trashCounter + 1));
-		propertyChanged("_trashCounter", _trashCounter);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_trashType():Void
-	{
-		_trashType = asNumber(randomInt(Math.floor(1), Math.floor(3)));
-		propertyChanged("_trashType", _trashType);
-		if((_trashType == 1))
-		{
-			createRecycledActorOnLayer(getActorType(8), _trashXPos, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().makeAlwaysSimulate();
-			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
-		}
-		else if((_trashType == 2))
-		{
-			createRecycledActorOnLayer(getActorType(104), _trashXPos, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().makeAlwaysSimulate();
-			getLastCreatedActor().growTo(30/100, 30/100, 0, Linear.easeNone);
 		}
 		else
 		{
-			createRecycledActorOnLayer(getActorType(15), _trashXPos, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().makeAlwaysSimulate();
-			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_timeCount():Void
-	{
-		_frameCount = asNumber((_frameCount + 1));
-		propertyChanged("_frameCount", _frameCount);
-		if((_frameCount > _frameRate))
-		{
-			_time = asNumber((_time + 1));
-			propertyChanged("_time", _time);
-			_frameCount = asNumber(0);
-			propertyChanged("_frameCount", _frameCount);
+			_spawning = false;
+			propertyChanged("_spawning", _spawning);
 		}
 	}
 	
@@ -247,7 +155,11 @@ class Design_12_12_spawnTrash extends SceneScript
 		nameMap.set("trashType", "_trashType");
 		_trashType = 0.0;
 		nameMap.set("currentDistance", "_currentDistance");
-		_currentDistance = 0;
+		_currentDistance = 0.0;
+		nameMap.set("trashYPos", "_trashYPos");
+		_trashYPos = 0;
+		nameMap.set("spawning", "_spawning");
+		_spawning = false;
 		
 	}
 	
@@ -263,10 +175,10 @@ class Design_12_12_spawnTrash extends SceneScript
 		propertyChanged("_time", _time);
 		_timeBetweenTrash = asNumber(0.2);
 		propertyChanged("_timeBetweenTrash", _timeBetweenTrash);
-		_trashXPos = asNumber(randomInt(Math.floor(50), Math.floor(200)));
-		propertyChanged("_trashXPos", _trashXPos);
 		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
 		propertyChanged("_trashType", _trashType);
+		_spawning = false;
+		propertyChanged("_spawning", _spawning);
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
@@ -283,7 +195,10 @@ class Design_12_12_spawnTrash extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				_customEvent_trashByDistance();
+				if(Engine.engine.getGameAttribute("spawnThings"))
+				{
+					_customEvent_trashByDistance();
+				}
 			}
 		});
 		
