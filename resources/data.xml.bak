@@ -581,14 +581,10 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="71" name="tree" shared="false" width="238">
         <anim across="1" down="1" durations="100" height="480" id="0" loop="false" name="tree1" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
-            <poly data="4,53,12,60,180,127,83,110,13" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
-            <poly data="4,54,184,76,299,123,198,79,148" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
+            <poly data="7,63,110,85,402,105,475,135,422,157,355,130,1,88,1" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="480" id="1" loop="true" name="tree2" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
-            <poly data="4,57,5,19,36,51,134,119,61" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="5,82,107,47,132,57,206,86,178,107,144" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
-            <poly data="3,91,167,56,204,107,199" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
-            <poly data="4,86,201,4,217,84,304,120,272" density="0.1" fric="0.2" gid="-1000" id="3" name="" rest="0.0" sensor="false"/>
+            <poly data="6,78,180,99,408,118,464,164,336,177,148,112,2" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="7" name="UIEnd" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>

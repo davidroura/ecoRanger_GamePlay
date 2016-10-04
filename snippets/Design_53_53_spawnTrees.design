@@ -40,36 +40,42 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-val-53-6 comment="false" x="26" y="40">
-                    <int id="0" val="4"/>
-                </set-val-53-6>
-                <set-val-53-7 comment="false" x="26" y="60">
-                    <int id="0" val="5"/>
-                </set-val-53-7>
-                <set-val-53-3 comment="false" x="26" y="80">
-                    <int id="0" val="60"/>
-                </set-val-53-3>
-                <set-val-53-1 comment="false" x="26" y="100">
-                    <int id="0" val="1"/>
-                </set-val-53-1>
-                <set-val-53-2 comment="false" x="26" y="120">
-                    <int id="0" val="0"/>
-                </set-val-53-2>
-                <set-val-53-8 comment="false" x="26" y="140">
-                    <int id="0" val="0"/>
-                </set-val-53-8>
-                <set-val-53-4 comment="false" x="26" y="160">
-                    <randint comment="false" id="0" x="0" y="0">
-                        <get-val-53-6 comment="false" id="0" x="0" y="0"/>
-                        <get-val-53-7 comment="false" id="1" x="0" y="0"/>
-                    </randint>
-                </set-val-53-4>
-                <set-val-53-5 comment="false" x="26" y="190">
-                    <randint comment="false" id="0" x="0" y="0">
-                        <get-val-53-6 comment="false" id="0" x="0" y="0"/>
-                        <get-val-53-7 comment="false" id="1" x="0" y="0"/>
-                    </randint>
-                </set-val-53-5>
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="-120"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="94">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-200"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="121">
+                    <int id="0" val="treeType"/>
+                </say-this>
+                <create-actor-on-layer comment="false" x="26" y="141">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="168">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="195">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-200"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="222">
+                    <int id="0" val="treeType"/>
+                </say-this>
             </group>
         </init>
     </group>
@@ -77,29 +83,18 @@
     <group eventID="3" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <say-this comment="false" x="26" y="40">
-                    <int id="0" val="timeCount"/>
-                </say-this>
-                <if comment="false" x="26" y="60">
+                <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="90">
-                            <int id="0" val="leftTrees"/>
+                        <say-this comment="false" x="37" y="78">
+                            <int id="0" val="spawnTrees"/>
                         </say-this>
                     </group>
                     <moreeq comment="false" id="0" x="0" y="0">
-                        <get-val-53-2 comment="false" id="0" x="0" y="0"/>
-                        <get-val-53-4 comment="false" id="1" x="0" y="0"/>
-                    </moreeq>
-                </if>
-                <if comment="false" x="26" y="122">
-                    <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="152">
-                            <int id="0" val="rightTrees"/>
-                        </say-this>
-                    </group>
-                    <moreeq comment="false" id="0" x="0" y="0">
-                        <get-val-53-8 comment="false" id="0" x="0" y="0"/>
-                        <get-val-53-5 comment="false" id="1" x="0" y="0"/>
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <int id="1" val="100"/>
                     </moreeq>
                 </if>
             </group>
@@ -143,37 +138,29 @@
     <group eventID="4" id="-1"/>
     <group eventID="5" id="0">
         <event-custom comment="false" x="15" y="15">
-            <group eventID="5" id="-1">
-                <create-actor-on-layer comment="false" x="26" y="40">
-                    <actortype eid="70" id="0"/>
-                    <int id="1" val="240"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="1"/>
-                    <int id="4" val="gamePlay"/>
-                </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="26" y="67">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <set-xy comment="false" x="26" y="94">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="1"/>
-                    <int id="2" val="-200"/>
-                </set-xy>
-                <say-this comment="false" x="26" y="121">
-                    <int id="0" val="treeType"/>
-                </say-this>
-                <set-val-53-8 comment="false" x="26" y="141">
-                    <int id="0" val="0"/>
-                </set-val-53-8>
-                <set-val-53-5 comment="false" x="26" y="161">
-                    <randint comment="false" id="0" x="0" y="0">
-                        <get-val-53-6 comment="false" id="0" x="0" y="0"/>
-                        <get-val-53-7 comment="false" id="1" x="0" y="0"/>
-                    </randint>
-                </set-val-53-5>
-            </group>
+            <group eventID="5" id="-1"/>
             <int id="0" val="rightTrees"/>
         </event-custom>
+    </group>
+    <group eventID="5" id="1">
+        <create-actor-on-layer comment="false" x="102" y="177">
+            <actortype eid="70" id="0"/>
+            <int id="1" val="240"/>
+            <int id="2" val="0"/>
+            <int id="3" val="1"/>
+            <int id="4" val="gamePlay"/>
+        </create-actor-on-layer>
+        <ignore-screen-tolerance comment="false" x="102" y="204">
+            <ACTOR eid="lastcreated" id="0"/>
+        </ignore-screen-tolerance>
+        <set-xy comment="false" x="102" y="231">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="-200"/>
+        </set-xy>
+        <say-this comment="false" x="102" y="258">
+            <int id="0" val="treeType"/>
+        </say-this>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
@@ -221,4 +208,48 @@
         </event-custom>
     </group>
     <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="-120"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="94">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-200"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="121">
+                    <int id="0" val="treeType"/>
+                </say-this>
+                <create-actor-on-layer comment="false" x="26" y="141">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="168">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="195">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-200"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="222">
+                    <int id="0" val="treeType"/>
+                </say-this>
+            </group>
+            <int id="0" val="spawnTrees"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
 </groups>

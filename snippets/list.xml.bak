@@ -469,9 +469,10 @@
             <event displayName="timeCount" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
             <event displayName="Updating" enabled="true" id="3" name="step" order="3" repeats="true"/>
-            <event displayName="leftTrees" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
-            <event displayName="rightTrees" enabled="true" id="5" name="event-custom" order="6" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="6" name="event-custom" order="5" repeats="true"/>
+            <event displayName="leftTrees" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
+            <event displayName="rightTrees" enabled="true" id="5" name="event-custom" order="7" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
+            <event displayName="spawnTrees" enabled="true" id="7" name="event-custom" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="72" attachedevent="true" class="scripts.ActorEvents_72" classname="scripts.ActorEvents_72" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="54" name="ActorEvents_72" oid="-1" package="scripts." shared="false" type="actor">
