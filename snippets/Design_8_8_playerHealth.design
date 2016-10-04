@@ -87,6 +87,9 @@
                 <set-val-8-10 comment="false" x="26" y="230">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-10>
+                <set-val-8-13 comment="false" x="26" y="255">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-8-13>
             </group>
         </init>
     </group>
@@ -96,15 +99,28 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="65">
+                        <set-game-val-30 comment="false" x="37" y="75">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-30>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-8-13 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <get-game-val-26 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="112">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="142">
                             <group eventID="3" id="-1">
-                                <set-game-val-28 comment="false" x="48" y="95">
+                                <set-game-val-28 comment="false" x="48" y="172">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <get-game-val-28 comment="false" id="0" x="0" y="0"/>
                                         <get-val-8-2 comment="false" id="1" x="0" y="0"/>
                                     </minus>
                                 </set-game-val-28>
-                                <set-game-val-3 comment="false" x="48" y="125">
+                                <set-game-val-3 comment="false" x="48" y="202">
                                     <sqrt comment="false" id="0" x="0" y="0">
                                         <times comment="false" id="0" x="0" y="0">
                                             <int id="0" val="10"/>
@@ -112,13 +128,13 @@
                                         </times>
                                     </sqrt>
                                 </set-game-val-3>
-                                <say-this comment="false" x="48" y="160">
+                                <say-this comment="false" x="48" y="237">
                                     <int id="0" val="extraLife"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="180">
+                                <say-this comment="false" x="48" y="257">
                                     <int id="0" val="distance"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="200">
+                                <say-this comment="false" x="48" y="277">
                                     <int id="0" val="bonusCard"/>
                                 </say-this>
                             </group>
@@ -128,8 +144,14 @@
                             </more>
                         </if>
                     </group>
-                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                    <or comment="false" id="0" x="0" y="0">
+                        <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-26 comment="false" id="1" x="0" y="0"/>
+                    </or>
                 </if>
+                <set-val-8-13 comment="false" x="26" y="321">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-8-13>
             </group>
         </step>
     </group>
@@ -178,35 +200,31 @@
     <group eventID="7" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <play-sound4 comment="false" x="26" y="47">
+                <set-game-val-3 comment="false" x="26" y="47">
                     <int id="0" val="0"/>
-                    <sound eid="88" id="1"/>
-                </play-sound4>
-                <set-game-val-4 comment="false" x="26" y="74">
+                </set-game-val-3>
+                <set-bg-speed comment="false" x="26" y="67">
+                    <int id="0" val="1"/>
+                    <int id="1" val="bgLong"/>
+                    <get-game-val-22 comment="false" id="2" x="0" y="0"/>
+                    <get-game-val-3 comment="false" id="3" x="0" y="0"/>
+                </set-bg-speed>
+                <set-val-8-13 comment="false" x="26" y="99">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-8-13>
+                <set-game-val-30 comment="false" x="26" y="124">
                     <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-4>
-                <set-game-val-2 comment="false" x="26" y="99">
-                    <int id="0" val="-10"/>
-                </set-game-val-2>
-                <dolater comment="false" x="26" y="119">
-                    <group eventID="7" id="-1">
-                        <die comment="false" x="37" y="146">
-                            <second-actor comment="false" id="0" x="0" y="0"/>
-                        </die>
-                        <set-game-val-4 comment="false" x="37" y="178">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-4>
-                        <set-game-val-11 comment="false" x="37" y="203">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-11>
-                    </group>
-                    <int id="0" val="0.5"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
+                </set-game-val-30>
             </group>
             <actortype eid="1" id="0"/>
             <actortype eid="12" id="1"/>
         </event-collide-typetotype>
+    </group>
+    <group eventID="7" id="2">
+        <play-sound4 comment="false" x="10" y="244">
+            <int id="0" val="0"/>
+            <sound eid="88" id="1"/>
+        </play-sound4>
     </group>
     <group eventID="7" id="-1"/>
     <group eventID="8" id="0">

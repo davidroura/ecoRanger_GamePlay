@@ -103,17 +103,18 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_8_8_playerHealth" classname="scripts.Design_8_8_playerHealth" desc="" description="" design="true" drawOrder="0" id="8" name="playerHealth" oid="-1" package="scripts" shared="false" type="scene">
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="healthFactor" hidden="true" id="2" name="_healthFactor" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="lifeBar" hidden="true" id="3" name="_lifeBar" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="warning" hidden="true" id="4" name="_warning" order="3"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="playerBoost" hidden="false" id="5" name="_playerBoost" order="4"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="bananasPickedUp" hidden="false" id="6" name="_bananasPickedUp" order="5"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distance" hidden="false" id="7" name="_distance" order="6"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceMacro" hidden="false" id="8" name="_distanceMacro" order="7"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceBy100" hidden="false" id="9" name="_distanceBy100" order="8"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="bonusCard" hidden="true" id="10" name="_bonusCard" order="9"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="endUI_Created" hidden="false" id="11" name="_endUICreated" order="10"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="12" name="_points" order="11"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="healthFactor" hidden="true" id="2" name="_healthFactor" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="lifeBar" hidden="true" id="3" name="_lifeBar" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="warning" hidden="true" id="4" name="_warning" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="playerBoost" hidden="false" id="5" name="_playerBoost" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="bananasPickedUp" hidden="false" id="6" name="_bananasPickedUp" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distance" hidden="false" id="7" name="_distance" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceMacro" hidden="false" id="8" name="_distanceMacro" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceBy100" hidden="false" id="9" name="_distanceBy100" order="7"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="bonusCard" hidden="true" id="10" name="_bonusCard" order="8"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="endUI_Created" hidden="false" id="11" name="_endUICreated" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="12" name="_points" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="rockCollision" hidden="false" id="13" name="_rockCollision" order="11"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
@@ -649,6 +650,8 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="playerSettings" enabled="true" id="2" name="event-custom" order="3" repeats="true"/>
+            <event displayName="gameSettings" enabled="true" id="3" name="event-custom" order="2" repeats="true"/>
         </events>
     </snippet>
 </pack>

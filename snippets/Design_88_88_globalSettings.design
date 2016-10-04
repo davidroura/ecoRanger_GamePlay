@@ -3,8 +3,35 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="playerSettings"/>
+                </say-this>
+                <say-this comment="false" x="26" y="60">
+                    <int id="0" val="gameSettings"/>
+                </say-this>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-4 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-4>
+                <set-game-val-21 comment="false" x="26" y="65">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-21>
+            </group>
+            <int id="0" val="playerSettings"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
                 <comment-wrapper comment="false" x="26" y="40">
-                    <group eventID="1" id="-1">
+                    <group eventID="3" id="-1">
                         <set-game-val-0 comment="false" x="37" y="60">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-0>
@@ -17,28 +44,23 @@
                 <set-game-val-22 comment="false" x="26" y="117">
                     <int id="0" val="0"/>
                 </set-game-val-22>
-                <set-game-val-4 comment="false" x="26" y="137">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-game-val-4>
-                <set-game-val-21 comment="false" x="26" y="162">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-21>
-                <set-game-val-29 comment="false" x="26" y="187">
+                <set-game-val-29 comment="false" x="26" y="137">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-29>
-                <set-game-val-30 comment="false" x="26" y="212">
+                <set-game-val-30 comment="false" x="26" y="162">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-30>
-                <if comment="false" x="26" y="237">
-                    <group eventID="1" id="-1">
-                        <set-game-val-30 comment="false" x="37" y="262">
+                <if comment="false" x="26" y="187">
+                    <group eventID="3" id="-1">
+                        <set-game-val-30 comment="false" x="37" y="212">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-30>
                     </group>
                     <get-game-val-26 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
-        </init>
+            <int id="0" val="gameSettings"/>
+        </event-custom>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="3" id="-1"/>
 </groups>

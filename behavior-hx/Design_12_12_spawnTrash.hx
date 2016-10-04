@@ -100,7 +100,7 @@ class Design_12_12_spawnTrash extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_blockAlign():Void
 	{
-		_ramdomBlockNumber = asNumber(randomInt(Math.floor(1), Math.floor(5)));
+		_ramdomBlockNumber = asNumber(randomInt(Math.floor(4), Math.floor(5)));
 		propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
 		_trashCounter = asNumber(0);
 		propertyChanged("_trashCounter", _trashCounter);
@@ -137,12 +137,12 @@ class Design_12_12_spawnTrash extends SceneScript
 			}
 			else if((_ramdomBlock == 1))
 			{
-				_trashXPos = asNumber((_trashXPos + 15));
+				_trashXPos = asNumber((_trashXPos + 20));
 				propertyChanged("_trashXPos", _trashXPos);
 			}
 			else if((_ramdomBlock == 2))
 			{
-				_trashXPos = asNumber((_trashXPos - 15));
+				_trashXPos = asNumber((_trashXPos - 20));
 				propertyChanged("_trashXPos", _trashXPos);
 			}
 			if(Engine.engine.getGameAttribute("spawnThings"))
@@ -162,16 +162,19 @@ class Design_12_12_spawnTrash extends SceneScript
 		if((_trashType == 1))
 		{
 			createRecycledActorOnLayer(getActorType(8), _trashXPos, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().makeAlwaysSimulate();
 			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
 		}
 		else if((_trashType == 2))
 		{
 			createRecycledActorOnLayer(getActorType(104), _trashXPos, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().makeAlwaysSimulate();
 			getLastCreatedActor().growTo(30/100, 30/100, 0, Linear.easeNone);
 		}
 		else
 		{
 			createRecycledActorOnLayer(getActorType(15), _trashXPos, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().makeAlwaysSimulate();
 			getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
 		}
 	}
@@ -229,7 +232,7 @@ class Design_12_12_spawnTrash extends SceneScript
 		propertyChanged("_frameCount", _frameCount);
 		_time = asNumber(0);
 		propertyChanged("_time", _time);
-		_timeBetweenTrash = asNumber(0.3);
+		_timeBetweenTrash = asNumber(0.2);
 		propertyChanged("_timeBetweenTrash", _timeBetweenTrash);
 		_customEvent_doAfter();
 		

@@ -83,6 +83,7 @@ class Design_8_8_playerHealth extends SceneScript
 	public var _bonusCard:Bool;
 	public var _endUICreated:Bool;
 	public var _points:Float;
+	public var _rockCollision:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_tookBanana():Void
@@ -180,6 +181,8 @@ class Design_8_8_playerHealth extends SceneScript
 		_endUICreated = false;
 		nameMap.set("points", "_points");
 		_points = 0.0;
+		nameMap.set("rockCollision", "_rockCollision");
+		_rockCollision = false;
 		
 	}
 	
@@ -203,6 +206,8 @@ class Design_8_8_playerHealth extends SceneScript
 		propertyChanged("_distance", _distance);
 		_bonusCard = false;
 		propertyChanged("_bonusCard", _bonusCard);
+		_rockCollision = false;
+		propertyChanged("_rockCollision", _rockCollision);
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
@@ -316,7 +321,11 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("spawnThings"))
+				if((!(_rockCollision) && Engine.engine.getGameAttribute("tutorialDone")))
+				{
+					Engine.engine.setGameAttribute("spawnThings", true);
+				}
+				if((Engine.engine.getGameAttribute("spawnThings") || Engine.engine.getGameAttribute("tutorialDone")))
 				{
 					if((Engine.engine.getGameAttribute("playerHealth") > 0))
 					{
@@ -327,6 +336,8 @@ class Design_8_8_playerHealth extends SceneScript
 						_customEvent_bonusCard();
 					}
 				}
+				_rockCollision = false;
+				propertyChanged("_rockCollision", _rockCollision);
 			}
 		});
 		
@@ -364,15 +375,11 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				playSound(getSound(88));
-				Engine.engine.setGameAttribute("playerControl", false);
-				Engine.engine.setGameAttribute("extraLife", -10);
-				runLater(1000 * 0.5, function(timeTask:TimedTask):Void
-				{
-					recycleActor(event.otherActor);
-					Engine.engine.setGameAttribute("playerControl", true);
-					Engine.engine.setGameAttribute("slowMovement", true);
-				}, null);
+				Engine.engine.setGameAttribute("sceneSpeed", 0);
+				setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+				_rockCollision = true;
+				propertyChanged("_rockCollision", _rockCollision);
+				Engine.engine.setGameAttribute("spawnThings", false);
 			}
 		});
 		

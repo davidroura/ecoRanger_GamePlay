@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,43 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_88_88_globalSettings extends SceneScript
+class ActorEvents_70 extends ActorScript
 {
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_gameSettings():Void
-	{
-		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
-		Engine.engine.setGameAttribute("sceneSpeed", 15);
-		Engine.engine.setGameAttribute("lateralSpeed", 0);
-		Engine.engine.setGameAttribute("gameStart", false);
-		Engine.engine.setGameAttribute("spawnThings", false);
-		if(Engine.engine.getGameAttribute("tutorialDone"))
-		{
-			Engine.engine.setGameAttribute("spawnThings", true);
-		}
-	}
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_playerSettings():Void
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		Engine.engine.setGameAttribute("playerControl", true);
-		Engine.engine.setGameAttribute("dozerPlaying", false);
-	}
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
-	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		_customEvent_playerSettings();
-		_customEvent_gameSettings();
 		
 	}
 	
