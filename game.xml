@@ -80,6 +80,7 @@
     </attcats>
     <props/>
     <attributes>
+        <number cid="-1" id="37" name="playerDistance" save="true" value="0.0"/>
         <number cid="5" id="10" name="glassAnimation" save="true" value="0.0"/>
         <number cid="0" id="3" name="sceneSpeed" save="true" value="0.0"/>
         <boolean cid="2" id="26" name="tutorialDone" save="true" value="false"/>

@@ -220,7 +220,7 @@
             <actortype eid="12" id="1"/>
         </event-collide-typetotype>
     </group>
-    <group eventID="7" id="2">
+    <group eventID="7" id="1">
         <play-sound4 comment="false" x="10" y="244">
             <int id="0" val="0"/>
             <sound eid="88" id="1"/>
@@ -417,6 +417,12 @@
                         <int id="1" val="100"/>
                     </times>
                 </set-val-8-9>
+                <set-game-val-37 comment="false" x="26" y="148">
+                    <roundnew comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <get-val-8-7 comment="false" id="1" x="0" y="0"/>
+                    </roundnew>
+                </set-game-val-37>
             </group>
             <int id="0" val="distance"/>
         </event-custom>
