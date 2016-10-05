@@ -85,37 +85,35 @@
                                             <ACTOR eid="lastcreated" id="0"/>
                                         </ignore-screen-tolerance>
                                         <set-val-12-14 comment="false" x="59" y="301">
-                                            <neg comment="false" id="0" x="0" y="0">
-                                                <plus comment="false" id="0" x="0" y="0">
+                                            <plus comment="false" id="0" x="0" y="0">
+                                                <times comment="false" id="0" x="0" y="0">
+                                                    <get-val-12-22 comment="false" id="0" x="0" y="0"/>
+                                                    <pow comment="false" id="1" x="0" y="0">
+                                                        <get-val-12-11 comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val="2"/>
+                                                    </pow>
+                                                </times>
+                                                <plus comment="false" id="1" x="0" y="0">
                                                     <times comment="false" id="0" x="0" y="0">
-                                                        <get-val-12-22 comment="false" id="0" x="0" y="0"/>
-                                                        <pow comment="false" id="1" x="0" y="0">
-                                                            <get-val-12-11 comment="false" id="0" x="0" y="0"/>
-                                                            <int id="1" val="2"/>
-                                                        </pow>
+                                                        <get-val-12-23 comment="false" id="0" x="0" y="0"/>
+                                                        <get-val-12-11 comment="false" id="1" x="0" y="0"/>
                                                     </times>
-                                                    <plus comment="false" id="1" x="0" y="0">
-                                                        <times comment="false" id="0" x="0" y="0">
-                                                            <get-val-12-23 comment="false" id="0" x="0" y="0"/>
-                                                            <get-val-12-11 comment="false" id="1" x="0" y="0"/>
-                                                        </times>
-                                                        <get-val-12-24 comment="false" id="1" x="0" y="0"/>
-                                                    </plus>
+                                                    <get-val-12-24 comment="false" id="1" x="0" y="0"/>
                                                 </plus>
-                                            </neg>
+                                            </plus>
                                         </set-val-12-14>
-                                        <set-val-12-11 comment="false" x="59" y="346">
+                                        <set-val-12-11 comment="false" x="59" y="341">
                                             <plus comment="false" id="0" x="0" y="0">
                                                 <get-val-12-11 comment="false" id="0" x="0" y="0"/>
-                                                <int id="1" val="20"/>
+                                                <int id="1" val="40"/>
                                             </plus>
                                         </set-val-12-11>
-                                        <set-xy comment="false" x="59" y="376">
+                                        <set-xy comment="false" x="59" y="371">
                                             <ACTOR eid="lastcreated" id="0"/>
                                             <int id="1" val="0"/>
                                             <get-val-12-11 comment="false" id="2" x="0" y="0"/>
                                         </set-xy>
-                                        <set-xy comment="false" x="59" y="408">
+                                        <set-xy comment="false" x="59" y="403">
                                             <ACTOR eid="lastcreated" id="0"/>
                                             <int id="1" val="1"/>
                                             <get-val-12-14 comment="false" id="2" x="0" y="0"/>
@@ -137,9 +135,9 @@
                         <int id="1" val="0"/>
                     </eq>
                 </if>
-                <else comment="false" x="26" y="476">
+                <else comment="false" x="26" y="471">
                     <group eventID="9" id="-1">
-                        <set-val-12-15 comment="false" x="37" y="496">
+                        <set-val-12-15 comment="false" x="37" y="491">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-12-15>
                     </group>
@@ -332,13 +330,13 @@
                 <set-val-12-18 comment="false" x="26" y="80">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-val-12-16 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="150"/>
+                        <int id="1" val="200"/>
                     </plus>
                 </set-val-12-18>
                 <set-val-12-19 comment="false" x="26" y="110">
                     <minus comment="false" id="0" x="0" y="0">
                         <get-val-12-17 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="85"/>
+                        <int id="1" val="95"/>
                     </minus>
                 </set-val-12-19>
                 <set-val-12-20 comment="false" x="26" y="140">
@@ -348,7 +346,7 @@
                                 <get-val-12-18 comment="false" id="0" x="0" y="0"/>
                                 <get-val-12-16 comment="false" id="1" x="0" y="0"/>
                             </minus>
-                            <int id="1" val="0.75"/>
+                            <int id="1" val="0.33"/>
                         </times>
                         <get-val-12-16 comment="false" id="1" x="0" y="0"/>
                     </plus>
@@ -360,7 +358,7 @@
                                 <get-val-12-19 comment="false" id="0" x="0" y="0"/>
                                 <get-val-12-17 comment="false" id="1" x="0" y="0"/>
                             </minus>
-                            <int id="1" val="0.33"/>
+                            <int id="1" val="0.66"/>
                         </times>
                         <get-val-12-17 comment="false" id="1" x="0" y="0"/>
                     </minus>

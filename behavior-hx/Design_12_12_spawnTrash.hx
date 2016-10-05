@@ -123,9 +123,9 @@ class Design_12_12_spawnTrash extends SceneScript
 					createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
 					getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
 					getLastCreatedActor().makeAlwaysSimulate();
-					_trashYPos = asNumber(-(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c))));
+					_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
 					propertyChanged("_trashYPos", _trashYPos);
-					_trashXPos = asNumber((_trashXPos + 20));
+					_trashXPos = asNumber((_trashXPos + 40));
 					propertyChanged("_trashXPos", _trashXPos);
 					getLastCreatedActor().setX(_trashXPos);
 					getLastCreatedActor().setY(_trashYPos);
@@ -173,13 +173,13 @@ class Design_12_12_spawnTrash extends SceneScript
 		propertyChanged("_dot1X", _dot1X);
 		_dot1Y = asNumber(5);
 		propertyChanged("_dot1Y", _dot1Y);
-		_dot2X = asNumber((_dot1X + 150));
+		_dot2X = asNumber((_dot1X + 200));
 		propertyChanged("_dot2X", _dot2X);
-		_dot2Y = asNumber((_dot1Y - 85));
+		_dot2Y = asNumber((_dot1Y - 95));
 		propertyChanged("_dot2Y", _dot2Y);
-		_dot3X = asNumber((((_dot2X - _dot1X) * 0.75) + _dot1X));
+		_dot3X = asNumber((((_dot2X - _dot1X) * 0.33) + _dot1X));
 		propertyChanged("_dot3X", _dot3X);
-		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.33) - _dot1Y));
+		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.66) - _dot1Y));
 		propertyChanged("_dot3Y", _dot3Y);
 		_customEvent_findParabola();
 	}
