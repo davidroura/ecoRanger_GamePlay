@@ -149,43 +149,44 @@
     <group eventID="9" id="-1"/>
     <group eventID="10" id="0">
         <draw comment="false" x="15" y="15">
-            <group eventID="10" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <font eid="135" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <tostring comment="false" id="0" x="0" y="0">
-                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                    </tostring>
-                    <int id="1" val="100"/>
-                    <int id="2" val="100"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="97">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="a = "/>
-                        <get-val-12-22 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="100"/>
-                    <int id="2" val="120"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="127">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="b = "/>
-                        <get-val-12-23 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="100"/>
-                    <int id="2" val="140"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="157">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="c = "/>
-                        <get-val-12-24 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <int id="1" val="100"/>
-                    <int id="2" val="160"/>
-                </draw-text>
-            </group>
+            <group eventID="10" id="-1"/>
         </draw>
+    </group>
+    <group eventID="10" id="4">
+        <set-font-new comment="false" x="48" y="110">
+            <font eid="135" id="0"/>
+        </set-font-new>
+        <draw-text comment="false" x="48" y="137">
+            <tostring comment="false" id="0" x="0" y="0">
+                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+            </tostring>
+            <int id="1" val="100"/>
+            <int id="2" val="100"/>
+        </draw-text>
+        <draw-text comment="false" x="48" y="167">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="a = "/>
+                <get-val-12-22 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+            <int id="1" val="100"/>
+            <int id="2" val="120"/>
+        </draw-text>
+        <draw-text comment="false" x="48" y="197">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="b = "/>
+                <get-val-12-23 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+            <int id="1" val="100"/>
+            <int id="2" val="140"/>
+        </draw-text>
+        <draw-text comment="false" x="48" y="227">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="c = "/>
+                <get-val-12-24 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+            <int id="1" val="100"/>
+            <int id="2" val="160"/>
+        </draw-text>
     </group>
     <group eventID="10" id="-1"/>
     <group eventID="11" id="0">
