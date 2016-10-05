@@ -163,12 +163,31 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentDistance" hidden="false" id="13" name="_currentDistance" order="11"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashYPos" hidden="false" id="14" name="_trashYPos" order="12"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="spawning" hidden="false" id="15" name="_spawning" order="13"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot1X" hidden="false" id="16" name="_dot1X" order="14"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot1Y" hidden="false" id="17" name="_dot1Y" order="15"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot2X" hidden="false" id="18" name="_dot2X" order="16"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot2Y" hidden="false" id="19" name="_dot2Y" order="17"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot3X" hidden="false" id="20" name="_dot3X" order="18"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="dot3Y" hidden="false" id="21" name="_dot3Y" order="19"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="a" hidden="false" id="22" name="_a" order="20"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="b" hidden="false" id="23" name="_b" order="21"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="c" hidden="false" id="24" name="_c" order="22"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r1" hidden="false" id="25" name="_r1" order="23"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r2" hidden="false" id="26" name="_r2" order="24"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r3" hidden="false" id="27" name="_r3" order="25"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r4" hidden="false" id="28" name="_r4" order="26"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r5" hidden="false" id="29" name="_r5" order="27"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r123" hidden="false" id="30" name="_r123" order="28"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="r45" hidden="false" id="31" name="_r45" order="29"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="rb" hidden="false" id="32" name="_rb" order="30"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="3" name="step" order="9" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="11" repeats="true"/>
             <event displayName="trashByDistance" enabled="true" id="9" name="event-custom" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="10" name="draw" order="4" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="10" name="draw" order="6" repeats="true"/>
+            <event displayName="findParabola" enabled="true" id="11" name="event-custom" order="4" repeats="true"/>
+            <event displayName="createDots" enabled="true" id="12" name="event-custom" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_13_13_spawnLife" classname="scripts.Design_13_13_spawnLife" desc="" description="" design="true" drawOrder="0" id="13" name="spawnLife" oid="-1" package="scripts" shared="false" type="scene">

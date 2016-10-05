@@ -86,6 +86,23 @@ class Design_12_12_spawnTrash extends SceneScript
 	public var _currentDistance:Float;
 	public var _trashYPos:Float;
 	public var _spawning:Bool;
+	public var _dot1X:Float;
+	public var _dot1Y:Float;
+	public var _dot2X:Float;
+	public var _dot2Y:Float;
+	public var _dot3X:Float;
+	public var _dot3Y:Float;
+	public var _a:Float;
+	public var _b:Float;
+	public var _c:Float;
+	public var _r1:Float;
+	public var _r2:Float;
+	public var _r3:Float;
+	public var _r4:Float;
+	public var _r5:Float;
+	public var _r123:Float;
+	public var _r45:Float;
+	public var _rb:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashByDistance():Void
@@ -98,23 +115,17 @@ class Design_12_12_spawnTrash extends SceneScript
 				propertyChanged("_trashType", _trashType);
 				_spawning = true;
 				propertyChanged("_spawning", _spawning);
-				_trashXPos = asNumber(5);
+				_trashXPos = asNumber(50);
 				propertyChanged("_trashXPos", _trashXPos);
+				_customEvent_createDots();
 				for(index0 in 0...Std.int(5))
 				{
 					createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
+					getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
 					getLastCreatedActor().makeAlwaysSimulate();
-					if((_trashType == 0))
-					{
-						_trashYPos = asNumber((Math.pow(_trashXPos, 2) + ((5 * _trashXPos) + 100)));
-						propertyChanged("_trashYPos", _trashYPos);
-					}
-					else
-					{
-						_trashYPos = asNumber((Math.pow(_trashXPos, 2) - ((5 * _trashXPos) + 100)));
-						propertyChanged("_trashYPos", _trashYPos);
-					}
-					_trashXPos = asNumber((_trashXPos + 5));
+					_trashYPos = asNumber(-(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c))));
+					propertyChanged("_trashYPos", _trashYPos);
+					_trashXPos = asNumber((_trashXPos + 20));
 					propertyChanged("_trashXPos", _trashXPos);
 					getLastCreatedActor().setX(_trashXPos);
 					getLastCreatedActor().setY(_trashYPos);
@@ -126,6 +137,51 @@ class Design_12_12_spawnTrash extends SceneScript
 			_spawning = false;
 			propertyChanged("_spawning", _spawning);
 		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_findParabola():Void
+	{
+		_r1 = asNumber((_dot3Y * (Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2))));
+		propertyChanged("_r1", _r1);
+		_r2 = asNumber(-((_dot2Y * (Math.pow(_dot3X, 2) - Math.pow(_dot1X, 2)))));
+		propertyChanged("_r2", _r2);
+		_r3 = asNumber((_dot1Y * (Math.pow(_dot3X, 2) + Math.pow(_dot2X, 2))));
+		propertyChanged("_r3", _r3);
+		_r4 = asNumber((_dot3X * ((_dot2X - (2 * _dot1X)) + Math.pow(_dot2X, 2))));
+		propertyChanged("_r4", _r4);
+		_r5 = asNumber(((_dot2X * _dot1X) - Math.pow(_dot1X, 3)));
+		propertyChanged("_r5", _r5);
+		_r123 = asNumber(((_r1 - _r2) + _r3));
+		propertyChanged("_r123", _r123);
+		_r45 = asNumber((_r4 + _r5));
+		propertyChanged("_r45", _r45);
+		_b = asNumber((_r123 / _r45));
+		propertyChanged("_b", _b);
+		_rb = asNumber((_b * (_dot2X - _dot1X)));
+		propertyChanged("_rb", _rb);
+		_a = asNumber(((_dot2Y - (_dot1Y - _rb)) / (Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2))));
+		propertyChanged("_a", _a);
+		_c = asNumber(((_dot1Y - (_a * Math.pow(_dot1X, 2))) - (_b * _dot1X)));
+		propertyChanged("_c", _c);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_createDots():Void
+	{
+		_dot1X = asNumber(50);
+		propertyChanged("_dot1X", _dot1X);
+		_dot1Y = asNumber(5);
+		propertyChanged("_dot1Y", _dot1Y);
+		_dot2X = asNumber((_dot1X + 150));
+		propertyChanged("_dot2X", _dot2X);
+		_dot2Y = asNumber((_dot1Y - 85));
+		propertyChanged("_dot2Y", _dot2Y);
+		_dot3X = asNumber((((_dot2X - _dot1X) * 0.75) + _dot1X));
+		propertyChanged("_dot3X", _dot3X);
+		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.33) - _dot1Y));
+		propertyChanged("_dot3Y", _dot3Y);
+		_customEvent_findParabola();
 	}
 	
 	
@@ -157,9 +213,43 @@ class Design_12_12_spawnTrash extends SceneScript
 		nameMap.set("currentDistance", "_currentDistance");
 		_currentDistance = 0.0;
 		nameMap.set("trashYPos", "_trashYPos");
-		_trashYPos = 0;
+		_trashYPos = 0.0;
 		nameMap.set("spawning", "_spawning");
 		_spawning = false;
+		nameMap.set("dot1X", "_dot1X");
+		_dot1X = 0;
+		nameMap.set("dot1Y", "_dot1Y");
+		_dot1Y = 0;
+		nameMap.set("dot2X", "_dot2X");
+		_dot2X = 0;
+		nameMap.set("dot2Y", "_dot2Y");
+		_dot2Y = 0;
+		nameMap.set("dot3X", "_dot3X");
+		_dot3X = 0;
+		nameMap.set("dot3Y", "_dot3Y");
+		_dot3Y = 0;
+		nameMap.set("a", "_a");
+		_a = 0;
+		nameMap.set("b", "_b");
+		_b = 0;
+		nameMap.set("c", "_c");
+		_c = 0;
+		nameMap.set("r1", "_r1");
+		_r1 = 0;
+		nameMap.set("r2", "_r2");
+		_r2 = 0;
+		nameMap.set("r3", "_r3");
+		_r3 = 0;
+		nameMap.set("r4", "_r4");
+		_r4 = 0;
+		nameMap.set("r5", "_r5");
+		_r5 = 0;
+		nameMap.set("r123", "_r123");
+		_r123 = 0;
+		nameMap.set("r45", "_r45");
+		_r45 = 0;
+		nameMap.set("rb", "_rb");
+		_rb = 0;
 		
 	}
 	
