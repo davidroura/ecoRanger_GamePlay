@@ -159,6 +159,11 @@
             </and>
         </if>
     </group>
+    <group eventID="3" id="5">
+        <set-val-8-13 comment="false" x="86" y="459">
+            <false comment="false" id="0" x="0" y="0"/>
+        </set-val-8-13>
+    </group>
     <group eventID="3" id="-1"/>
     <group eventID="5" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
