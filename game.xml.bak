@@ -110,6 +110,7 @@
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
         <boolean cid="-1" id="36" name="clickingButton" save="true" value="false"/>
+        <boolean cid="-1" id="38" name="gameOver" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>

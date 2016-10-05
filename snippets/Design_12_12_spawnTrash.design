@@ -33,7 +33,10 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="29" y="40">
                     <group eventID="3" id="-1">
-                        <say-this comment="false" x="40" y="65">
+                        <comment-short comment="false" x="40" y="65">
+                            <int id="0" val="updating SpawnTrash"/>
+                        </comment-short>
+                        <say-this comment="false" x="40" y="85">
                             <int id="0" val="trashByDistance"/>
                         </say-this>
                     </group>
