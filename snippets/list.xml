@@ -180,6 +180,13 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="r123" hidden="false" id="30" name="_r123" order="28"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="r45" hidden="false" id="31" name="_r45" order="29"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="rb" hidden="false" id="32" name="_rb" order="30"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="z" hidden="false" id="33" name="_z" order="31"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="m" hidden="false" id="34" name="_m" order="32"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="e" hidden="false" id="35" name="_e" order="33"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="o" hidden="false" id="36" name="_o" order="34"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="t" hidden="false" id="37" name="_t" order="35"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="p" hidden="false" id="38" name="_p" order="36"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="preC" hidden="false" id="39" name="_preC" order="37"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>

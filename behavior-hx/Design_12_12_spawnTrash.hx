@@ -103,6 +103,13 @@ class Design_12_12_spawnTrash extends SceneScript
 	public var _r123:Float;
 	public var _r45:Float;
 	public var _rb:Float;
+	public var _z:Float;
+	public var _m:Float;
+	public var _e:Float;
+	public var _o:Float;
+	public var _t:Float;
+	public var _p:Float;
+	public var _preC:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashByDistance():Void
@@ -125,7 +132,7 @@ class Design_12_12_spawnTrash extends SceneScript
 					getLastCreatedActor().makeAlwaysSimulate();
 					_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
 					propertyChanged("_trashYPos", _trashYPos);
-					_trashXPos = asNumber((_trashXPos + 40));
+					_trashXPos = asNumber((_trashXPos + 20));
 					propertyChanged("_trashXPos", _trashXPos);
 					getLastCreatedActor().setX(_trashXPos);
 					getLastCreatedActor().setY(_trashYPos);
@@ -142,27 +149,25 @@ class Design_12_12_spawnTrash extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_findParabola():Void
 	{
-		_r1 = asNumber((_dot3Y * (Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2))));
-		propertyChanged("_r1", _r1);
-		_r2 = asNumber(-((_dot2Y * (Math.pow(_dot3X, 2) - Math.pow(_dot1X, 2)))));
-		propertyChanged("_r2", _r2);
-		_r3 = asNumber((_dot1Y * (Math.pow(_dot3X, 2) + Math.pow(_dot2X, 2))));
-		propertyChanged("_r3", _r3);
-		_r4 = asNumber((_dot3X * ((_dot2X - (2 * _dot1X)) + Math.pow(_dot2X, 2))));
-		propertyChanged("_r4", _r4);
-		_r5 = asNumber(((_dot2X * _dot1X) - Math.pow(_dot1X, 3)));
-		propertyChanged("_r5", _r5);
-		_r123 = asNumber(((_r1 - _r2) + _r3));
-		propertyChanged("_r123", _r123);
-		_r45 = asNumber((_r4 + _r5));
-		propertyChanged("_r45", _r45);
-		_b = asNumber((_r123 / _r45));
-		propertyChanged("_b", _b);
-		_rb = asNumber((_b * (_dot2X - _dot1X)));
-		propertyChanged("_rb", _rb);
-		_a = asNumber(((_dot2Y - (_dot1Y - _rb)) / (Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2))));
+		_z = asNumber((_dot3Y - _dot1Y));
+		propertyChanged("_z", _z);
+		_m = asNumber((_dot2Y - _dot1Y));
+		propertyChanged("_m", _m);
+		_e = asNumber((Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2)));
+		propertyChanged("_e", _e);
+		_o = asNumber((_dot2X - _dot1X));
+		propertyChanged("_o", _o);
+		_t = asNumber((_dot3X - _dot1X));
+		propertyChanged("_t", _t);
+		_p = asNumber((Math.pow(_dot3X, 2) - Math.pow(_dot1X, 2)));
+		propertyChanged("_p", _p);
+		_a = asNumber((((_o * _z) - (_m * _t)) / ((_p * _o) - (_e * _t))));
 		propertyChanged("_a", _a);
-		_c = asNumber(((_dot1Y - (_a * Math.pow(_dot1X, 2))) - (_b * _dot1X)));
+		_b = asNumber(((_m - (_a * _e)) / _o));
+		propertyChanged("_b", _b);
+		_preC = asNumber(((_a * Math.pow(_dot1X, 2)) + (_b * _dot1X)));
+		propertyChanged("_preC", _preC);
+		_c = asNumber((_dot1Y - _preC));
 		propertyChanged("_c", _c);
 	}
 	
@@ -171,15 +176,15 @@ class Design_12_12_spawnTrash extends SceneScript
 	{
 		_dot1X = asNumber(50);
 		propertyChanged("_dot1X", _dot1X);
-		_dot1Y = asNumber(5);
+		_dot1Y = asNumber(-5);
 		propertyChanged("_dot1Y", _dot1Y);
-		_dot2X = asNumber((_dot1X + 200));
+		_dot2X = asNumber((_dot1X + 100));
 		propertyChanged("_dot2X", _dot2X);
-		_dot2Y = asNumber((_dot1Y - 95));
+		_dot2Y = asNumber((_dot1Y - 100));
 		propertyChanged("_dot2Y", _dot2Y);
-		_dot3X = asNumber((((_dot2X - _dot1X) * 0.33) + _dot1X));
+		_dot3X = asNumber((((_dot2X - _dot1X) * 0.3) + _dot1X));
 		propertyChanged("_dot3X", _dot3X);
-		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.66) - _dot1Y));
+		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.7) - _dot1Y));
 		propertyChanged("_dot3Y", _dot3Y);
 		_customEvent_findParabola();
 	}
@@ -250,6 +255,20 @@ class Design_12_12_spawnTrash extends SceneScript
 		_r45 = 0;
 		nameMap.set("rb", "_rb");
 		_rb = 0;
+		nameMap.set("z", "_z");
+		_z = 0;
+		nameMap.set("m", "_m");
+		_m = 0;
+		nameMap.set("e", "_e");
+		_e = 0;
+		nameMap.set("o", "_o");
+		_o = 0;
+		nameMap.set("t", "_t");
+		_t = 0;
+		nameMap.set("p", "_p");
+		_p = 0;
+		nameMap.set("preC", "_preC");
+		_preC = 0;
 		
 	}
 	
@@ -277,6 +296,9 @@ class Design_12_12_spawnTrash extends SceneScript
 			{
 				g.setFont(getFont(135));
 				g.drawString("" + ("" + Engine.engine.getGameAttribute("playerDistance")), 100, 100);
+				g.drawString("" + (("" + "a = ") + ("" + _a)), 100, 120);
+				g.drawString("" + (("" + "b = ") + ("" + _b)), 100, 140);
+				g.drawString("" + (("" + "c = ") + ("" + _c)), 100, 160);
 			}
 		});
 		
