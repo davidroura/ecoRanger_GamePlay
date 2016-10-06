@@ -118,31 +118,116 @@ class Design_12_12_spawnTrash extends SceneScript
 		{
 			if(!(_spawning))
 			{
-				_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
-				propertyChanged("_trashType", _trashType);
-				_spawning = true;
-				propertyChanged("_spawning", _spawning);
-				_trashXPos = asNumber(50);
-				propertyChanged("_trashXPos", _trashXPos);
-				_customEvent_createDots();
-				for(index0 in 0...Std.int(5))
-				{
-					createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
-					getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
-					getLastCreatedActor().makeAlwaysSimulate();
-					_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
-					propertyChanged("_trashYPos", _trashYPos);
-					_trashXPos = asNumber((_trashXPos + 20));
-					propertyChanged("_trashXPos", _trashXPos);
-					getLastCreatedActor().setX(_trashXPos);
-					getLastCreatedActor().setY(_trashYPos);
-				}
+				_customEvent_selectTrash();
 			}
 		}
 		else
 		{
 			_spawning = false;
 			propertyChanged("_spawning", _spawning);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_selectTrash():Void
+	{
+		/* trashType
+0) parabola left
+1) parabola right
+2) rect */
+		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
+		propertyChanged("_trashType", _trashType);
+		_spawning = true;
+		propertyChanged("_spawning", _spawning);
+		if((_trashType == 0))
+		{
+			_customEvent_parabolaLeft();
+		}
+		else if((_trashType == 1))
+		{
+			_customEvent_parabolaRight();
+		}
+		else
+		{
+			_customEvent_rect();
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_rect():Void
+	{
+		_trashXPos = asNumber(randomInt(Math.floor(50), Math.floor(190)));
+		propertyChanged("_trashXPos", _trashXPos);
+		_trashYPos = asNumber(-5);
+		propertyChanged("_trashYPos", _trashYPos);
+		for(index0 in 0...Std.int(5))
+		{
+			_customEvent_randomTrash();
+			getLastCreatedActor().setX(_trashXPos);
+			getLastCreatedActor().setY(_trashYPos);
+			_trashYPos = asNumber((_trashYPos - 5));
+			propertyChanged("_trashYPos", _trashYPos);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_parabolaLeft():Void
+	{
+		_trashXPos = asNumber(150);
+		propertyChanged("_trashXPos", _trashXPos);
+		_customEvent_createDotsParabolaLeft();
+		_customEvent_findParabola();
+		_customEvent_createParabolaTrash();
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_parabolaRight():Void
+	{
+		_trashXPos = asNumber(50);
+		propertyChanged("_trashXPos", _trashXPos);
+		_customEvent_createDotsParabolaRight();
+		_customEvent_findParabola();
+		_customEvent_createParabolaTrash();
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_createParabolaTrash():Void
+	{
+		for(index0 in 0...Std.int(5))
+		{
+			_customEvent_randomTrash();
+			getLastCreatedActor().makeAlwaysSimulate();
+			_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
+			propertyChanged("_trashYPos", _trashYPos);
+			_trashXPos = asNumber((_trashXPos + 20));
+			propertyChanged("_trashXPos", _trashXPos);
+			getLastCreatedActor().setX(_trashXPos);
+			getLastCreatedActor().setY(_trashYPos);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_randomTrash():Void
+	{
+		/* 0) bottle
+1) can
+2) plastic */
+		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
+		propertyChanged("_trashType", _trashType);
+		if((_trashType == 0))
+		{
+			createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
+		}
+		else if((_trashType == 1))
+		{
+			createRecycledActorOnLayer(getActorType(15), 0, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
+		}
+		else
+		{
+			createRecycledActorOnLayer(getActorType(104), 0, -5, 1, "" + "gamePlay");
+			getLastCreatedActor().growTo(20/100, 20/100, 0, Linear.easeNone);
 		}
 	}
 	
@@ -172,9 +257,26 @@ class Design_12_12_spawnTrash extends SceneScript
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_createDots():Void
+	public function _customEvent_createDotsParabolaLeft():Void
 	{
-		_dot1X = asNumber(50);
+		_dot1X = asNumber(_trashXPos);
+		propertyChanged("_dot1X", _dot1X);
+		_dot1Y = asNumber(-5);
+		propertyChanged("_dot1Y", _dot1Y);
+		_dot2X = asNumber((_dot1X - 100));
+		propertyChanged("_dot2X", _dot2X);
+		_dot2Y = asNumber((_dot1Y - 100));
+		propertyChanged("_dot2Y", _dot2Y);
+		_dot3X = asNumber((((_dot2X - _dot1X) * 0.3) + _dot1X));
+		propertyChanged("_dot3X", _dot3X);
+		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.7) - _dot1Y));
+		propertyChanged("_dot3Y", _dot3Y);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_createDotsParabolaRight():Void
+	{
+		_dot1X = asNumber(_trashXPos);
 		propertyChanged("_dot1X", _dot1X);
 		_dot1Y = asNumber(-5);
 		propertyChanged("_dot1Y", _dot1Y);
@@ -186,7 +288,6 @@ class Design_12_12_spawnTrash extends SceneScript
 		propertyChanged("_dot3X", _dot3X);
 		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.7) - _dot1Y));
 		propertyChanged("_dot3Y", _dot3Y);
-		_customEvent_findParabola();
 	}
 	
 	
@@ -222,53 +323,53 @@ class Design_12_12_spawnTrash extends SceneScript
 		nameMap.set("spawning", "_spawning");
 		_spawning = false;
 		nameMap.set("dot1X", "_dot1X");
-		_dot1X = 0;
+		_dot1X = 0.0;
 		nameMap.set("dot1Y", "_dot1Y");
-		_dot1Y = 0;
+		_dot1Y = 0.0;
 		nameMap.set("dot2X", "_dot2X");
-		_dot2X = 0;
+		_dot2X = 0.0;
 		nameMap.set("dot2Y", "_dot2Y");
-		_dot2Y = 0;
+		_dot2Y = 0.0;
 		nameMap.set("dot3X", "_dot3X");
-		_dot3X = 0;
+		_dot3X = 0.0;
 		nameMap.set("dot3Y", "_dot3Y");
-		_dot3Y = 0;
+		_dot3Y = 0.0;
 		nameMap.set("a", "_a");
-		_a = 0;
+		_a = 0.0;
 		nameMap.set("b", "_b");
-		_b = 0;
+		_b = 0.0;
 		nameMap.set("c", "_c");
-		_c = 0;
+		_c = 0.0;
 		nameMap.set("r1", "_r1");
-		_r1 = 0;
+		_r1 = 0.0;
 		nameMap.set("r2", "_r2");
-		_r2 = 0;
+		_r2 = 0.0;
 		nameMap.set("r3", "_r3");
-		_r3 = 0;
+		_r3 = 0.0;
 		nameMap.set("r4", "_r4");
-		_r4 = 0;
+		_r4 = 0.0;
 		nameMap.set("r5", "_r5");
-		_r5 = 0;
+		_r5 = 0.0;
 		nameMap.set("r123", "_r123");
-		_r123 = 0;
+		_r123 = 0.0;
 		nameMap.set("r45", "_r45");
-		_r45 = 0;
+		_r45 = 0.0;
 		nameMap.set("rb", "_rb");
-		_rb = 0;
+		_rb = 0.0;
 		nameMap.set("z", "_z");
-		_z = 0;
+		_z = 0.0;
 		nameMap.set("m", "_m");
-		_m = 0;
+		_m = 0.0;
 		nameMap.set("e", "_e");
-		_e = 0;
+		_e = 0.0;
 		nameMap.set("o", "_o");
-		_o = 0;
+		_o = 0.0;
 		nameMap.set("t", "_t");
-		_t = 0;
+		_t = 0.0;
 		nameMap.set("p", "_p");
-		_p = 0;
+		_p = 0.0;
 		nameMap.set("preC", "_preC");
-		_preC = 0;
+		_preC = 0.0;
 		
 	}
 	

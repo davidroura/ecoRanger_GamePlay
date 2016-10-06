@@ -186,15 +186,22 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="o" hidden="false" id="36" name="_o" order="34"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="t" hidden="false" id="37" name="_t" order="35"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="p" hidden="false" id="38" name="_p" order="36"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="preC" hidden="false" id="39" name="_preC" order="37"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="preC" hidden="false" id="39" name="_preC" order="37"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="3" name="step" order="11" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="19" repeats="true"/>
             <event displayName="trashByDistance" enabled="true" id="9" name="event-custom" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="10" name="draw" order="6" repeats="true"/>
-            <event displayName="findParabola" enabled="true" id="11" name="event-custom" order="4" repeats="true"/>
-            <event displayName="createDots" enabled="true" id="12" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="10" name="draw" order="14" repeats="true"/>
+            <event displayName="findParabola" enabled="true" id="11" name="event-custom" order="11" repeats="true"/>
+            <event displayName="createDotsParabolaLeft" enabled="true" id="12" name="event-custom" order="12" repeats="true"/>
+            <event displayName="selectTrash" enabled="true" id="13" name="event-custom" order="4" repeats="true"/>
+            <event displayName="parabolaLeft" enabled="true" id="14" name="event-custom" order="6" repeats="true"/>
+            <event displayName="createDotsParabolaRight" enabled="true" id="15" name="event-custom" order="13" repeats="true"/>
+            <event displayName="createParabolaTrash" enabled="true" id="16" name="event-custom" order="9" repeats="true"/>
+            <event displayName="parabolaRight" enabled="true" id="17" name="event-custom" order="7" repeats="true"/>
+            <event displayName="rect" enabled="true" id="18" name="event-custom" order="5" repeats="true"/>
+            <event displayName="randomTrash" enabled="true" id="19" name="event-custom" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_13_13_spawnLife" classname="scripts.Design_13_13_spawnLife" desc="" description="" design="true" drawOrder="0" id="13" name="spawnLife" oid="-1" package="scripts" shared="false" type="scene">
