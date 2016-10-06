@@ -110,6 +110,7 @@ class Design_12_12_spawnTrash extends SceneScript
 	public var _t:Float;
 	public var _p:Float;
 	public var _preC:Float;
+	public var _trashXPosWidth:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashByDistance():Void
@@ -175,6 +176,8 @@ class Design_12_12_spawnTrash extends SceneScript
 	{
 		_trashXPos = asNumber(150);
 		propertyChanged("_trashXPos", _trashXPos);
+		_trashXPosWidth = asNumber(-(20));
+		propertyChanged("_trashXPosWidth", _trashXPosWidth);
 		_customEvent_createDotsParabolaLeft();
 		_customEvent_findParabola();
 		_customEvent_createParabolaTrash();
@@ -185,6 +188,8 @@ class Design_12_12_spawnTrash extends SceneScript
 	{
 		_trashXPos = asNumber(50);
 		propertyChanged("_trashXPos", _trashXPos);
+		_trashXPosWidth = asNumber(20);
+		propertyChanged("_trashXPosWidth", _trashXPosWidth);
 		_customEvent_createDotsParabolaRight();
 		_customEvent_findParabola();
 		_customEvent_createParabolaTrash();
@@ -199,7 +204,7 @@ class Design_12_12_spawnTrash extends SceneScript
 			getLastCreatedActor().makeAlwaysSimulate();
 			_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
 			propertyChanged("_trashYPos", _trashYPos);
-			_trashXPos = asNumber((_trashXPos + 20));
+			_trashXPos = asNumber((_trashXPos + _trashXPosWidth));
 			propertyChanged("_trashXPos", _trashXPos);
 			getLastCreatedActor().setX(_trashXPos);
 			getLastCreatedActor().setY(_trashYPos);
@@ -212,7 +217,7 @@ class Design_12_12_spawnTrash extends SceneScript
 		/* 0) bottle
 1) can
 2) plastic */
-		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
+		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(0)));
 		propertyChanged("_trashType", _trashType);
 		if((_trashType == 0))
 		{
@@ -370,6 +375,8 @@ class Design_12_12_spawnTrash extends SceneScript
 		_p = 0.0;
 		nameMap.set("preC", "_preC");
 		_preC = 0.0;
+		nameMap.set("trashXPosWidth", "_trashXPosWidth");
+		_trashXPosWidth = 0;
 		
 	}
 	

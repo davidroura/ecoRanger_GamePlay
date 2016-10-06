@@ -342,13 +342,18 @@
                 <set-val-12-11 comment="false" x="26" y="40">
                     <int id="0" val="150"/>
                 </set-val-12-11>
-                <say-this comment="false" x="26" y="60">
+                <set-val-12-40 comment="false" x="26" y="60">
+                    <neg comment="false" id="0" x="0" y="0">
+                        <int id="0" val="20"/>
+                    </neg>
+                </set-val-12-40>
+                <say-this comment="false" x="26" y="85">
                     <int id="0" val="createDotsParabolaLeft"/>
                 </say-this>
-                <say-this comment="false" x="26" y="80">
+                <say-this comment="false" x="26" y="105">
                     <int id="0" val="findParabola"/>
                 </say-this>
-                <say-this comment="false" x="26" y="100">
+                <say-this comment="false" x="26" y="125">
                     <int id="0" val="createParabolaTrash"/>
                 </say-this>
             </group>
@@ -438,7 +443,7 @@
                         <set-val-12-11 comment="false" x="37" y="152">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-12-11 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="20"/>
+                                <get-val-12-40 comment="false" id="1" x="0" y="0"/>
                             </plus>
                         </set-val-12-11>
                         <set-xy comment="false" x="37" y="182">
@@ -465,13 +470,16 @@
                 <set-val-12-11 comment="false" x="26" y="40">
                     <int id="0" val="50"/>
                 </set-val-12-11>
-                <say-this comment="false" x="26" y="60">
+                <set-val-12-40 comment="false" x="26" y="60">
+                    <int id="0" val="20"/>
+                </set-val-12-40>
+                <say-this comment="false" x="26" y="80">
                     <int id="0" val="createDotsParabolaRight"/>
                 </say-this>
-                <say-this comment="false" x="26" y="80">
+                <say-this comment="false" x="26" y="100">
                     <int id="0" val="findParabola"/>
                 </say-this>
-                <say-this comment="false" x="26" y="100">
+                <say-this comment="false" x="26" y="120">
                     <int id="0" val="createParabolaTrash"/>
                 </say-this>
             </group>
@@ -529,7 +537,7 @@
                 <set-val-12-12 comment="false" x="26" y="120">
                     <randint comment="false" id="0" x="0" y="0">
                         <int id="0" val="0"/>
-                        <int id="1" val="2"/>
+                        <int id="1" val="0"/>
                     </randint>
                 </set-val-12-12>
                 <if comment="false" x="26" y="145">

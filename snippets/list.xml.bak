@@ -187,6 +187,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="t" hidden="false" id="37" name="_t" order="35"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="p" hidden="false" id="38" name="_p" order="36"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="preC" hidden="false" id="39" name="_preC" order="37"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashXPosWidth" hidden="false" id="40" name="_trashXPosWidth" order="38"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
