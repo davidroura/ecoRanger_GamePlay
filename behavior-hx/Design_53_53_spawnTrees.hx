@@ -189,9 +189,12 @@ class Design_53_53_spawnTrees extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if((getLastCreatedActor().getY() >= 100))
+				if(Engine.engine.getGameAttribute("spawnThings"))
 				{
-					_customEvent_spawnTrees();
+					if((getLastCreatedActor().getY() >= 100))
+					{
+						_customEvent_spawnTrees();
+					}
 				}
 			}
 		});

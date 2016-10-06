@@ -85,17 +85,22 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="78">
-                            <int id="0" val="spawnTrees"/>
-                        </say-this>
+                        <if comment="false" x="37" y="65">
+                            <group eventID="3" id="-1">
+                                <say-this comment="false" x="48" y="103">
+                                    <int id="0" val="spawnTrees"/>
+                                </say-this>
+                            </group>
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <int id="1" val="100"/>
+                            </moreeq>
+                        </if>
                     </group>
-                    <moreeq comment="false" id="0" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="1"/>
-                        </get-xy>
-                        <int id="1" val="100"/>
-                    </moreeq>
+                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </step>

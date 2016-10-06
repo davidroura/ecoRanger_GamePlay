@@ -322,6 +322,10 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
+				if((!(_rockCollision) && !(Engine.engine.getGameAttribute("gameOver"))))
+				{
+					Engine.engine.setGameAttribute("spawnThings", true);
+				}
 				if((Engine.engine.getGameAttribute("spawnThings") || Engine.engine.getGameAttribute("tutorialDone")))
 				{
 					if((Engine.engine.getGameAttribute("playerHealth") > 0))
@@ -332,7 +336,15 @@ class Design_8_8_playerHealth extends SceneScript
 						_customEvent_distance();
 						_customEvent_bonusCard();
 					}
+					else
+					{
+						Engine.engine.setGameAttribute("spawnThings", false);
+						Engine.engine.setGameAttribute("sceneSpeed", 0);
+						Engine.engine.setGameAttribute("gameOver", true);
+					}
 				}
+				_rockCollision = false;
+				propertyChanged("_rockCollision", _rockCollision);
 			}
 		});
 		

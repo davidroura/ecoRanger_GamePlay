@@ -217,7 +217,7 @@ class Design_12_12_spawnTrash extends SceneScript
 		/* 0) bottle
 1) can
 2) plastic */
-		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(0)));
+		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
 		propertyChanged("_trashType", _trashType);
 		if((_trashType == 0))
 		{
