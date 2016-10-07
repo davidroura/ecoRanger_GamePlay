@@ -187,7 +187,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="t" hidden="false" id="37" name="_t" order="35"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="p" hidden="false" id="38" name="_p" order="36"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="preC" hidden="false" id="39" name="_preC" order="37"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashXPosWidth" hidden="false" id="40" name="_trashXPosWidth" order="38"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashXPosWidth" hidden="false" id="40" name="_trashXPosWidth" order="38"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -668,12 +668,14 @@
     </snippet>
     <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_131" classname="scripts.ActorEvents_131" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="86" name="ActorEvents_131" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
+        <number default="60" defaultValue="60" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
         <blocks/>
         <events>
-            <event displayName="Actor - Group" enabled="true" id="2" name="event-collide-actortogroup" order="3" repeats="true"/>
-            <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="4" repeats="true"/>
-            <event displayName="Keyboard Copy" enabled="true" id="4" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Actor - Group" enabled="false" id="2" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Keyboard Copy" enabled="true" id="4" name="event-key-press-release" order="7" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="6" name="event-collide-typetotype" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="133" attachedevent="true" class="scripts.ActorEvents_133" classname="scripts.ActorEvents_133" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="87" name="ActorEvents_133" oid="-1" package="scripts." shared="false" type="actor">
@@ -686,6 +688,38 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="playerSettings" enabled="true" id="2" name="event-custom" order="3" repeats="true"/>
             <event displayName="gameSettings" enabled="true" id="3" name="event-custom" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_16" classname="scripts.SceneEvents_16" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="89" name="SceneEvents_16" oid="-1" package="scripts." sceneid="16" shared="false" type="scene">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashType" hidden="false" id="2" name="_trashType" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_137" classname="scripts.ActorEvents_137" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="90" name="ActorEvents_137" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
+        <number default="60" defaultValue="60" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Actor - Group" enabled="false" id="2" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Keyboard Copy" enabled="true" id="4" name="event-key-press-release" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="6" name="event-collide-typetotype" order="6" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_139" classname="scripts.ActorEvents_139" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="91" name="ActorEvents_139" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
+        <number default="60" defaultValue="60" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Actor - Group" enabled="false" id="2" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Keyboard Copy" enabled="true" id="4" name="event-key-press-release" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="6" name="event-collide-typetotype" order="6" repeats="true"/>
         </events>
     </snippet>
 </pack>

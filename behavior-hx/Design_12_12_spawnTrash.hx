@@ -376,7 +376,7 @@ class Design_12_12_spawnTrash extends SceneScript
 		nameMap.set("preC", "_preC");
 		_preC = 0.0;
 		nameMap.set("trashXPosWidth", "_trashXPosWidth");
-		_trashXPosWidth = 0;
+		_trashXPosWidth = 0.0;
 		
 	}
 	

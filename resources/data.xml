@@ -38,6 +38,9 @@
             </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="90" fixedrot="false" fric="0.2" gid="3" id="137" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="bottleRecycling" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="138" static="false">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="54" fixedrot="true" fric="0.2" gid="3" id="72" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="bridge" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="73" static="false">
         <snippets>
             <s enabled="true" id="56">
@@ -76,6 +79,16 @@
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="28" id="132" name="canCoke" shared="false" width="48">
         <anim across="1" down="1" durations="100" height="28" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="48">
+            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="138" name="canCoke" shared="false" width="24">
+        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="24">
+            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="140" name="canCoke" shared="false" width="131">
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="131">
             <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
@@ -264,6 +277,9 @@
             <poly data="6,6,54,25,92,99,49,121,20,110,5,75,12" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="91" fixedrot="false" fric="0.2" gid="3" id="139" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="PlasticBottleRecycling" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="140" static="false">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="38" fixedrot="false" fric="0.2" gid="3" id="43" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="playButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="44" static="false">
         <snippets/>
     </actor>
