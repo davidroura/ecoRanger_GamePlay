@@ -56,8 +56,11 @@
     </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
+        <cgroup g1="0" g2="4"/>
         <cgroup g1="1" g2="3"/>
+        <cgroup g1="1" g2="4"/>
         <cgroup g1="3" g2="3"/>
+        <cgroup g1="3" g2="4"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -80,7 +83,7 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="-1" id="37" name="playerDistance" save="true" value="0.0"/>
+        <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
         <number cid="5" id="10" name="glassAnimation" save="true" value="0.0"/>
         <number cid="0" id="3" name="sceneSpeed" save="true" value="0.0"/>
         <boolean cid="2" id="26" name="tutorialDone" save="true" value="false"/>
@@ -92,7 +95,7 @@
         <number cid="2" id="2" name="extraLife" save="true" value="0.0"/>
         <number cid="1" id="20" name="playerXPos" save="true" value="0.0"/>
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
-        <list cid="-1" id="35" name="upgradeList" save="true" val="list"/>
+        <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <number cid="2" id="18" name="dozerStrength" save="true" value="0.0"/>
@@ -109,8 +112,9 @@
         <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
-        <boolean cid="-1" id="36" name="clickingButton" save="true" value="false"/>
-        <boolean cid="-1" id="38" name="gameOver" save="true" value="false"/>
+        <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>
+        <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0"/>
+        <boolean cid="2" id="38" name="gameOver" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>

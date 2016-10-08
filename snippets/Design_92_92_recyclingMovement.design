@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-game-val-39 comment="false" x="26" y="40">
+                    <int id="0" val="45"/>
+                </set-game-val-39>
+                <set-dxy comment="false" x="26" y="60">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="17">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="49">
+                    <group eventID="2" id="-1">
+                        <set-dxy comment="false" x="37" y="79">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <set-val-92-2 comment="false" x="37" y="106">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-92-2>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-92-2 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actorgroup eid="4" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-dxy comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="69">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+                <dolater comment="false" x="26" y="101">
+                    <group eventID="3" id="-1">
+                        <set-dxy comment="false" x="37" y="128">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                        <set-dxy comment="false" x="37" y="160">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                    </group>
+                    <int id="0" val=".3"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <control eid="3" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="165" y="127">
+            <group eventID="3" id="-1"/>
+            <int id="0" val=""/>
+        </if>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-dxy comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="0"/>
+                </set-dxy>
+                <set-dxy comment="false" x="26" y="69">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <times comment="false" id="2" x="0" y="0">
+                        <get-game-val-39 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="-1"/>
+                    </times>
+                </set-dxy>
+                <dolater comment="false" x="26" y="106">
+                    <group eventID="4" id="-1">
+                        <set-dxy comment="false" x="37" y="133">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                        <set-dxy comment="false" x="37" y="165">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                    </group>
+                    <int id="0" val=".3"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <control eid="2" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="4" id="4">
+        <if comment="false" x="192" y="210">
+            <group eventID="4" id="-1"/>
+            <get-val-92-2 comment="false" id="0" x="0" y="0"/>
+        </if>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-dxy comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                </set-dxy>
+            </group>
+            <control eid="1" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>
