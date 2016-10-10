@@ -90,6 +90,7 @@
         <number cid="2" id="6" name="canCollected" save="true" value="0.0"/>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="2" id="28" name="playerHealth" save="true" value="0.0"/>
+        <boolean cid="-1" id="41" name="suckingPowerOn" save="true" value="false"/>
         <boolean cid="2" id="11" name="slowMovement" save="true" value="false"/>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
         <number cid="2" id="2" name="extraLife" save="true" value="0.0"/>

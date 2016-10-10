@@ -347,15 +347,6 @@
         </step>
     </group>
     <group eventID="2" id="-1">
-        <plus comment="false" x="428" y="715">
-            <screen-xy comment="false" id="0" x="0" y="0">
-                <int id="0" val="0"/>
-            </screen-xy>
-            <mousexy comment="false" id="1" x="0" y="0">
-                <int id="0" val="0"/>
-                <int id="1" val="0"/>
-            </mousexy>
-        </plus>
         <plus comment="false" x="408" y="767">
             <screen-xy comment="false" id="0" x="0" y="0">
                 <int id="0" val="1"/>
@@ -363,6 +354,15 @@
             <mousexy comment="false" id="1" x="0" y="0">
                 <int id="0" val="0"/>
                 <int id="1" val="1"/>
+            </mousexy>
+        </plus>
+        <plus comment="false" x="428" y="715">
+            <screen-xy comment="false" id="0" x="0" y="0">
+                <int id="0" val="0"/>
+            </screen-xy>
+            <mousexy comment="false" id="1" x="0" y="0">
+                <int id="0" val="0"/>
+                <int id="1" val="0"/>
             </mousexy>
         </plus>
     </group>

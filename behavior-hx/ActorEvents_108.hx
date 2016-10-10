@@ -100,7 +100,7 @@ class ActorEvents_108 extends ActorScript
 				{
 					actor.setAnimation("" + "Off");
 					createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-					getLastCreatedActor().growTo(25/100, 25/100, 0, Linear.easeNone);
+					getLastCreatedActor().growTo(30/100, 30/100, 0, Linear.easeNone);
 				}
 			}
 		});
