@@ -69,31 +69,19 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_63 extends ActorScript
+class ActorEvents_139 extends ActorScript
 {
-	public var _dozerArrive:Bool;
-	public var _dozerLife:Float;
-	public var _dozerLeave:Bool;
-	public var _dozerPlaying:Bool;
-	public var _dozerAdjustY:Bool;
-	public var _dozerRecharge:Bool;
+	public var _onPad:Bool;
+	public var _beltSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("dozerArrive", "_dozerArrive");
-		_dozerArrive = false;
-		nameMap.set("dozerLife", "_dozerLife");
-		_dozerLife = 0.0;
-		nameMap.set("dozerLeave", "_dozerLeave");
-		_dozerLeave = false;
-		nameMap.set("dozerPlaying", "_dozerPlaying");
-		_dozerPlaying = false;
-		nameMap.set("dozerAdjustY", "_dozerAdjustY");
-		_dozerAdjustY = false;
-		nameMap.set("dozerRecharge", "_dozerRecharge");
-		_dozerRecharge = false;
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
+		nameMap.set("beltSpeed", "_beltSpeed");
+		_beltSpeed = 60.0;
 		
 	}
 	
@@ -101,34 +89,7 @@ class ActorEvents_63 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(!(Engine.engine.getGameAttribute("dozerStrength") == 0))
-				{
-					actor.setX(Engine.engine.getGameAttribute("playerXPos"));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
-				}
-				else
-				{
-					recycleActor(actor);
-				}
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
-				recycleActor(event.otherActor);
-			}
-		});
+		actor.growTo(40/100, 40/100, 0, Linear.easeNone);
 		
 	}
 	

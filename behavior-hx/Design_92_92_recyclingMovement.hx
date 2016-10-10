@@ -69,31 +69,20 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_63 extends ActorScript
+class Design_92_92_recyclingMovement extends ActorScript
 {
-	public var _dozerArrive:Bool;
-	public var _dozerLife:Float;
-	public var _dozerLeave:Bool;
-	public var _dozerPlaying:Bool;
-	public var _dozerAdjustY:Bool;
-	public var _dozerRecharge:Bool;
+	public var _beltSpeed:Float;
+	public var _onPad:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("dozerArrive", "_dozerArrive");
-		_dozerArrive = false;
-		nameMap.set("dozerLife", "_dozerLife");
-		_dozerLife = 0.0;
-		nameMap.set("dozerLeave", "_dozerLeave");
-		_dozerLeave = false;
-		nameMap.set("dozerPlaying", "_dozerPlaying");
-		_dozerPlaying = false;
-		nameMap.set("dozerAdjustY", "_dozerAdjustY");
-		_dozerAdjustY = false;
-		nameMap.set("dozerRecharge", "_dozerRecharge");
-		_dozerRecharge = false;
+		nameMap.set("Actor", "actor");
+		nameMap.set("beltSpeed", "_beltSpeed");
+		_beltSpeed = 60.0;
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
 		
 	}
 	
@@ -101,32 +90,59 @@ class ActorEvents_63 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("recyclingBeltSpeed", 45);
+		actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
 		
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && sameAsAny(getActorGroup(4),event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if(!(Engine.engine.getGameAttribute("dozerStrength") == 0))
+				if((_onPad == false))
 				{
-					actor.setX(Engine.engine.getGameAttribute("playerXPos"));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
-				}
-				else
-				{
-					recycleActor(actor);
+					actor.setYVelocity(0);
+					_onPad = true;
+					propertyChanged("_onPad", _onPad);
 				}
 			}
 		});
 		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("right", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && pressed)
 			{
-				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
-				recycleActor(event.otherActor);
+				actor.setYVelocity(0);
+				actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+				runLater(1000 * .3, function(timeTask:TimedTask):Void
+				{
+					actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+					actor.setXVelocity(0);
+				}, actor);
+			}
+		});
+		
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("left", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && pressed)
+			{
+				actor.setYVelocity(0);
+				actor.setXVelocity((Engine.engine.getGameAttribute("recyclingBeltSpeed") * -1));
+				runLater(1000 * .3, function(timeTask:TimedTask):Void
+				{
+					actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+					actor.setXVelocity(0);
+				}, actor);
+			}
+		});
+		
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("down", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && pressed)
+			{
+				actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
 			}
 		});
 		

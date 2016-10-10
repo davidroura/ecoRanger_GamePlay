@@ -231,34 +231,6 @@ class SceneEvents_0 extends SceneScript
 			}
 		});
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				_dozerClick = true;
-				propertyChanged("_dozerClick", _dozerClick);
-				Engine.engine.setGameAttribute("clickingButton", true);
-				if(((Engine.engine.getGameAttribute("dozerStrength") > 0) && !(Engine.engine.getGameAttribute("dozerPlaying"))))
-				{
-					getActor(2).setAnimation("" + "Off");
-					createRecycledActor(getActorType(63), -5, Engine.engine.getGameAttribute("playerYPos"), Script.FRONT);
-					Engine.engine.setGameAttribute("dozerStrengthUnits", (Engine.engine.getGameAttribute("dozerStrengthUnits") + 1));
-					Engine.engine.setGameAttribute("dozerPlaying", true);
-					getLastCreatedActor().growTo(25/100, 25/100, 0, Linear.easeNone);
-				}
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("clickingButton", false);
-			}
-		});
-		
 		/* ======================== Actor of Type ========================= */
 		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
 		{

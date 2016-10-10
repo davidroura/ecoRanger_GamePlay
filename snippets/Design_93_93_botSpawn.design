@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="23" y="3">
+            <group eventID="2" id="-1">
+                <if comment="false" x="34" y="28">
+                    <group eventID="2" id="-1">
+                        <set-xy comment="false" x="45" y="53">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-game-val-20 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="45" y="85">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </set-xy>
+                    </group>
+                    <get-game-val-41 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="34" y="134">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="45" y="154">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                </else>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1">
+        <noteq comment="false" x="290" y="266">
+            <get-game-val-18 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="0"/>
+        </noteq>
+    </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-41 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-41>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

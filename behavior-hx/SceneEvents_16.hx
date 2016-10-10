@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,31 +70,19 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_63 extends ActorScript
+class SceneEvents_16 extends SceneScript
 {
-	public var _dozerArrive:Bool;
-	public var _dozerLife:Float;
-	public var _dozerLeave:Bool;
-	public var _dozerPlaying:Bool;
-	public var _dozerAdjustY:Bool;
-	public var _dozerRecharge:Bool;
+	public var _onPad:Bool;
+	public var _trashType:Float;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("dozerArrive", "_dozerArrive");
-		_dozerArrive = false;
-		nameMap.set("dozerLife", "_dozerLife");
-		_dozerLife = 0.0;
-		nameMap.set("dozerLeave", "_dozerLeave");
-		_dozerLeave = false;
-		nameMap.set("dozerPlaying", "_dozerPlaying");
-		_dozerPlaying = false;
-		nameMap.set("dozerAdjustY", "_dozerAdjustY");
-		_dozerAdjustY = false;
-		nameMap.set("dozerRecharge", "_dozerRecharge");
-		_dozerRecharge = false;
+		super();
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
+		nameMap.set("trashType", "_trashType");
+		_trashType = 0.0;
 		
 	}
 	
@@ -101,34 +90,23 @@ class ActorEvents_63 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		runPeriodically(1000 * randomFloatBetween(.5, 1.5), function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled)
+			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
+			propertyChanged("_trashType", _trashType);
+			if((_trashType == 0))
 			{
-				if(!(Engine.engine.getGameAttribute("dozerStrength") == 0))
-				{
-					actor.setX(Engine.engine.getGameAttribute("playerXPos"));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
-				}
-				else
-				{
-					recycleActor(actor);
-				}
+				createRecycledActor(getActorType(131), 135, 5, Script.FRONT);
 			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
+			if((_trashType == 1))
 			{
-				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
-				recycleActor(event.otherActor);
+				createRecycledActor(getActorType(137), 135, 5, Script.FRONT);
 			}
-		});
+			if((_trashType == 2))
+			{
+				createRecycledActor(getActorType(139), 135, 5, Script.FRONT);
+			}
+		}, null);
 		
 	}
 	

@@ -72,6 +72,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 class ActorEvents_108 extends ActorScript
 {
 	public var _click:Bool;
+	public var _dozerClick:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -79,11 +80,39 @@ class ActorEvents_108 extends ActorScript
 		super(actor);
 		nameMap.set("click", "_click");
 		_click = false;
+		nameMap.set("dozerClick", "_dozerClick");
+		_dozerClick = false;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				_dozerClick = true;
+				propertyChanged("_dozerClick", _dozerClick);
+				Engine.engine.setGameAttribute("clickingButton", true);
+				if((actor.getAnimation() == "On"))
+				{
+					actor.setAnimation("" + "Off");
+					createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+					getLastCreatedActor().growTo(25/100, 25/100, 0, Linear.easeNone);
+				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("clickingButton", false);
+			}
+		});
 		
 	}
 	

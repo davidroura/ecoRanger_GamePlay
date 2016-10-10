@@ -98,7 +98,7 @@
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
-        <number cid="2" id="18" name="dozerStrength" save="true" value="0.0"/>
+        <number cid="2" id="18" name="dozerStrength" save="true" value="1"/>
         <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
         <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
@@ -113,7 +113,7 @@
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
         <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>
-        <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0"/>
+        <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0.0"/>
         <boolean cid="2" id="38" name="gameOver" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
@@ -121,6 +121,7 @@
         <number cid="2" id="7" name="gameBottles" save="true" value="0.0"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
+        <number cid="2" id="40" name="botOffset" save="true" value="75"/>
         <number cid="2" id="14" name="gameCubeGlass" save="true" value="0.0"/>
     </attributes>
     <collisions>
