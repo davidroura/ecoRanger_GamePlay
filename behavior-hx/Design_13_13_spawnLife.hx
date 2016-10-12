@@ -124,18 +124,9 @@ class Design_13_13_spawnLife extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("spawnThings"))
+				if(Engine.engine.getGameAttribute("spawnLife"))
 				{
-					_customEvent_timeCount();
-					if((_time >= _spawnTime))
-					{
-						createRecycledActorOnLayer(getActorType(10), randomInt(Math.floor(50), Math.floor(280)), -5, 1, "" + "gamePlay");
-						getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
-						_time = asNumber(0);
-						propertyChanged("_time", _time);
-						_spawnTime = asNumber(randomInt(Math.floor(1.5), Math.floor(6)));
-						propertyChanged("_spawnTime", _spawnTime);
-					}
+					
 				}
 			}
 		});

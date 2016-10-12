@@ -101,14 +101,7 @@ class Design_53_53_spawnTrees extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_spawnTrees():Void
 	{
-		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(-200);
-		_customEvent_treeType();
-		createRecycledActorOnLayer(getActorType(70), 220, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(-200);
-		_customEvent_treeType();
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -127,17 +120,7 @@ class Design_53_53_spawnTrees extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_treeType():Void
 	{
-		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		_treeAnimation = asNumber(randomInt(Math.floor(1), Math.floor(2)));
-		propertyChanged("_treeAnimation", _treeAnimation);
-		if((_treeAnimation == 1))
-		{
-			getLastCreatedActor().setAnimation("" + "tree1");
-		}
-		else if((_treeAnimation == 2))
-		{
-			getLastCreatedActor().setAnimation("" + "tree2");
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -175,14 +158,7 @@ class Design_53_53_spawnTrees extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(-200);
-		_customEvent_treeType();
-		createRecycledActorOnLayer(getActorType(70), 220, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(-200);
-		_customEvent_treeType();
+		
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

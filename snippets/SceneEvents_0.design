@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
+    <group eventID="16" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <font eid="136" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="140"/>
+                    <int id="2" val="7"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="92">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="110"/>
+                    <int id="2" val="7"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <event-type-region comment="false" x="15" y="15">
             <group eventID="1" id="-1">
@@ -346,24 +366,4 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="15" id="-1"/>
-    <group eventID="16" id="0">
-        <draw comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <font eid="136" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="140"/>
-                    <int id="2" val="7"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="92">
-                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="110"/>
-                    <int id="2" val="7"/>
-                </draw-text>
-            </group>
-        </draw>
-    </group>
-    <group eventID="16" id="-1"/>
 </groups>

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-95-2 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-95-2>
+                <set-val-95-22 comment="false" x="26" y="65">
+                    <int id="0" val="0"/>
+                </set-val-95-22>
+                <set-val-95-23 comment="false" x="26" y="85">
+                    <int id="0" val="1"/>
+                </set-val-95-23>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="Here we set how stuff spawn, "/>
+                </comment-long>
+                <comment-short comment="false" x="26" y="120">
+                    <int id="0" val="Ocasional Spawn"/>
+                </comment-short>
+                <if comment="false" x="26" y="140">
+                    <group eventID="2" id="-1">
+                        <say-this comment="false" x="37" y="180">
+                            <int id="0" val="ObstacleRamdomSpaw"/>
+                        </say-this>
+                        <say-this comment="false" x="37" y="200">
+                            <int id="0" val="addSpawn"/>
+                        </say-this>
+                        <set-val-95-22 comment="false" x="37" y="220">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-95-23 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </set-val-95-22>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </more>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="110"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="262">
+                    <group eventID="2" id="-1">
+                        <say-this comment="false" x="37" y="302">
+                            <int id="0" val="trashSpawn"/>
+                        </say-this>
+                        <say-this comment="false" x="37" y="322">
+                            <int id="0" val="addSpawn"/>
+                        </say-this>
+                        <set-val-95-22 comment="false" x="37" y="342">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-95-23 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </set-val-95-22>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </more>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="70"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="389">
+                    <group eventID="2" id="-1">
+                        <say-this comment="false" x="37" y="429">
+                            <int id="0" val="lifeSpawn"/>
+                        </say-this>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </more>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+                <comment-short comment="false" x="26" y="461">
+                    <int id="0" val="Continuos Spawn"/>
+                </comment-short>
+                <if comment="false" x="26" y="481">
+                    <group eventID="2" id="-1">
+                        <say-this comment="false" x="37" y="521">
+                            <int id="0" val="treeSpawn"/>
+                        </say-this>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-game-val-28 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </more>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="trashRamdomPick"/>
+                        </say-this>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-95-2 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+            <int id="0" val="trashSpawn"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="trashType&#10;0) parabola left&#10;1) parabola right&#10;2) Straight"/>
+                </comment-long>
+                <set-val-95-1 comment="false" x="26" y="120">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="1"/>
+                    </randint>
+                </set-val-95-1>
+                <set-val-95-2 comment="false" x="26" y="145">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-95-2>
+                <if comment="false" x="26" y="170">
+                    <group eventID="4" id="-1">
+                        <say-this comment="false" x="37" y="200">
+                            <int id="0" val="trashParabolaLeft"/>
+                        </say-this>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="232">
+                    <group eventID="4" id="-1">
+                        <say-this comment="false" x="37" y="262">
+                            <int id="0" val="trashParabolaRight"/>
+                        </say-this>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </eq>
+                </else-if>
+                <else comment="false" x="26" y="294">
+                    <group eventID="4" id="-1">
+                        <say-this comment="false" x="37" y="314">
+                            <int id="0" val="trashStraight"/>
+                        </say-this>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="trashRamdomPick"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-95-3 comment="false" x="26" y="40">
+                    <int id="0" val="150"/>
+                </set-val-95-3>
+                <set-val-95-4 comment="false" x="26" y="60">
+                    <neg comment="false" id="0" x="0" y="0">
+                        <int id="0" val="20"/>
+                    </neg>
+                </set-val-95-4>
+                <say-this comment="false" x="26" y="85">
+                    <int id="0" val="trashCreateDotsLeft"/>
+                </say-this>
+                <say-this comment="false" x="26" y="105">
+                    <int id="0" val="trashFindParabola"/>
+                </say-this>
+                <say-this comment="false" x="26" y="125">
+                    <int id="0" val="trashCreateParabola"/>
+                </say-this>
+            </group>
+            <int id="0" val="trashParabolaLeft"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-val-95-3 comment="false" x="26" y="40">
+                    <int id="0" val="50"/>
+                </set-val-95-3>
+                <set-val-95-4 comment="false" x="26" y="60">
+                    <int id="0" val="20"/>
+                </set-val-95-4>
+                <say-this comment="false" x="26" y="80">
+                    <int id="0" val="trashCreateDotsRight"/>
+                </say-this>
+                <say-this comment="false" x="26" y="100">
+                    <int id="0" val="trashFindParabola"/>
+                </say-this>
+                <say-this comment="false" x="26" y="120">
+                    <int id="0" val="trashCreateParabola"/>
+                </say-this>
+            </group>
+            <int id="0" val="trashParabolaRight"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <set-val-95-3 comment="false" x="26" y="40">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="50"/>
+                        <int id="1" val="190"/>
+                    </randint>
+                </set-val-95-3>
+                <set-val-95-5 comment="false" x="26" y="65">
+                    <int id="0" val="-5"/>
+                </set-val-95-5>
+                <repeat comment="false" x="26" y="85">
+                    <group eventID="7" id="-1">
+                        <say-this comment="false" x="37" y="110">
+                            <int id="0" val="trashRamdomItem"/>
+                        </say-this>
+                        <set-xy comment="false" x="37" y="130">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-95-3 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="162">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-val-95-5 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-val-95-5 comment="false" x="37" y="194">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-95-5 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="5"/>
+                            </minus>
+                        </set-val-95-5>
+                    </group>
+                    <int id="0" val="5"/>
+                </repeat>
+            </group>
+            <int id="0" val="trashStraight"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <set-val-95-6 comment="false" x="26" y="40">
+                    <get-val-95-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-95-6>
+                <set-val-95-7 comment="false" x="26" y="65">
+                    <int id="0" val="-5"/>
+                </set-val-95-7>
+                <set-val-95-8 comment="false" x="26" y="85">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </minus>
+                </set-val-95-8>
+                <set-val-95-9 comment="false" x="26" y="115">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-7 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </minus>
+                </set-val-95-9>
+                <set-val-95-10 comment="false" x="26" y="145">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-95-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <int id="1" val="0.3"/>
+                        </times>
+                        <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-95-10>
+                <set-val-95-11 comment="false" x="26" y="185">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-95-9 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <int id="1" val="0.7"/>
+                        </times>
+                        <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-11>
+            </group>
+            <int id="0" val="trashCreateDotsLeft"/>
+        </event-custom>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <set-val-95-6 comment="false" x="26" y="40">
+                    <get-val-95-3 comment="false" id="0" x="0" y="0"/>
+                </set-val-95-6>
+                <set-val-95-7 comment="false" x="26" y="65">
+                    <int id="0" val="-5"/>
+                </set-val-95-7>
+                <set-val-95-8 comment="false" x="26" y="85">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </plus>
+                </set-val-95-8>
+                <set-val-95-9 comment="false" x="26" y="115">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-7 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </minus>
+                </set-val-95-9>
+                <set-val-95-10 comment="false" x="26" y="145">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-95-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <int id="1" val="0.3"/>
+                        </times>
+                        <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-95-10>
+                <set-val-95-11 comment="false" x="26" y="185">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-95-9 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                            <int id="1" val="0.7"/>
+                        </times>
+                        <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-11>
+            </group>
+            <int id="0" val="trashCreateDotsRight"/>
+        </event-custom>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <set-val-95-12 comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-11 comment="false" id="0" x="0" y="0"/>
+                        <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-12>
+                <set-val-95-13 comment="false" x="26" y="70">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-9 comment="false" id="0" x="0" y="0"/>
+                        <get-val-95-7 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-13>
+                <set-val-95-14 comment="false" x="26" y="100">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <pow comment="false" id="0" x="0" y="0">
+                            <get-val-95-8 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </pow>
+                        <pow comment="false" id="1" x="0" y="0">
+                            <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </pow>
+                    </minus>
+                </set-val-95-14>
+                <set-val-95-15 comment="false" x="26" y="135">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-8 comment="false" id="0" x="0" y="0"/>
+                        <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-15>
+                <set-val-95-16 comment="false" x="26" y="165">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-10 comment="false" id="0" x="0" y="0"/>
+                        <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-16>
+                <set-val-95-17 comment="false" x="26" y="195">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <pow comment="false" id="0" x="0" y="0">
+                            <get-val-95-10 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </pow>
+                        <pow comment="false" id="1" x="0" y="0">
+                            <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </pow>
+                    </minus>
+                </set-val-95-17>
+                <set-val-95-18 comment="false" x="26" y="230">
+                    <div comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-95-15 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-12 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-val-95-13 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-16 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </minus>
+                        <minus comment="false" id="1" x="0" y="0">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-val-95-17 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-15 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-val-95-14 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-16 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </minus>
+                    </div>
+                </set-val-95-18>
+                <set-val-95-19 comment="false" x="26" y="270">
+                    <div comment="false" id="0" x="0" y="0">
+                        <minus comment="false" id="0" x="0" y="0">
+                            <get-val-95-13 comment="false" id="0" x="0" y="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-val-95-18 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-14 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </minus>
+                        <get-val-95-15 comment="false" id="1" x="0" y="0"/>
+                    </div>
+                </set-val-95-19>
+                <set-val-95-20 comment="false" x="26" y="310">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <get-val-95-18 comment="false" id="0" x="0" y="0"/>
+                            <pow comment="false" id="1" x="0" y="0">
+                                <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </pow>
+                        </times>
+                        <times comment="false" id="1" x="0" y="0">
+                            <get-val-95-19 comment="false" id="0" x="0" y="0"/>
+                            <get-val-95-6 comment="false" id="1" x="0" y="0"/>
+                        </times>
+                    </plus>
+                </set-val-95-20>
+                <set-val-95-21 comment="false" x="26" y="350">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-95-7 comment="false" id="0" x="0" y="0"/>
+                        <get-val-95-20 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-val-95-21>
+            </group>
+            <int id="0" val="trashFindParabola"/>
+        </event-custom>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <repeat comment="false" x="26" y="40">
+                    <group eventID="11" id="-1">
+                        <say-this comment="false" x="37" y="65">
+                            <int id="0" val="trashRamdomItem"/>
+                        </say-this>
+                        <ignore-screen-tolerance comment="false" x="37" y="85">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </ignore-screen-tolerance>
+                        <set-val-95-5 comment="false" x="37" y="112">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-95-18 comment="false" id="0" x="0" y="0"/>
+                                    <pow comment="false" id="1" x="0" y="0">
+                                        <get-val-95-3 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="2"/>
+                                    </pow>
+                                </times>
+                                <plus comment="false" id="1" x="0" y="0">
+                                    <times comment="false" id="0" x="0" y="0">
+                                        <get-val-95-19 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-95-3 comment="false" id="1" x="0" y="0"/>
+                                    </times>
+                                    <get-val-95-21 comment="false" id="1" x="0" y="0"/>
+                                </plus>
+                            </plus>
+                        </set-val-95-5>
+                        <set-val-95-3 comment="false" x="37" y="152">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-95-3 comment="false" id="0" x="0" y="0"/>
+                                <get-val-95-4 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-95-3>
+                        <set-xy comment="false" x="37" y="182">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-95-3 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="214">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-val-95-5 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                    </group>
+                    <int id="0" val="5"/>
+                </repeat>
+            </group>
+            <int id="0" val="trashCreateParabola"/>
+        </event-custom>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="0) bottle&#10;1) can&#10;2) plastic"/>
+                </comment-long>
+                <set-val-95-1 comment="false" x="26" y="120">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <int id="1" val="2"/>
+                    </randint>
+                </set-val-95-1>
+                <if comment="false" x="26" y="145">
+                    <group eventID="12" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="175">
+                            <actortype eid="8" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="-5"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                        <scaleTo comment="false" x="37" y="202">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="50"/>
+                            <int id="2" val="50"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="241">
+                    <group eventID="12" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="271">
+                            <actortype eid="15" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="-5"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                        <scaleTo comment="false" x="37" y="298">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="50"/>
+                            <int id="2" val="50"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </eq>
+                </else-if>
+                <else comment="false" x="26" y="337">
+                    <group eventID="12" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="357">
+                            <actortype eid="104" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="-5"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                        <scaleTo comment="false" x="37" y="384">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="20"/>
+                            <int id="2" val="20"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="trashRamdomItem"/>
+        </event-custom>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="10" id="0"/>
+                    <randint comment="false" id="1" x="0" y="0">
+                        <int id="0" val="50"/>
+                        <int id="1" val="280"/>
+                    </randint>
+                    <int id="2" val="-5"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <scaleTo comment="false" x="26" y="72">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="70"/>
+                    <int id="2" val="70"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <set-game-val-44 comment="false" x="26" y="99">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-44>
+            </group>
+            <int id="0" val="lifeSpawn"/>
+        </event-custom>
+    </group>
+    <group eventID="13" id="-1"/>
+    <group eventID="14" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="14" id="-1">
+                <set-val-95-23 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-95-23 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-95-23>
+            </group>
+            <int id="0" val="addSpawn"/>
+        </event-custom>
+    </group>
+    <group eventID="14" id="-1"/>
+    <group eventID="15" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="15" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="-120"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="94">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-600"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="121">
+                    <int id="0" val="treeType"/>
+                </say-this>
+                <create-actor-on-layer comment="false" x="26" y="141">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="168">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="195">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-600"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="222">
+                    <int id="0" val="treeType"/>
+                </say-this>
+            </group>
+            <int id="0" val="treeSpawn"/>
+        </event-custom>
+    </group>
+    <group eventID="15" id="-1"/>
+    <group eventID="16" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <scaleTo comment="false" x="26" y="40">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <set-val-95-24 comment="false" x="26" y="67">
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <int id="1" val="2"/>
+                    </randint>
+                </set-val-95-24>
+                <if comment="false" x="26" y="92">
+                    <group eventID="16" id="-1">
+                        <setanim comment="false" x="37" y="122">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="tree1"/>
+                        </setanim>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="161">
+                    <group eventID="16" id="-1">
+                        <setanim comment="false" x="37" y="191">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="tree2"/>
+                        </setanim>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-95-24 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="2"/>
+                    </eq>
+                </else-if>
+            </group>
+            <int id="0" val="treeType"/>
+        </event-custom>
+    </group>
+    <group eventID="16" id="-1"/>
+    <group eventID="17" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="17" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="17" id="-1">
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="ObstacleRock"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <random comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.5"/>
+                    </less>
+                </if>
+                <else comment="false" x="26" y="102">
+                    <group eventID="17" id="-1">
+                        <say-this comment="false" x="37" y="122">
+                            <int id="0" val="ObstacleRamdomBridge"/>
+                        </say-this>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="ObstacleRamdomSpaw"/>
+        </event-custom>
+    </group>
+    <group eventID="17" id="-1"/>
+    <group eventID="18" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="12" id="0"/>
+                    <randint comment="false" id="1" x="0" y="0">
+                        <int id="0" val="50"/>
+                        <int id="1" val="260"/>
+                    </randint>
+                    <int id="2" val="-5"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <movewithinlayer comment="false" x="26" y="72">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="2"/>
+                </movewithinlayer>
+                <scaleTo comment="false" x="26" y="99">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="70"/>
+                    <int id="2" val="70"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+            <int id="0" val="ObstacleRock"/>
+        </event-custom>
+    </group>
+    <group eventID="18" id="-1"/>
+    <group eventID="19" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="72" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="-5"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <movewithinlayer comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="2"/>
+                </movewithinlayer>
+                <set-val-95-25 comment="false" x="26" y="94">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-95-25>
+                <if comment="false" x="26" y="119">
+                    <group eventID="19" id="-1">
+                        <setanim comment="false" x="37" y="149">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="left"/>
+                        </setanim>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <randint comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                            <int id="1" val="4"/>
+                        </randint>
+                        <int id="1" val="3"/>
+                    </less>
+                </if>
+                <else comment="false" x="26" y="188">
+                    <group eventID="19" id="-1">
+                        <setanim comment="false" x="37" y="208">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="right"/>
+                        </setanim>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="ObstacleRamdomBridge"/>
+        </event-custom>
+    </group>
+    <group eventID="19" id="-1"/>
+</groups>

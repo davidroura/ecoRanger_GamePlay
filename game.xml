@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<game accelFramerate="0" adsPosition="0" aheight="480" androidAlias="" androidCert="" androidMinVersion="0" androidPassword="" androidPublicKey="" androidTargetVersion="7" antialias="true" appName="Super Eco Heros" appType="0" atlasBindingDefault="false" author="" authorURL="" autoRotate="false" awidth="320" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" bindAllAtlasesDefault="false" borderColor="-12303292" borderThickness="2" bundleID="com.alatyr.superecoheroes" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="15" defaultFramerate="60" defaultSceneID="15" desc="" desktopScale="1x" desktopScaleMode="1" deviceOS="4.3" disableBackButton="false" enableGPG="false" enablePurchases="false" format="3.4.0" gameid="-1" googleAppID="" haxeExtras="" height="480" internalVersion="1" internalVersionIOS="1" ioswhirlKey="" ioswhirlKey1="" kit="false" lockURL="" macBundleID="" maxScaleAndroid="4x" maxScaleDesktop="4x" maxScaleIOS="4x" maxScaleWeb="4x" metroColor="-12566464" multitouch="true" name="ecoRanger_GamePlay" ngID="" ngKey="" openflExtras="" openflLegacy="true" orientation="0" p12="" p12pwd="" physicsMode="0" pixelsnap="false" preloaderstyle="0" products="" prov-adhoc="" prov-store="" scale="1" scaleModeAndroid="2" scaleModeDesktop="0" scaleModeIOS="0" scaleModeWeb="0" showAds="false" simulatorOS="4.3" splashStyle="0" startInFullScreenDesktop="false" startInFullScreenWeb="false" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" telemetry="false" testAds="false" useGlossyIcon="false" webScale="1x" whirlKey="" whirlKey1="" width="320" windowsAppName="" windowsAuthor="" windowsBundleID="">
+<game accelFramerate="0" adsPosition="0" aheight="480" androidAlias="" androidCert="" androidMinVersion="0" androidPassword="" androidPublicKey="" androidTargetVersion="7" antialias="true" appName="Super Eco Heros" appType="0" atlasBindingDefault="false" author="" authorURL="" autoRotate="false" awidth="320" backgroundColor="-15592942" barBackgroundColor="-12303292" barColor="-7829368" barHeight="8" barLocation="0" barOffsetX="0" barOffsetXPhone="0" barOffsetXTablet="0" barOffsetY="0" barOffsetYPhone="0" barOffsetYTablet="0" barScalePhone="1.0" barScaleTablet="2.0" barWidth="120" bindAllAtlasesDefault="false" borderColor="-12303292" borderThickness="2" bundleID="com.alatyr.superecoheroes" bundleVersion="1.0" checksum="none" cpmID="" cws-desc="Description" cws-icon128="" cws-icon16="" cws-name="Name" cws-version="1.0" default="15" defaultFramerate="60" defaultSceneID="15" desc="" desktopScale="1x" desktopScaleMode="1" deviceOS="4.3" disableBackButton="false" enableGPG="false" enablePurchases="false" format="3.4.0" gameid="-1" googleAppID="" haxeExtras="" height="480" internalVersion="1" internalVersionIOS="1" ioswhirlKey="" ioswhirlKey1="" kit="false" lockURL="" macBundleID="" maxScaleAndroid="4x" maxScaleDesktop="4x" maxScaleIOS="4x" maxScaleWeb="4x" metroColor="-12566464" multitouch="true" name="ecoRangerGamePlay" ngID="" ngKey="" openflExtras="" openflLegacy="true" orientation="0" p12="" p12pwd="" physicsMode="0" pixelsnap="false" preloaderstyle="0" products="" prov-adhoc="" prov-store="" scale="1" scaleModeAndroid="2" scaleModeDesktop="0" scaleModeIOS="0" scaleModeWeb="0" showAds="false" simulatorOS="4.3" splashStyle="0" startInFullScreenDesktop="false" startInFullScreenWeb="false" swfHeight="0" swfWidth="0" swfX="0" swfY="0" swfloc="" telemetry="false" testAds="false" useGlossyIcon="false" webScale="1x" whirlKey="" whirlKey1="" width="320" windowsAppName="" windowsAuthor="" windowsBundleID="">
     <exts>
         <e enabled="false" id="test"/>
         <e enabled="false" id="test-native"/>
@@ -80,6 +80,7 @@
         <cat id="4" name="Upgrade Menu"/>
         <cat id="5" name="Recycling"/>
         <cat id="6" name="used Globally"/>
+        <cat id="7" name="spawns"/>
     </attcats>
     <props/>
     <attributes>
@@ -99,11 +100,13 @@
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
-        <number cid="2" id="18" name="dozerStrength" save="true" value="1"/>
+        <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
+        <number cid="2" id="18" name="dozerStrength" save="true" value="1.0"/>
         <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
         <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
+        <boolean cid="7" id="43" name="spawnObstacle" save="true" value="false"/>
         <boolean cid="3" id="0" name="accelerometerControl" save="true" value="true"/>
         <number cid="2" id="1" name="bottleColleted" save="true" value="0.0"/>
         <number cid="5" id="12" name="glassAnimationX" save="true" value="0.0"/>
@@ -116,13 +119,14 @@
         <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>
         <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0.0"/>
         <boolean cid="2" id="38" name="gameOver" save="true" value="false"/>
+        <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>
         <number cid="2" id="7" name="gameBottles" save="true" value="0.0"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
-        <number cid="2" id="40" name="botOffset" save="true" value="75"/>
+        <number cid="2" id="40" name="botOffset" save="true" value="75.0"/>
         <number cid="2" id="14" name="gameCubeGlass" save="true" value="0.0"/>
     </attributes>
     <collisions>

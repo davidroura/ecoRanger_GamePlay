@@ -2,137 +2,7 @@
 <groups>
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <set-val-16-4 comment="false" x="26" y="40">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-16-4>
-                <set-val-16-1 comment="false" x="26" y="65">
-                    <int id="0" val="60"/>
-                </set-val-16-1>
-                <set-val-16-2 comment="false" x="26" y="85">
-                    <int id="0" val="1"/>
-                </set-val-16-2>
-                <set-val-16-3 comment="false" x="26" y="105">
-                    <int id="0" val="0"/>
-                </set-val-16-3>
-                <periodic comment="false" x="26" y="125">
-                    <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="157">
-                            <group eventID="1" id="-1">
-                                <set-val-16-4 comment="false" x="48" y="192">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-val-16-4>
-                                <dolater comment="false" x="48" y="217">
-                                    <group eventID="1" id="-1">
-                                        <set-val-16-4 comment="false" x="59" y="244">
-                                            <false comment="false" id="0" x="0" y="0"/>
-                                        </set-val-16-4>
-                                    </group>
-                                    <int id="0" val="2"/>
-                                    <ACTOR eid="lastcreated" id="2"/>
-                                </dolater>
-                                <create-actor-on-layer comment="false" x="48" y="281">
-                                    <actortype eid="12" id="0"/>
-                                    <randint comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="50"/>
-                                        <int id="1" val="260"/>
-                                    </randint>
-                                    <int id="2" val="-5"/>
-                                    <int id="3" val="1"/>
-                                    <int id="4" val="gamePlay"/>
-                                </create-actor-on-layer>
-                                <movewithinlayer comment="false" x="48" y="313">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="2"/>
-                                </movewithinlayer>
-                                <scaleTo comment="false" x="48" y="340">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="70"/>
-                                    <int id="2" val="70"/>
-                                    <int id="3" val="0"/>
-                                    <int id="4" val="0"/>
-                                </scaleTo>
-                            </group>
-                            <and comment="false" id="0" x="0" y="0">
-                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
-                                <not comment="false" id="1" x="0" y="0">
-                                    <get-val-16-4 comment="false" id="0" x="0" y="0"/>
-                                </not>
-                            </and>
-                        </if>
-                    </group>
-                    <randint comment="false" id="0" x="0" y="0">
-                        <int id="0" val="4"/>
-                        <int id="1" val="6"/>
-                    </randint>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
-                <periodic comment="false" x="26" y="391">
-                    <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="423">
-                            <group eventID="1" id="-1">
-                                <create-actor-on-layer comment="false" x="48" y="458">
-                                    <actortype eid="72" id="0"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="-5"/>
-                                    <int id="3" val="1"/>
-                                    <int id="4" val="gamePlay"/>
-                                </create-actor-on-layer>
-                                <movewithinlayer comment="false" x="48" y="485">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="2"/>
-                                </movewithinlayer>
-                                <set-val-16-4 comment="false" x="48" y="512">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-val-16-4>
-                                <dolater comment="false" x="48" y="537">
-                                    <group eventID="1" id="-1">
-                                        <set-val-16-4 comment="false" x="59" y="564">
-                                            <false comment="false" id="0" x="0" y="0"/>
-                                        </set-val-16-4>
-                                    </group>
-                                    <int id="0" val="3"/>
-                                    <ACTOR eid="lastcreated" id="2"/>
-                                </dolater>
-                                <if comment="false" x="48" y="601">
-                                    <group eventID="1" id="-1">
-                                        <setanim comment="false" x="59" y="631">
-                                            <ACTOR eid="lastcreated" id="0"/>
-                                            <int id="1" val="left"/>
-                                        </setanim>
-                                    </group>
-                                    <less comment="false" id="0" x="0" y="0">
-                                        <randint comment="false" id="0" x="0" y="0">
-                                            <int id="0" val="1"/>
-                                            <int id="1" val="4"/>
-                                        </randint>
-                                        <int id="1" val="3"/>
-                                    </less>
-                                </if>
-                                <else comment="false" x="48" y="670">
-                                    <group eventID="1" id="-1">
-                                        <setanim comment="false" x="59" y="690">
-                                            <ACTOR eid="lastcreated" id="0"/>
-                                            <int id="1" val="right"/>
-                                        </setanim>
-                                    </group>
-                                </else>
-                            </group>
-                            <and comment="false" id="0" x="0" y="0">
-                                <get-game-val-30 comment="false" id="0" x="0" y="0"/>
-                                <not comment="false" id="1" x="0" y="0">
-                                    <get-val-16-4 comment="false" id="0" x="0" y="0"/>
-                                </not>
-                            </and>
-                        </if>
-                    </group>
-                    <randint comment="false" id="0" x="0" y="0">
-                        <int id="0" val="10"/>
-                        <int id="1" val="15"/>
-                    </randint>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
-            </group>
+            <group eventID="1" id="-1"/>
         </init>
     </group>
     <group eventID="1" id="-1"/>
@@ -171,15 +41,112 @@
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
-                    <group eventID="3" id="-1">
-                        <say-this comment="false" x="37" y="65">
-                            <int id="0" val="timeCount"/>
-                        </say-this>
-                    </group>
-                    <get-game-val-30 comment="false" id="0" x="0" y="0"/>
+                    <group eventID="3" id="-1"/>
+                    <get-game-val-43 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </step>
     </group>
+    <group eventID="3" id="1">
+        <if comment="false" x="106" y="164">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="117" y="194">
+                    <int id="0" val="spawnRock"/>
+                </say-this>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <random comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0.5"/>
+            </less>
+        </if>
+        <else comment="false" x="106" y="226">
+            <group eventID="3" id="-1">
+                <say-this comment="false" x="117" y="246">
+                    <int id="0" val="spawnBridge"/>
+                </say-this>
+            </group>
+        </else>
+    </group>
+    <group eventID="3" id="2">
+        <set-game-val-43 comment="false" x="100" y="309">
+            <false comment="false" id="0" x="0" y="0"/>
+        </set-game-val-43>
+    </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1"/>
+            <int id="0" val="spawnRock"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="1">
+        <create-actor-on-layer comment="false" x="34" y="105">
+            <actortype eid="12" id="0"/>
+            <randint comment="false" id="1" x="0" y="0">
+                <int id="0" val="50"/>
+                <int id="1" val="260"/>
+            </randint>
+            <int id="2" val="-5"/>
+            <int id="3" val="1"/>
+            <int id="4" val="gamePlay"/>
+        </create-actor-on-layer>
+        <movewithinlayer comment="false" x="34" y="137">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="2"/>
+        </movewithinlayer>
+        <scaleTo comment="false" x="34" y="164">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="70"/>
+            <int id="2" val="70"/>
+            <int id="3" val="0"/>
+            <int id="4" val="0"/>
+        </scaleTo>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1"/>
+            <int id="0" val="spawnBridge"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="1">
+        <create-actor-on-layer comment="false" x="89" y="171">
+            <actortype eid="72" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="-5"/>
+            <int id="3" val="1"/>
+            <int id="4" val="gamePlay"/>
+        </create-actor-on-layer>
+        <movewithinlayer comment="false" x="89" y="198">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="2"/>
+        </movewithinlayer>
+        <set-val-16-4 comment="false" x="89" y="225">
+            <true comment="false" id="0" x="0" y="0"/>
+        </set-val-16-4>
+        <if comment="false" x="89" y="250">
+            <group eventID="5" id="-1">
+                <setanim comment="false" x="100" y="280">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="left"/>
+                </setanim>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <randint comment="false" id="0" x="0" y="0">
+                    <int id="0" val="1"/>
+                    <int id="1" val="4"/>
+                </randint>
+                <int id="1" val="3"/>
+            </less>
+        </if>
+        <else comment="false" x="89" y="319">
+            <group eventID="5" id="-1">
+                <setanim comment="false" x="100" y="339">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="right"/>
+                </setanim>
+            </group>
+        </else>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

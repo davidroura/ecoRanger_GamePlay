@@ -22,13 +22,13 @@
         <actor a="0.0" aid="5" c="false" group="3" id="116" name="fuelBar 5" sx="1.0" sy="1.2033899" x="305" y="129" z="5"/>
     </actors>
     <snippets>
-        <s enabled="true" id="16">
+        <s enabled="false" id="16">
             <prop id="1" list="0" val="0.0"/>
             <prop id="2" list="0" val="0.0"/>
             <prop id="3" list="0" val="0.0"/>
             <prop id="4" list="0" val="false"/>
         </s>
-        <s enabled="true" id="53">
+        <s enabled="false" id="53">
             <prop id="1" list="0" val="0.0"/>
             <prop id="2" list="0" val="0.0"/>
             <prop id="3" list="0" val="0.0"/>
@@ -56,7 +56,7 @@
         </s>
         <s enabled="true" id="88"/>
         <s enabled="true" id="9"/>
-        <s enabled="true" id="12">
+        <s enabled="false" id="12">
             <prop id="1" list="0" val="0"/>
             <prop id="2" list="0" val="0"/>
             <prop id="3" list="0" val="0"/>
@@ -97,12 +97,13 @@
             <prop id="39" list="0" val="0"/>
             <prop id="40" list="0" val="0"/>
         </s>
-        <s enabled="true" id="13">
+        <s enabled="false" id="13">
             <prop id="1" list="0" val="0.0"/>
             <prop id="2" list="0" val="0.0"/>
             <prop id="3" list="0" val="0.0"/>
             <prop id="4" list="0" val="0"/>
         </s>
+        <s enabled="true" id="95"/>
     </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>

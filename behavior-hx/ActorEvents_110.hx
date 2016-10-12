@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,69 +69,54 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_16_16_spawnObstacle extends SceneScript
+class ActorEvents_110 extends ActorScript
 {
-	public var _frameRate:Float;
-	public var _frameCount:Float;
-	public var _time:Float;
-	public var _wait4Obstale:Bool;
+	public var _suckPowerOn:Bool;
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_timeCount():Void
+	
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		_frameCount = asNumber((_frameCount + 1));
-		propertyChanged("_frameCount", _frameCount);
-		if((_frameCount > _frameRate))
-		{
-			_time = asNumber((_time + 1));
-			propertyChanged("_time", _time);
-			_frameCount = asNumber(0);
-			propertyChanged("_frameCount", _frameCount);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_spawnRock():Void
-	{
-		
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_spawnBridge():Void
-	{
-		
-	}
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
-	{
-		super();
-		nameMap.set("frameRate", "_frameRate");
-		_frameRate = 0.0;
-		nameMap.set("frameCount", "_frameCount");
-		_frameCount = 0.0;
-		nameMap.set("time", "_time");
-		_time = 0.0;
-		nameMap.set("wait4Obstale", "_wait4Obstale");
-		_wait4Obstale = false;
+		super(actor);
+		nameMap.set("suckPowerOn", "_suckPowerOn");
+		_suckPowerOn = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				Engine.engine.setGameAttribute("clickingButton", true);
+				if((actor.getAnimation() == "On"))
+				{
+					Engine.engine.setGameAttribute("suckingPowerOn", true);
+					actor.setAnimation("" + "Off");
+				}
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("spawnObstacle"))
+				if(_suckPowerOn)
 				{
 					
 				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("clickingButton", false);
 			}
 		});
 		

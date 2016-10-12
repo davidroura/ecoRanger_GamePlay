@@ -115,184 +115,61 @@ class Design_12_12_spawnTrash extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashByDistance():Void
 	{
-		if(((Engine.engine.getGameAttribute("playerDistance") % 100) == 0))
-		{
-			if(!(_spawning))
-			{
-				_customEvent_selectTrash();
-			}
-		}
-		else
-		{
-			_spawning = false;
-			propertyChanged("_spawning", _spawning);
-		}
+		_customEvent_selectTrash();
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_selectTrash():Void
 	{
-		/* trashType
-0) parabola left
-1) parabola right
-2) rect */
-		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
-		propertyChanged("_trashType", _trashType);
-		_spawning = true;
-		propertyChanged("_spawning", _spawning);
-		if((_trashType == 0))
-		{
-			_customEvent_parabolaLeft();
-		}
-		else if((_trashType == 1))
-		{
-			_customEvent_parabolaRight();
-		}
-		else
-		{
-			_customEvent_rect();
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_rect():Void
 	{
-		_trashXPos = asNumber(randomInt(Math.floor(50), Math.floor(190)));
-		propertyChanged("_trashXPos", _trashXPos);
-		_trashYPos = asNumber(-5);
-		propertyChanged("_trashYPos", _trashYPos);
-		for(index0 in 0...Std.int(5))
-		{
-			_customEvent_randomTrash();
-			getLastCreatedActor().setX(_trashXPos);
-			getLastCreatedActor().setY(_trashYPos);
-			_trashYPos = asNumber((_trashYPos - 5));
-			propertyChanged("_trashYPos", _trashYPos);
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_parabolaLeft():Void
 	{
-		_trashXPos = asNumber(150);
-		propertyChanged("_trashXPos", _trashXPos);
-		_trashXPosWidth = asNumber(-(20));
-		propertyChanged("_trashXPosWidth", _trashXPosWidth);
-		_customEvent_createDotsParabolaLeft();
-		_customEvent_findParabola();
-		_customEvent_createParabolaTrash();
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_parabolaRight():Void
 	{
-		_trashXPos = asNumber(50);
-		propertyChanged("_trashXPos", _trashXPos);
-		_trashXPosWidth = asNumber(20);
-		propertyChanged("_trashXPosWidth", _trashXPosWidth);
-		_customEvent_createDotsParabolaRight();
-		_customEvent_findParabola();
-		_customEvent_createParabolaTrash();
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_createParabolaTrash():Void
 	{
-		for(index0 in 0...Std.int(5))
-		{
-			_customEvent_randomTrash();
-			getLastCreatedActor().makeAlwaysSimulate();
-			_trashYPos = asNumber(((_a * Math.pow(_trashXPos, 2)) + ((_b * _trashXPos) + _c)));
-			propertyChanged("_trashYPos", _trashYPos);
-			_trashXPos = asNumber((_trashXPos + _trashXPosWidth));
-			propertyChanged("_trashXPos", _trashXPos);
-			getLastCreatedActor().setX(_trashXPos);
-			getLastCreatedActor().setY(_trashYPos);
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_randomTrash():Void
 	{
-		/* 0) bottle
-1) can
-2) plastic */
-		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
-		propertyChanged("_trashType", _trashType);
-		if((_trashType == 0))
-		{
-			createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
-		}
-		else if((_trashType == 1))
-		{
-			createRecycledActorOnLayer(getActorType(15), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
-		}
-		else
-		{
-			createRecycledActorOnLayer(getActorType(104), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(20/100, 20/100, 0, Linear.easeNone);
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_findParabola():Void
 	{
-		_z = asNumber((_dot3Y - _dot1Y));
-		propertyChanged("_z", _z);
-		_m = asNumber((_dot2Y - _dot1Y));
-		propertyChanged("_m", _m);
-		_e = asNumber((Math.pow(_dot2X, 2) - Math.pow(_dot1X, 2)));
-		propertyChanged("_e", _e);
-		_o = asNumber((_dot2X - _dot1X));
-		propertyChanged("_o", _o);
-		_t = asNumber((_dot3X - _dot1X));
-		propertyChanged("_t", _t);
-		_p = asNumber((Math.pow(_dot3X, 2) - Math.pow(_dot1X, 2)));
-		propertyChanged("_p", _p);
-		_a = asNumber((((_o * _z) - (_m * _t)) / ((_p * _o) - (_e * _t))));
-		propertyChanged("_a", _a);
-		_b = asNumber(((_m - (_a * _e)) / _o));
-		propertyChanged("_b", _b);
-		_preC = asNumber(((_a * Math.pow(_dot1X, 2)) + (_b * _dot1X)));
-		propertyChanged("_preC", _preC);
-		_c = asNumber((_dot1Y - _preC));
-		propertyChanged("_c", _c);
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_createDotsParabolaLeft():Void
 	{
-		_dot1X = asNumber(_trashXPos);
-		propertyChanged("_dot1X", _dot1X);
-		_dot1Y = asNumber(-5);
-		propertyChanged("_dot1Y", _dot1Y);
-		_dot2X = asNumber((_dot1X - 100));
-		propertyChanged("_dot2X", _dot2X);
-		_dot2Y = asNumber((_dot1Y - 100));
-		propertyChanged("_dot2Y", _dot2Y);
-		_dot3X = asNumber((((_dot2X - _dot1X) * 0.3) + _dot1X));
-		propertyChanged("_dot3X", _dot3X);
-		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.7) - _dot1Y));
-		propertyChanged("_dot3Y", _dot3Y);
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_createDotsParabolaRight():Void
 	{
-		_dot1X = asNumber(_trashXPos);
-		propertyChanged("_dot1X", _dot1X);
-		_dot1Y = asNumber(-5);
-		propertyChanged("_dot1Y", _dot1Y);
-		_dot2X = asNumber((_dot1X + 100));
-		propertyChanged("_dot2X", _dot2X);
-		_dot2Y = asNumber((_dot1Y - 100));
-		propertyChanged("_dot2Y", _dot2Y);
-		_dot3X = asNumber((((_dot2X - _dot1X) * 0.3) + _dot1X));
-		propertyChanged("_dot3X", _dot3X);
-		_dot3Y = asNumber((((_dot2Y - _dot1Y) * 0.7) - _dot1Y));
-		propertyChanged("_dot3Y", _dot3Y);
+		
 	}
 	
 	
@@ -402,10 +279,11 @@ class Design_12_12_spawnTrash extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("spawnThings"))
+				if(Engine.engine.getGameAttribute("spawnTrash"))
 				{
 					/* updating SpawnTrash */
 					_customEvent_trashByDistance();
+					Engine.engine.setGameAttribute("spawnTrash", false);
 				}
 			}
 		});
