@@ -794,6 +794,10 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="currentSpawn" hidden="false" id="23" name="_currentSpawn" order="22"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="treeAnimation" hidden="true" id="24" name="_treeAnimation" order="23"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="wait4Obstale" hidden="false" id="25" name="_wait4Obstale" order="24"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceObstacle" hidden="true" id="26" name="_distanceObstacle" order="25"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceLife" hidden="true" id="27" name="_distanceLife" order="26"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceTrash" hidden="false" id="28" name="_distanceTrash" order="27"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceTree" hidden="false" id="29" name="_distanceTree" order="28"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
