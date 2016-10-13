@@ -236,6 +236,8 @@ class Design_8_8_playerHealth extends SceneScript
 						propertyChanged("_warning", _warning);
 					}
 				}
+				g.setFont(getFont(135));
+				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
 			}
 		});
 		
@@ -322,6 +324,7 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
+				Engine.engine.setGameAttribute("flag", "playerHealth");
 				if((!(_rockCollision) && !(Engine.engine.getGameAttribute("gameOver"))))
 				{
 					Engine.engine.setGameAttribute("spawnThings", true);

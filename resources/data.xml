@@ -611,10 +611,10 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="267" id="2" name="spaceShip" shared="false" width="210">
-        <anim across="1" down="1" durations="100" height="267" id="0" loop="false" name="Animation Up" numframes="1" originx="75" originy="101" sync="false" version="2" width="210">
+        <anim across="1" down="1" durations="100" height="267" id="0" loop="false" name="Animation Up" numframes="1" originx="105" originy="133" sync="false" version="2" width="210">
             <poly data="4,40,19,190,19,190,221,40,221" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation Up" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="267" id="1" loop="true" name="Animation Up Boosted" numframes="1" originx="75" originy="101" sync="false" version="2" width="210">
+        <anim across="1" down="1" durations="100" height="267" id="1" loop="true" name="Animation Up Boosted" numframes="1" originx="105" originy="133" sync="false" version="2" width="210">
             <poly data="4,40,19,190,19,190,221,40,221" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation Up Boosted" rest="0.0" sensor="false"/>
         </anim>
     </sprite>

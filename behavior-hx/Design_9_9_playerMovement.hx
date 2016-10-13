@@ -88,7 +88,18 @@ class Design_9_9_playerMovement extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
+				Engine.engine.setGameAttribute("flag", "playerMovement");
 				setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+			}
+		});
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.setFont(getFont(135));
+				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
 			}
 		});
 		
