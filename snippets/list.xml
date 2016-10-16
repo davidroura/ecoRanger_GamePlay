@@ -39,17 +39,11 @@
         <blocks/>
         <events>
             <event displayName="Swipe-right" enabled="true" id="2" name="event-device-swipe" order="13" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="3" name="event-mouse-enter-exit-region" order="15" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="4" name="draw" order="11" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="12" repeats="true"/>
             <event displayName="Swipe-left" enabled="true" id="6" name="event-device-swipe" order="14" repeats="true"/>
-            <event displayName="buyDozy" enabled="true" id="8" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
             <event displayName="playBPressed" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="playBReleased" enabled="true" id="10" name="event-mouse-enter-exit-actor" order="9" repeats="true"/>
-            <event displayName="buyBlok" enabled="true" id="11" name="event-mouse-enter-exit-region" order="4" repeats="true"/>
-            <event displayName="deleteMaterial" enabled="true" id="12" name="event-mouse-enter-exit-region" order="5" repeats="false"/>
-            <event displayName="deleteBlock" enabled="true" id="13" name="event-mouse-enter-exit-region" order="7" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="14" name="event-mouse-enter-exit-region" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">

@@ -134,9 +134,9 @@
     <group eventID="12" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="12" id="-1">
-                <set-game-val-45 comment="false" x="26" y="40">
-                    <int id="0" val="level 1"/>
-                </set-game-val-45>
+                <print comment="false" x="26" y="40">
+                    <int id="0" val="level1"/>
+                </print>
                 <scaleTo comment="false" x="26" y="60">
                     <ACTOR eid="5" id="0"/>
                     <int id="1" val="100"/>

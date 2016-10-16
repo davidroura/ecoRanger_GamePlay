@@ -93,61 +93,6 @@ class SceneEvents_2 extends SceneScript
 		{
 			
 		});
-		saveGame("mySave", function(success:Bool):Void
-		{
-			
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(2), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") + 1));
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(3), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("gameCubeMetal", (Engine.engine.getGameAttribute("gameCubeMetal") + 10));
-				Engine.engine.setGameAttribute("gameCubeGlass", (Engine.engine.getGameAttribute("gameCubeGlass") + 10));
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("gameBottles", 0);
-				Engine.engine.setGameAttribute("gameCans", 0);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(6), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				saveGame("mySave", function(success:Bool):Void
-				{
-					
-				});
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(5), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				Engine.engine.setGameAttribute("gameCubeMetal", 0);
-				Engine.engine.setGameAttribute("gameCubeGlass", 0);
-			}
-		});
 		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(getActor(1), function(mouseState:Int, list:Array<Dynamic>):Void
@@ -168,21 +113,6 @@ class SceneEvents_2 extends SceneScript
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(128));
 				g.drawString("" + Engine.engine.getGameAttribute("totalPlastic"), 60, 15);
-				if(Engine.engine.getGameAttribute("debugText"))
-				{
-					g.setFont(getFont(19));
-					g.drawString("" + (("" + "dozy:") + ("" + Engine.engine.getGameAttribute("dozerStrength"))), 40, 10);
-					g.drawString("" + (("" + "cans: ") + ("" + Engine.engine.getGameAttribute("gameCans"))), 140, 10);
-					g.drawString("" + (("" + "Glass: ") + ("" + Engine.engine.getGameAttribute("gameCubeGlass"))), 140, 30);
-					g.drawString("" + (("" + "Metal: ") + ("" + Engine.engine.getGameAttribute("gameCubeMetal"))), 40, 30);
-					g.drawString("" + (("" + "Dozers:") + ("" + Engine.engine.getGameAttribute("dozerStrength"))), 40, 50);
-					g.setFont(getFont(20));
-					g.drawString("" + "Add dozy (test)", 40, 70);
-					g.drawString("" + "Add Blocks Materials (test)", 40, 90);
-					g.drawString("" + "Remove Materials (test)", 40, 110);
-					g.drawString("" + "Remove Blocks Materials (test)", 40, 130);
-					g.drawString("" + "save", 40, 150);
-				}
 			}
 		});
 		
@@ -201,15 +131,6 @@ class SceneEvents_2 extends SceneScript
 			if(wrapper.enabled && Input.swipedLeft)
 			{
 				switchScene(GameModel.get().scenes.get(7).getID(), null, createSlideRightTransition(0.1));
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(1), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(3).getID(), null, createSlideLeftTransition(0.3));
 			}
 		});
 		

@@ -7,13 +7,7 @@
         <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Layer 2" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions>
-        <region b="64" g="64" h="20" id="2" name="buyDozy" pts="4,-112.5,10.0,112.5,10.0,112.5,-10.0,-112.5,-10.0" r="64" type="box" w="224" x="30" y="60"/>
-        <region b="64" g="64" h="20" id="3" name="buyBlocks" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="30" y="80"/>
-        <region b="64" g="64" h="20" id="4" name="deleteMaterial" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="30" y="100"/>
-        <region b="64" g="64" h="20" id="5" name="deleteBlock" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="30" y="120"/>
-        <region b="64" g="64" h="20" id="6" name="save" pts="4,-112.0,-10.0,112.0,-10.0,112.0,10.0,-112.0,10.0" r="64" type="box" w="224" x="30" y="140"/>
-    </regions>
+    <regions/>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="43" name="playButton 1" sx="0.44886363" sy="0.46153846" x="-20" y="327" z="0"/>
