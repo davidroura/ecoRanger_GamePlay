@@ -93,16 +93,6 @@ class Design_9_9_playerMovement extends SceneScript
 			}
 		});
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.setFont(getFont(135));
-				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
-			}
-		});
-		
 	}
 	
 	override public function forwardMessage(msg:String)

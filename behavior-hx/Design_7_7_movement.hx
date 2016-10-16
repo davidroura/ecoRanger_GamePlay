@@ -84,6 +84,8 @@ class Design_7_7_movement extends ActorScript
 	public var _width:Float;
 	public var _accelTurnSpeed:Float;
 	public var _mouseDown:Bool;
+	public var _boundaryLeft:Float;
+	public var _boundaryRight:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_move():Void
@@ -173,7 +175,7 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_accelLeft():Void
 	{
-		if(((actor.getX() > 0) && (480 > actor.getX())))
+		if(((actor.getX() > _boundaryLeft) && ((_boundaryRight + 1) > actor.getX())))
 		{
 			actor.setX((actor.getX() + 1));
 		}
@@ -184,7 +186,7 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_accelRight():Void
 	{
-		if(((480 > actor.getX()) && ((actor.getWidth()) > 0)))
+		if(((_boundaryRight > actor.getX()) && ((actor.getWidth()) > (_boundaryLeft - 1))))
 		{
 			actor.setX((actor.getX() - 1));
 		}
@@ -339,6 +341,10 @@ class Design_7_7_movement extends ActorScript
 		_accelTurnSpeed = 0.0;
 		nameMap.set("mouseDown", "_mouseDown");
 		_mouseDown = false;
+		nameMap.set("boundaryLeft", "_boundaryLeft");
+		_boundaryLeft = 0;
+		nameMap.set("boundaryRight", "_boundaryRight");
+		_boundaryRight = 0;
 		
 	}
 	
@@ -366,6 +372,10 @@ class Design_7_7_movement extends ActorScript
 		_width = asNumber(350);
 		propertyChanged("_width", _width);
 		Engine.engine.setGameAttribute("virtualX", 0);
+		_boundaryLeft = asNumber(-50);
+		propertyChanged("_boundaryLeft", _boundaryLeft);
+		_boundaryRight = asNumber(250);
+		propertyChanged("_boundaryRight", _boundaryRight);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

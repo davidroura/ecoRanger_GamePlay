@@ -106,52 +106,24 @@ class Design_95_95_spawnHandler extends SceneScript
 	public function _customEvent_contiousSpawn():Void
 	{
 		/* Continuos Spawn */
-		if((!(_distanceTree == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 50) == 0)))
-		{
-			_customEvent_treeSpawn();
-			_distanceTree = asNumber(Engine.engine.getGameAttribute("playerDistance"));
-			propertyChanged("_distanceTree", _distanceTree);
-		}
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_ocasionalSpawn():Void
 	{
 		/* Ocasional Spawn */
-		if((!(_distanceLife == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 50) == 0)))
-		{
-			_customEvent_lifeSpawn();
-			_distanceLife = asNumber(Engine.engine.getGameAttribute("playerDistance"));
-			propertyChanged("_distanceLife", _distanceLife);
-		}
 		if((!(_distanceTrash == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 70) == 0)))
 		{
 			_customEvent_trashSpawn();
 			_distanceTrash = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 			propertyChanged("_distanceTrash", _distanceTrash);
 		}
-		if((!(_distanceObstacle == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 110) == 0)))
-		{
-			_customEvent_ObstacleRamdomSpaw();
-			_distanceObstacle = asNumber(Engine.engine.getGameAttribute("playerDistance"));
-			propertyChanged("_distanceObstacle", _distanceObstacle);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_addSpawn():Void
-	{
-		_currentSpawn = asNumber((_currentSpawn + 1));
-		propertyChanged("_currentSpawn", _currentSpawn);
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_trashSpawn():Void
 	{
-		if(!(_spawning))
-		{
-			_customEvent_trashRamdomPick();
-		}
+		_customEvent_trashRamdomPick();
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -318,6 +290,7 @@ class Design_95_95_spawnHandler extends SceneScript
 			createRecycledActorOnLayer(getActorType(104), 0, -5, 1, "" + "gamePlay");
 			getLastCreatedActor().growTo(20/100, 20/100, 0, Linear.easeNone);
 		}
+		getLastCreatedActor().makeAlwaysSimulate();
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -476,23 +449,13 @@ class Design_95_95_spawnHandler extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("flag", "spawnHandler");
+				trace("" + "spawnHandler");
 				/* Here we set how stuff spawn,  */
 				if((Engine.engine.getGameAttribute("playerHealth") > 1))
 				{
 					_customEvent_contiousSpawn();
 					_customEvent_ocasionalSpawn();
 				}
-			}
-		});
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.setFont(getFont(135));
-				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
 			}
 		});
 		

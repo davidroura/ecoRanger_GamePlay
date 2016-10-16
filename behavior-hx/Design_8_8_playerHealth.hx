@@ -236,8 +236,6 @@ class Design_8_8_playerHealth extends SceneScript
 						propertyChanged("_warning", _warning);
 					}
 				}
-				g.setFont(getFont(135));
-				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
 			}
 		});
 		

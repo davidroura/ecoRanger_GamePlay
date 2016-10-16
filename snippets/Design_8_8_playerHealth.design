@@ -50,14 +50,6 @@
                         <int id="1" val="0"/>
                     </moreeq>
                 </if>
-                <set-font-new comment="false" x="26" y="334">
-                    <font eid="135" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="361">
-                    <get-game-val-45 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="150"/>
-                    <int id="2" val="150"/>
-                </draw-text>
             </group>
         </draw>
     </group>

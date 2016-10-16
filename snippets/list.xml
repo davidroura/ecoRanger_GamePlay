@@ -67,18 +67,20 @@
     <snippet attachedevent="false" class="scripts.Design_7_7_movement" classname="scripts.Design_7_7_movement" desc="" description="" design="true" drawOrder="0" id="7" name="movement" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <animation default="" defaultValue="" desc="" dropdown="" fullname="standAnimation" hidden="false" id="1" name="_standAnimation" order="1"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="showInfo" hidden="false" id="4" name="_showInfo" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="movementCounter" hidden="true" id="5" name="_movementCounter" order="5"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="movementText" hidden="true" id="6" name="_movementText" order="6"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentYPos" hidden="true" id="7" name="_currentYPos" order="7"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="standAnimationBoosted" hidden="false" id="8" name="_standAnimationBoosted" order="8"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="pointUp" hidden="false" id="11" name="_pointUp" order="11"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="maxLeft" hidden="false" id="12" name="_maxLeft" order="12"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="maxRight" hidden="false" id="13" name="_maxRight" order="13"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="turnSpeed" hidden="false" id="14" name="_turnSpeed" order="14"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="width" hidden="false" id="15" name="_width" order="15"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="accelTurnSpeed" hidden="false" id="16" name="_accelTurnSpeed" order="16"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="mouseDown" hidden="false" id="17" name="_mouseDown" order="17"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="showInfo" hidden="false" id="4" name="_showInfo" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="movementCounter" hidden="true" id="5" name="_movementCounter" order="3"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="movementText" hidden="true" id="6" name="_movementText" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentYPos" hidden="true" id="7" name="_currentYPos" order="5"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="standAnimationBoosted" hidden="false" id="8" name="_standAnimationBoosted" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="pointUp" hidden="false" id="11" name="_pointUp" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="maxLeft" hidden="false" id="12" name="_maxLeft" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="maxRight" hidden="false" id="13" name="_maxRight" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="turnSpeed" hidden="false" id="14" name="_turnSpeed" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="width" hidden="false" id="15" name="_width" order="11"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="accelTurnSpeed" hidden="false" id="16" name="_accelTurnSpeed" order="12"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="mouseDown" hidden="false" id="17" name="_mouseDown" order="13"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="boundaryLeft" hidden="false" id="18" name="_boundaryLeft" order="14"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="boundaryRight" hidden="false" id="19" name="_boundaryRight" order="15"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -814,7 +816,6 @@
             <event displayName="trashCreateParabola" enabled="true" id="11" name="event-custom" order="16" repeats="true"/>
             <event displayName="trashRamdomItem" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
             <event displayName="lifeSpawn" enabled="true" id="13" name="event-custom" order="18" repeats="true"/>
-            <event displayName="addSpawn" enabled="true" id="14" name="event-custom" order="7" repeats="true"/>
             <event displayName="treeSpawn" enabled="true" id="15" name="event-custom" order="19" repeats="true"/>
             <event displayName="treeType" enabled="true" id="16" name="event-custom" order="20" repeats="true"/>
             <event displayName="ObstacleRamdomSpaw" enabled="true" id="17" name="event-custom" order="21" repeats="true"/>

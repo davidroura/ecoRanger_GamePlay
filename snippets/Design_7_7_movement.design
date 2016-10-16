@@ -137,6 +137,12 @@
                 <set-game-val-23 comment="false" x="26" y="319">
                     <int id="0" val="0"/>
                 </set-game-val-23>
+                <set-val-7-18 comment="false" x="26" y="339">
+                    <int id="0" val="-50"/>
+                </set-val-7-18>
+                <set-val-7-19 comment="false" x="26" y="359">
+                    <int id="0" val="250"/>
+                </set-val-7-19>
             </group>
         </init>
     </group>
@@ -581,7 +587,7 @@
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
-                            <int id="0" val="480"/>
+                            <get-val-7-19 comment="false" id="0" x="0" y="0"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="0"/>
@@ -592,7 +598,10 @@
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="0"/>
                             </get-wh>
-                            <int id="1" val="0"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-7-18 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
                         </more>
                     </and>
                 </if>
@@ -630,10 +639,13 @@
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="0"/>
                             </get-xy>
-                            <int id="1" val="0"/>
+                            <get-val-7-18 comment="false" id="1" x="0" y="0"/>
                         </more>
                         <more comment="false" id="1" x="0" y="0">
-                            <int id="0" val="480"/>
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-7-19 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="0"/>
