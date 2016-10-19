@@ -607,6 +607,8 @@
                 <prop id="15" list="0" val="0"/>
                 <prop id="16" list="0" val="0"/>
                 <prop id="17" list="0" val="false"/>
+                <prop id="18" list="0" val="0"/>
+                <prop id="19" list="0" val="0"/>
             </s>
         </snippets>
     </actor>

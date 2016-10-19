@@ -94,7 +94,7 @@ class Design_56_56_spawnsMovement extends ActorScript
 			{
 				actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
 				actor.setXVelocity(Engine.engine.getGameAttribute("lateralSpeed"));
-				if((actor.getX() > (getScreenHeight() + 200)))
+				if((actor.getY() > (getScreenHeight() + 0)))
 				{
 					recycleActor(actor);
 				}

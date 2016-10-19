@@ -82,13 +82,13 @@ class Design_37_37_autoKill extends ActorScript
 		super(actor);
 		nameMap.set("Actor", "actor");
 		nameMap.set("timeCounter", "_timeCounter");
-		_timeCounter = 0;
+		_timeCounter = 0.0;
 		nameMap.set("framePerSeconds", "_framePerSeconds");
-		_framePerSeconds = 0;
+		_framePerSeconds = 0.0;
 		nameMap.set("time", "_time");
-		_time = 0;
+		_time = 0.0;
 		nameMap.set("killAtSec", "_killAtSec");
-		_killAtSec = 0;
+		_killAtSec = 0.0;
 		
 	}
 	

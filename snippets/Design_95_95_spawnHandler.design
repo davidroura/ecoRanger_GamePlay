@@ -36,7 +36,7 @@
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <get-game-val-28 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
+                        <int id="1" val="3"/>
                     </more>
                 </if>
             </group>
@@ -810,57 +810,55 @@
                         </eq>
                     </and>
                 </if>
+                <if comment="false" x="26" y="157">
+                    <group eventID="21" id="-1">
+                        <say-this comment="false" x="37" y="197">
+                            <int id="0" val="lifeSpawn"/>
+                        </say-this>
+                        <set-val-95-27 comment="false" x="37" y="217">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        </set-val-95-27>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-val-95-27 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="254">
+                    <group eventID="21" id="-1">
+                        <say-this comment="false" x="37" y="294">
+                            <int id="0" val="ObstacleRamdomSpaw"/>
+                        </say-this>
+                        <set-val-95-26 comment="false" x="37" y="314">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        </set-val-95-26>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-val-95-26 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="110"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
             </group>
             <int id="0" val="ocasionalSpawn"/>
         </event-custom>
-    </group>
-    <group eventID="21" id="1">
-        <if comment="false" x="30" y="278">
-            <group eventID="21" id="-1">
-                <say-this comment="false" x="41" y="318">
-                    <int id="0" val="lifeSpawn"/>
-                </say-this>
-                <set-val-95-27 comment="false" x="41" y="338">
-                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                </set-val-95-27>
-            </group>
-            <and comment="false" id="0" x="0" y="0">
-                <noteq comment="false" id="0" x="0" y="0">
-                    <get-val-95-27 comment="false" id="0" x="0" y="0"/>
-                    <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-                </noteq>
-                <eq comment="false" id="1" x="0" y="0">
-                    <mod comment="false" id="0" x="0" y="0">
-                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="50"/>
-                    </mod>
-                    <int id="1" val="0"/>
-                </eq>
-            </and>
-        </if>
-        <if comment="false" x="30" y="375">
-            <group eventID="21" id="-1">
-                <say-this comment="false" x="41" y="415">
-                    <int id="0" val="ObstacleRamdomSpaw"/>
-                </say-this>
-                <set-val-95-26 comment="false" x="41" y="435">
-                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                </set-val-95-26>
-            </group>
-            <and comment="false" id="0" x="0" y="0">
-                <noteq comment="false" id="0" x="0" y="0">
-                    <get-val-95-26 comment="false" id="0" x="0" y="0"/>
-                    <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-                </noteq>
-                <eq comment="false" id="1" x="0" y="0">
-                    <mod comment="false" id="0" x="0" y="0">
-                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="110"/>
-                    </mod>
-                    <int id="1" val="0"/>
-                </eq>
-            </and>
-        </if>
     </group>
     <group eventID="21" id="-1"/>
     <group eventID="22" id="0">
@@ -869,34 +867,32 @@
                 <comment-short comment="false" x="26" y="40">
                     <int id="0" val="Continuos Spawn"/>
                 </comment-short>
+                <if comment="false" x="26" y="60">
+                    <group eventID="22" id="-1">
+                        <say-this comment="false" x="37" y="100">
+                            <int id="0" val="treeSpawn"/>
+                        </say-this>
+                        <set-val-95-29 comment="false" x="37" y="120">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        </set-val-95-29>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-val-95-29 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
             </group>
             <int id="0" val="contiousSpawn"/>
         </event-custom>
-    </group>
-    <group eventID="22" id="1">
-        <if comment="false" x="32" y="127">
-            <group eventID="22" id="-1">
-                <say-this comment="false" x="43" y="167">
-                    <int id="0" val="treeSpawn"/>
-                </say-this>
-                <set-val-95-29 comment="false" x="43" y="187">
-                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                </set-val-95-29>
-            </group>
-            <and comment="false" id="0" x="0" y="0">
-                <noteq comment="false" id="0" x="0" y="0">
-                    <get-val-95-29 comment="false" id="0" x="0" y="0"/>
-                    <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-                </noteq>
-                <eq comment="false" id="1" x="0" y="0">
-                    <mod comment="false" id="0" x="0" y="0">
-                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="50"/>
-                    </mod>
-                    <int id="1" val="0"/>
-                </eq>
-            </and>
-        </if>
     </group>
     <group eventID="22" id="-1"/>
 </groups>

@@ -39,13 +39,13 @@
                     <more comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
+                            <int id="1" val="1"/>
                         </get-xy>
                         <plus comment="false" id="1" x="0" y="0">
                             <screen-wh comment="false" id="0" x="0" y="0">
                                 <int id="0" val="1"/>
                             </screen-wh>
-                            <int id="1" val="200"/>
+                            <int id="1" val="0"/>
                         </plus>
                     </more>
                 </if>

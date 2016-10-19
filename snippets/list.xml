@@ -405,7 +405,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="timeCounter" hidden="true" id="1" name="_timeCounter" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="framePerSeconds" hidden="false" id="2" name="_framePerSeconds" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="time" hidden="true" id="3" name="_time" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="killAtSec" hidden="false" id="4" name="_killAtSec" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="killAtSec" hidden="false" id="4" name="_killAtSec" order="4"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
