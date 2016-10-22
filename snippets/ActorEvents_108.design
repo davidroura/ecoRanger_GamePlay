@@ -20,20 +20,10 @@
                                 <create-actor3 comment="false" x="48" y="187">
                                     <actortype eid="63" id="0"/>
                                     <get-game-val-20 comment="false" id="1" x="0" y="0"/>
-                                    <minus comment="false" id="2" x="0" y="0">
-                                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
-                                    </minus>
+                                    <get-game-val-5 comment="false" id="2" x="0" y="0"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <scaleTo comment="false" x="48" y="224">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="30"/>
-                                    <int id="2" val="30"/>
-                                    <int id="3" val="0"/>
-                                    <int id="4" val="0"/>
-                                </scaleTo>
-                                <set-game-val-46 comment="false" x="48" y="251">
+                                <set-game-val-46 comment="false" x="48" y="219">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>

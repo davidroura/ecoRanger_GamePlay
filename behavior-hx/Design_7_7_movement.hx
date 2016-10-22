@@ -114,7 +114,6 @@ class Design_7_7_movement extends ActorScript
 		{
 			_customEvent_touchControl();
 		}
-		Engine.engine.setGameAttribute("playerXPos", actor.getX());
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -342,9 +341,9 @@ class Design_7_7_movement extends ActorScript
 		nameMap.set("mouseDown", "_mouseDown");
 		_mouseDown = false;
 		nameMap.set("boundaryLeft", "_boundaryLeft");
-		_boundaryLeft = 0;
+		_boundaryLeft = 0.0;
 		nameMap.set("boundaryRight", "_boundaryRight");
-		_boundaryRight = 0;
+		_boundaryRight = 0.0;
 		
 	}
 	

@@ -63,7 +63,7 @@
         <cgroup g1="1" g2="3"/>
         <cgroup g1="1" g2="4"/>
         <cgroup g1="3" g2="3"/>
-        <cgroup g1="3" g2="4"/>
+        <cgroup g1="3" g2="6"/>
         <cgroup g1="5" g2="6"/>
     </cgroups>
     <input>
@@ -96,7 +96,7 @@
         <number cid="2" id="6" name="canCollected" save="true" value="0.0"/>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="2" id="28" name="playerHealth" save="true" value="0.0"/>
-        <boolean cid="-1" id="41" name="suckingPowerOn" save="true" value="false"/>
+        <boolean cid="2" id="41" name="suckingPowerOn" save="true" value="false"/>
         <boolean cid="2" id="11" name="slowMovement" save="true" value="false"/>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
         <number cid="2" id="2" name="extraLife" save="true" value="0.0"/>
@@ -111,8 +111,9 @@
         <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
+        <number cid="-1" id="47" name="sceneSpeedHold" save="true" value="0"/>
         <boolean cid="7" id="43" name="spawnObstacle" save="true" value="false"/>
-        <boolean cid="-1" id="46" name="botOn" save="true" value="false"/>
+        <boolean cid="2" id="46" name="botOn" save="true" value="false"/>
         <boolean cid="3" id="0" name="accelerometerControl" save="true" value="true"/>
         <number cid="2" id="1" name="bottleColleted" save="true" value="0.0"/>
         <number cid="5" id="12" name="glassAnimationX" save="true" value="0.0"/>
@@ -132,7 +133,7 @@
         <number cid="2" id="7" name="gameBottles" save="true" value="0.0"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
-        <number cid="2" id="40" name="botOffset" save="true" value="75.0"/>
+        <number cid="2" id="40" name="botOffset" save="true" value="10"/>
         <number cid="2" id="14" name="gameCubeGlass" save="true" value="0.0"/>
     </attributes>
     <collisions>

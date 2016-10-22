@@ -238,12 +238,6 @@
             <actortype eid="12" id="1"/>
         </event-collide-typetotype>
     </group>
-    <group eventID="7" id="1">
-        <play-sound4 comment="false" x="10" y="244">
-            <int id="0" val="0"/>
-            <sound eid="88" id="1"/>
-        </play-sound4>
-    </group>
     <group eventID="7" id="-1"/>
     <group eventID="8" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">

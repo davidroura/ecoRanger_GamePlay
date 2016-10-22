@@ -1,46 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="1" id="-1"/>
-        </init>
-    </group>
-    <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <step comment="false" x="23" y="3">
-            <group eventID="2" id="-1">
-                <if comment="false" x="34" y="28">
-                    <group eventID="2" id="-1">
-                        <set-xy comment="false" x="45" y="58">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <get-game-val-20 comment="false" id="2" x="0" y="0"/>
-                        </set-xy>
-                        <set-xy comment="false" x="45" y="90">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <minus comment="false" id="2" x="0" y="0">
-                                <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                <get-game-val-40 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-xy>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-game-val-18 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </noteq>
-                </if>
-                <else comment="false" x="34" y="139">
-                    <group eventID="2" id="-1">
-                        <die comment="false" x="45" y="159">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
-                    </group>
-                </else>
-            </group>
-        </step>
-    </group>
-    <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <event-collide-typetotype comment="false" x="10" y="11">
             <group eventID="3" id="-1">
@@ -76,4 +35,45 @@
         </set-val-48-6>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <set-xy comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="75"/>
+                            </plus>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="107">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </set-xy>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-18 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </noteq>
+                </if>
+                <else comment="false" x="26" y="156">
+                    <group eventID="4" id="-1">
+                        <set-game-val-46 comment="false" x="37" y="176">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-46>
+                        <die comment="false" x="37" y="201">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                </else>
+            </group>
+        </draw>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
