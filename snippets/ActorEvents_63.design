@@ -58,7 +58,7 @@
             <actortype eid="12" id="1"/>
         </event-collide-typetotype>
     </group>
-    <group eventID="3" id="4">
+    <group eventID="3" id="1">
         <set-val-48-1 comment="false" x="122" y="331">
             <false comment="false" id="0" x="0" y="0"/>
         </set-val-48-1>

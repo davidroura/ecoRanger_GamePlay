@@ -3,25 +3,38 @@
     <group eventID="1" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="9" id="-1">
-                <set-game-val-36 comment="false" x="26" y="42">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-game-val-36>
-                <if comment="false" x="26" y="67">
+                <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <set-game-val-41 comment="false" x="37" y="105">
+                        <set-game-val-36 comment="false" x="37" y="72">
                             <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-41>
-                        <setanim comment="false" x="37" y="130">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Off"/>
-                        </setanim>
+                        </set-game-val-36>
+                        <if comment="false" x="37" y="97">
+                            <group eventID="1" id="-1">
+                                <set-game-val-41 comment="false" x="48" y="135">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-41>
+                                <comment-short comment="false" x="48" y="160">
+                                    <int id="0" val="maybe make button glow when it&amp;apos;s being used and start to blink when it&amp;apos;s turning off"/>
+                                </comment-short>
+                                <setanim comment="false" x="48" y="180">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Off"/>
+                                </setanim>
+                                <set-game-val-46 comment="false" x="48" y="207">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-46>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <int id="1" val="On"/>
+                            </eq>
+                        </if>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <getanim comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                        </getanim>
-                        <int id="1" val="On"/>
-                    </eq>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-46 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
             </group>
             <ACTOR eid="this" id="0"/>
@@ -41,15 +54,4 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="2" id="-1"/>
-    <group eventID="3" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="3" id="-1"/>
-                    <get-val-75-1 comment="false" id="0" x="0" y="0"/>
-                </if>
-            </group>
-        </step>
-    </group>
-    <group eventID="3" id="-1"/>
 </groups>
