@@ -738,4 +738,12 @@
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_98_98_quantity" classname="scripts.Design_98_98_quantity" desc="" description="" design="true" drawOrder="0" id="98" name="quantity" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="ActorCreated" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
+            <event displayName="ActorKilled" enabled="true" id="2" name="event-actor-create-kill" order="2" repeats="true"/>
+        </events>
+    </snippet>
 </pack>

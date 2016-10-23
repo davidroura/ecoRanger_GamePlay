@@ -167,6 +167,7 @@ class SceneEvents_0 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("actorsQuantity", 0);
 		_gameOverShown = false;
 		propertyChanged("_gameOverShown", _gameOverShown);
 		_tutorialShown = false;
@@ -250,7 +251,7 @@ class SceneEvents_0 extends SceneScript
 				g.drawString("" + Engine.engine.getGameAttribute("canCollected"), 140, 7);
 				g.drawString("" + Engine.engine.getGameAttribute("bottleColleted"), 110, 7);
 				g.setFont(getFont(135));
-				g.drawString("" + Engine.engine.getGameAttribute("flag"), 150, 150);
+				g.drawString("" + Engine.engine.getGameAttribute("actorsQuantity"), 150, 150);
 			}
 		});
 		

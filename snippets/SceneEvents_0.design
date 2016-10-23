@@ -23,7 +23,7 @@
                     <font eid="135" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="164">
-                    <get-game-val-45 comment="false" id="0" x="0" y="0"/>
+                    <get-game-val-48 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="150"/>
                     <int id="2" val="150"/>
                 </draw-text>
@@ -73,22 +73,25 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-val-0-4 comment="false" x="26" y="40">
+                <set-game-val-48 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-game-val-48>
+                <set-val-0-4 comment="false" x="26" y="60">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-0-4>
-                <set-val-0-5 comment="false" x="26" y="65">
+                <set-val-0-5 comment="false" x="26" y="85">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-0-5>
-                <set-game-val-38 comment="false" x="26" y="90">
+                <set-game-val-38 comment="false" x="26" y="110">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-38>
-                <setanim comment="false" x="26" y="115">
+                <setanim comment="false" x="26" y="135">
                     <ACTOR eid="1" id="0"/>
                     <int id="1" val="Animation Up"/>
                 </setanim>
-                <dolater comment="false" x="26" y="142">
+                <dolater comment="false" x="26" y="162">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="169">
+                        <setanim comment="false" x="37" y="189">
                             <ACTOR eid="1" id="0"/>
                             <int id="1" val="Animation Up"/>
                         </setanim>
@@ -96,20 +99,20 @@
                     <int id="0" val="0.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <play-sound-channel comment="false" x="26" y="208">
+                <play-sound-channel comment="false" x="26" y="228">
                     <int id="0" val="1"/>
                     <sound eid="103" id="1"/>
                     <int id="2" val="5"/>
                 </play-sound-channel>
-                <set-volume comment="false" x="26" y="235">
+                <set-volume comment="false" x="26" y="255">
                     <int id="0" val="20"/>
                 </set-volume>
-                <if comment="false" x="26" y="255">
+                <if comment="false" x="26" y="275">
                     <group eventID="4" id="-1">
-                        <set-val-0-5 comment="false" x="37" y="285">
+                        <set-val-0-5 comment="false" x="37" y="305">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-0-5>
-                        <say-this comment="false" x="37" y="310">
+                        <say-this comment="false" x="37" y="330">
                             <int id="0" val="tutorial"/>
                         </say-this>
                     </group>
