@@ -80,7 +80,6 @@ class Design_98_98_powerUpsucker extends ActorScript
 	public var _Margin:Float;
 	public var _Easing:Bool;
 	public var _MinimumEasingSpeed:Float;
-	public var _ScreenDiagonal:Float;
 	public var _StopwhenColliding:Bool;
 	public var _Collided:Bool;
 	
@@ -106,8 +105,6 @@ class Design_98_98_powerUpsucker extends ActorScript
 		_Easing = true;
 		nameMap.set("Minimum Easing Speed", "_MinimumEasingSpeed");
 		_MinimumEasingSpeed = 5.0;
-		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
-		_ScreenDiagonal = 0.0;
 		nameMap.set("Stop when Colliding", "_StopwhenColliding");
 		_StopwhenColliding = true;
 		nameMap.set("Collided", "_Collided");
@@ -119,8 +116,11 @@ class Design_98_98_powerUpsucker extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_ScreenDiagonal = asNumber(Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
-		propertyChanged("_ScreenDiagonal", _ScreenDiagonal);
+		runLater(1000 * 7, function(timeTask:TimedTask):Void
+		{
+			Engine.engine.setGameAttribute("botOn", false);
+			Engine.engine.setGameAttribute("suckingPowerOn", false);
+		}, actor);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
@@ -129,32 +129,18 @@ class Design_98_98_powerUpsucker extends ActorScript
 			{
 				if(Engine.engine.getGameAttribute("suckingPowerOn"))
 				{
-					_DistanceX = asNumber((actor.getXCenter() - actor.getXCenter()));
+					_DistanceX = asNumber(((Engine.engine.getGameAttribute("playerXPos") + 90) - actor.getXCenter()));
 					propertyChanged("_DistanceX", _DistanceX);
-					_DistanceY = asNumber((actor.getYCenter() - actor.getYCenter()));
+					_DistanceY = asNumber(((Engine.engine.getGameAttribute("playerYPos") + 130) - actor.getYCenter()));
 					propertyChanged("_DistanceY", _DistanceY);
 					_Distance = asNumber(Math.sqrt((Math.pow(_DistanceX, 2) + Math.pow(_DistanceY, 2))));
 					propertyChanged("_Distance", _Distance);
 					_Direction = asNumber(Utils.DEG * (Math.atan2(_DistanceY, _DistanceX)));
 					propertyChanged("_Direction", _Direction);
-					trace("" + "this is happening");
-					if(((_Distance > _Margin) && !((_StopwhenColliding && _Collided))))
+					if((15 < _Distance))
 					{
-						if(_Easing)
-						{
-							actor.setVelocity(_Direction, (_MinimumEasingSpeed + (_Speed * ((_Distance - _Margin) / _ScreenDiagonal))));
-						}
-						else
-						{
-							actor.setVelocity(_Direction, _Speed);
-						}
+						actor.setVelocity(_Direction, (_MinimumEasingSpeed + (_Speed * (_Distance / Engine.engine.getGameAttribute("screenDiagonal")))));
 					}
-					else
-					{
-						actor.setVelocity(0, 0);
-					}
-					_Collided = false;
-					propertyChanged("_Collided", _Collided);
 				}
 			}
 		});

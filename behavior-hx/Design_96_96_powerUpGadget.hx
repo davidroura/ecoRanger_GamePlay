@@ -79,7 +79,7 @@ class Design_96_96_powerUpGadget extends ActorScript
 		super(actor);
 		nameMap.set("Actor", "actor");
 		nameMap.set("sceneSpeedHold", "_sceneSpeedHold");
-		_sceneSpeedHold = 0;
+		_sceneSpeedHold = 0.0;
 		
 	}
 	

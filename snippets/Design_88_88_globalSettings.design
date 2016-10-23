@@ -9,6 +9,9 @@
                 <say-this comment="false" x="26" y="60">
                     <int id="0" val="gameSettings"/>
                 </say-this>
+                <say-this comment="false" x="26" y="80">
+                    <int id="0" val="globalConstants"/>
+                </say-this>
             </group>
         </init>
     </group>
@@ -63,4 +66,30 @@
         </event-custom>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-49 comment="false" x="26" y="40">
+                    <sqrt comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <pow comment="false" id="0" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </pow>
+                            <pow comment="false" id="1" x="0" y="0">
+                                <screen-wh comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </screen-wh>
+                                <int id="1" val="2"/>
+                            </pow>
+                        </plus>
+                    </sqrt>
+                </set-game-val-49>
+            </group>
+            <int id="0" val="globalConstants"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

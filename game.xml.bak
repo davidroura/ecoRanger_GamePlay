@@ -87,54 +87,55 @@
     </attcats>
     <props/>
     <attributes>
+        <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
+        <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
+        <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
+        <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
+        <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
+        <boolean cid="7" id="43" name="spawnObstacle" save="true" value="false"/>
+        <boolean cid="2" id="46" name="botOn" save="true" value="false"/>
+        <boolean cid="3" id="0" name="accelerometerControl" save="true" value="true"/>
+        <number cid="0" id="22" name="lateralSpeed" save="true" value="0.0"/>
+        <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
+        <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
+        <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
+        <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
+        <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
+        <number cid="2" id="7" name="gameBottles" save="true" value="0.0"/>
+        <number cid="2" id="14" name="gameCubeGlass" save="true" value="0.0"/>
         <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
         <number cid="5" id="10" name="glassAnimation" save="true" value="0.0"/>
         <number cid="0" id="3" name="sceneSpeed" save="true" value="0.0"/>
         <text cid="-1" id="45" name="flag" save="true" value="0"/>
         <boolean cid="2" id="26" name="tutorialDone" save="true" value="false"/>
         <number cid="2" id="6" name="canCollected" save="true" value="0.0"/>
-        <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="2" id="28" name="playerHealth" save="true" value="0.0"/>
         <boolean cid="2" id="41" name="suckingPowerOn" save="true" value="false"/>
         <boolean cid="2" id="11" name="slowMovement" save="true" value="false"/>
-        <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
         <number cid="2" id="2" name="extraLife" save="true" value="0.0"/>
         <number cid="1" id="20" name="playerXPos" save="true" value="0.0"/>
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
-        <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
         <number cid="2" id="18" name="dozerStrength" save="true" value="1.0"/>
-        <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
-        <number cid="-1" id="48" name="actorsQuantity" save="true" value="0"/>
-        <number cid="2" id="16" name="gameCubeMetal" save="true" value="0.0"/>
+        <number cid="-1" id="48" name="actorsQuantity" save="true" value="0.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
-        <number cid="-1" id="47" name="sceneSpeedHold" save="true" value="0.0"/>
-        <boolean cid="7" id="43" name="spawnObstacle" save="true" value="false"/>
-        <boolean cid="2" id="46" name="botOn" save="true" value="false"/>
-        <boolean cid="3" id="0" name="accelerometerControl" save="true" value="true"/>
+        <number cid="2" id="47" name="sceneSpeedHold" save="true" value="0.0"/>
         <number cid="2" id="1" name="bottleColleted" save="true" value="0.0"/>
         <number cid="5" id="12" name="glassAnimationX" save="true" value="0.0"/>
         <number cid="5" id="13" name="glassAnimationY" save="true" value="0.0"/>
         <boolean cid="3" id="4" name="playerControl" save="true" value="true"/>
-        <number cid="0" id="22" name="lateralSpeed" save="true" value="0.0"/>
-        <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
-        <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
-        <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
+        <number cid="6" id="49" name="screenDiagonal" save="true" value="0.0"/>
         <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>
         <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0.0"/>
         <boolean cid="2" id="38" name="gameOver" save="true" value="false"/>
-        <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
-        <number cid="2" id="8" name="gameCans" save="true" value="0.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>
-        <number cid="2" id="7" name="gameBottles" save="true" value="0.0"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
         <number cid="2" id="40" name="botOffset" save="true" value="10.0"/>
-        <number cid="2" id="14" name="gameCubeGlass" save="true" value="0.0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

@@ -72,6 +72,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class Design_88_88_globalSettings extends SceneScript
 {
+	public var _ScreenDiagonal:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_gameSettings():Void
@@ -94,10 +95,18 @@ class Design_88_88_globalSettings extends SceneScript
 		Engine.engine.setGameAttribute("dozerPlaying", false);
 	}
 	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_globalConstants():Void
+	{
+		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
+	}
+	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
+		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
+		_ScreenDiagonal = 0.0;
 		
 	}
 	
@@ -107,6 +116,7 @@ class Design_88_88_globalSettings extends SceneScript
 		/* ======================== When Creating ========================= */
 		_customEvent_playerSettings();
 		_customEvent_gameSettings();
+		_customEvent_globalConstants();
 		
 	}
 	
