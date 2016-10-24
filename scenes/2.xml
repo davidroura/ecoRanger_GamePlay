@@ -14,7 +14,11 @@
         <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.43076923" sy="0.43076923" x="216" y="-29" z="0"/>
         <actor a="0.0" aid="3" c="false" group="3" id="126" name="plastic 3" sx="0.6041667" sy="0.6041667" x="38" y="-19" z="2"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="88">
+            <prop id="1" list="0" val="0.0"/>
+        </s>
+    </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

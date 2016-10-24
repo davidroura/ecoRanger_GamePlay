@@ -43,11 +43,6 @@
             </group>
         </draw>
     </group>
-    <group eventID="3" id="1">
-        <say-this comment="false" x="104" y="234">
-            <int id="0" val="declareVariables"/>
-        </say-this>
-    </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
@@ -82,29 +77,17 @@
         </event-custom>
     </group>
     <group eventID="5" id="-1"/>
-    <group eventID="6" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="6" id="-1"/>
-            <int id="0" val="addItemY"/>
-        </event-custom>
-    </group>
-    <group eventID="6" id="-1"/>
     <group eventID="7" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="7" id="-1">
                 <say-this comment="false" x="26" y="40">
                     <int id="0" val="createList"/>
                 </say-this>
-                <print comment="false" x="26" y="60">
-                    <length-list comment="false" id="0" x="0" y="0">
-                        <get-game-val-35 comment="false" id="0" x="0" y="0"/>
-                    </length-list>
-                </print>
-                <repeat comment="false" x="26" y="90">
+                <repeat comment="false" x="26" y="60">
                     <group eventID="7" id="-1">
-                        <if comment="false" x="37" y="120">
+                        <if comment="false" x="37" y="90">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="150">
+                                <set-val-23-9 comment="false" x="48" y="120">
                                     <int id="0" val="52"/>
                                 </set-val-23-9>
                             </group>
@@ -113,7 +96,7 @@
                                 <int id="1" val="0"/>
                             </eq>
                         </if>
-                        <create-actor3 comment="false" x="37" y="182">
+                        <create-actor3 comment="false" x="37" y="152">
                             <actortype eid="55" id="0"/>
                             <times comment="false" id="1" x="0" y="0">
                                 <mod comment="false" id="0" x="0" y="0">
@@ -125,9 +108,9 @@
                             <get-val-23-9 comment="false" id="2" x="0" y="0"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <if comment="false" x="37" y="224">
+                        <if comment="false" x="37" y="194">
                             <group eventID="7" id="-1">
-                                <set-val-23-11 comment="false" x="48" y="259">
+                                <set-val-23-11 comment="false" x="48" y="229">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <tostring comment="false" id="0" x="0" y="0">
                                             <get-item comment="false" id="0" x="0" y="0">
@@ -147,9 +130,9 @@
                                 <get-game-val-33 comment="false" id="1" x="0" y="0"/>
                             </more>
                         </if>
-                        <else comment="false" x="37" y="311">
+                        <else comment="false" x="37" y="281">
                             <group eventID="7" id="-1">
-                                <set-val-23-11 comment="false" x="48" y="331">
+                                <set-val-23-11 comment="false" x="48" y="301">
                                     <tostring comment="false" id="0" x="0" y="0">
                                         <get-item comment="false" id="0" x="0" y="0">
                                             <get-game-val-35 comment="false" id="0" x="0" y="0"/>
@@ -159,13 +142,13 @@
                                 </set-val-23-11>
                             </group>
                         </else>
-                        <setanim comment="false" x="37" y="378">
+                        <setanim comment="false" x="37" y="348">
                             <ACTOR eid="lastcreated" id="0"/>
                             <get-val-23-11 comment="false" id="1" x="0" y="0"/>
                         </setanim>
-                        <if comment="false" x="37" y="410">
+                        <if comment="false" x="37" y="380">
                             <group eventID="7" id="-1">
-                                <set-val-23-9 comment="false" x="48" y="445">
+                                <set-val-23-9 comment="false" x="48" y="415">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <int id="0" val="90"/>
                                         <get-val-23-9 comment="false" id="1" x="0" y="0"/>

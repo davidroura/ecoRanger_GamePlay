@@ -580,7 +580,7 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="35" name="upgradeDozerBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="241" id="125" name="upgradeNotificationActor" shared="false" width="232">
         <anim across="1" down="1" durations="100" height="241" id="0" loop="true" name="stampede" numframes="1" originx="71" originy="74" sync="false" version="2" width="232">
-            <poly data="4,8,42,150,42,150,190,8,190" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,13,176,211,176,211,211,13,211" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
         <anim across="1" down="1" durations="100" height="218" id="1" loop="true" name="stampedeII" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
             <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>

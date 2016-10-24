@@ -54,11 +54,6 @@
             </group>
         </init>
     </group>
-    <group eventID="5" id="1">
-        <set-game-val-33 comment="false" x="585" y="341">
-            <get-game-val-7 comment="false" id="0" x="0" y="0"/>
-        </set-game-val-33>
-    </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
         <event-device-swipe comment="false" x="15" y="15">
