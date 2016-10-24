@@ -711,6 +711,8 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceLife" hidden="true" id="27" name="_distanceLife" order="26"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceTrash" hidden="false" id="28" name="_distanceTrash" order="27"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceTree" hidden="false" id="29" name="_distanceTree" order="28"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="parabolaRight" hidden="false" id="30" name="_parabolaRight" order="29"/>
+        <list default="list" defaultValue="list" desc="" dropdown="" fullname="xyDots" hidden="false" id="31" name="_xyDots" order="30"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
