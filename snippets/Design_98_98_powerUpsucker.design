@@ -21,7 +21,7 @@
                             <minus comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="130"/>
+                                    <int id="1" val="160"/>
                                 </plus>
                                 <get-xy comment="false" id="1" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
@@ -43,35 +43,35 @@
                                 </plus>
                             </sqrt>
                         </set-val-94-4>
-                        <set-val-94-5 comment="false" x="37" y="181">
-                            <to-degreesradians comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <atan2 comment="false" id="1" x="0" y="0">
-                                    <get-val-94-3 comment="false" id="0" x="0" y="0"/>
-                                    <get-val-94-2 comment="false" id="1" x="0" y="0"/>
-                                </atan2>
-                            </to-degreesradians>
-                        </set-val-94-5>
-                        <if comment="false" x="37" y="224">
+                        <if comment="false" x="37" y="181">
                             <group eventID="1" id="-1">
+                                <set-val-94-5 comment="false" x="48" y="211">
+                                    <to-degreesradians comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <atan2 comment="false" id="1" x="0" y="0">
+                                            <get-val-94-3 comment="false" id="0" x="0" y="0"/>
+                                            <get-val-94-2 comment="false" id="1" x="0" y="0"/>
+                                        </atan2>
+                                    </to-degreesradians>
+                                </set-val-94-5>
                                 <setvel comment="false" x="48" y="254">
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-94-5 comment="false" id="1" x="0" y="0"/>
                                     <plus comment="false" id="2" x="0" y="0">
-                                        <get-val-94-9 comment="false" id="0" x="0" y="0"/>
-                                        <times comment="false" id="1" x="0" y="0">
-                                            <get-val-94-6 comment="false" id="0" x="0" y="0"/>
-                                            <div comment="false" id="1" x="0" y="0">
-                                                <get-val-94-4 comment="false" id="0" x="0" y="0"/>
-                                                <get-game-val-49 comment="false" id="1" x="0" y="0"/>
-                                            </div>
-                                        </times>
+                                        <get-val-94-13 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-3 comment="false" id="1" x="0" y="0"/>
                                     </plus>
                                 </setvel>
+                                <set-val-94-13 comment="false" x="48" y="291">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-94-13 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val=".2"/>
+                                    </plus>
+                                </set-val-94-13>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
-                                <int id="0" val="15"/>
-                                <get-val-94-4 comment="false" id="1" x="0" y="0"/>
+                                <get-val-94-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="165"/>
                             </less>
                         </if>
                     </group>
@@ -80,7 +80,18 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <plus comment="false" x="360" y="387">
+            <get-val-94-9 comment="false" id="0" x="0" y="0"/>
+            <div comment="false" id="1" x="0" y="0">
+                <times comment="false" id="0" x="0" y="0">
+                    <get-val-94-4 comment="false" id="0" x="0" y="0"/>
+                    <get-val-94-4 comment="false" id="1" x="0" y="0"/>
+                </times>
+                <get-game-val-49 comment="false" id="1" x="0" y="0"/>
+            </div>
+        </plus>
+    </group>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -92,6 +103,9 @@
                         <set-game-val-41 comment="false" x="37" y="92">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-41>
+                        <print comment="false" x="37" y="117">
+                            <int id="0" val="power turn off"/>
+                        </print>
                     </group>
                     <int id="0" val="7"/>
                     <ACTOR eid="this" id="2"/>

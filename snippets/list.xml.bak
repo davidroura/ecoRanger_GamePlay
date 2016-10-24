@@ -33,7 +33,7 @@
         <boolean default="true" defaultValue="true" desc="If selected, the actor will move faster if farther away from the target and slower if closer to to the target.&lt;br /&gt;&#10;If unselected, the actor will move towards the target at a constant speed as specified in the &lt;var&gt;Speed&lt;/var&gt; attribute." dropdown="" fullname="Easing" hidden="false" id="9" name="_Easing" order="8"/>
         <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="10" name="_StopwhenColliding" order="9"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="11" name="_Collided" order="10"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="screenDiagonal" hidden="false" id="12" name="_screenDiagonal" order="11"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="screenDiagonal" hidden="false" id="12" name="_screenDiagonal" order="11"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -311,35 +311,6 @@
             <event displayName="createList" enabled="true" id="8" name="event-custom" order="3" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_9" classname="scripts.SceneEvents_9" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="25" name="SceneEvents_9" oid="-1" package="scripts." sceneid="9" shared="false" type="scene">
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="bottlesPos" hidden="true" id="1" name="_bottlesPos" order="0"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="bottles2" hidden="false" id="2" name="_bottles2" order="1"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="bottles3" hidden="false" id="3" name="_bottles3" order="2"/>
-        <animation default="" defaultValue="" desc="" dropdown="" fullname="bottles4" hidden="false" id="4" name="_bottles4" order="3"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="timeCounter" hidden="false" id="5" name="_timeCounter" order="4"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="seconds" hidden="false" id="6" name="_seconds" order="5"/>
-        <blocks/>
-        <events>
-            <event displayName="hammerDown" enabled="true" id="2" name="event-type-region" order="4" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="6" repeats="true"/>
-            <event displayName="Updated" enabled="true" id="5" name="step" order="2" repeats="true"/>
-        </events>
-    </snippet>
-    <snippet attachedevent="false" class="scripts.Design_27_27_DragandDrop" classname="scripts.Design_27_27_DragandDrop" desc="Allows the actor to be dragged and dropped by the mouse." description="Allows the actor to be dragged and dropped by the mouse." design="true" drawOrder="0" id="27" name="Drag and Drop" oid="-1" package="scripts" shared="false" type="actor">
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Grabbed" hidden="true" id="1" name="_Grabbed" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X Offset" hidden="true" id="2" name="_XOffset" order="2"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Y Offset" hidden="true" id="3" name="_YOffset" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Old X" hidden="true" id="4" name="_OldX" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="Old Y" hidden="true" id="5" name="_OldY" order="5"/>
-        <boolean default="true" defaultValue="true" desc="If selected the actor cannot be dragged off screen." dropdown="" fullname="Cannot Exit Screen" hidden="false" id="6" name="_CannotExitScreen" order="6"/>
-        <blocks/>
-        <events>
-            <event displayName="Updated" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_11" classname="scripts.SceneEvents_11" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="32" name="SceneEvents_11" oid="-1" package="scripts." sceneid="11" shared="false" type="scene">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="rotation" hidden="false" id="1" name="_rotation" order="0"/>
         <blocks/>
@@ -464,22 +435,6 @@
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_57_57_recycling" classname="scripts.Design_57_57_recycling" desc="" description="" design="true" drawOrder="0" id="57" name="recycling" oid="-1" package="scripts" shared="false" type="scene">
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="showerActor" hidden="false" id="1" name="_showerActor" order="0"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="hammerActor" hidden="false" id="2" name="_hammerActor" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="timeCounter" hidden="false" id="3" name="_timeCounter" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="hammerCreated" hidden="false" id="4" name="_hammerCreated" order="3"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="numberBottles" hidden="false" id="5" name="_numberBottles" order="4"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="seconds" hidden="false" id="6" name="_seconds" order="5"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="secondsCountDown" hidden="false" id="7" name="_secondsCountDown" order="6"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="secondsString" hidden="false" id="8" name="_secondsString" order="7"/>
-        <blocks/>
-        <events>
-            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_15" classname="scripts.SceneEvents_15" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="58" name="SceneEvents_15" oid="-1" package="scripts." sceneid="15" shared="false" type="scene">
         <blocks/>
         <events>
@@ -503,13 +458,6 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_71_71_cleanBottle" classname="scripts.Design_71_71_cleanBottle" desc="" description="" design="true" drawOrder="0" id="71" name="cleanBottle" oid="-1" package="scripts" shared="false" type="actor">
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
-        <blocks/>
-        <events>
-            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
-        </events>
-    </snippet>
     <snippet actorid="104" attachedevent="true" class="scripts.ActorEvents_104" classname="scripts.ActorEvents_104" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="72" name="ActorEvents_104" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
@@ -521,12 +469,6 @@
         <events>
             <event displayName="dozeyClick" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
             <event displayName="dozyClickRelease" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
-        </events>
-    </snippet>
-    <snippet attachedevent="false" class="scripts.Design_74_74_powerUp" classname="scripts.Design_74_74_powerUp" desc="" description="" design="true" drawOrder="0" id="74" name="powerUp" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks/>
-        <events>
-            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="110" attachedevent="true" class="scripts.ActorEvents_110" classname="scripts.ActorEvents_110" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="75" name="ActorEvents_110" oid="-1" package="scripts." shared="false" type="actor">
@@ -640,40 +582,20 @@
             <event displayName="downSwipe/key" enabled="true" id="5" name="event-key-press-release" order="5" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_93_93_FollowTarget" classname="scripts.Design_93_93_FollowTarget" desc="Make the actor follow a given actor." description="Make the actor follow a given actor." design="true" drawOrder="0" id="93" name="Follow Target" oid="-1" package="scripts" shared="false" type="actor">
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <actor default="" defaultValue="" desc="The target actor this actor will follow. &lt;br /&gt;&#10;If the target actor is unset or dead this behavior will do nothing." dropdown="" fullname="Target Actor" hidden="false" id="1" name="_TargetActor" order="7"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance X" hidden="true" id="2" name="_DistanceX" order="1"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance Y" hidden="true" id="3" name="_DistanceY" order="2"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance" hidden="true" id="4" name="_Distance" order="3"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Direction" hidden="true" id="5" name="_Direction" order="4"/>
-        <number default="30.0" defaultValue="30.0" desc="The speed to move towards the target." dropdown="" fullname="Speed" hidden="false" id="6" name="_Speed" order="8"/>
-        <number default="0.0" defaultValue="0.0" desc="The actor will not move closer to the target than this value." dropdown="" fullname="Margin" hidden="false" id="7" name="_Margin" order="9"/>
-        <boolean default="true" defaultValue="true" desc="If selected, the actor will move faster if farther away from the target and slower if closer to to the target.&lt;br /&gt;&#10;If unselected, the actor will move towards the target at a constant speed as specified in the &lt;var&gt;Speed&lt;/var&gt; attribute." dropdown="" fullname="Easing" hidden="false" id="8" name="_Easing" order="11"/>
-        <number default="5.0" defaultValue="5.0" desc="Only used when &lt;var&gt;Easing&lt;/var&gt; is selected.&lt;br /&gt;&#10;The actor will move at least at this speed. The actual speed depends on the distance to the target. The maximum speed is &lt;var&gt;Minimum Easing Speed&lt;/var&gt; plus &lt;var&gt;Speed&lt;/var&gt;. The actor will move at maximum speed if it is in the opposite diagonal corner of the target." dropdown="" fullname="Minimum Easing Speed" hidden="false" id="9" name="_MinimumEasingSpeed" order="12"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Screen Diagonal" hidden="true" id="10" name="_ScreenDiagonal" order="5"/>
-        <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="11" name="_StopwhenColliding" order="10"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="12" name="_Collided" order="6"/>
-        <blocks/>
-        <events>
-            <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
-            <event displayName="Actor - Any" enabled="true" id="3" name="event-collide-actor" order="3" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="false" class="scripts.Design_98_98_powerUpsucker" classname="scripts.Design_98_98_powerUpsucker" desc="Make the actor follow a given actor." description="Make the actor follow a given actor." design="true" drawOrder="0" id="94" name="powerUp_sucker" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <actor default="" defaultValue="" desc="The target actor this actor will follow. &lt;br /&gt;&#10;If the target actor is unset or dead this behavior will do nothing." dropdown="" fullname="Target Actor" hidden="false" id="1" name="_TargetActor" order="7"/>
+        <actor default="" defaultValue="" desc="The target actor this actor will follow. &lt;br /&gt;&#10;If the target actor is unset or dead this behavior will do nothing." dropdown="" fullname="Target Actor" hidden="false" id="1" name="_TargetActor" order="6"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance X" hidden="true" id="2" name="_DistanceX" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance Y" hidden="true" id="3" name="_DistanceY" order="2"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Distance" hidden="true" id="4" name="_Distance" order="3"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Direction" hidden="true" id="5" name="_Direction" order="4"/>
-        <number default="30.0" defaultValue="30.0" desc="The speed to move towards the target." dropdown="" fullname="Speed" hidden="false" id="6" name="_Speed" order="8"/>
-        <number default="0.0" defaultValue="0.0" desc="The actor will not move closer to the target than this value." dropdown="" fullname="Margin" hidden="false" id="7" name="_Margin" order="9"/>
-        <boolean default="true" defaultValue="true" desc="If selected, the actor will move faster if farther away from the target and slower if closer to to the target.&lt;br /&gt;&#10;If unselected, the actor will move towards the target at a constant speed as specified in the &lt;var&gt;Speed&lt;/var&gt; attribute." dropdown="" fullname="Easing" hidden="false" id="8" name="_Easing" order="11"/>
-        <number default="5.0" defaultValue="5.0" desc="Only used when &lt;var&gt;Easing&lt;/var&gt; is selected.&lt;br /&gt;&#10;The actor will move at least at this speed. The actual speed depends on the distance to the target. The maximum speed is &lt;var&gt;Minimum Easing Speed&lt;/var&gt; plus &lt;var&gt;Speed&lt;/var&gt;. The actor will move at maximum speed if it is in the opposite diagonal corner of the target." dropdown="" fullname="Minimum Easing Speed" hidden="false" id="9" name="_MinimumEasingSpeed" order="12"/>
-        <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="11" name="_StopwhenColliding" order="10"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="12" name="_Collided" order="6"/>
+        <number default="30.0" defaultValue="30.0" desc="The speed to move towards the target." dropdown="" fullname="Speed" hidden="false" id="6" name="_Speed" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="The actor will not move closer to the target than this value." dropdown="" fullname="Margin" hidden="false" id="7" name="_Margin" order="8"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the actor will move faster if farther away from the target and slower if closer to to the target.&lt;br /&gt;&#10;If unselected, the actor will move towards the target at a constant speed as specified in the &lt;var&gt;Speed&lt;/var&gt; attribute." dropdown="" fullname="Easing" hidden="false" id="8" name="_Easing" order="10"/>
+        <number default="5.0" defaultValue="5.0" desc="Only used when &lt;var&gt;Easing&lt;/var&gt; is selected.&lt;br /&gt;&#10;The actor will move at least at this speed. The actual speed depends on the distance to the target. The maximum speed is &lt;var&gt;Minimum Easing Speed&lt;/var&gt; plus &lt;var&gt;Speed&lt;/var&gt;. The actor will move at maximum speed if it is in the opposite diagonal corner of the target." dropdown="" fullname="Minimum Easing Speed" hidden="false" id="9" name="_MinimumEasingSpeed" order="11"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="11" name="_StopwhenColliding" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="12" name="_Collided" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="suckingSpeed" hidden="false" id="13" name="_suckingSpeed" order="12"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>

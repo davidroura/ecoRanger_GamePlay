@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,49 +70,53 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_110 extends ActorScript
+class Design_88_88_globalSettings extends SceneScript
 {
-	public var _dozerClick:Bool;
+	public var _ScreenDiagonal:Float;
 	
-	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_gameSettings():Void
 	{
-		super(actor);
-		nameMap.set("dozerClick", "_dozerClick");
-		_dozerClick = false;
+		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
+		Engine.engine.setGameAttribute("sceneSpeed", 15);
+		Engine.engine.setGameAttribute("lateralSpeed", 0);
+		Engine.engine.setGameAttribute("gameStart", false);
+		Engine.engine.setGameAttribute("spawnThings", false);
+		if(Engine.engine.getGameAttribute("tutorialDone"))
+		{
+			Engine.engine.setGameAttribute("spawnThings", true);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_playerSettings():Void
+	{
+		Engine.engine.setGameAttribute("playerControl", true);
+		Engine.engine.setGameAttribute("dozerPlaying", false);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_globalConstants():Void
+	{
+		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
+	}
+	
+	
+	public function new(dummy:Int, dummy2:Engine)
+	{
+		super();
+		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
+		_ScreenDiagonal = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				if(!(Engine.engine.getGameAttribute("botOn")))
-				{
-					Engine.engine.setGameAttribute("clickingButton", true);
-					if((actor.getAnimation() == "On"))
-					{
-						Engine.engine.setGameAttribute("suckingPowerOn", true);
-						/* maybe make button glow when it's being used and start to blink when it's turning off */
-						actor.setAnimation("" + "Off");
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-				}
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("clickingButton", false);
-			}
-		});
+		/* ======================== When Creating ========================= */
+		_customEvent_playerSettings();
+		_customEvent_gameSettings();
+		_customEvent_globalConstants();
 		
 	}
 	

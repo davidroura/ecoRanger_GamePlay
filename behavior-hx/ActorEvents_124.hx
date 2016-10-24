@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_104 extends ActorScript
+class ActorEvents_124 extends ActorScript
 {
 	
 	
@@ -81,6 +81,19 @@ class ActorEvents_104 extends ActorScript
 	
 	override public function init()
 	{
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				if(((actor.getAnimation() == "Stampede") || (actor.getAnimation() == "StampedeII")))
+				{
+					Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") + 1));
+				}
+				recycleActor(actor);
+			}
+		});
 		
 	}
 	

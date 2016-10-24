@@ -135,6 +135,8 @@
             <prop id="27" list="0" val="0"/>
             <prop id="28" list="0" val="0"/>
             <prop id="29" list="0" val="0.0"/>
+            <prop id="30" list="1" val=""/>
+            <prop id="31" list="1" val=""/>
         </s>
     </snippets>
     <terrain/>

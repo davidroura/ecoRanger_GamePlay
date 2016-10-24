@@ -69,79 +69,62 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_98_98_powerUpsucker extends ActorScript
+class ActorEvents_63 extends ActorScript
 {
-	public var _TargetActor:Actor;
-	public var _DistanceX:Float;
-	public var _DistanceY:Float;
-	public var _Distance:Float;
-	public var _Direction:Float;
-	public var _Speed:Float;
-	public var _Margin:Float;
-	public var _Easing:Bool;
-	public var _MinimumEasingSpeed:Float;
-	public var _StopwhenColliding:Bool;
-	public var _Collided:Bool;
+	public var _dozerArrive:Bool;
+	public var _dozerLife:Float;
+	public var _dozerLeave:Bool;
+	public var _dozerPlaying:Bool;
+	public var _dozerAdjustY:Bool;
+	public var _dozerRecharge:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("Target Actor", "_TargetActor");
-		nameMap.set("Distance X", "_DistanceX");
-		_DistanceX = 0.0;
-		nameMap.set("Distance Y", "_DistanceY");
-		_DistanceY = 0.0;
-		nameMap.set("Distance", "_Distance");
-		_Distance = 0.0;
-		nameMap.set("Direction", "_Direction");
-		_Direction = 0.0;
-		nameMap.set("Speed", "_Speed");
-		_Speed = 30.0;
-		nameMap.set("Margin", "_Margin");
-		_Margin = 0.0;
-		nameMap.set("Easing", "_Easing");
-		_Easing = true;
-		nameMap.set("Minimum Easing Speed", "_MinimumEasingSpeed");
-		_MinimumEasingSpeed = 5.0;
-		nameMap.set("Stop when Colliding", "_StopwhenColliding");
-		_StopwhenColliding = true;
-		nameMap.set("Collided", "_Collided");
-		_Collided = false;
+		nameMap.set("dozerArrive", "_dozerArrive");
+		_dozerArrive = false;
+		nameMap.set("dozerLife", "_dozerLife");
+		_dozerLife = 0.0;
+		nameMap.set("dozerLeave", "_dozerLeave");
+		_dozerLeave = false;
+		nameMap.set("dozerPlaying", "_dozerPlaying");
+		_dozerPlaying = false;
+		nameMap.set("dozerAdjustY", "_dozerAdjustY");
+		_dozerAdjustY = false;
+		nameMap.set("dozerRecharge", "_dozerRecharge");
+		_dozerRecharge = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		runLater(1000 * 7, function(timeTask:TimedTask):Void
-		{
-			Engine.engine.setGameAttribute("botOn", false);
-			Engine.engine.setGameAttribute("suckingPowerOn", false);
-		}, actor);
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("suckingPowerOn"))
+				if(!(Engine.engine.getGameAttribute("dozerStrength") == 0))
 				{
-					_DistanceX = asNumber(((Engine.engine.getGameAttribute("playerXPos") + 90) - actor.getXCenter()));
-					propertyChanged("_DistanceX", _DistanceX);
-					_DistanceY = asNumber(((Engine.engine.getGameAttribute("playerYPos") + 130) - actor.getYCenter()));
-					propertyChanged("_DistanceY", _DistanceY);
-					_Distance = asNumber(Math.sqrt((Math.pow(_DistanceX, 2) + Math.pow(_DistanceY, 2))));
-					propertyChanged("_Distance", _Distance);
-					_Direction = asNumber(Utils.DEG * (Math.atan2(_DistanceY, _DistanceX)));
-					propertyChanged("_Direction", _Direction);
-					if((15 < _Distance))
-					{
-						actor.setVelocity(_Direction, (_MinimumEasingSpeed + (_Speed * (_Distance / Engine.engine.getGameAttribute("screenDiagonal")))));
-					}
+					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 75));
+					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
 				}
+				else
+				{
+					Engine.engine.setGameAttribute("botOn", false);
+					recycleActor(actor);
+				}
+			}
+		});
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(63).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
+				recycleActor(event.otherActor);
 			}
 		});
 		
