@@ -717,24 +717,24 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="trashSpawn" enabled="true" id="3" name="event-custom" order="8" repeats="true"/>
-            <event displayName="trashRamdomPick" enabled="true" id="4" name="event-custom" order="9" repeats="true"/>
-            <event displayName="trashParabolaLeft" enabled="true" id="5" name="event-custom" order="10" repeats="true"/>
-            <event displayName="trashParabolaRight" enabled="true" id="6" name="event-custom" order="11" repeats="true"/>
-            <event displayName="trashStraight" enabled="true" id="7" name="event-custom" order="12" repeats="true"/>
-            <event displayName="trashCreateDotsLeft" enabled="true" id="8" name="event-custom" order="13" repeats="true"/>
-            <event displayName="trashCreateDotsRight" enabled="true" id="9" name="event-custom" order="14" repeats="true"/>
-            <event displayName="trashFindParabola" enabled="true" id="10" name="event-custom" order="15" repeats="true"/>
-            <event displayName="trashCreateParabola" enabled="true" id="11" name="event-custom" order="16" repeats="true"/>
-            <event displayName="trashRamdomItem" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
-            <event displayName="lifeSpawn" enabled="true" id="13" name="event-custom" order="18" repeats="true"/>
-            <event displayName="treeSpawn" enabled="true" id="15" name="event-custom" order="19" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="16" name="event-custom" order="20" repeats="true"/>
-            <event displayName="ObstacleRamdomSpaw" enabled="true" id="17" name="event-custom" order="21" repeats="true"/>
-            <event displayName="ObstacleRock" enabled="true" id="18" name="event-custom" order="22" repeats="true"/>
-            <event displayName="ObstacleRamdomBridge" enabled="true" id="19" name="event-custom" order="23" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="20" name="draw" order="6" repeats="true"/>
+            <event displayName="trashRamdomPick" enabled="true" id="4" name="event-custom" order="10" repeats="true"/>
+            <event displayName="trashParabolaLeft" enabled="true" id="5" name="event-custom" order="11" repeats="true"/>
+            <event displayName="trashParabolaRight" enabled="true" id="6" name="event-custom" order="12" repeats="true"/>
+            <event displayName="trashStraight" enabled="true" id="7" name="event-custom" order="13" repeats="true"/>
+            <event displayName="trashCreateDotsLeft" enabled="true" id="8" name="event-custom" order="14" repeats="true"/>
+            <event displayName="trashCreateDotsRight" enabled="true" id="9" name="event-custom" order="15" repeats="true"/>
+            <event displayName="trashFindParabola" enabled="true" id="10" name="event-custom" order="16" repeats="true"/>
+            <event displayName="trashCreateParabola" enabled="true" id="11" name="event-custom" order="17" repeats="true"/>
+            <event displayName="trashRamdomItem" enabled="true" id="12" name="event-custom" order="18" repeats="true"/>
+            <event displayName="lifeSpawn" enabled="true" id="13" name="event-custom" order="19" repeats="true"/>
+            <event displayName="treeSpawn" enabled="true" id="15" name="event-custom" order="20" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="16" name="event-custom" order="21" repeats="true"/>
+            <event displayName="ObstacleRamdomSpaw" enabled="true" id="17" name="event-custom" order="22" repeats="true"/>
+            <event displayName="ObstacleRock" enabled="true" id="18" name="event-custom" order="23" repeats="true"/>
+            <event displayName="ObstacleRamdomBridge" enabled="true" id="19" name="event-custom" order="24" repeats="true"/>
             <event displayName="ocasionalSpawn" enabled="true" id="21" name="event-custom" order="5" repeats="true"/>
             <event displayName="contiousSpawn" enabled="true" id="22" name="event-custom" order="3" repeats="true"/>
+            <event displayName="trashListSpawn" enabled="true" id="23" name="event-custom" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_96_96_powerUpGadget" classname="scripts.Design_96_96_powerUpGadget" desc="" description="" design="true" drawOrder="0" id="96" name="powerUp_Gadget" oid="-1" package="scripts" shared="false" type="actor">
