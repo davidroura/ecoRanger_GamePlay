@@ -3,97 +3,59 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <comment-short comment="false" x="26" y="40">
-                    <int id="0" val="crear una lista con los puntos de cada parabola que luego se podran mover"/>
-                </comment-short>
-                <set-val-95-30 comment="false" x="26" y="60">
+                <set-val-95-34 comment="false" x="26" y="40">
                     <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-30>
-                <set-val-95-31 comment="false" x="26" y="85">
+                </set-val-95-34>
+                <set-val-95-33 comment="false" x="26" y="65">
                     <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="110">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                </set-val-95-33>
+                <add-list comment="false" x="26" y="90">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="0"/>
                 </add-list>
-                <add-list comment="false" x="26" y="135">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="115">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="0"/>
                 </add-list>
-                <add-list comment="false" x="26" y="160">
-                    <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                    <get-val-95-31 comment="false" id="1" x="0" y="0"/>
-                </add-list>
-                <set-val-95-31 comment="false" x="26" y="185">
-                    <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="210">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="140">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="1"/>
                 </add-list>
-                <add-list comment="false" x="26" y="235">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="165">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="1.73"/>
                 </add-list>
-                <add-list comment="false" x="26" y="260">
-                    <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                    <get-val-95-31 comment="false" id="1" x="0" y="0"/>
-                </add-list>
-                <set-val-95-31 comment="false" x="26" y="285">
-                    <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="310">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="190">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="2"/>
                 </add-list>
-                <add-list comment="false" x="26" y="335">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="215">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="3"/>
                 </add-list>
-                <add-list comment="false" x="26" y="360">
-                    <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                    <get-val-95-31 comment="false" id="1" x="0" y="0"/>
-                </add-list>
-                <set-val-95-31 comment="false" x="26" y="385">
-                    <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="410">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="240">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="3"/>
                 </add-list>
-                <add-list comment="false" x="26" y="435">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="265">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="3.88"/>
                 </add-list>
-                <add-list comment="false" x="26" y="460">
-                    <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                    <get-val-95-31 comment="false" id="1" x="0" y="0"/>
-                </add-list>
-                <set-val-95-31 comment="false" x="26" y="485">
-                    <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="510">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="290">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="4"/>
                 </add-list>
-                <add-list comment="false" x="26" y="535">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="315">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="4.1"/>
                 </add-list>
-                <add-list comment="false" x="26" y="560">
-                    <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                    <get-val-95-31 comment="false" id="1" x="0" y="0"/>
-                </add-list>
-                <set-val-95-31 comment="false" x="26" y="585">
-                    <create-list comment="false" id="0" x="0" y="0"/>
-                </set-val-95-31>
-                <add-list comment="false" x="26" y="610">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
+                <add-list comment="false" x="26" y="340">
+                    <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="5"/>
                 </add-list>
-                <add-list comment="false" x="26" y="635">
-                    <get-val-95-31 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="4"/>
+                <add-list comment="false" x="26" y="365">
+                    <get-val-95-33 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="5"/>
                 </add-list>
             </group>
         </init>
@@ -367,7 +329,7 @@
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-val-95-32 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="6"/>
+                        <int id="1" val="9"/>
                     </less>
                 </if>
                 <else comment="false" x="26" y="102">
@@ -532,7 +494,7 @@
                         <eq comment="false" id="1" x="0" y="0">
                             <mod comment="false" id="0" x="0" y="0">
                                 <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="110"/>
+                                <int id="1" val="90"/>
                             </mod>
                             <int id="1" val="0"/>
                         </eq>
@@ -582,34 +544,53 @@
                 </say-this>
                 <set-val-95-6 comment="false" x="26" y="60">
                     <get-item comment="false" id="0" x="0" y="0">
-                        <get-item comment="false" id="0" x="0" y="0">
-                            <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="0"/>
-                        </get-item>
+                        <get-val-95-34 comment="false" id="0" x="0" y="0"/>
                         <get-val-95-18 comment="false" id="1" x="0" y="0"/>
                     </get-item>
                 </set-val-95-6>
-                <set-val-95-7 comment="false" x="26" y="95">
+                <set-val-95-7 comment="false" x="26" y="90">
                     <get-item comment="false" id="0" x="0" y="0">
-                        <get-item comment="false" id="0" x="0" y="0">
-                            <get-val-95-30 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="1"/>
-                        </get-item>
+                        <get-val-95-33 comment="false" id="0" x="0" y="0"/>
                         <get-val-95-18 comment="false" id="1" x="0" y="0"/>
                     </get-item>
                 </set-val-95-7>
-                <set-xy comment="false" x="26" y="130">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="0"/>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <times comment="false" id="0" x="0" y="0">
-                            <get-val-95-6 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="20"/>
-                        </times>
-                        <int id="1" val="50"/>
-                    </plus>
-                </set-xy>
-                <set-xy comment="false" x="26" y="172">
+                <if comment="false" x="26" y="120">
+                    <group eventID="23" id="-1">
+                        <set-xy comment="false" x="37" y="150">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <neg comment="false" id="0" x="0" y="0">
+                                        <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                                    </neg>
+                                    <int id="1" val="20"/>
+                                </times>
+                                <int id="1" val="100"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <get-val-95-32 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="6"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="209">
+                    <group eventID="23" id="-1">
+                        <set-xy comment="false" x="37" y="229">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-val-95-6 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="20"/>
+                                </times>
+                                <int id="1" val="100"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                </else>
+                <set-xy comment="false" x="26" y="283">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
                     <minus comment="false" id="2" x="0" y="0">
