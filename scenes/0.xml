@@ -135,8 +135,25 @@
             <prop id="27" list="0" val="0"/>
             <prop id="28" list="0" val="0"/>
             <prop id="29" list="0" val="0.0"/>
-            <prop id="30" list="1" val=""/>
-            <prop id="31" list="1" val=""/>
+            <prop id="30" list="0" val=""/>
+            <prop id="31" list="0" val=""/>
+            <prop id="32" list="0" val="0"/>
+            <prop id="33" list="1" val="">
+                <number order="0" value="0.0"/>
+                <number order="1" value="1.73"/>
+                <number order="2" value="3.0"/>
+                <number order="3" value="3.88"/>
+                <number order="4" value="4.1"/>
+                <number order="5" value="4.0"/>
+            </prop>
+            <prop id="34" list="1" val="">
+                <number order="0" value="0.0"/>
+                <number order="1" value="1.0"/>
+                <number order="2" value="2.0"/>
+                <number order="3" value="3.0"/>
+                <number order="4" value="4.0"/>
+                <number order="5" value="5.0"/>
+            </prop>
         </s>
     </snippets>
     <terrain/>

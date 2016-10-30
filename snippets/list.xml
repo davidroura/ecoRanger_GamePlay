@@ -132,7 +132,7 @@
             <event displayName="player - can" enabled="true" id="8" name="event-collide-typetotype" order="9" repeats="true"/>
             <event displayName="dozer - rock" enabled="true" id="9" name="event-collide-typetotype" order="4" repeats="true"/>
             <event displayName="dozer - bottle" enabled="true" id="10" name="event-collide-typetotype" order="5" repeats="false"/>
-            <event displayName="dozer - banana" enabled="true" id="11" name="event-collide-typetotype" order="6" repeats="true"/>
+            <event displayName="dozer - banana" enabled="true" id="11" name="event-collide-typetotype" order="6" repeats="false"/>
             <event displayName="tookBanana" enabled="true" id="12" name="event-custom" order="8" repeats="true"/>
             <event displayName="dozer - can" enabled="true" id="13" name="event-collide-typetotype" order="7" repeats="true"/>
             <event displayName="distance" enabled="true" id="14" name="event-custom" order="18" repeats="true"/>
@@ -594,11 +594,10 @@
         <number default="5.0" defaultValue="5.0" desc="Only used when &lt;var&gt;Easing&lt;/var&gt; is selected.&lt;br /&gt;&#10;The actor will move at least at this speed. The actual speed depends on the distance to the target. The maximum speed is &lt;var&gt;Minimum Easing Speed&lt;/var&gt; plus &lt;var&gt;Speed&lt;/var&gt;. The actor will move at maximum speed if it is in the opposite diagonal corner of the target." dropdown="" fullname="Minimum Easing Speed" hidden="false" id="9" name="_MinimumEasingSpeed" order="11"/>
         <boolean default="true" defaultValue="true" desc="If selected, the actor will stop moving when colliding with the target actor.&lt;br /&gt;&#10;If unselected, the actor will instead continue to  and push the target around." dropdown="" fullname="Stop when Colliding" hidden="false" id="11" name="_StopwhenColliding" order="9"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Collided" hidden="true" id="12" name="_Collided" order="5"/>
-        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="suckingSpeed" hidden="false" id="13" name="_suckingSpeed" order="12"/>
+        <number default=".3" defaultValue=".3" desc="" dropdown="" fullname="suckingSpeed" hidden="false" id="13" name="_suckingSpeed" order="12"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_95_95_spawnHandler" classname="scripts.Design_95_95_spawnHandler" desc="" description="" design="true" drawOrder="0" id="95" name="spawnHandler" oid="-1" package="scripts" shared="false" type="scene">
@@ -669,6 +668,13 @@
         <events>
             <event displayName="ActorCreated" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
             <event displayName="ActorKilled" enabled="true" id="2" name="event-actor-create-kill" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="143" attachedevent="true" class="scripts.ActorEvents_143" classname="scripts.ActorEvents_143" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="99" name="ActorEvents_143" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
 </pack>

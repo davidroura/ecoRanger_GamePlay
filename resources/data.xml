@@ -154,6 +154,14 @@
             </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="99" fixedrot="true" fric="0.2" gid="3" id="143" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gEffect_WirlWind" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="144" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="99" id="144" name="gEffect_WirlWind" shared="false" width="113">
+        <anim across="1" down="1" durations="100" height="99" id="0" loop="true" name="Animation 0" numframes="1" originx="56" originy="49" sync="false" version="2" width="113">
+            <poly data="4,0,0,113,0,113,99,0,99" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="6" id="10" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_banana" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="11" static="false">
         <snippets>
             <s enabled="true" id="98">
