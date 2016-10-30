@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,49 +70,19 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_1 extends ActorScript
+class SceneEvents_16 extends SceneScript
 {
-	public var _DistanceX:Float;
-	public var _DistanceY:Float;
-	public var _Distance:Float;
-	public var _Direction:Float;
-	public var _MinimumEasingSpeed:Float;
-	public var _Speed:Float;
-	public var _Margin:Float;
-	public var _ScreenDiagonal:Float;
-	public var _Easing:Bool;
-	public var _StopwhenColliding:Bool;
-	public var _Collided:Bool;
-	public var _screenDiagonal:Float;
+	public var _onPad:Bool;
+	public var _trashType:Float;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Distance X", "_DistanceX");
-		_DistanceX = 0.0;
-		nameMap.set("Distance Y", "_DistanceY");
-		_DistanceY = 0.0;
-		nameMap.set("Distance", "_Distance");
-		_Distance = 0.0;
-		nameMap.set("Direction", "_Direction");
-		_Direction = 0.0;
-		nameMap.set("Minimum Easing Speed", "_MinimumEasingSpeed");
-		_MinimumEasingSpeed = 5.0;
-		nameMap.set("Speed", "_Speed");
-		_Speed = 30.0;
-		nameMap.set("Margin", "_Margin");
-		_Margin = 0.0;
-		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
-		_ScreenDiagonal = 0.0;
-		nameMap.set("Easing", "_Easing");
-		_Easing = true;
-		nameMap.set("Stop when Colliding", "_StopwhenColliding");
-		_StopwhenColliding = true;
-		nameMap.set("Collided", "_Collided");
-		_Collided = false;
-		nameMap.set("screenDiagonal", "_screenDiagonal");
-		_screenDiagonal = 0.0;
+		super();
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
+		nameMap.set("trashType", "_trashType");
+		_trashType = 0.0;
 		
 	}
 	
@@ -119,16 +90,23 @@ class ActorEvents_1 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + "Animation Up");
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		runPeriodically(1000 * randomFloatBetween(.5, 1.5), function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled)
+			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
+			propertyChanged("_trashType", _trashType);
+			if((_trashType == 0))
 			{
-				Engine.engine.setGameAttribute("playerXPos", actor.getX());
+				createRecycledActor(getActorType(131), 135, 5, Script.FRONT);
 			}
-		});
+			if((_trashType == 1))
+			{
+				createRecycledActor(getActorType(137), 135, 5, Script.FRONT);
+			}
+			if((_trashType == 2))
+			{
+				createRecycledActor(getActorType(139), 135, 5, Script.FRONT);
+			}
+		}, null);
 		
 	}
 	

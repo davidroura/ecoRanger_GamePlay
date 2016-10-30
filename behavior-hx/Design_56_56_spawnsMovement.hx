@@ -69,18 +69,37 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_12 extends ActorScript
+class Design_56_56_spawnsMovement extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
+		actor.setXVelocity(Engine.engine.getGameAttribute("lateralSpeed"));
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
+				actor.setXVelocity(Engine.engine.getGameAttribute("lateralSpeed"));
+				if((actor.getY() > (getScreenHeight() + 0)))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
 		
 	}
 	

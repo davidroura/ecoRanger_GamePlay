@@ -20,7 +20,7 @@
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="213" id="73" name="bridge" shared="false" width="320">
         <anim across="1" down="1" durations="100" height="213" id="0" loop="true" name="left" numframes="1" originx="160" originy="76" sync="false" version="2" width="320">
-            <poly data="4,0,68,2,111,44,110,43,68" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,0,68,2,111,44,110,43,68" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="true"/>
             <poly data="4,112,69,113,109,318,180,322,113" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="213" id="1" loop="true" name="right" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
@@ -257,6 +257,18 @@
             </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="100" fixedrot="true" fric="0.2" gid="3" id="145" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Mud" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="146" static="false">
+        <snippets>
+            <s enabled="true" id="56">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="78" id="146" name="gItem_Mud" shared="false" width="85">
+        <anim across="1" down="1" durations="100" height="78" id="0" loop="true" name="Animation 0" numframes="1" originx="42" originy="39" sync="false" version="2" width="85">
+            <poly data="5,12,27,14,48,33,56,69,39,61,24" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="6" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
         <snippets>
             <s enabled="true" id="98">
@@ -289,6 +301,16 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="Animation 1"/>
             </s>
+            <s enabled="true" id="98">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+            <s enabled="true" id="56">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="52" fixedrot="true" fric="0.2" gid="3" id="70" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_tree" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="71" static="false">
+        <snippets>
             <s enabled="true" id="98">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -351,16 +373,6 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="62" fixedrot="false" fric="0.2" gid="3" id="83" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_tiltRight" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="84" static="false">
         <snippets/>
-    </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="52" fixedrot="true" fric="0.2" gid="3" id="70" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_tree" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="71" static="false">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-            <s enabled="true" id="56">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="78" fixedrot="false" fric="0.2" gid="3" id="119" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_TutorialBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="120" static="true">
         <snippets>

@@ -30,15 +30,9 @@
                     <int id="1" val="0"/>
                     <get-game-val-22 comment="false" id="2" x="0" y="0"/>
                 </set-dxy>
-                <print comment="false" x="26" y="104">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="scene Speed: "/>
-                        <get-game-val-3 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                </print>
-                <if comment="false" x="26" y="134">
+                <if comment="false" x="26" y="104">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="37" y="177">
+                        <die comment="false" x="37" y="147">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
