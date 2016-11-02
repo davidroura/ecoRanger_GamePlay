@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="16" id="0">
-        <draw comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <comment-short comment="false" x="26" y="40">
-                    <int id="0" val="game stats"/>
-                </comment-short>
-                <set-font-new comment="false" x="26" y="60">
-                    <font eid="136" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="87">
-                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="140"/>
-                    <int id="2" val="7"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="112">
-                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="110"/>
-                    <int id="2" val="7"/>
-                </draw-text>
-                <set-font-new comment="false" x="26" y="137">
-                    <font eid="135" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="164">
-                    <get-game-val-48 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="150"/>
-                    <int id="2" val="150"/>
-                </draw-text>
-            </group>
-        </draw>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <event-type-region comment="false" x="15" y="15">
             <group eventID="1" id="-1">
@@ -44,29 +13,6 @@
         </event-type-region>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="17" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="17" id="-1">
-                <periodic comment="false" x="26" y="40">
-                    <group eventID="17" id="-1">
-                        <create-actor-on-layer comment="false" x="37" y="67">
-                            <actortype eid="145" id="0"/>
-                            <randint comment="false" id="1" x="0" y="0">
-                                <int id="0" val="10"/>
-                                <int id="1" val="150"/>
-                            </randint>
-                            <int id="2" val="-5"/>
-                            <int id="3" val="1"/>
-                            <int id="4" val="gamePlay"/>
-                        </create-actor-on-layer>
-                    </group>
-                    <int id="0" val="3"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
-            </group>
-        </init>
-    </group>
-    <group eventID="17" id="-1"/>
     <group eventID="2" id="0">
         <event-type-region comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -389,4 +335,96 @@
         </event-custom>
     </group>
     <group eventID="14" id="-1"/>
+    <group eventID="16" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="game stats"/>
+                </comment-short>
+                <set-font-new comment="false" x="26" y="60">
+                    <font eid="136" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="87">
+                    <get-game-val-6 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="140"/>
+                    <int id="2" val="7"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="112">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="110"/>
+                    <int id="2" val="7"/>
+                </draw-text>
+                <set-font-new comment="false" x="26" y="137">
+                    <font eid="135" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="164">
+                    <get-game-val-48 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="150"/>
+                    <int id="2" val="150"/>
+                </draw-text>
+                <set-font-new comment="false" x="26" y="189">
+                    <font eid="135" id="0"/>
+                </set-font-new>
+                <print comment="false" x="26" y="216">
+                    <int id="0" val="Here***"/>
+                </print>
+                <draw-text comment="false" x="26" y="236">
+                    <int id="0" val="Distance!"/>
+                    <int id="1" val="150"/>
+                    <int id="2" val="180"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="256">
+                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="150"/>
+                    <int id="2" val="200"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="16" id="1">
+        <else comment="false" x="99" y="444">
+            <group eventID="16" id="-1"/>
+        </else>
+    </group>
+    <group eventID="16" id="4">
+        <if comment="false" x="451" y="341">
+            <group eventID="16" id="-1"/>
+            <and comment="false" id="0" x="0" y="0">
+                <more comment="false" id="0" x="0" y="0">
+                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="40"/>
+                </more>
+                <lesseq comment="false" id="1" x="0" y="0">
+                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="60"/>
+                </lesseq>
+            </and>
+        </if>
+    </group>
+    <group eventID="16" id="-1">
+        <get-game-val-37 comment="false" x="299" y="423"/>
+    </group>
+    <group eventID="17" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="17" id="-1">
+                <periodic comment="false" x="26" y="40">
+                    <group eventID="17" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="67">
+                            <actortype eid="145" id="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="10"/>
+                                <int id="1" val="150"/>
+                            </randint>
+                            <int id="2" val="-5"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                    </group>
+                    <int id="0" val="3"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
+            </group>
+        </init>
+    </group>
+    <group eventID="17" id="-1"/>
 </groups>
