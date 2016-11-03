@@ -382,9 +382,12 @@
     <group eventID="12" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="12" id="-1">
-                <if comment="false" x="26" y="40">
+                <set-game-val-2 comment="false" x="26" y="40">
+                    <int id="0" val="10"/>
+                </set-game-val-2>
+                <if comment="false" x="26" y="60">
                     <group eventID="12" id="-1">
-                        <set-val-8-16 comment="false" x="37" y="65">
+                        <set-val-8-16 comment="false" x="37" y="85">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-8-16 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="12"/>
@@ -434,7 +437,7 @@
             <ACTOR eid="lastcreated" id="2"/>
         </dolater>
     </group>
-    <group eventID="12" id="3">
+    <group eventID="12" id="2">
         <set-game-val-3 comment="false" x="140" y="212">
             <plus comment="false" id="0" x="0" y="0">
                 <get-game-val-3 comment="false" id="0" x="0" y="0"/>
@@ -443,11 +446,6 @@
         </set-game-val-3>
     </group>
     <group eventID="12" id="4">
-        <set-game-val-2 comment="false" x="363" y="129">
-            <int id="0" val="10"/>
-        </set-game-val-2>
-    </group>
-    <group eventID="12" id="7">
         <set-game-val-17 comment="false" x="162" y="300">
             <true comment="false" id="0" x="0" y="0"/>
         </set-game-val-17>

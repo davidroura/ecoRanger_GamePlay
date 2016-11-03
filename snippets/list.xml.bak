@@ -124,7 +124,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="rockCollision" hidden="false" id="13" name="_rockCollision" order="11"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="mudCollision" hidden="false" id="14" name="_mudCollision" order="12"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="waterCollision" hidden="false" id="15" name="_waterCollision" order="13"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>

@@ -124,7 +124,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="rockCollision" hidden="false" id="13" name="_rockCollision" order="11"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="mudCollision" hidden="false" id="14" name="_mudCollision" order="12"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="waterCollision" hidden="false" id="15" name="_waterCollision" order="13"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
@@ -621,7 +621,7 @@
             <number order="5" value="5.0"/>
         </list>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashXPos" hidden="true" id="3" name="_trashXPos" order="1"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="nextDistance" hidden="false" id="35" name="_nextDistance" order="15"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="nextDistance" hidden="false" id="35" name="_nextDistance" order="15"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashXPosWidth" hidden="false" id="4" name="_trashXPosWidth" order="2"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashYPos" hidden="false" id="5" name="_trashYPos" order="3"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="dot1X" hidden="false" id="6" name="_dot1X" order="4"/>

@@ -485,7 +485,7 @@
             <int id="0" val="ocasionalSpawn"/>
         </event-custom>
     </group>
-    <group eventID="21" id="7">
+    <group eventID="21" id="1">
         <set-val-95-26 comment="false" x="85" y="368">
             <get-game-val-37 comment="false" id="0" x="0" y="0"/>
         </set-val-95-26>
