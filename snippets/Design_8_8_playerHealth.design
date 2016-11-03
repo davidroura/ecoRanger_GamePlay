@@ -144,23 +144,43 @@
                                 </if>
                                 <else comment="false" x="48" y="319">
                                     <group eventID="3" id="-1">
-                                        <set-game-val-3 comment="false" x="59" y="339">
-                                            <sqrt comment="false" id="0" x="0" y="0">
-                                                <times comment="false" id="0" x="0" y="0">
-                                                    <int id="0" val="10"/>
-                                                    <get-game-val-28 comment="false" id="1" x="0" y="0"/>
-                                                </times>
-                                            </sqrt>
+                                        <comment-short comment="false" x="59" y="339">
+                                            <int id="0" val="banana boost"/>
+                                        </comment-short>
+                                        <if comment="false" x="59" y="359">
+                                            <group eventID="3" id="-1">
+                                                <set-val-8-16 comment="false" x="70" y="389">
+                                                    <minus comment="false" id="0" x="0" y="0">
+                                                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                                                        <int id="1" val=".05"/>
+                                                    </minus>
+                                                </set-val-8-16>
+                                            </group>
+                                            <lesseq comment="false" id="0" x="0" y="0">
+                                                <int id="0" val="0"/>
+                                                <get-val-8-16 comment="false" id="1" x="0" y="0"/>
+                                            </lesseq>
+                                        </if>
+                                        <set-game-val-3 comment="false" x="59" y="431">
+                                            <plus comment="false" id="0" x="0" y="0">
+                                                <sqrt comment="false" id="0" x="0" y="0">
+                                                    <times comment="false" id="0" x="0" y="0">
+                                                        <int id="0" val="10"/>
+                                                        <get-game-val-28 comment="false" id="1" x="0" y="0"/>
+                                                    </times>
+                                                </sqrt>
+                                                <get-val-8-16 comment="false" id="1" x="0" y="0"/>
+                                            </plus>
                                         </set-game-val-3>
                                     </group>
                                 </else>
-                                <say-this comment="false" x="48" y="386">
+                                <say-this comment="false" x="48" y="483">
                                     <int id="0" val="extraLife"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="406">
+                                <say-this comment="false" x="48" y="503">
                                     <int id="0" val="distance"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="426">
+                                <say-this comment="false" x="48" y="523">
                                     <int id="0" val="bonusCard"/>
                                 </say-this>
                             </group>
@@ -169,15 +189,15 @@
                                 <int id="1" val="0"/>
                             </more>
                         </if>
-                        <else comment="false" x="37" y="458">
+                        <else comment="false" x="37" y="555">
                             <group eventID="3" id="-1">
-                                <set-game-val-30 comment="false" x="48" y="478">
+                                <set-game-val-30 comment="false" x="48" y="575">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-30>
-                                <set-game-val-3 comment="false" x="48" y="503">
+                                <set-game-val-3 comment="false" x="48" y="600">
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
-                                <set-game-val-38 comment="false" x="48" y="523">
+                                <set-game-val-38 comment="false" x="48" y="620">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-38>
                             </group>
@@ -188,40 +208,27 @@
                         <get-game-val-26 comment="false" id="1" x="0" y="0"/>
                     </or>
                 </if>
-                <set-val-8-13 comment="false" x="26" y="572">
+                <set-val-8-13 comment="false" x="26" y="669">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-13>
-                <set-val-8-14 comment="false" x="26" y="597">
+                <set-val-8-14 comment="false" x="26" y="694">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-14>
-                <set-val-8-15 comment="false" x="26" y="622">
+                <set-val-8-15 comment="false" x="26" y="719">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-15>
             </group>
         </step>
     </group>
-    <group eventID="3" id="1">
-        <if comment="false" x="426" y="306">
-            <group eventID="3" id="-1">
-                <comment-short comment="false" x="437" y="331">
-                    <int id="0" val="trying to multiply but it doesn&amp;apos;t work"/>
-                </comment-short>
-                <set-game-val-3 comment="false" x="437" y="351">
-                    <int id="0" val="12"/>
-                </set-game-val-3>
-            </group>
-            <get-val-8-14 comment="false" id="0" x="0" y="0"/>
-        </if>
-        <if comment="false" x="426" y="383">
-            <group eventID="3" id="-1">
-                <set-game-val-3 comment="false" x="437" y="408">
-                    <int id="0" val="8"/>
-                </set-game-val-3>
-            </group>
-            <get-val-8-15 comment="false" id="0" x="0" y="0"/>
-        </if>
+    <group eventID="3" id="-1">
+        <times comment="false" x="378" y="361">
+            <times comment="false" id="0" x="0" y="0">
+                <int id="0" val=""/>
+                <get-game-val-3 comment="false" id="1" x="0" y="0"/>
+            </times>
+            <int id="1" val=".01"/>
+        </times>
     </group>
-    <group eventID="3" id="-1"/>
     <group eventID="5" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -375,61 +382,75 @@
     <group eventID="12" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="12" id="-1">
-                <set-game-val-2 comment="false" x="26" y="40">
-                    <int id="0" val="10"/>
-                </set-game-val-2>
-                <if comment="false" x="26" y="60">
+                <if comment="false" x="26" y="40">
                     <group eventID="12" id="-1">
-                        <set-game-val-3 comment="false" x="37" y="85">
+                        <set-val-8-16 comment="false" x="37" y="65">
                             <plus comment="false" id="0" x="0" y="0">
-                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="5"/>
+                                <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="12"/>
                             </plus>
-                        </set-game-val-3>
-                        <set-game-val-17 comment="false" x="37" y="115">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-17>
-                        <set-val-8-6 comment="false" x="37" y="140">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </plus>
-                        </set-val-8-6>
-                        <dolater comment="false" x="37" y="170">
-                            <group eventID="12" id="-1">
-                                <set-val-8-6 comment="false" x="48" y="197">
-                                    <minus comment="false" id="0" x="0" y="0">
-                                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="1"/>
-                                    </minus>
-                                </set-val-8-6>
-                                <set-game-val-3 comment="false" x="48" y="227">
-                                    <minus comment="false" id="0" x="0" y="0">
-                                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="5"/>
-                                    </minus>
-                                </set-game-val-3>
-                                <if comment="false" x="48" y="257">
-                                    <group eventID="12" id="-1">
-                                        <set-game-val-17 comment="false" x="59" y="287">
-                                            <false comment="false" id="0" x="0" y="0"/>
-                                        </set-game-val-17>
-                                    </group>
-                                    <eq comment="false" id="0" x="0" y="0">
-                                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="0"/>
-                                    </eq>
-                                </if>
-                            </group>
-                            <int id="0" val="2"/>
-                            <ACTOR eid="lastcreated" id="2"/>
-                        </dolater>
+                        </set-val-8-16>
                     </group>
                     <get-val-8-5 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
             <int id="0" val="tookBanana"/>
         </event-custom>
+    </group>
+    <group eventID="12" id="1">
+        <set-val-8-6 comment="false" x="471" y="191">
+            <plus comment="false" id="0" x="0" y="0">
+                <get-val-8-6 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="1"/>
+            </plus>
+        </set-val-8-6>
+        <dolater comment="false" x="471" y="221">
+            <group eventID="12" id="-1">
+                <set-val-8-6 comment="false" x="482" y="248">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-val-8-6>
+                <set-game-val-3 comment="false" x="482" y="278">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="5"/>
+                    </minus>
+                </set-game-val-3>
+                <if comment="false" x="482" y="308">
+                    <group eventID="12" id="-1">
+                        <set-game-val-17 comment="false" x="493" y="338">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-17>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+            <int id="0" val="2"/>
+            <ACTOR eid="lastcreated" id="2"/>
+        </dolater>
+    </group>
+    <group eventID="12" id="3">
+        <set-game-val-3 comment="false" x="140" y="212">
+            <plus comment="false" id="0" x="0" y="0">
+                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="5"/>
+            </plus>
+        </set-game-val-3>
+    </group>
+    <group eventID="12" id="4">
+        <set-game-val-2 comment="false" x="363" y="129">
+            <int id="0" val="10"/>
+        </set-game-val-2>
+    </group>
+    <group eventID="12" id="7">
+        <set-game-val-17 comment="false" x="162" y="300">
+            <true comment="false" id="0" x="0" y="0"/>
+        </set-game-val-17>
     </group>
     <group eventID="12" id="-1"/>
     <group eventID="13" id="0">

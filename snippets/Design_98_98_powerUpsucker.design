@@ -58,13 +58,13 @@
                                     <ACTOR eid="this" id="0"/>
                                     <get-val-94-5 comment="false" id="1" x="0" y="0"/>
                                     <plus comment="false" id="2" x="0" y="0">
-                                        <get-val-94-13 comment="false" id="0" x="0" y="0"/>
+                                        <int id="0" val=".03"/>
                                         <get-game-val-3 comment="false" id="1" x="0" y="0"/>
                                     </plus>
                                 </setvel>
                                 <set-val-94-13 comment="false" x="48" y="291">
                                     <times comment="false" id="0" x="0" y="0">
-                                        <get-val-94-13 comment="false" id="0" x="0" y="0"/>
+                                        <int id="0" val=".03"/>
                                         <int id="1" val="2"/>
                                     </times>
                                 </set-val-94-13>
@@ -80,10 +80,5 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1">
-        <plus comment="false" x="196" y="340">
-            <int id="0" val=""/>
-            <int id="1" val=".3"/>
-        </plus>
-    </group>
+    <group eventID="1" id="-1"/>
 </groups>

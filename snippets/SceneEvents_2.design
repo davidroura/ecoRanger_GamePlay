@@ -36,11 +36,14 @@
             <group eventID="5" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="5" id="-1">
-                        <play-sound4 comment="false" x="37" y="70">
+                        <set-volume comment="false" x="37" y="70">
+                            <int id="0" val="50"/>
+                        </set-volume>
+                        <play-sound4 comment="false" x="37" y="90">
                             <int id="0" val="0"/>
                             <sound eid="121" id="1"/>
                         </play-sound4>
-                        <set-game-val-31 comment="false" x="37" y="97">
+                        <set-game-val-31 comment="false" x="37" y="117">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-31>
                     </group>
@@ -48,7 +51,7 @@
                         <get-game-val-31 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
-                <save-game comment="false" x="26" y="134">
+                <save-game comment="false" x="26" y="154">
                     <group eventID="5" id="-1"/>
                 </save-game>
             </group>
