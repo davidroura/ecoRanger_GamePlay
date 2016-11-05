@@ -40,7 +40,7 @@
                     </not>
                 </if>
             </group>
-            <ACTOR eid="2" id="0"/>
+            <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>
         </event-mouse-enter-exit-actor>
     </group>
@@ -52,7 +52,7 @@
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-36>
             </group>
-            <ACTOR eid="2" id="0"/>
+            <ACTOR eid="this" id="0"/>
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>

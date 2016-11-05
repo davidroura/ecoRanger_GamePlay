@@ -297,50 +297,53 @@
     <group eventID="13" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="13" id="-1">
-                <set-val-0-3 comment="false" x="26" y="40">
+                <set-game-val-46 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-46>
+                <set-val-0-3 comment="false" x="26" y="65">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-6 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-val-0-3>
-                <set-game-val-7 comment="false" x="26" y="70">
+                <set-game-val-7 comment="false" x="26" y="95">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-7 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-1 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-7>
-                <create-bglayer-from-bg comment="false" x="26" y="100">
+                <create-bglayer-from-bg comment="false" x="26" y="125">
                     <int id="0" val="UIEnd"/>
                     <int id="1" val="EndUI"/>
                     <int id="2" val="5"/>
                 </create-bglayer-from-bg>
-                <create-actor3 comment="false" x="26" y="120">
+                <create-actor3 comment="false" x="26" y="145">
                     <actortype eid="49" id="0"/>
                     <int id="1" val="170"/>
                     <int id="2" val="280"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <create-actor3 comment="false" x="26" y="147">
+                <create-actor3 comment="false" x="26" y="172">
                     <actortype eid="51" id="0"/>
                     <int id="1" val="50"/>
                     <int id="2" val="280"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <set-game-val-8 comment="false" x="26" y="174">
+                <set-game-val-8 comment="false" x="26" y="199">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-8 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-6 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-8>
-                <if comment="false" x="26" y="204">
+                <if comment="false" x="26" y="229">
                     <group eventID="13" id="-1">
-                        <create-actor3 comment="false" x="37" y="234">
+                        <create-actor3 comment="false" x="37" y="259">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="-10"/>
                             <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="261">
+                        <setanim comment="false" x="37" y="286">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                         </setanim>
@@ -350,15 +353,15 @@
                         <int id="1" val="1"/>
                     </more>
                 </if>
-                <if comment="false" x="26" y="300">
+                <if comment="false" x="26" y="325">
                     <group eventID="13" id="-1">
-                        <create-actor3 comment="false" x="37" y="330">
+                        <create-actor3 comment="false" x="37" y="355">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="100"/>
                             <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="357">
+                        <setanim comment="false" x="37" y="382">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="2"/>
                         </setanim>
@@ -368,15 +371,15 @@
                         <int id="1" val="2"/>
                     </more>
                 </if>
-                <if comment="false" x="26" y="396">
+                <if comment="false" x="26" y="421">
                     <group eventID="13" id="-1">
-                        <create-actor3 comment="false" x="37" y="426">
+                        <create-actor3 comment="false" x="37" y="451">
                             <actortype eid="17" id="0"/>
                             <int id="1" val="190"/>
                             <int id="2" val="40"/>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setanim comment="false" x="37" y="453">
+                        <setanim comment="false" x="37" y="478">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="3"/>
                         </setanim>
@@ -386,13 +389,13 @@
                         <int id="1" val="3"/>
                     </more>
                 </if>
-                <save-game comment="false" x="26" y="492">
+                <save-game comment="false" x="26" y="517">
                     <group eventID="13" id="-1">
-                        <if comment="false" x="37" y="517">
+                        <if comment="false" x="37" y="542">
                             <group eventID="13" id="-1"/>
                             <save-success comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="574">
+                        <else comment="false" x="37" y="599">
                             <group eventID="13" id="-1"/>
                         </else>
                     </group>

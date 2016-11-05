@@ -100,6 +100,13 @@ class ActorEvents_63 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		runLater(1000 * 10, function(timeTask:TimedTask):Void
+		{
+			recycleActor(actor);
+			Engine.engine.setGameAttribute("botOn", false);
+		}, actor);
+		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{

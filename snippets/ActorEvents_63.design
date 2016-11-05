@@ -76,4 +76,23 @@
         </draw>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <die comment="false" x="37" y="67">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <set-game-val-46 comment="false" x="37" y="94">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-46>
+                    </group>
+                    <int id="0" val="10"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

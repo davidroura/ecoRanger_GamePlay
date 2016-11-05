@@ -89,7 +89,7 @@ class ActorEvents_108 extends ActorScript
 	{
 		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
@@ -109,7 +109,7 @@ class ActorEvents_108 extends ActorScript
 		});
 		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(2), function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{

@@ -373,8 +373,9 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="dozerRecharge" hidden="false" id="6" name="_dozerRecharge" order="5"/>
         <blocks/>
         <events>
-            <event displayName="dozer - rock" enabled="true" id="3" name="event-collide-typetotype" order="7" repeats="true"/>
+            <event displayName="dozer - rock" enabled="true" id="3" name="event-collide-typetotype" order="8" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="4" name="draw" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="65" attachedevent="true" class="scripts.ActorEvents_65" classname="scripts.ActorEvents_65" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="49" name="ActorEvents_65" oid="-1" package="scripts." shared="false" type="actor">
