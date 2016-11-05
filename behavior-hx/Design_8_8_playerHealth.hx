@@ -333,7 +333,7 @@ class Design_8_8_playerHealth extends SceneScript
 					{
 						if(!(Engine.engine.getGameAttribute("gadgetPower")))
 						{
-							Engine.engine.setGameAttribute("playerHealth", (Engine.engine.getGameAttribute("playerHealth") - _healthFactor));
+							Engine.engine.setGameAttribute("playerHealth", (Engine.engine.getGameAttribute("playerHealth") - (_healthFactor * Engine.engine.getGameAttribute("fuelEfficiency"))));
 						}
 						/* gadget power slows down time */
 						if(Engine.engine.getGameAttribute("gadgetPower"))

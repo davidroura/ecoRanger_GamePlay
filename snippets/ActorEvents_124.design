@@ -27,7 +27,23 @@
                         </eq>
                     </or>
                 </if>
-                <die comment="false" x="26" y="127">
+                <if comment="false" x="26" y="127">
+                    <group eventID="1" id="-1">
+                        <set-game-val-51 comment="false" x="37" y="165">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-game-val-51 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val=".75"/>
+                            </times>
+                        </set-game-val-51>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="megaFuel"/>
+                    </eq>
+                </if>
+                <die comment="false" x="26" y="207">
                     <ACTOR eid="this" id="0"/>
                 </die>
             </group>

@@ -89,13 +89,15 @@ class SceneEvents_8 extends SceneScript
 	public function _customEvent_createList():Void
 	{
 		Engine.engine.setGameAttribute("upgradeList", new Array<Dynamic>());
-		/* "these additions have to match upgradeButtonActor's animation names" */ Engine.engine.getGameAttribute("upgradeList").push("stampede");
+		/* "these additions have to match upgradeButtonActor's animation order and names" */ Engine.engine.getGameAttribute("upgradeList").push("megaFuel");
+		Engine.engine.getGameAttribute("upgradeList").push("stampede");
 		Engine.engine.getGameAttribute("upgradeList").push("windTunnel");
 		Engine.engine.getGameAttribute("upgradeList").push("stampedeII");
 		Engine.engine.getGameAttribute("upgradeList").push("windTunnelII");
 		_upgradeCost = new Array<Dynamic>();
 		propertyChanged("_upgradeCost", _upgradeCost);
-		/* "these additions have to match upgradeButtonActor's animation names" */ _upgradeCost.push(50);
+		/* "these additions have to match upgradeButtonActor's animation order" */ _upgradeCost.push(0);
+		_upgradeCost.push(50);
 		_upgradeCost.push(65);
 		_upgradeCost.push(60);
 		_upgradeCost.push(85);

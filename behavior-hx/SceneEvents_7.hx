@@ -97,7 +97,7 @@ class SceneEvents_7 extends SceneScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				getActor(1).growTo(30/100, 30/100, 0, Linear.easeNone);
+				getActor(1).growTo(95/100, 95/100, .1, Linear.easeNone);
 			}
 		});
 		

@@ -18,9 +18,9 @@
             <group eventID="2" id="-1">
                 <scaleTo comment="false" x="26" y="42">
                     <ACTOR eid="1" id="0"/>
-                    <int id="1" val="30"/>
-                    <int id="2" val="30"/>
-                    <int id="3" val="0"/>
+                    <int id="1" val="95"/>
+                    <int id="2" val="95"/>
+                    <int id="3" val=".1"/>
                     <int id="4" val="0"/>
                 </scaleTo>
             </group>

@@ -118,6 +118,7 @@
         <number cid="1" id="20" name="playerXPos" save="true" value="0.0"/>
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
+        <number cid="2" id="51" name="fuelEfficiency" save="true" value="1"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
         <number cid="2" id="18" name="dozerStrength" save="true" value="1.0"/>

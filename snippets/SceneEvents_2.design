@@ -73,8 +73,16 @@
     <group eventID="6" id="-1"/>
     <group eventID="9" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
-            <group eventID="9" id="-1"/>
-            <ACTOR eid="1" id="0"/>
+            <group eventID="9" id="-1">
+                <scaleTo comment="false" x="26" y="42">
+                    <ACTOR eid="4" id="0"/>
+                    <int id="1" val="90"/>
+                    <int id="2" val="90"/>
+                    <int id="3" val=".1"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+            <ACTOR eid="4" id="0"/>
             <int id="1" val="2"/>
         </event-mouse-enter-exit-actor>
     </group>
@@ -86,13 +94,20 @@
                 <set-game-val-31 comment="false" x="26" y="62">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-31>
-                <scene-change-through comment="false" x="26" y="87">
+                <scaleTo comment="false" x="26" y="87">
+                    <ACTOR eid="4" id="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="10"/>
+                    <int id="3" val=".02"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <scene-change-through comment="false" x="26" y="114">
                     <scene eid="0" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>
                 </scene-change-through>
             </group>
-            <ACTOR eid="1" id="0"/>
+            <ACTOR eid="4" id="0"/>
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
