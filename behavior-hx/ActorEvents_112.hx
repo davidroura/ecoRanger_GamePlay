@@ -93,10 +93,16 @@ class ActorEvents_112 extends ActorScript
 				if(!(Engine.engine.getGameAttribute("botOn")))
 				{
 					Engine.engine.setGameAttribute("clickingButton", true);
-					if((actor.getAnimation() == "On"))
+					if((actor.getAnimation() == "gadgetOn"))
 					{
-						actor.setAnimation("" + "Off");
+						actor.setAnimation("" + "gadgetOff");
 						createRecycledActor(getActorType(141), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+					if((actor.getAnimation() == "planterOn"))
+					{
+						actor.setAnimation("" + "planterOff");
+						createRecycledActor(getActorType(151), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
 					}
 				}

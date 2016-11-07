@@ -90,6 +90,12 @@
         <anim across="1" down="1" durations="100" height="88" id="9" loop="true" name="megaFuelGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
             <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 9" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="88" id="10" loop="true" name="planter" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 10" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="88" id="11" loop="true" name="planterGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
+            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 11" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="64" name="dozerTop" shared="false" width="59">
         <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="61" originy="106" sync="false" version="2" width="59">
@@ -109,11 +115,7 @@
     </sprite>
     <music atlasID="0" desc="" id="103" loop="true" name="gamePlay" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="48" fixedrot="true" fric="0.2" gid="6" id="63" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_Dozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="64" static="false">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="97" fixedrot="true" fric="0.2" gid="5" id="141" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_Gadget" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="142" static="false">
         <snippets>
@@ -121,16 +123,21 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="0"/>
             </s>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
         </snippets>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="103" fixedrot="true" fric="0.2" gid="5" id="151" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_Planter" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="152" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="152" name="gBot_Planter" shared="false" width="59">
+        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="main" numframes="1" originx="29" originy="36" sync="false" version="2" width="59">
+            <poly data="4,0,0,59,0,59,73,0,73" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="80" id="1" loop="true" name="dirt" numframes="1" originx="30" originy="40" sync="false" version="2" width="61">
+            <poly data="4,0,0,61,0,61,80,0,80" density="0.1" fric="0.2" gid="-1000" id="0" name="dirt" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="1.0" gid="0" id="1" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_spaceShip" oid="-1" pausable="true" physicsMode="0" rest="0.05" shared="false" sprite="2" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="4">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -168,9 +175,6 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="6" id="10" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_banana" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="11" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -193,17 +197,10 @@
         </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="55" fixedrot="true" fric="0.2" gid="3" id="74" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_bonusCard" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="75" static="false">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="54" fixedrot="true" fric="0.2" gid="3" id="72" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_bridge" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="73" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="54" fixedrot="true" fric="0.2" gid="7" id="72" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_bridge" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="73" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -211,9 +208,6 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="6" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -237,9 +231,6 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="false" fric="0.2" gid="6" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_GlassBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -275,9 +266,6 @@
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="6" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -305,9 +293,6 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="Animation 1"/>
             </s>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
@@ -315,62 +300,31 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="52" fixedrot="true" fric="0.2" gid="3" id="70" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_tree" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="71" static="false">
         <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="77" fixedrot="false" fric="0.2" gid="3" id="116" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_fuelBar" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="117" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="42" fixedrot="false" fric="0.2" gid="2" id="51" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_homeButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="52" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="73" fixedrot="false" fric="0.2" gid="3" id="108" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpDozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="109" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="76" fixedrot="false" fric="0.2" gid="3" id="112" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpGadget" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="113" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="76" fixedrot="false" fric="0.2" gid="3" id="112" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpLeft" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="113" static="true">
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="75" fixedrot="false" fric="0.2" gid="3" id="110" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpSucker" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="111" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="41" fixedrot="false" fric="0.2" gid="2" id="49" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_retryButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="50" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="20" fixedrot="true" fric="0.2" gid="3" id="17" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_star" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="18" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="61" fixedrot="false" fric="0.2" gid="3" id="81" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_tiltLeft" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="82" static="false">
         <snippets/>
@@ -379,18 +333,10 @@
         <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="78" fixedrot="false" fric="0.2" gid="3" id="119" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_TutorialBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="120" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="79" fixedrot="false" fric="0.2" gid="3" id="122" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_TutorialBG2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="123" static="true">
-        <snippets>
-            <s enabled="true" id="98">
-                <prop id="2147483647" list="0" val="thisactor"/>
-            </s>
-        </snippets>
+        <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="88" id="52" name="homeButton" shared="false" width="88">
         <anim across="1" down="1" durations="100" height="88" id="0" loop="true" name="Animation 0" numframes="1" originx="37" originy="38" sync="false" version="2" width="88"/>
@@ -460,8 +406,14 @@
         <anim across="1" down="1" durations="100" height="63" id="1" loop="true" name="Off" numframes="1" originx="29" originy="31" sync="false" version="2" width="59"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="66" id="113" name="powerUpGadget" shared="false" width="61">
-        <anim across="1" down="1" durations="100" height="66" id="0" loop="true" name="On" numframes="1" originx="30" originy="33" sync="false" version="2" width="61"/>
-        <anim across="1" down="1" durations="100" height="66" id="1" loop="true" name="Off" numframes="1" originx="30" originy="33" sync="false" version="2" width="61"/>
+        <anim across="1" down="1" durations="100" height="66" id="0" loop="true" name="gadgetOn" numframes="1" originx="30" originy="33" sync="false" version="2" width="61"/>
+        <anim across="1" down="1" durations="100" height="66" id="1" loop="true" name="gadgetOff" numframes="1" originx="30" originy="33" sync="false" version="2" width="61"/>
+        <anim across="1" down="1" durations="100" height="66" id="2" loop="true" name="planterOn" numframes="1" originx="30" originy="33" sync="false" version="2" width="61">
+            <poly data="4,0,0,61,0,61,66,0,66" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="66" id="3" loop="true" name="planterOff" numframes="1" originx="30" originy="33" sync="false" version="2" width="61">
+            <poly data="4,0,0,61,0,61,66,0,66" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="34" id="111" name="powerUpSucker" shared="false" width="116">
         <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="On" numframes="1" originx="58" originy="17" sync="false" version="2" width="116"/>
@@ -531,11 +483,20 @@
         <anim across="1" down="1" durations="100" height="267" id="1" loop="true" name="Animation Up Boosted" numframes="1" originx="105" originy="133" sync="false" version="2" width="210">
             <poly data="4,40,19,190,19,190,221,40,221" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation Up Boosted" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="80" id="2" loop="true" name="dirt" numframes="1" originx="30" originy="40" sync="false" version="2" width="61">
+            <poly data="4,0,0,61,0,61,80,0,80" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="170" id="18" name="star" shared="false" width="139">
         <anim across="1" down="1" durations="100" height="170" id="0" loop="true" name="1" numframes="1" originx="69" originy="85" sync="false" version="2" width="139"/>
         <anim across="1" down="1" durations="100" height="181" id="1" loop="true" name="2" numframes="1" originx="109" originy="90" sync="false" version="2" width="218"/>
         <anim across="1" down="1" durations="100" height="166" id="2" loop="true" name="3" numframes="1" originx="81" originy="83" sync="false" version="2" width="162"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="104" fixedrot="false" fric="0.2" gid="2" id="153" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="starPop" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="154" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="270" id="154" name="starPop" shared="false" width="480">
+        <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100,100,100" height="810" id="0" loop="false" name="main" numframes="12" originx="240" originy="135" sync="false" version="2" width="1920"/>
     </sprite>
     <music atlasID="0" desc="" id="78" loop="true" name="storySound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="80" loop="true" name="superecoheroes" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -604,6 +565,9 @@
         </anim>
         <anim across="1" down="1" durations="100" height="218" id="4" loop="true" name="megaFuel" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
             <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="218" id="5" loop="true" name="Animation 5" numframes="1" originx="115" originy="109" sync="false" version="2" width="231">
+            <poly data="4,0,0,231,0,231,218,0,218" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="24" name="upgradesBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="323" xpf="1.0" ypf="1.0"/>

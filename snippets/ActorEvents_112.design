@@ -12,7 +12,7 @@
                             <group eventID="1" id="-1">
                                 <setanim comment="false" x="48" y="135">
                                     <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="Off"/>
+                                    <int id="1" val="gadgetOff"/>
                                 </setanim>
                                 <create-actor3 comment="false" x="48" y="162">
                                     <actortype eid="141" id="0"/>
@@ -31,7 +31,33 @@
                                 <getanim comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
                                 </getanim>
-                                <int id="1" val="On"/>
+                                <int id="1" val="gadgetOn"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="236">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="274">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="planterOff"/>
+                                </setanim>
+                                <create-actor3 comment="false" x="48" y="301">
+                                    <actortype eid="151" id="0"/>
+                                    <get-game-val-20 comment="false" id="1" x="0" y="0"/>
+                                    <minus comment="false" id="2" x="0" y="0">
+                                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-game-val-46 comment="false" x="48" y="343">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-46>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <int id="1" val="planterOn"/>
                             </eq>
                         </if>
                     </group>

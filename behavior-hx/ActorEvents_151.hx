@@ -69,35 +69,42 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_98_98_quantity extends ActorScript
+class ActorEvents_151 extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Specific Actor ======================== */
-		addWhenCreatedListener(actor, function(list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled)
-			{
-				Engine.engine.setGameAttribute("actorsQuantity", (Engine.engine.getGameAttribute("actorsQuantity") + 1));
-			}
-		});
+			Engine.engine.setGameAttribute("planterPower", true);
+			actor.setAnimation("" + "dirt");
+		}, actor);
 		
-		/* ======================== Specific Actor ======================== */
-		addWhenKilledListener(actor, function(list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("actorsQuantity", (Engine.engine.getGameAttribute("actorsQuantity") - 1));
+				if(Engine.engine.getGameAttribute("botOn"))
+				{
+					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 75));
+					actor.setY((Engine.engine.getGameAttribute("playerYPos") + Engine.engine.getGameAttribute("botOffset")));
+				}
+				else
+				{
+					Engine.engine.setGameAttribute("planterPower", false);
+					Engine.engine.setGameAttribute("botOn", false);
+					recycleActor(actor);
+				}
 			}
 		});
 		

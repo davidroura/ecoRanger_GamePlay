@@ -275,21 +275,28 @@
     <group eventID="7" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <set-game-val-3 comment="false" x="26" y="47">
-                    <int id="0" val="0"/>
-                </set-game-val-3>
-                <set-bg-speed comment="false" x="26" y="67">
-                    <int id="0" val="1"/>
-                    <int id="1" val="bgLong"/>
-                    <get-game-val-22 comment="false" id="2" x="0" y="0"/>
-                    <get-game-val-3 comment="false" id="3" x="0" y="0"/>
-                </set-bg-speed>
-                <set-val-8-13 comment="false" x="26" y="99">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-8-13>
-                <set-game-val-30 comment="false" x="26" y="124">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-30>
+                <if comment="false" x="26" y="47">
+                    <group eventID="7" id="-1">
+                        <set-game-val-3 comment="false" x="37" y="77">
+                            <int id="0" val="0"/>
+                        </set-game-val-3>
+                        <set-bg-speed comment="false" x="37" y="97">
+                            <int id="0" val="1"/>
+                            <int id="1" val="bgLong"/>
+                            <get-game-val-22 comment="false" id="2" x="0" y="0"/>
+                            <get-game-val-3 comment="false" id="3" x="0" y="0"/>
+                        </set-bg-speed>
+                        <set-val-8-13 comment="false" x="37" y="129">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-8-13>
+                        <set-game-val-30 comment="false" x="37" y="154">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-30>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
             <actortype eid="1" id="0"/>
             <actortype eid="12" id="1"/>
@@ -671,21 +678,28 @@
     <group eventID="21" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <set-game-val-3 comment="false" x="26" y="47">
-                    <int id="0" val="9"/>
-                </set-game-val-3>
-                <set-bg-speed comment="false" x="26" y="67">
-                    <int id="0" val="1"/>
-                    <int id="1" val="bgLong"/>
-                    <get-game-val-22 comment="false" id="2" x="0" y="0"/>
-                    <get-game-val-3 comment="false" id="3" x="0" y="0"/>
-                </set-bg-speed>
-                <set-val-8-14 comment="false" x="26" y="99">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-8-14>
-                <set-game-val-30 comment="false" x="26" y="124">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-30>
+                <if comment="false" x="26" y="47">
+                    <group eventID="21" id="-1">
+                        <set-game-val-3 comment="false" x="37" y="77">
+                            <int id="0" val="9"/>
+                        </set-game-val-3>
+                        <set-bg-speed comment="false" x="37" y="97">
+                            <int id="0" val="1"/>
+                            <int id="1" val="bgLong"/>
+                            <get-game-val-22 comment="false" id="2" x="0" y="0"/>
+                            <get-game-val-3 comment="false" id="3" x="0" y="0"/>
+                        </set-bg-speed>
+                        <set-val-8-14 comment="false" x="37" y="129">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-8-14>
+                        <set-game-val-30 comment="false" x="37" y="154">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-30>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
             <actortype eid="1" id="0"/>
             <actortype eid="145" id="1"/>
@@ -695,21 +709,28 @@
     <group eventID="22" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <set-game-val-3 comment="false" x="26" y="47">
-                    <int id="0" val="6"/>
-                </set-game-val-3>
-                <set-bg-speed comment="false" x="26" y="67">
-                    <int id="0" val="1"/>
-                    <int id="1" val="bgLong"/>
-                    <get-game-val-22 comment="false" id="2" x="0" y="0"/>
-                    <get-game-val-3 comment="false" id="3" x="0" y="0"/>
-                </set-bg-speed>
-                <set-val-8-15 comment="false" x="26" y="99">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-8-15>
-                <set-game-val-30 comment="false" x="26" y="124">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-game-val-30>
+                <if comment="false" x="26" y="47">
+                    <group eventID="22" id="-1">
+                        <set-game-val-3 comment="false" x="37" y="77">
+                            <int id="0" val="6"/>
+                        </set-game-val-3>
+                        <set-bg-speed comment="false" x="37" y="97">
+                            <int id="0" val="1"/>
+                            <int id="1" val="bgLong"/>
+                            <get-game-val-22 comment="false" id="2" x="0" y="0"/>
+                            <get-game-val-3 comment="false" id="3" x="0" y="0"/>
+                        </set-bg-speed>
+                        <set-val-8-15 comment="false" x="37" y="129">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-8-15>
+                        <set-game-val-30 comment="false" x="37" y="154">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-30>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
             <actortype eid="1" id="0"/>
             <actortype eid="72" id="1"/>

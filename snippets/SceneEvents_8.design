@@ -187,50 +187,58 @@
                         </add-list>
                         <add-list comment="false" x="37" y="110">
                             <get-game-val-35 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="stampede"/>
+                            <int id="1" val="planter"/>
                         </add-list>
                         <add-list comment="false" x="37" y="135">
                             <get-game-val-35 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="windTunnel"/>
+                            <int id="1" val="stampede"/>
                         </add-list>
                         <add-list comment="false" x="37" y="160">
                             <get-game-val-35 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="stampedeII"/>
+                            <int id="1" val="windTunnel"/>
                         </add-list>
                         <add-list comment="false" x="37" y="185">
+                            <get-game-val-35 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="stampedeII"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="210">
                             <get-game-val-35 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="windTunnelII"/>
                         </add-list>
                     </group>
-                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation order and names"/>
+                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation names"/>
                 </comment-wrapper>
-                <set-val-23-12 comment="false" x="26" y="222">
+                <set-val-23-12 comment="false" x="26" y="247">
                     <create-list comment="false" id="0" x="0" y="0"/>
                 </set-val-23-12>
-                <comment-wrapper comment="false" x="26" y="247">
+                <comment-wrapper comment="false" x="26" y="272">
                     <group eventID="8" id="-1">
-                        <add-list comment="false" x="37" y="267">
+                        <add-list comment="false" x="37" y="292">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="292">
+                        <add-list comment="false" x="37" y="317">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="50"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="317">
+                        <add-list comment="false" x="37" y="342">
+                            <get-val-23-12 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="50"/>
+                        </add-list>
+                        <add-list comment="false" x="37" y="367">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="65"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="342">
+                        <add-list comment="false" x="37" y="392">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="60"/>
                         </add-list>
-                        <add-list comment="false" x="37" y="367">
+                        <add-list comment="false" x="37" y="417">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="85"/>
                         </add-list>
                     </group>
-                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation order"/>
+                    <int id="0" val="these additions have to match upgradeButtonActor&amp;apos;s animation names and above order"/>
                 </comment-wrapper>
             </group>
             <int id="0" val="createList"/>

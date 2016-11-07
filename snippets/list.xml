@@ -13,6 +13,7 @@
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
             <event displayName="tempMudTest" enabled="true" id="17" name="init" order="22" repeats="true"/>
             <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="18" repeats="true"/>
+            <event displayName="powerUpSetup" enabled="true" id="18" name="event-custom" order="23" repeats="true"/>
             <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="20" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="21" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
@@ -278,7 +279,9 @@
     </snippet>
     <snippet actorid="17" attachedevent="true" class="scripts.ActorEvents_17" classname="scripts.ActorEvents_17" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="20" name="ActorEvents_17" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_7" classname="scripts.SceneEvents_7" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="22" name="SceneEvents_7" oid="-1" package="scripts." sceneid="7" shared="false" type="scene">
         <blocks/>
@@ -665,14 +668,6 @@
             <event displayName="Updated" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_98_98_quantity" classname="scripts.Design_98_98_quantity" desc="" description="" design="true" drawOrder="0" id="98" name="quantity" oid="-1" package="scripts" shared="false" type="actor">
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
-        <blocks/>
-        <events>
-            <event displayName="ActorCreated" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
-            <event displayName="ActorKilled" enabled="true" id="2" name="event-actor-create-kill" order="2" repeats="true"/>
-        </events>
-    </snippet>
     <snippet actorid="143" attachedevent="true" class="scripts.ActorEvents_143" classname="scripts.ActorEvents_143" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="99" name="ActorEvents_143" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
@@ -687,5 +682,18 @@
     <snippet actorid="147" attachedevent="true" class="scripts.ActorEvents_147" classname="scripts.ActorEvents_147" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="101" name="ActorEvents_147" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet actorid="151" attachedevent="true" class="scripts.ActorEvents_151" classname="scripts.ActorEvents_151" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="103" name="ActorEvents_151" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="153" attachedevent="true" class="scripts.ActorEvents_153" classname="scripts.ActorEvents_153" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="104" name="ActorEvents_153" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
 </pack>

@@ -688,6 +688,17 @@
             <int id="0" val="animation"/>
         </event-custom>
     </group>
+    <group eventID="16" id="1">
+        <if comment="false" x="122" y="227">
+            <group eventID="16" id="-1">
+                <setanim comment="false" x="133" y="252">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="dirt"/>
+                </setanim>
+            </group>
+            <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+        </if>
+    </group>
     <group eventID="16" id="-1"/>
     <group eventID="17" id="0">
         <event-custom comment="false" x="15" y="15">
