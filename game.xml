@@ -137,7 +137,7 @@
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
-        <boolean cid="-1" id="52" name="planterPower" save="true" value="false"/>
+        <boolean cid="2" id="52" name="planterPower" save="true" value="false"/>
         <number cid="2" id="40" name="botOffset" save="true" value="10.0"/>
     </attributes>
     <collisions>
