@@ -53,7 +53,6 @@
     <packs/>
     <groups>
         <group desc="" id="4" name="recyclingPad"/>
-        <group desc="" id="5" name="bots"/>
         <group desc="" id="6" name="items"/>
         <group desc="todo lo que se meta delante del jugador" id="7" name="obstacles"/>
     </groups>
@@ -64,7 +63,6 @@
         <cgroup g1="1" g2="4"/>
         <cgroup g1="3" g2="3"/>
         <cgroup g1="3" g2="6"/>
-        <cgroup g1="5" g2="6"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>

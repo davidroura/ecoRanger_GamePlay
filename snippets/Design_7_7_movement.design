@@ -671,14 +671,23 @@
                     <group eventID="16" id="-1">
                         <setanim comment="false" x="37" y="65">
                             <ACTOR eid="this" id="0"/>
+                            <int id="1" val="dirt"/>
+                        </setanim>
+                    </group>
+                    <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else-if comment="false" x="26" y="104">
+                    <group eventID="16" id="-1">
+                        <setanim comment="false" x="37" y="129">
+                            <ACTOR eid="this" id="0"/>
                             <get-val-7-8 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                     <get-game-val-17 comment="false" id="0" x="0" y="0"/>
-                </if>
-                <else comment="false" x="26" y="109">
+                </else-if>
+                <else comment="false" x="26" y="173">
                     <group eventID="16" id="-1">
-                        <setanim comment="false" x="37" y="129">
+                        <setanim comment="false" x="37" y="193">
                             <ACTOR eid="this" id="0"/>
                             <get-val-7-1 comment="false" id="1" x="0" y="0"/>
                         </setanim>
@@ -689,14 +698,9 @@
         </event-custom>
     </group>
     <group eventID="16" id="1">
-        <if comment="false" x="122" y="227">
-            <group eventID="16" id="-1">
-                <setanim comment="false" x="133" y="252">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="dirt"/>
-                </setanim>
-            </group>
-            <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+        <if comment="false" x="272" y="325">
+            <group eventID="16" id="-1"/>
+            <int id="0" val=""/>
         </if>
     </group>
     <group eventID="16" id="-1"/>
