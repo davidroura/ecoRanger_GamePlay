@@ -11,7 +11,7 @@
         <events>
             <event displayName="Drawing" enabled="true" id="16" name="draw" order="19" repeats="true"/>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="tempMudTest" enabled="true" id="17" name="init" order="22" repeats="true"/>
+            <event displayName="tempMudTest" enabled="false" id="17" name="init" order="22" repeats="true"/>
             <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="18" repeats="true"/>
             <event displayName="powerUpSetup" enabled="true" id="18" name="event-custom" order="23" repeats="true"/>
             <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="20" repeats="true"/>
@@ -651,6 +651,7 @@
             <event displayName="ocasionalSpawn" enabled="true" id="21" name="event-custom" order="5" repeats="true"/>
             <event displayName="contiousSpawn" enabled="true" id="22" name="event-custom" order="3" repeats="true"/>
             <event displayName="trashListSpawn" enabled="true" id="23" name="event-custom" order="9" repeats="true"/>
+            <event displayName="obstacleMud" enabled="true" id="24" name="event-custom" order="25" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_96_96_powerUpGadget" classname="scripts.Design_96_96_powerUpGadget" desc="" description="" design="true" drawOrder="0" id="96" name="powerUp_Gadget" oid="-1" package="scripts" shared="false" type="actor">

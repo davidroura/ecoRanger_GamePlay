@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_119 extends ActorScript
+class ActorEvents_153 extends ActorScript
 {
 	
 	
@@ -81,6 +81,12 @@ class ActorEvents_119 extends ActorScript
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		runLater(1000 * 1, function(timeTask:TimedTask):Void
+		{
+			recycleActor(actor);
+		}, actor);
 		
 	}
 	

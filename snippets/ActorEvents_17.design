@@ -5,7 +5,7 @@
             <group eventID="1" id="-1"/>
         </init>
     </group>
-    <group eventID="1" id="5">
+    <group eventID="1" id="1">
         <create-actor3 comment="false" x="93" y="160">
             <actortype eid="153" id="0"/>
             <minus comment="false" id="1" x="0" y="0">
