@@ -96,6 +96,7 @@
         <boolean cid="2" id="46" name="botOn" save="true" value="false"/>
         <boolean cid="3" id="0" name="accelerometerControl" save="true" value="true"/>
         <number cid="0" id="22" name="lateralSpeed" save="true" value="0.0"/>
+        <number cid="-1" id="53" name="level" save="true" value="0.0"/>
         <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="2" id="15" name="gameCubePlastic" save="true" value="0.0"/>
