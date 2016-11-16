@@ -95,6 +95,10 @@ class ActorEvents_124 extends ActorScript
 				{
 					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .75));
 				}
+				if((actor.getAnimation() == "planter"))
+				{
+					Engine.engine.setGameAttribute("planterUnlock", true);
+				}
 				recycleActor(actor);
 			}
 		});

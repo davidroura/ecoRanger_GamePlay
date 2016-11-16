@@ -56,6 +56,9 @@
             <prop id="14" list="0" val="false"/>
             <prop id="15" list="0" val="false"/>
             <prop id="16" list="0" val="0"/>
+            <prop id="17" list="0" val="0.0"/>
+            <prop id="18" list="0" val="0.0"/>
+            <prop id="19" list="0" val="0"/>
         </s>
         <s enabled="true" id="88">
             <prop id="1" list="0" val="0.0"/>
@@ -158,6 +161,7 @@
                 <number order="5" value="5.0"/>
             </prop>
             <prop id="35" list="0" val="0"/>
+            <prop id="36" list="0" val="0"/>
         </s>
     </snippets>
     <terrain/>

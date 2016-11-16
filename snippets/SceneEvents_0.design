@@ -491,10 +491,15 @@
                 <comment-short comment="false" x="26" y="40">
                     <int id="0" val="animations will be selected by what bots you choose when we make that"/>
                 </comment-short>
-                <setanim comment="false" x="26" y="60">
-                    <ACTOR eid="4" id="0"/>
-                    <int id="1" val="planterOn"/>
-                </setanim>
+                <if comment="false" x="26" y="60">
+                    <group eventID="18" id="-1">
+                        <setanim comment="false" x="37" y="85">
+                            <ACTOR eid="4" id="0"/>
+                            <int id="1" val="planterOn"/>
+                        </setanim>
+                    </group>
+                    <get-game-val-54 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="powerUpSetup"/>
         </event-custom>

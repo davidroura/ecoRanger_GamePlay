@@ -43,7 +43,20 @@
                         <int id="1" val="megaFuel"/>
                     </eq>
                 </if>
-                <die comment="false" x="26" y="207">
+                <if comment="false" x="26" y="207">
+                    <group eventID="1" id="-1">
+                        <set-game-val-54 comment="false" x="37" y="245">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-54>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="planter"/>
+                    </eq>
+                </if>
+                <die comment="false" x="26" y="282">
                     <ACTOR eid="this" id="0"/>
                 </die>
             </group>

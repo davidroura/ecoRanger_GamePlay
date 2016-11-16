@@ -69,24 +69,58 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_131 extends ActorScript
+class Design_107_107_FadeAfterTime extends ActorScript
 {
-	public var _onPad:Bool;
-	public var _beltSpeed:Float;
+	public var _FadeTime:Float;
+	public var _TimetoFadeAfter:Float;
+	public var _Fading:Bool;
+	public var _KillAfterFade:Bool;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_Fade():Void
+	{
+		if(!(_Fading))
+		{
+			_Fading = true;
+			propertyChanged("_Fading", _Fading);
+			actor.fadeTo(0, _FadeTime, Linear.easeNone);
+			runLater(1000 * _FadeTime, function(timeTask:TimedTask):Void
+			{
+				if(_KillAfterFade)
+				{
+					recycleActor(actor);
+				}
+			}, actor);
+		}
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("onPad", "_onPad");
-		_onPad = false;
-		nameMap.set("beltSpeed", "_beltSpeed");
-		_beltSpeed = 60.0;
+		nameMap.set("Actor", "actor");
+		nameMap.set("Fade Time", "_FadeTime");
+		_FadeTime = 1.0;
+		nameMap.set("Time to Fade After", "_TimetoFadeAfter");
+		_TimetoFadeAfter = 1.0;
+		nameMap.set("Fading", "_Fading");
+		_Fading = false;
+		nameMap.set("Kill After Fade", "_KillAfterFade");
+		_KillAfterFade = true;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		if((_TimetoFadeAfter >= 0))
+		{
+			runLater(1000 * _TimetoFadeAfter, function(timeTask:TimedTask):Void
+			{
+				_customEvent_Fade();
+			}, actor);
+		}
 		
 	}
 	

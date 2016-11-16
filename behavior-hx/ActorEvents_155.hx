@@ -69,27 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_139 extends ActorScript
+class ActorEvents_155 extends ActorScript
 {
-	public var _onPad:Bool;
-	public var _beltSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("onPad", "_onPad");
-		_onPad = false;
-		nameMap.set("beltSpeed", "_beltSpeed");
-		_beltSpeed = 60.0;
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		actor.growTo(40/100, 40/100, 0, Linear.easeNone);
 		
 	}
 	

@@ -69,82 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_92_92_recyclingMovement extends ActorScript
+class ActorEvents_157 extends ActorScript
 {
-	public var _beltSpeed:Float;
-	public var _onPad:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("beltSpeed", "_beltSpeed");
-		_beltSpeed = 60.0;
-		nameMap.set("onPad", "_onPad");
-		_onPad = false;
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("recyclingBeltSpeed", 45);
-		actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-		
-		/* ======================= Member of Group ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorGroup(4),event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				if((_onPad == false))
-				{
-					actor.setYVelocity(0);
-					_onPad = true;
-					propertyChanged("_onPad", _onPad);
-				}
-			}
-		});
-		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("right", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && pressed)
-			{
-				actor.setYVelocity(0);
-				actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-				runLater(1000 * .3, function(timeTask:TimedTask):Void
-				{
-					actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-					actor.setXVelocity(0);
-				}, actor);
-			}
-		});
-		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("left", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && pressed)
-			{
-				actor.setYVelocity(0);
-				actor.setXVelocity((Engine.engine.getGameAttribute("recyclingBeltSpeed") * -1));
-				runLater(1000 * .3, function(timeTask:TimedTask):Void
-				{
-					actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-					actor.setXVelocity(0);
-				}, actor);
-			}
-		});
-		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("down", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && pressed)
-			{
-				actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-			}
-		});
 		
 	}
 	

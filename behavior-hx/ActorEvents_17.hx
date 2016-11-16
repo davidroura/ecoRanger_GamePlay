@@ -83,7 +83,7 @@ class ActorEvents_17 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		
+		createRecycledActor(getActorType(153), (actor.getX() - 35), actor.getY(), Script.FRONT);
 		
 	}
 	

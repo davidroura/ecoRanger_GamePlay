@@ -15,7 +15,10 @@
                             <group eventID="1" id="-1">
                                 <create-actor3 comment="false" x="48" y="127">
                                     <actortype eid="131" id="0"/>
-                                    <int id="1" val="135"/>
+                                    <randint comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="10"/>
+                                        <int id="1" val="100"/>
+                                    </randint>
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
@@ -25,11 +28,14 @@
                                 <int id="1" val="0"/>
                             </eq>
                         </if>
-                        <if comment="false" x="37" y="166">
+                        <if comment="false" x="37" y="171">
                             <group eventID="1" id="-1">
-                                <create-actor3 comment="false" x="48" y="196">
+                                <create-actor3 comment="false" x="48" y="201">
                                     <actortype eid="137" id="0"/>
-                                    <int id="1" val="135"/>
+                                    <randint comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="100"/>
+                                    </randint>
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
@@ -39,11 +45,14 @@
                                 <int id="1" val="1"/>
                             </eq>
                         </if>
-                        <if comment="false" x="37" y="235">
+                        <if comment="false" x="37" y="245">
                             <group eventID="1" id="-1">
-                                <create-actor3 comment="false" x="48" y="265">
+                                <create-actor3 comment="false" x="48" y="275">
                                     <actortype eid="139" id="0"/>
-                                    <int id="1" val="135"/>
+                                    <randint comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <int id="1" val="100"/>
+                                    </randint>
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
@@ -55,8 +64,8 @@
                         </if>
                     </group>
                     <randomfloat comment="false" id="0" x="0" y="0">
-                        <int id="0" val=".5"/>
-                        <int id="1" val="1.5"/>
+                        <int id="0" val=".4"/>
+                        <int id="1" val=".9"/>
                     </randomfloat>
                     <ACTOR eid="lastcreated" id="2"/>
                 </periodic>

@@ -82,12 +82,6 @@ class ActorEvents_153 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		runLater(1000 * 1, function(timeTask:TimedTask):Void
-		{
-			recycleActor(actor);
-		}, actor);
-		
 	}
 	
 	override public function forwardMessage(msg:String)

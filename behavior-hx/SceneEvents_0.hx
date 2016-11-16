@@ -159,7 +159,10 @@ class SceneEvents_0 extends SceneScript
 	public function _customEvent_powerUpSetup():Void
 	{
 		/* animations will be selected by what bots you choose when we make that */
-		getActor(4).setAnimation("" + "planterOn");
+		if(Engine.engine.getGameAttribute("planterUnlock"))
+		{
+			getActor(4).setAnimation("" + "planterOn");
+		}
 	}
 	
 	
