@@ -732,7 +732,14 @@
             <event displayName="Drawing" enabled="true" id="3" name="draw" order="5" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
             <event displayName="Actor - Type" enabled="true" id="5" name="event-collide-actortotype" order="4" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="6" name="event-collide-actortotype" order="6" repeats="false"/>
+        </events>
+    </snippet>
+    <snippet actorid="163" attachedevent="true" class="scripts.ActorEvents_163" classname="scripts.ActorEvents_163" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="112" name="ActorEvents_163" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
         </events>
     </snippet>
 </pack>

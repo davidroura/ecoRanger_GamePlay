@@ -102,7 +102,7 @@ class Design_112_112_recyclingdragAndDrop extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("recyclingBeltSpeed", 10);
+		Engine.engine.setGameAttribute("recyclingBeltSpeed", 30);
 		actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
 		actor.makeAlwaysSimulate();
 		
@@ -180,15 +180,6 @@ class Design_112_112_recyclingdragAndDrop extends ActorScript
 						g.drawLine((_OldX - getScreenX()), (_OldY - getScreenY()), getMouseX(), getMouseY());
 					}
 				}
-			}
-		});
-		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(157), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				recycleActor(actor);
 			}
 		});
 		
