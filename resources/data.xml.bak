@@ -469,36 +469,26 @@
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="90" fixedrot="false" fric="0.2" gid="3" id="137" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_Bottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="138" static="false">
         <snippets>
-            <s enabled="true" id="92">
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="1" list="0" val="60.0"/>
-                <prop id="2" list="0" val="false"/>
-            </s>
-            <s enabled="true" id="108">
+            <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="0.0"/>
                 <prop id="3" list="0" val="0.0"/>
-                <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0.0"/>
                 <prop id="6" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="86" fixedrot="false" fric="0.2" gid="3" id="131" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="132" static="false">
         <snippets>
-            <s enabled="true" id="92">
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="1" list="0" val="60.0"/>
-                <prop id="2" list="0" val="false"/>
-            </s>
-            <s enabled="true" id="108">
+            <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="0.0"/>
                 <prop id="3" list="0" val="0.0"/>
-                <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0.0"/>
                 <prop id="6" list="0" val="true"/>
             </s>
         </snippets>
@@ -508,23 +498,18 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="479" id="156" name="rItem_conveyerBelt" shared="false" width="319">
         <anim across="1" down="1" durations="100" height="479" id="0" loop="true" name="Animation 0" numframes="1" originx="159" originy="239" sync="false" version="2" width="319">
-            <poly data="4,0,0,319,0,319,479,0,479" density="0.1" fric="0.2" gid="2" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+            <poly data="4,30,0,162,0,162,479,30,479" density="0.1" fric="0.2" gid="3" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="91" fixedrot="false" fric="0.2" gid="3" id="139" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_PlasticBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="140" static="false">
         <snippets>
-            <s enabled="true" id="92">
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="1" list="0" val="60.0"/>
-                <prop id="2" list="0" val="false"/>
-            </s>
-            <s enabled="true" id="108">
+            <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="0.0"/>
                 <prop id="3" list="0" val="0.0"/>
-                <prop id="4" list="0" val="0"/>
-                <prop id="5" list="0" val="0"/>
+                <prop id="4" list="0" val="0.0"/>
+                <prop id="5" list="0" val="0.0"/>
                 <prop id="6" list="0" val="true"/>
             </s>
         </snippets>

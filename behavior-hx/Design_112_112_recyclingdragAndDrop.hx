@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_108_108_DragandDrop extends ActorScript
+class Design_112_112_recyclingdragAndDrop extends ActorScript
 {
 	public var _Grabbed:Bool;
 	public var _XOffset:Float;
@@ -102,6 +102,8 @@ class Design_108_108_DragandDrop extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("recyclingBeltSpeed", 10);
+		actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
 		actor.makeAlwaysSimulate();
 		
 		/* ======================== When Updating ========================= */
@@ -151,6 +153,18 @@ class Design_108_108_DragandDrop extends ActorScript
 			}
 		});
 		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(155), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if(!(_Grabbed))
+				{
+					actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+				}
+			}
+		});
+		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
@@ -166,6 +180,15 @@ class Design_108_108_DragandDrop extends ActorScript
 						g.drawLine((_OldX - getScreenX()), (_OldY - getScreenY()), getMouseX(), getMouseY());
 					}
 				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(157), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				recycleActor(actor);
 			}
 		});
 		
