@@ -8,9 +8,9 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="2" c="false" group="6" id="157" name="rItem_Bin 2" sx="1.0" sy="1.0" x="185" y="30" z="0"/>
-        <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="-16" y="1" z="0"/>
-        <actor a="0.0" aid="6" c="false" group="6" id="159" name="rItem_BinAluminum 6" sx="1.0" sy="1.0" x="190" y="197" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="6" id="157" name="rItem_Bin 2" sx="1.0" sy="1.0" x="185" y="163" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="-3" y="0" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="6" id="159" name="rItem_BinAluminum 6" sx="1.0" sy="1.0" x="189" y="263" z="0"/>
         <actor a="0.0" aid="7" c="false" group="6" id="161" name="rItem_BinGlass 7" sx="1.0" sy="1.0" x="189" y="367" z="0"/>
         <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="1.0" sy="1.0" x="279" y="12" z="0"/>
     </actors>

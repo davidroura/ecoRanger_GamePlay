@@ -88,6 +88,7 @@
     <attributes>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
+        <number cid="5" id="55" name="cansRecycled" save="true" value="0.0"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <boolean cid="2" id="50" name="gadgetPower" save="true" value="false"/>
         <number cid="3" id="33" name="totalPlastic" save="true" value="0.0"/>
@@ -119,12 +120,14 @@
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
         <number cid="2" id="51" name="fuelEfficiency" save="true" value="1.0"/>
+        <number cid="5" id="57" name="glassBottlesRecycline" save="true" value="0.0"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
         <number cid="2" id="18" name="dozerStrength" save="true" value="1.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
         <number cid="2" id="47" name="sceneSpeedHold" save="true" value="0.0"/>
+        <number cid="5" id="56" name="plasticBottlesRecycled" save="true" value="0.0"/>
         <number cid="2" id="1" name="bottleColleted" save="true" value="0.0"/>
         <number cid="5" id="12" name="glassAnimationX" save="true" value="0.0"/>
         <number cid="5" id="13" name="glassAnimationY" save="true" value="0.0"/>

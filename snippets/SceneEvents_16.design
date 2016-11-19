@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <periodic comment="false" x="26" y="40">
-                    <group eventID="1" id="-1">
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="randomSpawn"/>
+                        </say-this>
+                        <set-val-89-3 comment="false" x="37" y="90">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-89-3>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-89-3 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <set-font-new comment="false" x="26" y="127">
+                    <font eid="128" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="154">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-game-val-55 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val=" CANS"/>
+                    </str-combine>
+                    <int id="1" val="180"/>
+                    <int id="2" val="30"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="184">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-game-val-56 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val=" PLASTIC"/>
+                    </str-combine>
+                    <int id="1" val="180"/>
+                    <int id="2" val="60"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="214">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-game-val-57 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val=" GLASS"/>
+                    </str-combine>
+                    <int id="1" val="180"/>
+                    <int id="2" val="90"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
                         <set-val-89-2 comment="false" x="37" y="72">
                             <randint comment="false" id="0" x="0" y="0">
                                 <int id="0" val="0"/>
@@ -12,7 +59,7 @@
                             </randint>
                         </set-val-89-2>
                         <if comment="false" x="37" y="97">
-                            <group eventID="1" id="-1">
+                            <group eventID="3" id="-1">
                                 <create-actor3 comment="false" x="48" y="127">
                                     <actortype eid="131" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
@@ -29,7 +76,7 @@
                             </eq>
                         </if>
                         <if comment="false" x="37" y="171">
-                            <group eventID="1" id="-1">
+                            <group eventID="3" id="-1">
                                 <create-actor3 comment="false" x="48" y="201">
                                     <actortype eid="137" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
@@ -46,7 +93,7 @@
                             </eq>
                         </if>
                         <if comment="false" x="37" y="245">
-                            <group eventID="1" id="-1">
+                            <group eventID="3" id="-1">
                                 <create-actor3 comment="false" x="48" y="275">
                                     <actortype eid="139" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
@@ -62,15 +109,19 @@
                                 <int id="1" val="2"/>
                             </eq>
                         </if>
+                        <set-val-89-3 comment="false" x="37" y="319">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-89-3>
                     </group>
                     <randomfloat comment="false" id="0" x="0" y="0">
-                        <int id="0" val=".4"/>
-                        <int id="1" val=".9"/>
+                        <int id="0" val=".2"/>
+                        <int id="1" val="2"/>
                     </randomfloat>
                     <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
+                </dolater>
             </group>
-        </init>
+            <int id="0" val="randomSpawn"/>
+        </event-custom>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="3" id="-1"/>
 </groups>
