@@ -300,19 +300,13 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_left():Void
 	{
-		if((_maxLeft < Utils.DEG * (actor.getAngle())))
-		{
-			actor.setAngle(Utils.RAD * ((Utils.DEG * (actor.getAngle()) - _turnSpeed)));
-		}
+		actor.setAnimation("" + "left");
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_right():Void
 	{
-		if((Utils.DEG * (actor.getAngle()) < _maxRight))
-		{
-			actor.setAngle(Utils.RAD * ((Utils.DEG * (actor.getAngle()) + _turnSpeed)));
-		}
+		actor.setAnimation("" + "right");
 	}
 	
 	
