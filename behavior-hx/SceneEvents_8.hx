@@ -98,7 +98,7 @@ class SceneEvents_8 extends SceneScript
 		_upgradeCost = new Array<Dynamic>();
 		propertyChanged("_upgradeCost", _upgradeCost);
 		/* "these additions have to match upgradeButtonActor's animation names and above order" */ _upgradeCost.push(0);
-		_upgradeCost.push(50);
+		_upgradeCost.push(0);
 		_upgradeCost.push(50);
 		_upgradeCost.push(65);
 		_upgradeCost.push(60);

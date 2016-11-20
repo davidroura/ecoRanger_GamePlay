@@ -349,7 +349,7 @@ class Design_7_7_movement extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("playerYPos", 250);
+		Engine.engine.setGameAttribute("playerYPos", 300);
 		Engine.engine.setGameAttribute("slowMovement", false);
 		Engine.engine.setGameAttribute("playerControl", true);
 		_movementCounter = asNumber(0);

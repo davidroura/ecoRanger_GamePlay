@@ -89,8 +89,8 @@ class ActorEvents_141 extends ActorScript
 			{
 				if(Engine.engine.getGameAttribute("botOn"))
 				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 75));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") + Engine.engine.getGameAttribute("botOffset")));
+					actor.setX(Engine.engine.getGameAttribute("playerXPos"));
+					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
 				}
 				else
 				{

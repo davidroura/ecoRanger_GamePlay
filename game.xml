@@ -141,7 +141,7 @@
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="5" id="24" name="bottleDone" save="true" value="0.0"/>
         <boolean cid="2" id="52" name="planterPower" save="true" value="false"/>
-        <number cid="2" id="40" name="botOffset" save="true" value="10.0"/>
+        <number cid="2" id="40" name="botOffset" save="true" value="60.0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

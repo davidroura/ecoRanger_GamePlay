@@ -219,7 +219,7 @@
                         </add-list>
                         <add-list comment="false" x="37" y="317">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="50"/>
+                            <int id="1" val="0"/>
                         </add-list>
                         <add-list comment="false" x="37" y="342">
                             <get-val-23-12 comment="false" id="0" x="0" y="0"/>

@@ -96,8 +96,8 @@ class ActorEvents_143 extends ActorScript
 			{
 				if(Engine.engine.getGameAttribute("suckingPowerOn"))
 				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 50));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") + 15));
+					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 10));
+					actor.setY((Engine.engine.getGameAttribute("playerYPos") - (Engine.engine.getGameAttribute("botOffset") + 20)));
 				}
 				else
 				{

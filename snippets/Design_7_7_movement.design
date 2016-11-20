@@ -97,7 +97,7 @@
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
                 <set-game-val-5 comment="false" x="26" y="40">
-                    <int id="0" val="250"/>
+                    <int id="0" val="300"/>
                 </set-game-val-5>
                 <set-game-val-11 comment="false" x="26" y="60">
                     <false comment="false" id="0" x="0" y="0"/>
@@ -320,7 +320,7 @@
             <int id="0" val="left"/>
         </event-custom>
     </group>
-    <group eventID="9" id="2">
+    <group eventID="9" id="1">
         <if comment="false" x="249" y="188">
             <group eventID="9" id="-1">
                 <setangle comment="false" x="260" y="226">
@@ -353,7 +353,7 @@
             <int id="0" val="right"/>
         </event-custom>
     </group>
-    <group eventID="10" id="4">
+    <group eventID="10" id="1">
         <if comment="false" x="100" y="204">
             <group eventID="10" id="-1">
                 <setangle comment="false" x="111" y="242">

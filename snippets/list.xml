@@ -128,7 +128,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceTree" hidden="false" id="17" name="_distanceTree" order="15"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceLife" hidden="true" id="18" name="_distanceLife" order="16"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="levelDistance" hidden="false" id="19" name="_levelDistance" order="17"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="levelDistance" hidden="false" id="19" name="_levelDistance" order="17"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
@@ -151,7 +151,7 @@
             <event displayName="player - plastic" enabled="true" id="19" name="event-collide-typetotype" order="2" repeats="true"/>
             <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="false"/>
             <event displayName="player - mud" enabled="true" id="21" name="event-collide-typetotype" order="25" repeats="true"/>
-            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="26" repeats="true"/>
+            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="26" repeats="false"/>
             <event displayName="level" enabled="true" id="23" name="event-custom" order="19" repeats="true"/>
         </events>
     </snippet>

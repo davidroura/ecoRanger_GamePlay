@@ -102,7 +102,7 @@ class Design_8_8_playerHealth extends SceneScript
 		}, null);
 		if(_playerBoost)
 		{
-			_boostSpeed = asNumber((_boostSpeed + 14));
+			_boostSpeed = asNumber((_boostSpeed + 12));
 			propertyChanged("_boostSpeed", _boostSpeed);
 		}
 	}
@@ -205,7 +205,7 @@ class Design_8_8_playerHealth extends SceneScript
 		nameMap.set("distanceLife", "_distanceLife");
 		_distanceLife = 0.0;
 		nameMap.set("levelDistance", "_levelDistance");
-		_levelDistance = 0;
+		_levelDistance = 0.0;
 		
 	}
 	
@@ -370,7 +370,7 @@ class Design_8_8_playerHealth extends SceneScript
 							/* banana boost */
 							if((0 <= _boostSpeed))
 							{
-								_boostSpeed = asNumber((_boostSpeed - .05));
+								_boostSpeed = asNumber((_boostSpeed - .06));
 								propertyChanged("_boostSpeed", _boostSpeed);
 							}
 							Engine.engine.setGameAttribute("sceneSpeed", (Math.sqrt((10 * Engine.engine.getGameAttribute("playerHealth"))) + _boostSpeed));
