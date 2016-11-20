@@ -2,6 +2,7 @@
 <scenes>
     <scene desc="" format="3.4.0" id="0" name="level 1"/>
     <scene desc="" format="3.4.0" id="16" name="recycleGame"/>
+    <scene desc="" format="3.4.0" id="17" name="funfact"/>
     <scene desc="" format="3.4.0" id="2" name="start"/>
     <scene desc="" format="3.4.0" id="3" name="options"/>
     <scene desc="" format="3.4.0" id="5" name="newsRoom1"/>

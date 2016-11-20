@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,74 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_17 extends SceneScript
+class ActorEvents_165 extends ActorScript
 {
-	public var _listCount:Float;
-	public var _position:Float;
-	public var _xPosition:Float;
-	public var _yPosition:Float;
-	public var _yCount:Float;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("listCount", "_listCount");
-		_listCount = 0;
-		nameMap.set("position", "_position");
-		_position = 0;
-		nameMap.set("xPosition", "_xPosition");
-		_xPosition = 0;
-		nameMap.set("yPosition", "_yPosition");
-		_yPosition = 0;
-		nameMap.set("yCount", "_yCount");
-		_yCount = 0;
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		_position = asNumber(0);
-		propertyChanged("_position", _position);
-		_listCount = asNumber(Engine.engine.getGameAttribute("list_funFact").length);
-		propertyChanged("_listCount", _listCount);
-		_xPosition = asNumber(0);
-		propertyChanged("_xPosition", _xPosition);
-		_yCount = asNumber(0);
-		propertyChanged("_yCount", _yCount);
-		while(!((_listCount < _position)))
-		{
-			_yCount = asNumber((_yCount + 1));
-			propertyChanged("_yCount", _yCount);
-			createRecycledActor(getActorType(165), _xPosition, _yPosition, Script.FRONT);
-			_position = asNumber((_position + 1));
-			propertyChanged("_position", _position);
-			_xPosition = asNumber((_position + 100));
-			propertyChanged("_xPosition", _xPosition);
-			if((_position == 300))
-			{
-				_xPosition = asNumber(0);
-				propertyChanged("_xPosition", _xPosition);
-			}
-			if((0 == (_yCount % 3)))
-			{
-				_yCount = asNumber(0);
-				propertyChanged("_yCount", _yCount);
-				_yPosition = asNumber((_yPosition + 100));
-				propertyChanged("_yPosition", _yPosition);
-			}
-		}
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.drawString("" + _listCount, 100, 100);
-			}
-		});
 		
 	}
 	

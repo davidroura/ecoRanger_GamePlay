@@ -1,2 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-val-113-2 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-113-2>
+                <set-val-113-1 comment="false" x="26" y="60">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-game-val-58 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-113-1>
+                <set-val-113-3 comment="false" x="26" y="90">
+                    <int id="0" val="0"/>
+                </set-val-113-3>
+                <set-val-113-5 comment="false" x="26" y="110">
+                    <int id="0" val="0"/>
+                </set-val-113-5>
+                <repeatu comment="false" x="26" y="130">
+                    <group eventID="1" id="-1">
+                        <set-val-113-5 comment="false" x="37" y="160">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-113-5 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-val-113-5>
+                        <create-actor3 comment="false" x="37" y="190">
+                            <actortype eid="165" id="0"/>
+                            <get-val-113-3 comment="false" id="1" x="0" y="0"/>
+                            <get-val-113-4 comment="false" id="2" x="0" y="0"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-113-2 comment="false" x="37" y="222">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-val-113-2>
+                        <set-val-113-3 comment="false" x="37" y="252">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="100"/>
+                            </plus>
+                        </set-val-113-3>
+                        <if comment="false" x="37" y="282">
+                            <group eventID="1" id="-1">
+                                <set-val-113-3 comment="false" x="48" y="312">
+                                    <int id="0" val="0"/>
+                                </set-val-113-3>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="300"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="344">
+                            <group eventID="1" id="-1">
+                                <set-val-113-5 comment="false" x="48" y="379">
+                                    <int id="0" val="0"/>
+                                </set-val-113-5>
+                                <set-val-113-4 comment="false" x="48" y="399">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-113-4 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="100"/>
+                                    </plus>
+                                </set-val-113-4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <mod comment="false" id="1" x="0" y="0">
+                                    <get-val-113-5 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="3"/>
+                                </mod>
+                            </eq>
+                        </if>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-113-1 comment="false" id="0" x="0" y="0"/>
+                        <get-val-113-2 comment="false" id="1" x="0" y="0"/>
+                    </less>
+                </repeatu>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <get-val-113-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
