@@ -60,6 +60,35 @@
                 <set-val-95-35 comment="false" x="26" y="390">
                     <int id="0" val="50"/>
                 </set-val-95-35>
+                <comment-short comment="false" x="26" y="410">
+                    <int id="0" val="adding initial trees"/>
+                </comment-short>
+                <create-actor-on-layer comment="false" x="26" y="430">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="-120"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="457">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <say-this comment="false" x="26" y="484">
+                    <int id="0" val="treeType"/>
+                </say-this>
+                <create-actor-on-layer comment="false" x="26" y="504">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="531">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <say-this comment="false" x="26" y="558">
+                    <int id="0" val="treeType"/>
+                </say-this>
             </group>
         </init>
     </group>
@@ -166,38 +195,42 @@
                             <int id="3" val="1"/>
                             <int id="4" val="gamePlay"/>
                         </create-actor-on-layer>
-                        <scaleTo comment="false" x="37" y="273">
+                        <setanim comment="false" x="37" y="273">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="50"/>
-                            <int id="2" val="50"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0"/>
-                        </scaleTo>
+                            <tostring comment="false" id="1" x="0" y="0">
+                                <randint comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="4"/>
+                                </randint>
+                            </tostring>
+                        </setanim>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <get-val-95-32 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="6"/>
                     </more>
                 </else-if>
-                <else comment="false" x="26" y="312">
+                <else comment="false" x="26" y="322">
                     <group eventID="12" id="-1">
-                        <create-actor-on-layer comment="false" x="37" y="332">
+                        <create-actor-on-layer comment="false" x="37" y="342">
                             <actortype eid="104" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="-5"/>
                             <int id="3" val="1"/>
                             <int id="4" val="gamePlay"/>
                         </create-actor-on-layer>
-                        <scaleTo comment="false" x="37" y="359">
+                        <setanim comment="false" x="37" y="369">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="20"/>
-                            <int id="2" val="20"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0"/>
-                        </scaleTo>
+                            <tostring comment="false" id="1" x="0" y="0">
+                                <randint comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="3"/>
+                                </randint>
+                            </tostring>
+                        </setanim>
                     </group>
                 </else>
-                <ignore-screen-tolerance comment="false" x="26" y="398">
+                <ignore-screen-tolerance comment="false" x="26" y="418">
                     <ACTOR eid="lastcreated" id="0"/>
                 </ignore-screen-tolerance>
             </group>
@@ -287,35 +320,46 @@
                     <int id="3" val="0"/>
                     <int id="4" val="0"/>
                 </scaleTo>
-                <set-val-95-24 comment="false" x="26" y="67">
-                    <randint comment="false" id="0" x="0" y="0">
-                        <int id="0" val="1"/>
-                        <int id="1" val="2"/>
-                    </randint>
-                </set-val-95-24>
-                <if comment="false" x="26" y="92">
-                    <group eventID="16" id="-1">
-                        <setanim comment="false" x="37" y="122">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="tree1"/>
-                        </setanim>
-                    </group>
-                    <less comment="false" id="0" x="0" y="0">
-                        <get-val-95-32 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="6"/>
-                    </less>
-                </if>
-                <else comment="false" x="26" y="161">
-                    <group eventID="16" id="-1">
-                        <setanim comment="false" x="37" y="181">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="tree2"/>
-                        </setanim>
-                    </group>
-                </else>
+                <setanim comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <tostring comment="false" id="1" x="0" y="0">
+                        <randint comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                            <int id="1" val="3"/>
+                        </randint>
+                    </tostring>
+                </setanim>
             </group>
             <int id="0" val="treeType"/>
         </event-custom>
+    </group>
+    <group eventID="16" id="4">
+        <set-val-95-24 comment="false" x="212" y="369">
+            <randint comment="false" id="0" x="0" y="0">
+                <int id="0" val="1"/>
+                <int id="1" val="2"/>
+            </randint>
+        </set-val-95-24>
+        <if comment="false" x="212" y="394">
+            <group eventID="16" id="-1">
+                <setanim comment="false" x="223" y="424">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="tree1"/>
+                </setanim>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-95-32 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="6"/>
+            </less>
+        </if>
+        <else comment="false" x="212" y="463">
+            <group eventID="16" id="-1">
+                <setanim comment="false" x="223" y="483">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="tree2"/>
+                </setanim>
+            </group>
+        </else>
     </group>
     <group eventID="16" id="-1"/>
     <group eventID="17" id="0">

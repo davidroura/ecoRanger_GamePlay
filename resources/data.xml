@@ -37,9 +37,18 @@
             <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="28" id="16" name="canCoke" shared="false" width="48">
-        <anim across="1" down="1" durations="100" height="28" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="48">
-            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="16" name="canCoke" shared="false" width="35">
+        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="1" numframes="1" originx="24" originy="14" sync="false" version="2" width="35">
+            <poly data="4,0,0,33,0,33,26,0,26" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="25" id="1" loop="true" name="2" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="25" id="2" loop="true" name="3" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="25" id="3" loop="true" name="4" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="28" id="132" name="canCoke" shared="false" width="48">
@@ -98,7 +107,7 @@
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="64" name="dozerTop" shared="false" width="59">
-        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="61" originy="106" sync="false" version="2" width="59">
+        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="29" originy="36" sync="false" version="2" width="59">
             <poly data="4,11,0,46,0,46,75,11,75" density="0.1" fric="0.2" gid="0" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -109,7 +118,7 @@
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="115" name="fuelBarBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="142" name="gadgetTop" shared="false" width="59">
-        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="112" originy="112" sync="false" version="2" width="59">
+        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="29" originy="36" sync="false" version="2" width="59">
             <poly data="4,10,10,50,10,50,60,10,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
@@ -206,7 +215,7 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="6" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="7" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -264,7 +273,7 @@
             <poly data="5,12,27,14,48,33,56,69,39,61,24" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="6" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="7" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -370,13 +379,11 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="68" id="148" name="mUI_CooseBots" shared="false" width="146">
         <anim across="1" down="1" durations="100" height="68" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="146"/>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="114" fixedrot="false" fric="0.2" gid="3" id="165" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_funfact" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="166" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="114" fixedrot="false" fric="0.2" gid="3" id="165" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_funfact" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="166" static="true">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="100" id="166" name="mUI_funfact" shared="false" width="100">
-        <anim across="1" down="1" durations="100" height="100" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="50" sync="false" version="2" width="100">
-            <poly data="4,0,0,100,0,100,100,0,100" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="1" down="1" durations="100" height="100" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="50" sync="false" version="2" width="100"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="49" fixedrot="false" fric="0.2" gid="3" id="65" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_notification" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="66" static="false">
         <snippets/>
@@ -423,9 +430,15 @@
             <poly data="4,0,0,131,0,131,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="105" name="plasticBottle" shared="false" width="131">
-        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="65" originy="48" sync="false" version="2" width="131">
-            <poly data="6,6,54,25,92,99,49,121,20,110,5,75,12" density="0.1" fric="0.2" gid="7" id="1" name="" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="105" name="plasticBottle" shared="false" width="35">
+        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="1" numframes="1" originx="65" originy="48" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="25" id="1" loop="true" name="2" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="25" id="2" loop="true" name="3" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="74" id="44" name="playButton" shared="false" width="182">
@@ -582,11 +595,14 @@
     </sprite>
     <font alphabet=" !&quot;#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ" atlasID="0" desc="" height="21" id="59" name="Title" offsets="0|0|0|,5|0|5,9|0|9,17|0|17,27|0|27,37|0|37,52|0|52,65|0|65,70|0|70,76|0|76,82|0|82,89|0|89,99|0|99,104|0|104,111|0|111,115|0|115,121|0|121,131|0|131,138|0|138,148|0|148,158|0|158,168|0|168,178|0|178,188|0|188,198|0|198,208|0|208,218|0|218,222|0|222,226|0|226,236|0|236,246|0|246,256|0|256,266|0|266,283|0|283,296|0|296,307|0|307,319|0|319,330|0|330,340|0|340,349|0|349,362|0|362,373|0|373,377|0|377,386|0|386,398|0|398,408|0|408,421|0|421,432|0|432,445|0|445,455|0|455,469|0|469,481|0|481,492|0|492,503|0|503,514|0|514,526|0|526,543|0|543,555|0|555,567|0|567,578|0|578,583|0|583,589|0|589,595|0|595,605|0|605,616|0|616,621|0|621,631|0|631,641|0|641,651|0|651,661|0|661,671|0|671,678|0|678,688|0|688,697|0|697,701|0|701,707|0|707,716|0|716,720|0|720,734|0|734,743|0|743,754|0|754,764|0|764,774|0|774,781|0|781,791|0|791,798|0|798,807|0|807,817|0|817,831|0|831,841|0|841,851|0|851,860|0|860,867|0|867,871|0|871,878|0|878,888|0|888,898|0|898,899|0|899,900|0|900,901|0|901,902|0|902,903|0|903,904|0|904,905|0|905,906|0|906,907|0|907,908|0|908,909|0|909,910|0|910,911|0|911,912|0|912,913|0|913,914|0|914,915|0|915,916|0|916,917|0|917,918|0|918,919|0|919,920|0|920,921|0|921,922|0|922,923|0|923,924|0|924,925|0|925,926|0|926,927|0|927,928|0|928,929|0|929,930|0|930,935|0|935,939|0|939,949|0|949,959|0|959,969|0|969,979|0|979,983|0|983,993|0|993,1000|0|1000,1014|0|1014,1021|0|1021,1030|0|1030,1040|0|1040,1047|0|1047,1061|0|1061,1072|0|1072,1079|0|1079,1089|0|1089,1095|0|1095,1101|0|1101,1106|0|1106,1116|0|1116,1126|0|1126,1130|0|1130,1136|0|1136,1141|0|1141,1148|0|1148,1158|0|1158,1173|0|1173,1187|0|1187,1202|0|1202,1212|0|1212,1225|0|1225,1238|0|1238,1251|0|1251,1264|0|1264,1277|0|1277,1290|0|1290,1308|0|1308,1320|0|1320,1330|0|1330,1340|0|1340,1350|0|1350,1360|0|1360,1365|0|1365,1371|0|1371,1378|0|1378,1385|0|1385,1397|0|1397,1408|0|1408,1421|0|1421,1434|0|1434,1447|0|1447,1460|0|1460,1473|0|1473,1482|0|1482,1495|0|1495,1506|0|1506,1517|0|1517,1528|0|1528,1539|0|1539,1551|0|1551,1561|0|1561,1571|0|1571,1581|0|1581,1591|0|1591,1601|0|1601,1611|0|1611,1621|0|1621,1631|0|1631,1646|0|1646,1656|0|1656,1666|0|1666,1676|0|1676,1686|0|1686,1696|0|1696,1701|0|1701,1707|0|1707,1714|0|1714,1721|0|1721,1732|0|1732,1741|0|1741,1752|0|1752,1763|0|1763,1774|0|1774,1785|0|1785,1796|0|1796,1806|0|1806,1817|0|1817,1826|0|1826,1835|0|1835,1844|0|1844,1853|0|1853,1863|0|1863,1873|0|1873,1883|0|1883,1896|0|1896,1906|0|1906,1919|0|1919,1929|0|1929,1942|0|1942,1952|0|1952,1964|0|1964,1974|0|1974,1986|0|1986,1996|0|1996,2008|0|2008,2018|0|2018,2030|0|2030,2040|0|2040,2051|0|2051,2064|0|2064,2076|0|2076,2087|0|2087,2097|0|2097,2107|0|2107,2117|0|2117,2127|0|2127,2137|0|2137,2147|0|2147,2158|0|2158,2168|0|2168,2178|0|2178,2188|0|2188,2201|0|2201,2211|0|2211,2224|0|2224,2234|0|2234,2247|0|2247,2257|0|2257,2270|0|2270,2280|0|2280,2291|0|2291,2300|0|2300,2313|0|2313,2323|0|2323,2331|0|2331,2339|0|2339,2346|0|2346,2353|0|2353,2360|0|2360,2367|0|2367,2372|0|2372,2377|0|2377,2382|0|2382,2386|0|2386,2398|0|2398,2407|0|2407,2417|0|2417,2424|0|2424,2436|0|2436,2445|0|2445,2454|0|2454,2464|0|2464,2470|0|2470,2480|0|2480,2484|0|2484,2494|0|2494,2501|0|2501,2511|0|2511,2518|0|2518,2529|0|2529,2535|0|2535,2546|0|2546,2555|0|2555,2566|0|2566,2575|0|2575,2586|0|2586,2595|0|2595,2607|0|2607,2618|0|2618,2627|0|2627,2640|0|2640,2651|0|2651,2664|0|2664,2675|0|2675,2688|0|2688,2699|0|2699,2716|0|2716,2732|0|2732,2744|0|2744,2751|0|2751,2763|0|2763,2770|0|2770,2782|0|2782,2789|0|2789,2800|0|2800,2810|0|2810,2821|0|2821,2831|0|2831,2842|0|2842,2852|0|2852,2863|0|2863,2873|0|2873,2884|0|2884,2891|0|2891,2902|0|2902,2911|0|2911,2922|0|2922,2928|0|2928,2939|0|2939,2948|0|2948,2959|0|2959,2968|0|2968,2979|0|2979,2988|0|2988,2999|0|2999,3008|0|3008,3019|0|3019,3028|0|3028,3039|0|3039,3049|0|3049,3066|0|3066,3080|0|3080,3092|0|3092,3102|0|3102,3114|0|3114,3125|0|3125,3134|0|3134,3145|0|3145,3154|0|3154,3165|0|3165,3174|0|3174" oid="-1" prerendered="false" rowHeight="21" shared="false"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="71" name="tree" shared="false" width="238">
-        <anim across="1" down="1" durations="100" height="480" id="0" loop="false" name="tree1" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
+        <anim across="1" down="1" durations="100" height="480" id="0" loop="false" name="1" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
             <poly data="7,63,110,85,402,105,475,135,422,157,355,130,1,88,1" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="480" id="1" loop="true" name="tree2" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
+        <anim across="1" down="1" durations="100" height="480" id="1" loop="true" name="2" numframes="1" originx="0" originy="0" sync="false" version="2" width="238">
             <poly data="6,78,180,99,408,118,464,164,336,177,148,112,2" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="480" id="2" loop="true" name="3" numframes="1" originx="0" originy="0" sync="false" version="2" width="313">
+            <poly data="6,95,308,159,440,210,459,216,120,124,63,53,147" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="7" name="UIEnd" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>

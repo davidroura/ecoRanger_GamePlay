@@ -125,9 +125,9 @@ class Design_98_98_powerUpsucker extends ActorScript
 			{
 				if(Engine.engine.getGameAttribute("suckingPowerOn"))
 				{
-					_DistanceX = asNumber(((Engine.engine.getGameAttribute("playerXPos") + 15) - actor.getXCenter()));
+					_DistanceX = asNumber(((Engine.engine.getGameAttribute("playerXPos") + 25) - actor.getXCenter()));
 					propertyChanged("_DistanceX", _DistanceX);
-					_DistanceY = asNumber(((Engine.engine.getGameAttribute("playerYPos") + 20) - actor.getYCenter()));
+					_DistanceY = asNumber(((Engine.engine.getGameAttribute("playerYPos") + 30) - actor.getYCenter()));
 					propertyChanged("_DistanceY", _DistanceY);
 					_Distance = asNumber(Math.sqrt((Math.pow(_DistanceX, 2) + Math.pow(_DistanceY, 2))));
 					propertyChanged("_Distance", _Distance);

@@ -8,10 +8,10 @@
                         <set-xy comment="false" x="37" y="65">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                            <plus comment="false" id="2" x="0" y="0">
+                            <minus comment="false" id="2" x="0" y="0">
                                 <get-game-val-20 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="10"/>
-                            </plus>
+                            </minus>
                         </set-xy>
                         <set-xy comment="false" x="37" y="102">
                             <ACTOR eid="this" id="0"/>

@@ -617,7 +617,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashXPos" hidden="true" id="3" name="_trashXPos" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="nextDistance" hidden="false" id="35" name="_nextDistance" order="15"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashXPosWidth" hidden="false" id="4" name="_trashXPosWidth" order="2"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceRock" hidden="false" id="36" name="_distanceRock" order="16"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceRock" hidden="false" id="36" name="_distanceRock" order="16"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashYPos" hidden="false" id="5" name="_trashYPos" order="3"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="dot1X" hidden="false" id="6" name="_dot1X" order="4"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="dot1Y" hidden="false" id="7" name="_dot1Y" order="5"/>
@@ -745,7 +745,7 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="position" hidden="false" id="2" name="_position" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xPosition" hidden="false" id="3" name="_xPosition" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="yPosition" hidden="false" id="4" name="_yPosition" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="yCount" hidden="false" id="5" name="_yCount" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yCount" hidden="false" id="5" name="_yCount" order="4"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>

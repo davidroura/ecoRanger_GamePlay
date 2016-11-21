@@ -274,7 +274,11 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_stand():Void
 	{
-		if(Engine.engine.getGameAttribute("boosted"))
+		if(Engine.engine.getGameAttribute("planterPower"))
+		{
+			actor.setAnimation("" + "dirt");
+		}
+		else if(Engine.engine.getGameAttribute("boosted"))
 		{
 			actor.setAnimation("" + _standAnimationBoosted);
 		}

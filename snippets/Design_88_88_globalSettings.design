@@ -42,7 +42,7 @@
                     <int id="0" val="debug always set to click movement"/>
                 </comment-wrapper>
                 <set-game-val-3 comment="false" x="26" y="97">
-                    <int id="0" val="15"/>
+                    <int id="0" val="17"/>
                 </set-game-val-3>
                 <set-game-val-22 comment="false" x="26" y="117">
                     <int id="0" val="0"/>

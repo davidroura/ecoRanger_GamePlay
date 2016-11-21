@@ -9,7 +9,7 @@
                             <minus comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <get-game-val-20 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="15"/>
+                                    <int id="1" val="25"/>
                                 </plus>
                                 <get-xy comment="false" id="1" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
@@ -21,7 +21,7 @@
                             <minus comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="20"/>
+                                    <int id="1" val="30"/>
                                 </plus>
                                 <get-xy comment="false" id="1" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>

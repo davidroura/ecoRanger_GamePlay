@@ -409,63 +409,38 @@
                     <int id="0" val="2"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <if comment="false" x="26" y="149">
+                <comment-short comment="false" x="26" y="149">
+                    <int id="0" val="if boost isn&amp;apos;t maxed add banana boost"/>
+                </comment-short>
+                <if comment="false" x="26" y="169">
                     <group eventID="12" id="-1">
-                        <set-val-8-16 comment="false" x="37" y="174">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-val-8-16 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="12"/>
-                            </plus>
+                        <if comment="false" x="37" y="199">
+                            <group eventID="12" id="-1">
+                                <set-val-8-16 comment="false" x="48" y="224">
+                                    <plus comment="false" id="0" x="0" y="0">
+                                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="13"/>
+                                    </plus>
+                                </set-val-8-16>
+                            </group>
+                            <get-val-8-5 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="30"/>
+                    </less>
+                </if>
+                <else comment="false" x="26" y="278">
+                    <group eventID="12" id="-1">
+                        <set-val-8-16 comment="false" x="37" y="298">
+                            <int id="0" val="30"/>
                         </set-val-8-16>
                     </group>
-                    <get-val-8-5 comment="false" id="0" x="0" y="0"/>
-                </if>
+                </else>
             </group>
             <int id="0" val="tookBanana"/>
         </event-custom>
-    </group>
-    <group eventID="12" id="1">
-        <set-game-val-3 comment="false" x="329" y="304">
-            <plus comment="false" id="0" x="0" y="0">
-                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="5"/>
-            </plus>
-        </set-game-val-3>
-        <set-val-8-6 comment="false" x="329" y="334">
-            <plus comment="false" id="0" x="0" y="0">
-                <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="1"/>
-            </plus>
-        </set-val-8-6>
-        <dolater comment="false" x="329" y="364">
-            <group eventID="12" id="-1">
-                <set-val-8-6 comment="false" x="340" y="391">
-                    <minus comment="false" id="0" x="0" y="0">
-                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </minus>
-                </set-val-8-6>
-                <set-game-val-3 comment="false" x="340" y="421">
-                    <minus comment="false" id="0" x="0" y="0">
-                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="5"/>
-                    </minus>
-                </set-game-val-3>
-                <if comment="false" x="340" y="451">
-                    <group eventID="12" id="-1">
-                        <set-game-val-17 comment="false" x="351" y="481">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-17>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-val-8-6 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </eq>
-                </if>
-            </group>
-            <int id="0" val="2"/>
-            <ACTOR eid="lastcreated" id="2"/>
-        </dolater>
     </group>
     <group eventID="12" id="-1"/>
     <group eventID="13" id="0">

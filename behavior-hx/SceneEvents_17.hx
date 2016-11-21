@@ -83,15 +83,15 @@ class SceneEvents_17 extends SceneScript
 	{
 		super();
 		nameMap.set("listCount", "_listCount");
-		_listCount = 0;
+		_listCount = 0.0;
 		nameMap.set("position", "_position");
-		_position = 0;
+		_position = 0.0;
 		nameMap.set("xPosition", "_xPosition");
-		_xPosition = 0;
+		_xPosition = 0.0;
 		nameMap.set("yPosition", "_yPosition");
-		_yPosition = 0;
+		_yPosition = 0.0;
 		nameMap.set("yCount", "_yCount");
-		_yCount = 0;
+		_yCount = 0.0;
 		
 	}
 	

@@ -218,12 +218,12 @@ class Design_95_95_spawnHandler extends SceneScript
 		else if((_ramdomNumber012 > 6))
 		{
 			createRecycledActorOnLayer(getActorType(15), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
+			getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(4))));
 		}
 		else
 		{
 			createRecycledActorOnLayer(getActorType(104), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(20/100, 20/100, 0, Linear.easeNone);
+			getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(3))));
 		}
 		getLastCreatedActor().makeAlwaysSimulate();
 	}
@@ -253,16 +253,7 @@ class Design_95_95_spawnHandler extends SceneScript
 	public function _customEvent_treeType():Void
 	{
 		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		_treeAnimation = asNumber(randomInt(Math.floor(1), Math.floor(2)));
-		propertyChanged("_treeAnimation", _treeAnimation);
-		if((_ramdomNumber012 < 6))
-		{
-			getLastCreatedActor().setAnimation("" + "tree1");
-		}
-		else
-		{
-			getLastCreatedActor().setAnimation("" + "tree2");
-		}
+		getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(3))));
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -330,7 +321,7 @@ class Design_95_95_spawnHandler extends SceneScript
 		nameMap.set("trashXPosWidth", "_trashXPosWidth");
 		_trashXPosWidth = 0.0;
 		nameMap.set("distanceRock", "_distanceRock");
-		_distanceRock = 0;
+		_distanceRock = 0.0;
 		nameMap.set("trashYPos", "_trashYPos");
 		_trashYPos = 0.0;
 		nameMap.set("dot1X", "_dot1X");
@@ -374,6 +365,13 @@ class Design_95_95_spawnHandler extends SceneScript
 		_yDots.push(5);
 		_nextDistance = asNumber(50);
 		propertyChanged("_nextDistance", _nextDistance);
+		/* adding initial trees */
+		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		_customEvent_treeType();
+		createRecycledActorOnLayer(getActorType(70), 220, 0, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		_customEvent_treeType();
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

@@ -78,7 +78,7 @@ class Design_88_88_globalSettings extends SceneScript
 	public function _customEvent_gameSettings():Void
 	{
 		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
-		Engine.engine.setGameAttribute("sceneSpeed", 15);
+		Engine.engine.setGameAttribute("sceneSpeed", 17);
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		Engine.engine.setGameAttribute("gameStart", false);
 		Engine.engine.setGameAttribute("spawnThings", false);

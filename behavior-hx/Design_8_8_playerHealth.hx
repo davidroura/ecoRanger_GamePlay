@@ -100,9 +100,18 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			Engine.engine.setGameAttribute("boosted", false);
 		}, null);
-		if(_playerBoost)
+		/* if boost isn't maxed add banana boost */
+		if((_boostSpeed < 30))
 		{
-			_boostSpeed = asNumber((_boostSpeed + 12));
+			if(_playerBoost)
+			{
+				_boostSpeed = asNumber((_boostSpeed + 13));
+				propertyChanged("_boostSpeed", _boostSpeed);
+			}
+		}
+		else
+		{
+			_boostSpeed = asNumber(30);
 			propertyChanged("_boostSpeed", _boostSpeed);
 		}
 	}

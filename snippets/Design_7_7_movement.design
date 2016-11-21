@@ -241,20 +241,29 @@
                     <group eventID="8" id="-1">
                         <setanim comment="false" x="37" y="65">
                             <ACTOR eid="this" id="0"/>
+                            <int id="1" val="dirt"/>
+                        </setanim>
+                    </group>
+                    <get-game-val-52 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else-if comment="false" x="26" y="104">
+                    <group eventID="8" id="-1">
+                        <setanim comment="false" x="37" y="129">
+                            <ACTOR eid="this" id="0"/>
                             <get-val-7-8 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                     <get-game-val-17 comment="false" id="0" x="0" y="0"/>
-                </if>
-                <else comment="false" x="26" y="109">
+                </else-if>
+                <else comment="false" x="26" y="173">
                     <group eventID="8" id="-1">
-                        <setanim comment="false" x="37" y="129">
+                        <setanim comment="false" x="37" y="193">
                             <ACTOR eid="this" id="0"/>
                             <get-val-7-1 comment="false" id="1" x="0" y="0"/>
                         </setanim>
                     </group>
                 </else>
-                <if comment="false" x="26" y="173">
+                <if comment="false" x="26" y="237">
                     <group eventID="8" id="-1"/>
                     <eq comment="false" id="0" x="0" y="0">
                         <getdir comment="false" id="0" x="0" y="0">
@@ -263,9 +272,9 @@
                         <get-val-7-11 comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="26" y="243">
+                <else-if comment="false" x="26" y="307">
                     <group eventID="8" id="-1">
-                        <setangle comment="false" x="37" y="281">
+                        <setangle comment="false" x="37" y="345">
                             <ACTOR eid="this" id="0"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <getdir comment="false" id="0" x="0" y="0">
@@ -282,9 +291,9 @@
                         </getdir>
                     </less>
                 </else-if>
-                <else-if comment="false" x="26" y="338">
+                <else-if comment="false" x="26" y="402">
                     <group eventID="8" id="-1">
-                        <setangle comment="false" x="37" y="376">
+                        <setangle comment="false" x="37" y="440">
                             <ACTOR eid="this" id="0"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <getdir comment="false" id="0" x="0" y="0">
@@ -301,7 +310,7 @@
                         <get-val-7-11 comment="false" id="1" x="0" y="0"/>
                     </less>
                 </else-if>
-                <set-game-val-22 comment="false" x="26" y="433">
+                <set-game-val-22 comment="false" x="26" y="497">
                     <int id="0" val="0"/>
                 </set-game-val-22>
             </group>

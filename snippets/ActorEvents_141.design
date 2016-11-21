@@ -8,9 +8,12 @@
                         <set-xy comment="false" x="45" y="53">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                            <get-game-val-20 comment="false" id="2" x="0" y="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="13"/>
+                            </plus>
                         </set-xy>
-                        <set-xy comment="false" x="45" y="85">
+                        <set-xy comment="false" x="45" y="90">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <minus comment="false" id="2" x="0" y="0">
@@ -21,15 +24,15 @@
                     </group>
                     <get-game-val-46 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="34" y="134">
+                <else comment="false" x="34" y="139">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="45" y="154">
+                        <die comment="false" x="45" y="159">
                             <ACTOR eid="this" id="0"/>
                         </die>
-                        <set-game-val-3 comment="false" x="45" y="181">
+                        <set-game-val-3 comment="false" x="45" y="186">
                             <get-game-val-47 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-3>
-                        <set-game-val-46 comment="false" x="45" y="206">
+                        <set-game-val-46 comment="false" x="45" y="211">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-46>
                     </group>
@@ -37,14 +40,5 @@
             </group>
         </step>
     </group>
-    <group eventID="2" id="-1">
-        <plus comment="false" x="898" y="422">
-            <int id="0" val=""/>
-            <int id="1" val="75"/>
-        </plus>
-        <plus comment="false" x="496" y="180">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </plus>
-    </group>
+    <group eventID="2" id="-1"/>
 </groups>

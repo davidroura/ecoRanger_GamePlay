@@ -43,9 +43,12 @@
                         <set-xy comment="false" x="37" y="70">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                            <get-game-val-20 comment="false" id="2" x="0" y="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="13"/>
+                            </plus>
                         </set-xy>
-                        <set-xy comment="false" x="37" y="102">
+                        <set-xy comment="false" x="37" y="107">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <minus comment="false" id="2" x="0" y="0">
@@ -59,12 +62,12 @@
                         <int id="1" val="0"/>
                     </noteq>
                 </if>
-                <else comment="false" x="26" y="151">
+                <else comment="false" x="26" y="156">
                     <group eventID="4" id="-1">
-                        <set-game-val-46 comment="false" x="37" y="171">
+                        <set-game-val-46 comment="false" x="37" y="176">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-46>
-                        <die comment="false" x="37" y="196">
+                        <die comment="false" x="37" y="201">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
