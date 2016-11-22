@@ -3,97 +3,355 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <set-val-113-2 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                </set-val-113-2>
-                <set-val-113-1 comment="false" x="26" y="60">
-                    <length-list comment="false" id="0" x="0" y="0">
-                        <get-game-val-58 comment="false" id="0" x="0" y="0"/>
-                    </length-list>
-                </set-val-113-1>
-                <set-val-113-3 comment="false" x="26" y="90">
-                    <int id="0" val="0"/>
-                </set-val-113-3>
-                <set-val-113-5 comment="false" x="26" y="110">
-                    <int id="0" val="0"/>
-                </set-val-113-5>
-                <repeatu comment="false" x="26" y="130">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="setVars"/>
+                </say-this>
+                <repeatu comment="false" x="26" y="60">
                     <group eventID="1" id="-1">
-                        <set-val-113-5 comment="false" x="37" y="160">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-val-113-5 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </plus>
-                        </set-val-113-5>
-                        <create-actor3 comment="false" x="37" y="190">
-                            <actortype eid="165" id="0"/>
-                            <get-val-113-3 comment="false" id="1" x="0" y="0"/>
-                            <get-val-113-4 comment="false" id="2" x="0" y="0"/>
-                            <int id="3" val="0"/>
-                        </create-actor3>
-                        <set-val-113-2 comment="false" x="37" y="222">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </plus>
-                        </set-val-113-2>
-                        <set-val-113-3 comment="false" x="37" y="252">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="100"/>
-                            </plus>
-                        </set-val-113-3>
-                        <if comment="false" x="37" y="282">
+                        <say-this comment="false" x="37" y="90">
+                            <int id="0" val="createAndSelect"/>
+                        </say-this>
+                        <say-this comment="false" x="37" y="110">
+                            <int id="0" val="moveX"/>
+                        </say-this>
+                        <if comment="false" x="37" y="130">
                             <group eventID="1" id="-1">
-                                <set-val-113-3 comment="false" x="48" y="312">
-                                    <int id="0" val="0"/>
-                                </set-val-113-3>
-                            </group>
-                            <eq comment="false" id="0" x="0" y="0">
-                                <get-val-113-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="300"/>
-                            </eq>
-                        </if>
-                        <if comment="false" x="37" y="344">
-                            <group eventID="1" id="-1">
-                                <set-val-113-5 comment="false" x="48" y="379">
-                                    <int id="0" val="0"/>
-                                </set-val-113-5>
-                                <set-val-113-4 comment="false" x="48" y="399">
-                                    <plus comment="false" id="0" x="0" y="0">
-                                        <get-val-113-4 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="100"/>
-                                    </plus>
-                                </set-val-113-4>
+                                <say-this comment="false" x="48" y="165">
+                                    <int id="0" val="resetXmoveY"/>
+                                </say-this>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <int id="0" val="0"/>
                                 <mod comment="false" id="1" x="0" y="0">
-                                    <get-val-113-5 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-113-2 comment="false" id="0" x="0" y="0"/>
                                     <int id="1" val="3"/>
                                 </mod>
                             </eq>
                         </if>
                     </group>
-                    <less comment="false" id="0" x="0" y="0">
+                    <lesseq comment="false" id="0" x="0" y="0">
                         <get-val-113-1 comment="false" id="0" x="0" y="0"/>
                         <get-val-113-2 comment="false" id="1" x="0" y="0"/>
-                    </less>
+                    </lesseq>
                 </repeatu>
             </group>
         </init>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-113-6 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-113-6>
+                <set-val-113-2 comment="false" x="26" y="60">
+                    <int id="0" val="0"/>
+                </set-val-113-2>
+                <set-val-113-1 comment="false" x="26" y="80">
+                    <length-list comment="false" id="0" x="0" y="0">
+                        <get-game-val-58 comment="false" id="0" x="0" y="0"/>
+                    </length-list>
+                </set-val-113-1>
+                <set-val-113-4 comment="false" x="26" y="110">
+                    <int id="0" val="60"/>
+                </set-val-113-4>
+                <set-val-113-3 comment="false" x="26" y="130">
+                    <int id="0" val="10"/>
+                </set-val-113-3>
+                <set-val-113-8 comment="false" x="26" y="150">
+                    <int id="0" val="nada"/>
+                </set-val-113-8>
+            </group>
+            <int id="0" val="setVars"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-val-113-6 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-113-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-113-6>
+                <set-val-113-3 comment="false" x="26" y="70">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <get-val-113-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="100"/>
+                        </times>
+                        <int id="1" val="10"/>
+                    </plus>
+                </set-val-113-3>
+                <set-val-113-2 comment="false" x="26" y="105">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-113-2>
+            </group>
+            <int id="0" val="moveX"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-113-6 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-113-6>
+                <set-val-113-4 comment="false" x="26" y="60">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-113-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </plus>
+                </set-val-113-4>
+                <set-val-113-3 comment="false" x="26" y="90">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <times comment="false" id="0" x="0" y="0">
+                            <get-val-113-6 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="100"/>
+                        </times>
+                        <int id="1" val="10"/>
+                    </plus>
+                </set-val-113-3>
+            </group>
+            <int id="0" val="resetXmoveY"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="7" id="0">
         <draw comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <draw-text comment="false" x="26" y="40">
-                    <get-val-113-1 comment="false" id="0" x="0" y="0"/>
+            <group eventID="7" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <font eid="135" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <get-val-113-8 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="100"/>
                     <int id="2" val="100"/>
                 </draw-text>
             </group>
         </draw>
     </group>
-    <group eventID="2" id="-1"/>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <set-val-113-8 comment="false" x="26" y="42">
+                    <int id="0" val="Carta 1 Seleccionada"/>
+                </set-val-113-8>
+            </group>
+            <ACTOR eid="var" id="0" vid="9"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <create-actor3 comment="false" x="26" y="40">
+                    <actortype eid="165" id="0"/>
+                    <get-val-113-3 comment="false" id="1" x="0" y="0"/>
+                    <get-val-113-4 comment="false" id="2" x="0" y="0"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <if comment="false" x="26" y="72">
+                    <group eventID="9" id="-1">
+                        <set-val-113-9 comment="false" x="37" y="107">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-9>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="1"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="146">
+                    <group eventID="9" id="-1">
+                        <set-val-113-10 comment="false" x="37" y="181">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-10>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="2"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="220">
+                    <group eventID="9" id="-1">
+                        <set-val-113-11 comment="false" x="37" y="255">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-11>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="3"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="294">
+                    <group eventID="9" id="-1">
+                        <set-val-113-12 comment="false" x="37" y="329">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-12>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="4"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="368">
+                    <group eventID="9" id="-1">
+                        <set-val-113-13 comment="false" x="37" y="403">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-13>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="5"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="442">
+                    <group eventID="9" id="-1">
+                        <set-val-113-14 comment="false" x="37" y="477">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-14>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="6"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="516">
+                    <group eventID="9" id="-1">
+                        <set-val-113-15 comment="false" x="37" y="551">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-15>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="7"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="590">
+                    <group eventID="9" id="-1">
+                        <set-val-113-16 comment="false" x="37" y="625">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-16>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="8"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="664">
+                    <group eventID="9" id="-1">
+                        <set-val-113-17 comment="false" x="37" y="699">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-17>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="9"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="738">
+                    <group eventID="9" id="-1">
+                        <set-val-113-18 comment="false" x="37" y="773">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-18>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="10"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="812">
+                    <group eventID="9" id="-1">
+                        <set-val-113-19 comment="false" x="37" y="847">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-19>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="11"/>
+                    </eq>
+                </else-if>
+                <else-if comment="false" x="26" y="886">
+                    <group eventID="9" id="-1">
+                        <set-val-113-20 comment="false" x="37" y="921">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </set-val-113-20>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <plus comment="false" id="0" x="0" y="0">
+                            <get-val-113-2 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="1"/>
+                        </plus>
+                        <int id="1" val="12"/>
+                    </eq>
+                </else-if>
+            </group>
+            <int id="0" val="createAndSelect"/>
+        </event-custom>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <set-val-113-8 comment="false" x="26" y="42">
+                    <int id="0" val="Carta 2 Seleccionada"/>
+                </set-val-113-8>
+            </group>
+            <ACTOR eid="var" id="0" vid="10"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <set-val-113-8 comment="false" x="26" y="42">
+                    <int id="0" val="Carta 3 Seleccionada"/>
+                </set-val-113-8>
+            </group>
+            <ACTOR eid="var" id="0" vid="11"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="11" id="-1"/>
 </groups>
