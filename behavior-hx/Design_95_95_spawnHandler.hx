@@ -213,7 +213,7 @@ class Design_95_95_spawnHandler extends SceneScript
 		if((_ramdomNumber012 > 9))
 		{
 			createRecycledActorOnLayer(getActorType(8), 0, -5, 1, "" + "gamePlay");
-			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
+			getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(2))));
 		}
 		else if((_ramdomNumber012 > 6))
 		{
