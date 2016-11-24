@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,78 +69,30 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_2 extends SceneScript
+class ActorEvents_55 extends ActorScript
 {
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		if(!(Engine.engine.getGameAttribute("musicOn")))
-		{
-			setVolumeForAllSounds(50/100);
-			playSound(getSound(121));
-			Engine.engine.setGameAttribute("musicOn", true);
-		}
-		saveGame("mySave", function(success:Bool):Void
-		{
-			
-		});
-		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				getActor(4).growTo(95/100, 95/100, 0, Linear.easeNone);
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				stopAllSounds();
-				Engine.engine.setGameAttribute("musicOn", false);
-				getActor(4).growTo(100/100, 100/100, .02, Linear.easeNone);
-				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
-			}
-		});
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.fillColor = Utils.getColorRGB(255,200,0);
-				g.setFont(getFont(135));
-				g.drawString("" + "", 60, 15);
-			}
-		});
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedRight)
-			{
-				switchScene(GameModel.get().scenes.get(3).getID(), null, createSlideLeftTransition(0.1));
-			}
-		});
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedLeft)
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createSlideRightTransition(0.1));
+				/* if list doesn't have name then it's a gray button */
+				if(Utils.contains(Engine.engine.getGameAttribute("upgradeList"), actor.getAnimation()))
+				{
+					createRecycledActor(getActorType(124), 50, 100, Script.FRONT);
+					getLastCreatedActor().setAnimation("" + actor.getAnimation());
+				}
 			}
 		});
 		

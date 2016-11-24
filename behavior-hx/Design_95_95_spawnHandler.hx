@@ -239,11 +239,11 @@ class Design_95_95_spawnHandler extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_treeSpawn():Void
 	{
-		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(70), -110, 0, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(-600);
 		_customEvent_treeType();
-		createRecycledActorOnLayer(getActorType(70), 220, 0, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(70), 210, 0, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(-600);
 		_customEvent_treeType();
@@ -253,7 +253,7 @@ class Design_95_95_spawnHandler extends SceneScript
 	public function _customEvent_treeType():Void
 	{
 		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(3))));
+		getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(6))));
 	}
 	
 	/* ========================= Custom Event ========================= */

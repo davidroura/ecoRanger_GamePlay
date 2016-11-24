@@ -20,10 +20,10 @@
                     <color b="0" g="200" id="0" r="255"/>
                 </set-color>
                 <set-font-new comment="false" x="26" y="67">
-                    <font eid="128" id="0"/>
+                    <font eid="135" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="94">
-                    <get-game-val-33 comment="false" id="0" x="0" y="0"/>
+                    <int id="0" val=""/>
                     <int id="1" val="60"/>
                     <int id="2" val="15"/>
                 </draw-text>
@@ -76,9 +76,9 @@
             <group eventID="9" id="-1">
                 <scaleTo comment="false" x="26" y="42">
                     <ACTOR eid="4" id="0"/>
-                    <int id="1" val="90"/>
-                    <int id="2" val="90"/>
-                    <int id="3" val=".1"/>
+                    <int id="1" val="95"/>
+                    <int id="2" val="95"/>
+                    <int id="3" val="0"/>
                     <int id="4" val="0"/>
                 </scaleTo>
             </group>
@@ -97,7 +97,7 @@
                 <scaleTo comment="false" x="26" y="87">
                     <ACTOR eid="4" id="0"/>
                     <int id="1" val="100"/>
-                    <int id="2" val="10"/>
+                    <int id="2" val="100"/>
                     <int id="3" val=".02"/>
                     <int id="4" val="0"/>
                 </scaleTo>

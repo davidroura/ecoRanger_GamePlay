@@ -273,7 +273,7 @@
             <group eventID="15" id="-1">
                 <create-actor-on-layer comment="false" x="26" y="40">
                     <actortype eid="70" id="0"/>
-                    <int id="1" val="-120"/>
+                    <int id="1" val="-110"/>
                     <int id="2" val="0"/>
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
@@ -291,7 +291,7 @@
                 </say-this>
                 <create-actor-on-layer comment="false" x="26" y="141">
                     <actortype eid="70" id="0"/>
-                    <int id="1" val="220"/>
+                    <int id="1" val="210"/>
                     <int id="2" val="0"/>
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
@@ -327,7 +327,7 @@
                     <tostring comment="false" id="1" x="0" y="0">
                         <randint comment="false" id="0" x="0" y="0">
                             <int id="0" val="1"/>
-                            <int id="1" val="3"/>
+                            <int id="1" val="6"/>
                         </randint>
                     </tostring>
                 </setanim>
