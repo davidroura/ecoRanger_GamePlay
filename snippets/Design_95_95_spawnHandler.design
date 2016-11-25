@@ -595,7 +595,7 @@
                         <eq comment="false" id="1" x="0" y="0">
                             <mod comment="false" id="0" x="0" y="0">
                                 <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="80"/>
+                                <int id="1" val="95"/>
                             </mod>
                             <int id="1" val="0"/>
                         </eq>
@@ -677,12 +677,7 @@
             <int id="0" val="trashListSpawn"/>
         </event-custom>
     </group>
-    <group eventID="23" id="-1">
-        <more comment="false" x="0" y="0">
-            <get-val-95-32 comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="3"/>
-        </more>
-    </group>
+    <group eventID="23" id="-1"/>
     <group eventID="24" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="24" id="-1">

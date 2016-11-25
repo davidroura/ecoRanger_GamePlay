@@ -11,7 +11,6 @@
         <events>
             <event displayName="Drawing" enabled="true" id="16" name="draw" order="19" repeats="true"/>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="tempMudTest" enabled="false" id="17" name="init" order="22" repeats="true"/>
             <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="18" repeats="true"/>
             <event displayName="powerUpSetup" enabled="true" id="18" name="event-custom" order="23" repeats="true"/>
             <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="20" repeats="true"/>
@@ -123,8 +122,6 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="endUI_Created" hidden="false" id="11" name="_endUICreated" order="9"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="points" hidden="false" id="12" name="_points" order="10"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="rockCollision" hidden="false" id="13" name="_rockCollision" order="11"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="mudCollision" hidden="false" id="14" name="_mudCollision" order="12"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="waterCollision" hidden="false" id="15" name="_waterCollision" order="13"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boostSpeed" hidden="false" id="16" name="_boostSpeed" order="14"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceTree" hidden="false" id="17" name="_distanceTree" order="15"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceLife" hidden="true" id="18" name="_distanceLife" order="16"/>
@@ -135,7 +132,7 @@
             <event displayName="Created" enabled="true" id="2" name="init" order="11" repeats="true"/>
             <event displayName="Updated" enabled="true" id="3" name="step" order="12" repeats="true"/>
             <event displayName="player - glassBottle" enabled="true" id="5" name="event-collide-typetotype" order="21" repeats="true"/>
-            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="28" repeats="true"/>
+            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="29" repeats="true"/>
             <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="25" repeats="true"/>
             <event displayName="player - can" enabled="true" id="8" name="event-collide-typetotype" order="9" repeats="true"/>
             <event displayName="dozer - rock" enabled="true" id="9" name="event-collide-typetotype" order="4" repeats="true"/>
@@ -151,9 +148,10 @@
             <event displayName="player - plastic" enabled="true" id="19" name="event-collide-typetotype" order="2" repeats="true"/>
             <event displayName="dozer - plastic" enabled="true" id="20" name="event-collide-typetotype" order="3" repeats="false"/>
             <event displayName="player - mud" enabled="true" id="21" name="event-collide-typetotype" order="26" repeats="true"/>
-            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="27" repeats="true"/>
+            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="28" repeats="true"/>
             <event displayName="level" enabled="true" id="23" name="event-custom" order="19" repeats="true"/>
             <event displayName="player - plasticBottle Copy" enabled="true" id="24" name="event-collide-typetotype" order="22" repeats="true"/>
+            <event displayName="player - trees" enabled="true" id="25" name="event-collide-typetotype" order="27" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
@@ -554,6 +552,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashType" hidden="false" id="2" name="_trashType" order="1"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="spawnWait" hidden="false" id="3" name="_spawnWait" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="recyclingOver" hidden="false" id="4" name="_recyclingOver" order="3"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="5" repeats="true"/>
@@ -781,5 +780,33 @@
         <events>
             <event displayName="Custom Event" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
         </events>
+    </snippet>
+    <snippet actorid="167" attachedevent="true" class="scripts.ActorEvents_167" classname="scripts.ActorEvents_167" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="115" name="ActorEvents_167" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="169" attachedevent="true" class="scripts.ActorEvents_169" classname="scripts.ActorEvents_169" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="116" name="ActorEvents_169" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="171" attachedevent="true" class="scripts.ActorEvents_171" classname="scripts.ActorEvents_171" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="117" name="ActorEvents_171" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="171" attachedevent="true" class="scripts.ActorEvents_173" classname="scripts.ActorEvents_173" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="118" name="ActorEvents_173" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_120_120_powerUpGadget2" classname="scripts.Design_120_120_powerUpGadget2" desc="" description="" design="true" drawOrder="0" id="119" name="powerUp_Gadget2" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="sceneSpeedHold" hidden="false" id="1" name="_sceneSpeedHold" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="175" attachedevent="true" class="scripts.ActorEvents_175" classname="scripts.ActorEvents_175" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="120" name="ActorEvents_175" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
 </pack>

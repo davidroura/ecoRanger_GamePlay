@@ -94,7 +94,7 @@ class ActorEvents_137 extends ActorScript
 			if(wrapper.enabled && sameAsAny(getActorType(161), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
 				recycleActor(actor);
-				Engine.engine.setGameAttribute("glassBottlesRecycline", (Engine.engine.getGameAttribute("glassBottlesRecycline") + 1));
+				Engine.engine.setGameAttribute("recycling_glassBottles", (Engine.engine.getGameAttribute("recycling_glassBottles") + 1));
 			}
 		});
 		

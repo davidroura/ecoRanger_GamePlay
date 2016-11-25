@@ -87,6 +87,22 @@
                         </plus>
                     </sqrt>
                 </set-game-val-49>
+                <set-game-val-70 comment="false" x="26" y="88">
+                    <div comment="false" id="0" x="0" y="0">
+                        <screen-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </screen-wh>
+                        <int id="1" val="2"/>
+                    </div>
+                </set-game-val-70>
+                <set-game-val-71 comment="false" x="26" y="126">
+                    <div comment="false" id="0" x="0" y="0">
+                        <screen-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </screen-wh>
+                        <int id="1" val="2"/>
+                    </div>
+                </set-game-val-71>
             </group>
             <int id="0" val="globalConstants"/>
         </event-custom>

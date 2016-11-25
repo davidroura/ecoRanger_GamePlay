@@ -127,7 +127,7 @@ class Design_95_95_spawnHandler extends SceneScript
 			_distanceTree = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 			propertyChanged("_distanceTree", _distanceTree);
 		}
-		if((!(_distanceLife == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 80) == 0)))
+		if((!(_distanceLife == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 95) == 0)))
 		{
 			_customEvent_lifeSpawn();
 			_distanceLife = asNumber(Engine.engine.getGameAttribute("playerDistance"));

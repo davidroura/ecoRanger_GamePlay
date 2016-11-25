@@ -84,8 +84,6 @@ class Design_8_8_playerHealth extends SceneScript
 	public var _endUICreated:Bool;
 	public var _points:Float;
 	public var _rockCollision:Bool;
-	public var _mudCollision:Bool;
-	public var _waterCollision:Bool;
 	public var _boostSpeed:Float;
 	public var _distanceTree:Float;
 	public var _distanceLife:Float;
@@ -203,10 +201,6 @@ class Design_8_8_playerHealth extends SceneScript
 		_points = 0.0;
 		nameMap.set("rockCollision", "_rockCollision");
 		_rockCollision = false;
-		nameMap.set("mudCollision", "_mudCollision");
-		_mudCollision = false;
-		nameMap.set("waterCollision", "_waterCollision");
-		_waterCollision = false;
 		nameMap.set("boostSpeed", "_boostSpeed");
 		_boostSpeed = 0.0;
 		nameMap.set("distanceTree", "_distanceTree");
@@ -240,8 +234,6 @@ class Design_8_8_playerHealth extends SceneScript
 		propertyChanged("_bonusCard", _bonusCard);
 		_rockCollision = false;
 		propertyChanged("_rockCollision", _rockCollision);
-		_mudCollision = false;
-		propertyChanged("_mudCollision", _mudCollision);
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
@@ -374,6 +366,10 @@ class Design_8_8_playerHealth extends SceneScript
 						{
 							Engine.engine.setGameAttribute("sceneSpeed", 8);
 						}
+						if(Engine.engine.getGameAttribute("gadgetPower2"))
+						{
+							Engine.engine.setGameAttribute("sceneSpeed", 55);
+						}
 						else
 						{
 							/* banana boost */
@@ -398,10 +394,6 @@ class Design_8_8_playerHealth extends SceneScript
 				}
 				_rockCollision = false;
 				propertyChanged("_rockCollision", _rockCollision);
-				_mudCollision = false;
-				propertyChanged("_mudCollision", _mudCollision);
-				_waterCollision = false;
-				propertyChanged("_waterCollision", _waterCollision);
 			}
 		});
 		
@@ -435,7 +427,7 @@ class Design_8_8_playerHealth extends SceneScript
 		});
 		
 		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(1).ID, getActorType(8).ID, function(event:Collision, list:Array<Dynamic>):Void
+		addSceneCollisionListener(getActorType(1).ID, getActorType(104).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
@@ -466,14 +458,22 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(!(Engine.engine.getGameAttribute("planterPower")))
+				if((!(Engine.engine.getGameAttribute("planterPower")) || !(Engine.engine.getGameAttribute("gadgetPower2"))))
 				{
-					Engine.engine.setGameAttribute("sceneSpeed", 9);
+					Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .5));
 					setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
-					_mudCollision = true;
-					propertyChanged("_mudCollision", _mudCollision);
 					Engine.engine.setGameAttribute("spawnThings", false);
 				}
+			}
+		});
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(1).ID, getActorType(70).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .5));
+				setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
 			}
 		});
 		
@@ -482,12 +482,10 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(!(Engine.engine.getGameAttribute("planterPower")))
+				if(!(Engine.engine.getGameAttribute("gadgetPower2")))
 				{
-					Engine.engine.setGameAttribute("sceneSpeed", 6);
+					Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .3));
 					setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
-					_waterCollision = true;
-					propertyChanged("_waterCollision", _waterCollision);
 					Engine.engine.setGameAttribute("spawnThings", false);
 				}
 			}

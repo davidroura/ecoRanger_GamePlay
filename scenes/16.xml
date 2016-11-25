@@ -2,19 +2,27 @@
 <scene depth="1" desc="" eventsnippetid="89" extheight="544" extwidth="384" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="16" name="recycleGame" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="320">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="recyclingBG" opacity="100" order="1" rid="177" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="2" c="false" group="6" id="157" name="rItem_Bin 2" sx="1.0" sy="1.0" x="185" y="163" z="0"/>
-        <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="-3" y="0" z="0"/>
-        <actor a="0.0" aid="6" c="false" group="6" id="159" name="rItem_BinAluminum 6" sx="1.0" sy="1.0" x="189" y="263" z="0"/>
-        <actor a="0.0" aid="7" c="false" group="6" id="161" name="rItem_BinGlass 7" sx="1.0" sy="1.0" x="189" y="367" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="6" id="157" name="rItem_Bin 2" sx="1.0" sy="1.0" x="185" y="162" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="1" y="0" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="6" id="159" name="rItem_BinAluminum 6" sx="1.0" sy="1.0" x="188" y="356" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="6" id="161" name="rItem_BinGlass 7" sx="1.0" sy="1.0" x="187" y="257" z="0"/>
         <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="1.0" sy="1.0" x="279" y="12" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="3" id="169" name="mUI_totalCans 9" sx="0.5833333" sy="0.5833333" x="156" y="7" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="171" name="mUI_totalPlasticBottles 10" sx="0.6857143" sy="0.6857143" x="162" y="45" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="173" name="mUI_totalGlassB 11" sx="0.65" sy="0.65" x="164" y="72" z="0"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="88">
+            <prop id="1" list="0" val="0.0"/>
+        </s>
+    </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-game-val-50 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-50>
+                <set-game-val-47 comment="false" x="26" y="65">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-47>
+                <dolater comment="false" x="26" y="90">
+                    <group eventID="1" id="-1">
+                        <set-game-val-50 comment="false" x="37" y="117">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-50>
+                        <set-game-val-46 comment="false" x="37" y="142">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-46>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1"/>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

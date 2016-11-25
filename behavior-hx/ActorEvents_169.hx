@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,69 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_16 extends SceneScript
+class ActorEvents_169 extends ActorScript
 {
-	public var _onPad:Bool;
-	public var _trashType:Float;
-	public var _spawnWait:Bool;
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_randomSpawn():Void
+	
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		runLater(1000 * randomFloatBetween(.2, 2), function(timeTask:TimedTask):Void
-		{
-			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
-			propertyChanged("_trashType", _trashType);
-			if((_trashType == 0))
-			{
-				createRecycledActor(getActorType(131), randomInt(Math.floor(10), Math.floor(100)), 5, Script.FRONT);
-			}
-			if((_trashType == 1))
-			{
-				createRecycledActor(getActorType(137), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
-			}
-			if((_trashType == 2))
-			{
-				createRecycledActor(getActorType(139), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
-			}
-			_spawnWait = false;
-			propertyChanged("_spawnWait", _spawnWait);
-		}, null);
-	}
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
-	{
-		super();
-		nameMap.set("onPad", "_onPad");
-		_onPad = false;
-		nameMap.set("trashType", "_trashType");
-		_trashType = 0.0;
-		nameMap.set("spawnWait", "_spawnWait");
-		_spawnWait = false;
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(!(_spawnWait))
-				{
-					_customEvent_randomSpawn();
-					_spawnWait = true;
-					propertyChanged("_spawnWait", _spawnWait);
-				}
-				g.setFont(getFont(128));
-				g.drawString("" + (("" + Engine.engine.getGameAttribute("cansRecycled")) + ("" + " CANS")), 180, 30);
-				g.drawString("" + (("" + Engine.engine.getGameAttribute("plasticBottlesRecycled")) + ("" + " PLASTIC")), 180, 60);
-				g.drawString("" + (("" + Engine.engine.getGameAttribute("glassBottlesRecycline")) + ("" + " GLASS")), 180, 90);
-			}
-		});
 		
 	}
 	

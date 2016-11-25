@@ -21,28 +21,5 @@
             </group>
         </init>
     </group>
-    <group eventID="1" id="2">
-        <scaleTo comment="false" x="95" y="220">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="40"/>
-            <int id="2" val="40"/>
-            <int id="3" val="0"/>
-            <int id="4" val="0"/>
-        </scaleTo>
-        <scaleTo comment="false" x="95" y="247">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="110"/>
-            <int id="2" val="110"/>
-            <int id="3" val=".3"/>
-            <int id="4" val="0"/>
-        </scaleTo>
-        <scaleTo comment="false" x="95" y="274">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="100"/>
-            <int id="2" val="100"/>
-            <int id="3" val=".1"/>
-            <int id="4" val="0"/>
-        </scaleTo>
-    </group>
     <group eventID="1" id="-1"/>
 </groups>

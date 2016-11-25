@@ -5,41 +5,91 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <say-this comment="false" x="37" y="70">
-                            <int id="0" val="randomSpawn"/>
-                        </say-this>
-                        <set-val-89-3 comment="false" x="37" y="90">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-89-3>
+                        <if comment="false" x="37" y="80">
+                            <group eventID="2" id="-1">
+                                <create-actor3 comment="false" x="48" y="110">
+                                    <actortype eid="175" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-game-val-71 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <setanim comment="false" x="48" y="142">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="noMoreTrash"/>
+                                </setanim>
+                                <set-val-89-4 comment="false" x="48" y="169">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-89-4>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-89-4 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
                     </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-val-89-3 comment="false" id="0" x="0" y="0"/>
-                    </not>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <lesseq comment="false" id="0" x="0" y="0">
+                                <get-game-val-63 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </lesseq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-game-val-64 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </lesseq>
+                        </and>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-game-val-65 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </lesseq>
+                    </and>
                 </if>
-                <set-font-new comment="false" x="26" y="127">
+                <else comment="false" x="26" y="218">
+                    <group eventID="2" id="-1">
+                        <if comment="false" x="37" y="238">
+                            <group eventID="2" id="-1">
+                                <say-this comment="false" x="48" y="268">
+                                    <int id="0" val="randomSpawn"/>
+                                </say-this>
+                                <set-val-89-3 comment="false" x="48" y="288">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-89-3>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-89-3 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                </else>
+                <set-font-new comment="false" x="26" y="337">
                     <font eid="128" id="0"/>
                 </set-font-new>
-                <draw-text comment="false" x="26" y="154">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-game-val-55 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val=" CANS"/>
-                    </str-combine>
+                <draw-text comment="false" x="26" y="364">
+                    <get-game-val-66 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="30"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="389">
+                    <get-game-val-67 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="60"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="414">
+                    <get-game-val-68 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="90"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="439">
+                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="30"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="184">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-game-val-56 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val=" PLASTIC"/>
-                    </str-combine>
+                <draw-text comment="false" x="26" y="464">
+                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="60"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="214">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-game-val-57 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val=" GLASS"/>
-                    </str-combine>
+                <draw-text comment="false" x="26" y="489">
+                    <get-game-val-65 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="90"/>
                 </draw-text>
@@ -60,7 +110,7 @@
                         </set-val-89-2>
                         <if comment="false" x="37" y="97">
                             <group eventID="3" id="-1">
-                                <create-actor3 comment="false" x="48" y="127">
+                                <create-actor3 comment="false" x="48" y="132">
                                     <actortype eid="131" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
                                         <int id="0" val="10"/>
@@ -69,15 +119,27 @@
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
+                                <set-game-val-63 comment="false" x="48" y="164">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-game-val-63 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </minus>
+                                </set-game-val-63>
                             </group>
-                            <eq comment="false" id="0" x="0" y="0">
-                                <get-val-89-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0"/>
-                            </eq>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <get-val-89-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </eq>
+                                <moreeq comment="false" id="1" x="0" y="0">
+                                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </moreeq>
+                            </and>
                         </if>
-                        <if comment="false" x="37" y="171">
+                        <if comment="false" x="37" y="206">
                             <group eventID="3" id="-1">
-                                <create-actor3 comment="false" x="48" y="201">
+                                <create-actor3 comment="false" x="48" y="241">
                                     <actortype eid="137" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
                                         <int id="0" val="0"/>
@@ -86,15 +148,27 @@
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
+                                <set-game-val-65 comment="false" x="48" y="273">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-game-val-65 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </minus>
+                                </set-game-val-65>
                             </group>
-                            <eq comment="false" id="0" x="0" y="0">
-                                <get-val-89-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </eq>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <get-val-89-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="1"/>
+                                </eq>
+                                <moreeq comment="false" id="1" x="0" y="0">
+                                    <get-game-val-65 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </moreeq>
+                            </and>
                         </if>
-                        <if comment="false" x="37" y="245">
+                        <if comment="false" x="37" y="315">
                             <group eventID="3" id="-1">
-                                <create-actor3 comment="false" x="48" y="275">
+                                <create-actor3 comment="false" x="48" y="350">
                                     <actortype eid="139" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
                                         <int id="0" val="0"/>
@@ -103,13 +177,25 @@
                                     <int id="2" val="5"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
+                                <set-game-val-64 comment="false" x="48" y="382">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-game-val-64 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </minus>
+                                </set-game-val-64>
                             </group>
-                            <eq comment="false" id="0" x="0" y="0">
-                                <get-val-89-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="2"/>
-                            </eq>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <get-val-89-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="2"/>
+                                </eq>
+                                <moreeq comment="false" id="1" x="0" y="0">
+                                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="0"/>
+                                </moreeq>
+                            </and>
                         </if>
-                        <set-val-89-3 comment="false" x="37" y="319">
+                        <set-val-89-3 comment="false" x="37" y="424">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-89-3>
                     </group>

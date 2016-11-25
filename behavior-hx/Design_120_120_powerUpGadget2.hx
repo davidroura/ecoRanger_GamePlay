@@ -69,34 +69,32 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_131 extends ActorScript
+class Design_120_120_powerUpGadget2 extends ActorScript
 {
-	public var _onPad:Bool;
-	public var _beltSpeed:Float;
+	public var _sceneSpeedHold:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("onPad", "_onPad");
-		_onPad = false;
-		nameMap.set("beltSpeed", "_beltSpeed");
-		_beltSpeed = 60.0;
+		nameMap.set("Actor", "actor");
+		nameMap.set("sceneSpeedHold", "_sceneSpeedHold");
+		_sceneSpeedHold = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		/* gadgetPower2 affects player health function */
+		Engine.engine.setGameAttribute("gadgetPower2", true);
+		Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
+		runLater(1000 * 5, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(159), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				recycleActor(actor);
-				Engine.engine.setGameAttribute("cansRecycled", (Engine.engine.getGameAttribute("cansRecycled") + 1));
-			}
-		});
+			Engine.engine.setGameAttribute("gadgetPower2", false);
+			Engine.engine.setGameAttribute("botOn", false);
+		}, actor);
 		
 	}
 	

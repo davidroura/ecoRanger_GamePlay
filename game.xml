@@ -89,6 +89,8 @@
     <attributes>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="-1" id="61" name="collected_cans" save="true" value="0.0"/>
+        <number cid="8" id="67" name="recycling_plasticBottle" save="true" value="0.0"/>
+        <number cid="8" id="66" name="recycling_cans" save="true" value="0.0"/>
         <list cid="-1" id="58" name="list_funFact" save="true" val="list">
             <text order="0" value="carta1"/>
             <text order="1" value="carta2"/>
@@ -120,6 +122,7 @@
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="8" id="15" name="gameCubePlastic" save="true" value="0.0"/>
         <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
+        <number cid="8" id="68" name="recycling_glassBottles" save="true" value="0.0"/>
         <number cid="8" id="59" name="collected_PlasticBottles" save="true" value="0.0"/>
         <number cid="8" id="14" name="gameCubeGlass" save="true" value="0.0"/>
         <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
@@ -146,7 +149,9 @@
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
         <number cid="2" id="47" name="sceneSpeedHold" save="true" value="0.0"/>
         <number cid="8" id="56" name="plasticBottlesRecycled" save="true" value="0.0"/>
+        <boolean cid="2" id="69" name="gadgetPower2" save="true" value="false"/>
         <boolean cid="3" id="4" name="playerControl" save="true" value="true"/>
+        <number cid="6" id="71" name="screenY_mid" save="true" value="0"/>
         <number cid="6" id="49" name="screenDiagonal" save="true" value="0.0"/>
         <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>
         <number cid="5" id="39" name="recyclingBeltSpeed" save="true" value="0.0"/>
@@ -154,6 +159,7 @@
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
+        <number cid="6" id="70" name="screenX_mid" save="true" value="0"/>
         <boolean cid="2" id="52" name="planterPower" save="true" value="false"/>
         <number cid="2" id="40" name="botOffset" save="true" value="60.0"/>
     </attributes>
@@ -186,7 +192,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,17,19,20,23,24,35,36,43,45,47,49,51,53,54,55,59,60,63,65,67,69,70,72,74,76,77,78,79,80,81,83,86,87,88,103,104,108,110,112,114,115,116,119,121,122,124,126,128,129,131,135,136,137,139,141,143,145,147,151,153,155,157,159,161,163,165," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,17,19,20,23,24,35,36,43,45,47,49,51,53,54,55,59,60,63,65,67,69,70,72,74,76,77,78,79,80,81,83,86,87,88,103,104,108,110,112,114,115,116,119,121,122,124,126,128,129,131,135,136,137,139,141,143,145,147,151,153,155,157,159,161,163,165,167,169,171,173,175,177," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
