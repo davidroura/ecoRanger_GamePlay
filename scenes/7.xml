@@ -9,9 +9,9 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="45" name="mUI_upgrade 1" sx="1.0" sy="1.0" x="18" y="218" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="3" id="45" name="mUI_upgrade 1" sx="1.0" sy="1.0" x="18" y="222" z="0"/>
         <actor a="0.0" aid="2" c="false" group="3" id="47" name="mUI_recycle 2" sx="1.0" sy="1.0" x="16" y="148" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="147" name="mUI_ChooseBots 3" sx="1.2465754" sy="1.2465754" x="35" y="75" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="147" name="mUI_ChooseBots 3" sx="1.0" sy="1.0" x="15" y="56" z="0"/>
     </actors>
     <snippets/>
     <terrain/>
