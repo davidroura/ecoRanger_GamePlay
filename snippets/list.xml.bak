@@ -741,26 +741,14 @@
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_17" classname="scripts.SceneEvents_17" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="113" name="SceneEvents_17" oid="-1" package="scripts." sceneid="17" shared="false" type="scene">
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="listCount" hidden="false" id="1" name="_listCount" order="0"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="position" hidden="false" id="2" name="_position" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="listCount" hidden="false" id="1" name="_listCount" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="position" hidden="false" id="2" name="_position" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xPosition" hidden="false" id="3" name="_xPosition" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="yPosition" hidden="false" id="4" name="_yPosition" order="3"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yCount" hidden="false" id="5" name="_yCount" order="4"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xCount" hidden="false" id="6" name="_xCount" order="5"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="cardSelected" hidden="false" id="7" name="_cardSelected" order="6"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="show" hidden="false" id="8" name="_show" order="7"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta1" hidden="false" id="9" name="_carta1" order="8"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta2" hidden="false" id="10" name="_carta2" order="9"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta3" hidden="false" id="11" name="_carta3" order="10"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta4" hidden="false" id="12" name="_carta4" order="11"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta5" hidden="false" id="13" name="_carta5" order="12"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta6" hidden="false" id="14" name="_carta6" order="13"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta7" hidden="false" id="15" name="_carta7" order="14"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta8" hidden="false" id="16" name="_carta8" order="15"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta9" hidden="false" id="17" name="_carta9" order="16"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta10" hidden="false" id="18" name="_carta10" order="17"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta11" hidden="false" id="19" name="_carta11" order="18"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="carta12" hidden="false" id="20" name="_carta12" order="19"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
@@ -768,10 +756,7 @@
             <event displayName="moveX" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
             <event displayName="resetXmoveY" enabled="true" id="5" name="event-custom" order="6" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="7" name="draw" order="2" repeats="true"/>
-            <event displayName="carta1" enabled="true" id="8" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="createAndSelect" enabled="true" id="9" name="event-custom" order="3" repeats="true"/>
-            <event displayName="carta2" enabled="true" id="10" name="event-mouse-enter-exit-actor" order="9" repeats="true"/>
-            <event displayName="carta 3" enabled="true" id="11" name="event-mouse-enter-exit-actor" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="165" attachedevent="true" class="scripts.ActorEvents_165" classname="scripts.ActorEvents_165" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="114" name="ActorEvents_165" oid="-1" package="scripts." shared="false" type="actor">

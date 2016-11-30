@@ -70,108 +70,86 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_17 extends SceneScript
+class SceneEvents_16 extends SceneScript
 {
-	public var _listCount:Float;
-	public var _position:Float;
-	public var _xPosition:Float;
-	public var _yPosition:Float;
-	public var _yCount:Float;
-	public var _xCount:Float;
-	public var _cardSelected:String;
-	public var _show:String;
+	public var _onPad:Bool;
+	public var _trashType:Float;
+	public var _spawnWait:Bool;
+	public var _recyclingOver:Bool;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_createAndSelect():Void
+	public function _customEvent_randomSpawn():Void
 	{
-		createRecycledActor(getActorType(165), _xPosition, _yPosition, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + Engine.engine.getGameAttribute("list_funFact")[Std.int(_position)]);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_setVars():Void
-	{
-		_xCount = asNumber(0);
-		propertyChanged("_xCount", _xCount);
-		_position = asNumber(0);
-		propertyChanged("_position", _position);
-		_listCount = asNumber(Engine.engine.getGameAttribute("list_funFact").length);
-		propertyChanged("_listCount", _listCount);
-		_yPosition = asNumber(60);
-		propertyChanged("_yPosition", _yPosition);
-		_xPosition = asNumber(10);
-		propertyChanged("_xPosition", _xPosition);
-		_show = "nada";
-		propertyChanged("_show", _show);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_moveX():Void
-	{
-		_xCount = asNumber((_xCount + 1));
-		propertyChanged("_xCount", _xCount);
-		_xPosition = asNumber(((_xCount * 100) + 10));
-		propertyChanged("_xPosition", _xPosition);
-		_position = asNumber((_position + 1));
-		propertyChanged("_position", _position);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_resetXmoveY():Void
-	{
-		_xCount = asNumber(0);
-		propertyChanged("_xCount", _xCount);
-		_yPosition = asNumber((_yPosition + 100));
-		propertyChanged("_yPosition", _yPosition);
-		_xPosition = asNumber(((_xCount * 100) + 10));
-		propertyChanged("_xPosition", _xPosition);
+		runLater(1000 * randomFloatBetween(.2, 2), function(timeTask:TimedTask):Void
+		{
+			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
+			propertyChanged("_trashType", _trashType);
+			if(((_trashType == 0) && (Engine.engine.getGameAttribute("total_cans") >= 0)))
+			{
+				createRecycledActor(getActorType(131), randomInt(Math.floor(10), Math.floor(100)), 5, Script.FRONT);
+				Engine.engine.setGameAttribute("total_cans", (Engine.engine.getGameAttribute("total_cans") - 1));
+			}
+			if(((_trashType == 1) && (Engine.engine.getGameAttribute("total_glassBottles") >= 0)))
+			{
+				createRecycledActor(getActorType(137), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
+				Engine.engine.setGameAttribute("total_glassBottles", (Engine.engine.getGameAttribute("total_glassBottles") - 1));
+			}
+			if(((_trashType == 2) && (Engine.engine.getGameAttribute("total_plasticBottles") >= 0)))
+			{
+				createRecycledActor(getActorType(139), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
+				Engine.engine.setGameAttribute("total_plasticBottles", (Engine.engine.getGameAttribute("total_plasticBottles") - 1));
+			}
+			_spawnWait = false;
+			propertyChanged("_spawnWait", _spawnWait);
+		}, null);
 	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("listCount", "_listCount");
-		_listCount = 0.0;
-		nameMap.set("position", "_position");
-		_position = 0.0;
-		nameMap.set("xPosition", "_xPosition");
-		_xPosition = 0.0;
-		nameMap.set("yPosition", "_yPosition");
-		_yPosition = 0.0;
-		nameMap.set("yCount", "_yCount");
-		_yCount = 0.0;
-		nameMap.set("xCount", "_xCount");
-		_xCount = 0.0;
-		nameMap.set("cardSelected", "_cardSelected");
-		_cardSelected = "";
-		nameMap.set("show", "_show");
-		_show = "";
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
+		nameMap.set("trashType", "_trashType");
+		_trashType = 0.0;
+		nameMap.set("spawnWait", "_spawnWait");
+		_spawnWait = false;
+		nameMap.set("recyclingOver", "_recyclingOver");
+		_recyclingOver = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		_customEvent_setVars();
-		while(!((_listCount <= _position)))
-		{
-			_customEvent_createAndSelect();
-			_customEvent_moveX();
-			if((0 == (_position % 3)))
-			{
-				_customEvent_resetXmoveY();
-			}
-		}
-		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				g.setFont(getFont(135));
-				g.drawString("" + _show, 100, 100);
+				if((((Engine.engine.getGameAttribute("total_cans") <= 0) && (Engine.engine.getGameAttribute("total_plasticBottles") <= 0)) && (Engine.engine.getGameAttribute("total_glassBottles") <= 0)))
+				{
+					if(!(_recyclingOver))
+					{
+						createRecycledActor(getActorType(175), 0, Engine.engine.getGameAttribute("screenY_mid"), Script.FRONT);
+						getLastCreatedActor().setAnimation("" + "noMoreTrash");
+						_recyclingOver = true;
+						propertyChanged("_recyclingOver", _recyclingOver);
+					}
+				}
+				else
+				{
+					if(!(_spawnWait))
+					{
+						_customEvent_randomSpawn();
+						_spawnWait = true;
+						propertyChanged("_spawnWait", _spawnWait);
+					}
+				}
+				g.setFont(getFont(128));
+				g.drawString("" + Engine.engine.getGameAttribute("total_cans"), 180, 30);
+				g.drawString("" + Engine.engine.getGameAttribute("total_plasticBottles"), 180, 60);
+				g.drawString("" + Engine.engine.getGameAttribute("total_glassBottles"), 180, 90);
 			}
 		});
 		

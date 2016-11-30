@@ -70,83 +70,45 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_17 extends SceneScript
+class Design_88_88_globalSettings extends SceneScript
 {
-	public var _listCount:Float;
-	public var _position:Float;
-	public var _xPosition:Float;
-	public var _yPosition:Float;
-	public var _yCount:Float;
-	public var _xCount:Float;
-	public var _cardSelected:String;
-	public var _show:String;
+	public var _ScreenDiagonal:Float;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_createAndSelect():Void
+	public function _customEvent_gameSettings():Void
 	{
-		createRecycledActor(getActorType(165), _xPosition, _yPosition, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + Engine.engine.getGameAttribute("list_funFact")[Std.int(_position)]);
+		/* "debug always set to click movement" */ Engine.engine.setGameAttribute("accelerometerControl", false);
+		Engine.engine.setGameAttribute("sceneSpeed", 17);
+		Engine.engine.setGameAttribute("lateralSpeed", 0);
+		Engine.engine.setGameAttribute("gameStart", false);
+		Engine.engine.setGameAttribute("spawnThings", false);
+		if(Engine.engine.getGameAttribute("tutorialDone"))
+		{
+			Engine.engine.setGameAttribute("spawnThings", true);
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_setVars():Void
+	public function _customEvent_playerSettings():Void
 	{
-		_xCount = asNumber(0);
-		propertyChanged("_xCount", _xCount);
-		_position = asNumber(0);
-		propertyChanged("_position", _position);
-		_listCount = asNumber(Engine.engine.getGameAttribute("list_funFact").length);
-		propertyChanged("_listCount", _listCount);
-		_yPosition = asNumber(60);
-		propertyChanged("_yPosition", _yPosition);
-		_xPosition = asNumber(10);
-		propertyChanged("_xPosition", _xPosition);
-		_show = "nada";
-		propertyChanged("_show", _show);
+		Engine.engine.setGameAttribute("playerControl", true);
+		Engine.engine.setGameAttribute("dozerPlaying", false);
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_moveX():Void
+	public function _customEvent_globalConstants():Void
 	{
-		_xCount = asNumber((_xCount + 1));
-		propertyChanged("_xCount", _xCount);
-		_xPosition = asNumber(((_xCount * 100) + 10));
-		propertyChanged("_xPosition", _xPosition);
-		_position = asNumber((_position + 1));
-		propertyChanged("_position", _position);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_resetXmoveY():Void
-	{
-		_xCount = asNumber(0);
-		propertyChanged("_xCount", _xCount);
-		_yPosition = asNumber((_yPosition + 100));
-		propertyChanged("_yPosition", _yPosition);
-		_xPosition = asNumber(((_xCount * 100) + 10));
-		propertyChanged("_xPosition", _xPosition);
+		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
+		Engine.engine.setGameAttribute("screenX_mid", (getScreenWidth() / 2));
+		Engine.engine.setGameAttribute("screenY_mid", (getScreenHeight() / 2));
 	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("listCount", "_listCount");
-		_listCount = 0.0;
-		nameMap.set("position", "_position");
-		_position = 0.0;
-		nameMap.set("xPosition", "_xPosition");
-		_xPosition = 0.0;
-		nameMap.set("yPosition", "_yPosition");
-		_yPosition = 0.0;
-		nameMap.set("yCount", "_yCount");
-		_yCount = 0.0;
-		nameMap.set("xCount", "_xCount");
-		_xCount = 0.0;
-		nameMap.set("cardSelected", "_cardSelected");
-		_cardSelected = "";
-		nameMap.set("show", "_show");
-		_show = "";
+		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
+		_ScreenDiagonal = 0.0;
 		
 	}
 	
@@ -154,26 +116,9 @@ class SceneEvents_17 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_customEvent_setVars();
-		while(!((_listCount <= _position)))
-		{
-			_customEvent_createAndSelect();
-			_customEvent_moveX();
-			if((0 == (_position % 3)))
-			{
-				_customEvent_resetXmoveY();
-			}
-		}
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.setFont(getFont(135));
-				g.drawString("" + _show, 100, 100);
-			}
-		});
+		_customEvent_playerSettings();
+		_customEvent_gameSettings();
+		_customEvent_globalConstants();
 		
 	}
 	
