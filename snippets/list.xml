@@ -506,10 +506,6 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_80_80_UpgradeUIButtons" classname="scripts.Design_80_80_UpgradeUIButtons" desc="" description="" design="true" drawOrder="0" id="80" name="UpgradeUIButtons" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks/>
-        <events/>
-    </snippet>
     <snippet actorid="124" attachedevent="true" class="scripts.ActorEvents_124" classname="scripts.ActorEvents_124" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="81" name="ActorEvents_124" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>

@@ -49,7 +49,7 @@
                                     </minus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-46 comment="false" x="48" y="343">
+                                <set-game-val-46 comment="false" x="48" y="338">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>

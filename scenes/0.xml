@@ -11,12 +11,12 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,0.0,0.0,0.0,40.0,363.0,40.0,363.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
+        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,363.0,0.0,363.0,40.0,0.0,40.0,0.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
     </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.8243408" aid="1" c="false" group="0" id="1" name="spaceShip 1" sx="1.0" sy="1.0" x="135" y="317" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="3" id="108" name="powerUpDozey 2" sx="1.6896552" sy="1.9354838" x="241" y="388" z="3"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="108" name="powerUpDozey 2" sx="1.6896552" sy="1.9354838" x="239" y="387" z="3"/>
         <actor a="0.0" aid="3" c="false" group="3" id="110" name="powerUpSucker 3" sx="1.4482758" sy="1.7647059" x="104" y="427" z="3"/>
         <actor a="0.0" aid="4" c="false" group="3" id="112" name="powerUpGadget 4" sx="1.7333333" sy="1.8181819" x="21" y="386" z="3"/>
         <actor a="0.0" aid="5" c="false" group="3" id="116" name="fuelBar 5" sx="1.0" sy="1.2033899" x="305" y="129" z="5"/>
