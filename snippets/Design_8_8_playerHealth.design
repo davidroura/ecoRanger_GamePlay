@@ -618,10 +618,10 @@
                             </not>
                         </if>
                     </group>
-                    <more comment="false" id="0" x="0" y="0">
+                    <eq comment="false" id="0" x="0" y="0">
                         <get-val-8-7 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="600"/>
-                    </more>
+                        <int id="1" val="100"/>
+                    </eq>
                 </if>
             </group>
             <int id="0" val="bonusCard"/>
@@ -640,28 +640,7 @@
                         <int id="1" val="2"/>
                     </randint>
                 </set-val-8-20>
-                <while comment="false" x="26" y="104">
-                    <group eventID="17" id="-1">
-                        <incdec comment="false" x="37" y="149">
-                            <int id="0" val="20"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="1"/>
-                        </incdec>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <int id="0" val="-1"/>
-                        <str-indexof comment="false" id="1" x="0" y="0">
-                            <tostring comment="false" id="0" x="0" y="0">
-                                <get-item comment="false" id="0" x="0" y="0">
-                                    <get-game-val-58 comment="false" id="0" x="0" y="0"/>
-                                    <get-val-8-20 comment="false" id="1" x="0" y="0"/>
-                                </get-item>
-                            </tostring>
-                            <int id="1" val="gray"/>
-                        </str-indexof>
-                    </eq>
-                </while>
-                <set-val-8-21 comment="false" x="26" y="188">
+                <set-val-8-21 comment="false" x="26" y="104">
                     <tostring comment="false" id="0" x="0" y="0">
                         <get-item comment="false" id="0" x="0" y="0">
                             <get-game-val-58 comment="false" id="0" x="0" y="0"/>
@@ -669,14 +648,14 @@
                         </get-item>
                     </tostring>
                 </set-val-8-21>
-                <set-val-8-21 comment="false" x="26" y="223">
+                <set-val-8-21 comment="false" x="26" y="139">
                     <str-replace comment="false" id="0" x="0" y="0">
                         <get-val-8-21 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="gray"/>
                         <int id="2" val=""/>
                     </str-replace>
                 </set-val-8-21>
-                <insert-list comment="false" x="26" y="253">
+                <insert-list comment="false" x="26" y="169">
                     <get-game-val-58 comment="false" id="0" x="0" y="0"/>
                     <get-val-8-20 comment="false" id="1" x="0" y="0"/>
                     <get-val-8-21 comment="false" id="2" x="0" y="0"/>
