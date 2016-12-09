@@ -69,27 +69,27 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_147 extends ActorScript
+class ActorEvents_165 extends ActorScript
 {
+	public var _myName:String;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_setName():Void
+	{
+		
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("myName", "_myName");
+		_myName = "";
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
-			}
-		});
 		
 	}
 	

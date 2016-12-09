@@ -69,25 +69,31 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_147 extends ActorScript
+class ActorEvents_74 extends ActorScript
 {
+	public var _card:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("card", "_card");
+		_card = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 5 == mouseState)
+			if(wrapper.enabled)
 			{
-				createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
+				actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
 			}
 		});
 		

@@ -383,6 +383,12 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="101" fixedrot="false" fric="0.2" gid="3" id="147" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_ChooseBots" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="148" static="true">
         <snippets/>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="122" fixedrot="false" fric="0.2" gid="3" id="180" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_chooseBotsBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="181" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="133" id="181" name="mUI_chooseBotsBG" shared="false" width="266">
+        <anim across="1" down="1" durations="100" height="133" id="0" loop="true" name="Animation 0" numframes="1" originx="133" originy="66" sync="false" version="2" width="266"/>
+    </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="148" name="mUI_CooseBots" shared="false" width="182">
         <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="182"/>
     </sprite>
@@ -403,6 +409,13 @@
         <anim across="1" down="1" durations="100" height="100" id="4" loop="true" name="funfact2gray" numframes="1" originx="50" originy="50" sync="false" version="2" width="100">
             <poly data="4,0,0,100,0,100,100,0,100" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
         </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="124" fixedrot="false" fric="0.2" gid="3" id="182" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mui_iconButtons" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="183" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="84" id="183" name="mui_iconButtons" shared="false" width="84">
+        <anim across="1" down="1" durations="100" height="84" id="0" loop="true" name="gadgetOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="1" loop="true" name="gadgetOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="49" fixedrot="false" fric="0.2" gid="3" id="65" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_notification" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="66" static="false">
         <snippets/>
@@ -435,7 +448,7 @@
             <poly data="4,0,0,71,0,71,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="39" fixedrot="false" fric="0.2" gid="3" id="45" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_upgrade" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="46" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="39" fixedrot="false" fric="0.2" gid="3" id="45" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_upgrade" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="46" static="true">
         <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="47" fixedrot="true" fric="0.2" gid="3" id="60" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_upgradeBoxes" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="61" static="false">
@@ -486,7 +499,7 @@
         <anim across="1" down="1" durations="100" height="74" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="182"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="109" name="powerUpDozey" shared="false" width="59">
-        <anim across="1" down="1" durations="100" height="66" id="0" loop="true" name="On" numframes="1" originx="29" originy="31" sync="false" version="2" width="61"/>
+        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="On" numframes="1" originx="29" originy="31" sync="false" version="2" width="59"/>
         <anim across="1" down="1" durations="100" height="63" id="1" loop="true" name="Off" numframes="1" originx="29" originy="31" sync="false" version="2" width="59"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="66" id="113" name="powerUpGadget" shared="false" width="61">
@@ -702,12 +715,8 @@
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="74" id="46" name="upgradeButton" shared="false" width="182">
-        <anim across="1" down="1" durations="100" height="74" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="182">
-            <poly data="4,0,0,353,0,353,131,0,131" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="131" id="1" loop="true" name="Animation 1" numframes="1" originx="176" originy="65" sync="false" version="2" width="353">
-            <poly data="4,0,0,353,0,353,131,0,131" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="1" down="1" durations="100" height="74" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="182"/>
+        <anim across="1" down="1" durations="100" height="131" id="1" loop="true" name="Animation 1" numframes="1" originx="176" originy="65" sync="false" version="2" width="353"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="35" name="upgradeDozerBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="241" id="125" name="upgradeNotificationActor" shared="false" width="232">

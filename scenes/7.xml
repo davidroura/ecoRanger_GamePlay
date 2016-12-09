@@ -3,7 +3,7 @@
     <layers>
         <color-bg blue="255" green="255" red="255"/>
         <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="recycleBG" opacity="100" order="1" rid="23" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="mainButtons" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions/>
@@ -12,7 +12,6 @@
         <actor a="0.0" aid="1" c="false" group="3" id="45" name="mUI_upgrade 1" sx="1.0" sy="1.0" x="18" y="222" z="0"/>
         <actor a="0.0" aid="2" c="false" group="3" id="47" name="mUI_recycle 2" sx="1.0" sy="1.0" x="16" y="148" z="0"/>
         <actor a="0.0" aid="3" c="false" group="3" id="147" name="mUI_ChooseBots 3" sx="1.0" sy="1.0" x="15" y="56" z="0"/>
-        <actor a="0.0" aid="4" c="false" group="3" id="163" name="funfactcards" sx="1.0" sy="1.0" x="225" y="347" z="0"/>
     </actors>
     <snippets/>
     <terrain/>

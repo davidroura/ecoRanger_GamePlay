@@ -69,25 +69,91 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_147 extends ActorScript
+class Design_123_123_ThreeStateButton extends ActorScript
 {
+	public var _NormalAnimation:String;
+	public var _PressedAnimation:String;
+	public var _Down:Bool;
+	public var _HoverAnimation:String;
+	public var _Message:String;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_Action():Void
+	{
+		actor.shout("_customEvent_" + _Message);
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
+		nameMap.set("Normal Animation", "_NormalAnimation");
+		nameMap.set("Pressed Animation", "_PressedAnimation");
+		nameMap.set("Down", "_Down");
+		_Down = false;
+		nameMap.set("Hover Animation", "_HoverAnimation");
+		nameMap.set("Message", "_Message");
+		_Message = "";
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		actor.anchorToScreen();
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				actor.setAnimation("" + _PressedAnimation);
+				_Down = true;
+				propertyChanged("_Down", _Down);
+			}
+		});
+		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
+				if(_Down)
+				{
+					_customEvent_Action();
+				}
+				if(#if mobile true #else false #end)
+				{
+					actor.setAnimation("" + _NormalAnimation);
+				}
+				else
+				{
+					actor.setAnimation("" + _HoverAnimation);
+				}
+				_Down = false;
+				propertyChanged("_Down", _Down);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				actor.setAnimation("" + _HoverAnimation);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && -1 == mouseState)
+			{
+				actor.setAnimation("" + _NormalAnimation);
+				_Down = false;
+				propertyChanged("_Down", _Down);
 			}
 		});
 		

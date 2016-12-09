@@ -69,13 +69,16 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_147 extends ActorScript
+class ActorEvents_110 extends ActorScript
 {
+	public var _dozerClick:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("dozerClick", "_dozerClick");
+		_dozerClick = false;
 		
 	}
 	
@@ -85,9 +88,29 @@ class ActorEvents_147 extends ActorScript
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				if(!(Engine.engine.getGameAttribute("botOn")))
+				{
+					Engine.engine.setGameAttribute("clickingButton", true);
+					if((actor.getAnimation() == "On"))
+					{
+						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") + 15), Script.FRONT);
+						Engine.engine.setGameAttribute("suckingPowerOn", true);
+						/* maybe make button glow when it's being used and start to blink when it's turning off */
+						actor.setAnimation("" + "Off");
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
+				Engine.engine.setGameAttribute("clickingButton", false);
 			}
 		});
 		
