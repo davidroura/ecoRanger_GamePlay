@@ -603,13 +603,16 @@
                                 <create-actor3 comment="false" x="48" y="100">
                                     <actortype eid="74" id="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="-20"/>
-                                        <int id="1" val="280"/>
+                                        <int id="0" val="10"/>
+                                        <int id="1" val="150"/>
                                     </randint>
                                     <int id="2" val="-10"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-val-8-10 comment="false" x="48" y="132">
+                                <ignore-screen-tolerance comment="false" x="48" y="132">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </ignore-screen-tolerance>
+                                <set-val-8-10 comment="false" x="48" y="159">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-8-10>
                             </group>

@@ -69,18 +69,42 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_10 extends ActorScript
+class ActorEvents_182 extends ActorScript
 {
+	public var _buttonOn:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("buttonOn", "_buttonOn");
+		_buttonOn = false;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				/* not working */
+				if(!(_buttonOn))
+				{
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
+					_buttonOn = true;
+					propertyChanged("_buttonOn", _buttonOn);
+				}
+				else
+				{
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
+					_buttonOn = false;
+					propertyChanged("_buttonOn", _buttonOn);
+				}
+			}
+		});
 		
 	}
 	

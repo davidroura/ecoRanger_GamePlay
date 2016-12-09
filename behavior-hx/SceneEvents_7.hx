@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,35 +70,53 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_56_56_spawnsMovement extends ActorScript
+class SceneEvents_7 extends SceneScript
 {
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Actor", "actor");
+		super();
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
-		actor.setXVelocity(Engine.engine.getGameAttribute("lateralSpeed"));
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && Input.swipedRight)
 			{
-				actor.setYVelocity(Engine.engine.getGameAttribute("sceneSpeed"));
-				actor.setXVelocity(Engine.engine.getGameAttribute("lateralSpeed"));
-				if((actor.getY() > (getScreenHeight() + 0)))
-				{
-					recycleActor(actor);
-				}
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(1), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				getActor(1).growTo(95/100, 95/100, .1, Linear.easeNone);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(1), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				getActor(1).growTo(100/100, 100/100, 0, Linear.easeNone);
+				switchScene(GameModel.get().scenes.get(8).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		
