@@ -702,11 +702,11 @@
     <group eventID="25" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="25" id="-1">
-                <if comment="false" x="26" y="40">
+                <say-this comment="false" x="26" y="40">
+                    <int id="0" val="contiousSpawn"/>
+                </say-this>
+                <if comment="false" x="26" y="60">
                     <group eventID="25" id="-1">
-                        <say-this comment="false" x="37" y="70">
-                            <int id="0" val="contiousSpawn"/>
-                        </say-this>
                         <say-this comment="false" x="37" y="90">
                             <int id="0" val="easyLevel"/>
                         </say-this>
@@ -719,9 +719,6 @@
                 <else-if comment="false" x="26" y="122">
                     <group eventID="25" id="-1">
                         <say-this comment="false" x="37" y="152">
-                            <int id="0" val="contiousSpawn"/>
-                        </say-this>
-                        <say-this comment="false" x="37" y="172">
                             <int id="0" val="ocasionalSpawn"/>
                         </say-this>
                     </group>

@@ -88,9 +88,6 @@ class ActorEvents_139 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		actor.growTo(40/100, 40/100, 0, Linear.easeNone);
-		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{

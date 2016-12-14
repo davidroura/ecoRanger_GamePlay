@@ -54,9 +54,9 @@
             <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="132" name="canCoke" shared="false" width="35">
-        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="35">
-            <poly data="4,0,0,48,0,48,28,0,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="29" id="132" name="canCoke" shared="false" width="41">
+        <anim across="1" down="1" durations="100" height="29" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="41">
+            <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="138" name="canCoke" shared="false" width="24">
@@ -65,8 +65,8 @@
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="140" name="canCoke" shared="false" width="35">
-        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="35">
-            <poly data="4,0,0,120,0,120,90,0,90" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="Animation 0" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
+            <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="87" loop="true" name="CollectTrashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -528,6 +528,9 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="83" fixedrot="false" fric="0.2" gid="3" id="129" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="resource_aluminum" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="130" static="false">
         <snippets/>
     </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="115" fixedrot="false" fric="0.2" gid="3" id="167" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="resource_glass" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="168" static="false">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="82" fixedrot="false" fric="0.2" gid="3" id="126" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="resource_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="127" static="true">
         <snippets/>
     </actor>
@@ -598,9 +601,6 @@
             <poly data="4,30,0,162,0,162,479,30,479" density="0.1" fric="0.2" gid="3" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="115" fixedrot="false" fric="0.2" gid="3" id="167" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_glass" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="168" static="false">
-        <snippets/>
-    </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="168" name="rItem_glass" shared="false" width="131">
         <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="65" originy="48" sync="false" version="2" width="131"/>
     </sprite>

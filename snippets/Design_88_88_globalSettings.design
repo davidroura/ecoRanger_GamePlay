@@ -33,29 +33,21 @@
     <group eventID="3" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <comment-wrapper comment="false" x="26" y="40">
-                    <group eventID="3" id="-1">
-                        <set-game-val-0 comment="false" x="37" y="60">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-0>
-                    </group>
-                    <int id="0" val="debug always set to click movement"/>
-                </comment-wrapper>
-                <set-game-val-3 comment="false" x="26" y="97">
+                <set-game-val-3 comment="false" x="26" y="40">
                     <int id="0" val="17"/>
                 </set-game-val-3>
-                <set-game-val-22 comment="false" x="26" y="117">
+                <set-game-val-22 comment="false" x="26" y="60">
                     <int id="0" val="0"/>
                 </set-game-val-22>
-                <set-game-val-29 comment="false" x="26" y="137">
+                <set-game-val-29 comment="false" x="26" y="80">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-29>
-                <set-game-val-30 comment="false" x="26" y="162">
+                <set-game-val-30 comment="false" x="26" y="105">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-30>
-                <if comment="false" x="26" y="187">
+                <if comment="false" x="26" y="130">
                     <group eventID="3" id="-1">
-                        <set-game-val-30 comment="false" x="37" y="212">
+                        <set-game-val-30 comment="false" x="37" y="155">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-30>
                     </group>
