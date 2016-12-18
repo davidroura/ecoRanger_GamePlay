@@ -362,69 +362,6 @@
         </event-collide-typetotype>
     </group>
     <group eventID="8" id="-1"/>
-    <group eventID="9" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="9" id="-1">
-                <if comment="false" x="26" y="47">
-                    <group eventID="9" id="-1">
-                        <setanim comment="false" x="37" y="77">
-                            <first-actor comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="On"/>
-                        </setanim>
-                    </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-game-val-19 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </more>
-                </if>
-                <dolater comment="false" x="26" y="121">
-                    <group eventID="9" id="-1">
-                        <die comment="false" x="37" y="148">
-                            <second-actor comment="false" id="0" x="0" y="0"/>
-                        </die>
-                    </group>
-                    <int id="0" val="0.5"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="12" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="9" id="-1"/>
-    <group eventID="10" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="10" id="-1">
-                <set-game-val-60 comment="false" x="26" y="47">
-                    <plus comment="false" id="0" x="0" y="0">
-                        <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </plus>
-                </set-game-val-60>
-                <die comment="false" x="26" y="77">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="8" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="10" id="-1"/>
-    <group eventID="11" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="11" id="-1">
-                <die comment="false" x="26" y="47">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-                <say-this comment="false" x="26" y="79">
-                    <int id="0" val="tookBanana"/>
-                </say-this>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="10" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="12" id="-1">
@@ -477,24 +414,6 @@
         </event-custom>
     </group>
     <group eventID="12" id="-1"/>
-    <group eventID="13" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="13" id="-1">
-                <set-game-val-61 comment="false" x="26" y="47">
-                    <plus comment="false" id="0" x="0" y="0">
-                        <get-game-val-61 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </plus>
-                </set-game-val-61>
-                <die comment="false" x="26" y="77">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="15" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="13" id="-1"/>
     <group eventID="14" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="14" id="-1">
@@ -669,58 +588,6 @@
         </event-collide-typetotype>
     </group>
     <group eventID="17" id="-1"/>
-    <group eventID="18" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="18" id="-1">
-                <die comment="false" x="26" y="47">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="74" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="18" id="-1"/>
-    <group eventID="19" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="19" id="-1">
-                <play-sound4 comment="false" x="26" y="47">
-                    <int id="0" val="0"/>
-                    <sound eid="87" id="1"/>
-                </play-sound4>
-                <set-game-val-60 comment="false" x="26" y="74">
-                    <plus comment="false" id="0" x="0" y="0">
-                        <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </plus>
-                </set-game-val-60>
-                <die comment="false" x="26" y="104">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-            </group>
-            <actortype eid="1" id="0"/>
-            <actortype eid="104" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="19" id="-1"/>
-    <group eventID="20" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="20" id="-1">
-                <set-game-val-60 comment="false" x="26" y="47">
-                    <plus comment="false" id="0" x="0" y="0">
-                        <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </plus>
-                </set-game-val-60>
-                <die comment="false" x="26" y="77">
-                    <second-actor comment="false" id="0" x="0" y="0"/>
-                </die>
-            </group>
-            <actortype eid="63" id="0"/>
-            <actortype eid="104" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="20" id="-1"/>
     <group eventID="21" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">

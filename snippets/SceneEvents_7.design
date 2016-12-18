@@ -64,4 +64,14 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <set-game-val-72 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-72>
+            </group>
+        </init>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

@@ -94,6 +94,16 @@ class SceneEvents_2 extends SceneScript
 		{
 			
 		});
+		if(!(Engine.engine.getGameAttribute("found_GadgetScreen")))
+		{
+			runLater(1000 * 4, function(timeTask:TimedTask):Void
+			{
+				runPeriodically(1000 * 7, function(timeTask:TimedTask):Void
+				{
+					createRecycledActor(getActorType(188), (Engine.engine.getGameAttribute("screenX_mid") / 4), (Engine.engine.getGameAttribute("screenY_mid") / 3), Script.FRONT);
+				}, null);
+			}, null);
+		}
 		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void

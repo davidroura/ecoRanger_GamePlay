@@ -7,17 +7,7 @@
                     <group eventID="2" id="-1">
                         <if comment="false" x="37" y="80">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="110">
-                                    <actortype eid="175" id="0"/>
-                                    <int id="1" val="0"/>
-                                    <get-game-val-71 comment="false" id="2" x="0" y="0"/>
-                                    <int id="3" val="0"/>
-                                </create-actor3>
-                                <setanim comment="false" x="48" y="142">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="noMoreTrash"/>
-                                </setanim>
-                                <set-val-89-4 comment="false" x="48" y="169">
+                                <set-val-89-4 comment="false" x="48" y="110">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-89-4>
                             </group>
@@ -43,14 +33,14 @@
                         </lesseq>
                     </and>
                 </if>
-                <else comment="false" x="26" y="218">
+                <else comment="false" x="26" y="159">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="238">
+                        <if comment="false" x="37" y="179">
                             <group eventID="2" id="-1">
-                                <say-this comment="false" x="48" y="268">
+                                <say-this comment="false" x="48" y="209">
                                     <int id="0" val="randomSpawn"/>
                                 </say-this>
-                                <set-val-89-3 comment="false" x="48" y="288">
+                                <set-val-89-3 comment="false" x="48" y="229">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-89-3>
                             </group>
@@ -60,26 +50,38 @@
                         </if>
                     </group>
                 </else>
-                <set-font-new comment="false" x="26" y="337">
+                <set-font-new comment="false" x="26" y="278">
                     <font eid="128" id="0"/>
                 </set-font-new>
-                <draw-text comment="false" x="26" y="364">
+                <draw-text comment="false" x="26" y="305">
                     <get-game-val-63 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="30"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="389">
+                <draw-text comment="false" x="26" y="330">
                     <get-game-val-64 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="60"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="414">
+                <draw-text comment="false" x="26" y="355">
                     <get-game-val-65 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="180"/>
                     <int id="2" val="90"/>
                 </draw-text>
             </group>
         </draw>
+    </group>
+    <group eventID="2" id="1">
+        <create-actor3 comment="false" x="365" y="508">
+            <actortype eid="175" id="0"/>
+            <int id="1" val="0"/>
+            <get-game-val-71 comment="false" id="2" x="0" y="0"/>
+            <int id="3" val="0"/>
+        </create-actor3>
+        <setanim comment="false" x="365" y="540">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="noMoreTrash"/>
+        </setanim>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
@@ -118,7 +120,7 @@
                                 </eq>
                                 <moreeq comment="false" id="1" x="0" y="0">
                                     <get-game-val-63 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="0"/>
+                                    <int id="1" val="1"/>
                                 </moreeq>
                             </and>
                         </if>
@@ -147,7 +149,7 @@
                                 </eq>
                                 <moreeq comment="false" id="1" x="0" y="0">
                                     <get-game-val-65 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="0"/>
+                                    <int id="1" val="1"/>
                                 </moreeq>
                             </and>
                         </if>
@@ -176,7 +178,7 @@
                                 </eq>
                                 <moreeq comment="false" id="1" x="0" y="0">
                                     <get-game-val-64 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="0"/>
+                                    <int id="1" val="1"/>
                                 </moreeq>
                             </and>
                         </if>
@@ -195,4 +197,113 @@
         </event-custom>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <set-val-89-3 comment="false" x="37" y="70">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-89-3>
+                        <say-this comment="false" x="37" y="95">
+                            <int id="0" val="recyclingTutorial"/>
+                        </say-this>
+                        <set-game-val-73 comment="false" x="37" y="115">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-73>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-73 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <create-actor3 comment="false" x="26" y="40">
+                    <actortype eid="131" id="0"/>
+                    <randint comment="false" id="1" x="0" y="0">
+                        <int id="0" val="10"/>
+                        <int id="1" val="100"/>
+                    </randint>
+                    <int id="2" val="5"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <dolater comment="false" x="26" y="72">
+                    <group eventID="5" id="-1">
+                        <pause-unpause comment="false" x="37" y="99">
+                            <int id="0" val="0"/>
+                        </pause-unpause>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <if comment="false" x="26" y="138">
+                    <group eventID="5" id="-1">
+                        <dolater comment="false" x="37" y="163">
+                            <group eventID="5" id="-1">
+                                <create-actor3 comment="false" x="48" y="190">
+                                    <actortype eid="188" id="0"/>
+                                    <get-xy comment="false" id="1" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-xy comment="false" id="2" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <print comment="false" x="48" y="230">
+                                    <int id="0" val="here"/>
+                                </print>
+                                <setanim comment="false" x="48" y="250">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="handClose"/>
+                                </setanim>
+                                <set-dxy comment="false" x="48" y="277">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </set-dxy>
+                                <set-dxy comment="false" x="48" y="304">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="1"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="2"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="343">
+                            <group eventID="5" id="-1">
+                                <setanim comment="false" x="48" y="370">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="handOpen"/>
+                                </setanim>
+                                <set-dxy comment="false" x="48" y="397">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                                <set-dxy comment="false" x="48" y="424">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="3.5"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <is-paused comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+            <int id="0" val="recyclingTutorial"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

@@ -78,23 +78,50 @@ class SceneEvents_16 extends SceneScript
 	public var _recyclingOver:Bool;
 	
 	/* ========================= Custom Event ========================= */
+	public function _customEvent_recyclingTutorial():Void
+	{
+		createRecycledActor(getActorType(131), randomInt(Math.floor(10), Math.floor(100)), 5, Script.FRONT);
+		runLater(1000 * 1, function(timeTask:TimedTask):Void
+		{
+			engine.pause();
+		}, null);
+		if(engine.isPaused())
+		{
+			runLater(1000 * 2, function(timeTask:TimedTask):Void
+			{
+				createRecycledActor(getActorType(188), getLastCreatedActor().getX(), getLastCreatedActor().getY(), Script.FRONT);
+				trace("" + "here");
+				getLastCreatedActor().setAnimation("" + "handClose");
+				getLastCreatedActor().setXVelocity(1);
+				getLastCreatedActor().setYVelocity(1);
+			}, null);
+			runLater(1000 * 3.5, function(timeTask:TimedTask):Void
+			{
+				getLastCreatedActor().setAnimation("" + "handOpen");
+				getLastCreatedActor().setXVelocity(0);
+				getLastCreatedActor().setYVelocity(0);
+			}, null);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
 	public function _customEvent_randomSpawn():Void
 	{
 		runLater(1000 * randomFloatBetween(.2, 2), function(timeTask:TimedTask):Void
 		{
 			_trashType = asNumber(randomInt(Math.floor(0), Math.floor(2)));
 			propertyChanged("_trashType", _trashType);
-			if(((_trashType == 0) && (Engine.engine.getGameAttribute("total_cans") >= 0)))
+			if(((_trashType == 0) && (Engine.engine.getGameAttribute("total_cans") >= 1)))
 			{
 				createRecycledActor(getActorType(131), randomInt(Math.floor(10), Math.floor(100)), 5, Script.FRONT);
 				Engine.engine.setGameAttribute("total_cans", (Engine.engine.getGameAttribute("total_cans") - 1));
 			}
-			if(((_trashType == 1) && (Engine.engine.getGameAttribute("total_glassBottles") >= 0)))
+			if(((_trashType == 1) && (Engine.engine.getGameAttribute("total_glassBottles") >= 1)))
 			{
 				createRecycledActor(getActorType(137), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
 				Engine.engine.setGameAttribute("total_glassBottles", (Engine.engine.getGameAttribute("total_glassBottles") - 1));
 			}
-			if(((_trashType == 2) && (Engine.engine.getGameAttribute("total_plasticBottles") >= 0)))
+			if(((_trashType == 2) && (Engine.engine.getGameAttribute("total_plasticBottles") >= 1)))
 			{
 				createRecycledActor(getActorType(139), randomInt(Math.floor(0), Math.floor(100)), 5, Script.FRONT);
 				Engine.engine.setGameAttribute("total_plasticBottles", (Engine.engine.getGameAttribute("total_plasticBottles") - 1));
@@ -122,6 +149,15 @@ class SceneEvents_16 extends SceneScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		if(!(Engine.engine.getGameAttribute("found_recycling")))
+		{
+			_spawnWait = true;
+			propertyChanged("_spawnWait", _spawnWait);
+			_customEvent_recyclingTutorial();
+			Engine.engine.setGameAttribute("found_recycling", true);
+		}
+		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
@@ -131,8 +167,6 @@ class SceneEvents_16 extends SceneScript
 				{
 					if(!(_recyclingOver))
 					{
-						createRecycledActor(getActorType(175), 0, Engine.engine.getGameAttribute("screenY_mid"), Script.FRONT);
-						getLastCreatedActor().setAnimation("" + "noMoreTrash");
 						_recyclingOver = true;
 						propertyChanged("_recyclingOver", _recyclingOver);
 					}

@@ -272,73 +272,6 @@ class Design_8_8_playerHealth extends SceneScript
 		});
 		
 		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(1).ID, getActorType(104).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				playSound(getSound(87));
-				Engine.engine.setGameAttribute("collected_glassBottle", (Engine.engine.getGameAttribute("collected_glassBottle") + 1));
-				recycleActor(event.otherActor);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(104).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				Engine.engine.setGameAttribute("collected_glassBottle", (Engine.engine.getGameAttribute("collected_glassBottle") + 1));
-				recycleActor(event.otherActor);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((Engine.engine.getGameAttribute("dozerStrengthUnits") > 0))
-				{
-					event.thisActor.setAnimation("" + "On");
-				}
-				runLater(1000 * 0.5, function(timeTask:TimedTask):Void
-				{
-					recycleActor(event.otherActor);
-				}, null);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(8).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				Engine.engine.setGameAttribute("collected_glassBottle", (Engine.engine.getGameAttribute("collected_glassBottle") + 1));
-				recycleActor(event.otherActor);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(10).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				recycleActor(event.otherActor);
-				_customEvent_tookBanana();
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(15).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				Engine.engine.setGameAttribute("collected_cans", (Engine.engine.getGameAttribute("collected_cans") + 1));
-				recycleActor(event.otherActor);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
 		addSceneCollisionListener(getActorType(1).ID, getActorType(15).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
@@ -421,15 +354,6 @@ class Design_8_8_playerHealth extends SceneScript
 				_cardName = StringTools.replace(("" + _cardName), ("" + "gray"), ("" + ""));
 				propertyChanged("_cardName", _cardName);
 				Engine.engine.getGameAttribute("list_funFact").insert(Std.int(_card), _cardName);
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(63).ID, getActorType(74).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				recycleActor(event.otherActor);
 			}
 		});
 		
