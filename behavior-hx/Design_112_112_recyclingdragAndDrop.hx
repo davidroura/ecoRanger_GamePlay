@@ -102,7 +102,6 @@ class Design_112_112_recyclingdragAndDrop extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("recyclingBeltSpeed", 23);
 		actor.setYVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
 		actor.makeAlwaysSimulate();
 		

@@ -78,6 +78,7 @@ class SceneEvents_0 extends SceneScript
 	public var _gameOverShown:Bool;
 	public var _tutorialShown:Bool;
 	public var _UITutorial:Actor;
+	public var _tutorialText:String;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_tutorial():Void
@@ -85,25 +86,70 @@ class SceneEvents_0 extends SceneScript
 		if(!(Engine.engine.getGameAttribute("tutorialDone")))
 		{
 			Engine.engine.setGameAttribute("spawnThings", false);
-			createRecycledActor(getActorType(119), 0, -10, Script.FRONT);
-			_UITutorial = getLastCreatedActor();
-			propertyChanged("_UITutorial", _UITutorial);
 			runLater(1000 * 1.5, function(timeTask:TimedTask):Void
 			{
-				recycleActor(_UITutorial);
+				createRecycledActor(getActorType(15), 200, 0, Script.FRONT);
 			}, null);
 			runLater(1000 * 2, function(timeTask:TimedTask):Void
 			{
-				createRecycledActor(getActorType(122), 0, -10, Script.FRONT);
-				_UITutorial = getLastCreatedActor();
-				propertyChanged("_UITutorial", _UITutorial);
+				Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
+				Engine.engine.setGameAttribute("sceneSpeed", 0);
+				_tutorialText = "COLLECT THE TRASH";
+				propertyChanged("_tutorialText", _tutorialText);
 			}, null);
-			runLater(1000 * 3.5, function(timeTask:TimedTask):Void
+			runLater(1000 * 3, function(timeTask:TimedTask):Void
 			{
-				recycleActor(_UITutorial);
-				Engine.engine.setGameAttribute("spawnThings", true);
+				_tutorialText = "";
+				propertyChanged("_tutorialText", _tutorialText);
+				Engine.engine.setGameAttribute("sceneSpeed", Engine.engine.getGameAttribute("sceneSpeedHold"));
 			}, null);
-			Engine.engine.setGameAttribute("tutorialDone", true);
+			runLater(1000 * 4, function(timeTask:TimedTask):Void
+			{
+				createRecycledActor(getActorType(10), 100, 0, Script.FRONT);
+			}, null);
+			runLater(1000 * 4.5, function(timeTask:TimedTask):Void
+			{
+				Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
+				Engine.engine.setGameAttribute("sceneSpeed", 0);
+				_tutorialText = "COLLECT BIOFUEL";
+				propertyChanged("_tutorialText", _tutorialText);
+			}, null);
+			runLater(1000 * 5.5, function(timeTask:TimedTask):Void
+			{
+				_tutorialText = "";
+				propertyChanged("_tutorialText", _tutorialText);
+				Engine.engine.setGameAttribute("sceneSpeed", Engine.engine.getGameAttribute("sceneSpeedHold"));
+			}, null);
+			runLater(1000 * 6.5, function(timeTask:TimedTask):Void
+			{
+				createRecycledActor(getActorType(145), 150, 0, Script.FRONT);
+			}, null);
+			runLater(1000 * 7, function(timeTask:TimedTask):Void
+			{
+				Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
+				Engine.engine.setGameAttribute("sceneSpeed", 0);
+				_tutorialText = "WATCH OUT!";
+				propertyChanged("_tutorialText", _tutorialText);
+			}, null);
+			runLater(1000 * 8, function(timeTask:TimedTask):Void
+			{
+				_tutorialText = "";
+				propertyChanged("_tutorialText", _tutorialText);
+				Engine.engine.setGameAttribute("sceneSpeed", Engine.engine.getGameAttribute("sceneSpeedHold"));
+			}, null);
+			runLater(1000 * 8.4, function(timeTask:TimedTask):Void
+			{
+				Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
+				Engine.engine.setGameAttribute("sceneSpeed", 0);
+				_tutorialText = "GOOD LUCK OUT THERE";
+				propertyChanged("_tutorialText", _tutorialText);
+			}, null);
+			runLater(1000 * 9.5, function(timeTask:TimedTask):Void
+			{
+				_tutorialText = "0";
+				propertyChanged("_tutorialText", _tutorialText);
+				Engine.engine.setGameAttribute("tutorialDone", true);
+			}, null);
 		}
 	}
 	
@@ -117,7 +163,7 @@ class SceneEvents_0 extends SceneScript
 		Engine.engine.setGameAttribute("total_glassBottles", (Engine.engine.getGameAttribute("total_glassBottles") + Engine.engine.getGameAttribute("collected_glassBottle")));
 		Engine.engine.setGameAttribute("total_cans", (Engine.engine.getGameAttribute("total_cans") + Engine.engine.getGameAttribute("collected_cans")));
 		Engine.engine.setGameAttribute("total_plasticBottles", (Engine.engine.getGameAttribute("total_plasticBottles") + Engine.engine.getGameAttribute("collected_PlasticBottles")));
-		addBackground("UIEnd", "EndUI", Std.int(5));
+		addBackground("UIEnd", "EndUI", 5);
 		createRecycledActor(getActorType(49), 170, 280, Script.FRONT);
 		createRecycledActor(getActorType(51), 50, 280, Script.FRONT);
 		runLater(1000 * 1, function(timeTask:TimedTask):Void
@@ -182,6 +228,8 @@ class SceneEvents_0 extends SceneScript
 		nameMap.set("tutorialShown", "_tutorialShown");
 		_tutorialShown = false;
 		nameMap.set("UITutorial", "_UITutorial");
+		nameMap.set("tutorialText", "_tutorialText");
+		_tutorialText = "";
 		
 	}
 	
@@ -205,10 +253,8 @@ class SceneEvents_0 extends SceneScript
 		}, null);
 		loopSoundOnChannel(getSound(103), Std.int(5));
 		setVolumeForAllSounds(20/100);
-		if(!(_tutorialShown))
+		if(!(Engine.engine.getGameAttribute("tutorialDone")))
 		{
-			_tutorialShown = true;
-			propertyChanged("_tutorialShown", _tutorialShown);
 			_customEvent_tutorial();
 		}
 		
@@ -276,8 +322,11 @@ class SceneEvents_0 extends SceneScript
 				g.drawString("" + Engine.engine.getGameAttribute("collected_cans"), 140, 7);
 				g.drawString("" + Engine.engine.getGameAttribute("collected_glassBottle"), 110, 7);
 				g.drawString("" + Engine.engine.getGameAttribute("collected_PlasticBottles"), 170, 7);
-				g.setFont(getFont(114));
-				g.setFont(getFont(135));
+				g.setFont(getFont(128));
+				if(!(Engine.engine.getGameAttribute("tutorialDone")))
+				{
+					g.drawString("" + _tutorialText, (Engine.engine.getGameAttribute("screenX_mid") / 3), (Engine.engine.getGameAttribute("screenY_mid") / 2));
+				}
 				if(((Engine.engine.getGameAttribute("playerDistance") > 100) && (Engine.engine.getGameAttribute("playerDistance") <= 150)))
 				{
 					g.drawString("" + "100 meters!", 100, 180);

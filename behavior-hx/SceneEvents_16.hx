@@ -81,27 +81,27 @@ class SceneEvents_16 extends SceneScript
 	public function _customEvent_recyclingTutorial():Void
 	{
 		createRecycledActor(getActorType(131), randomInt(Math.floor(10), Math.floor(100)), 5, Script.FRONT);
-		runLater(1000 * 1, function(timeTask:TimedTask):Void
+		runLater(1000 * 1.5, function(timeTask:TimedTask):Void
 		{
-			engine.pause();
+			Engine.engine.setGameAttribute("recyclingBeltSpeed", 0);
 		}, null);
-		if(engine.isPaused())
+		runLater(1000 * 2, function(timeTask:TimedTask):Void
 		{
-			runLater(1000 * 2, function(timeTask:TimedTask):Void
-			{
-				createRecycledActor(getActorType(188), getLastCreatedActor().getX(), getLastCreatedActor().getY(), Script.FRONT);
-				trace("" + "here");
-				getLastCreatedActor().setAnimation("" + "handClose");
-				getLastCreatedActor().setXVelocity(1);
-				getLastCreatedActor().setYVelocity(1);
-			}, null);
-			runLater(1000 * 3.5, function(timeTask:TimedTask):Void
-			{
-				getLastCreatedActor().setAnimation("" + "handOpen");
-				getLastCreatedActor().setXVelocity(0);
-				getLastCreatedActor().setYVelocity(0);
-			}, null);
-		}
+			createRecycledActor(getActorType(188), getLastCreatedActor().getX(), getLastCreatedActor().getY(), Script.FRONT);
+			getLastCreatedActor().setAnimation("" + "handClose");
+			getLastCreatedActor().setXVelocity(25);
+			getLastCreatedActor().setYVelocity(25);
+		}, null);
+		runLater(1000 * 3.5, function(timeTask:TimedTask):Void
+		{
+			getLastCreatedActor().setAnimation("" + "handOpen");
+			getLastCreatedActor().setXVelocity(0);
+			getLastCreatedActor().setYVelocity(0);
+		}, null);
+		runLater(1000 * 5.5, function(timeTask:TimedTask):Void
+		{
+			Engine.engine.setGameAttribute("found_recycling", true);
+		}, null);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -155,7 +155,6 @@ class SceneEvents_16 extends SceneScript
 			_spawnWait = true;
 			propertyChanged("_spawnWait", _spawnWait);
 			_customEvent_recyclingTutorial();
-			Engine.engine.setGameAttribute("found_recycling", true);
 		}
 		
 		/* ========================= When Drawing ========================= */

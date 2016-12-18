@@ -60,38 +60,6 @@
                 <set-val-95-35 comment="false" x="26" y="390">
                     <int id="0" val="50"/>
                 </set-val-95-35>
-                <comment-short comment="false" x="26" y="410">
-                    <int id="0" val="adding initial trees"/>
-                </comment-short>
-                <set-game-val-53 comment="false" x="26" y="430">
-                    <int id="0" val="0"/>
-                </set-game-val-53>
-                <create-actor-on-layer comment="false" x="26" y="450">
-                    <actortype eid="70" id="0"/>
-                    <int id="1" val="-120"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="1"/>
-                    <int id="4" val="gamePlay"/>
-                </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="26" y="477">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <say-this comment="false" x="26" y="504">
-                    <int id="0" val="treeType"/>
-                </say-this>
-                <create-actor-on-layer comment="false" x="26" y="524">
-                    <actortype eid="70" id="0"/>
-                    <int id="1" val="220"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="1"/>
-                    <int id="4" val="gamePlay"/>
-                </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="26" y="551">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <say-this comment="false" x="26" y="578">
-                    <int id="0" val="treeType"/>
-                </say-this>
             </group>
         </init>
     </group>
@@ -256,14 +224,7 @@
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
                 </create-actor-on-layer>
-                <scaleTo comment="false" x="26" y="72">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="70"/>
-                    <int id="2" val="70"/>
-                    <int id="3" val="0"/>
-                    <int id="4" val="0"/>
-                </scaleTo>
-                <set-game-val-44 comment="false" x="26" y="99">
+                <set-game-val-44 comment="false" x="26" y="72">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-44>
             </group>

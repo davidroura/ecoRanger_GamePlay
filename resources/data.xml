@@ -6,9 +6,9 @@
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="77" name="audobonMessBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="11" name="banana" shared="false" width="67">
-        <anim across="1" down="1" durations="100" height="42" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="67">
-            <poly data="4,14,4,55,4,55,30,14,30" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="33" id="11" name="banana" shared="false" width="53">
+        <anim across="1" down="1" durations="100" height="33" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="53">
+            <poly data="4,5,0,50,0,50,32,5,32" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="86" loop="true" name="bananaS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -55,7 +55,7 @@
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="29" id="132" name="canCoke" shared="false" width="41">
-        <anim across="1" down="1" durations="100" height="29" id="0" loop="true" name="Animation 0" numframes="1" originx="24" originy="14" sync="false" version="2" width="41">
+        <anim across="1" down="1" durations="100" height="29" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="14" sync="false" version="2" width="41">
             <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>

@@ -288,11 +288,11 @@ class Design_8_8_playerHealth extends SceneScript
 			if(wrapper.enabled)
 			{
 				Engine.engine.setGameAttribute("flag", "playerHealth");
-				if((!(_rockCollision) && !(Engine.engine.getGameAttribute("gameOver"))))
+				/* if normal gameplay */
+				if(((!(_rockCollision) && !(Engine.engine.getGameAttribute("gameOver"))) && Engine.engine.getGameAttribute("tutorialDone")))
 				{
 					Engine.engine.setGameAttribute("spawnThings", true);
 				}
-				/* if normal gameplay */
 				if((Engine.engine.getGameAttribute("spawnThings") || Engine.engine.getGameAttribute("tutorialDone")))
 				{
 					if((Engine.engine.getGameAttribute("playerHealth") > 0))

@@ -34,7 +34,7 @@
         <event-custom comment="false" x="15" y="15">
             <group eventID="3" id="-1">
                 <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="17"/>
+                    <int id="0" val="30"/>
                 </set-game-val-3>
                 <set-game-val-22 comment="false" x="26" y="60">
                     <int id="0" val="0"/>

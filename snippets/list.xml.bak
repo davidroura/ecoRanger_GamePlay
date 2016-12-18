@@ -7,6 +7,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="gameOverShown" hidden="false" id="4" name="_gameOverShown" order="3"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="tutorialShown" hidden="false" id="5" name="_tutorialShown" order="4"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="UITutorial" hidden="false" id="6" name="_UITutorial" order="5"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="tutorialText" hidden="false" id="7" name="_tutorialText" order="6"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="16" name="draw" order="19" repeats="true"/>
@@ -426,12 +427,6 @@
     <snippet actorid="129" attachedevent="true" class="scripts.ActorEvents_129" classname="scripts.ActorEvents_129" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="83" name="ActorEvents_129" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
-    </snippet>
-    <snippet attachedevent="false" class="scripts.Design_85_85_sendRecycling" classname="scripts.Design_85_85_sendRecycling" desc="" description="" design="true" drawOrder="0" id="85" name="sendRecycling" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks/>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-        </events>
     </snippet>
     <snippet actorid="131" attachedevent="true" class="scripts.ActorEvents_131" classname="scripts.ActorEvents_131" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="86" name="ActorEvents_131" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>

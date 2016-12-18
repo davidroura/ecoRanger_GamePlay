@@ -279,15 +279,12 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-game-val-39 comment="false" x="26" y="40">
-                    <int id="0" val="23"/>
-                </set-game-val-39>
-                <set-dxy comment="false" x="26" y="60">
+                <set-dxy comment="false" x="26" y="40">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
                     <get-game-val-39 comment="false" id="2" x="0" y="0"/>
                 </set-dxy>
-                <ignore-screen-tolerance comment="false" x="26" y="92">
+                <ignore-screen-tolerance comment="false" x="26" y="72">
                     <ACTOR eid="this" id="0"/>
                 </ignore-screen-tolerance>
             </group>

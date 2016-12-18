@@ -231,7 +231,6 @@ class Design_95_95_spawnHandler extends SceneScript
 	public function _customEvent_lifeSpawn():Void
 	{
 		createRecycledActorOnLayer(getActorType(10), randomInt(Math.floor(50), Math.floor(280)), -5, 1, "" + "gamePlay");
-		getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
 		Engine.engine.setGameAttribute("spawnLife", false);
 	}
 	
@@ -364,14 +363,6 @@ class Design_95_95_spawnHandler extends SceneScript
 		_yDots.push(5);
 		_nextDistance = asNumber(50);
 		propertyChanged("_nextDistance", _nextDistance);
-		/* adding initial trees */
-		Engine.engine.setGameAttribute("level", 0);
-		createRecycledActorOnLayer(getActorType(70), -120, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		_customEvent_treeType();
-		createRecycledActorOnLayer(getActorType(70), 220, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		_customEvent_treeType();
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
