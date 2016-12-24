@@ -277,28 +277,31 @@
     <group eventID="12" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="12" id="-1">
-                <scaleTo comment="false" x="26" y="40">
+                <set-game-val-74 comment="false" x="26" y="40">
+                    <random comment="false" id="0" x="0" y="0"/>
+                </set-game-val-74>
+                <scaleTo comment="false" x="26" y="65">
                     <ACTOR eid="5" id="0"/>
                     <int id="1" val="100"/>
                     <get-game-val-28 comment="false" id="2" x="0" y="0"/>
                     <int id="3" val="0"/>
                     <int id="4" val="0"/>
                 </scaleTo>
-                <if comment="false" x="26" y="72">
+                <if comment="false" x="26" y="97">
                     <group eventID="12" id="-1">
-                        <comment-short comment="false" x="37" y="107">
+                        <comment-short comment="false" x="37" y="132">
                             <int id="0" val="updating No Health"/>
                         </comment-short>
-                        <set-val-0-4 comment="false" x="37" y="127">
+                        <set-val-0-4 comment="false" x="37" y="152">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-0-4>
-                        <set-game-val-38 comment="false" x="37" y="152">
+                        <set-game-val-38 comment="false" x="37" y="177">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-38>
-                        <set-game-val-30 comment="false" x="37" y="177">
+                        <set-game-val-30 comment="false" x="37" y="202">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-30>
-                        <say-this comment="false" x="37" y="202">
+                        <say-this comment="false" x="37" y="227">
                             <int id="0" val="gameOverIU"/>
                         </say-this>
                     </group>

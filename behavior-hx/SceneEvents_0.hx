@@ -288,6 +288,7 @@ class SceneEvents_0 extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
+				Engine.engine.setGameAttribute("ramdomUniversalNumber", randomFloat());
 				getActor(5).growTo(100/100, Engine.engine.getGameAttribute("playerHealth")/100, 0, Linear.easeNone);
 				if((!(_gameOverShown) && (Engine.engine.getGameAttribute("playerHealth") < 0)))
 				{

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <periodic comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="67">
+                            <int id="0" val="spawnTrees"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="1.5"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
+                <periodic comment="false" x="26" y="99">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="126">
+                            <int id="0" val="spawnLife"/>
+                        </say-this>
+                    </group>
+                    <int id="0" val="3"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </periodic>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="-115"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="94">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-600"/>
+                </set-xy>
+                <create-actor-on-layer comment="false" x="26" y="121">
+                    <actortype eid="70" id="0"/>
+                    <int id="1" val="205"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="148">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="175">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-600"/>
+                </set-xy>
+                <setanim comment="false" x="26" y="202">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <tostring comment="false" id="1" x="0" y="0">
+                        <roundnew comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="6"/>
+                            </times>
+                        </roundnew>
+                    </tostring>
+                </setanim>
+            </group>
+            <int id="0" val="spawnTrees"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="10" id="0"/>
+                    <plus comment="false" id="1" x="0" y="0">
+                        <roundnew comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="230"/>
+                            </times>
+                        </roundnew>
+                        <int id="1" val="50"/>
+                    </plus>
+                    <int id="2" val="-5"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+            </group>
+            <int id="0" val="spawnLife"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

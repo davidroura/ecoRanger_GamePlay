@@ -91,29 +91,52 @@ class Design_95_95_spawnHandler extends SceneScript
 	public var _distanceTree:Float;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_gameByLevel():Void
+	public function _customEvent_createCurveList():Void
 	{
-		_customEvent_contiousSpawn();
-		if((Engine.engine.getGameAttribute("level") < 10))
-		{
-			_customEvent_easyLevel();
-		}
-		else if((Engine.engine.getGameAttribute("level") < 20))
-		{
-			_customEvent_ocasionalSpawn();
-		}
+		_xDots = new Array<Dynamic>();
+		propertyChanged("_xDots", _xDots);
+		_yDots = new Array<Dynamic>();
+		propertyChanged("_yDots", _yDots);
+		_xDots.push(0);
+		_yDots.push(0);
+		_xDots.push(1);
+		_yDots.push(1.73);
+		_xDots.push(2);
+		_yDots.push(3);
+		_xDots.push(3);
+		_yDots.push(3.88);
+		_xDots.push(4);
+		_yDots.push(4.1);
+		_xDots.push(5);
+		_yDots.push(5);
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_easyLevel():Void
+	public function _customEvent_endLessRunner():Void
 	{
-		if((!(_distanceRock == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % _nextDistance) == 0)))
+		_customEvent_contiousSpawn();
+		_customEvent_selectObstacle();
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_selectObstacle():Void
+	{
+		if((!(_distanceObstacle == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % _nextDistance) == 0)))
 		{
-			_customEvent_trashSpawn();
-			_distanceRock = asNumber(Engine.engine.getGameAttribute("playerDistance"));
-			propertyChanged("_distanceRock", _distanceRock);
-			_nextDistance = asNumber(((_ramdomNumber012 * 5) + 50));
-			propertyChanged("_nextDistance", _nextDistance);
+			if((_ramdomNumber012 < 4))
+			{
+				_customEvent_ObstacleRock();
+			}
+			else if((_ramdomNumber012 < 8))
+			{
+				_customEvent_ObstacleRamdomBridge();
+			}
+			else
+			{
+				_customEvent_obstacleMud();
+			}
+			_distanceObstacle = asNumber((Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 50)) + _nextDistance));
+			propertyChanged("_distanceObstacle", _distanceObstacle);
 		}
 	}
 	
@@ -132,6 +155,12 @@ class Design_95_95_spawnHandler extends SceneScript
 			_distanceLife = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 			propertyChanged("_distanceLife", _distanceLife);
 		}
+		if((!("" == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 95) == 0)))
+		{
+			_customEvent_trashSpawn();
+			_distanceTrash = asNumber(Engine.engine.getGameAttribute("playerDistance"));
+			propertyChanged("_distanceTrash", _distanceTrash);
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -141,7 +170,7 @@ class Design_95_95_spawnHandler extends SceneScript
 		{
 			if((_ramdomNumber012 > 9))
 			{
-				_customEvent_ObstacleRamdomSpaw();
+				_customEvent_ObstacleRamdomSpawn();
 				_distanceTrash = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 				propertyChanged("_distanceTrash", _distanceTrash);
 				_nextDistance = asNumber(100);
@@ -251,11 +280,11 @@ class Design_95_95_spawnHandler extends SceneScript
 	public function _customEvent_treeType():Void
 	{
 		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		getLastCreatedActor().setAnimation("" + ("" + randomInt(Math.floor(1), Math.floor(6))));
+		getLastCreatedActor().setAnimation("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 6))));
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_ObstacleRamdomSpaw():Void
+	public function _customEvent_ObstacleRamdomSpawn():Void
 	{
 		if((_ramdomNumber012 < 7))
 		{
@@ -345,22 +374,7 @@ class Design_95_95_spawnHandler extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_xDots = new Array<Dynamic>();
-		propertyChanged("_xDots", _xDots);
-		_yDots = new Array<Dynamic>();
-		propertyChanged("_yDots", _yDots);
-		_xDots.push(0);
-		_yDots.push(0);
-		_xDots.push(1);
-		_yDots.push(1.73);
-		_xDots.push(2);
-		_yDots.push(3);
-		_xDots.push(3);
-		_yDots.push(3.88);
-		_xDots.push(4);
-		_yDots.push(4.1);
-		_xDots.push(5);
-		_yDots.push(5);
+		_customEvent_createCurveList();
 		_nextDistance = asNumber(50);
 		propertyChanged("_nextDistance", _nextDistance);
 		
@@ -370,11 +384,11 @@ class Design_95_95_spawnHandler extends SceneScript
 			if(wrapper.enabled)
 			{
 				/* Here we set how stuff spawn,  */
-				_ramdomNumber012 = asNumber(randomInt(Math.floor(0), Math.floor(12)));
+				_ramdomNumber012 = asNumber(Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 6)));
 				propertyChanged("_ramdomNumber012", _ramdomNumber012);
 				if((Engine.engine.getGameAttribute("playerHealth") > 3))
 				{
-					_customEvent_gameByLevel();
+					_customEvent_endLessRunner();
 				}
 			}
 		});
