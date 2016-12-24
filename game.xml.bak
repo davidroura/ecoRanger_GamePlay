@@ -123,7 +123,7 @@
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="8" id="15" name="gameCubePlastic" save="true" value="0.0"/>
         <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
-        <number cid="2" id="74" name="ramdomUniversalNumber" save="true" value="0"/>
+        <number cid="2" id="74" name="ramdomUniversalNumber" save="true" value="0.0"/>
         <number cid="8" id="68" name="recycling_glassBottles" save="true" value="0.0"/>
         <number cid="8" id="59" name="collected_PlasticBottles" save="true" value="0.0"/>
         <number cid="8" id="14" name="gameCubeGlass" save="true" value="0.0"/>

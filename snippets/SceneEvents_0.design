@@ -57,6 +57,9 @@
                             <int id="1" val="100"/>
                             <int id="2" val="180"/>
                         </draw-text>
+                        <comment-short comment="false" x="68" y="323">
+                            <int id="0" val="make text grow, move up slowly, and then fad after a second"/>
+                        </comment-short>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -69,9 +72,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="335">
+                <if comment="false" x="57" y="355">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="370">
+                        <draw-text comment="false" x="68" y="390">
                             <int id="0" val="500 meters!"/>
                             <int id="1" val="100"/>
                             <int id="2" val="180"/>
@@ -88,9 +91,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="402">
+                <if comment="false" x="57" y="422">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="437">
+                        <draw-text comment="false" x="68" y="457">
                             <int id="0" val="1000 meters!"/>
                             <int id="1" val="100"/>
                             <int id="2" val="180"/>
@@ -107,9 +110,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="469">
+                <if comment="false" x="57" y="489">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="504">
+                        <draw-text comment="false" x="68" y="524">
                             <int id="0" val="2000 meters!"/>
                             <int id="1" val="100"/>
                             <int id="2" val="180"/>
