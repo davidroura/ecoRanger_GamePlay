@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <set-font-new comment="false" x="37" y="70">
+                            <font eid="190" id="0"/>
+                        </set-font-new>
+                        <set-val-127-3 comment="false" x="37" y="97">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-127-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1.75"/>
+                            </minus>
+                        </set-val-127-3>
+                        <if comment="false" x="37" y="127">
+                            <group eventID="1" id="-1">
+                                <set-alpha comment="false" x="48" y="157">
+                                    <get-val-127-3 comment="false" id="0" x="0" y="0"/>
+                                </set-alpha>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <int id="0" val="100"/>
+                                <get-val-127-3 comment="false" id="1" x="0" y="0"/>
+                            </more>
+                        </if>
+                        <draw-text comment="false" x="37" y="194">
+                            <get-game-val-75 comment="false" id="0" x="0" y="0"/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <int id="0" val="300"/>
+                                <get-font-width comment="false" id="1" x="0" y="0">
+                                    <get-game-val-75 comment="false" id="0" x="0" y="0"/>
+                                </get-font-width>
+                            </minus>
+                            <get-val-127-2 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                        <set-val-127-2 comment="false" x="37" y="229">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-val-127-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val=".1"/>
+                            </minus>
+                        </set-val-127-2>
+                        <if comment="false" x="37" y="259">
+                            <group eventID="1" id="-1">
+                                <set-val-127-3 comment="false" x="48" y="289">
+                                    <int id="0" val="150"/>
+                                </set-val-127-3>
+                                <set-val-127-2 comment="false" x="48" y="309">
+                                    <int id="0" val="175"/>
+                                </set-val-127-2>
+                                <set-game-val-75 comment="false" x="48" y="329">
+                                    <int id="0" val="empty"/>
+                                </set-game-val-75>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <get-val-127-3 comment="false" id="1" x="0" y="0"/>
+                            </more>
+                        </if>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-75 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="empty"/>
+                    </noteq>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1">
+        <get-game-val-71 comment="false" x="352" y="391"/>
+        <get-game-val-70 comment="false" x="378" y="315"/>
+    </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-127-2 comment="false" x="26" y="40">
+                    <int id="0" val="175"/>
+                </set-val-127-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1">
+        <get-game-val-71 comment="false" x="171" y="97"/>
+    </group>
+</groups>

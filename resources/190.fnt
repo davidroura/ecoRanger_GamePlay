@@ -1,0 +1,17 @@
+#
+#Sat Dec 24 10:22:46 MST 2016
+style=bold
+alphabet=
+stroke.color=\#6989ba
+color=\#8bb8f4
+shadow.y=3
+family=Oswald-Bold.ttf
+shadow.x=2
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=all
+gradient.color=\#6989ba
+stroke.size=2
+antialias=true
+size=28

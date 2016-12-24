@@ -52,14 +52,12 @@
                 </if>
                 <if comment="false" x="57" y="268">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="303">
-                            <int id="0" val="100 meters!"/>
-                            <int id="1" val="100"/>
-                            <int id="2" val="180"/>
-                        </draw-text>
-                        <comment-short comment="false" x="68" y="323">
-                            <int id="0" val="make text grow, move up slowly, and then fad after a second"/>
+                        <comment-short comment="false" x="68" y="303">
+                            <int id="0" val="notificationText sets an animated form of that text in middle of screen"/>
                         </comment-short>
+                        <set-game-val-75 comment="false" x="68" y="323">
+                            <int id="0" val="100 meters!"/>
+                        </set-game-val-75>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -74,11 +72,9 @@
                 </if>
                 <if comment="false" x="57" y="355">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="390">
+                        <set-game-val-75 comment="false" x="68" y="390">
                             <int id="0" val="500 meters!"/>
-                            <int id="1" val="100"/>
-                            <int id="2" val="180"/>
-                        </draw-text>
+                        </set-game-val-75>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -93,11 +89,9 @@
                 </if>
                 <if comment="false" x="57" y="422">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="457">
+                        <set-game-val-75 comment="false" x="68" y="457">
                             <int id="0" val="1000 meters!"/>
-                            <int id="1" val="100"/>
-                            <int id="2" val="180"/>
-                        </draw-text>
+                        </set-game-val-75>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -112,11 +106,9 @@
                 </if>
                 <if comment="false" x="57" y="489">
                     <group eventID="16" id="-1">
-                        <draw-text comment="false" x="68" y="524">
+                        <set-game-val-75 comment="false" x="68" y="524">
                             <int id="0" val="2000 meters!"/>
-                            <int id="1" val="100"/>
-                            <int id="2" val="180"/>
-                        </draw-text>
+                        </set-game-val-75>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -488,9 +480,9 @@
                                 <set-game-val-3 comment="false" x="48" y="213">
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
-                                <set-val-0-7 comment="false" x="48" y="233">
+                                <set-game-val-75 comment="false" x="48" y="233">
                                     <int id="0" val="COLLECT THE TRASH"/>
-                                </set-val-0-7>
+                                </set-game-val-75>
                             </group>
                             <int id="0" val="2"/>
                             <ACTOR eid="lastcreated" id="2"/>
@@ -527,9 +519,9 @@
                                 <set-game-val-3 comment="false" x="48" y="467">
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
-                                <set-val-0-7 comment="false" x="48" y="487">
+                                <set-game-val-75 comment="false" x="48" y="487">
                                     <int id="0" val="COLLECT BIOFUEL"/>
-                                </set-val-0-7>
+                                </set-game-val-75>
                             </group>
                             <int id="0" val="5.5"/>
                             <ACTOR eid="lastcreated" id="2"/>
@@ -563,12 +555,12 @@
                                 <set-game-val-47 comment="false" x="48" y="696">
                                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-47>
-                                <set-game-val-3 comment="false" x="48" y="721">
+                                <set-game-val-75 comment="false" x="48" y="721">
+                                    <int id="0" val="WATCH OUT!"/>
+                                </set-game-val-75>
+                                <set-game-val-3 comment="false" x="48" y="741">
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
-                                <set-val-0-7 comment="false" x="48" y="741">
-                                    <int id="0" val="WATCH OUT!"/>
-                                </set-val-0-7>
                             </group>
                             <int id="0" val="9"/>
                             <ACTOR eid="lastcreated" id="2"/>
@@ -587,9 +579,9 @@
                         </dolater>
                         <dolater comment="false" x="37" y="857">
                             <group eventID="14" id="-1">
-                                <set-val-0-7 comment="false" x="48" y="884">
+                                <set-game-val-75 comment="false" x="48" y="884">
                                     <int id="0" val="GOOD LUCK OUT THERE"/>
-                                </set-val-0-7>
+                                </set-game-val-75>
                             </group>
                             <int id="0" val="10.5"/>
                             <ACTOR eid="lastcreated" id="2"/>
@@ -614,6 +606,26 @@
             </group>
             <int id="0" val="tutorial"/>
         </event-custom>
+    </group>
+    <group eventID="14" id="1">
+        <set-val-0-7 comment="false" x="374" y="883">
+            <int id="0" val="GOOD LUCK OUT THERE"/>
+        </set-val-0-7>
+    </group>
+    <group eventID="14" id="2">
+        <set-val-0-7 comment="false" x="291" y="768">
+            <int id="0" val="WATCH OUT!"/>
+        </set-val-0-7>
+    </group>
+    <group eventID="14" id="3">
+        <set-val-0-7 comment="false" x="237" y="514">
+            <int id="0" val="COLLECT BIOFUEL"/>
+        </set-val-0-7>
+    </group>
+    <group eventID="14" id="4">
+        <set-val-0-7 comment="false" x="423" y="295">
+            <int id="0" val=""/>
+        </set-val-0-7>
     </group>
     <group eventID="14" id="-1"/>
 </groups>

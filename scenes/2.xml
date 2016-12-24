@@ -23,6 +23,10 @@
         <s enabled="true" id="88">
             <prop id="1" list="0" val="0.0"/>
         </s>
+        <s enabled="true" id="127">
+            <prop id="2" list="0" val="0"/>
+            <prop id="3" list="0" val="150"/>
+        </s>
     </snippets>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
