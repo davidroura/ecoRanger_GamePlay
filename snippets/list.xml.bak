@@ -737,14 +737,6 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_126_126_spawnHandler2" classname="scripts.Design_126_126_spawnHandler2" desc="" description="" design="true" drawOrder="0" id="126" name="spawnHandler2" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks/>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="spawnTrees" enabled="true" id="2" name="event-custom" order="3" repeats="true"/>
-            <event displayName="spawnLife" enabled="true" id="3" name="event-custom" order="2" repeats="true"/>
-        </events>
-    </snippet>
     <snippet attachedevent="false" class="scripts.Design_127_127_notificationAnimated" classname="scripts.Design_127_127_notificationAnimated" desc="" description="" design="true" drawOrder="0" id="127" name="notificationAnimated" oid="-1" package="scripts" shared="false" type="scene">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="yTranslate" hidden="false" id="2" name="_yTranslate" order="0"/>
         <number default="150" defaultValue="150" desc="" dropdown="" fullname="opacity" hidden="false" id="3" name="_opacity" order="1"/>

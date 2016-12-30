@@ -658,17 +658,17 @@
                                 </say-this>
                             </group>
                         </else>
-                        <set-val-95-26 comment="false" x="37" y="256">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <roundnew comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="0"/>
-                                    <times comment="false" id="1" x="0" y="0">
-                                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="50"/>
-                                    </times>
-                                </roundnew>
-                                <get-val-95-35 comment="false" id="1" x="0" y="0"/>
-                            </plus>
+                        <set-val-95-35 comment="false" x="37" y="256">
+                            <roundnew comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <times comment="false" id="1" x="0" y="0">
+                                    <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="50"/>
+                                </times>
+                            </roundnew>
+                        </set-val-95-35>
+                        <set-val-95-26 comment="false" x="37" y="299">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                         </set-val-95-26>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
