@@ -307,7 +307,7 @@
             </group>
         </step>
     </group>
-    <group eventID="12" id="2">
+    <group eventID="12" id="1">
         <say-this comment="false" x="35" y="277">
             <int id="0" val="gameOverIU"/>
         </say-this>
