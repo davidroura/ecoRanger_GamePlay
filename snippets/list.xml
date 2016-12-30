@@ -529,22 +529,23 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="trashSpawn" enabled="true" id="3" name="event-custom" order="11" repeats="true"/>
-            <event displayName="trashRamdomItem" enabled="true" id="12" name="event-custom" order="21" repeats="true"/>
-            <event displayName="lifeSpawn" enabled="true" id="13" name="event-custom" order="22" repeats="true"/>
-            <event displayName="treeSpawn" enabled="true" id="15" name="event-custom" order="23" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="16" name="event-custom" order="24" repeats="true"/>
-            <event displayName="ObstacleRamdomSpawn" enabled="true" id="17" name="event-custom" order="25" repeats="true"/>
-            <event displayName="ObstacleRock" enabled="true" id="18" name="event-custom" order="26" repeats="true"/>
-            <event displayName="ObstacleRamdomBridge" enabled="true" id="19" name="event-custom" order="27" repeats="true"/>
-            <event displayName="ocasionalSpawn" enabled="true" id="21" name="event-custom" order="8" repeats="true"/>
-            <event displayName="contiousSpawn" enabled="true" id="22" name="event-custom" order="6" repeats="true"/>
-            <event displayName="trashListSpawn" enabled="true" id="23" name="event-custom" order="12" repeats="true"/>
-            <event displayName="obstacleMud" enabled="true" id="24" name="event-custom" order="28" repeats="true"/>
-            <event displayName="endLessRunner" enabled="true" id="25" name="event-custom" order="4" repeats="true"/>
-            <event displayName="selectObstacle" enabled="true" id="26" name="event-custom" order="5" repeats="true"/>
-            <event displayName="createCurveList" enabled="true" id="27" name="event-custom" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="4" repeats="true"/>
+            <event displayName="trashSpawn" enabled="true" id="3" name="event-custom" order="13" repeats="true"/>
+            <event displayName="trashRamdomItem" enabled="true" id="12" name="event-custom" order="23" repeats="true"/>
+            <event displayName="lifeSpawn" enabled="true" id="13" name="event-custom" order="24" repeats="true"/>
+            <event displayName="treeSpawn" enabled="true" id="15" name="event-custom" order="25" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="16" name="event-custom" order="26" repeats="true"/>
+            <event displayName="ObstacleRamdomSpawn" enabled="true" id="17" name="event-custom" order="27" repeats="true"/>
+            <event displayName="ObstacleRock" enabled="true" id="18" name="event-custom" order="28" repeats="true"/>
+            <event displayName="ObstacleRamdomBridge" enabled="true" id="19" name="event-custom" order="29" repeats="true"/>
+            <event displayName="ocasionalSpawn" enabled="true" id="21" name="event-custom" order="10" repeats="true"/>
+            <event displayName="contiousSpawn" enabled="true" id="22" name="event-custom" order="8" repeats="true"/>
+            <event displayName="trashListSpawn" enabled="true" id="23" name="event-custom" order="14" repeats="true"/>
+            <event displayName="obstacleMud" enabled="true" id="24" name="event-custom" order="30" repeats="true"/>
+            <event displayName="endLessRunner" enabled="true" id="25" name="event-custom" order="5" repeats="true"/>
+            <event displayName="selectObstacle" enabled="true" id="26" name="event-custom" order="6" repeats="true"/>
+            <event displayName="createCurveList" enabled="true" id="27" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="28" name="draw" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_96_96_powerUpGadget" classname="scripts.Design_96_96_powerUpGadget" desc="" description="" design="true" drawOrder="0" id="96" name="powerUp_Gadget" oid="-1" package="scripts" shared="false" type="actor">

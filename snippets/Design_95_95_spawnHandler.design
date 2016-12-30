@@ -631,43 +631,52 @@
                     <group eventID="26" id="-1">
                         <if comment="false" x="37" y="80">
                             <group eventID="26" id="-1">
-                                <say-this comment="false" x="48" y="110">
+                                <say-this comment="false" x="48" y="115">
                                     <int id="0" val="ObstacleRock"/>
                                 </say-this>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
-                                <get-val-95-32 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="4"/>
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="120"/>
+                                </times>
+                                <int id="1" val="40"/>
                             </less>
                         </if>
-                        <else-if comment="false" x="37" y="142">
+                        <else-if comment="false" x="37" y="147">
                             <group eventID="26" id="-1">
-                                <say-this comment="false" x="48" y="172">
+                                <say-this comment="false" x="48" y="182">
                                     <int id="0" val="ObstacleRamdomBridge"/>
                                 </say-this>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
-                                <get-val-95-32 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="8"/>
+                                <times comment="false" id="0" x="0" y="0">
+                                    <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="120"/>
+                                </times>
+                                <int id="1" val="80"/>
                             </less>
                         </else-if>
-                        <else comment="false" x="37" y="204">
+                        <else comment="false" x="37" y="214">
                             <group eventID="26" id="-1">
-                                <say-this comment="false" x="48" y="224">
+                                <say-this comment="false" x="48" y="234">
                                     <int id="0" val="obstacleMud"/>
                                 </say-this>
                             </group>
                         </else>
-                        <set-val-95-35 comment="false" x="37" y="256">
-                            <roundnew comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <times comment="false" id="1" x="0" y="0">
-                                    <get-game-val-74 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="50"/>
-                                </times>
-                            </roundnew>
+                        <set-val-95-35 comment="false" x="37" y="266">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <roundnew comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <times comment="false" id="1" x="0" y="0">
+                                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="500"/>
+                                    </times>
+                                </roundnew>
+                                <int id="1" val="100"/>
+                            </plus>
                         </set-val-95-35>
-                        <set-val-95-26 comment="false" x="37" y="299">
+                        <set-val-95-26 comment="false" x="37" y="314">
                             <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                         </set-val-95-26>
                     </group>
@@ -689,7 +698,12 @@
             <int id="0" val="selectObstacle"/>
         </event-custom>
     </group>
-    <group eventID="26" id="-1"/>
+    <group eventID="26" id="-1">
+        <mod comment="false" x="427" y="124">
+            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+            <get-val-95-35 comment="false" id="1" x="0" y="0"/>
+        </mod>
+    </group>
     <group eventID="27" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="27" id="-1">
@@ -752,4 +766,34 @@
         </event-custom>
     </group>
     <group eventID="27" id="-1"/>
+    <group eventID="28" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="28" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <font eid="190" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <get-val-95-26 comment="false" id="0" x="0" y="0"/>
+                        <str-combine comment="false" id="1" x="0" y="0">
+                            <int id="0" val="%"/>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="-&amp;gt;"/>
+                                    <mod comment="false" id="1" x="0" y="0">
+                                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                        <get-val-95-35 comment="false" id="1" x="0" y="0"/>
+                                    </mod>
+                                </str-combine>
+                            </str-combine>
+                        </str-combine>
+                    </str-combine>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="28" id="-1"/>
 </groups>

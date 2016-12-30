@@ -329,9 +329,6 @@
                         <set-val-8-13 comment="false" x="37" y="129">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-8-13>
-                        <set-game-val-30 comment="false" x="37" y="154">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-30>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-game-val-52 comment="false" id="0" x="0" y="0"/>
