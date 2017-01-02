@@ -605,6 +605,18 @@
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
                 </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="72">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <movewithinlayer comment="false" x="26" y="99">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="2"/>
+                </movewithinlayer>
+                <set-xy comment="false" x="26" y="126">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-20"/>
+                </set-xy>
             </group>
             <int id="0" val="obstacleMud"/>
         </event-custom>
@@ -664,19 +676,10 @@
                                 </say-this>
                             </group>
                         </else>
-                        <set-val-95-35 comment="false" x="37" y="266">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <roundnew comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="0"/>
-                                    <times comment="false" id="1" x="0" y="0">
-                                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="500"/>
-                                    </times>
-                                </roundnew>
-                                <int id="1" val="100"/>
-                            </plus>
-                        </set-val-95-35>
-                        <set-val-95-26 comment="false" x="37" y="314">
+                        <say-this comment="false" x="37" y="266">
+                            <int id="0" val="nextObstacleDistance"/>
+                        </say-this>
+                        <set-val-95-26 comment="false" x="37" y="286">
                             <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                         </set-val-95-26>
                     </group>
@@ -698,12 +701,7 @@
             <int id="0" val="selectObstacle"/>
         </event-custom>
     </group>
-    <group eventID="26" id="-1">
-        <mod comment="false" x="427" y="124">
-            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-            <get-val-95-35 comment="false" id="1" x="0" y="0"/>
-        </mod>
-    </group>
+    <group eventID="26" id="-1"/>
     <group eventID="27" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="27" id="-1">
@@ -773,22 +771,7 @@
                     <font eid="190" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="67">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <get-val-95-26 comment="false" id="0" x="0" y="0"/>
-                        <str-combine comment="false" id="1" x="0" y="0">
-                            <int id="0" val="%"/>
-                            <str-combine comment="false" id="1" x="0" y="0">
-                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                <str-combine comment="false" id="1" x="0" y="0">
-                                    <int id="0" val="-&amp;gt;"/>
-                                    <mod comment="false" id="1" x="0" y="0">
-                                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                        <get-val-95-35 comment="false" id="1" x="0" y="0"/>
-                                    </mod>
-                                </str-combine>
-                            </str-combine>
-                        </str-combine>
-                    </str-combine>
+                    <get-val-95-35 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="100"/>
                     <int id="2" val="100"/>
                 </draw-text>
@@ -796,4 +779,75 @@
         </draw>
     </group>
     <group eventID="28" id="-1"/>
+    <group eventID="29" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="29" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="29" id="-1">
+                        <set-val-95-18 comment="false" x="37" y="70">
+                            <int id="0" val="160"/>
+                        </set-val-95-18>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="400"/>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="102">
+                    <group eventID="29" id="-1">
+                        <set-val-95-18 comment="false" x="37" y="132">
+                            <int id="0" val="120"/>
+                        </set-val-95-18>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="800"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="164">
+                    <group eventID="29" id="-1">
+                        <set-val-95-18 comment="false" x="37" y="194">
+                            <int id="0" val="80"/>
+                        </set-val-95-18>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1500"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="226">
+                    <group eventID="29" id="-1">
+                        <set-val-95-18 comment="false" x="37" y="256">
+                            <int id="0" val="60"/>
+                        </set-val-95-18>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="230"/>
+                    </less>
+                </else-if>
+                <else comment="false" x="26" y="288">
+                    <group eventID="29" id="-1">
+                        <set-val-95-18 comment="false" x="37" y="308">
+                            <int id="0" val="40"/>
+                        </set-val-95-18>
+                    </group>
+                </else>
+                <set-val-95-35 comment="false" x="26" y="340">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <roundnew comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="20"/>
+                            </times>
+                        </roundnew>
+                        <get-val-95-18 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-val-95-35>
+            </group>
+            <int id="0" val="nextObstacleDistance"/>
+        </event-custom>
+    </group>
+    <group eventID="29" id="-1"/>
 </groups>
