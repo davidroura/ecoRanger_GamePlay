@@ -223,24 +223,8 @@
             </group>
         </step>
     </group>
-    <group eventID="3" id="1">
-        <if comment="false" x="650" y="554">
-            <group eventID="3" id="-1">
-                <print comment="false" x="661" y="584">
-                    <int id="0" val="low fuel!"/>
-                </print>
-                <set-game-val-3 comment="false" x="661" y="604">
-                    <int id="0" val=""/>
-                </set-game-val-3>
-            </group>
-            <lesseq comment="false" id="0" x="0" y="0">
-                <get-game-val-28 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="25"/>
-            </lesseq>
-        </if>
-    </group>
     <group eventID="3" id="-1">
-        <plus comment="false" x="349" y="549">
+        <plus comment="false" x="420" y="547">
             <sqrt comment="false" id="0" x="0" y="0">
                 <times comment="false" id="0" x="0" y="0">
                     <int id="0" val="10"/>

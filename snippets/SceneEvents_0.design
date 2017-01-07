@@ -10,19 +10,19 @@
                     <font eid="136" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="57" y="84">
-                    <get-game-val-61 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="140"/>
-                    <int id="2" val="7"/>
+                    <get-game-val-60 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="105"/>
+                    <int id="2" val="5"/>
                 </draw-text>
                 <draw-text comment="false" x="57" y="109">
-                    <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="110"/>
-                    <int id="2" val="7"/>
+                    <get-game-val-61 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="145"/>
+                    <int id="2" val="5"/>
                 </draw-text>
                 <draw-text comment="false" x="57" y="134">
                     <get-game-val-59 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="170"/>
-                    <int id="2" val="7"/>
+                    <int id="1" val="190"/>
+                    <int id="2" val="5"/>
                 </draw-text>
                 <set-font-new comment="false" x="57" y="159">
                     <font eid="128" id="0"/>
@@ -52,10 +52,36 @@
                 </if>
                 <if comment="false" x="57" y="268">
                     <group eventID="16" id="-1">
-                        <comment-short comment="false" x="68" y="303">
+                        <comment-short comment="false" x="68" y="293">
+                            <int id="0" val="Game Over Stats"/>
+                        </comment-short>
+                        <set-font-new comment="false" x="68" y="313">
+                            <font eid="190" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="68" y="340">
+                            <get-game-val-61 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="50"/>
+                            <int id="2" val="225"/>
+                        </draw-text>
+                        <draw-text comment="false" x="68" y="365">
+                            <get-game-val-60 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="130"/>
+                            <int id="2" val="225"/>
+                        </draw-text>
+                        <draw-text comment="false" x="68" y="390">
+                            <get-game-val-59 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="220"/>
+                            <int id="2" val="225"/>
+                        </draw-text>
+                    </group>
+                    <get-game-val-38 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="57" y="427">
+                    <group eventID="16" id="-1">
+                        <comment-short comment="false" x="68" y="462">
                             <int id="0" val="notificationText sets an animated form of that text in middle of screen"/>
                         </comment-short>
-                        <set-game-val-75 comment="false" x="68" y="323">
+                        <set-game-val-75 comment="false" x="68" y="482">
                             <int id="0" val="100 meters!"/>
                         </set-game-val-75>
                     </group>
@@ -70,9 +96,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="355">
+                <if comment="false" x="57" y="514">
                     <group eventID="16" id="-1">
-                        <set-game-val-75 comment="false" x="68" y="390">
+                        <set-game-val-75 comment="false" x="68" y="549">
                             <int id="0" val="500 meters!"/>
                         </set-game-val-75>
                     </group>
@@ -87,9 +113,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="422">
+                <if comment="false" x="57" y="581">
                     <group eventID="16" id="-1">
-                        <set-game-val-75 comment="false" x="68" y="457">
+                        <set-game-val-75 comment="false" x="68" y="616">
                             <int id="0" val="1000 meters!"/>
                         </set-game-val-75>
                     </group>
@@ -104,9 +130,9 @@
                         </lesseq>
                     </and>
                 </if>
-                <if comment="false" x="57" y="489">
+                <if comment="false" x="57" y="648">
                     <group eventID="16" id="-1">
-                        <set-game-val-75 comment="false" x="68" y="524">
+                        <set-game-val-75 comment="false" x="68" y="683">
                             <int id="0" val="2000 meters!"/>
                         </set-game-val-75>
                     </group>
@@ -293,6 +319,9 @@
                         <set-game-val-38 comment="false" x="37" y="177">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-game-val-38>
+                        <say-this comment="false" x="37" y="202">
+                            <int id="0" val="gameOverIU"/>
+                        </say-this>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <not comment="false" id="0" x="0" y="0">
@@ -306,11 +335,6 @@
                 </if>
             </group>
         </step>
-    </group>
-    <group eventID="12" id="1">
-        <say-this comment="false" x="35" y="277">
-            <int id="0" val="gameOverIU"/>
-        </say-this>
     </group>
     <group eventID="12" id="-1"/>
     <group eventID="13" id="0">
@@ -516,7 +540,7 @@
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
                                 <set-game-val-75 comment="false" x="48" y="462">
-                                    <int id="0" val="COLLECT BIOFUEL"/>
+                                    <int id="0" val="COLLECT WASTE"/>
                                 </set-game-val-75>
                             </group>
                             <int id="0" val="5.5"/>
@@ -602,26 +626,6 @@
             </group>
             <int id="0" val="tutorial"/>
         </event-custom>
-    </group>
-    <group eventID="14" id="1">
-        <set-val-0-7 comment="false" x="374" y="883">
-            <int id="0" val="GOOD LUCK OUT THERE"/>
-        </set-val-0-7>
-    </group>
-    <group eventID="14" id="2">
-        <set-val-0-7 comment="false" x="291" y="768">
-            <int id="0" val="WATCH OUT!"/>
-        </set-val-0-7>
-    </group>
-    <group eventID="14" id="3">
-        <set-val-0-7 comment="false" x="237" y="514">
-            <int id="0" val="COLLECT BIOFUEL"/>
-        </set-val-0-7>
-    </group>
-    <group eventID="14" id="4">
-        <set-val-0-7 comment="false" x="423" y="295">
-            <int id="0" val=""/>
-        </set-val-0-7>
     </group>
     <group eventID="14" id="-1"/>
 </groups>
