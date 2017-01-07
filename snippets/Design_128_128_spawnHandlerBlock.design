@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="80">
+                            <int id="0" val="blockOne"/>
+                        </say-this>
+                        <set-val-128-2 comment="false" x="37" y="100">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        </set-val-128-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-val-128-2 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <comment-long comment="false" x="26" y="40">
+                    <int id="0" val="ramdomUniversalNumber&#10;0.25 =&amp;gt; Center&#10;0.50 =&amp;gt; Right&#10;0.75 =&amp;gt; Left&#10;otherwise =&amp;gt; sides"/>
+                </comment-long>
+                <say-this comment="false" x="26" y="120">
+                    <int id="0" val="spawnTrees"/>
+                </say-this>
+                <say-this comment="false" x="26" y="140">
+                    <int id="0" val="spawnLife"/>
+                </say-this>
+            </group>
+            <int id="0" val="blockOne"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <set-val-128-3 comment="false" x="37" y="70">
+                            <int id="0" val="-115"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="90">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                        <set-val-128-3 comment="false" x="37" y="110">
+                            <int id="0" val="205"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="130">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.25"/>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="162">
+                    <group eventID="3" id="-1">
+                        <set-val-128-3 comment="false" x="37" y="192">
+                            <int id="0" val="-65"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="212">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                        <set-val-128-3 comment="false" x="37" y="232">
+                            <int id="0" val="255"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="252">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.50"/>
+                    </less>
+                </else-if>
+                <else-if comment="false" x="26" y="284">
+                    <group eventID="3" id="-1">
+                        <set-val-128-3 comment="false" x="37" y="314">
+                            <int id="0" val="-165"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="334">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                        <set-val-128-3 comment="false" x="37" y="354">
+                            <int id="0" val="155"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="374">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.75"/>
+                    </less>
+                </else-if>
+                <else comment="false" x="26" y="406">
+                    <group eventID="3" id="-1">
+                        <set-val-128-3 comment="false" x="37" y="426">
+                            <int id="0" val="55"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="446">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                        <scaleTo comment="false" x="37" y="466">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="50"/>
+                            <int id="2" val="50"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                        <set-val-128-3 comment="false" x="37" y="493">
+                            <int id="0" val="-165"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="513">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                        <set-val-128-3 comment="false" x="37" y="533">
+                            <int id="0" val="255"/>
+                        </set-val-128-3>
+                        <say-this comment="false" x="37" y="553">
+                            <int id="0" val="dropTree"/>
+                        </say-this>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="spawnTrees"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <scaleTo comment="false" x="26" y="40">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <setanim comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <tostring comment="false" id="1" x="0" y="0">
+                        <roundnew comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="6"/>
+                            </times>
+                        </roundnew>
+                    </tostring>
+                </setanim>
+            </group>
+            <int id="0" val="treeType"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="70" id="0"/>
+                    <get-val-128-3 comment="false" id="1" x="0" y="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="72">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="99">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-600"/>
+                </set-xy>
+                <say-this comment="false" x="26" y="126">
+                    <int id="0" val="treeType"/>
+                </say-this>
+            </group>
+            <int id="0" val="dropTree"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="6" id="-1"/>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.25"/>
+                    </less>
+                </if>
+                <if comment="false" x="26" y="102">
+                    <group eventID="6" id="-1">
+                        <set-val-128-4 comment="false" x="37" y="132">
+                            <int id="0" val="200"/>
+                        </set-val-128-4>
+                        <set-val-128-5 comment="false" x="37" y="152">
+                            <int id="0" val="-200"/>
+                        </set-val-128-5>
+                        <say-this comment="false" x="37" y="172">
+                            <int id="0" val="dropLife"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.50"/>
+                    </less>
+                </if>
+                <if comment="false" x="26" y="204">
+                    <group eventID="6" id="-1">
+                        <set-val-128-4 comment="false" x="37" y="234">
+                            <int id="0" val="40"/>
+                        </set-val-128-4>
+                        <set-val-128-5 comment="false" x="37" y="254">
+                            <int id="0" val="-200"/>
+                        </set-val-128-5>
+                        <say-this comment="false" x="37" y="274">
+                            <int id="0" val="dropLife"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-game-val-74 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0.75"/>
+                    </less>
+                </if>
+                <else comment="false" x="26" y="306">
+                    <group eventID="6" id="-1">
+                        <set-val-128-4 comment="false" x="37" y="326">
+                            <int id="0" val="40"/>
+                        </set-val-128-4>
+                        <set-val-128-5 comment="false" x="37" y="346">
+                            <int id="0" val="-200"/>
+                        </set-val-128-5>
+                        <say-this comment="false" x="37" y="366">
+                            <int id="0" val="dropLife"/>
+                        </say-this>
+                        <set-val-128-4 comment="false" x="37" y="386">
+                            <int id="0" val="200"/>
+                        </set-val-128-4>
+                        <set-val-128-5 comment="false" x="37" y="406">
+                            <int id="0" val="-300"/>
+                        </set-val-128-5>
+                        <say-this comment="false" x="37" y="426">
+                            <int id="0" val="dropLife"/>
+                        </say-this>
+                    </group>
+                </else>
+            </group>
+            <int id="0" val="spawnLife"/>
+        </event-custom>
+    </group>
+    <group eventID="6" id="1">
+        <set-val-128-4 comment="false" x="449" y="241">
+            <int id="0" val="40"/>
+        </set-val-128-4>
+        <set-val-128-5 comment="false" x="449" y="261">
+            <int id="0" val="-200"/>
+        </set-val-128-5>
+        <say-this comment="false" x="449" y="281">
+            <int id="0" val="dropLife"/>
+        </say-this>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <create-actor-on-layer comment="false" x="26" y="40">
+                    <actortype eid="10" id="0"/>
+                    <get-val-128-4 comment="false" id="1" x="0" y="0"/>
+                    <int id="2" val="0"/>
+                    <int id="3" val="1"/>
+                    <int id="4" val="gamePlay"/>
+                </create-actor-on-layer>
+                <ignore-screen-tolerance comment="false" x="26" y="72">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-xy comment="false" x="26" y="99">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-val-128-5 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+            </group>
+            <int id="0" val="dropLife"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+</groups>
