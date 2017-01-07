@@ -116,8 +116,8 @@
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="6" name="emptyRoom" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="53" name="endShotBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="237" id="117" name="fuelBar" shared="false" width="15">
-        <anim across="1" down="1" durations="100" height="237" id="0" loop="true" name="Animation 0" numframes="1" originx="7" originy="237" sync="false" version="2" width="15"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="239" id="117" name="fuelBar" shared="false" width="15">
+        <anim across="1" down="1" durations="100" height="239" id="0" loop="true" name="Animation 0" numframes="1" originx="7" originy="237" sync="false" version="2" width="15"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="115" name="fuelBarBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="142" name="gadgetTop" shared="false" width="59">
