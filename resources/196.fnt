@@ -1,0 +1,17 @@
+#
+#Sun Jan 08 13:14:24 EST 2017
+style=bold
+alphabet=
+stroke.color=\#ffcc00
+color=\#ffff99
+shadow.y=3
+family=Oswald-Bold.ttf
+shadow.x=2
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=all
+gradient.color=\#ffff00
+stroke.size=2
+antialias=true
+size=44

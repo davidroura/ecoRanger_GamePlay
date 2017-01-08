@@ -139,7 +139,6 @@ class Design_8_8_playerHealth extends SceneScript
 			if((100 > (Engine.engine.getGameAttribute("playerHealth") + Engine.engine.getGameAttribute("extraLife"))))
 			{
 				Engine.engine.setGameAttribute("playerHealth", (Engine.engine.getGameAttribute("playerHealth") + Engine.engine.getGameAttribute("extraLife")));
-				Engine.engine.setGameAttribute("extraLife", 0);
 			}
 			else
 			{
@@ -149,8 +148,8 @@ class Design_8_8_playerHealth extends SceneScript
 		else if((0 > Engine.engine.getGameAttribute("extraLife")))
 		{
 			Engine.engine.setGameAttribute("playerHealth", (Engine.engine.getGameAttribute("playerHealth") + Engine.engine.getGameAttribute("extraLife")));
-			Engine.engine.setGameAttribute("extraLife", 0);
 		}
+		Engine.engine.setGameAttribute("extraLife", 0);
 	}
 	
 	/* ========================= Custom Event ========================= */

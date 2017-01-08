@@ -80,9 +80,9 @@ class Design_127_127_notificationAnimated extends SceneScript
 	{
 		super();
 		nameMap.set("yTranslate", "_yTranslate");
-		_yTranslate = 0;
+		_yTranslate = 0.0;
 		nameMap.set("opacity", "_opacity");
-		_opacity = 150;
+		_opacity = 150.0;
 		
 	}
 	

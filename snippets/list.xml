@@ -8,14 +8,21 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="tutorialShown" hidden="false" id="5" name="_tutorialShown" order="4"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="UITutorial" hidden="false" id="6" name="_UITutorial" order="5"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="tutorialText" hidden="false" id="7" name="_tutorialText" order="6"/>
-        <blocks/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempNumber" hidden="false" id="8" name="_tempNumber" order="7"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="tempDistanceNum" hidden="false" id="9" name="_tempDistanceNum" order="8"/>
+        <blocks>
+            <receiver blockID="191" id="1"/>
+            <receiver blockID="196" id="2"/>
+            <receiver blockID="197" id="3"/>
+            <receiver blockID="198" id="4"/>
+        </blocks>
         <events>
             <event displayName="Drawing" enabled="true" id="16" name="draw" order="19" repeats="true"/>
             <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
             <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="18" repeats="true"/>
-            <event displayName="powerUpSetup" enabled="true" id="18" name="event-custom" order="23" repeats="true"/>
-            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="20" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="21" repeats="true"/>
+            <event displayName="powerUpSetup" enabled="true" id="18" name="event-custom" order="28" repeats="true"/>
+            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="23" repeats="false"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="25" repeats="true"/>
             <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="3" repeats="true"/>
             <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="2" repeats="true"/>
             <event displayName="Updating" enabled="true" id="12" name="step" order="6" repeats="false"/>
@@ -758,7 +765,7 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_127_127_notificationAnimated" classname="scripts.Design_127_127_notificationAnimated" desc="" description="" design="true" drawOrder="0" id="127" name="notificationAnimated" oid="-1" package="scripts" shared="false" type="scene">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="yTranslate" hidden="false" id="2" name="_yTranslate" order="0"/>
-        <number default="150" defaultValue="150" desc="" dropdown="" fullname="opacity" hidden="false" id="3" name="_opacity" order="1"/>
+        <number default="150.0" defaultValue="150.0" desc="" dropdown="" fullname="opacity" hidden="false" id="3" name="_opacity" order="1"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
