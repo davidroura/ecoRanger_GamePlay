@@ -77,6 +77,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _xTree:Float;
 	public var _xLife:Float;
 	public var _yLife:Float;
+	public var _lifehold:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_blockOne():Void
@@ -192,9 +193,16 @@ otherwise => sides */
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropLife():Void
 	{
-		createRecycledActorOnLayer(getActorType(10), _xLife, 0, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(_yLife);
+		_lifehold = asNumber((_lifehold + 1));
+		propertyChanged("_lifehold", _lifehold);
+		if((2 < _lifehold))
+		{
+			createRecycledActorOnLayer(getActorType(10), _xLife, 0, 1, "" + "gamePlay");
+			getLastCreatedActor().makeAlwaysSimulate();
+			getLastCreatedActor().setY(_yLife);
+			_lifehold = asNumber(0);
+			propertyChanged("_lifehold", _lifehold);
+		}
 	}
 	
 	
@@ -211,11 +219,17 @@ otherwise => sides */
 		_xLife = 0.0;
 		nameMap.set("yLife", "_yLife");
 		_yLife = 0.0;
+		nameMap.set("lifehold", "_lifehold");
+		_lifehold = 0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		_lifehold = asNumber(0);
+		propertyChanged("_lifehold", _lifehold);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

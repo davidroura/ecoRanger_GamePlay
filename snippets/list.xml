@@ -9,7 +9,7 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="UITutorial" hidden="false" id="6" name="_UITutorial" order="5"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="tutorialText" hidden="false" id="7" name="_tutorialText" order="6"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempNumber" hidden="false" id="8" name="_tempNumber" order="7"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="tempDistanceNum" hidden="false" id="9" name="_tempDistanceNum" order="8"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempDistanceNum" hidden="false" id="9" name="_tempDistanceNum" order="8"/>
         <blocks>
             <receiver blockID="191" id="1"/>
             <receiver blockID="196" id="2"/>
@@ -35,7 +35,8 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="distanceBlock" hidden="false" id="2" name="_distanceBlock" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xTree" hidden="false" id="3" name="_xTree" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xLife" hidden="false" id="4" name="_xLife" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="yLife" hidden="false" id="5" name="_yLife" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yLife" hidden="false" id="5" name="_yLife" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="lifehold" hidden="false" id="6" name="_lifehold" order="5"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -45,6 +46,7 @@
             <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="4" repeats="true"/>
             <event displayName="spawnLife" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
             <event displayName="dropLife" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="8" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">

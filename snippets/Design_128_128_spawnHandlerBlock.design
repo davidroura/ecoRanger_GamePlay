@@ -282,24 +282,51 @@
     <group eventID="7" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <create-actor-on-layer comment="false" x="26" y="40">
-                    <actortype eid="10" id="0"/>
-                    <get-val-128-4 comment="false" id="1" x="0" y="0"/>
-                    <int id="2" val="0"/>
-                    <int id="3" val="1"/>
-                    <int id="4" val="gamePlay"/>
-                </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="26" y="72">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <set-xy comment="false" x="26" y="99">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="1"/>
-                    <get-val-128-5 comment="false" id="2" x="0" y="0"/>
-                </set-xy>
+                <set-val-128-6 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-128-6 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-128-6>
+                <if comment="false" x="26" y="70">
+                    <group eventID="7" id="-1">
+                        <create-actor-on-layer comment="false" x="37" y="100">
+                            <actortype eid="10" id="0"/>
+                            <get-val-128-4 comment="false" id="1" x="0" y="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="1"/>
+                            <int id="4" val="gamePlay"/>
+                        </create-actor-on-layer>
+                        <ignore-screen-tolerance comment="false" x="37" y="132">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </ignore-screen-tolerance>
+                        <set-xy comment="false" x="37" y="159">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-val-128-5 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-val-128-6 comment="false" x="37" y="191">
+                            <int id="0" val="0"/>
+                        </set-val-128-6>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <get-val-128-6 comment="false" id="1" x="0" y="0"/>
+                    </less>
+                </if>
             </group>
             <int id="0" val="dropLife"/>
         </event-custom>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <set-val-128-6 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-128-6>
+            </group>
+        </init>
+    </group>
+    <group eventID="8" id="-1"/>
 </groups>
