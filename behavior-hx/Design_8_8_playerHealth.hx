@@ -267,6 +267,8 @@ class Design_8_8_playerHealth extends SceneScript
 						propertyChanged("_warning", _warning);
 					}
 				}
+				g.setFont(getFont(114));
+				g.drawString("" + Engine.engine.getGameAttribute("sceneSpeed"), 100, 100);
 			}
 		});
 		
@@ -314,7 +316,15 @@ class Design_8_8_playerHealth extends SceneScript
 								_boostSpeed = asNumber((_boostSpeed - .06));
 								propertyChanged("_boostSpeed", _boostSpeed);
 							}
-							Engine.engine.setGameAttribute("sceneSpeed", (33 + _boostSpeed));
+							/* normal Speed */
+							if((Engine.engine.getGameAttribute("sceneSpeed") <= Engine.engine.getGameAttribute("playerDefaultSpeed")))
+							{
+								Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") + .5));
+							}
+							else
+							{
+								Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("playerDefaultSpeed") + _boostSpeed));
+							}
 							if((Engine.engine.getGameAttribute("playerHealth") <= 25))
 							{
 								Engine.engine.setGameAttribute("sceneSpeed", (1.32 * Engine.engine.getGameAttribute("playerHealth")));
@@ -408,7 +418,9 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .4));
+				_boostSpeed = asNumber(0);
+				propertyChanged("_boostSpeed", _boostSpeed);
+				Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("playerDefaultSpeed") * .3));
 				setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
 			}
 		});
