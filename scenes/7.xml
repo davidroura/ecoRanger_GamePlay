@@ -6,7 +6,10 @@
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="mainButtons" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="202" id="0" name="outsideMenu" pts="4,351.0,0.0,351.0,202.0,0.0,202.0,0.0,0.0" r="64" type="box" w="351" x="-7" y="287"/>
+        <region b="64" g="64" h="75" id="1" name="outsideMenu2" pts="4,377.0,0.0,377.0,75.0,0.0,75.0,0.0,0.0" r="64" type="box" w="377" x="-35" y="-19"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="45" name="mUI_upgrade 1" sx="1.0" sy="1.0" x="18" y="222" z="0"/>

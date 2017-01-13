@@ -3,16 +3,35 @@
     <group eventID="1" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <create-actor3 comment="false" x="26" y="42">
-                    <actortype eid="180" id="0"/>
-                    <int id="1" val="30"/>
-                    <int id="2" val="50"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
+                <if comment="false" x="26" y="42">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="67">
+                            <actortype eid="180" id="0"/>
+                            <int id="1" val="30"/>
+                            <int id="2" val="50"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <set-val-101-1 comment="false" x="37" y="94">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-101-1>
+                    </group>
+                    <get-val-101-1 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-101-1 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-101-1>
+            </group>
+            <int id="0" val="background"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

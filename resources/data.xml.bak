@@ -396,8 +396,8 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="122" fixedrot="false" fric="0.2" gid="3" id="180" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_chooseBotsBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="181" static="true">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="133" id="181" name="mUI_chooseBotsBG" shared="false" width="266">
-        <anim across="1" down="1" durations="100" height="133" id="0" loop="true" name="Animation 0" numframes="1" originx="133" originy="66" sync="false" version="2" width="266"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="233" id="181" name="mUI_chooseBotsBG" shared="false" width="262">
+        <anim across="1" down="1" durations="100" height="233" id="0" loop="true" name="Animation 0" numframes="1" originx="133" originy="66" sync="false" version="2" width="262"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="148" name="mUI_CooseBots" shared="false" width="182">
         <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="182"/>
@@ -424,8 +424,17 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="84" id="183" name="mui_iconButtons" shared="false" width="84">
-        <anim across="1" down="1" durations="100" height="84" id="0" loop="true" name="gadgetOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
-        <anim across="1" down="1" durations="100" height="84" id="1" loop="true" name="gadgetOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="0" loop="false" name="gadgetOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="1" loop="false" name="gadgetOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="2" loop="false" name="dozeyOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="3" loop="false" name="dozeyOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="4" loop="false" name="suckerOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="5" loop="false" name="suckerOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="6" loop="false" name="planterOff" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="7" loop="false" name="planterOn" numframes="1" originx="42" originy="42" sync="false" version="2" width="84"/>
+        <anim across="1" down="1" durations="100" height="84" id="8" loop="true" name="QuestionMark" numframes="1" originx="42" originy="42" sync="false" version="2" width="84">
+            <poly data="4,0,0,84,0,84,84,0,84" density="0.1" fric="0.2" gid="-1000" id="0" name="QuestionMark" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="49" fixedrot="false" fric="0.2" gid="3" id="65" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_notification" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="66" static="false">
         <snippets/>
@@ -647,7 +656,7 @@
         <anim across="1" down="1" durations="100" height="71" id="0" loop="false" name="Animation Up" numframes="1" originx="45" originy="45" sync="false" version="2" width="56">
             <poly data="5,30,9,11,26,14,58,46,58,51,25" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="71" id="1" loop="true" name="Animation Up Boosted" numframes="1" originx="45" originy="45" sync="false" version="2" width="56">
+        <anim across="1" down="1" durations="100" height="71" id="1" loop="true" name="Animation Up Boosted" numframes="1" originx="28" originy="35" sync="false" version="2" width="56">
             <poly data="5,31,9,11,26,16,58,45,59,50,25" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="80" id="2" loop="true" name="dirt" numframes="1" originx="30" originy="40" sync="false" version="2" width="61">
