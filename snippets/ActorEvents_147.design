@@ -14,6 +14,9 @@
                         <set-val-101-1 comment="false" x="37" y="94">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-101-1>
+                        <print comment="false" x="37" y="119">
+                            <int id="0" val="clicked"/>
+                        </print>
                     </group>
                     <get-val-101-1 comment="false" id="0" x="0" y="0"/>
                 </if>
@@ -29,6 +32,9 @@
                 <set-val-101-1 comment="false" x="26" y="40">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-101-1>
+                <print comment="false" x="26" y="65">
+                    <int id="0" val="background happened foreground true"/>
+                </print>
             </group>
             <int id="0" val="background"/>
         </event-custom>

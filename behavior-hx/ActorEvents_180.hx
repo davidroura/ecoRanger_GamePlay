@@ -69,47 +69,39 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_47 extends ActorScript
+class ActorEvents_180 extends ActorScript
 {
-	public var _foreground:Bool;
-	public var _foregroundMenu:Bool;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_background():Void
+	public function _customEvent_exitMenu():Void
 	{
-		_foregroundMenu = true;
-		propertyChanged("_foregroundMenu", _foregroundMenu);
-		trace("" + "background happened foreground true");
+		recycleActor(actor);
+		trace("" + "exit menu executed");
 	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("foreground", "_foreground");
-		_foreground = true;
-		nameMap.set("foregroundMenu", "_foregroundMenu");
-		_foregroundMenu = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				if(_foregroundMenu)
-				{
-					createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
-					_foregroundMenu = false;
-					propertyChanged("_foregroundMenu", _foregroundMenu);
-					trace("" + "clicked");
-				}
-			}
-		});
+		/* ======================== When Creating ========================= */
+		shoutToScene("_customEvent_" + "background");
+		createRecycledActor(getActorType(182), 40, 100, Script.FRONT);
+		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "dozeyOff");
+		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "planterOff");
+		createRecycledActor(getActorType(182), 40, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "suckerOff");
+		createRecycledActor(getActorType(182), 120, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "QuestionMark");
+		createRecycledActor(getActorType(182), 200, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "QuestionMark");
 		
 	}
 	

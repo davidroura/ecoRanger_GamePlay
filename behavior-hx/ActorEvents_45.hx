@@ -69,17 +69,16 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_47 extends ActorScript
+class ActorEvents_45 extends ActorScript
 {
 	public var _foreground:Bool;
-	public var _foregroundMenu:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_background():Void
 	{
-		_foregroundMenu = true;
-		propertyChanged("_foregroundMenu", _foregroundMenu);
-		trace("" + "background happened foreground true");
+		trace("" + "background happened. foreground true");
+		_foreground = true;
+		propertyChanged("_foreground", _foreground);
 	}
 	
 	
@@ -88,8 +87,6 @@ class ActorEvents_47 extends ActorScript
 		super(actor);
 		nameMap.set("foreground", "_foreground");
 		_foreground = true;
-		nameMap.set("foregroundMenu", "_foregroundMenu");
-		_foregroundMenu = false;
 		
 	}
 	
@@ -101,12 +98,12 @@ class ActorEvents_47 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				if(_foregroundMenu)
+				if(_foreground)
 				{
-					createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
-					_foregroundMenu = false;
-					propertyChanged("_foregroundMenu", _foregroundMenu);
-					trace("" + "clicked");
+					trace("" + "foreground False");
+					switchScene(GameModel.get().scenes.get(8).getID(), null, createCrossfadeTransition(0));
+					_foreground = false;
+					propertyChanged("_foreground", _foreground);
 				}
 			}
 		});

@@ -69,27 +69,16 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_47 extends ActorScript
+class ActorEvents_182 extends ActorScript
 {
-	public var _foreground:Bool;
-	public var _foregroundMenu:Bool;
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_background():Void
-	{
-		_foregroundMenu = true;
-		propertyChanged("_foregroundMenu", _foregroundMenu);
-		trace("" + "background happened foreground true");
-	}
+	public var _buttonOn:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("foreground", "_foreground");
-		_foreground = true;
-		nameMap.set("foregroundMenu", "_foregroundMenu");
-		_foregroundMenu = false;
+		nameMap.set("buttonOn", "_buttonOn");
+		_buttonOn = false;
 		
 	}
 	
@@ -101,12 +90,18 @@ class ActorEvents_47 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				if(_foregroundMenu)
+				/* not working */
+				if(!(_buttonOn))
 				{
-					createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
-					_foregroundMenu = false;
-					propertyChanged("_foregroundMenu", _foregroundMenu);
-					trace("" + "clicked");
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
+					_buttonOn = true;
+					propertyChanged("_buttonOn", _buttonOn);
+				}
+				else
+				{
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
+					_buttonOn = false;
+					propertyChanged("_buttonOn", _buttonOn);
 				}
 			}
 		});

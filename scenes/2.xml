@@ -12,12 +12,12 @@
     <actors>
         <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.43076923" sy="0.43076923" x="208" y="-22" z="0"/>
         <actor a="0.0" aid="3" c="false" group="3" id="126" name="plastic 3" sx="0.6041667" sy="0.6041667" x="72" y="33" z="2"/>
-        <actor a="0.0" aid="4" c="false" group="3" id="43" name="mUI_Play 4" sx="0.7692308" sy="0.7692308" x="18" y="347" z="0"/>
         <actor a="0.0" aid="5" c="false" group="3" id="129" name="resource_aluminum 5" sx="0.82758623" sy="0.82758623" x="12" y="32" z="2"/>
-        <actor a="0.0" aid="6" c="false" group="3" id="167" name="rItem_glass 6" sx="0.47916666" sy="0.47916666" x="121" y="18" z="2"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="167" name="rItem_glass 6" sx="0.47916666" sy="0.47916666" x="122" y="18" z="2"/>
         <actor a="0.0" aid="7" c="false" group="3" id="169" name="mUI_totalCans 7" sx="0.76744187" sy="0.76744187" x="19" y="-3" z="2"/>
         <actor a="0.0" aid="8" c="false" group="3" id="171" name="mUI_totalPlasticBottles 8" sx="1.0" sy="1.0" x="93" y="5" z="2"/>
         <actor a="0.0" aid="9" c="false" group="3" id="173" name="mUI_totalGlassB 9" sx="1.0" sy="1.0" x="149" y="3" z="2"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="15" y="352" z="0"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">

@@ -52,7 +52,10 @@
     <group eventID="8" id="0">
         <event-mouse-enter-exit-region comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <scene-shout comment="false" x="26" y="42">
+                <print comment="false" x="26" y="42">
+                    <int id="0" val="outside menu was pressed"/>
+                </print>
+                <scene-shout comment="false" x="26" y="62">
                     <int id="0" val="exitMenu"/>
                 </scene-shout>
             </group>

@@ -300,9 +300,12 @@
         </events>
     </snippet>
     <snippet actorid="47" attachedevent="true" class="scripts.ActorEvents_47" classname="scripts.ActorEvents_47" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="40" name="ActorEvents_47" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="foreground" hidden="false" id="1" name="_foreground" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="foregroundMenu" hidden="false" id="2" name="_foregroundMenu" order="1"/>
         <blocks/>
         <events>
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="49" attachedevent="true" class="scripts.ActorEvents_49" classname="scripts.ActorEvents_49" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="41" name="ActorEvents_49" oid="-1" package="scripts." shared="false" type="actor">
