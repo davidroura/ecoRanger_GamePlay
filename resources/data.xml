@@ -335,10 +335,10 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="false" desc="" eventsnippetid="42" fixedrot="false" fric="0.2" gid="2" id="51" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_homeButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="52" static="true">
         <snippets/>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="73" fixedrot="false" fric="0.2" gid="3" id="108" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpDozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="109" static="true">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="76" fixedrot="false" fric="0.2" gid="3" id="112" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUp" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="113" static="true">
         <snippets/>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="76" fixedrot="false" fric="0.2" gid="3" id="112" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpLeft" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="113" static="true">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="73" fixedrot="false" fric="0.2" gid="3" id="108" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpDozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="109" static="true">
         <snippets/>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="75" fixedrot="false" fric="0.2" gid="3" id="110" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_powerUpSucker" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="111" static="true">
@@ -399,8 +399,8 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="233" id="181" name="mUI_chooseBotsBG" shared="false" width="262">
         <anim across="1" down="1" durations="100" height="233" id="0" loop="true" name="Animation 0" numframes="1" originx="133" originy="66" sync="false" version="2" width="262"/>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="148" name="mUI_CooseBots" shared="false" width="182">
-        <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="182"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="148" name="mUI_CooseBots" shared="false" width="175">
+        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="175"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="114" fixedrot="true" fric="0.2" gid="3" id="165" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_funfact" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="166" static="true">
         <snippets/>
@@ -544,14 +544,26 @@
         <anim across="1" down="1" durations="100" height="66" id="3" loop="true" name="planterOff" numframes="1" originx="30" originy="33" sync="false" version="2" width="61">
             <poly data="4,0,0,61,0,61,66,0,66" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="63" id="4" loop="true" name="dozerOff" numframes="1" originx="29" originy="31" sync="false" version="2" width="59">
+            <poly data="4,0,0,59,0,59,63,0,63" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="63" id="5" loop="true" name="dozerOn" numframes="1" originx="29" originy="31" sync="false" version="2" width="59">
+            <poly data="4,0,0,59,0,59,63,0,63" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="34" id="6" loop="true" name="suckerOffCenter" numframes="1" originx="52" originy="17" sync="false" version="2" width="104">
+            <poly data="4,0,0,104,0,104,34,0,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 6" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="34" id="7" loop="true" name="suckerOnCenter" numframes="1" originx="58" originy="17" sync="false" version="2" width="116">
+            <poly data="4,0,0,116,0,116,34,0,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 7" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="34" id="111" name="powerUpSucker" shared="false" width="116">
         <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="On" numframes="1" originx="58" originy="17" sync="false" version="2" width="116"/>
         <anim across="1" down="1" durations="100" height="34" id="1" loop="true" name="Off" numframes="1" originx="52" originy="17" sync="false" version="2" width="104"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="76" name="presentationBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="74" id="48" name="recycleButton" shared="false" width="182">
-        <anim across="1" down="1" durations="100" height="74" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="182"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="48" name="recycleButton" shared="false" width="175">
+        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="175"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="177" name="recyclingBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="83" fixedrot="false" fric="0.2" gid="3" id="129" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="resource_aluminum" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="130" static="false">
@@ -749,8 +761,8 @@
             <poly data="4,0,0,159,0,159,60,0,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="74" id="46" name="upgradeButton" shared="false" width="182">
-        <anim across="1" down="1" durations="100" height="74" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="182"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="46" name="upgradeButton" shared="false" width="175">
+        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="175"/>
         <anim across="1" down="1" durations="100" height="131" id="1" loop="true" name="Animation 1" numframes="1" originx="176" originy="65" sync="false" version="2" width="353"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="35" name="upgradeDozerBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>

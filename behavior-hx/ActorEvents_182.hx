@@ -91,17 +91,19 @@ class ActorEvents_182 extends ActorScript
 			if(wrapper.enabled && 5 == mouseState)
 			{
 				/* not working */
-				if(!(_buttonOn))
+				if((!(_buttonOn) && (Engine.engine.getGameAttribute("botsSelected") <= 2)))
 				{
 					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
 					_buttonOn = true;
 					propertyChanged("_buttonOn", _buttonOn);
+					Engine.engine.setGameAttribute("botsSelected", (Engine.engine.getGameAttribute("botsSelected") + 1));
 				}
-				else
+				else if(_buttonOn)
 				{
 					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
 					_buttonOn = false;
 					propertyChanged("_buttonOn", _buttonOn);
+					Engine.engine.setGameAttribute("botsSelected", (Engine.engine.getGameAttribute("botsSelected") - 1));
 				}
 			}
 		});
