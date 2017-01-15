@@ -25,11 +25,6 @@
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
-    <group eventID="1" id="1">
-        <set-val-40-1 comment="false" x="68" y="276">
-            <int id="0" val=""/>
-        </set-val-40-1>
-    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">

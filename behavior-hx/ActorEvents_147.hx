@@ -69,19 +69,24 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_108 extends ActorScript
+class ActorEvents_147 extends ActorScript
 {
-	public var _click:Bool;
-	public var _dozerClick:Bool;
+	public var _foreground:Bool;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_background():Void
+	{
+		_foreground = true;
+		propertyChanged("_foreground", _foreground);
+		trace("" + "background happened foreground true");
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("click", "_click");
-		_click = false;
-		nameMap.set("dozerClick", "_dozerClick");
-		_dozerClick = false;
+		nameMap.set("foreground", "_foreground");
+		_foreground = true;
 		
 	}
 	
@@ -91,29 +96,15 @@ class ActorEvents_108 extends ActorScript
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				if(!(Engine.engine.getGameAttribute("botOn")))
-				{
-					_dozerClick = true;
-					propertyChanged("_dozerClick", _dozerClick);
-					Engine.engine.setGameAttribute("clickingButton", true);
-					if((actor.getAnimation() == "On"))
-					{
-						actor.setAnimation("" + "Off");
-						createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), Engine.engine.getGameAttribute("playerYPos"), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-				}
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				Engine.engine.setGameAttribute("clickingButton", false);
+				if(_foreground)
+				{
+					createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
+					_foreground = false;
+					propertyChanged("_foreground", _foreground);
+					trace("" + "clicked");
+				}
 			}
 		});
 		

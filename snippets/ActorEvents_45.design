@@ -3,12 +3,12 @@
     <group eventID="1" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <print comment="false" x="26" y="40">
-                    <int id="0" val="background happened. foreground true"/>
-                </print>
-                <set-val-39-1 comment="false" x="26" y="60">
+                <set-val-39-1 comment="false" x="26" y="40">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-val-39-1>
+                <print comment="false" x="26" y="65">
+                    <int id="0" val="background happened. foreground true"/>
+                </print>
             </group>
             <int id="0" val="background"/>
         </event-custom>
@@ -19,15 +19,12 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="2" id="-1">
-                        <print comment="false" x="37" y="67">
-                            <int id="0" val="foreground False"/>
-                        </print>
-                        <scene-change-through comment="false" x="37" y="87">
+                        <scene-change-through comment="false" x="37" y="67">
                             <scene eid="8" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </scene-change-through>
-                        <set-val-39-1 comment="false" x="37" y="114">
+                        <set-val-39-1 comment="false" x="37" y="94">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-39-1>
                     </group>
