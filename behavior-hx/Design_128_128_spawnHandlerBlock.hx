@@ -78,6 +78,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _xLife:Float;
 	public var _yLife:Float;
 	public var _lifehold:Float;
+	public var _xobstacle:Float;
+	public var _yobstacle:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_blockOne():Void
@@ -89,6 +91,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 otherwise => sides */
 		_customEvent_spawnTrees();
 		_customEvent_spawnLife();
+		_customEvent_spawnObstacle();
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -205,6 +208,53 @@ otherwise => sides */
 		}
 	}
 	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_spawnObstacle():Void
+	{
+		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
+		{
+			_xobstacle = asNumber(50);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-30);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
+		}
+		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
+		{
+			_xobstacle = asNumber(80);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-40);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
+		}
+		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
+		{
+			_xobstacle = asNumber(110);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-50);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
+		}
+		else
+		{
+			_xobstacle = asNumber(140);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-60);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_dropRock():Void
+	{
+		createRecycledActorOnLayer(getActorType(12), _xobstacle, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
+		getLastCreatedActor().setY(_yobstacle);
+	}
+	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
@@ -220,7 +270,11 @@ otherwise => sides */
 		nameMap.set("yLife", "_yLife");
 		_yLife = 0.0;
 		nameMap.set("lifehold", "_lifehold");
-		_lifehold = 0;
+		_lifehold = 0.0;
+		nameMap.set("xobstacle", "_xobstacle");
+		_xobstacle = 0.0;
+		nameMap.set("yobstacle", "_yobstacle");
+		_yobstacle = 0.0;
 		
 	}
 	

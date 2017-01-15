@@ -36,7 +36,9 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xTree" hidden="false" id="3" name="_xTree" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xLife" hidden="false" id="4" name="_xLife" order="3"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yLife" hidden="false" id="5" name="_yLife" order="4"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="lifehold" hidden="false" id="6" name="_lifehold" order="5"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="lifehold" hidden="false" id="6" name="_lifehold" order="5"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="xobstacle" hidden="false" id="7" name="_xobstacle" order="6"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yobstacle" hidden="false" id="8" name="_yobstacle" order="7"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -46,7 +48,9 @@
             <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="4" repeats="true"/>
             <event displayName="spawnLife" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
             <event displayName="dropLife" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
-            <event displayName="Created" enabled="true" id="8" name="init" order="8" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="10" repeats="true"/>
+            <event displayName="spawnObstacle" enabled="true" id="9" name="event-custom" order="8" repeats="true"/>
+            <event displayName="dropRock" enabled="true" id="10" name="event-custom" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">
