@@ -90,7 +90,6 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 0.75 => Left
 otherwise => sides */
 		_customEvent_spawnTrees();
-		_customEvent_spawnLife();
 		_customEvent_spawnObstacle();
 	}
 	
@@ -160,9 +159,13 @@ otherwise => sides */
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
-			
+			_xLife = asNumber(40);
+			propertyChanged("_xLife", _xLife);
+			_yLife = asNumber(-200);
+			propertyChanged("_yLife", _yLife);
+			_customEvent_dropLife();
 		}
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
 			_xLife = asNumber(200);
 			propertyChanged("_xLife", _xLife);
@@ -170,9 +173,9 @@ otherwise => sides */
 			propertyChanged("_yLife", _yLife);
 			_customEvent_dropLife();
 		}
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
-			_xLife = asNumber(40);
+			_xLife = asNumber(100);
 			propertyChanged("_xLife", _xLife);
 			_yLife = asNumber(-200);
 			propertyChanged("_yLife", _yLife);
@@ -180,7 +183,7 @@ otherwise => sides */
 		}
 		else
 		{
-			_xLife = asNumber(40);
+			_xLife = asNumber(150);
 			propertyChanged("_xLife", _xLife);
 			_yLife = asNumber(-200);
 			propertyChanged("_yLife", _yLife);
@@ -196,16 +199,10 @@ otherwise => sides */
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropLife():Void
 	{
-		_lifehold = asNumber((_lifehold + 1));
-		propertyChanged("_lifehold", _lifehold);
-		if((2 < _lifehold))
-		{
-			createRecycledActorOnLayer(getActorType(10), _xLife, 0, 1, "" + "gamePlay");
-			getLastCreatedActor().makeAlwaysSimulate();
-			getLastCreatedActor().setY(_yLife);
-			_lifehold = asNumber(0);
-			propertyChanged("_lifehold", _lifehold);
-		}
+		createRecycledActorOnLayer(getActorType(10), _xLife, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().setY(_yLife);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -213,35 +210,37 @@ otherwise => sides */
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
-			_xobstacle = asNumber(50);
+			_xobstacle = asNumber(100);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropRock();
+			_customEvent_spawnTrash();
 		}
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
-			_xobstacle = asNumber(80);
+			_yLife = asNumber(100);
+			propertyChanged("_yLife", _yLife);
+			_xLife = asNumber(-40);
+			propertyChanged("_xLife", _xLife);
+			_customEvent_dropLife();
+			_xobstacle = asNumber(150);
 			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-40);
+			_yobstacle = asNumber(-6);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropRock();
+			_customEvent_dropMud();
 		}
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
 			_xobstacle = asNumber(110);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-50);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropRock();
+			_customEvent_dropBridge();
 		}
 		else
 		{
-			_xobstacle = asNumber(140);
-			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-60);
-			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropRock();
+			
 		}
 	}
 	
@@ -252,6 +251,53 @@ otherwise => sides */
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 		getLastCreatedActor().growTo(70/100, 70/100, 0, Linear.easeNone);
+		getLastCreatedActor().setY(_yobstacle);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_spawnTrash():Void
+	{
+		_xobstacle = asNumber((_xobstacle + 20));
+		propertyChanged("_xobstacle", _xobstacle);
+		_yobstacle = asNumber((_yobstacle - 20));
+		propertyChanged("_yobstacle", _yobstacle);
+		_customEvent_dropTrash();
+		_yobstacle = asNumber((_yobstacle - 20));
+		propertyChanged("_yobstacle", _yobstacle);
+		_customEvent_dropTrash();
+		_yobstacle = asNumber((_yobstacle - 20));
+		propertyChanged("_yobstacle", _yobstacle);
+		_customEvent_dropTrash();
+		_yobstacle = asNumber((_yobstacle - 20));
+		propertyChanged("_yobstacle", _yobstacle);
+		_customEvent_dropTrash();
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_dropTrash():Void
+	{
+		createRecycledActorOnLayer(getActorType(15), _xobstacle, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().setY(_yobstacle);
+		getLastCreatedActor().setAnimation("" + ("" + (Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4)));
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_dropMud():Void
+	{
+		createRecycledActorOnLayer(getActorType(145), _xobstacle, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().setY(_yobstacle);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_dropBridge():Void
+	{
+		createRecycledActorOnLayer(getActorType(72), 0, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
 		getLastCreatedActor().setY(_yobstacle);
 	}
 	

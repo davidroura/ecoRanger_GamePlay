@@ -320,49 +320,52 @@
     <group eventID="18" id="-1"/>
     <group eventID="19" id="0">
         <event-custom comment="false" x="15" y="15">
-            <group eventID="19" id="-1">
-                <create-actor-on-layer comment="false" x="26" y="40">
-                    <actortype eid="72" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="-5"/>
-                    <int id="3" val="1"/>
-                    <int id="4" val="gamePlay"/>
-                </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="26" y="67">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <movewithinlayer comment="false" x="26" y="94">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="2"/>
-                </movewithinlayer>
-                <set-xy comment="false" x="26" y="121">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="1"/>
-                    <int id="2" val="-50"/>
-                </set-xy>
-                <if comment="false" x="26" y="148">
-                    <group eventID="19" id="-1">
-                        <setanim comment="false" x="37" y="178">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="left"/>
-                        </setanim>
-                    </group>
-                    <less comment="false" id="0" x="0" y="0">
-                        <int id="0" val="6"/>
-                        <get-val-95-32 comment="false" id="1" x="0" y="0"/>
-                    </less>
-                </if>
-                <else comment="false" x="26" y="217">
-                    <group eventID="19" id="-1">
-                        <setanim comment="false" x="37" y="237">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="right"/>
-                        </setanim>
-                    </group>
-                </else>
-            </group>
+            <group eventID="19" id="-1"/>
             <int id="0" val="ObstacleRamdomBridge"/>
         </event-custom>
+    </group>
+    <group eventID="19" id="1">
+        <if comment="false" x="10" y="255">
+            <group eventID="19" id="-1">
+                <setanim comment="false" x="21" y="285">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="left"/>
+                </setanim>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <int id="0" val="6"/>
+                <get-val-95-32 comment="false" id="1" x="0" y="0"/>
+            </less>
+        </if>
+        <else comment="false" x="10" y="324">
+            <group eventID="19" id="-1">
+                <setanim comment="false" x="21" y="344">
+                    <ACTOR eid="lastcreated" id="0"/>
+                    <int id="1" val="right"/>
+                </setanim>
+            </group>
+        </else>
+    </group>
+    <group eventID="19" id="2">
+        <create-actor-on-layer comment="false" x="244" y="96">
+            <actortype eid="72" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="-5"/>
+            <int id="3" val="1"/>
+            <int id="4" val="gamePlay"/>
+        </create-actor-on-layer>
+        <ignore-screen-tolerance comment="false" x="244" y="123">
+            <ACTOR eid="lastcreated" id="0"/>
+        </ignore-screen-tolerance>
+        <movewithinlayer comment="false" x="244" y="150">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="2"/>
+        </movewithinlayer>
+        <set-xy comment="false" x="244" y="177">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="-50"/>
+        </set-xy>
     </group>
     <group eventID="19" id="-1"/>
     <group eventID="21" id="0">

@@ -369,7 +369,7 @@
             </group>
         </init>
     </group>
-    <group eventID="4" id="4">
+    <group eventID="4" id="1">
         <create-actor-on-layer comment="false" x="23" y="483">
             <actortype eid="112" id="0"/>
             <int id="1" val="21"/>

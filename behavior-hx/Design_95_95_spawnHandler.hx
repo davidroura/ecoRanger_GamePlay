@@ -342,18 +342,7 @@ class Design_95_95_spawnHandler extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_ObstacleRamdomBridge():Void
 	{
-		createRecycledActorOnLayer(getActorType(72), 0, -5, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(-50);
-		if((6 < _ramdomNumber012))
-		{
-			getLastCreatedActor().setAnimation("" + "left");
-		}
-		else
-		{
-			getLastCreatedActor().setAnimation("" + "right");
-		}
+		
 	}
 	
 	/* ========================= Custom Event ========================= */
