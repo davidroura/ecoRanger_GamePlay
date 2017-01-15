@@ -69,14 +69,17 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_110 extends ActorScript
+class ActorEvents_108 extends ActorScript
 {
+	public var _click:Bool;
 	public var _dozerClick:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("click", "_click");
+		_click = false;
 		nameMap.set("dozerClick", "_dozerClick");
 		_dozerClick = false;
 		
@@ -92,13 +95,13 @@ class ActorEvents_110 extends ActorScript
 			{
 				if(!(Engine.engine.getGameAttribute("botOn")))
 				{
+					_dozerClick = true;
+					propertyChanged("_dozerClick", _dozerClick);
 					Engine.engine.setGameAttribute("clickingButton", true);
 					if((actor.getAnimation() == "On"))
 					{
-						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") + 15), Script.FRONT);
-						Engine.engine.setGameAttribute("suckingPowerOn", true);
-						/* maybe make button glow when it's being used and start to blink when it's turning off */
 						actor.setAnimation("" + "Off");
+						createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), Engine.engine.getGameAttribute("playerYPos"), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
 					}
 				}

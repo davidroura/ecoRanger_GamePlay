@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,52 +70,56 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_112 extends ActorScript
+class SceneEvents_7 extends SceneScript
 {
-	public var _dozerClick:Bool;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("dozerClick", "_dozerClick");
-		_dozerClick = false;
+		super();
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("found_GadgetScreen", true);
+		
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && Input.swipedRight)
+			{
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(1), function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				if(!(Engine.engine.getGameAttribute("botOn")))
-				{
-					Engine.engine.setGameAttribute("clickingButton", true);
-					if((actor.getAnimation() == "gadgetOn"))
-					{
-						actor.setAnimation("" + "gadgetOff");
-						createRecycledActor(getActorType(141), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-					if((actor.getAnimation() == "planterOn"))
-					{
-						actor.setAnimation("" + "planterOff");
-						createRecycledActor(getActorType(151), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-				}
+				shoutToScene("_customEvent_" + "exitMenu");
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				trace("" + "outside menu was pressed");
+				shoutToScene("_customEvent_" + "exitMenu");
 			}
 		});
 		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 5 == mouseState)
+			if(wrapper.enabled && 3 == mouseState)
 			{
-				Engine.engine.setGameAttribute("clickingButton", false);
+				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		
