@@ -325,22 +325,9 @@
                     <ACTOR eid="1" id="0"/>
                     <int id="1" val="Animation Up"/>
                 </setanim>
-                <periodic comment="false" x="26" y="226">
+                <dolater comment="false" x="26" y="226">
                     <group eventID="4" id="-1">
-                        <create-actor-on-layer comment="false" x="37" y="253">
-                            <actortype eid="8" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="-5"/>
-                            <int id="3" val="1"/>
-                            <int id="4" val="gamePlay"/>
-                        </create-actor-on-layer>
-                    </group>
-                    <int id="0" val=".4"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </periodic>
-                <dolater comment="false" x="26" y="292">
-                    <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="319">
+                        <setanim comment="false" x="37" y="253">
                             <ACTOR eid="1" id="0"/>
                             <int id="1" val="Animation Up"/>
                         </setanim>
@@ -348,17 +335,17 @@
                     <int id="0" val="0.5"/>
                     <ACTOR eid="lastcreated" id="2"/>
                 </dolater>
-                <play-sound-channel comment="false" x="26" y="358">
+                <play-sound-channel comment="false" x="26" y="292">
                     <int id="0" val="1"/>
                     <sound eid="103" id="1"/>
                     <int id="2" val="5"/>
                 </play-sound-channel>
-                <set-volume comment="false" x="26" y="385">
+                <set-volume comment="false" x="26" y="319">
                     <int id="0" val="20"/>
                 </set-volume>
-                <if comment="false" x="26" y="405">
+                <if comment="false" x="26" y="339">
                     <group eventID="4" id="-1">
-                        <say-this comment="false" x="37" y="435">
+                        <say-this comment="false" x="37" y="369">
                             <int id="0" val="tutorial"/>
                         </say-this>
                     </group>
@@ -366,25 +353,32 @@
                         <get-game-val-26 comment="false" id="0" x="0" y="0"/>
                     </not>
                 </if>
+                <setanim comment="false" x="26" y="401">
+                    <ACTOR eid="12" id="0"/>
+                    <get-item comment="false" id="1" x="0" y="0">
+                        <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </get-item>
+                </setanim>
+                <setanim comment="false" x="26" y="438">
+                    <ACTOR eid="14" id="0"/>
+                    <get-item comment="false" id="1" x="0" y="0">
+                        <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </get-item>
+                </setanim>
+                <setanim comment="false" x="26" y="475">
+                    <ACTOR eid="13" id="0"/>
+                    <get-item comment="false" id="1" x="0" y="0">
+                        <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="2"/>
+                    </get-item>
+                </setanim>
             </group>
         </init>
     </group>
     <group eventID="4" id="1">
-        <create-actor-on-layer comment="false" x="23" y="483">
-            <actortype eid="112" id="0"/>
-            <int id="1" val="21"/>
-            <int id="2" val="387"/>
-            <int id="3" val="1"/>
-            <int id="4" val="gamePlay"/>
-        </create-actor-on-layer>
-        <create-actor-on-layer comment="false" x="23" y="510">
-            <actortype eid="112" id="0"/>
-            <int id="1" val="102"/>
-            <int id="2" val="433"/>
-            <int id="3" val="1"/>
-            <int id="4" val="gamePlay"/>
-        </create-actor-on-layer>
-        <setanim comment="false" x="23" y="537">
+        <setanim comment="false" x="48" y="849">
             <ACTOR eid="lastcreated" id="0"/>
             <str-combine comment="false" id="1" x="0" y="0">
                 <getanim comment="false" id="0" x="0" y="0">
@@ -393,13 +387,6 @@
                 <int id="1" val="Center"/>
             </str-combine>
         </setanim>
-        <create-actor-on-layer comment="false" x="23" y="582">
-            <actortype eid="112" id="0"/>
-            <int id="1" val="242"/>
-            <int id="2" val="388"/>
-            <int id="3" val="1"/>
-            <int id="4" val="gamePlay"/>
-        </create-actor-on-layer>
     </group>
     <group eventID="4" id="-1"/>
     <group eventID="10" id="0">

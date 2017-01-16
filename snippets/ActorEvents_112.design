@@ -10,11 +10,7 @@
                         </set-game-val-36>
                         <if comment="false" x="37" y="97">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="135">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="gadgetOff"/>
-                                </setanim>
-                                <create-actor3 comment="false" x="48" y="162">
+                                <create-actor3 comment="false" x="48" y="135">
                                     <actortype eid="141" id="0"/>
                                     <get-game-val-20 comment="false" id="1" x="0" y="0"/>
                                     <minus comment="false" id="2" x="0" y="0">
@@ -23,7 +19,7 @@
                                     </minus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-46 comment="false" x="48" y="199">
+                                <set-game-val-46 comment="false" x="48" y="172">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>
@@ -31,16 +27,12 @@
                                 <getanim comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
                                 </getanim>
-                                <int id="1" val="gadgetOn"/>
+                                <int id="1" val="gadget"/>
                             </eq>
                         </if>
-                        <if comment="false" x="37" y="236">
+                        <if comment="false" x="37" y="209">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="274">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="planterOff"/>
-                                </setanim>
-                                <create-actor3 comment="false" x="48" y="301">
+                                <create-actor3 comment="false" x="48" y="247">
                                     <actortype eid="151" id="0"/>
                                     <get-game-val-20 comment="false" id="1" x="0" y="0"/>
                                     <minus comment="false" id="2" x="0" y="0">
@@ -49,7 +41,7 @@
                                     </minus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-46 comment="false" x="48" y="338">
+                                <set-game-val-46 comment="false" x="48" y="284">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>
@@ -57,9 +49,69 @@
                                 <getanim comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
                                 </getanim>
-                                <int id="1" val="planterOn"/>
+                                <int id="1" val="planter"/>
                             </eq>
                         </if>
+                        <if comment="false" x="37" y="321">
+                            <group eventID="1" id="-1">
+                                <create-actor3 comment="false" x="48" y="359">
+                                    <actortype eid="63" id="0"/>
+                                    <get-game-val-20 comment="false" id="1" x="0" y="0"/>
+                                    <minus comment="false" id="2" x="0" y="0">
+                                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-game-val-46 comment="false" x="48" y="401">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-46>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <int id="1" val="dozer"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="438">
+                            <group eventID="1" id="-1">
+                                <create-actor3 comment="false" x="48" y="476">
+                                    <actortype eid="143" id="0"/>
+                                    <get-game-val-20 comment="false" id="1" x="0" y="0"/>
+                                    <minus comment="false" id="2" x="0" y="0">
+                                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                                    </minus>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-game-val-46 comment="false" x="48" y="518">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-46>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <int id="1" val="sucker"/>
+                            </eq>
+                        </if>
+                        <set-dxy comment="false" x="37" y="555">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="20"/>
+                        </set-dxy>
+                        <dolater comment="false" x="37" y="582">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="609">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val=".75"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-game-val-46 comment="false" id="0" x="0" y="0"/>
@@ -87,12 +139,6 @@
         <init comment="false" x="15" y="15">
             <group eventID="3" id="-1"/>
         </init>
-    </group>
-    <group eventID="3" id="1">
-        <if comment="false" x="47" y="102">
-            <group eventID="3" id="-1"/>
-            <int id="0" val=""/>
-        </if>
     </group>
     <group eventID="3" id="-1"/>
 </groups>
