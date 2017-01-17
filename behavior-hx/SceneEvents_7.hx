@@ -70,15 +70,8 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_9_9_playerMovement extends SceneScript
+class SceneEvents_7 extends SceneScript
 {
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_play():Void
-	{
-		Engine.engine.setGameAttribute("flag", "playerMovement");
-		setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
-	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
@@ -90,15 +83,43 @@ class Design_9_9_playerMovement extends SceneScript
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("found_GadgetScreen", true);
+		
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && Input.swipedRight)
 			{
-				if(!(Engine.engine.getGameAttribute("game_paused")))
-				{
-					_customEvent_play();
-				}
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(1), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				shoutToScene("_customEvent_" + "exitMenu");
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				trace("" + "outside menu was pressed");
+				shoutToScene("_customEvent_" + "exitMenu");
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		

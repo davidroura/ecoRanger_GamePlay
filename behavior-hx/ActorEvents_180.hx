@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,37 +69,55 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_9_9_playerMovement extends SceneScript
+class ActorEvents_180 extends ActorScript
 {
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_play():Void
+	public function _customEvent_findInBotlist():Void
 	{
-		Engine.engine.setGameAttribute("flag", "playerMovement");
-		setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+		if(Utils.contains(Engine.engine.getGameAttribute("selectedBotList"), StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + ""))))
+		{
+			getLastCreatedActor().setAnimation("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
+			trace("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_exitMenu():Void
+	{
+		recycleActor(actor);
+		trace("" + "exit menu executed");
 	}
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		shoutToScene("_customEvent_" + "background");
+		createRecycledActor(getActorType(182), 40, 100, Script.FRONT);
+		_customEvent_findInBotlist();
+		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "dozeyOff");
+		/* check if it's in botSelectedList */
+		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "planterOff");
+		createRecycledActor(getActorType(182), 40, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "suckerOff");
+		createRecycledActor(getActorType(182), 120, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "QuestionMark");
+		createRecycledActor(getActorType(182), 200, 180, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "QuestionMark");
+		for(item in cast(Engine.engine.getGameAttribute("selectedBotList"), Array<Dynamic>))
 		{
-			if(wrapper.enabled)
-			{
-				if(!(Engine.engine.getGameAttribute("game_paused")))
-				{
-					_customEvent_play();
-				}
-			}
-		});
+			trace("" + item);
+		}
 		
 	}
 	

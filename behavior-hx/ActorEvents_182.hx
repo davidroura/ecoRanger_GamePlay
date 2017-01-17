@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,34 +69,42 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_9_9_playerMovement extends SceneScript
+class ActorEvents_182 extends ActorScript
 {
+	public var _buttonOn:Bool;
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_play():Void
+	
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		Engine.engine.setGameAttribute("flag", "playerMovement");
-		setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
-	}
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
-	{
-		super();
+		super(actor);
+		nameMap.set("buttonOn", "_buttonOn");
+		_buttonOn = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && 5 == mouseState)
 			{
-				if(!(Engine.engine.getGameAttribute("game_paused")))
+				if(_buttonOn)
 				{
-					_customEvent_play();
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = "none";
+					_buttonOn = false;
+					propertyChanged("_buttonOn", _buttonOn);
+					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") - 1));
+				}
+				else if((!(_buttonOn) && (Engine.engine.getGameAttribute("totalSelectedBots") <= 3)))
+				{
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
+					_buttonOn = true;
+					propertyChanged("_buttonOn", _buttonOn);
+					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") + 1));
 				}
 			}
 		});

@@ -5,26 +5,13 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <say-this comment="false" x="37" y="80">
-                            <int id="0" val="blockOne"/>
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="play"/>
                         </say-this>
-                        <set-val-128-2 comment="false" x="37" y="100">
-                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                        </set-val-128-2>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <noteq comment="false" id="0" x="0" y="0">
-                            <get-val-128-2 comment="false" id="0" x="0" y="0"/>
-                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-                        </noteq>
-                        <eq comment="false" id="1" x="0" y="0">
-                            <mod comment="false" id="0" x="0" y="0">
-                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="50"/>
-                            </mod>
-                            <int id="1" val="0"/>
-                        </eq>
-                    </and>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-81 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
             </group>
         </step>
@@ -579,4 +566,35 @@
         </event-custom>
     </group>
     <group eventID="15" id="-1"/>
+    <group eventID="16" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="16" id="-1">
+                        <say-this comment="false" x="37" y="80">
+                            <int id="0" val="blockOne"/>
+                        </say-this>
+                        <set-val-128-2 comment="false" x="37" y="100">
+                            <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        </set-val-128-2>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-val-128-2 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+                        </noteq>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <mod comment="false" id="0" x="0" y="0">
+                                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="50"/>
+                            </mod>
+                            <int id="1" val="0"/>
+                        </eq>
+                    </and>
+                </if>
+            </group>
+            <int id="0" val="play"/>
+        </event-custom>
+    </group>
+    <group eventID="16" id="-1"/>
 </groups>

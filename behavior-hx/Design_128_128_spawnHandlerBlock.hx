@@ -82,6 +82,17 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _yobstacle:Float;
 	
 	/* ========================= Custom Event ========================= */
+	public function _customEvent_play():Void
+	{
+		if((!(_distanceBlock == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 50) == 0)))
+		{
+			_customEvent_blockOne();
+			_distanceBlock = asNumber(Engine.engine.getGameAttribute("playerDistance"));
+			propertyChanged("_distanceBlock", _distanceBlock);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
 	public function _customEvent_blockOne():Void
 	{
 		/* ramdomUniversalNumber
@@ -336,11 +347,9 @@ otherwise => sides */
 		{
 			if(wrapper.enabled)
 			{
-				if((!(_distanceBlock == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 50) == 0)))
+				if(!(Engine.engine.getGameAttribute("game_paused")))
 				{
-					_customEvent_blockOne();
-					_distanceBlock = asNumber(Engine.engine.getGameAttribute("playerDistance"));
-					propertyChanged("_distanceBlock", _distanceBlock);
+					_customEvent_play();
 				}
 			}
 		});
