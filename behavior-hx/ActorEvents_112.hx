@@ -69,20 +69,16 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_180 extends ActorScript
+class ActorEvents_112 extends ActorScript
 {
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_exitMenu():Void
-	{
-		recycleActor(actor);
-		trace("" + "exit menu executed");
-	}
+	public var _dozerClick:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("dozerClick", "_dozerClick");
+		_dozerClick = false;
 		
 	}
 	
@@ -90,18 +86,53 @@ class ActorEvents_180 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		shoutToScene("_customEvent_" + "background");
-		createRecycledActor(getActorType(182), 40, 100, Script.FRONT);
-		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "dozeyOff");
-		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "planterOff");
-		createRecycledActor(getActorType(182), 40, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "suckerOff");
-		createRecycledActor(getActorType(182), 120, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "QuestionMark");
-		createRecycledActor(getActorType(182), 200, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "QuestionMark");
+		
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				if(!(Engine.engine.getGameAttribute("botOn")))
+				{
+					Engine.engine.setGameAttribute("clickingButton", true);
+					if((actor.getAnimation() == "gadget"))
+					{
+						createRecycledActor(getActorType(141), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+					if((actor.getAnimation() == "planter"))
+					{
+						createRecycledActor(getActorType(151), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+					if((actor.getAnimation() == "dozer"))
+					{
+						createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+					if((actor.getAnimation() == "sucker"))
+					{
+						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
+						Engine.engine.setGameAttribute("botOn", true);
+					}
+					actor.setYVelocity(20);
+					runLater(1000 * .75, function(timeTask:TimedTask):Void
+					{
+						actor.setYVelocity(0);
+					}, actor);
+				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("clickingButton", false);
+			}
+		});
 		
 	}
 	

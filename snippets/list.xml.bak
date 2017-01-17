@@ -750,7 +750,8 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="exitMenu" enabled="true" id="3" name="event-custom" order="4" repeats="true"/>
+            <event displayName="findInBotlist" enabled="true" id="4" name="event-custom" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_123_123_ThreeStateButton" classname="scripts.Design_123_123_ThreeStateButton" desc="A template for a button with animations for normal, pressed and hover states." description="A template for a button with animations for normal, pressed and hover states." design="true" drawOrder="0" id="123" name="Three State Button" oid="-1" package="scripts" shared="false" type="actor">

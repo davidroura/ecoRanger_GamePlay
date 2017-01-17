@@ -546,6 +546,9 @@
         <anim across="1" down="1" durations="100" height="117" id="3" loop="true" name="sucker" numframes="1" originx="52" originy="58" sync="false" version="2" width="104">
             <poly data="4,0,0,104,0,104,117,0,117" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="117" id="4" loop="true" name="none" numframes="1" originx="52" originy="58" sync="false" version="2" width="104">
+            <poly data="4,0,0,104,0,104,117,0,117" density="0.1" fric="0.2" gid="-1000" id="0" name="none" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="34" id="111" name="powerUpSucker" shared="false" width="116">
         <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="On" numframes="1" originx="58" originy="17" sync="false" version="2" width="116"/>
