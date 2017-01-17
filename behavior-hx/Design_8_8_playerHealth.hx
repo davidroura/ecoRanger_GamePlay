@@ -90,6 +90,8 @@ class Design_8_8_playerHealth extends SceneScript
 	public var _levelDistance:Float;
 	public var _card:Float;
 	public var _cardName:String;
+	public var _currentSpeed:Float;
+	public var _funFactCard:Actor;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_tookBanana():Void
@@ -198,6 +200,34 @@ class Design_8_8_playerHealth extends SceneScript
 	}
 	
 	/* ========================= Custom Event ========================= */
+	public function _customEvent_dropFunFactCard():Void
+	{
+		createRecycledActor(getActorType(165), 100, 100, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + _cardName);
+		_funFactCard = getLastCreatedActor();
+		propertyChanged("_funFactCard", _funFactCard);
+		_customEvent_paused();
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_paused():Void
+	{
+		Engine.engine.setGameAttribute("game_paused", true);
+		_currentSpeed = asNumber(Engine.engine.getGameAttribute("sceneSpeed"));
+		propertyChanged("_currentSpeed", _currentSpeed);
+		Engine.engine.setGameAttribute("sceneSpeed", 0);
+		setScrollSpeedForBackground(1, "" + "bgLong", 0, 0);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_unpaused():Void
+	{
+		Engine.engine.setGameAttribute("game_paused", false);
+		Engine.engine.setGameAttribute("sceneSpeed", _currentSpeed);
+		setScrollSpeedForBackground(1, "" + "bgLong", 0, 10);
+	}
+	
+	/* ========================= Custom Event ========================= */
 	public function _customEvent_extraLife():Void
 	{
 		if((Engine.engine.getGameAttribute("extraLife") > 0))
@@ -281,6 +311,9 @@ class Design_8_8_playerHealth extends SceneScript
 		_card = 0.0;
 		nameMap.set("cardName", "_cardName");
 		_cardName = "";
+		nameMap.set("currentSpeed", "_currentSpeed");
+		_currentSpeed = 0.0;
+		nameMap.set("funFactCard", "_funFactCard");
 		
 	}
 	
@@ -374,6 +407,22 @@ class Design_8_8_playerHealth extends SceneScript
 				_cardName = StringTools.replace(("" + _cardName), ("" + "gray"), ("" + ""));
 				propertyChanged("_cardName", _cardName);
 				Engine.engine.getGameAttribute("list_funFact").insert(Std.int(_card), _cardName);
+				_customEvent_dropFunFactCard();
+				runLater(1000 * 5, function(timeTask:TimedTask):Void
+				{
+					recycleActor(_funFactCard);
+					_customEvent_unpaused();
+				}, null);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(_funFactCard, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				recycleActor(_funFactCard);
+				_customEvent_unpaused();
 			}
 		});
 		

@@ -3,9 +3,16 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <say-this comment="false" x="26" y="40">
-                    <int id="0" val="move"/>
-                </say-this>
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="70">
+                            <int id="0" val="move"/>
+                        </say-this>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-81 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
         </step>
     </group>
@@ -731,32 +738,35 @@
                 <say-this comment="false" x="26" y="40">
                     <int id="0" val="animation"/>
                 </say-this>
-                <if comment="false" x="26" y="60">
+                <say-this comment="false" x="26" y="60">
+                    <int id="0" val="backOnScreen"/>
+                </say-this>
+                <if comment="false" x="26" y="80">
                     <group eventID="17" id="-1">
-                        <if comment="false" x="37" y="85">
+                        <if comment="false" x="37" y="105">
                             <group eventID="17" id="-1">
-                                <say-this comment="false" x="48" y="110">
+                                <say-this comment="false" x="48" y="130">
                                     <int id="0" val="counter"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="130">
+                                <say-this comment="false" x="48" y="150">
                                     <int id="0" val="slowMovement"/>
                                 </say-this>
                             </group>
                             <get-game-val-11 comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="162">
+                        <else comment="false" x="37" y="182">
                             <group eventID="17" id="-1">
-                                <set-val-7-7 comment="false" x="48" y="182">
+                                <set-val-7-7 comment="false" x="48" y="202">
                                     <get-game-val-5 comment="false" id="0" x="0" y="0"/>
                                 </set-val-7-7>
                             </group>
                         </else>
-                        <set-xy comment="false" x="37" y="219">
+                        <set-xy comment="false" x="37" y="239">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <get-val-7-7 comment="false" id="2" x="0" y="0"/>
                         </set-xy>
-                        <set-xy comment="false" x="37" y="251">
+                        <set-xy comment="false" x="37" y="271">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <get-xy comment="false" id="2" x="0" y="0">
@@ -767,17 +777,17 @@
                     </group>
                     <get-game-val-4 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <if comment="false" x="26" y="303">
+                <if comment="false" x="26" y="323">
                     <group eventID="17" id="-1">
-                        <say-this comment="false" x="37" y="328">
+                        <say-this comment="false" x="37" y="348">
                             <int id="0" val="accelerometerControl"/>
                         </say-this>
                     </group>
                     <get-game-val-0 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="360">
+                <else comment="false" x="26" y="380">
                     <group eventID="17" id="-1">
-                        <say-this comment="false" x="37" y="380">
+                        <say-this comment="false" x="37" y="400">
                             <int id="0" val="touchControl"/>
                         </say-this>
                     </group>
@@ -787,4 +797,44 @@
         </event-custom>
     </group>
     <group eventID="17" id="-1"/>
+    <group eventID="18" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="18" id="-1">
+                        <set-xy comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="50"/>
+                        </set-xy>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <int id="1" val="-10"/>
+                    </less>
+                </if>
+                <else-if comment="false" x="26" y="117">
+                    <group eventID="18" id="-1">
+                        <set-xy comment="false" x="37" y="155">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="300"/>
+                        </set-xy>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <int id="0" val="400"/>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                    </less>
+                </else-if>
+            </group>
+            <int id="0" val="backOnScreen"/>
+        </event-custom>
+    </group>
+    <group eventID="18" id="-1"/>
 </groups>

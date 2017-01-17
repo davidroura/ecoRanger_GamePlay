@@ -91,6 +91,7 @@ class Design_7_7_movement extends ActorScript
 	public function _customEvent_move():Void
 	{
 		_customEvent_animation();
+		_customEvent_backOnScreen();
 		if(Engine.engine.getGameAttribute("playerControl"))
 		{
 			if(Engine.engine.getGameAttribute("slowMovement"))
@@ -113,6 +114,19 @@ class Design_7_7_movement extends ActorScript
 		else
 		{
 			_customEvent_touchControl();
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_backOnScreen():Void
+	{
+		if((actor.getX() < -10))
+		{
+			actor.setX(50);
+		}
+		else if((400 < actor.getX()))
+		{
+			actor.setX(300);
 		}
 	}
 	
@@ -383,7 +397,10 @@ class Design_7_7_movement extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				_customEvent_move();
+				if(!(Engine.engine.getGameAttribute("game_paused")))
+				{
+					_customEvent_move();
+				}
 			}
 		});
 		

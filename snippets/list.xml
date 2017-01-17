@@ -131,22 +131,23 @@
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="accelerometerControl" enabled="true" id="2" name="event-custom" order="10" repeats="true"/>
-            <event displayName="touchControl" enabled="true" id="3" name="event-custom" order="13" repeats="true"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="8" repeats="true"/>
-            <event displayName="slowMovement" enabled="true" id="5" name="event-custom" order="4" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="6" name="draw" order="7" repeats="true"/>
-            <event displayName="counter" enabled="true" id="7" name="event-custom" order="5" repeats="true"/>
-            <event displayName="stand" enabled="true" id="8" name="event-custom" order="17" repeats="true"/>
-            <event displayName="left" enabled="true" id="9" name="event-custom" order="18" repeats="true"/>
-            <event displayName="right" enabled="true" id="10" name="event-custom" order="19" repeats="true"/>
-            <event displayName="touchLeftRight" enabled="true" id="11" name="event-custom" order="14" repeats="true"/>
-            <event displayName="touchRight" enabled="true" id="12" name="event-custom" order="16" repeats="true"/>
-            <event displayName="touchLeft" enabled="true" id="13" name="event-custom" order="15" repeats="true"/>
-            <event displayName="accelRight" enabled="true" id="14" name="event-custom" order="12" repeats="true"/>
-            <event displayName="accelLeft" enabled="true" id="15" name="event-custom" order="11" repeats="true"/>
-            <event displayName="animation" enabled="true" id="16" name="event-custom" order="3" repeats="true"/>
+            <event displayName="accelerometerControl" enabled="true" id="2" name="event-custom" order="11" repeats="true"/>
+            <event displayName="touchControl" enabled="true" id="3" name="event-custom" order="14" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="9" repeats="true"/>
+            <event displayName="slowMovement" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="6" name="draw" order="8" repeats="true"/>
+            <event displayName="counter" enabled="true" id="7" name="event-custom" order="6" repeats="true"/>
+            <event displayName="stand" enabled="true" id="8" name="event-custom" order="18" repeats="true"/>
+            <event displayName="left" enabled="true" id="9" name="event-custom" order="19" repeats="true"/>
+            <event displayName="right" enabled="true" id="10" name="event-custom" order="20" repeats="true"/>
+            <event displayName="touchLeftRight" enabled="true" id="11" name="event-custom" order="15" repeats="true"/>
+            <event displayName="touchRight" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
+            <event displayName="touchLeft" enabled="true" id="13" name="event-custom" order="16" repeats="true"/>
+            <event displayName="accelRight" enabled="true" id="14" name="event-custom" order="13" repeats="true"/>
+            <event displayName="accelLeft" enabled="true" id="15" name="event-custom" order="12" repeats="true"/>
+            <event displayName="animation" enabled="true" id="16" name="event-custom" order="4" repeats="true"/>
             <event displayName="move" enabled="true" id="17" name="event-custom" order="2" repeats="true"/>
+            <event displayName="backOnScreen" enabled="true" id="18" name="event-custom" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_8_8_playerHealth" classname="scripts.Design_8_8_playerHealth" desc="" description="" design="true" drawOrder="0" id="8" name="playerHealth" oid="-1" package="scripts" shared="false" type="scene">
@@ -168,27 +169,33 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="levelDistance" hidden="false" id="19" name="_levelDistance" order="15"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="card" hidden="false" id="20" name="_card" order="16"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="cardName" hidden="false" id="21" name="_cardName" order="17"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentSpeed" hidden="false" id="22" name="_currentSpeed" order="18"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="funFactCard" hidden="false" id="23" name="_funFactCard" order="19"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="11" repeats="true"/>
             <event displayName="Updated" enabled="true" id="3" name="step" order="12" repeats="true"/>
-            <event displayName="player - glassBottle" enabled="true" id="5" name="event-collide-typetotype" order="23" repeats="true"/>
-            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="31" repeats="true"/>
-            <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="27" repeats="true"/>
+            <event displayName="player - glassBottle" enabled="true" id="5" name="event-collide-typetotype" order="28" repeats="true"/>
+            <event displayName="player - banana" enabled="true" id="6" name="event-collide-typetotype" order="36" repeats="true"/>
+            <event displayName="player - rock" enabled="true" id="7" name="event-collide-typetotype" order="32" repeats="true"/>
             <event displayName="player - can" enabled="true" id="8" name="event-collide-typetotype" order="9" repeats="true"/>
             <event displayName="tookBanana" enabled="true" id="12" name="event-custom" order="8" repeats="true"/>
-            <event displayName="distance" enabled="true" id="14" name="event-custom" order="20" repeats="true"/>
-            <event displayName="extraLife" enabled="true" id="15" name="event-custom" order="19" repeats="true"/>
+            <event displayName="distance" enabled="true" id="14" name="event-custom" order="25" repeats="true"/>
+            <event displayName="extraLife" enabled="true" id="15" name="event-custom" order="24" repeats="true"/>
             <event displayName="bonusCard" enabled="true" id="16" name="event-custom" order="15" repeats="true"/>
             <event displayName="player - bonusCard" enabled="true" id="17" name="event-collide-typetotype" order="17" repeats="true"/>
-            <event displayName="player - mud" enabled="true" id="21" name="event-collide-typetotype" order="28" repeats="true"/>
-            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="30" repeats="true"/>
-            <event displayName="level" enabled="true" id="23" name="event-custom" order="21" repeats="true"/>
-            <event displayName="player - plasticBottle Copy" enabled="true" id="24" name="event-collide-typetotype" order="24" repeats="true"/>
-            <event displayName="player - trees" enabled="true" id="25" name="event-collide-typetotype" order="29" repeats="true"/>
+            <event displayName="player - mud" enabled="true" id="21" name="event-collide-typetotype" order="33" repeats="true"/>
+            <event displayName="player - water" enabled="true" id="22" name="event-collide-typetotype" order="35" repeats="true"/>
+            <event displayName="level" enabled="true" id="23" name="event-custom" order="26" repeats="true"/>
+            <event displayName="player - plasticBottle Copy" enabled="true" id="24" name="event-collide-typetotype" order="29" repeats="true"/>
+            <event displayName="player - trees" enabled="true" id="25" name="event-collide-typetotype" order="34" repeats="true"/>
             <event displayName="dropBonusCard" enabled="true" id="26" name="event-custom" order="16" repeats="true"/>
             <event displayName="play" enabled="true" id="27" name="event-custom" order="13" repeats="true"/>
+            <event displayName="paused" enabled="true" id="28" name="event-custom" order="21" repeats="true"/>
+            <event displayName="unpaused" enabled="true" id="29" name="event-custom" order="22" repeats="true"/>
+            <event displayName="dropFunFactCard" enabled="true" id="30" name="event-custom" order="18" repeats="true"/>
+            <event displayName="clickOnFunFactCard" enabled="true" id="31" name="event-mouse-enter-exit-actor" order="19" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
