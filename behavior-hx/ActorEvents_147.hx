@@ -73,14 +73,6 @@ class ActorEvents_147 extends ActorScript
 {
 	public var _foreground:Bool;
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_background():Void
-	{
-		_foreground = true;
-		propertyChanged("_foreground", _foreground);
-		trace("" + "background happened foreground true");
-	}
-	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
@@ -98,12 +90,10 @@ class ActorEvents_147 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				if(_foreground)
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
 					createRecycledActor(getActorType(180), 30, 50, Script.FRONT);
-					_foreground = false;
-					propertyChanged("_foreground", _foreground);
-					trace("" + "clicked");
+					Engine.engine.setGameAttribute("foregroundMenuCalled", true);
 				}
 			}
 		});

@@ -100,7 +100,7 @@ class SceneEvents_7 extends SceneScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				shoutToScene("_customEvent_" + "exitMenu");
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		
@@ -109,8 +109,7 @@ class SceneEvents_7 extends SceneScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				trace("" + "outside menu was pressed");
-				shoutToScene("_customEvent_" + "exitMenu");
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		

@@ -78,15 +78,7 @@ class ActorEvents_180 extends ActorScript
 		if(Utils.contains(Engine.engine.getGameAttribute("selectedBotList"), StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + ""))))
 		{
 			getLastCreatedActor().setAnimation("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
-			trace("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
 		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_exitMenu():Void
-	{
-		recycleActor(actor);
-		trace("" + "exit menu executed");
 	}
 	
 	
@@ -105,19 +97,32 @@ class ActorEvents_180 extends ActorScript
 		_customEvent_findInBotlist();
 		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "dozeyOff");
+		_customEvent_findInBotlist();
 		/* check if it's in botSelectedList */
 		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "planterOff");
+		_customEvent_findInBotlist();
 		createRecycledActor(getActorType(182), 40, 180, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "suckerOff");
+		_customEvent_findInBotlist();
 		createRecycledActor(getActorType(182), 120, 180, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "QuestionMark");
+		_customEvent_findInBotlist();
 		createRecycledActor(getActorType(182), 200, 180, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "QuestionMark");
-		for(item in cast(Engine.engine.getGameAttribute("selectedBotList"), Array<Dynamic>))
+		_customEvent_findInBotlist();
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			trace("" + item);
-		}
+			if(wrapper.enabled)
+			{
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
 		
 	}
 	

@@ -25,75 +25,68 @@
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="dozeyOff"/>
                 </setanim>
-                <comment-short comment="false" x="26" y="161">
+                <say-this comment="false" x="26" y="161">
+                    <int id="0" val="findInBotlist"/>
+                </say-this>
+                <comment-short comment="false" x="26" y="181">
                     <int id="0" val="check if it&amp;apos;s in botSelectedList"/>
                 </comment-short>
-                <create-actor3 comment="false" x="26" y="181">
+                <create-actor3 comment="false" x="26" y="201">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="100"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="208">
+                <setanim comment="false" x="26" y="228">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="planterOff"/>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="235">
+                <say-this comment="false" x="26" y="255">
+                    <int id="0" val="findInBotlist"/>
+                </say-this>
+                <create-actor3 comment="false" x="26" y="275">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="40"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="262">
+                <setanim comment="false" x="26" y="302">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="suckerOff"/>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="289">
+                <say-this comment="false" x="26" y="329">
+                    <int id="0" val="findInBotlist"/>
+                </say-this>
+                <create-actor3 comment="false" x="26" y="349">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="120"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="316">
+                <setanim comment="false" x="26" y="376">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="343">
+                <say-this comment="false" x="26" y="403">
+                    <int id="0" val="findInBotlist"/>
+                </say-this>
+                <create-actor3 comment="false" x="26" y="423">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="370">
+                <setanim comment="false" x="26" y="450">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <for-each comment="false" x="26" y="397">
-                    <group eventID="2" id="-1">
-                        <print comment="false" x="37" y="422">
-                            <for-each-item comment="false" id="0" x="0" y="0"/>
-                        </print>
-                    </group>
-                    <get-game-val-79 comment="false" id="0" x="0" y="0"/>
-                </for-each>
+                <say-this comment="false" x="26" y="477">
+                    <int id="0" val="findInBotlist"/>
+                </say-this>
             </group>
         </init>
     </group>
     <group eventID="2" id="-1"/>
-    <group eventID="3" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <die comment="false" x="26" y="40">
-                    <ACTOR eid="this" id="0"/>
-                </die>
-                <print comment="false" x="26" y="67">
-                    <int id="0" val="exit menu executed"/>
-                </print>
-            </group>
-            <int id="0" val="exitMenu"/>
-        </event-custom>
-    </group>
-    <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
@@ -109,15 +102,6 @@
                                 <int id="2" val="On"/>
                             </str-replace>
                         </setanim>
-                        <print comment="false" x="37" y="128">
-                            <str-replace comment="false" id="0" x="0" y="0">
-                                <getanim comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                </getanim>
-                                <int id="1" val="Off"/>
-                                <int id="2" val="On"/>
-                            </str-replace>
-                        </print>
                     </group>
                     <contains-item comment="false" id="0" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>
@@ -135,4 +119,21 @@
         </event-custom>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <die comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-82 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

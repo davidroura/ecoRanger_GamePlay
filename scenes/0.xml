@@ -58,6 +58,8 @@
             <prop id="19" list="0" val="0"/>
             <prop id="20" list="0" val="0.0"/>
             <prop id="21" list="0" val=""/>
+            <prop id="22" list="0" val="0.0"/>
+            <prop id="23" list="0" val="-1"/>
         </s>
         <s enabled="true" id="88">
             <prop id="1" list="0" val="0.0"/>

@@ -99,7 +99,7 @@
                         <set-dxy comment="false" x="37" y="545">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="20"/>
+                            <int id="2" val="25"/>
                         </set-dxy>
                         <dolater comment="false" x="37" y="572">
                             <group eventID="1" id="-1">
@@ -109,7 +109,7 @@
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val=".75"/>
+                            <int id="0" val="1"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>

@@ -40,9 +40,9 @@
     <group eventID="7" id="0">
         <event-mouse-enter-exit-region comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <scene-shout comment="false" x="26" y="42">
-                    <int id="0" val="exitMenu"/>
-                </scene-shout>
+                <set-game-val-82 comment="false" x="26" y="42">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-82>
             </group>
             <REGION eid="1" id="0"/>
             <int id="1" val="2"/>
@@ -52,12 +52,9 @@
     <group eventID="8" id="0">
         <event-mouse-enter-exit-region comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <print comment="false" x="26" y="42">
-                    <int id="0" val="outside menu was pressed"/>
-                </print>
-                <scene-shout comment="false" x="26" y="62">
-                    <int id="0" val="exitMenu"/>
-                </scene-shout>
+                <set-game-val-82 comment="false" x="26" y="42">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-82>
             </group>
             <REGION eid="0" id="0"/>
             <int id="1" val="2"/>

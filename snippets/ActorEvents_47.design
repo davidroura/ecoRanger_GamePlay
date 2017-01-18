@@ -5,20 +5,15 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="67">
-                            <actortype eid="180" id="0"/>
-                            <int id="1" val="30"/>
-                            <int id="2" val="50"/>
-                            <int id="3" val="0"/>
-                        </create-actor3>
-                        <set-val-40-2 comment="false" x="37" y="94">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-40-2>
-                        <print comment="false" x="37" y="119">
-                            <int id="0" val="clicked"/>
-                        </print>
+                        <scene-change-through comment="false" x="37" y="72">
+                            <scene eid="16" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </scene-change-through>
                     </group>
-                    <get-val-40-2 comment="false" id="0" x="0" y="0"/>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-82 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
             </group>
             <ACTOR eid="this" id="0"/>
@@ -26,18 +21,4 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <set-val-40-2 comment="false" x="26" y="40">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-40-2>
-                <print comment="false" x="26" y="65">
-                    <int id="0" val="background happened foreground true"/>
-                </print>
-            </group>
-            <int id="0" val="background"/>
-        </event-custom>
-    </group>
-    <group eventID="2" id="-1"/>
 </groups>
