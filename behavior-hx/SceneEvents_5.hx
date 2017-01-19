@@ -78,21 +78,21 @@ class SceneEvents_5 extends SceneScript
 	public function _customEvent_audobonMess():Void
 	{
 		_customEvent_removeAllBG();
-		addBackground("audobonMessBG", "audobonMessBG", 1);
+		addBackground("audobonMessBG", "audobonMessBG", Std.int(1));
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_newsRoom():Void
 	{
 		_customEvent_removeAllBG();
-		addBackground("newsRoomBG", "newsRoomBG", 1);
+		addBackground("newsRoomBG", "newsRoomBG", Std.int(1));
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_introHQBG():Void
 	{
 		_customEvent_removeAllBG();
-		addBackground("introHQBG", "introHQBG", 1);
+		addBackground("introHQBG", "introHQBG", Std.int(1));
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -122,6 +122,7 @@ class SceneEvents_5 extends SceneScript
 			propertyChanged("_skipNews", _skipNews);
 		}
 		playSoundOnChannel(getSound(78), Std.int(0));
+		setVolumeForAllSounds(20/100);
 		runLater(1000 * 0, function(timeTask:TimedTask):Void
 		{
 			_customEvent_newsRoom();
@@ -170,6 +171,17 @@ class SceneEvents_5 extends SceneScript
 					g.setFont(getFont(54));
 					g.drawString("" + "Skip News", 140, 400);
 				}
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("presentationWatched", true);
+				stopSoundOnChannel(Std.int(0));
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		

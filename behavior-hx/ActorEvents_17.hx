@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,13 +69,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_2 extends SceneScript
+class ActorEvents_17 extends ActorScript
 {
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
@@ -84,74 +83,10 @@ class SceneEvents_2 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		if(!(Engine.engine.getGameAttribute("musicOn")))
-		{
-			setVolumeForAllSounds(50/100);
-			playSound(getSound(121));
-			Engine.engine.setGameAttribute("musicOn", true);
-		}
-		saveGame("mySave", function(success:Bool):Void
-		{
-			
-		});
-		if(!(Engine.engine.getGameAttribute("found_GadgetScreen")))
-		{
-			runLater(1000 * 4, function(timeTask:TimedTask):Void
-			{
-				runPeriodically(1000 * 7, function(timeTask:TimedTask):Void
-				{
-					createRecycledActor(getActorType(188), (Engine.engine.getGameAttribute("screenX_mid") / 4), (Engine.engine.getGameAttribute("screenY_mid") / 3), Script.FRONT);
-				}, null);
-			}, null);
-		}
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				getActor(4).growTo(95/100, 95/100, 0, Linear.easeNone);
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				stopAllSounds();
-				Engine.engine.setGameAttribute("musicOn", false);
-				getActor(4).growTo(100/100, 100/100, .02, Linear.easeNone);
-				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
-			}
-		});
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.fillColor = Utils.getColorRGB(255,200,0);
-			}
-		});
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedRight)
-			{
-				switchScene(GameModel.get().scenes.get(3).getID(), null, createSlideLeftTransition(0.1));
-			}
-		});
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedLeft)
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createSlideRightTransition(0.1));
-			}
-		});
+		createRecycledActor(getActorType(153), (actor.getX() - 85), actor.getY(), Script.FRONT);
+		actor.growTo(5/100, 5/100, 0, Linear.easeNone);
+		actor.growTo(115/100, 115/100, .6, Linear.easeNone);
+		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
 		
 	}
 	

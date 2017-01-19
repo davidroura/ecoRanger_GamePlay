@@ -6,7 +6,9 @@
         <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="audobonMessBG" opacity="100" order="0" rid="77" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="450" id="0" name="exit" pts="4,295.0,0.0,295.0,450.0,0.0,450.0,0.0,0.0" r="64" type="box" w="295" x="11" y="14"/>
+    </regions>
     <terrainRegions/>
     <actors/>
     <snippets/>

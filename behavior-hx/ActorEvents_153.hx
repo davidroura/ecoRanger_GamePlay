@@ -69,65 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_182 extends ActorScript
+class ActorEvents_153 extends ActorScript
 {
-	public var _buttonOn:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("buttonOn", "_buttonOn");
-		_buttonOn = false;
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				if(_buttonOn)
-				{
-					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = "none";
-					_buttonOn = false;
-					propertyChanged("_buttonOn", _buttonOn);
-					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") - 1));
-					trace("" + "button turned Off");
-				}
-				else if((!(_buttonOn) && (Engine.engine.getGameAttribute("totalSelectedBots") <= 3)))
-				{
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
-					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
-					_buttonOn = true;
-					propertyChanged("_buttonOn", _buttonOn);
-					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") + 1));
-					trace("" + "");
-				}
-				trace("" + "**bots**");
-				for(item in cast(Engine.engine.getGameAttribute("selectedBotList"), Array<Dynamic>))
-				{
-					trace("" + item);
-				}
-				trace("" + "*****");
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
-				{
-					recycleActor(actor);
-				}
-			}
-		});
 		
 	}
 	

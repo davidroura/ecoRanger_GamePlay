@@ -114,7 +114,7 @@
             <text order="2" value="none"/>
         </list>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
-        <number cid="6" id="80" name="totalSelectedBots" save="true" value="0.0"/>
+        <number cid="6" id="80" name="totalSelectedBots" save="true" value="1"/>
         <number cid="8" id="55" name="cansRecycled" save="true" value="0.0"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="8" id="62" name="collected_plasticBottles" save="true" value="0.0"/>

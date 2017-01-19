@@ -19,39 +19,6 @@
                 <set-color comment="false" x="26" y="40">
                     <color b="0" g="200" id="0" r="255"/>
                 </set-color>
-                <set-font-new comment="false" x="26" y="67">
-                    <font eid="135" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="94">
-                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="50"/>
-                    <int id="2" val="15"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="119">
-                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="110"/>
-                    <int id="2" val="15"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="144">
-                    <get-game-val-65 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="170"/>
-                    <int id="2" val="15"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="169">
-                    <get-game-val-66 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="170"/>
-                    <int id="2" val="60"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="194">
-                    <get-game-val-67 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="110"/>
-                    <int id="2" val="60"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="219">
-                    <get-game-val-68 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="50"/>
-                    <int id="2" val="60"/>
-                </draw-text>
             </group>
         </draw>
     </group>
