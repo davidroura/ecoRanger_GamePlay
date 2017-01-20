@@ -165,7 +165,6 @@ class Design_8_8_playerHealth extends SceneScript
 				}
 				_customEvent_extraLife();
 				_customEvent_level();
-				_customEvent_bonusCard();
 			}
 			else
 			{
@@ -176,27 +175,6 @@ class Design_8_8_playerHealth extends SceneScript
 		}
 		_rockCollision = false;
 		propertyChanged("_rockCollision", _rockCollision);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_bonusCard():Void
-	{
-		if((Engine.engine.getGameAttribute("playerDistance") == 100))
-		{
-			if(!(_bonusCard))
-			{
-				_customEvent_dropBonusCard();
-			}
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_dropBonusCard():Void
-	{
-		createRecycledActor(getActorType(74), 100, -5, Script.FRONT);
-		getLastCreatedActor().makeAlwaysSimulate();
-		_bonusCard = true;
-		propertyChanged("_bonusCard", _bonusCard);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -335,8 +313,6 @@ class Design_8_8_playerHealth extends SceneScript
 		propertyChanged("_bananasPickedUp", _bananasPickedUp);
 		_distance = asNumber(0);
 		propertyChanged("_distance", _distance);
-		_bonusCard = false;
-		propertyChanged("_bonusCard", _bonusCard);
 		_rockCollision = false;
 		propertyChanged("_rockCollision", _rockCollision);
 		
@@ -407,12 +383,6 @@ class Design_8_8_playerHealth extends SceneScript
 				_cardName = StringTools.replace(("" + _cardName), ("" + "gray"), ("" + ""));
 				propertyChanged("_cardName", _cardName);
 				Engine.engine.getGameAttribute("list_funFact").insert(Std.int(_card), _cardName);
-				_customEvent_dropFunFactCard();
-				runLater(1000 * 5, function(timeTask:TimedTask):Void
-				{
-					recycleActor(_funFactCard);
-					_customEvent_unpaused();
-				}, null);
 			}
 		});
 		

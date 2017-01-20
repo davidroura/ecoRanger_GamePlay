@@ -92,10 +92,7 @@
                 <set-val-8-7 comment="false" x="26" y="210">
                     <int id="0" val="0"/>
                 </set-val-8-7>
-                <set-val-8-10 comment="false" x="26" y="230">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-8-10>
-                <set-val-8-13 comment="false" x="26" y="255">
+                <set-val-8-13 comment="false" x="26" y="230">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-13>
             </group>
@@ -357,32 +354,6 @@
         </event-custom>
     </group>
     <group eventID="15" id="-1"/>
-    <group eventID="16" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="16" id="-1">
-                        <if comment="false" x="37" y="70">
-                            <group eventID="16" id="-1">
-                                <say-this comment="false" x="48" y="100">
-                                    <int id="0" val="dropBonusCard"/>
-                                </say-this>
-                            </group>
-                            <not comment="false" id="0" x="0" y="0">
-                                <get-val-8-10 comment="false" id="0" x="0" y="0"/>
-                            </not>
-                        </if>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="100"/>
-                    </eq>
-                </if>
-            </group>
-            <int id="0" val="bonusCard"/>
-        </event-custom>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="17" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="17" id="-1">
@@ -415,21 +386,6 @@
                     <get-val-8-20 comment="false" id="1" x="0" y="0"/>
                     <get-val-8-21 comment="false" id="2" x="0" y="0"/>
                 </insert-list>
-                <say-this comment="false" x="26" y="199">
-                    <int id="0" val="dropFunFactCard"/>
-                </say-this>
-                <dolater comment="false" x="26" y="219">
-                    <group eventID="17" id="-1">
-                        <die comment="false" x="37" y="246">
-                            <ACTOR eid="var" id="0" vid="23"/>
-                        </die>
-                        <say-this comment="false" x="37" y="273">
-                            <int id="0" val="unpaused"/>
-                        </say-this>
-                    </group>
-                    <int id="0" val="5"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
             </group>
             <actortype eid="1" id="0"/>
             <actortype eid="74" id="1"/>
@@ -583,26 +539,6 @@
         </event-collide-typetotype>
     </group>
     <group eventID="25" id="-1"/>
-    <group eventID="26" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="26" id="-1">
-                <create-actor3 comment="false" x="26" y="40">
-                    <actortype eid="74" id="0"/>
-                    <int id="1" val="100"/>
-                    <int id="2" val="-5"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <ignore-screen-tolerance comment="false" x="26" y="67">
-                    <ACTOR eid="lastcreated" id="0"/>
-                </ignore-screen-tolerance>
-                <set-val-8-10 comment="false" x="26" y="94">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-8-10>
-            </group>
-            <int id="0" val="dropBonusCard"/>
-        </event-custom>
-    </group>
-    <group eventID="26" id="-1"/>
     <group eventID="27" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="27" id="-1">
@@ -722,24 +658,21 @@
                                 <say-this comment="false" x="48" y="736">
                                     <int id="0" val="level"/>
                                 </say-this>
-                                <say-this comment="false" x="48" y="756">
-                                    <int id="0" val="bonusCard"/>
-                                </say-this>
                             </group>
                             <more comment="false" id="0" x="0" y="0">
                                 <get-game-val-28 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="0"/>
                             </more>
                         </if>
-                        <else comment="false" x="37" y="788">
+                        <else comment="false" x="37" y="768">
                             <group eventID="27" id="-1">
-                                <set-game-val-30 comment="false" x="48" y="808">
+                                <set-game-val-30 comment="false" x="48" y="788">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-30>
-                                <set-game-val-3 comment="false" x="48" y="833">
+                                <set-game-val-3 comment="false" x="48" y="813">
                                     <int id="0" val="0"/>
                                 </set-game-val-3>
-                                <set-game-val-38 comment="false" x="48" y="853">
+                                <set-game-val-38 comment="false" x="48" y="833">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-38>
                             </group>
@@ -747,7 +680,7 @@
                     </group>
                     <get-game-val-26 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-val-8-13 comment="false" x="26" y="902">
+                <set-val-8-13 comment="false" x="26" y="882">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-8-13>
             </group>

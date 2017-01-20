@@ -303,6 +303,9 @@
                 <set-val-128-6 comment="false" x="26" y="40">
                     <int id="0" val="0"/>
                 </set-val-128-6>
+                <set-val-128-9 comment="false" x="26" y="60">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-128-9>
             </group>
         </init>
     </group>
@@ -592,9 +595,47 @@
                         </eq>
                     </and>
                 </if>
+                <if comment="false" x="26" y="137">
+                    <group eventID="16" id="-1">
+                        <if comment="false" x="37" y="167">
+                            <group eventID="16" id="-1">
+                                <say-this comment="false" x="48" y="197">
+                                    <int id="0" val="dropBonusCard"/>
+                                </say-this>
+                            </group>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-128-9 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </if>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="100"/>
+                    </eq>
+                </if>
             </group>
             <int id="0" val="play"/>
         </event-custom>
     </group>
     <group eventID="16" id="-1"/>
+    <group eventID="18" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <create-actor3 comment="false" x="26" y="40">
+                    <actortype eid="74" id="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="-5"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <ignore-screen-tolerance comment="false" x="26" y="67">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </ignore-screen-tolerance>
+                <set-val-128-9 comment="false" x="26" y="94">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-128-9>
+            </group>
+            <int id="0" val="dropBonusCard"/>
+        </event-custom>
+    </group>
+    <group eventID="18" id="-1"/>
 </groups>
