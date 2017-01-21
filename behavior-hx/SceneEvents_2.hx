@@ -106,22 +106,22 @@ class SceneEvents_2 extends SceneScript
 		}
 		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(getActor(10), function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				getActor(4).growTo(95/100, 95/100, 0, Linear.easeNone);
+				getActor(10).growTo(95/100, 95/100, 0, Linear.easeNone);
 			}
 		});
 		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(getActor(10), function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
 				stopAllSounds();
 				Engine.engine.setGameAttribute("musicOn", false);
-				getActor(4).growTo(100/100, 100/100, .02, Linear.easeNone);
+				getActor(10).growTo(100/100, 100/100, .02, Linear.easeNone);
 				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
 			}
 		});
@@ -132,6 +132,15 @@ class SceneEvents_2 extends SceneScript
 			if(wrapper.enabled)
 			{
 				g.fillColor = Utils.getColorRGB(255,200,0);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		

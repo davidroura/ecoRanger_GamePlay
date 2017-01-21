@@ -7,11 +7,14 @@
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="182" id="0" name="exit" pts="4,305.0,0.0,305.0,182.0,0.0,182.0,0.0,0.0" r="64" type="box" w="305" x="6" y="287"/>
+    </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.43076923" sy="0.43076923" x="208" y="-22" z="0"/>
-        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="15" y="352" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.46153846" sy="0.46153846" x="195" y="339" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="46" y="373" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="147" name="mUI_ChooseBots 11" sx="1.0" sy="1.0" x="44" y="309" z="0"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">
