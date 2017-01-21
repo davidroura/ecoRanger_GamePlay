@@ -72,6 +72,35 @@ import com.stencyl.graphics.shaders.BloomShader;
 class ActorEvents_182 extends ActorScript
 {
 	public var _buttonOn:Bool;
+	public var _counter:Float;
+	public var _listCounter:Float;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_turnOn():Void
+	{
+		_buttonOn = true;
+		propertyChanged("_buttonOn", _buttonOn);
+	}
+	
+	/* ========================= Custom Block ========================= */
+	public function _customBlock_FindInList(__searchItem:String, __inputList:Array<Dynamic>):Float
+	{
+		var __Self:Actor = actor;
+		_counter = asNumber(0);
+		propertyChanged("_counter", _counter);
+		for(item in cast(__inputList, Array<Dynamic>))
+		{
+			if((__searchItem == item))
+			{
+				trace("" + (("" + "found ") + ("" + __searchItem)));
+				return _counter;
+			}
+			_counter = asNumber((_counter + 1));
+			propertyChanged("_counter", _counter);
+		}
+		trace("" + (("" + "didn't find ") + ("" + __searchItem)));
+		return -1;
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -79,6 +108,10 @@ class ActorEvents_182 extends ActorScript
 		super(actor);
 		nameMap.set("buttonOn", "_buttonOn");
 		_buttonOn = false;
+		nameMap.set("counter", "_counter");
+		_counter = 0.0;
+		nameMap.set("listCounter", "_listCounter");
+		_listCounter = 0.0;
 		
 	}
 	
@@ -94,20 +127,22 @@ class ActorEvents_182 extends ActorScript
 				trace("" + (("" + "index ") + ("" + Engine.engine.getGameAttribute("totalSelectedBots"))));
 				if(_buttonOn)
 				{
+					/* button turns OFF and it's replaced from bot list with "none" */
 					trace("" + "button turned Off");
 					trace("" + (("" + "clicked on bot ") + ("" + actor.getAnimation())));
 					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
-					/* find index of bot instead of total index. create this with a custom block */
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = "none";
+					/* find index of bots name and replace it with "none" */
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_FindInList", [StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "")), Engine.engine.getGameAttribute("selectedBotList")]), Float))] = "none";
 					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") - 1));
 					_buttonOn = false;
 					propertyChanged("_buttonOn", _buttonOn);
 				}
-				else if((!(_buttonOn) && (Engine.engine.getGameAttribute("totalSelectedBots") <= 3)))
+				else if((!(_buttonOn) && (Engine.engine.getGameAttribute("totalSelectedBots") <= 2)))
 				{
+					/* button turns ON and it's added to bot list */
 					trace("" + "button turned On");
 					trace("" + (("" + "clicked on bot") + ("" + actor.getAnimation())));
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(Engine.engine.getGameAttribute("totalSelectedBots"))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_FindInList", ["none", Engine.engine.getGameAttribute("selectedBotList")]), Float))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
 					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
 					_buttonOn = true;
 					propertyChanged("_buttonOn", _buttonOn);

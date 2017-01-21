@@ -28,59 +28,56 @@
                 <say-this comment="false" x="26" y="161">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <comment-short comment="false" x="26" y="181">
-                    <int id="0" val="check if it&amp;apos;s in botSelectedList"/>
-                </comment-short>
-                <create-actor3 comment="false" x="26" y="201">
+                <create-actor3 comment="false" x="26" y="181">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="100"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="228">
+                <setanim comment="false" x="26" y="208">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="planterOff"/>
                 </setanim>
-                <say-this comment="false" x="26" y="255">
+                <say-this comment="false" x="26" y="235">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="275">
+                <create-actor3 comment="false" x="26" y="255">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="40"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="302">
+                <setanim comment="false" x="26" y="282">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="suckerOff"/>
                 </setanim>
-                <say-this comment="false" x="26" y="329">
+                <say-this comment="false" x="26" y="309">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="349">
+                <create-actor3 comment="false" x="26" y="329">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="120"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="376">
+                <setanim comment="false" x="26" y="356">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <say-this comment="false" x="26" y="403">
+                <say-this comment="false" x="26" y="383">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="423">
+                <create-actor3 comment="false" x="26" y="403">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="450">
+                <setanim comment="false" x="26" y="430">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <say-this comment="false" x="26" y="477">
+                <say-this comment="false" x="26" y="457">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
             </group>
@@ -90,9 +87,12 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <if comment="false" x="26" y="40">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="check if it&amp;apos;s in botSelectedList"/>
+                </comment-short>
+                <if comment="false" x="26" y="60">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="83">
+                        <setanim comment="false" x="37" y="103">
                             <ACTOR eid="lastcreated" id="0"/>
                             <str-replace comment="false" id="1" x="0" y="0">
                                 <getanim comment="false" id="0" x="0" y="0">
@@ -102,6 +102,10 @@
                                 <int id="2" val="On"/>
                             </str-replace>
                         </setanim>
+                        <shout comment="false" x="37" y="148">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="turnOn"/>
+                        </shout>
                     </group>
                     <contains-item comment="false" id="0" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>

@@ -117,7 +117,7 @@ class ActorEvents_112 extends ActorScript
 						Engine.engine.setGameAttribute("botOn", true);
 					}
 					actor.setYVelocity(25);
-					runLater(1000 * 1, function(timeTask:TimedTask):Void
+					runLater(1000 * .8, function(timeTask:TimedTask):Void
 					{
 						actor.setYVelocity(0);
 					}, actor);

@@ -75,9 +75,11 @@ class ActorEvents_180 extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_findInBotlist():Void
 	{
+		/* check if it's in botSelectedList */
 		if(Utils.contains(Engine.engine.getGameAttribute("selectedBotList"), StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + ""))))
 		{
 			getLastCreatedActor().setAnimation("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
+			getLastCreatedActor().shout("_customEvent_" + "turnOn");
 		}
 	}
 	
@@ -98,7 +100,6 @@ class ActorEvents_180 extends ActorScript
 		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "dozeyOff");
 		_customEvent_findInBotlist();
-		/* check if it's in botSelectedList */
 		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "planterOff");
 		_customEvent_findInBotlist();

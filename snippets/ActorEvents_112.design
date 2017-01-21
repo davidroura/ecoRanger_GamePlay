@@ -109,7 +109,7 @@
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="1"/>
+                            <int id="0" val=".8"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
