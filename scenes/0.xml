@@ -19,7 +19,7 @@
         <actor a="0.0" aid="5" c="false" group="3" id="116" name="fuelBar 5" sx="1.0" sy="1.2033899" x="305" y="175" z="5"/>
         <actor a="0.0" aid="7" c="false" group="7" id="70" name="gItem_tree 7" sx="1.0" sy="1.0" x="226" y="-328" z="0"/>
         <actor a="0.0" aid="9" c="false" group="7" id="70" name="gItem_tree 9" sx="1.0" sy="1.0" x="-74" y="-359" z="0"/>
-        <actor a="0.0" aid="10" c="false" group="7" id="70" name="gItem_tree 10" sx="1.0" sy="1.0" x="-136" y="-26" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="7" id="70" name="gItem_tree 10" sx="1.0" sy="1.0" x="-115" y="-30" z="0"/>
         <actor a="0.0" aid="11" c="false" group="7" id="70" name="gItem_tree 11" sx="1.0" sy="1.0" x="260" y="2" z="0"/>
         <actor a="0.0" aid="12" c="false" group="3" id="112" name="gUI_powerUp 12" sx="1.0" sy="1.0" x="-1" y="369" z="3"/>
         <actor a="0.0" aid="13" c="false" group="3" id="112" name="gUI_powerUp 13" sx="1.0" sy="1.0" x="199" y="369" z="3"/>

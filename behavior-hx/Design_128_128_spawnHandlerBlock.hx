@@ -109,7 +109,14 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 0.75 => Left
 otherwise => sides */
 		_customEvent_spawnTrees();
-		_customEvent_spawnObstacle();
+		if((500 < Engine.engine.getGameAttribute("playerDistance")))
+		{
+			_customEvent_spawnObstacle1();
+		}
+		else
+		{
+			_customEvent_spawnObstacle2();
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -158,7 +165,7 @@ otherwise => sides */
 	}
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_spawnObstacle():Void
+	public function _customEvent_spawnObstacle1():Void
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
@@ -166,8 +173,69 @@ otherwise => sides */
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropRock();
 			_customEvent_spawnTrash();
+			_xobstacle = asNumber(100);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-20);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropMud();
+			_xobstacle = asNumber(200);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-50);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropLife();
+		}
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
+		{
+			_yobstacle = asNumber(-10);
+			propertyChanged("_yobstacle", _yobstacle);
+			_xobstacle = asNumber(150);
+			propertyChanged("_xobstacle", _xobstacle);
+			_customEvent_dropLife();
+			_xobstacle = asNumber(150);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-6);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropMud();
+			_xobstacle = asNumber(100);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-30);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_spawnTrash();
+		}
+		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
+		{
+			_xobstacle = asNumber(110);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-100);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropBridge();
+		}
+		else
+		{
+			_xobstacle = asNumber(140);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-60);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_spawnObstacle2():Void
+	{
+		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
+		{
+			_xobstacle = asNumber(100);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-30);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_spawnTrash();
+			_xobstacle = asNumber(100);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-20);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropMud();
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
@@ -180,19 +248,28 @@ otherwise => sides */
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-6);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropMud();
+			_customEvent_dropRock();
+			_xobstacle = asNumber(100);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-30);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_spawnTrash();
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
 			_xobstacle = asNumber(110);
 			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-50);
+			_yobstacle = asNumber(-100);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropBridge();
 		}
 		else
 		{
-			
+			_xobstacle = asNumber(140);
+			propertyChanged("_xobstacle", _xobstacle);
+			_yobstacle = asNumber(-60);
+			propertyChanged("_yobstacle", _yobstacle);
+			_customEvent_dropRock();
 		}
 	}
 	
@@ -269,10 +346,10 @@ otherwise => sides */
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropLife():Void
 	{
-		createRecycledActorOnLayer(getActorType(10), _xLife, -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(10), _xobstacle, -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(_yLife);
+		getLastCreatedActor().setY(_yobstacle);
 	}
 	
 	/* ========================= Custom Event ========================= */
