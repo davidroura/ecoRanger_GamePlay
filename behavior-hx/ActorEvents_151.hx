@@ -90,7 +90,7 @@ class ActorEvents_151 extends ActorScript
 		}, actor);
 		runLater(1000 * 6, function(timeTask:TimedTask):Void
 		{
-			Engine.engine.setGameAttribute("planterPower", true);
+			Engine.engine.setGameAttribute("planterPower", false);
 			Engine.engine.setGameAttribute("botOn", false);
 		}, actor);
 		

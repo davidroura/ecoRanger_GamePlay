@@ -423,7 +423,7 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if(!(Engine.engine.getGameAttribute("planterPower")))
+				if((!(Engine.engine.getGameAttribute("planterPower")) && !(Engine.engine.getGameAttribute("gadgetPower2"))))
 				{
 					Engine.engine.setGameAttribute("sceneSpeed", 0);
 					setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
@@ -438,9 +438,16 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if((!(Engine.engine.getGameAttribute("planterPower")) || !(Engine.engine.getGameAttribute("gadgetPower2"))))
+				if((!(Engine.engine.getGameAttribute("planterPower")) && !(Engine.engine.getGameAttribute("gadgetPower2"))))
 				{
-					Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .5));
+					if((Engine.engine.getGameAttribute("sceneSpeed") < 15))
+					{
+						Engine.engine.setGameAttribute("sceneSpeed", 15);
+					}
+					else
+					{
+						Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") * .9));
+					}
 					setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
 					Engine.engine.setGameAttribute("spawnThings", false);
 				}
@@ -452,10 +459,13 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				_boostSpeed = asNumber(0);
-				propertyChanged("_boostSpeed", _boostSpeed);
-				Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("playerDefaultSpeed") * .3));
-				setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+				if(!(Engine.engine.getGameAttribute("gadgetPower2")))
+				{
+					_boostSpeed = asNumber(0);
+					propertyChanged("_boostSpeed", _boostSpeed);
+					Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("playerDefaultSpeed") * .3));
+					setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+				}
 			}
 		});
 		

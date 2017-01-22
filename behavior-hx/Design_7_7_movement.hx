@@ -318,13 +318,27 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_left():Void
 	{
-		actor.setAnimation("" + "left");
+		if(Engine.engine.getGameAttribute("planterPower"))
+		{
+			actor.setAnimation("" + "dirt");
+		}
+		else
+		{
+			actor.setAnimation("" + "left");
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_right():Void
 	{
-		actor.setAnimation("" + "right");
+		if(Engine.engine.getGameAttribute("planterPower"))
+		{
+			actor.setAnimation("" + "dirt");
+		}
+		else
+		{
+			actor.setAnimation("" + "right");
+		}
 	}
 	
 	

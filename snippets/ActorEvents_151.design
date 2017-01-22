@@ -60,7 +60,7 @@
                 <dolater comment="false" x="26" y="131">
                     <group eventID="2" id="-1">
                         <set-game-val-52 comment="false" x="37" y="158">
-                            <true comment="false" id="0" x="0" y="0"/>
+                            <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-52>
                         <set-game-val-46 comment="false" x="37" y="183">
                             <false comment="false" id="0" x="0" y="0"/>

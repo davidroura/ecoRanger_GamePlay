@@ -82,6 +82,22 @@ class ActorEvents_65 extends ActorScript
 	override public function init()
 	{
 		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(Engine.engine.getGameAttribute("mainMenuNotification"))
+				{
+					actor.setAnimation("" + "notificationOn");
+				}
+				else
+				{
+					actor.setAnimation("" + "notificationOff");
+				}
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

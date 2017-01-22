@@ -174,7 +174,7 @@ class SceneEvents_0 extends SceneScript
 		Engine.engine.setGameAttribute("total_glassBottles", (Engine.engine.getGameAttribute("total_glassBottles") + Engine.engine.getGameAttribute("collected_glassBottle")));
 		Engine.engine.setGameAttribute("total_cans", (Engine.engine.getGameAttribute("total_cans") + Engine.engine.getGameAttribute("collected_cans")));
 		Engine.engine.setGameAttribute("total_plasticBottles", (Engine.engine.getGameAttribute("total_plasticBottles") + Engine.engine.getGameAttribute("collected_PlasticBottles")));
-		addBackground("UIEnd", "EndUI", 5);
+		addBackground("UIEnd", "EndUI", Std.int(5));
 		createRecycledActor(getActorType(49), 170, 280, Script.FRONT);
 		createRecycledActor(getActorType(51), 50, 280, Script.FRONT);
 		trace("" + "points");

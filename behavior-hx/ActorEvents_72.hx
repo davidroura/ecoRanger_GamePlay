@@ -82,6 +82,17 @@ class ActorEvents_72 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		actor.growTo(135/100, 135/100, 0, Linear.easeNone);
+		if((actor.getAnimation() == "left"))
+		{
+			actor.setX((actor.getX() + 75));
+		}
+		else if((actor.getAnimation() == "right"))
+		{
+			actor.setX((actor.getX() - 75));
+		}
+		
 	}
 	
 	override public function forwardMessage(msg:String)

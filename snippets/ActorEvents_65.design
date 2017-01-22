@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="22" y="27">
+            <group eventID="1" id="-1">
+                <if comment="false" x="33" y="52">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="44" y="77">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="notificationOn"/>
+                        </setanim>
+                    </group>
+                    <get-game-val-83 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="33" y="116">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="44" y="136">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="notificationOff"/>
+                        </setanim>
+                    </group>
+                </else>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

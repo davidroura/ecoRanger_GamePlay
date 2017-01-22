@@ -8,13 +8,13 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="182" id="0" name="exit" pts="4,305.0,0.0,305.0,182.0,0.0,182.0,0.0,0.0" r="64" type="box" w="305" x="6" y="287"/>
+        <region b="64" g="64" h="182" id="0" name="exit" pts="4,0.0,0.0,0.0,182.0,305.0,182.0,305.0,0.0" r="64" type="box" w="305" x="6" y="287"/>
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.46153846" sy="0.46153846" x="195" y="339" z="0"/>
-        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="46" y="373" z="0"/>
-        <actor a="0.0" aid="11" c="false" group="3" id="147" name="mUI_ChooseBots 11" sx="1.0" sy="1.0" x="44" y="309" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="65" name="notification 2" sx="0.8" sy="0.8" x="207" y="352" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="46" y="361" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="147" name="mUI_ChooseBots 11" sx="1.0" sy="1.0" x="47" y="305" z="0"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">
