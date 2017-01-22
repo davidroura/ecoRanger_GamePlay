@@ -402,7 +402,7 @@
                             <int id="0" val="-100"/>
                         </set-val-128-8>
                         <say-this comment="false" x="37" y="554">
-                            <int id="0" val="dropBridge"/>
+                            <int id="0" val="dropRock"/>
                         </say-this>
                     </group>
                     <less comment="false" id="0" x="0" y="0">

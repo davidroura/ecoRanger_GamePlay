@@ -209,7 +209,7 @@ otherwise => sides */
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-100);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropBridge();
+			_customEvent_dropRock();
 		}
 		else
 		{
