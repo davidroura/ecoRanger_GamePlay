@@ -612,7 +612,7 @@
                                 <if comment="false" x="48" y="309">
                                     <group eventID="27" id="-1">
                                         <set-game-val-3 comment="false" x="59" y="334">
-                                            <int id="0" val="55"/>
+                                            <int id="0" val="65"/>
                                         </set-game-val-3>
                                     </group>
                                     <get-game-val-69 comment="false" id="0" x="0" y="0"/>

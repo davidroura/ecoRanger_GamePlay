@@ -116,6 +116,11 @@ class ActorEvents_112 extends ActorScript
 						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
 					}
+					actor.setYVelocity(55);
+					runLater(1000 * 2.5, function(timeTask:TimedTask):Void
+					{
+						actor.setYVelocity(0);
+					}, actor);
 				}
 			}
 		});

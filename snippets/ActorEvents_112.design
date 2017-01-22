@@ -96,6 +96,22 @@
                                 <int id="1" val="sucker"/>
                             </eq>
                         </if>
+                        <set-dxy comment="false" x="37" y="545">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="55"/>
+                        </set-dxy>
+                        <dolater comment="false" x="37" y="572">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="599">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="2.5"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-game-val-46 comment="false" id="0" x="0" y="0"/>
@@ -105,24 +121,6 @@
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>
         </event-mouse-enter-exit-actor>
-    </group>
-    <group eventID="1" id="1">
-        <set-dxy comment="false" x="42" y="625">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="1"/>
-            <int id="2" val="45"/>
-        </set-dxy>
-        <dolater comment="false" x="42" y="652">
-            <group eventID="1" id="-1">
-                <set-dxy comment="false" x="53" y="679">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                    <int id="2" val="0"/>
-                </set-dxy>
-            </group>
-            <int id="0" val="2"/>
-            <ACTOR eid="this" id="2"/>
-        </dolater>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
