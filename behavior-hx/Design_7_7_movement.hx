@@ -229,11 +229,11 @@ class Design_7_7_movement extends ActorScript
 	{
 		if(((_width / 2) < getMouseX()))
 		{
-			_customEvent_accelLeft();
+			_customEvent_accelRight();
 		}
 		else
 		{
-			_customEvent_accelRight();
+			_customEvent_accelLeft();
 		}
 	}
 	
