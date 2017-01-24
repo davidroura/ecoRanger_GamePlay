@@ -296,6 +296,10 @@ class Design_7_7_movement extends ActorScript
 		{
 			actor.setAnimation("" + _standAnimationBoosted);
 		}
+		else if(Engine.engine.getGameAttribute("gadgetPower2"))
+		{
+			actor.setAnimation("" + "upGadgetBoost");
+		}
 		else
 		{
 			actor.setAnimation("" + _standAnimation);
@@ -322,6 +326,14 @@ class Design_7_7_movement extends ActorScript
 		{
 			actor.setAnimation("" + "dirt");
 		}
+		else if(Engine.engine.getGameAttribute("boosted"))
+		{
+			actor.setAnimation("" + "leftBoost");
+		}
+		else if(Engine.engine.getGameAttribute("gadgetPower2"))
+		{
+			actor.setAnimation("" + "leftGadgetBoost");
+		}
 		else
 		{
 			actor.setAnimation("" + "left");
@@ -334,6 +346,14 @@ class Design_7_7_movement extends ActorScript
 		if(Engine.engine.getGameAttribute("planterPower"))
 		{
 			actor.setAnimation("" + "dirt");
+		}
+		else if(Engine.engine.getGameAttribute("boosted"))
+		{
+			actor.setAnimation("" + "rightBoost");
+		}
+		else if(Engine.engine.getGameAttribute("gadgetPower2"))
+		{
+			actor.setAnimation("" + "rightGadgetBoost");
 		}
 		else
 		{

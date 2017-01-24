@@ -213,16 +213,6 @@ class SceneEvents_0 extends SceneScript
 		});
 	}
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_powerUpSetup():Void
-	{
-		/* animations will be selected by what bots you choose when we make that */
-		if(Engine.engine.getGameAttribute("planterUnlock"))
-		{
-			getActor(4).setAnimation("" + "planterOn");
-		}
-	}
-	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
@@ -256,7 +246,6 @@ class SceneEvents_0 extends SceneScript
 		#if (flash && !air)
 		Engine.engine.setGameAttribute("accelerometerControl", false);
 		#end
-		_customEvent_powerUpSetup();
 		_gameOverShown = false;
 		propertyChanged("_gameOverShown", _gameOverShown);
 		_tutorialShown = false;

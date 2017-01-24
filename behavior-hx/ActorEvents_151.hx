@@ -113,6 +113,18 @@ class ActorEvents_151 extends ActorScript
 			}
 		});
 		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(12), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				/* no collision works */
+				/* strength is how many hits you can do before dying */
+				trace("" + "collision");
+				recycleActor(event.otherActor);
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

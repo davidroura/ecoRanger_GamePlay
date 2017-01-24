@@ -101,7 +101,7 @@ class ActorEvents_63 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		runLater(1000 * 10, function(timeTask:TimedTask):Void
+		runLater(1000 * 9, function(timeTask:TimedTask):Void
 		{
 			recycleActor(actor);
 			Engine.engine.setGameAttribute("botOn", false);
@@ -114,7 +114,7 @@ class ActorEvents_63 extends ActorScript
 			{
 				if(!(Engine.engine.getGameAttribute("dozerStrength") == 0))
 				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 13));
+					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 5));
 					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
 				}
 				else
@@ -130,8 +130,23 @@ class ActorEvents_63 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
+				/* strength is how many hits you can do before dying */
+				trace("" + "collision");
 				recycleActor(event.otherActor);
+				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(12), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				/* no collision works */
+				/* strength is how many hits you can do before dying */
+				trace("" + "collision");
+				recycleActor(event.otherActor);
+				Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") - 1));
 			}
 		});
 		

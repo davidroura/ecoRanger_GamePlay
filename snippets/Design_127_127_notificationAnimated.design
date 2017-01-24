@@ -68,8 +68,8 @@
         </draw>
     </group>
     <group eventID="1" id="-1">
-        <get-game-val-70 comment="false" x="378" y="315"/>
         <get-game-val-71 comment="false" x="352" y="391"/>
+        <get-game-val-70 comment="false" x="378" y="315"/>
     </group>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">

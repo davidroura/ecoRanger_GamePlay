@@ -71,7 +71,7 @@
                                 <getanim comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
                                 </getanim>
-                                <int id="1" val="dozer"/>
+                                <int id="1" val="dozey"/>
                             </eq>
                         </if>
                         <if comment="false" x="37" y="433">
@@ -99,7 +99,7 @@
                         <set-dxy comment="false" x="37" y="545">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="55"/>
+                            <int id="2" val="70"/>
                         </set-dxy>
                         <dolater comment="false" x="37" y="572">
                             <group eventID="1" id="-1">
@@ -109,7 +109,7 @@
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="2.5"/>
+                            <int id="0" val="1.9"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
@@ -131,7 +131,7 @@
                 </set-game-val-36>
             </group>
             <ACTOR eid="this" id="0"/>
-            <int id="1" val="4"/>
+            <int id="1" val="1"/>
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="2" id="-1"/>

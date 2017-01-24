@@ -106,7 +106,7 @@ class ActorEvents_112 extends ActorScript
 						createRecycledActor(getActorType(151), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
 					}
-					if((actor.getAnimation() == "dozer"))
+					if((actor.getAnimation() == "dozey"))
 					{
 						createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
@@ -116,8 +116,8 @@ class ActorEvents_112 extends ActorScript
 						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
 						Engine.engine.setGameAttribute("botOn", true);
 					}
-					actor.setYVelocity(55);
-					runLater(1000 * 2.5, function(timeTask:TimedTask):Void
+					actor.setYVelocity(70);
+					runLater(1000 * 1.9, function(timeTask:TimedTask):Void
 					{
 						actor.setYVelocity(0);
 					}, actor);
@@ -128,7 +128,7 @@ class ActorEvents_112 extends ActorScript
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 5 == mouseState)
+			if(wrapper.enabled && -1 == mouseState)
 			{
 				Engine.engine.setGameAttribute("clickingButton", false);
 			}
