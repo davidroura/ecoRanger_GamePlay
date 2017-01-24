@@ -20,20 +20,9 @@
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <setangle comment="false" x="26" y="40">
-                    <ACTOR eid="this" id="0"/>
-                    <times comment="false" id="1" x="0" y="0">
-                        <accelerometer comment="false" id="0" x="0" y="0">
-                            <int id="0" val="0"/>
-                        </accelerometer>
-                        <neg comment="false" id="1" x="0" y="0">
-                            <int id="0" val="100"/>
-                        </neg>
-                    </times>
-                </setangle>
-                <if comment="false" x="26" y="85">
+                <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <say-this comment="false" x="37" y="123">
+                        <say-this comment="false" x="37" y="78">
                             <int id="0" val="accelLeft"/>
                         </say-this>
                     </group>
@@ -44,9 +33,9 @@
                         <int id="1" val="0"/>
                     </more>
                 </if>
-                <else-if comment="false" x="26" y="155">
+                <else-if comment="false" x="26" y="110">
                     <group eventID="2" id="-1">
-                        <say-this comment="false" x="37" y="193">
+                        <say-this comment="false" x="37" y="148">
                             <int id="0" val="accelRight"/>
                         </say-this>
                     </group>
@@ -60,6 +49,19 @@
             </group>
             <int id="0" val="accelerometerControl"/>
         </event-custom>
+    </group>
+    <group eventID="2" id="2">
+        <setangle comment="false" x="174" y="340">
+            <ACTOR eid="this" id="0"/>
+            <times comment="false" id="1" x="0" y="0">
+                <accelerometer comment="false" id="0" x="0" y="0">
+                    <int id="0" val="0"/>
+                </accelerometer>
+                <neg comment="false" id="1" x="0" y="0">
+                    <int id="0" val="100"/>
+                </neg>
+            </times>
+        </setangle>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
@@ -687,7 +689,7 @@
                     <int id="0" val="0"/>
                 </set-game-val-22>
                 <say-this comment="false" x="26" y="160">
-                    <int id="0" val="left"/>
+                    <int id="0" val="right"/>
                 </say-this>
             </group>
             <int id="0" val="accelRight"/>
@@ -735,7 +737,7 @@
                     <int id="0" val="0"/>
                 </set-game-val-22>
                 <say-this comment="false" x="26" y="160">
-                    <int id="0" val="right"/>
+                    <int id="0" val="left"/>
                 </say-this>
             </group>
             <int id="0" val="accelLeft"/>
