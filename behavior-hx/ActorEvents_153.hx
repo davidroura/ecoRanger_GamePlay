@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_151 extends ActorScript
+class ActorEvents_153 extends ActorScript
 {
 	
 	
@@ -81,37 +81,6 @@ class ActorEvents_151 extends ActorScript
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		runLater(1000 * .5, function(timeTask:TimedTask):Void
-		{
-			Engine.engine.setGameAttribute("planterPower", true);
-			actor.setAnimation("" + "dirt");
-		}, actor);
-		runLater(1000 * 6, function(timeTask:TimedTask):Void
-		{
-			Engine.engine.setGameAttribute("planterPower", false);
-			Engine.engine.setGameAttribute("botOn", false);
-		}, actor);
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(Engine.engine.getGameAttribute("botOn"))
-				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 10));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
-				}
-				else
-				{
-					Engine.engine.setGameAttribute("planterPower", false);
-					Engine.engine.setGameAttribute("botOn", false);
-					recycleActor(actor);
-				}
-			}
-		});
 		
 	}
 	

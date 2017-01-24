@@ -70,19 +70,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_127_127_notificationAnimated extends SceneScript
+class SceneEvents_7 extends SceneScript
 {
-	public var _yTranslate:Float;
-	public var _opacity:Float;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("yTranslate", "_yTranslate");
-		_yTranslate = 0.0;
-		nameMap.set("opacity", "_opacity");
-		_opacity = 150.0;
 		
 	}
 	
@@ -90,35 +84,41 @@ class Design_127_127_notificationAnimated extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_yTranslate = asNumber(175);
-		propertyChanged("_yTranslate", _yTranslate);
+		Engine.engine.setGameAttribute("found_GadgetScreen", true);
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && Input.swipedRight)
 			{
-				if(!(Engine.engine.getGameAttribute("notificationText") == "empty"))
-				{
-					g.setFont(getFont(190));
-					_opacity = asNumber((_opacity - 1.75));
-					propertyChanged("_opacity", _opacity);
-					if((100 > _opacity))
-					{
-						g.alpha = (_opacity/100);
-					}
-					g.drawString("" + Engine.engine.getGameAttribute("notificationText"), (300 - g.font.font.getTextWidth(Engine.engine.getGameAttribute("notificationText"))/Engine.SCALE), _yTranslate);
-					_yTranslate = asNumber((_yTranslate - .1));
-					propertyChanged("_yTranslate", _yTranslate);
-					if((0 > _opacity))
-					{
-						_opacity = asNumber(150);
-						propertyChanged("_opacity", _opacity);
-						_yTranslate = asNumber(175);
-						propertyChanged("_yTranslate", _yTranslate);
-						Engine.engine.setGameAttribute("notificationText", "empty");
-					}
-				}
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(1), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
 			}
 		});
 		

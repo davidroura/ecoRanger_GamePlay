@@ -12,7 +12,7 @@
                             <int id="3" val="20"/>
                         </create-region>
                         <set-val-17-1 comment="false" x="37" y="85">
-                            <REGION eid="lastcreated" id="0"/>
+                            <REGION eid="0" id="0"/>
                         </set-val-17-1>
                     </group>
                     <get-game-val-25 comment="false" id="0" x="0" y="0"/>
