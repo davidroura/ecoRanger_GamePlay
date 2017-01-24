@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="78">
+                            <int id="0" val="accelLeft"/>
+                        </say-this>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <accelerometer comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </accelerometer>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else-if comment="false" x="26" y="110">
+                    <group eventID="1" id="-1">
+                        <say-this comment="false" x="37" y="148">
+                            <int id="0" val="accelRight"/>
+                        </say-this>
+                    </group>
+                    <more comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <accelerometer comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </accelerometer>
+                    </more>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-xy comment="false" x="37" y="83">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-xy>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <get-val-129-1 comment="false" id="1" x="0" y="0"/>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-129-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </more>
+                    </and>
+                </if>
+                <set-game-val-22 comment="false" x="26" y="140">
+                    <int id="0" val="0"/>
+                </set-game-val-22>
+            </group>
+            <int id="0" val="accelLeft"/>
+        </event-custom>
+    </group>
+    <group eventID="2" id="1">
+        <say-this comment="false" x="26" y="187">
+            <int id="0" val="right"/>
+        </say-this>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <set-xy comment="false" x="37" y="83">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-xy>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <get-val-129-2 comment="false" id="0" x="0" y="0"/>
+                            <get-xy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <get-val-129-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </more>
+                    </and>
+                </if>
+                <set-game-val-22 comment="false" x="26" y="140">
+                    <int id="0" val="0"/>
+                </set-game-val-22>
+            </group>
+            <int id="0" val="accelRight"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="1">
+        <say-this comment="false" x="26" y="185">
+            <int id="0" val="left"/>
+        </say-this>
+    </group>
+    <group eventID="3" id="-1">
+        <get-wh comment="false" x="319" y="240">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </get-wh>
+    </group>
+    <group eventID="4" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <font eid="190" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <accelerometer comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                    </accelerometer>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-129-1 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-val-129-1>
+                <set-val-129-2 comment="false" x="26" y="60">
+                    <int id="0" val="320"/>
+                </set-val-129-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

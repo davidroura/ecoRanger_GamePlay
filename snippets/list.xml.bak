@@ -84,6 +84,19 @@
             <event displayName="temprockDozeyCol" enabled="false" id="3" name="event-collide-actortotype" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_129_129_tilt" classname="scripts.Design_129_129_tilt" desc="" description="" design="true" drawOrder="0" id="129" name="tilt" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boundaryLeft" hidden="false" id="1" name="_boundaryLeft" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="boundaryRight" hidden="false" id="2" name="_boundaryRight" order="2"/>
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="accelLeft" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
+            <event displayName="accelRight" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="4" name="draw" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="4" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_4_4_insideScreen" classname="scripts.Design_4_4_insideScreen" desc="" description="" design="true" drawOrder="0" id="4" name="insideScreen" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
         <blocks/>
@@ -146,8 +159,8 @@
             <event displayName="touchLeftRight" enabled="true" id="11" name="event-custom" order="15" repeats="true"/>
             <event displayName="touchRight" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
             <event displayName="touchLeft" enabled="true" id="13" name="event-custom" order="16" repeats="true"/>
-            <event displayName="accelRight" enabled="true" id="14" name="event-custom" order="13" repeats="true"/>
-            <event displayName="accelLeft" enabled="true" id="15" name="event-custom" order="12" repeats="true"/>
+            <event displayName="accelLeft" enabled="true" id="14" name="event-custom" order="13" repeats="true"/>
+            <event displayName="accelRight" enabled="true" id="15" name="event-custom" order="12" repeats="true"/>
             <event displayName="animation" enabled="true" id="16" name="event-custom" order="4" repeats="true"/>
             <event displayName="move" enabled="true" id="17" name="event-custom" order="2" repeats="true"/>
             <event displayName="backOnScreen" enabled="true" id="18" name="event-custom" order="3" repeats="true"/>
