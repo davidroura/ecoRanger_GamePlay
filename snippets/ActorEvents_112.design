@@ -109,7 +109,29 @@
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="1.9"/>
+                            <int id="0" val="1.2"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="638">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="665">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-70"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="10"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="704">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="731">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="11.2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>

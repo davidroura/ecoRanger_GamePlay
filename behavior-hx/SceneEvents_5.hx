@@ -125,24 +125,19 @@ class SceneEvents_5 extends SceneScript
 		setVolumeForAllSounds(20/100);
 		runLater(1000 * 0, function(timeTask:TimedTask):Void
 		{
-			_customEvent_newsRoom();
+			_customEvent_audobonMess();
 		}, null);
 		runLater(1000 * 5, function(timeTask:TimedTask):Void
 		{
 			_customEvent_newsRoom();
 		}, null);
-		runLater(1000 * 10, function(timeTask:TimedTask):Void
+		runLater(1000 * 20, function(timeTask:TimedTask):Void
 		{
-			_customEvent_audobonMess();
-		}, null);
-		runLater(1000 * 15, function(timeTask:TimedTask):Void
-		{
-			_customEvent_newsRoom();
+			_customEvent_introHQBG();
 		}, null);
 		runLater(1000 * 28, function(timeTask:TimedTask):Void
 		{
 			playSoundOnChannel(getSound(80), Std.int(0));
-			_customEvent_introHQBG();
 		}, null);
 		runLater(1000 * 34, function(timeTask:TimedTask):Void
 		{
