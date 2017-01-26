@@ -50,7 +50,7 @@
             <int id="0" val="accelerometerControl"/>
         </event-custom>
     </group>
-    <group eventID="2" id="2">
+    <group eventID="2" id="1">
         <setangle comment="false" x="174" y="340">
             <ACTOR eid="this" id="0"/>
             <times comment="false" id="1" x="0" y="0">
@@ -63,7 +63,7 @@
             </times>
         </setangle>
     </group>
-    <group eventID="2" id="4">
+    <group eventID="2" id="2">
         <set-xy comment="false" x="187" y="414">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="0"/>
@@ -81,7 +81,7 @@
             </minus>
         </set-xy>
     </group>
-    <group eventID="2" id="6">
+    <group eventID="2" id="3">
         <set-xy comment="false" x="171" y="277">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="0"/>

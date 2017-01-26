@@ -124,19 +124,19 @@ otherwise => sides */
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
-			_xTree = asNumber(-115);
+			_xTree = asNumber(-165);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
-			_xTree = asNumber(205);
+			_xTree = asNumber(225);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
-			_xTree = asNumber(-65);
+			_xTree = asNumber(-85);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
-			_xTree = asNumber(255);
+			_xTree = asNumber(275);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
 		}
@@ -145,7 +145,7 @@ otherwise => sides */
 			_xTree = asNumber(-165);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
-			_xTree = asNumber(155);
+			_xTree = asNumber(165);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
 		}
@@ -158,7 +158,7 @@ otherwise => sides */
 			_xTree = asNumber(-165);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
-			_xTree = asNumber(255);
+			_xTree = asNumber(275);
 			propertyChanged("_xTree", _xTree);
 			_customEvent_dropTree();
 		}

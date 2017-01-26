@@ -160,6 +160,8 @@
         <snippets>
             <s enabled="false" id="129">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="0.0"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
             <s enabled="true" id="4">
                 <prop id="2147483647" list="0" val="thisactor"/>
