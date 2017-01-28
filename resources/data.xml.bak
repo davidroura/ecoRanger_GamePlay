@@ -23,13 +23,13 @@
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="213" id="73" name="bridge" shared="false" width="320">
-        <anim across="1" down="1" durations="100" height="213" id="0" loop="true" name="left" numframes="1" originx="160" originy="76" sync="false" version="2" width="320">
-            <poly data="4,0,68,2,111,44,110,43,68" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="true"/>
-            <poly data="4,112,69,113,109,318,180,322,113" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="213" id="0" loop="true" name="left" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
+            <poly data="4,0,68,2,111,36,113,47,74" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="true"/>
+            <poly data="4,111,81,123,112,318,180,322,113" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="213" id="1" loop="true" name="right" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
-            <poly data="4,-1,78,2,131,152,120,151,85" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="4,215,83,214,122,320,114,318,44" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+            <poly data="4,-1,78,2,131,144,122,148,94" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,213,91,223,122,320,114,318,44" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="69" name="buildCompleteBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
@@ -71,6 +71,12 @@
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="87" loop="true" name="CollectTrashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="130" fixedrot="false" fric="0.2" gid="2" id="198" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="communicationBox" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="199" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="128" id="199" name="communicationBox" shared="false" width="142">
+        <anim across="1" down="1" durations="100" height="128" id="0" loop="true" name="Animation 0" numframes="1" originx="71" originy="64" sync="false" version="2" width="142"/>
+    </sprite>
     <music atlasID="0" desc="" id="88" loop="true" name="crashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="56" name="dozerButton" shared="false" width="160">
         <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="windTunnel" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
@@ -117,6 +123,11 @@
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="6" name="emptyRoom" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="53" name="endShotBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
+    <custom-block blocktag="custom-197" blocktype="NORMAL" code="cast(.say(&quot;ActorEvents_182&quot;, &quot;_customBlock_findInList&quot;, [, ]), Float)" desc="" global="false" gui="Find index of %1 in %2" id="197" message="findInList" name="findInList" oid="-1" return="number" shared="false" snippetID="124">
+        <blank name="Self" order="0" type="actor"/>
+        <blank name="searchItem" order="1" type="text"/>
+        <blank name="searchList" order="2" type="list"/>
+    </custom-block>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="239" id="117" name="fuelBar" shared="false" width="15">
         <anim across="1" down="1" durations="100" height="239" id="0" loop="true" name="Animation 0" numframes="1" originx="7" originy="237" sync="false" version="2" width="15"/>
     </sprite>
@@ -156,7 +167,7 @@
             <poly data="4,0,0,61,0,61,80,0,80" density="0.1" fric="0.2" gid="0" id="0" name="dirt" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="1" fixedrot="true" fric="1.0" gid="0" id="1" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_spaceShip" oid="-1" pausable="true" physicsMode="0" rest="0.05" shared="false" sprite="2" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="1.0" gid="0" id="1" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_spaceShip" oid="-1" pausable="true" physicsMode="0" rest="0.05" shared="false" sprite="2" static="false">
         <snippets>
             <s enabled="false" id="129">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -719,20 +730,20 @@
         <anim across="1" down="1" durations="100" height="475" id="1" loop="false" name="2" numframes="1" originx="119" originy="240" sync="false" version="2" width="220">
             <poly data="4,44,291,192,127,123,48,72,97" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
             <poly data="3,42,224,90,339,166,240" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
-            <poly data="3,113,304,47,460,161,466" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
+            <poly data="4,111,331,56,446,121,478,148,430" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="479" id="2" loop="false" name="3" numframes="1" originx="156" originy="240" sync="false" version="2" width="233">
             <poly data="4,118,324,196,242,135,75,41,122" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="4,44,405,49,468,196,458,129,276" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+            <poly data="5,44,450,119,484,178,437,129,276,73,319" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="478" id="3" loop="false" name="4" numframes="1" originx="137" originy="240" sync="false" version="2" width="214">
-            <poly data="4,150,305,56,462,145,468,175,300" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="5,107,28,38,149,83,350,163,326,175,176" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+            <poly data="5,110,369,65,440,129,466,166,397,167,304" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="5,107,28,47,191,72,334,160,363,175,176" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="478" id="4" loop="false" name="5" numframes="1" originx="137" originy="240" sync="false" version="2" width="237">
             <poly data="4,108,39,189,67,133,286,77,101" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
             <poly data="4,43,313,141,416,173,386,205,254" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
-            <poly data="3,117,389,134,472,189,458" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
+            <poly data="4,121,448,146,478,183,452,148,384" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="445" id="5" loop="false" name="6" numframes="1" originx="118" originy="240" sync="false" version="2" width="236">
             <poly data="4,128,48,36,145,121,316,210,87" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>

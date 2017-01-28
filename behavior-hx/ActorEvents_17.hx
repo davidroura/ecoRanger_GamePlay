@@ -85,8 +85,8 @@ class ActorEvents_17 extends ActorScript
 		/* ======================== When Creating ========================= */
 		createRecycledActor(getActorType(153), (actor.getX() - 120), (actor.getY() - 15), Script.FRONT);
 		actor.growTo(5/100, 5/100, 0, Linear.easeNone);
-		actor.growTo(115/100, 115/100, .8, Linear.easeNone);
-		actor.growTo(100/100, 100/100, .4, Linear.easeNone);
+		actor.growTo(115/100, 115/100, .5, Linear.easeNone);
+		actor.growTo(100/100, 100/100, .3, Linear.easeNone);
 		
 	}
 	

@@ -95,24 +95,6 @@ class SceneEvents_7 extends SceneScript
 			}
 		});
 		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(1), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
-			}
-		});
-		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
 		{

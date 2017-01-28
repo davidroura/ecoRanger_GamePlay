@@ -386,16 +386,6 @@ class Design_8_8_playerHealth extends SceneScript
 			}
 		});
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(_funFactCard, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				recycleActor(_funFactCard);
-				_customEvent_unpaused();
-			}
-		});
-		
 		/* ========================= Type & Type ========================== */
 		addSceneCollisionListener(getActorType(1).ID, getActorType(8).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
@@ -459,6 +449,7 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
+				/* see what happens if you change it to only once per collision */
 				if(!(Engine.engine.getGameAttribute("gadgetPower2")))
 				{
 					_boostSpeed = asNumber(0);

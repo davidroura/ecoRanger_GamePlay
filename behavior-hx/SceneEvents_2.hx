@@ -141,6 +141,7 @@ class SceneEvents_2 extends SceneScript
 			if(wrapper.enabled && Input.swipedRight)
 			{
 				switchScene(GameModel.get().scenes.get(3).getID(), null, createSlideLeftTransition(0.1));
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		
@@ -150,6 +151,7 @@ class SceneEvents_2 extends SceneScript
 			if(wrapper.enabled && Input.swipedLeft)
 			{
 				switchScene(GameModel.get().scenes.get(7).getID(), null, createSlideRightTransition(0.1));
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		

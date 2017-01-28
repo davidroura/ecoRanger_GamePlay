@@ -92,7 +92,7 @@
                     </not>
                 </if>
                 <setanim comment="false" x="26" y="381">
-                    <ACTOR eid="12" id="0"/>
+                    <ACTOR eid="15" id="0"/>
                     <get-item comment="false" id="1" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
@@ -314,45 +314,36 @@
             <group eventID="14" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="14" id="-1">
-                        <dolater comment="false" x="37" y="70">
+                        <create-actor3 comment="false" x="37" y="70">
+                            <actortype eid="15" id="0"/>
+                            <int id="1" val="200"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <dolater comment="false" x="37" y="97">
                             <group eventID="14" id="-1">
-                                <create-actor3 comment="false" x="48" y="97">
-                                    <actortype eid="15" id="0"/>
-                                    <int id="1" val="200"/>
-                                    <int id="2" val="0"/>
-                                    <int id="3" val="0"/>
-                                </create-actor3>
-                            </group>
-                            <int id="0" val="1.5"/>
-                            <ACTOR eid="lastcreated" id="2"/>
-                        </dolater>
-                        <dolater comment="false" x="37" y="136">
-                            <group eventID="14" id="-1">
-                                <set-game-val-47 comment="false" x="48" y="163">
+                                <set-game-val-47 comment="false" x="48" y="124">
                                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-47>
-                                <set-game-val-3 comment="false" x="48" y="188">
-                                    <int id="0" val="6"/>
-                                </set-game-val-3>
-                                <set-game-val-75 comment="false" x="48" y="208">
+                                <set-game-val-75 comment="false" x="48" y="149">
                                     <int id="0" val="GET TRASH"/>
                                 </set-game-val-75>
                             </group>
                             <int id="0" val="1.8"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="240">
+                        <dolater comment="false" x="37" y="181">
                             <group eventID="14" id="-1">
-                                <set-game-val-3 comment="false" x="48" y="267">
+                                <set-game-val-3 comment="false" x="48" y="208">
                                     <get-game-val-47 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-3>
                             </group>
                             <int id="0" val="4"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="304">
+                        <dolater comment="false" x="37" y="245">
                             <group eventID="14" id="-1">
-                                <create-actor3 comment="false" x="48" y="331">
+                                <create-actor3 comment="false" x="48" y="272">
                                     <actortype eid="10" id="0"/>
                                     <int id="1" val="100"/>
                                     <int id="2" val="0"/>
@@ -362,33 +353,33 @@
                             <int id="0" val="5"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="370">
+                        <dolater comment="false" x="37" y="311">
                             <group eventID="14" id="-1">
-                                <set-game-val-47 comment="false" x="48" y="397">
+                                <set-game-val-47 comment="false" x="48" y="338">
                                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-47>
-                                <set-game-val-3 comment="false" x="48" y="422">
+                                <set-game-val-3 comment="false" x="48" y="363">
                                     <int id="0" val="6"/>
                                 </set-game-val-3>
-                                <set-game-val-75 comment="false" x="48" y="442">
+                                <set-game-val-75 comment="false" x="48" y="383">
                                     <int id="0" val="COLLECT WASTE"/>
                                 </set-game-val-75>
                             </group>
                             <int id="0" val="5.5"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="474">
+                        <dolater comment="false" x="37" y="415">
                             <group eventID="14" id="-1">
-                                <set-game-val-3 comment="false" x="48" y="501">
+                                <set-game-val-3 comment="false" x="48" y="442">
                                     <get-game-val-47 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-3>
                             </group>
                             <int id="0" val="7.5"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="538">
+                        <dolater comment="false" x="37" y="479">
                             <group eventID="14" id="-1">
-                                <create-actor3 comment="false" x="48" y="565">
+                                <create-actor3 comment="false" x="48" y="506">
                                     <actortype eid="145" id="0"/>
                                     <int id="1" val="150"/>
                                     <int id="2" val="0"/>
@@ -398,33 +389,33 @@
                             <int id="0" val="8.5"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="604">
+                        <dolater comment="false" x="37" y="545">
                             <group eventID="14" id="-1">
-                                <set-game-val-47 comment="false" x="48" y="631">
+                                <set-game-val-47 comment="false" x="48" y="572">
                                     <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-47>
-                                <set-game-val-75 comment="false" x="48" y="656">
+                                <set-game-val-75 comment="false" x="48" y="597">
                                     <int id="0" val="WATCH OUT!"/>
                                 </set-game-val-75>
-                                <set-game-val-3 comment="false" x="48" y="676">
+                                <set-game-val-3 comment="false" x="48" y="617">
                                     <int id="0" val="6"/>
                                 </set-game-val-3>
                             </group>
                             <int id="0" val="9"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="708">
+                        <dolater comment="false" x="37" y="649">
                             <group eventID="14" id="-1">
-                                <set-game-val-3 comment="false" x="48" y="735">
+                                <set-game-val-3 comment="false" x="48" y="676">
                                     <get-game-val-47 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-3>
                             </group>
                             <int id="0" val="10"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="772">
+                        <dolater comment="false" x="37" y="713">
                             <group eventID="14" id="-1">
-                                <set-game-val-26 comment="false" x="48" y="799">
+                                <set-game-val-26 comment="false" x="48" y="740">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-26>
                             </group>
@@ -439,6 +430,40 @@
             </group>
             <int id="0" val="tutorial"/>
         </event-custom>
+    </group>
+    <group eventID="14" id="3">
+        <dolater comment="false" x="644" y="550">
+            <group eventID="14" id="-1">
+                <comment-short comment="false" x="655" y="577">
+                    <int id="0" val="this box should say someting like &amp;quot;Glad you could make it. Pick up as much trash as you can&amp;quot;"/>
+                </comment-short>
+                <set-game-val-3 comment="false" x="655" y="597">
+                    <int id="0" val="6"/>
+                </set-game-val-3>
+                <create-actor3 comment="false" x="655" y="617">
+                    <actortype eid="198" id="0"/>
+                    <div comment="false" id="1" x="0" y="0">
+                        <screen-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </screen-wh>
+                        <int id="1" val="2"/>
+                    </div>
+                    <div comment="false" id="2" x="0" y="0">
+                        <screen-wh comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </screen-wh>
+                        <int id="1" val="2"/>
+                    </div>
+                    <int id="3" val="0"/>
+                </create-actor3>
+            </group>
+            <int id="0" val="3"/>
+            <ACTOR eid="lastcreated" id="2"/>
+        </dolater>
+        <if comment="false" x="644" y="674">
+            <group eventID="14" id="-1"/>
+            <get-game-val-84 comment="false" id="0" x="0" y="0"/>
+        </if>
     </group>
     <group eventID="14" id="-1"/>
     <group eventID="16" id="0">

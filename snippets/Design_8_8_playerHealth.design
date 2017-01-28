@@ -538,18 +538,21 @@
     <group eventID="25" id="0">
         <event-collide-typetotype comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <if comment="false" x="26" y="47">
+                <comment-short comment="false" x="26" y="47">
+                    <int id="0" val="see what happens if you change it to only once per collision"/>
+                </comment-short>
+                <if comment="false" x="26" y="67">
                     <group eventID="25" id="-1">
-                        <set-val-8-16 comment="false" x="37" y="77">
+                        <set-val-8-16 comment="false" x="37" y="97">
                             <int id="0" val="0"/>
                         </set-val-8-16>
-                        <set-game-val-3 comment="false" x="37" y="97">
+                        <set-game-val-3 comment="false" x="37" y="117">
                             <times comment="false" id="0" x="0" y="0">
                                 <get-game-val-76 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val=".3"/>
                             </times>
                         </set-game-val-3>
-                        <set-bg-speed comment="false" x="37" y="127">
+                        <set-bg-speed comment="false" x="37" y="147">
                             <int id="0" val="1"/>
                             <int id="1" val="bgLong"/>
                             <get-game-val-22 comment="false" id="2" x="0" y="0"/>
@@ -783,18 +786,23 @@
     </group>
     <group eventID="30" id="-1"/>
     <group eventID="31" id="0">
-        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+        <event-mouse-enter-exit-actor comment="false" x="13" y="38">
             <group eventID="31" id="-1">
-                <die comment="false" x="26" y="42">
-                    <ACTOR eid="var" id="0" vid="23"/>
-                </die>
-                <say-this comment="false" x="26" y="69">
-                    <int id="0" val="unpaused"/>
-                </say-this>
+                <comment-long comment="false" x="24" y="65">
+                    <int id="0" val="disabled this function. It makes an error in log that says &amp;quot;cannot add listener function to null actor&amp;quot;"/>
+                </comment-long>
             </group>
             <ACTOR eid="var" id="0" vid="23"/>
             <int id="1" val="0"/>
         </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="31" id="1">
+        <die comment="false" x="23" y="171">
+            <ACTOR eid="var" id="0" vid="23"/>
+        </die>
+        <say-this comment="false" x="23" y="198">
+            <int id="0" val="unpaused"/>
+        </say-this>
     </group>
     <group eventID="31" id="-1"/>
 </groups>

@@ -37,7 +37,7 @@
                                     </getanim>
                                 </tostring>
                                 <int id="1" val="On"/>
-                                <int id="2" val="Off"/>
+                                <int id="2" val=""/>
                             </str-replace>
                         </setanim>
                         <comment-short comment="false" x="37" y="245">
@@ -45,7 +45,7 @@
                         </comment-short>
                         <replace-list comment="false" x="37" y="265">
                             <get-game-val-79 comment="false" id="0" x="0" y="0"/>
-                            <custom-198 comment="false" id="1" x="0" y="0">
+                            <custom-197 comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <str-replace comment="false" id="1" x="0" y="0">
                                     <tostring comment="false" id="0" x="0" y="0">
@@ -57,7 +57,7 @@
                                     <int id="2" val=""/>
                                 </str-replace>
                                 <get-game-val-79 comment="false" id="2" x="0" y="0"/>
-                            </custom-198>
+                            </custom-197>
                             <int id="2" val="none"/>
                         </replace-list>
                         <set-game-val-80 comment="false" x="37" y="321">
@@ -90,11 +90,11 @@
                         </print>
                         <replace-list comment="false" x="37" y="501">
                             <get-game-val-79 comment="false" id="0" x="0" y="0"/>
-                            <custom-198 comment="false" id="1" x="0" y="0">
+                            <custom-197 comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                                 <int id="1" val="none"/>
                                 <get-game-val-79 comment="false" id="2" x="0" y="0"/>
-                            </custom-198>
+                            </custom-197>
                             <str-replace comment="false" id="2" x="0" y="0">
                                 <tostring comment="false" id="0" x="0" y="0">
                                     <getanim comment="false" id="0" x="0" y="0">
@@ -174,65 +174,55 @@
         </step>
     </group>
     <group eventID="2" id="-1"/>
-    <group eventID="4" id="0">
-        <receiver-2-198 comment="false" x="15" y="15">
-            <group eventID="4" id="-1">
-                <set-val-124-2 comment="false" x="26" y="45">
-                    <int id="0" val="0"/>
-                </set-val-124-2>
-                <for-each comment="false" x="26" y="65">
-                    <group eventID="4" id="-1">
-                        <if comment="false" x="37" y="90">
-                            <group eventID="4" id="-1">
-                                <print comment="false" x="48" y="120">
-                                    <str-combine comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="found "/>
-                                        <get-byobval-124-198-1 comment="false" id="1" x="0" y="0"/>
-                                    </str-combine>
-                                </print>
-                                <return comment="false" x="48" y="150">
+    <group eventID="3" id="0">
+        <receiver-1-197 comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <for-each comment="false" x="26" y="45">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="70">
+                            <group eventID="3" id="-1">
+                                <return comment="false" x="48" y="100">
                                     <get-val-124-2 comment="false" id="0" x="0" y="0"/>
                                 </return>
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
-                                <get-byobval-124-198-1 comment="false" id="0" x="0" y="0"/>
-                                <for-each-item comment="false" id="1" x="0" y="0"/>
+                                <for-each-item comment="false" id="0" x="0" y="0"/>
+                                <get-byobval-124-197-1 comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
-                        <set-val-124-2 comment="false" x="37" y="187">
+                        <set-val-124-2 comment="false" x="37" y="137">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-124-2 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </plus>
                         </set-val-124-2>
                     </group>
-                    <get-byobval-124-198-2 comment="false" id="0" x="0" y="0"/>
+                    <get-byobval-124-197-2 comment="false" id="0" x="0" y="0"/>
                 </for-each>
-                <print comment="false" x="26" y="229">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="didn&amp;apos;t find "/>
-                        <get-byobval-124-198-1 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                </print>
-                <return comment="false" x="26" y="259">
+                <return comment="false" x="26" y="179">
                     <int id="0" val="-1"/>
                 </return>
             </group>
-            <int id="0" val=""/>
-            <get-byobval-124-198-1 comment="false" id="1" x="0" y="0"/>
-            <get-byobval-124-198-2 comment="false" id="2" x="0" y="0"/>
-        </receiver-2-198>
+            <get-byobval-124-197-0 comment="false" id="0" x="0" y="0"/>
+            <get-byobval-124-197-1 comment="false" id="1" x="0" y="0"/>
+            <get-byobval-124-197-2 comment="false" id="2" x="0" y="0"/>
+        </receiver-1-197>
     </group>
-    <group eventID="4" id="-1"/>
-    <group eventID="5" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="5" id="-1">
-                <set-val-124-1 comment="false" x="26" y="40">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-124-1>
-            </group>
-            <int id="0" val="turnOn"/>
-        </event-custom>
+    <group eventID="3" id="3">
+        <print comment="false" x="104" y="375">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="item to find "/>
+                <int id="1" val=""/>
+            </str-combine>
+        </print>
     </group>
-    <group eventID="5" id="-1"/>
+    <group eventID="3" id="4">
+        <print comment="false" x="83" y="302">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="looking at "/>
+                <for-each-item comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+        </print>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>

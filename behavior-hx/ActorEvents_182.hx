@@ -72,33 +72,21 @@ import com.stencyl.graphics.shaders.BloomShader;
 class ActorEvents_182 extends ActorScript
 {
 	public var _buttonOn:Bool;
-	public var _counter:Float;
-	public var _listCounter:Float;
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_turnOn():Void
-	{
-		_buttonOn = true;
-		propertyChanged("_buttonOn", _buttonOn);
-	}
+	public var _searchIndex:Float;
 	
 	/* ========================= Custom Block ========================= */
-	public function _customBlock_FindInList(__searchItem:String, __inputList:Array<Dynamic>):Float
+	public function _customBlock_findInList(__searchItem:String, __searchList:Array<Dynamic>):Float
 	{
 		var __Self:Actor = actor;
-		_counter = asNumber(0);
-		propertyChanged("_counter", _counter);
-		for(item in cast(__inputList, Array<Dynamic>))
+		for(item in cast(__searchList, Array<Dynamic>))
 		{
-			if((__searchItem == item))
+			if((item == __searchItem))
 			{
-				trace("" + (("" + "found ") + ("" + __searchItem)));
-				return _counter;
+				return _searchIndex;
 			}
-			_counter = asNumber((_counter + 1));
-			propertyChanged("_counter", _counter);
+			_searchIndex = asNumber((_searchIndex + 1));
+			propertyChanged("_searchIndex", _searchIndex);
 		}
-		trace("" + (("" + "didn't find ") + ("" + __searchItem)));
 		return -1;
 	}
 	
@@ -108,10 +96,8 @@ class ActorEvents_182 extends ActorScript
 		super(actor);
 		nameMap.set("buttonOn", "_buttonOn");
 		_buttonOn = false;
-		nameMap.set("counter", "_counter");
-		_counter = 0.0;
-		nameMap.set("listCounter", "_listCounter");
-		_listCounter = 0.0;
+		nameMap.set("searchIndex", "_searchIndex");
+		_searchIndex = 0.0;
 		
 	}
 	
@@ -130,9 +116,9 @@ class ActorEvents_182 extends ActorScript
 					/* button turns OFF and it's replaced from bot list with "none" */
 					trace("" + "button turned Off");
 					trace("" + (("" + "clicked on bot ") + ("" + actor.getAnimation())));
-					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "")));
 					/* find index of bots name and replace it with "none" */
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_FindInList", [StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "")), Engine.engine.getGameAttribute("selectedBotList")]), Float))] = "none";
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_findInList", [StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "")), Engine.engine.getGameAttribute("selectedBotList")]), Float))] = "none";
 					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") - 1));
 					_buttonOn = false;
 					propertyChanged("_buttonOn", _buttonOn);
@@ -142,7 +128,7 @@ class ActorEvents_182 extends ActorScript
 					/* button turns ON and it's added to bot list */
 					trace("" + "button turned On");
 					trace("" + (("" + "clicked on bot") + ("" + actor.getAnimation())));
-					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_FindInList", ["none", Engine.engine.getGameAttribute("selectedBotList")]), Float))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
+					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_findInList", ["none", Engine.engine.getGameAttribute("selectedBotList")]), Float))] = StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + ""));
 					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "On")));
 					_buttonOn = true;
 					propertyChanged("_buttonOn", _buttonOn);
