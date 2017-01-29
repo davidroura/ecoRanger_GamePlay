@@ -163,7 +163,7 @@
                             <int id="0" val="0"/>
                             <times comment="false" id="1" x="0" y="0">
                                 <get-game-val-74 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="6"/>
+                                <int id="1" val="4"/>
                             </times>
                         </roundnew>
                     </tostring>

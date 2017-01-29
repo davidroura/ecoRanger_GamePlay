@@ -321,29 +321,11 @@ class Design_8_8_playerHealth extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				if((Engine.engine.getGameAttribute("playerHealth") >= 0))
+				if(Engine.engine.getGameAttribute("debugText"))
 				{
-					if((Engine.engine.getGameAttribute("playerHealth") < 30))
-					{
-						if(!(_warning))
-						{
-							g.setFont(getFont(20));
-							g.drawString("" + "Low Fuel!!!", 150, 200);
-							runLater(1000 * 1, function(timeTask:TimedTask):Void
-							{
-								_warning = true;
-								propertyChanged("_warning", _warning);
-							}, null);
-						}
-					}
-					else
-					{
-						_warning = false;
-						propertyChanged("_warning", _warning);
-					}
+					g.setFont(getFont(114));
+					g.drawString("" + Engine.engine.getGameAttribute("sceneSpeed"), 100, 100);
 				}
-				g.setFont(getFont(114));
-				g.drawString("" + Engine.engine.getGameAttribute("sceneSpeed"), 100, 100);
 			}
 		});
 		

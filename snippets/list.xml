@@ -11,6 +11,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempNumber" hidden="false" id="8" name="_tempNumber" order="7"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempDistanceNum" hidden="false" id="9" name="_tempDistanceNum" order="8"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentSpeed" hidden="false" id="10" name="_currentSpeed" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="lowFuel" hidden="false" id="11" name="_lowFuel" order="10"/>
         <blocks>
             <receiver blockID="191" id="1"/>
             <receiver blockID="196" id="2"/>
@@ -763,7 +764,9 @@
     </snippet>
     <snippet actorid="175" attachedevent="true" class="scripts.ActorEvents_175" classname="scripts.ActorEvents_175" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="120" name="ActorEvents_175" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="178" attachedevent="true" class="scripts.ActorEvents_178" classname="scripts.ActorEvents_178" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="121" name="ActorEvents_178" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>

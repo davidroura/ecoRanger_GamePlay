@@ -403,7 +403,7 @@ otherwise => sides */
 	public function _customEvent_treeType():Void
 	{
 		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		getLastCreatedActor().setAnimation("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 6))));
+		getLastCreatedActor().setAnimation("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4))));
 	}
 	
 	

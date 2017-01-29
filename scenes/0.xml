@@ -16,7 +16,7 @@
     <terrainRegions/>
     <actors>
         <actor a="0.8243408" aid="1" c="false" group="0" id="1" name="spaceShip 1" sx="1.0" sy="1.0" x="135" y="317" z="0"/>
-        <actor a="0.0" aid="5" c="false" group="3" id="116" name="fuelBar 5" sx="1.0" sy="1.2033899" x="305" y="175" z="5"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="116" name="fuelBar 5" sx="1.0" sy="0.9747899" x="305" y="149" z="5"/>
         <actor a="0.0" aid="7" c="false" group="7" id="70" name="gItem_tree 7" sx="1.0" sy="1.0" x="263" y="-238" z="0"/>
         <actor a="0.0" aid="9" c="false" group="7" id="70" name="gItem_tree 9" sx="1.0" sy="1.0" x="-146" y="-435" z="0"/>
         <actor a="0.0" aid="10" c="false" group="7" id="70" name="gItem_tree 10" sx="1.0" sy="1.0" x="-63" y="-15" z="0"/>

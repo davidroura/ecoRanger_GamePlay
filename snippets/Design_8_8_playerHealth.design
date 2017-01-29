@@ -5,59 +5,17 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <if comment="false" x="37" y="70">
-                            <group eventID="1" id="-1">
-                                <if comment="false" x="48" y="100">
-                                    <group eventID="1" id="-1">
-                                        <set-font-new comment="false" x="59" y="130">
-                                            <font eid="20" id="0"/>
-                                        </set-font-new>
-                                        <draw-text comment="false" x="59" y="157">
-                                            <int id="0" val="Low Fuel!!!"/>
-                                            <int id="1" val="150"/>
-                                            <int id="2" val="200"/>
-                                        </draw-text>
-                                        <dolater comment="false" x="59" y="177">
-                                            <group eventID="1" id="-1">
-                                                <set-val-8-4 comment="false" x="70" y="204">
-                                                    <true comment="false" id="0" x="0" y="0"/>
-                                                </set-val-8-4>
-                                            </group>
-                                            <int id="0" val="1"/>
-                                            <ACTOR eid="lastcreated" id="2"/>
-                                        </dolater>
-                                    </group>
-                                    <not comment="false" id="0" x="0" y="0">
-                                        <get-val-8-4 comment="false" id="0" x="0" y="0"/>
-                                    </not>
-                                </if>
-                            </group>
-                            <less comment="false" id="0" x="0" y="0">
-                                <get-game-val-28 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="30"/>
-                            </less>
-                        </if>
-                        <else comment="false" x="37" y="265">
-                            <group eventID="1" id="-1">
-                                <set-val-8-4 comment="false" x="48" y="285">
-                                    <false comment="false" id="0" x="0" y="0"/>
-                                </set-val-8-4>
-                            </group>
-                        </else>
+                        <set-font-new comment="false" x="37" y="65">
+                            <font eid="114" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="92">
+                            <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="100"/>
+                            <int id="2" val="100"/>
+                        </draw-text>
                     </group>
-                    <moreeq comment="false" id="0" x="0" y="0">
-                        <get-game-val-28 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </moreeq>
+                    <get-game-val-34 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <set-font-new comment="false" x="26" y="334">
-                    <font eid="114" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="361">
-                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="100"/>
-                    <int id="2" val="100"/>
-                </draw-text>
             </group>
         </draw>
     </group>
