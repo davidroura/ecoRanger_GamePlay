@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_17 extends ActorScript
+class ActorEvents_175 extends ActorScript
 {
 	
 	
@@ -83,10 +83,10 @@ class ActorEvents_17 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		createRecycledActor(getActorType(153), (actor.getX() - 120), (actor.getY() - 15), Script.FRONT);
-		actor.growTo(5/100, 5/100, 0, Linear.easeNone);
-		actor.growTo(135/100, 135/100, .2, Linear.easeNone);
-		actor.growTo(95/100, 95/100, .1, Linear.easeNone);
+		runLater(1000 * 3, function(timeTask:TimedTask):Void
+		{
+			recycleActor(actor);
+		}, actor);
 		
 	}
 	

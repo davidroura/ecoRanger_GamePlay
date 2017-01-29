@@ -12,6 +12,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="tempDistanceNum" hidden="false" id="9" name="_tempDistanceNum" order="8"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentSpeed" hidden="false" id="10" name="_currentSpeed" order="9"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="lowFuel" hidden="false" id="11" name="_lowFuel" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="distanceHighReached" hidden="false" id="12" name="_distanceHighReached" order="11"/>
         <blocks>
             <receiver blockID="191" id="1"/>
             <receiver blockID="196" id="2"/>
@@ -258,7 +259,6 @@
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="audobonMess" enabled="true" id="2" name="event-custom" order="4" repeats="true"/>
             <event displayName="newsRoom" enabled="true" id="3" name="event-custom" order="5" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="5" name="event-mouse-enter-exit-region" order="2" repeats="true"/>
             <event displayName="introHQBG" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
             <event displayName="removeAllBG" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
             <event displayName="exit" enabled="true" id="8" name="event-mouse-enter-exit-region" order="8" repeats="true"/>

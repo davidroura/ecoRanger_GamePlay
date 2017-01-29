@@ -118,7 +118,7 @@ class SceneEvents_5 extends SceneScript
 		playSoundOnChannel(getSound(78), Std.int(0));
 		setVolumeForAllSounds(20/100);
 		/* after a few seconds you can switch the conversation, we will also implement an exit comfirmation notification */
-		runLater(1000 * 4, function(timeTask:TimedTask):Void
+		runLater(1000 * 2, function(timeTask:TimedTask):Void
 		{
 			Engine.engine.setGameAttribute("presentationWatched", true);
 		}, null);
@@ -147,7 +147,7 @@ class SceneEvents_5 extends SceneScript
 				if(Engine.engine.getGameAttribute("presentationWatched"))
 				{
 					stopSoundOnChannel(Std.int(0));
-					switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideUpTransition(.5));
+					switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(.2));
 				}
 			}
 		});

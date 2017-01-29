@@ -145,13 +145,13 @@
             <int id="1" val="2"/>
         </event-mouse-enter-exit-actor>
     </group>
-    <group eventID="1" id="13">
+    <group eventID="1" id="1">
         <get-dxy comment="false" x="77" y="979">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="1"/>
         </get-dxy>
     </group>
-    <group eventID="1" id="14">
+    <group eventID="1" id="2">
         <while comment="false" x="154" y="847">
             <group eventID="1" id="-1"/>
             <less comment="false" id="0" x="0" y="0">
@@ -160,7 +160,7 @@
             </less>
         </while>
     </group>
-    <group eventID="1" id="15">
+    <group eventID="1" id="3">
         <set-xy comment="false" x="303" y="932">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="1"/>
