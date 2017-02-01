@@ -178,13 +178,17 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_accelerometerControl():Void
 	{
+		if(((Input.accelX > 0.05) || (-0.05 > Input.accelX)))
+		{
+			actor.setXVelocity((-65 * Input.accelX));
+		}
 		if((Input.accelX > 0.05))
 		{
-			_customEvent_accelLeft();
+			_customEvent_left();
 		}
-		else if((-0.05 > Input.accelX))
+		if((-0.05 > Input.accelX))
 		{
-			_customEvent_accelRight();
+			_customEvent_right();
 		}
 	}
 	
@@ -199,7 +203,7 @@ class Design_7_7_movement extends ActorScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_accelLeft():Void
 	{
-		actor.setX((actor.getX() - 1.7));
+		actor.setX((actor.getX() - 1.5));
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		_customEvent_left();
 	}
@@ -441,6 +445,9 @@ class Design_7_7_movement extends ActorScript
 					g.setFont(getFont(20));
 					g.drawString("" + (("" + "mouse down") + ("" + ("" + isMouseDown()))), 0, 0);
 				}
+				g.setFont(getFont(114));
+				g.drawString("" + (10 * Input.accelX), 50, 30);
+				g.drawString("" + (actor.getX() - (10 * Input.accelX)), 50, 50);
 			}
 		});
 		

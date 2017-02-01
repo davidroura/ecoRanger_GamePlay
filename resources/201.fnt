@@ -1,0 +1,16 @@
+#
+#Tue Jan 31 21:57:51 EST 2017
+style=plain
+alphabet=
+color=\#ffff99
+shadow.y=0
+family=Oswald-Regular.ttf
+shadow.x=0
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=all
+gradient.color=\#ffff00
+stroke.size=2
+antialias=true
+size=18
