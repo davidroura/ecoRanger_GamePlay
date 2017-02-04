@@ -180,7 +180,7 @@ class Design_7_7_movement extends ActorScript
 	{
 		if(((Input.accelX > 0.05) || (-0.05 > Input.accelX)))
 		{
-			actor.setXVelocity((-65 * Input.accelX));
+			actor.setXVelocity((-60 * Input.accelX));
 		}
 		if((Input.accelX > 0.05))
 		{

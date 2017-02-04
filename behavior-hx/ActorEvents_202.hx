@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_70 extends ActorScript
+class ActorEvents_202 extends ActorScript
 {
 	
 	
@@ -82,21 +82,25 @@ class ActorEvents_70 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		/* temporary for invisible Collision Box */
+		actor.fadeTo(0 / 100, 0, Linear.easeNone);
+		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(202), event.otherActor.getType(),event.otherActor.getGroup()))
+			if(wrapper.enabled && sameAsAny(getActorType(70), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				trace("" + "tree finds collision");
+				trace("" + "bridge colliding 2");
 			}
 		});
 		
 		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(70).ID, getActorType(202).ID, function(event:Collision, list:Array<Dynamic>):Void
+		addSceneCollisionListener(getActorType(202).ID, getActorType(70).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				trace("" + "tree finds collision 2");
+				trace("" + "bridge colliding");
 			}
 		});
 		

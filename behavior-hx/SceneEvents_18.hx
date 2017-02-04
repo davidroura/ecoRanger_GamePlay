@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,34 +70,38 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_70 extends ActorScript
+class SceneEvents_18 extends SceneScript
 {
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(202), event.otherActor.getType(),event.otherActor.getGroup()))
+			if(wrapper.enabled)
 			{
-				trace("" + "tree finds collision");
+				getActor(2).setXVelocity(5);
+				if((200 < getActor(2).getX()))
+				{
+					getActor(2).setX(0);
+				}
 			}
 		});
 		
 		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(70).ID, getActorType(202).ID, function(event:Collision, list:Array<Dynamic>):Void
+		addSceneCollisionListener(getActorType(202).ID, getActorType(70).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				trace("" + "tree finds collision 2");
+				trace("" + "in scene works collision");
 			}
 		});
 		

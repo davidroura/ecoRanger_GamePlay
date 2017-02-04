@@ -83,7 +83,6 @@
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
             <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="temprockDozeyCol" enabled="false" id="3" name="event-collide-actortotype" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_129_129_tilt" classname="scripts.Design_129_129_tilt" desc="" description="" design="true" drawOrder="0" id="129" name="tilt" oid="-1" package="scripts" shared="false" type="actor">
@@ -106,11 +105,26 @@
             <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_18" classname="scripts.SceneEvents_18" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="131" name="SceneEvents_18" oid="-1" package="scripts." sceneid="18" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="2" name="event-collide-typetotype" order="2" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_4_4_insideScreen" classname="scripts.Design_4_4_insideScreen" desc="" description="" design="true" drawOrder="0" id="4" name="insideScreen" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="202" attachedevent="true" class="scripts.ActorEvents_202" classname="scripts.ActorEvents_202" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="132" name="ActorEvents_202" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="3" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="3" name="event-collide-typetotype" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_2" classname="scripts.SceneEvents_2" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="5" name="SceneEvents_2" oid="-1" package="scripts." sceneid="2" shared="false" type="scene">
@@ -119,9 +133,10 @@
             <event displayName="Swipe-right" enabled="true" id="2" name="event-device-swipe" order="13" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="4" name="draw" order="11" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="12" repeats="true"/>
-            <event displayName="Swipe-left" enabled="true" id="6" name="event-device-swipe" order="14" repeats="true"/>
+            <event displayName="Swipe-left" enabled="true" id="6" name="event-device-swipe" order="15" repeats="true"/>
             <event displayName="playBPressed" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="playBReleased" enabled="true" id="10" name="event-mouse-enter-exit-actor" order="9" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="11" name="event-mouse-enter-exit-region" order="14" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">
@@ -399,7 +414,10 @@
     </snippet>
     <snippet actorid="70" attachedevent="true" class="scripts.ActorEvents_70" classname="scripts.ActorEvents_70" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="52" name="ActorEvents_70" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+            <event displayName="Type - Type" enabled="true" id="2" name="event-collide-typetotype" order="2" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="72" attachedevent="true" class="scripts.ActorEvents_72" classname="scripts.ActorEvents_72" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="54" name="ActorEvents_72" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
