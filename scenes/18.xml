@@ -8,7 +8,7 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="7" id="72" name="gItem_bridge 1" sx="1.0" sy="1.0" x="160" y="67" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="7" id="72" name="gItem_bridge 1" sx="1.0" sy="1.0" x="-75" y="57" z="0"/>
         <actor a="0.0" aid="2" c="false" group="7" id="70" name="gItem_tree 2" sx="1.0" sy="1.0" x="-85" y="-77" z="0"/>
     </actors>
     <snippets/>

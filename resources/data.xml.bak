@@ -22,14 +22,26 @@
             <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="213" id="73" name="bridge" shared="false" width="320">
-        <anim across="1" down="1" durations="100" height="213" id="0" loop="true" name="left" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
-            <poly data="4,0,68,2,111,36,113,47,74" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="4,111,81,123,112,318,180,322,113" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="102" id="73" name="bridge" shared="false" width="450">
+        <anim across="1" down="1" durations="100" height="102" id="0" loop="true" name="1" numframes="1" originx="160" originy="106" sync="false" version="2" width="450">
+            <poly data="4,-2,68,141,93,148,40,-3,2" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,287,61,279,18,455,18,455,46" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="213" id="1" loop="true" name="right" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
-            <poly data="4,-1,78,2,131,144,122,148,94" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
-            <poly data="4,213,91,223,122,320,114,318,44" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="201" id="1" loop="true" name="2" numframes="1" originx="160" originy="106" sync="false" version="2" width="450">
+            <poly data="4,-1,78,2,151,102,59,113,16" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="5,206,16,215,64,302,141,455,205,448,135" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="114" id="2" loop="true" name="3" numframes="1" originx="160" originy="106" sync="false" version="2" width="450">
+            <poly data="4,-1,49,247,105,254,66,-1,6" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,349,53,363,97,449,80,449,42" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="213" id="3" loop="true" name="4" numframes="1" originx="225" originy="146" sync="false" version="2" width="320">
+            <poly data="4,-6,62,-1,112,34,107,40,66" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,118,68,123,111,323,181,318,117" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="213" id="4" loop="true" name="5" numframes="1" originx="160" originy="106" sync="false" version="2" width="320">
+            <poly data="4,2,82,2,129,134,119,143,85" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+            <poly data="4,314,53,221,80,229,121,320,110" density="0.1" fric="0.2" gid="-1000" id="1" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="69" name="buildCompleteBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>

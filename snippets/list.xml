@@ -418,9 +418,7 @@
     </snippet>
     <snippet actorid="72" attachedevent="true" class="scripts.ActorEvents_72" classname="scripts.ActorEvents_72" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="54" name="ActorEvents_72" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-        </events>
+        <events/>
     </snippet>
     <snippet actorid="74" attachedevent="true" class="scripts.ActorEvents_74" classname="scripts.ActorEvents_74" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="55" name="ActorEvents_74" oid="-1" package="scripts." shared="false" type="actor">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="card" hidden="false" id="1" name="_card" order="0"/>
