@@ -82,24 +82,6 @@ class ActorEvents_70 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(202), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				trace("" + "tree finds collision");
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(70).ID, getActorType(202).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				trace("" + "tree finds collision 2");
-			}
-		});
-		
 	}
 	
 	override public function forwardMessage(msg:String)

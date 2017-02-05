@@ -1,27 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups>
-    <group eventID="1" id="0">
-        <event-collide-actortotype comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <print comment="false" x="26" y="47">
-                    <int id="0" val="tree finds collision"/>
-                </print>
-            </group>
-            <ACTOR eid="this" id="0"/>
-            <actortype eid="202" id="1"/>
-        </event-collide-actortotype>
-    </group>
-    <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-collide-typetotype comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <print comment="false" x="26" y="47">
-                    <int id="0" val="tree finds collision 2"/>
-                </print>
-            </group>
-            <actortype eid="70" id="0"/>
-            <actortype eid="202" id="1"/>
-        </event-collide-typetotype>
-    </group>
-    <group eventID="2" id="-1"/>
-</groups>
+<groups/>

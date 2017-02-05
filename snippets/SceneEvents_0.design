@@ -826,19 +826,7 @@
             <int id="0" val="play"/>
         </event-custom>
     </group>
-    <group eventID="21" id="1">
-        <print comment="false" x="694" y="243">
-            <str-combine comment="false" id="0" x="0" y="0">
-                <int id="0" val="distance "/>
-                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-            </str-combine>
-        </print>
-    </group>
     <group eventID="21" id="-1">
-        <and comment="false" x="591" y="347">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </and>
         <get-game-val-71 comment="false" x="330" y="515"/>
     </group>
 </groups>

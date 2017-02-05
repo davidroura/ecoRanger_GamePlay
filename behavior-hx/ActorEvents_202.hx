@@ -86,24 +86,6 @@ class ActorEvents_202 extends ActorScript
 		/* temporary for invisible Collision Box */
 		actor.fadeTo(0 / 100, 0, Linear.easeNone);
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(70), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				trace("" + "bridge colliding 2");
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(202).ID, getActorType(70).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				trace("" + "bridge colliding");
-			}
-		});
-		
 	}
 	
 	override public function forwardMessage(msg:String)
