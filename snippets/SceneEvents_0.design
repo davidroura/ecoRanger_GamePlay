@@ -835,10 +835,10 @@
         </print>
     </group>
     <group eventID="21" id="-1">
-        <get-game-val-71 comment="false" x="330" y="515"/>
         <and comment="false" x="591" y="347">
             <int id="0" val=""/>
             <int id="1" val=""/>
         </and>
+        <get-game-val-71 comment="false" x="330" y="515"/>
     </group>
 </groups>
