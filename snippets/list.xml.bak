@@ -139,6 +139,12 @@
             <event displayName="On Region" enabled="true" id="11" name="event-mouse-enter-exit-region" order="14" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="204" attachedevent="true" class="scripts.ActorEvents_204" classname="scripts.ActorEvents_204" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="133" name="ActorEvents_204" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="recXPos" hidden="false" id="1" name="_recXPos" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="recYPos" hidden="false" id="2" name="_recYPos" order="1"/>
@@ -354,7 +360,7 @@
     <snippet actorid="45" attachedevent="true" class="scripts.ActorEvents_45" classname="scripts.ActorEvents_45" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="39" name="ActorEvents_45" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
-            <event displayName="upgradeBReleased" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="upgradeBReleased" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="47" attachedevent="true" class="scripts.ActorEvents_47" classname="scripts.ActorEvents_47" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="40" name="ActorEvents_47" oid="-1" package="scripts." shared="false" type="actor">

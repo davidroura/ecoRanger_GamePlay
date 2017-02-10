@@ -3,81 +3,78 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <scene-shout comment="false" x="26" y="40">
-                    <int id="0" val="background"/>
-                </scene-shout>
-                <create-actor3 comment="false" x="26" y="60">
+                <create-actor3 comment="false" x="26" y="40">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="40"/>
                     <int id="2" val="100"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <say-this comment="false" x="26" y="87">
+                <say-this comment="false" x="26" y="67">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="107">
+                <create-actor3 comment="false" x="26" y="87">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="120"/>
                     <int id="2" val="100"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="134">
+                <setanim comment="false" x="26" y="114">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="dozeyOff"/>
                 </setanim>
-                <say-this comment="false" x="26" y="161">
+                <say-this comment="false" x="26" y="141">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="181">
+                <create-actor3 comment="false" x="26" y="161">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="100"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="208">
+                <setanim comment="false" x="26" y="188">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="planterOff"/>
                 </setanim>
-                <say-this comment="false" x="26" y="235">
+                <say-this comment="false" x="26" y="215">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="255">
+                <create-actor3 comment="false" x="26" y="235">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="40"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="282">
+                <setanim comment="false" x="26" y="262">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="suckerOff"/>
                 </setanim>
-                <say-this comment="false" x="26" y="309">
+                <say-this comment="false" x="26" y="289">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="329">
+                <create-actor3 comment="false" x="26" y="309">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="120"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="356">
+                <setanim comment="false" x="26" y="336">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <say-this comment="false" x="26" y="383">
+                <say-this comment="false" x="26" y="363">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
-                <create-actor3 comment="false" x="26" y="403">
+                <create-actor3 comment="false" x="26" y="383">
                     <actortype eid="182" id="0"/>
                     <int id="1" val="200"/>
                     <int id="2" val="180"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="430">
+                <setanim comment="false" x="26" y="410">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="QuestionMark"/>
                 </setanim>
-                <say-this comment="false" x="26" y="457">
+                <say-this comment="false" x="26" y="437">
                     <int id="0" val="findInBotlist"/>
                 </say-this>
             </group>
