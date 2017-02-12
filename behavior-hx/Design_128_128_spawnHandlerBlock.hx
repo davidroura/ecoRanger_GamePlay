@@ -81,6 +81,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _xobstacle:Float;
 	public var _yobstacle:Float;
 	public var _bonusCard:Bool;
+	public var _ramdomBlockNumber:Float;
+	public var _itemNumber:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
@@ -445,11 +447,30 @@ otherwise => sides */
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropTrash():Void
 	{
-		createRecycledActorOnLayer(getActorType(15), _xobstacle, -5, 1, "" + "gamePlay");
+		_ramdomBlockNumber = asNumber(randomInt(Math.floor(1), Math.floor(3)));
+		propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
+		if((_ramdomBlockNumber == 1))
+		{
+			createRecycledActorOnLayer(getActorType(15), _xobstacle, -5, 1, "" + "gamePlay");
+			_itemNumber = asNumber(4);
+			propertyChanged("_itemNumber", _itemNumber);
+		}
+		else if((_ramdomBlockNumber == 2))
+		{
+			createRecycledActorOnLayer(getActorType(8), _xobstacle, -5, 1, "" + "gamePlay");
+			_itemNumber = asNumber(2);
+			propertyChanged("_itemNumber", _itemNumber);
+		}
+		else
+		{
+			createRecycledActorOnLayer(getActorType(104), _xobstacle, -5, 1, "" + "gamePlay");
+			_itemNumber = asNumber(3);
+			propertyChanged("_itemNumber", _itemNumber);
+		}
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 		getLastCreatedActor().setY(_yobstacle);
-		getLastCreatedActor().setAnimation("" + ("" + (Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4)));
+		getLastCreatedActor().setAnimation("" + ("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * _itemNumber)))));
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -508,6 +529,10 @@ otherwise => sides */
 		_yobstacle = 0.0;
 		nameMap.set("bonusCard", "_bonusCard");
 		_bonusCard = false;
+		nameMap.set("ramdomBlockNumber", "_ramdomBlockNumber");
+		_ramdomBlockNumber = 0;
+		nameMap.set("itemNumber", "_itemNumber");
+		_itemNumber = 0;
 		
 	}
 	

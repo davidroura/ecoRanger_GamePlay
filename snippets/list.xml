@@ -45,6 +45,8 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="xobstacle" hidden="false" id="7" name="_xobstacle" order="6"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yobstacle" hidden="false" id="8" name="_yobstacle" order="7"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="bonusCard" hidden="true" id="9" name="_bonusCard" order="8"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="ramdomBlockNumber" hidden="false" id="10" name="_ramdomBlockNumber" order="9"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="itemNumber" hidden="false" id="11" name="_itemNumber" order="10"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="2" repeats="true"/>
