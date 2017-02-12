@@ -109,7 +109,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 0.75 => Left
 otherwise => sides */
 		_customEvent_spawnTrees();
-		if((Engine.engine.getGameAttribute("playerDistance") < 600))
+		if((Engine.engine.getGameAttribute("playerDistance") < 1000))
 		{
 			_customEvent_spawnObstacle1();
 		}
@@ -124,24 +124,17 @@ otherwise => sides */
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
-			_xobstacle = asNumber(50);
+			_xobstacle = asNumber(100);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_spawnTrashRight();
 			_xobstacle = asNumber(200);
 			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-130);
+			_yobstacle = asNumber(-120);
 			propertyChanged("_yobstacle", _yobstacle);
-			if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.12))
-			{
-				_customEvent_spawnTrashLeft();
-			}
-			else
-			{
-				_customEvent_spawnTrashRight();
-			}
-			_xobstacle = asNumber(90);
+			_customEvent_spawnTrashLeft();
+			_xobstacle = asNumber(100);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-20);
 			propertyChanged("_yobstacle", _yobstacle);
@@ -159,7 +152,7 @@ otherwise => sides */
 			_yobstacle = asNumber(-16);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropLife();
-			_xobstacle = asNumber(100);
+			_xobstacle = asNumber(150);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-6);
 			propertyChanged("_yobstacle", _yobstacle);
@@ -172,12 +165,12 @@ otherwise => sides */
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
-			_xobstacle = asNumber(120);
+			_xobstacle = asNumber(150);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-16);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropLife();
-			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 100) + 70));
+			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 100) + 150));
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
@@ -471,17 +464,7 @@ otherwise => sides */
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropBridge():Void
 	{
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") > 0.75))
-		{
-			_xobstacle = asNumber(50);
-			propertyChanged("_xobstacle", _xobstacle);
-		}
-		else
-		{
-			_xobstacle = asNumber(0);
-			propertyChanged("_xobstacle", _xobstacle);
-		}
-		createRecycledActorOnLayer(getActorType(72), _xobstacle, -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(72), 0, -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 		getLastCreatedActor().setY(_yobstacle);
