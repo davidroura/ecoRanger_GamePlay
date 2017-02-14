@@ -89,7 +89,7 @@ class ActorEvents_45 extends ActorScript
 			{
 				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					createRecycledActor(getActorType(204), 30, 50, Script.FRONT);
+					createRecycledActor(getActorType(204), 8, 28, Script.FRONT);
 				}
 			}
 		});

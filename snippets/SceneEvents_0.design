@@ -228,83 +228,13 @@
                     <int id="2" val="290"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <print comment="false" x="26" y="321">
-                    <int id="0" val="points"/>
-                </print>
-                <print comment="false" x="26" y="341">
-                    <get-val-0-3 comment="false" id="0" x="0" y="0"/>
-                </print>
-                <dolater comment="false" x="26" y="366">
+                <save-game comment="false" x="26" y="321">
                     <group eventID="13" id="-1">
-                        <create-actor3 comment="false" x="37" y="393">
-                            <actortype eid="17" id="0"/>
-                            <int id="1" val="-10"/>
-                            <int id="2" val="20"/>
-                            <int id="3" val="0"/>
-                        </create-actor3>
-                        <setanim comment="false" x="37" y="420">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="1"/>
-                        </setanim>
-                        <if comment="false" x="37" y="447">
-                            <group eventID="13" id="-1">
-                                <dolater comment="false" x="48" y="477">
-                                    <group eventID="13" id="-1">
-                                        <create-actor3 comment="false" x="59" y="504">
-                                            <actortype eid="17" id="0"/>
-                                            <int id="1" val="100"/>
-                                            <int id="2" val="20"/>
-                                            <int id="3" val="0"/>
-                                        </create-actor3>
-                                        <setanim comment="false" x="59" y="531">
-                                            <ACTOR eid="lastcreated" id="0"/>
-                                            <int id="1" val="2"/>
-                                        </setanim>
-                                    </group>
-                                    <int id="0" val=".7"/>
-                                    <ACTOR eid="lastcreated" id="2"/>
-                                </dolater>
-                                <if comment="false" x="48" y="570">
-                                    <group eventID="13" id="-1">
-                                        <dolater comment="false" x="59" y="600">
-                                            <group eventID="13" id="-1">
-                                                <create-actor3 comment="false" x="70" y="627">
-                                                    <actortype eid="17" id="0"/>
-                                                    <int id="1" val="190"/>
-                                                    <int id="2" val="20"/>
-                                                    <int id="3" val="0"/>
-                                                </create-actor3>
-                                                <setanim comment="false" x="70" y="654">
-                                                    <ACTOR eid="lastcreated" id="0"/>
-                                                    <int id="1" val="3"/>
-                                                </setanim>
-                                            </group>
-                                            <int id="0" val="1.4"/>
-                                            <ACTOR eid="lastcreated" id="2"/>
-                                        </dolater>
-                                    </group>
-                                    <more comment="false" id="0" x="0" y="0">
-                                        <get-val-0-3 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="3"/>
-                                    </more>
-                                </if>
-                            </group>
-                            <more comment="false" id="0" x="0" y="0">
-                                <get-val-0-3 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="2"/>
-                            </more>
-                        </if>
-                    </group>
-                    <int id="0" val="1"/>
-                    <ACTOR eid="lastcreated" id="2"/>
-                </dolater>
-                <save-game comment="false" x="26" y="729">
-                    <group eventID="13" id="-1">
-                        <if comment="false" x="37" y="754">
+                        <if comment="false" x="37" y="346">
                             <group eventID="13" id="-1"/>
                             <save-success comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="811">
+                        <else comment="false" x="37" y="403">
                             <group eventID="13" id="-1"/>
                         </else>
                     </group>
@@ -583,7 +513,7 @@
                                         <int id="1" val=" METERS"/>
                                     </str-combine>
                                     <int id="1" val="50"/>
-                                    <int id="2" val="140"/>
+                                    <int id="2" val="120"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -599,7 +529,7 @@
                                         <int id="1" val=" METERS"/>
                                     </str-combine>
                                     <int id="1" val="50"/>
-                                    <int id="2" val="140"/>
+                                    <int id="2" val="120"/>
                                 </draw-text>
                             </group>
                         </else>
@@ -612,7 +542,7 @@
                                 <get-game-val-85 comment="false" id="1" x="0" y="0"/>
                             </str-combine>
                             <int id="1" val="90"/>
-                            <int id="2" val="195"/>
+                            <int id="2" val="175"/>
                         </draw-text>
                         <comment-short comment="false" x="68" y="848">
                             <int id="0" val="these are the increases in the score counter"/>

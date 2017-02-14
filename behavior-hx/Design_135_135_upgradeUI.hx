@@ -70,7 +70,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_7 extends SceneScript
+class Design_135_135_upgradeUI extends SceneScript
 {
 	
 	
@@ -82,27 +82,6 @@ class SceneEvents_7 extends SceneScript
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("found_GadgetScreen", true);
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedRight)
-			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
-			}
-		});
 		
 	}
 	

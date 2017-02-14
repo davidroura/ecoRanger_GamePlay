@@ -7,8 +7,8 @@
                     <group eventID="2" id="-1">
                         <create-actor3 comment="false" x="37" y="72">
                             <actortype eid="204" id="0"/>
-                            <int id="1" val="30"/>
-                            <int id="2" val="50"/>
+                            <int id="1" val="8"/>
+                            <int id="2" val="28"/>
                             <int id="3" val="0"/>
                         </create-actor3>
                     </group>

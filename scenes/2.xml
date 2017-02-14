@@ -12,8 +12,9 @@
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="0.82758623" sy="0.82758623" x="-2" y="415" z="0"/>
-        <actor a="0.0" aid="11" c="false" group="3" id="147" name="mUI_ChooseBots 11" sx="0.82758623" sy="0.82758623" x="150" y="415" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="43" name="mUI_Play 10" sx="1.0" sy="1.0" x="7" y="408" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="147" name="mUI_ChooseBots 11" sx="1.0" sy="1.0" x="160" y="409" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="3" id="206" name="buttonBG 12" sx="1.3100775" sy="1.4" x="31" y="444" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">
