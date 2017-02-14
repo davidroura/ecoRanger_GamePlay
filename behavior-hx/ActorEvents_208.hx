@@ -91,13 +91,18 @@ class ActorEvents_208 extends ActorScript
 				getLastCreatedActor().setAnimation("" + "engineUpgraded");
 				if((Engine.engine.getGameAttribute("upgradeDescription") == "boost"))
 				{
+					Engine.engine.setGameAttribute("boostAdd", (Engine.engine.getGameAttribute("boostAdd") * 2));
 					trace("" + "Boost Upgrade happened");
-					Engine.engine.setGameAttribute("acceleration", (Engine.engine.getGameAttribute("acceleration") + .25));
 				}
 				if((Engine.engine.getGameAttribute("upgradeDescription") == "biofuel"))
 				{
 					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .7));
 					trace("" + "Fuel efficiency Upgrade happened");
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == "engineCharge"))
+				{
+					Engine.engine.setGameAttribute("acceleration", (Engine.engine.getGameAttribute("acceleration") + .25));
+					trace("" + "engineCharge Upgrade happened");
 				}
 			}
 		});

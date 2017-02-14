@@ -198,7 +198,7 @@
                                 <set-val-8-16 comment="false" x="48" y="224">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <get-val-8-16 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="13"/>
+                                        <get-game-val-88 comment="false" id="1" x="0" y="0"/>
                                     </plus>
                                 </set-val-8-16>
                             </group>

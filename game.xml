@@ -87,11 +87,13 @@
         <cat id="7" name="spawns"/>
         <cat id="8" name="resources"/>
         <cat id="9" name=""/>
+        <cat id="10" name="upgrades"/>
     </attcats>
     <props/>
     <attributes>
         <boolean cid="3" id="72" name="found_GadgetScreen" save="true" value="false"/>
         <number cid="2" id="85" name="distanceHighScore" save="true" value="0.0"/>
+        <number cid="10" id="88" name="boostAdd" save="true" value="10"/>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="8" id="61" name="collected_cans" save="true" value="0.0"/>
         <number cid="8" id="67" name="recycling_plasticBottle" save="true" value="0.0"/>

@@ -94,31 +94,6 @@ class Design_8_8_playerHealth extends SceneScript
 	public var _funFactCard:Actor;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_tookBanana():Void
-	{
-		Engine.engine.setGameAttribute("extraLife", 10);
-		Engine.engine.setGameAttribute("boosted", true);
-		runLater(1000 * 2, function(timeTask:TimedTask):Void
-		{
-			Engine.engine.setGameAttribute("boosted", false);
-		}, null);
-		/* if boost isn't maxed add banana boost */
-		if((_boostSpeed < 30))
-		{
-			if(_playerBoost)
-			{
-				_boostSpeed = asNumber((_boostSpeed + 13));
-				propertyChanged("_boostSpeed", _boostSpeed);
-			}
-		}
-		else
-		{
-			_boostSpeed = asNumber(30);
-			propertyChanged("_boostSpeed", _boostSpeed);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
 	{
 		Engine.engine.setGameAttribute("flag", "playerHealth");
@@ -246,6 +221,31 @@ class Design_8_8_playerHealth extends SceneScript
 			Engine.engine.setGameAttribute("level", (Engine.engine.getGameAttribute("level") + 1));
 			_levelDistance = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 			propertyChanged("_levelDistance", _levelDistance);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_tookBanana():Void
+	{
+		Engine.engine.setGameAttribute("extraLife", 10);
+		Engine.engine.setGameAttribute("boosted", true);
+		runLater(1000 * 2, function(timeTask:TimedTask):Void
+		{
+			Engine.engine.setGameAttribute("boosted", false);
+		}, null);
+		/* if boost isn't maxed add banana boost */
+		if((_boostSpeed < 30))
+		{
+			if(_playerBoost)
+			{
+				_boostSpeed = asNumber((_boostSpeed + Engine.engine.getGameAttribute("boostAdd")));
+				propertyChanged("_boostSpeed", _boostSpeed);
+			}
+		}
+		else
+		{
+			_boostSpeed = asNumber(30);
+			propertyChanged("_boostSpeed", _boostSpeed);
 		}
 	}
 	

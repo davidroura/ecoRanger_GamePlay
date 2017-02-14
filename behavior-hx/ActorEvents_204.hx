@@ -86,6 +86,8 @@ class ActorEvents_204 extends ActorScript
 		createRecycledActor(getActorType(55), 25, 72, Script.FRONT);
 		createRecycledActor(getActorType(55), 110, 72, Script.FRONT);
 		getLastCreatedActor().setAnimation("" + "boostOff");
+		createRecycledActor(getActorType(55), 110, 72, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "engineChargeOff");
 		createRecycledActor(getActorType(208), 150, 200, Script.FRONT);
 		getLastCreatedActor().growTo(85/100, 85/100, 0, Linear.easeNone);
 		

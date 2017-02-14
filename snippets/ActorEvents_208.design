@@ -15,15 +15,15 @@
                 </setanim>
                 <if comment="false" x="26" y="96">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="126">
+                        <set-game-val-88 comment="false" x="37" y="126">
+                            <times comment="false" id="0" x="0" y="0">
+                                <get-game-val-88 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </times>
+                        </set-game-val-88>
+                        <print comment="false" x="37" y="156">
                             <int id="0" val="Boost Upgrade happened"/>
                         </print>
-                        <set-game-val-87 comment="false" x="37" y="146">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <get-game-val-87 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val=".25"/>
-                            </plus>
-                        </set-game-val-87>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
@@ -45,6 +45,23 @@
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="biofuel"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="280">
+                    <group eventID="1" id="-1">
+                        <set-game-val-87 comment="false" x="37" y="310">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-87 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val=".25"/>
+                            </plus>
+                        </set-game-val-87>
+                        <print comment="false" x="37" y="340">
+                            <int id="0" val="engineCharge Upgrade happened"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="engineCharge"/>
                     </eq>
                 </if>
             </group>
