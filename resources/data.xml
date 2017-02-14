@@ -45,6 +45,14 @@
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="69" name="buildCompleteBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="134" fixedrot="false" fric="0.2" gid="3" id="206" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="buttonBG" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="207" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="60" id="207" name="buttonBG" shared="false" width="258">
+        <anim across="1" down="1" durations="100" height="60" id="0" loop="true" name="Animation 0" numframes="1" originx="129" originy="30" sync="false" version="2" width="258">
+            <poly data="4,0,0,258,0,258,60,0,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="30" id="9" name="can" shared="false" width="35">
         <anim across="1" down="1" durations="100" height="30" id="0" loop="true" name="1" numframes="1" originx="24" originy="14" sync="false" version="2" width="35">
             <poly data="4,2,0,32,0,32,28,2,28" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
@@ -90,42 +98,12 @@
         <anim across="1" down="1" durations="100" height="128" id="0" loop="true" name="Animation 0" numframes="1" originx="71" originy="64" sync="false" version="2" width="142"/>
     </sprite>
     <music atlasID="0" desc="" id="88" loop="true" name="crashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="89" id="56" name="dozerButton" shared="false" width="160">
-        <anim across="1" down="1" durations="100" height="89" id="0" loop="true" name="windTunnel" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="62" id="56" name="dozerButton" shared="false" width="67">
+        <anim across="1" down="1" durations="100" height="62" id="0" loop="true" name="bioFuelOn" numframes="1" originx="33" originy="31" sync="false" version="2" width="67">
+            <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="89" id="1" loop="true" name="stampede" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="2" loop="true" name="stampedeII" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="3" loop="true" name="windTunnelII" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="4" loop="true" name="stampedeGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="5" loop="true" name="stampedeIIGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="6" loop="true" name="windTunnelGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 6" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="89" id="7" loop="true" name="windTunnelIIGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,89,0,89" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 7" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="88" id="8" loop="true" name="megaFuel" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 8" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="88" id="9" loop="true" name="megaFuelGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 9" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="88" id="10" loop="true" name="planter" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 10" rest="0.0" sensor="false"/>
-        </anim>
-        <anim across="1" down="1" durations="100" height="88" id="11" loop="true" name="planterGray" numframes="1" originx="80" originy="44" sync="false" version="2" width="160">
-            <poly data="4,0,0,160,0,160,88,0,88" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 11" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="77" id="1" loop="true" name="bioFuelOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+            <poly data="4,0,0,81,0,81,77,0,77" density="0.1" fric="0.2" gid="-1000" id="0" name="bioFuelOff" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="64" name="dozerTop" shared="false" width="59">
@@ -387,20 +365,6 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="false" desc="" eventsnippetid="41" fixedrot="false" fric="0.2" gid="2" id="49" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_retryButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="50" static="true">
         <snippets/>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="20" fixedrot="true" fric="0.2" gid="3" id="17" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_star" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="18" static="true">
-        <snippets/>
-    </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="104" fixedrot="false" fric="0.2" gid="2" id="153" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_starPop" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="154" static="true">
-        <snippets>
-            <s enabled="true" id="107">
-                <prop id="2147483647" list="0" val="thisactor"/>
-                <prop id="1" list="0" val=".3"/>
-                <prop id="3" list="0" val=".15"/>
-                <prop id="5" list="0" val="false"/>
-                <prop id="6" list="0" val="true"/>
-            </s>
-        </snippets>
-    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="61" fixedrot="false" fric="0.2" gid="3" id="81" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gUI_tiltLeft" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="82" static="false">
         <snippets/>
     </actor>
@@ -420,14 +384,22 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="3" name="mainBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="479" id="23" name="makerBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="319" xpf="1.0" ypf="1.0"/>
     <font alphabet="" atlasID="0" desc="" height="1" id="54" name="menuFont" offsets="" oid="-1" prerendered="true" rowHeight="1" shared="false"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="136" fixedrot="false" fric="0.2" gid="3" id="208" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_Build" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="209" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="209" name="mUI_Build" shared="false" width="152">
+        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="Animation 0" numframes="1" originx="76" originy="31" sync="false" version="2" width="152">
+            <poly data="4,0,0,152,0,152,63,0,63" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="122" fixedrot="false" fric="0.2" gid="3" id="180" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_chooseBot" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="181" static="true">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="233" id="181" name="mUI_chooseBotsBG" shared="false" width="262">
         <anim across="1" down="1" durations="100" height="233" id="0" loop="true" name="chooseBot" numframes="1" originx="131" originy="116" sync="false" version="2" width="262"/>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="148" name="mUI_CooseBots" shared="false" width="175">
-        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="175"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="148" name="mUI_CooseBots" shared="false" width="152">
+        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="34" sync="false" version="2" width="152"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="114" fixedrot="true" fric="0.2" gid="3" id="165" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_funfact" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="166" static="true">
         <snippets/>
@@ -563,8 +535,8 @@
             <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="44" name="playButton" shared="false" width="175">
-        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="25" sync="false" version="2" width="175"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="44" name="playButton" shared="false" width="152">
+        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="Animation 0" numframes="1" originx="73" originy="25" sync="false" version="2" width="152"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="109" name="powerUpDozey" shared="false" width="59">
         <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="On" numframes="1" originx="29" originy="31" sync="false" version="2" width="59"/>
@@ -590,8 +562,8 @@
         <anim across="1" down="1" durations="100" height="34" id="1" loop="true" name="Off" numframes="1" originx="52" originy="17" sync="false" version="2" width="104"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="76" name="presentationBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="48" name="recycleButton" shared="false" width="175">
-        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="175"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="48" name="recycleButton" shared="false" width="152">
+        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="Animation 0" numframes="1" originx="176" originy="65" sync="false" version="2" width="152"/>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="177" name="recyclingBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="83" fixedrot="false" fric="0.2" gid="3" id="129" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="resource_aluminum" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="130" static="false">
@@ -722,16 +694,6 @@
         </anim>
         <anim across="1" down="1" durations="100" height="71" id="9" loop="true" name="rightGadgetBoost" numframes="1" originx="29" originy="34" sync="false" version="2" width="56">
             <poly data="5,40,11,18,21,12,49,36,58,52,31" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
-        </anim>
-    </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="170" id="18" name="star" shared="false" width="139">
-        <anim across="1" down="1" durations="100" height="170" id="0" loop="true" name="1" numframes="1" originx="69" originy="85" sync="false" version="2" width="139"/>
-        <anim across="1" down="1" durations="100" height="181" id="1" loop="true" name="2" numframes="1" originx="109" originy="90" sync="false" version="2" width="218"/>
-        <anim across="1" down="1" durations="100" height="166" id="2" loop="true" name="3" numframes="1" originx="81" originy="83" sync="false" version="2" width="162"/>
-    </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="270" id="154" name="starPop" shared="false" width="480">
-        <anim across="4" down="3" durations="33,33,33,33,33,33,33,44,44,55,60,68" height="810" id="0" loop="false" name="Animation 0" numframes="12" originx="240" originy="135" sync="false" version="2" width="1920">
-            <poly data="4,0,0,16,0,16,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="default" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="78" loop="true" name="storySound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
