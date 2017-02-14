@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_124 extends ActorScript
+class ActorEvents_208 extends ActorScript
 {
 	
 	
@@ -87,19 +87,18 @@ class ActorEvents_124 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				if(((actor.getAnimation() == "Stampede") || (actor.getAnimation() == "StampedeII")))
+				createRecycledActor(getActorType(175), 10, 150, Script.FRONT);
+				getLastCreatedActor().setAnimation("" + "engineUpgraded");
+				if((Engine.engine.getGameAttribute("upgradeDescription") == "boost"))
 				{
-					Engine.engine.setGameAttribute("dozerStrength", (Engine.engine.getGameAttribute("dozerStrength") + 1));
+					trace("" + "Boost Upgrade happened");
+					Engine.engine.setGameAttribute("acceleration", (Engine.engine.getGameAttribute("acceleration") + .25));
 				}
-				if((actor.getAnimation() == "megaFuel"))
+				if((Engine.engine.getGameAttribute("upgradeDescription") == "biofuel"))
 				{
-					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .75));
+					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .7));
+					trace("" + "Fuel efficiency Upgrade happened");
 				}
-				if((actor.getAnimation() == "planter"))
-				{
-					Engine.engine.setGameAttribute("planterUnlock", true);
-				}
-				recycleActor(actor);
 			}
 		});
 		

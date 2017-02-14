@@ -509,12 +509,6 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet actorid="124" attachedevent="true" class="scripts.ActorEvents_124" classname="scripts.ActorEvents_124" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="81" name="ActorEvents_124" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
-        <events>
-            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
-        </events>
-    </snippet>
     <snippet actorid="126" attachedevent="true" class="scripts.ActorEvents_126" classname="scripts.ActorEvents_126" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="82" name="ActorEvents_126" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>

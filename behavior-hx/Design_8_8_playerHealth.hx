@@ -152,7 +152,7 @@ class Design_8_8_playerHealth extends SceneScript
 					/* normal Speed */
 					if((Engine.engine.getGameAttribute("sceneSpeed") <= Engine.engine.getGameAttribute("playerDefaultSpeed")))
 					{
-						Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") + .5));
+						Engine.engine.setGameAttribute("sceneSpeed", (Engine.engine.getGameAttribute("sceneSpeed") + Engine.engine.getGameAttribute("acceleration")));
 					}
 					else
 					{

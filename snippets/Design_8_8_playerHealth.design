@@ -605,7 +605,7 @@
                                                 <set-game-val-3 comment="false" x="70" y="528">
                                                     <plus comment="false" id="0" x="0" y="0">
                                                         <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                                                        <int id="1" val=".5"/>
+                                                        <get-game-val-87 comment="false" id="1" x="0" y="0"/>
                                                     </plus>
                                                 </set-game-val-3>
                                             </group>
