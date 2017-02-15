@@ -395,9 +395,12 @@
         </events>
     </snippet>
     <snippet actorid="55" attachedevent="true" class="scripts.ActorEvents_55" classname="scripts.ActorEvents_55" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="44" name="ActorEvents_55" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
+        <blocks>
+            <receiver blockID="210" id="1"/>
+        </blocks>
         <events>
-            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="turn on" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="false"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="60" attachedevent="true" class="scripts.ActorEvents_60" classname="scripts.ActorEvents_60" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="47" name="ActorEvents_60" oid="-1" package="scripts." shared="false" type="actor">
@@ -817,14 +820,15 @@
     </snippet>
     <snippet actorid="182" attachedevent="true" class="scripts.ActorEvents_182" classname="scripts.ActorEvents_182" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="124" name="ActorEvents_182" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="buttonOn" hidden="false" id="1" name="_buttonOn" order="0"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="searchIndex" hidden="false" id="2" name="_searchIndex" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="searchIndex" hidden="false" id="2" name="_searchIndex" order="1"/>
         <blocks>
             <receiver blockID="197" id="1"/>
         </blocks>
         <events>
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="findInList" enabled="true" id="3" name="event-custom-block" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="4" repeats="true"/>
+            <event displayName="findInList" enabled="true" id="3" name="event-custom-block" order="3" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="188" attachedevent="true" class="scripts.ActorEvents_188" classname="scripts.ActorEvents_188" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="125" name="ActorEvents_188" oid="-1" package="scripts." shared="false" type="actor">

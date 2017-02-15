@@ -93,7 +93,7 @@
     <attributes>
         <boolean cid="3" id="72" name="found_GadgetScreen" save="true" value="false"/>
         <number cid="2" id="85" name="distanceHighScore" save="true" value="0.0"/>
-        <number cid="10" id="88" name="boostAdd" save="true" value="10"/>
+        <number cid="10" id="88" name="boostAdd" save="true" value="10.0"/>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="8" id="61" name="collected_cans" save="true" value="0.0"/>
         <number cid="8" id="67" name="recycling_plasticBottle" save="true" value="0.0"/>
@@ -118,7 +118,7 @@
             <text order="2" value="dozey"/>
         </list>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
-        <number cid="6" id="80" name="totalSelectedBots" save="true" value="1.0"/>
+        <number cid="6" id="80" name="totalSelectedBots" save="true" value="3"/>
         <number cid="8" id="55" name="cansRecycled" save="true" value="0.0"/>
         <text cid="4" id="86" name="upgradeDescription" save="true" value="0"/>
         <number cid="2" id="87" name="acceleration" save="true" value="0.4"/>
@@ -159,13 +159,13 @@
         <number cid="1" id="20" name="playerXPos" save="true" value="0.0"/>
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
-        <number cid="2" id="51" name="fuelEfficiency" save="true" value="1.5"/>
+        <number cid="10" id="51" name="fuelEfficiency" save="true" value="1.5"/>
         <number cid="8" id="63" name="total_cans" save="true" value="0.0"/>
         <number cid="8" id="57" name="glassBottlesRecycline" save="true" value="0.0"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
         <number cid="8" id="65" name="total_glassBottles" save="true" value="0.0"/>
         <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
-        <number cid="2" id="18" name="dozerStrength" save="true" value="1.0"/>
+        <number cid="10" id="18" name="dozerStrength" save="true" value="1.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
         <boolean cid="0" id="27" name="movementActive" save="true" value="true"/>
         <number cid="2" id="47" name="sceneSpeedHold" save="true" value="0.0"/>

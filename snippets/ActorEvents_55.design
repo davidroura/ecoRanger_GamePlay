@@ -4,40 +4,11 @@
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <comment-short comment="false" x="26" y="42">
-                    <int id="0" val="index returns -1 if not found. So its &amp;quot;If On&amp;quot;"/>
+                    <int id="0" val="index returns -1 if not found. &amp;quot;If not On&amp;quot;"/>
                 </comment-short>
                 <if comment="false" x="26" y="62">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="105">
-                            <int id="0" val="it went Off"/>
-                        </print>
-                        <setanim comment="false" x="37" y="125">
-                            <ACTOR eid="this" id="0"/>
-                            <str-replace comment="false" id="1" x="0" y="0">
-                                <getanim comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                </getanim>
-                                <int id="1" val="On"/>
-                                <int id="2" val="Off"/>
-                            </str-replace>
-                        </setanim>
-                        <set-game-val-86 comment="false" x="37" y="170">
-                            <int id="0" val="empty"/>
-                        </set-game-val-86>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <str-indexof comment="false" id="0" x="0" y="0">
-                            <getanim comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                            </getanim>
-                            <int id="1" val="On"/>
-                        </str-indexof>
-                        <int id="1" val="-1"/>
-                    </noteq>
-                </if>
-                <else comment="false" x="26" y="202">
-                    <group eventID="1" id="-1">
-                        <set-game-val-86 comment="false" x="37" y="222">
+                        <set-game-val-86 comment="false" x="37" y="105">
                             <str-replace comment="false" id="0" x="0" y="0">
                                 <getanim comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="this" id="0"/>
@@ -46,7 +17,44 @@
                                 <int id="2" val=""/>
                             </str-replace>
                         </set-game-val-86>
-                        <setanim comment="false" x="37" y="260">
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <str-indexof comment="false" id="0" x="0" y="0">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                            <int id="1" val="On"/>
+                        </str-indexof>
+                        <int id="1" val="-1"/>
+                    </eq>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="4"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="1" id="6">
+        <setanim comment="false" x="75" y="422">
+            <ACTOR eid="this" id="0"/>
+            <str-replace comment="false" id="1" x="0" y="0">
+                <getanim comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                </getanim>
+                <int id="1" val="Off"/>
+                <int id="2" val="On"/>
+            </str-replace>
+        </setanim>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="if this button is the upgrade description button keep on, otherwise be off"/>
+                </comment-short>
+                <if comment="false" x="26" y="60">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="98">
                             <ACTOR eid="this" id="0"/>
                             <str-replace comment="false" id="1" x="0" y="0">
                                 <getanim comment="false" id="0" x="0" y="0">
@@ -57,11 +65,51 @@
                             </str-replace>
                         </setanim>
                     </group>
-                </else>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <str-combine comment="false" id="0" x="0" y="0">
+                            <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="Off"/>
+                        </str-combine>
+                        <getanim comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="155">
+                    <group eventID="2" id="-1">
+                        <setanim comment="false" x="37" y="193">
+                            <ACTOR eid="this" id="0"/>
+                            <str-replace comment="false" id="1" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <int id="1" val="On"/>
+                                <int id="2" val="Off"/>
+                            </str-replace>
+                        </setanim>
+                    </group>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <str-combine comment="false" id="0" x="0" y="0">
+                            <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="On"/>
+                        </str-combine>
+                        <getanim comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                    </noteq>
+                </else-if>
             </group>
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="4"/>
-        </event-mouse-enter-exit-actor>
+        </step>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="2" id="8">
+        <else comment="false" x="357" y="342">
+            <group eventID="2" id="-1"/>
+        </else>
+    </group>
+    <group eventID="2" id="-1">
+        <eq comment="false" x="35" y="480">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
+        </eq>
+    </group>
 </groups>

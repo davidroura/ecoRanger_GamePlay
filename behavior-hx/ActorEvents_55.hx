@@ -87,17 +87,27 @@ class ActorEvents_55 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				/* index returns -1 if not found. So its "If On" */
-				if(!(("" + actor.getAnimation()).indexOf("On") == -1))
-				{
-					trace("" + "it went Off");
-					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "On"), ("" + "Off")));
-					Engine.engine.setGameAttribute("upgradeDescription", "empty");
-				}
-				else
+				/* index returns -1 if not found. "If not On" */
+				if((("" + actor.getAnimation()).indexOf("On") == -1))
 				{
 					Engine.engine.setGameAttribute("upgradeDescription", StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "")));
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				/* if this button is the upgrade description button keep on, otherwise be off */
+				if(((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "Off")) == actor.getAnimation()))
+				{
 					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "On")));
+				}
+				else if(!((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "On")) == actor.getAnimation()))
+				{
+					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "On"), ("" + "Off")));
 				}
 			}
 		});

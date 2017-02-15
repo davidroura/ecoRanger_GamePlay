@@ -104,6 +104,17 @@ class ActorEvents_182 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		runLater(1000 * .2, function(timeTask:TimedTask):Void
+		{
+			trace("" + actor.getAnimation());
+			if((("" + actor.getAnimation()).indexOf("Off") == -1))
+			{
+				_buttonOn = true;
+				propertyChanged("_buttonOn", _buttonOn);
+			}
+		}, actor);
+		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
@@ -111,12 +122,13 @@ class ActorEvents_182 extends ActorScript
 			{
 				trace("" + "*******************************************************************************************************************");
 				trace("" + (("" + "index ") + ("" + Engine.engine.getGameAttribute("totalSelectedBots"))));
+				trace("" + (("" + "buttonOn is") + ("" + ("" + _buttonOn))));
 				if(_buttonOn)
 				{
 					/* button turns OFF and it's replaced from bot list with "none" */
 					trace("" + "button turned Off");
 					trace("" + (("" + "clicked on bot ") + ("" + actor.getAnimation())));
-					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "")));
+					actor.setAnimation("" + StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "On"), ("" + "Off")));
 					/* find index of bots name and replace it with "none" */
 					Engine.engine.getGameAttribute("selectedBotList")[Std.int(cast(actor.say("ActorEvents_182", "_customBlock_findInList", [StringTools.replace(("" + ("" + actor.getAnimation())), ("" + "Off"), ("" + "")), Engine.engine.getGameAttribute("selectedBotList")]), Float))] = "none";
 					Engine.engine.setGameAttribute("totalSelectedBots", (Engine.engine.getGameAttribute("totalSelectedBots") - 1));

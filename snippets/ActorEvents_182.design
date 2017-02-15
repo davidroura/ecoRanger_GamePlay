@@ -12,15 +12,23 @@
                         <get-game-val-80 comment="false" id="1" x="0" y="0"/>
                     </str-combine>
                 </print>
-                <if comment="false" x="26" y="92">
+                <print comment="false" x="26" y="92">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="buttonOn is"/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-val-124-1 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="127">
                     <group eventID="1" id="-1">
-                        <comment-short comment="false" x="37" y="117">
+                        <comment-short comment="false" x="37" y="152">
                             <int id="0" val="button turns OFF and it&amp;apos;s replaced from bot list with &amp;quot;none&amp;quot;"/>
                         </comment-short>
-                        <print comment="false" x="37" y="137">
+                        <print comment="false" x="37" y="172">
                             <int id="0" val="button turned Off"/>
                         </print>
-                        <print comment="false" x="37" y="157">
+                        <print comment="false" x="37" y="192">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="clicked on bot "/>
                                 <getanim comment="false" id="1" x="0" y="0">
@@ -28,7 +36,7 @@
                                 </getanim>
                             </str-combine>
                         </print>
-                        <setanim comment="false" x="37" y="195">
+                        <setanim comment="false" x="37" y="230">
                             <ACTOR eid="this" id="0"/>
                             <str-replace comment="false" id="1" x="0" y="0">
                                 <tostring comment="false" id="0" x="0" y="0">
@@ -37,13 +45,13 @@
                                     </getanim>
                                 </tostring>
                                 <int id="1" val="On"/>
-                                <int id="2" val=""/>
+                                <int id="2" val="Off"/>
                             </str-replace>
                         </setanim>
-                        <comment-short comment="false" x="37" y="245">
+                        <comment-short comment="false" x="37" y="280">
                             <int id="0" val="find index of bots name and replace it with &amp;quot;none&amp;quot;"/>
                         </comment-short>
-                        <replace-list comment="false" x="37" y="265">
+                        <replace-list comment="false" x="37" y="300">
                             <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                             <custom-197 comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -60,27 +68,27 @@
                             </custom-197>
                             <int id="2" val="none"/>
                         </replace-list>
-                        <set-game-val-80 comment="false" x="37" y="321">
+                        <set-game-val-80 comment="false" x="37" y="356">
                             <minus comment="false" id="0" x="0" y="0">
                                 <get-game-val-80 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </minus>
                         </set-game-val-80>
-                        <set-val-124-1 comment="false" x="37" y="351">
+                        <set-val-124-1 comment="false" x="37" y="386">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-124-1>
                     </group>
                     <get-val-124-1 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else-if comment="false" x="26" y="388">
+                <else-if comment="false" x="26" y="423">
                     <group eventID="1" id="-1">
-                        <comment-short comment="false" x="37" y="423">
+                        <comment-short comment="false" x="37" y="458">
                             <int id="0" val="button turns ON and it&amp;apos;s added to bot list"/>
                         </comment-short>
-                        <print comment="false" x="37" y="443">
+                        <print comment="false" x="37" y="478">
                             <int id="0" val="button turned On"/>
                         </print>
-                        <print comment="false" x="37" y="463">
+                        <print comment="false" x="37" y="498">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="clicked on bot"/>
                                 <getanim comment="false" id="1" x="0" y="0">
@@ -88,7 +96,7 @@
                                 </getanim>
                             </str-combine>
                         </print>
-                        <replace-list comment="false" x="37" y="501">
+                        <replace-list comment="false" x="37" y="536">
                             <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                             <custom-197 comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -105,7 +113,7 @@
                                 <int id="2" val=""/>
                             </str-replace>
                         </replace-list>
-                        <setanim comment="false" x="37" y="544">
+                        <setanim comment="false" x="37" y="579">
                             <ACTOR eid="this" id="0"/>
                             <str-replace comment="false" id="1" x="0" y="0">
                                 <tostring comment="false" id="0" x="0" y="0">
@@ -117,10 +125,10 @@
                                 <int id="2" val="On"/>
                             </str-replace>
                         </setanim>
-                        <set-val-124-1 comment="false" x="37" y="594">
+                        <set-val-124-1 comment="false" x="37" y="629">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-124-1>
-                        <set-game-val-80 comment="false" x="37" y="619">
+                        <set-game-val-80 comment="false" x="37" y="654">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-game-val-80 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
@@ -137,18 +145,18 @@
                         </lesseq>
                     </and>
                 </else-if>
-                <print comment="false" x="26" y="661">
+                <print comment="false" x="26" y="696">
                     <int id="0" val="**bots**"/>
                 </print>
-                <for-each comment="false" x="26" y="681">
+                <for-each comment="false" x="26" y="716">
                     <group eventID="1" id="-1">
-                        <print comment="false" x="37" y="706">
+                        <print comment="false" x="37" y="741">
                             <for-each-item comment="false" id="0" x="0" y="0"/>
                         </print>
                     </group>
                     <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                 </for-each>
-                <print comment="false" x="26" y="743">
+                <print comment="false" x="26" y="778">
                     <int id="0" val="*****"/>
                 </print>
             </group>
@@ -203,12 +211,12 @@
                     <int id="0" val="-1"/>
                 </return>
             </group>
-            <get-byobval-124-197-0 comment="false" id="0" x="0" y="0"/>
+            <int id="0" val=""/>
             <get-byobval-124-197-1 comment="false" id="1" x="0" y="0"/>
             <get-byobval-124-197-2 comment="false" id="2" x="0" y="0"/>
         </receiver-1-197>
     </group>
-    <group eventID="3" id="3">
+    <group eventID="3" id="1">
         <print comment="false" x="104" y="375">
             <str-combine comment="false" id="0" x="0" y="0">
                 <int id="0" val="item to find "/>
@@ -216,7 +224,7 @@
             </str-combine>
         </print>
     </group>
-    <group eventID="3" id="4">
+    <group eventID="3" id="2">
         <print comment="false" x="83" y="302">
             <str-combine comment="false" id="0" x="0" y="0">
                 <int id="0" val="looking at "/>
@@ -225,4 +233,38 @@
         </print>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <print comment="false" x="37" y="67">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                        </print>
+                        <if comment="false" x="37" y="100">
+                            <group eventID="4" id="-1">
+                                <set-val-124-1 comment="false" x="48" y="143">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-124-1>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <str-indexof comment="false" id="0" x="0" y="0">
+                                    <getanim comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                    </getanim>
+                                    <int id="1" val="Off"/>
+                                </str-indexof>
+                                <int id="1" val="-1"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <int id="0" val=".2"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
