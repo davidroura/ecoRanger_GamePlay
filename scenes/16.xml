@@ -10,11 +10,13 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="90.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="124" y="180" z="0"/>
+        <actor a="90.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="0.8695652" sy="1.0" x="111" y="189" z="0"/>
         <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="1.0" sy="1.0" x="279" y="12" z="0"/>
-        <actor a="0.0" aid="9" c="false" group="3" id="169" name="mUI_totalCans 9" sx="0.5833333" sy="0.5833333" x="156" y="7" z="0"/>
-        <actor a="0.0" aid="10" c="false" group="3" id="171" name="mUI_totalPlasticBottles 10" sx="0.6857143" sy="0.6857143" x="162" y="45" z="0"/>
-        <actor a="0.0" aid="11" c="false" group="3" id="173" name="mUI_totalGlassB 11" sx="0.65" sy="0.65" x="164" y="72" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="3" id="169" name="mUI_totalCans 9" sx="0.5833333" sy="0.5833333" x="-5" y="3" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="171" name="mUI_totalPlasticBottles 10" sx="0.6857143" sy="0.6857143" x="65" y="9" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="173" name="mUI_totalGlassB 11" sx="0.65" sy="0.65" x="127" y="6" z="0"/>
+        <actor a="90.0" aid="12" c="false" group="3" id="155" name="rItem_conveyerBelt 12" sx="0.8695652" sy="1.0" x="109" y="76" z="2"/>
+        <actor a="90.0" aid="13" c="false" group="3" id="155" name="rItem_conveyerBelt 13" sx="0.8695652" sy="1.0" x="108" y="-36" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">

@@ -563,9 +563,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
         <number default="60.0" defaultValue="60.0" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
         <blocks/>
-        <events>
-            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="2" repeats="true"/>
-        </events>
+        <events/>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_98_98_powerUpsucker" classname="scripts.Design_98_98_powerUpsucker" desc="Make the actor follow a given actor." description="Make the actor follow a given actor." design="true" drawOrder="0" id="94" name="powerUp_sucker" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
@@ -720,7 +718,6 @@
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="5" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
             <event displayName="Actor - Type" enabled="true" id="5" name="event-collide-actortotype" order="4" repeats="true"/>
         </events>
