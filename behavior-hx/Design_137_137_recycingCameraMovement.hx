@@ -69,13 +69,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_15 extends ActorScript
+class Design_137_137_recycingCameraMovement extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
 		
 	}
 	
@@ -83,7 +84,22 @@ class ActorEvents_15 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(4))));
+		actor.makeAlwaysSimulate();
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((((Engine.engine.getGameAttribute("total_cans") <= 0) && (Engine.engine.getGameAttribute("total_plasticBottles") <= 0)) && (Engine.engine.getGameAttribute("total_glassBottles") <= 0)))
+				{
+					runLater(1000 * 2, function(timeTask:TimedTask):Void
+					{
+						actor.setXVelocity(-10);
+					}, actor);
+				}
+			}
+		});
 		
 	}
 	

@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_15 extends ActorScript
+class ActorEvents_210 extends ActorScript
 {
 	
 	
@@ -83,7 +83,10 @@ class ActorEvents_15 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(4))));
+		actor.setYVelocity(-1);
+		actor.growTo(2/100, 2/100, 0, Linear.easeNone);
+		actor.growTo(150/100, 150/100, .2, Linear.easeNone);
+		actor.growTo(80/100, 80/100, .1, Linear.easeNone);
 		
 	}
 	

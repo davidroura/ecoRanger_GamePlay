@@ -4,6 +4,22 @@
     <custom-block blocktag="custom-193" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="193" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
     <custom-block blocktag="custom-194" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="194" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
     <custom-block blocktag="custom-195" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="195" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="138" fixedrot="true" fric="0.2" gid="2" id="210" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_symbols" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="211" static="false">
+        <snippets>
+            <s enabled="true" id="107">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="1"/>
+                <prop id="3" list="0" val=".5"/>
+                <prop id="5" list="0" val="false"/>
+                <prop id="6" list="0" val="true"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="44" id="211" name="_symbols" shared="false" width="47">
+        <anim across="1" down="1" durations="100" height="44" id="1" loop="true" name="Animation 1" numframes="1" originx="23" originy="22" sync="false" version="2" width="47">
+            <poly data="4,0,0,47,0,47,44,0,44" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="58" id="130" name="aluminum" shared="false" width="103">
         <anim across="1" down="1" durations="100" height="58" id="0" loop="true" name="Animation 0" numframes="1" originx="65" originy="48" sync="false" version="2" width="103">
             <poly data="4,0,0,131,0,131,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
@@ -49,9 +65,7 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="60" id="207" name="buttonBG" shared="false" width="258">
-        <anim across="1" down="1" durations="100" height="60" id="0" loop="true" name="Animation 0" numframes="1" originx="129" originy="30" sync="false" version="2" width="258">
-            <poly data="4,0,0,258,0,258,60,0,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="1" down="1" durations="100" height="60" id="0" loop="true" name="Animation 0" numframes="1" originx="129" originy="30" sync="false" version="2" width="258"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="30" id="9" name="can" shared="false" width="35">
         <anim across="1" down="1" durations="100" height="30" id="0" loop="true" name="1" numframes="1" originx="24" originy="14" sync="false" version="2" width="35">
@@ -183,9 +197,6 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="0.0"/>
                 <prop id="2" list="0" val="0.0"/>
-            </s>
-            <s enabled="false" id="4">
-                <prop id="2147483647" list="0" val="thisactor"/>
             </s>
             <s enabled="true" id="7">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -601,13 +612,25 @@
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="109" fixedrot="false" fric="0.2" gid="6" id="159" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_BinAluminum" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="160" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="137">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="110" fixedrot="false" fric="0.2" gid="6" id="161" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_BinGlass" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="162" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="137">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="106" fixedrot="false" fric="0.2" gid="6" id="157" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_BinPlastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="158" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="137">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="121" fixedrot="false" fric="0.2" gid="3" id="178" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_binShadows" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="179" static="true">
         <snippets/>
@@ -615,7 +638,7 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="179" name="rItem_binShadows" shared="false" width="320">
         <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="Animation 0" numframes="1" originx="160" originy="240" sync="false" version="2" width="320"/>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="90" fixedrot="false" fric="0.2" gid="3" id="137" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_Bottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="138" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="90" fixedrot="false" fric="0.2" gid="6" id="137" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_Bottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="138" static="false">
         <snippets>
             <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -628,7 +651,7 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="86" fixedrot="false" fric="0.2" gid="3" id="131" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="132" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="86" fixedrot="false" fric="0.2" gid="6" id="131" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="132" static="false">
         <snippets>
             <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -642,7 +665,11 @@
         </snippets>
     </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="105" fixedrot="false" fric="0.2" gid="3" id="155" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_conveyerBelt" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="156" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="137">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="156" name="rItem_conveyerBelt" shared="false" width="184">
         <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="Animation 0" numframes="1" originx="159" originy="239" sync="false" version="2" width="184">
@@ -652,7 +679,7 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="168" name="rItem_glass" shared="false" width="131">
         <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="65" originy="48" sync="false" version="2" width="131"/>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="91" fixedrot="false" fric="0.2" gid="3" id="139" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_PlasticBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="140" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="Only used in recycling game" eventsnippetid="91" fixedrot="false" fric="0.2" gid="6" id="139" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_PlasticBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="140" static="false">
         <snippets>
             <s enabled="true" id="111">
                 <prop id="2147483647" list="0" val="thisactor"/>

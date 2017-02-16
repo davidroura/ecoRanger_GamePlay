@@ -69,21 +69,34 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_15 extends ActorScript
+class ActorEvents_137 extends ActorScript
 {
+	public var _onPad:Bool;
+	public var _beltSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("onPad", "_onPad");
+		_onPad = false;
+		nameMap.set("beltSpeed", "_beltSpeed");
+		_beltSpeed = 60.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(4))));
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(161), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				recycleActor(actor);
+				Engine.engine.setGameAttribute("recycling_glassBottles", (Engine.engine.getGameAttribute("recycling_glassBottles") + 1));
+			}
+		});
 		
 	}
 	

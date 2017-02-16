@@ -118,7 +118,7 @@
             <text order="2" value="dozey"/>
         </list>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
-        <number cid="6" id="80" name="totalSelectedBots" save="true" value="3"/>
+        <number cid="6" id="80" name="totalSelectedBots" save="true" value="3.0"/>
         <number cid="8" id="55" name="cansRecycled" save="true" value="0.0"/>
         <text cid="4" id="86" name="upgradeDescription" save="true" value="0"/>
         <number cid="2" id="87" name="acceleration" save="true" value="0.4"/>
@@ -135,6 +135,7 @@
         <number cid="0" id="22" name="lateralSpeed" save="true" value="0.0"/>
         <number cid="-1" id="53" name="level" save="true" value="0.0"/>
         <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
+        <boolean cid="5" id="89" name="recycleScoreAnimation" save="true" value="false"/>
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
         <number cid="8" id="15" name="gameCubePlastic" save="true" value="0.0"/>
         <number cid="2" id="76" name="playerDefaultSpeed" save="true" value="33.0"/>
@@ -146,7 +147,7 @@
         <number cid="8" id="59" name="collected_PlasticBottles" save="true" value="0.0"/>
         <number cid="8" id="14" name="gameCubeGlass" save="true" value="0.0"/>
         <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
-        <number cid="8" id="64" name="total_plasticBottles" save="true" value="10"/>
+        <number cid="8" id="64" name="total_plasticBottles" save="true" value="10.0"/>
         <number cid="0" id="3" name="sceneSpeed" save="true" value="0.0"/>
         <text cid="-1" id="45" name="flag" save="true" value="0"/>
         <boolean cid="2" id="26" name="tutorialDone" save="true" value="false"/>
@@ -160,10 +161,10 @@
         <boolean cid="3" id="31" name="musicOn" save="true" value="false"/>
         <list cid="4" id="35" name="upgradeList" save="true" val="list"/>
         <number cid="10" id="51" name="fuelEfficiency" save="true" value="1.5"/>
-        <number cid="8" id="63" name="total_cans" save="true" value="10"/>
+        <number cid="8" id="63" name="total_cans" save="true" value="10.0"/>
         <number cid="8" id="57" name="glassBottlesRecycline" save="true" value="0.0"/>
         <number cid="4" id="32" name="totalUpgrades" save="true" value="9.0"/>
-        <number cid="8" id="65" name="total_glassBottles" save="true" value="10"/>
+        <number cid="8" id="65" name="total_glassBottles" save="true" value="10.0"/>
         <boolean cid="7" id="44" name="spawnLife" save="true" value="false"/>
         <number cid="10" id="18" name="dozerStrength" save="true" value="1.0"/>
         <boolean cid="2" id="17" name="boosted" save="true" value="false"/>
@@ -215,7 +216,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,19,20,23,24,35,43,45,47,49,51,53,54,55,59,60,63,65,69,70,72,74,76,77,78,79,80,81,83,86,87,88,103,104,108,110,112,114,115,116,121,126,128,129,131,135,136,137,139,141,143,145,147,151,155,157,159,161,163,165,167,169,171,173,175,177,178,180,182,188,190,196,198,201,202,204,206,208," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,1,3,4,5,6,7,8,10,12,14,15,19,20,23,24,35,43,45,47,49,51,53,54,55,59,60,63,65,69,70,72,74,76,77,78,79,80,81,83,86,87,88,103,104,108,110,112,114,115,116,121,126,128,129,131,135,136,137,139,141,143,145,147,151,155,157,159,161,163,165,167,169,171,173,175,177,178,180,182,188,190,196,198,201,202,204,206,208,210," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

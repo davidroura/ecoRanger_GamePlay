@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-dxy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="-1"/>
+                </set-dxy>
+                <scaleTo comment="false" x="26" y="67">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="2"/>
+                    <int id="2" val="2"/>
+                    <int id="3" val="0"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <scaleTo comment="false" x="26" y="94">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="150"/>
+                    <int id="2" val="150"/>
+                    <int id="3" val=".2"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+                <scaleTo comment="false" x="26" y="121">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="80"/>
+                    <int id="2" val="80"/>
+                    <int id="3" val=".1"/>
+                    <int id="4" val="0"/>
+                </scaleTo>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

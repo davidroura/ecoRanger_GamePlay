@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="80">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="107">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="-10"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="2"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <lesseq comment="false" id="0" x="0" y="0">
+                                <get-game-val-63 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </lesseq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-game-val-64 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </lesseq>
+                        </and>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <get-game-val-65 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                        </lesseq>
+                    </and>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

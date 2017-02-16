@@ -3,20 +3,16 @@
     <group eventID="2" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="-1" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="2" id="-1"/>
-                    <int id="0" val=""/>
-                </if>
-                <comment-short comment="false" x="26" y="92">
+                <comment-short comment="false" x="26" y="40">
                     <int id="0" val="drag and drop functionality"/>
                 </comment-short>
-                <if comment="false" x="26" y="112">
+                <if comment="false" x="26" y="60">
                     <group eventID="-1" id="-1">
-                        <if comment="false" x="37" y="137">
+                        <if comment="false" x="37" y="85">
                             <group eventID="-1" id="-1">
-                                <if comment="false" x="48" y="170">
+                                <if comment="false" x="48" y="118">
                                     <group eventID="2" id="-1">
-                                        <set-xy comment="false" x="59" y="195">
+                                        <set-xy comment="false" x="59" y="143">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -48,7 +44,7 @@
                                                 </minmax>
                                             </plus>
                                         </set-xy>
-                                        <set-xy comment="false" x="59" y="271">
+                                        <set-xy comment="false" x="59" y="219">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="1"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -83,9 +79,9 @@
                                     </group>
                                     <get-val-111-6 comment="false" id="0" x="0" y="0"/>
                                 </if>
-                                <else comment="false" x="48" y="359">
+                                <else comment="false" x="48" y="307">
                                     <group eventID="2" id="-1">
-                                        <set-xy comment="false" x="59" y="379">
+                                        <set-xy comment="false" x="59" y="327">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -101,7 +97,7 @@
                                                 <get-val-111-2 comment="false" id="1" x="0" y="0"/>
                                             </plus>
                                         </set-xy>
-                                        <set-xy comment="false" x="59" y="429">
+                                        <set-xy comment="false" x="59" y="377">
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="1"/>
                                             <plus comment="false" id="2" x="0" y="0">
@@ -119,12 +115,12 @@
                                         </set-xy>
                                     </group>
                                 </else>
-                                <setvel comment="false" x="48" y="491">
+                                <setvel comment="false" x="48" y="439">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
                                 </setvel>
-                                <setav comment="false" x="48" y="518">
+                                <setav comment="false" x="48" y="466">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </setav>
@@ -133,9 +129,9 @@
                                 <int id="0" val="0"/>
                             </mousestate>
                         </if>
-                        <if comment="false" x="37" y="557">
+                        <if comment="false" x="37" y="505">
                             <group eventID="-1" id="-1">
-                                <set-val-111-1 comment="false" x="48" y="590">
+                                <set-val-111-1 comment="false" x="48" y="538">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-111-1>
                             </group>
@@ -146,11 +142,11 @@
                     </group>
                     <get-val-111-1 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="639">
+                <else comment="false" x="26" y="587">
                     <group eventID="-1" id="-1">
-                        <if comment="false" x="37" y="659">
+                        <if comment="false" x="37" y="607">
                             <group eventID="-1" id="-1">
-                                <set-val-111-2 comment="false" x="48" y="692">
+                                <set-val-111-2 comment="false" x="48" y="640">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <get-xy comment="false" id="0" x="0" y="0">
                                             <ACTOR eid="this" id="0"/>
@@ -167,7 +163,7 @@
                                         </plus>
                                     </minus>
                                 </set-val-111-2>
-                                <set-val-111-3 comment="false" x="48" y="735">
+                                <set-val-111-3 comment="false" x="48" y="683">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <get-xy comment="false" id="0" x="0" y="0">
                                             <ACTOR eid="this" id="0"/>
@@ -184,7 +180,7 @@
                                         </plus>
                                     </minus>
                                 </set-val-111-3>
-                                <set-val-111-4 comment="false" x="48" y="778">
+                                <set-val-111-4 comment="false" x="48" y="726">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <screen-xy comment="false" id="0" x="0" y="0">
                                             <int id="0" val="0"/>
@@ -195,7 +191,7 @@
                                         </mousexy>
                                     </plus>
                                 </set-val-111-4>
-                                <set-val-111-5 comment="false" x="48" y="816">
+                                <set-val-111-5 comment="false" x="48" y="764">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <screen-xy comment="false" id="0" x="0" y="0">
                                             <int id="0" val="1"/>
@@ -206,7 +202,7 @@
                                         </mousexy>
                                     </plus>
                                 </set-val-111-5>
-                                <set-val-111-1 comment="false" x="48" y="854">
+                                <set-val-111-1 comment="false" x="48" y="802">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-111-1>
                             </group>
@@ -219,6 +215,24 @@
                 </else>
             </group>
         </step>
+    </group>
+    <group eventID="2" id="1">
+        <if comment="false" x="762" y="490">
+            <group eventID="2" id="-1">
+                <dolater comment="false" x="773" y="515">
+                    <group eventID="2" id="-1">
+                        <set-dxy comment="false" x="784" y="542">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-game-val-39 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                    </group>
+                    <int id="0" val="6"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <get-game-val-89 comment="false" id="0" x="0" y="0"/>
+        </if>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="4" id="0">

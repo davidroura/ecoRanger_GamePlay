@@ -268,6 +268,20 @@
             <event displayName="play" enabled="true" id="2" name="event-custom" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet attachedevent="false" class="scripts.Design_139_139_recyclingCameraMovement" classname="scripts.Design_139_139_recyclingCameraMovement" desc="" description="" design="true" drawOrder="0" id="137" name="recycling_CameraMovement" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="210" attachedevent="true" class="scripts.ActorEvents_210" classname="scripts.ActorEvents_210" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="138" name="ActorEvents_210" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="11" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
@@ -314,7 +328,9 @@
     </snippet>
     <snippet actorid="15" attachedevent="true" class="scripts.ActorEvents_15" classname="scripts.ActorEvents_15" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="19" name="ActorEvents_15" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_7" classname="scripts.SceneEvents_7" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="22" name="SceneEvents_7" oid="-1" package="scripts." sceneid="7" shared="false" type="scene">
         <blocks/>
@@ -542,13 +558,15 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashType" hidden="false" id="2" name="_trashType" order="1"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="spawnWait" hidden="false" id="3" name="_spawnWait" order="2"/>
-        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="recyclingOver" hidden="false" id="4" name="_recyclingOver" order="3"/>
         <blocks/>
         <events>
-            <event displayName="Drawing" enabled="true" id="2" name="draw" order="7" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="8" repeats="true"/>
             <event displayName="randomSpawn" enabled="true" id="3" name="event-custom" order="6" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="4" repeats="true"/>
             <event displayName="recyclingTutorial" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="plasticCorrect" enabled="true" id="6" name="event-type-region" order="9" repeats="true"/>
+            <event displayName="aluminumCorrect" enabled="true" id="7" name="event-type-region" order="11" repeats="true"/>
+            <event displayName="glassCorrect" enabled="true" id="8" name="event-type-region" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="137" attachedevent="true" class="scripts.ActorEvents_137" classname="scripts.ActorEvents_137" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="90" name="ActorEvents_137" oid="-1" package="scripts." shared="false" type="actor">
@@ -707,7 +725,7 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_112_112_recyclingdragAndDrop" classname="scripts.Design_112_112_recyclingdragAndDrop" desc="Allows the actor to be dragged and dropped by the mouse." description="Allows the actor to be dragged and dropped by the mouse." design="true" drawOrder="0" id="111" name="recycling_behavior" oid="-1" package="scripts" shared="false" type="actor">
+    <snippet attachedevent="false" class="scripts.Design_139_139_recyclingtrashBehavior" classname="scripts.Design_139_139_recyclingtrashBehavior" desc="Allows the actor to be dragged and dropped by the mouse." description="Allows the actor to be dragged and dropped by the mouse." design="true" drawOrder="0" id="111" name="recycling_trashBehavior" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Grabbed" hidden="true" id="1" name="_Grabbed" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X Offset" hidden="true" id="2" name="_XOffset" order="2"/>
