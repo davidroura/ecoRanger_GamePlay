@@ -530,9 +530,9 @@ otherwise => sides */
 		nameMap.set("bonusCard", "_bonusCard");
 		_bonusCard = false;
 		nameMap.set("ramdomBlockNumber", "_ramdomBlockNumber");
-		_ramdomBlockNumber = 0;
+		_ramdomBlockNumber = 0.0;
 		nameMap.set("itemNumber", "_itemNumber");
-		_itemNumber = 0;
+		_itemNumber = 0.0;
 		
 	}
 	
@@ -550,7 +550,6 @@ otherwise => sides */
 		{
 			if(wrapper.enabled)
 			{
-				trace("" + (("" + "ramdomNumber: ") + ("" + Engine.engine.getGameAttribute("ramdomUniversalNumber"))));
 				if(!(Engine.engine.getGameAttribute("game_paused")))
 				{
 					_customEvent_play();

@@ -69,16 +69,32 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_112 extends ActorScript
+class Design_139_139_recyclingtrashBehavior extends ActorScript
 {
-	public var _dozerClick:Bool;
+	public var _Grabbed:Bool;
+	public var _XOffset:Float;
+	public var _YOffset:Float;
+	public var _OldX:Float;
+	public var _OldY:Float;
+	public var _CannotExitScreen:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("dozerClick", "_dozerClick");
-		_dozerClick = false;
+		nameMap.set("Actor", "actor");
+		nameMap.set("Grabbed", "_Grabbed");
+		_Grabbed = false;
+		nameMap.set("X Offset", "_XOffset");
+		_XOffset = 0.0;
+		nameMap.set("Y Offset", "_YOffset");
+		_YOffset = 0.0;
+		nameMap.set("Old X", "_OldX");
+		_OldX = 0.0;
+		nameMap.set("Old Y", "_OldY");
+		_OldY = 0.0;
+		nameMap.set("Cannot Exit Screen", "_CannotExitScreen");
+		_CannotExitScreen = true;
 		
 	}
 	
@@ -86,55 +102,66 @@ class ActorEvents_112 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+		actor.makeAlwaysSimulate();
 		
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 3 == mouseState)
+			if(wrapper.enabled)
 			{
-				if(!(Engine.engine.getGameAttribute("botOn")))
+				/* drag and drop functionality */
+				if(_Grabbed)
 				{
-					Engine.engine.setGameAttribute("clickingButton", true);
-					if((actor.getAnimation() == "gadget"))
+					if(isMouseDown())
 					{
-						createRecycledActor(getActorType(141), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
+						if(_CannotExitScreen)
+						{
+							actor.setX((getScreenX() + Math.max(0, Math.min((getScreenWidth() - (actor.getWidth())), (getMouseX() + _XOffset)))));
+							actor.setY((getScreenY() + Math.max(0, Math.min((getScreenHeight() - (actor.getHeight())), (getMouseY() + _YOffset)))));
+						}
+						else
+						{
+							actor.setX(((getScreenX() + getMouseX()) + _XOffset));
+							actor.setY(((getScreenY() + getMouseY()) + _YOffset));
+						}
+						actor.setVelocity(0, 0);
+						actor.setAngularVelocity(Utils.RAD * (0));
 					}
-					if((actor.getAnimation() == "planter"))
+					if(isMouseReleased())
 					{
-						createRecycledActor(getActorType(151), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
+						_Grabbed = false;
+						propertyChanged("_Grabbed", _Grabbed);
 					}
-					if((actor.getAnimation() == "dozey"))
+				}
+				else
+				{
+					if(actor.isMousePressed())
 					{
-						createRecycledActor(getActorType(63), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-					if((actor.getAnimation() == "sucker"))
-					{
-						createRecycledActor(getActorType(143), Engine.engine.getGameAttribute("playerXPos"), (Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")), Script.FRONT);
-						Engine.engine.setGameAttribute("botOn", true);
-					}
-					trace("" + actor.getY());
-					actor.setYVelocity(25);
-					/* this is not working */
-					if((actor.getY() > 400))
-					{
-						trace("" + "stopped");
-						actor.setYVelocity(0);
-						trace("" + actor.getY());
+						_XOffset = asNumber((actor.getX() - (getScreenX() + getMouseX())));
+						propertyChanged("_XOffset", _XOffset);
+						_YOffset = asNumber((actor.getY() - (getScreenY() + getMouseY())));
+						propertyChanged("_YOffset", _YOffset);
+						_OldX = asNumber((getScreenX() + getMouseX()));
+						propertyChanged("_OldX", _OldX);
+						_OldY = asNumber((getScreenY() + getMouseY()));
+						propertyChanged("_OldY", _OldY);
+						_Grabbed = true;
+						propertyChanged("_Grabbed", _Grabbed);
 					}
 				}
 			}
 		});
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && -1 == mouseState)
+			if(wrapper.enabled && sameAsAny(getActorType(155), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				Engine.engine.setGameAttribute("clickingButton", false);
+				if(!(_Grabbed))
+				{
+					actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+				}
 			}
 		});
 		

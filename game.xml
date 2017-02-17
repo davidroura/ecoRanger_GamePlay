@@ -115,7 +115,7 @@
         <list cid="6" id="79" name="selectedBotList" save="true" val="list">
             <text order="0" value="planter"/>
             <text order="1" value="gadget"/>
-            <text order="2" value="dozey"/>
+            <text order="2" value="sucker"/>
         </list>
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
         <number cid="6" id="80" name="totalSelectedBots" save="true" value="3.0"/>

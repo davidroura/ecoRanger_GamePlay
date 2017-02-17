@@ -19,17 +19,14 @@
                                     </plus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-41 comment="false" x="48" y="172">
-                                    <true comment="false" id="0" x="0" y="0"/>
-                                </set-game-val-41>
-                                <comment-short comment="false" x="48" y="197">
+                                <comment-short comment="false" x="48" y="172">
                                     <int id="0" val="maybe make button glow when it&amp;apos;s being used and start to blink when it&amp;apos;s turning off"/>
                                 </comment-short>
-                                <setanim comment="false" x="48" y="217">
+                                <setanim comment="false" x="48" y="192">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Off"/>
                                 </setanim>
-                                <set-game-val-46 comment="false" x="48" y="244">
+                                <set-game-val-46 comment="false" x="48" y="219">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>

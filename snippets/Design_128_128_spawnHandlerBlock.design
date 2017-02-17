@@ -3,15 +3,9 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <print comment="false" x="26" y="40">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="ramdomNumber: "/>
-                        <get-game-val-74 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                </print>
-                <if comment="false" x="26" y="70">
+                <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <say-this comment="false" x="37" y="100">
+                        <say-this comment="false" x="37" y="70">
                             <int id="0" val="play"/>
                         </say-this>
                     </group>
@@ -21,6 +15,14 @@
                 </if>
             </group>
         </step>
+    </group>
+    <group eventID="1" id="1">
+        <print comment="false" x="22" y="128">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="ramdomNumber: "/>
+                <get-game-val-74 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+        </print>
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">

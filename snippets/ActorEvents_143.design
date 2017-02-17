@@ -29,24 +29,32 @@
                 </if>
                 <else comment="false" x="26" y="156">
                     <group eventID="1" id="-1">
-                        <die comment="false" x="37" y="176">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
+                        <print comment="false" x="37" y="176">
+                            <int id="0" val="the wind it is kill now"/>
+                        </print>
                     </group>
                 </else>
             </group>
         </draw>
     </group>
+    <group eventID="1" id="1">
+        <die comment="false" x="122" y="257">
+            <ACTOR eid="this" id="0"/>
+        </die>
+    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <dolater comment="false" x="26" y="40">
+                <set-game-val-41 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-41>
+                <dolater comment="false" x="26" y="65">
                     <group eventID="2" id="-1">
-                        <set-game-val-46 comment="false" x="37" y="67">
+                        <set-game-val-46 comment="false" x="37" y="92">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-46>
-                        <set-game-val-41 comment="false" x="37" y="92">
+                        <set-game-val-41 comment="false" x="37" y="117">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-41>
                     </group>
