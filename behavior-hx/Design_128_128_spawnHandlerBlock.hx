@@ -83,21 +83,24 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _bonusCard:Bool;
 	public var _ramdomBlockNumber:Float;
 	public var _itemNumber:Float;
+	public var _temporalVar:String;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
 	{
 		if((!(_distanceBlock == Engine.engine.getGameAttribute("playerDistance")) && ((Engine.engine.getGameAttribute("playerDistance") % 50) == 0)))
 		{
+			_ramdomBlockNumber = asNumber(randomFloat());
+			propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
 			_customEvent_blockOne();
 			_distanceBlock = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 			propertyChanged("_distanceBlock", _distanceBlock);
-		}
-		if((Engine.engine.getGameAttribute("playerDistance") == 100))
-		{
-			if(!(_bonusCard))
+			if((Engine.engine.getGameAttribute("playerDistance") == 100))
 			{
-				_customEvent_dropBonusCard();
+				if(!(_bonusCard))
+				{
+					_customEvent_dropBonusCard();
+				}
 			}
 		}
 	}
@@ -126,16 +129,32 @@ otherwise => sides */
 	{
 		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
 		{
+			_temporalVar = "1";
+			propertyChanged("_temporalVar", _temporalVar);
 			_xobstacle = asNumber(100);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_spawnTrashRight();
+			if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.15))
+			{
+				_customEvent_spawnTrashRight();
+			}
+			else
+			{
+				_customEvent_spawnTrashLeft();
+			}
 			_xobstacle = asNumber(200);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-120);
 			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_spawnTrashLeft();
+			if((_ramdomBlockNumber < 0.50))
+			{
+				_customEvent_spawnTrashRight();
+			}
+			else
+			{
+				_customEvent_spawnTrashLeft();
+			}
 			_xobstacle = asNumber(100);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-20);
@@ -149,6 +168,8 @@ otherwise => sides */
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
+			_temporalVar = "2";
+			propertyChanged("_temporalVar", _temporalVar);
 			_xobstacle = asNumber(150);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-16);
@@ -159,30 +180,32 @@ otherwise => sides */
 			_yobstacle = asNumber(-6);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropMud();
-			_xobstacle = asNumber(200);
-			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-30);
+			_yobstacle = asNumber(-(((_ramdomBlockNumber * 900) + 10)));
 			propertyChanged("_yobstacle", _yobstacle);
+			_xobstacle = asNumber(((_ramdomBlockNumber * 120) + 80));
+			propertyChanged("_xobstacle", _xobstacle);
 			_customEvent_spawnTrashLeft();
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
-			_xobstacle = asNumber(150);
+			_temporalVar = "3";
+			propertyChanged("_temporalVar", _temporalVar);
+			_xobstacle = asNumber(((_ramdomBlockNumber * 120) + 80));
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-16);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropLife();
-			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 100) + 150));
+			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80));
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_spawnTrash();
-			_xobstacle = asNumber(110);
+			_xobstacle = asNumber(80);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-100);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropRock();
-			_xobstacle = asNumber(200);
+			_xobstacle = asNumber(150);
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-20);
 			propertyChanged("_yobstacle", _yobstacle);
@@ -190,7 +213,9 @@ otherwise => sides */
 		}
 		else
 		{
-			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 100) + 150));
+			_temporalVar = "4";
+			propertyChanged("_temporalVar", _temporalVar);
+			_xobstacle = asNumber(((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80));
 			propertyChanged("_xobstacle", _xobstacle);
 			_yobstacle = asNumber(-30);
 			propertyChanged("_yobstacle", _yobstacle);
@@ -200,9 +225,9 @@ otherwise => sides */
 			_yobstacle = asNumber(-60);
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropRock();
-			_xobstacle = asNumber(240);
+			_xobstacle = asNumber(((_ramdomBlockNumber * 120) + 80));
 			propertyChanged("_xobstacle", _xobstacle);
-			_yobstacle = asNumber(-80);
+			_yobstacle = asNumber(-(((_ramdomBlockNumber * 100) + 50)));
 			propertyChanged("_yobstacle", _yobstacle);
 			_customEvent_dropRock();
 		}
@@ -504,7 +529,7 @@ otherwise => sides */
 	public function _customEvent_treeType():Void
 	{
 		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
-		getLastCreatedActor().setAnimation("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4))));
+		getLastCreatedActor().setAnimation("" + ("" + Math.round((_ramdomBlockNumber * 4))));
 	}
 	
 	
@@ -533,6 +558,8 @@ otherwise => sides */
 		_ramdomBlockNumber = 0.0;
 		nameMap.set("itemNumber", "_itemNumber");
 		_itemNumber = 0.0;
+		nameMap.set("temporalVar", "_temporalVar");
+		_temporalVar = "";
 		
 	}
 	
@@ -544,6 +571,16 @@ otherwise => sides */
 		propertyChanged("_lifehold", _lifehold);
 		_bonusCard = false;
 		propertyChanged("_bonusCard", _bonusCard);
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.setFont(getFont(190));
+				g.drawString("" + _temporalVar, 100, 100);
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
