@@ -9,31 +9,25 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="80" id="0" name="plastic" pts="4,-40.0,-40.0,40.0,-40.0,40.0,40.0,-40.0,40.0" r="64" type="box" w="80" x="327" y="141"/>
-        <region b="64" g="64" h="94" id="1" name="glass" pts="4,-40.0,-47.0,40.0,-47.0,40.0,47.0,-40.0,47.0" r="64" type="box" w="80" x="328" y="247"/>
-        <region b="64" g="64" h="84" id="2" name="aluminum" pts="4,-40.0,-42.5,40.0,-42.5,40.0,42.5,-40.0,42.5" r="64" type="box" w="80" x="330" y="368"/>
+        <region b="64" g="64" h="80" id="0" name="plastic" pts="4,-40.0,40.0,40.0,40.0,40.0,-40.0,-40.0,-40.0" r="64" type="box" w="80" x="328" y="174"/>
+        <region b="64" g="64" h="94" id="1" name="glass" pts="4,-40.0,47.0,40.0,47.0,40.0,-47.0,-40.0,-47.0" r="64" type="box" w="80" x="328" y="267"/>
+        <region b="64" g="64" h="84" id="2" name="aluminum" pts="4,-40.0,42.5,40.0,42.5,40.0,-42.5,-40.0,-42.5" r="64" type="box" w="80" x="330" y="378"/>
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="90.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="0.8695652" sy="1.0" x="111" y="189" z="0"/>
-        <actor a="90.0" aid="39" c="false" group="3" id="155" name="rItem_conveyerBelt 39" sx="0.8695652" sy="1.0" x="681" y="-37" z="2"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="-231" y="378" z="3"/>
+        <actor a="0.0" aid="39" c="false" group="3" id="155" name="rItem_conveyerBelt 39" sx="1.0" sy="1.0" x="448" y="269" z="2"/>
         <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="1.0" sy="1.0" x="279" y="12" z="0"/>
-        <actor a="90.0" aid="40" c="false" group="3" id="155" name="rItem_conveyerBelt 40" sx="0.8695652" sy="1.0" x="681" y="76" z="2"/>
-        <actor a="90.0" aid="41" c="false" group="3" id="155" name="rItem_conveyerBelt 41" sx="0.8695652" sy="1.0" x="681" y="194" z="2"/>
-        <actor a="0.0" aid="42" c="false" group="3" id="217" name="rItem_recyclingMachines 42" sx="1.0" sy="1.0" x="699" y="122" z="3"/>
-        <actor a="0.0" aid="43" c="false" group="3" id="217" name="rItem_recyclingMachines 43" sx="1.0" sy="1.0" x="699" y="239" z="3"/>
-        <actor a="90.0" aid="12" c="false" group="3" id="155" name="rItem_conveyerBelt 12" sx="0.8695652" sy="1.0" x="109" y="76" z="2"/>
-        <actor a="0.0" aid="44" c="false" group="3" id="217" name="rItem_recyclingMachines 44" sx="1.0" sy="1.0" x="699" y="356" z="3"/>
-        <actor a="90.0" aid="13" c="false" group="3" id="155" name="rItem_conveyerBelt 13" sx="0.8695652" sy="1.0" x="108" y="-37" z="2"/>
-        <actor a="0.0" aid="45" c="false" group="3" id="217" name="rItem_recyclingMachines 45" sx="1.0" sy="1.0" x="848" y="127" z="3"/>
-        <actor a="0.0" aid="14" c="false" group="6" id="157" name="rItem_BinPlastic 14" sx="1.0" sy="1.0" x="439" y="122" z="2"/>
-        <actor a="0.0" aid="46" c="false" group="3" id="217" name="rItem_recyclingMachines 46" sx="1.0" sy="1.0" x="848" y="249" z="3"/>
-        <actor a="0.0" aid="15" c="false" group="6" id="161" name="rItem_BinGlass 15" sx="1.0" sy="1.0" x="438" y="233" z="2"/>
-        <actor a="0.0" aid="47" c="false" group="3" id="217" name="rItem_recyclingMachines 47" sx="1.0" sy="1.0" x="848" y="367" z="3"/>
-        <actor a="0.0" aid="16" c="false" group="6" id="159" name="rItem_BinAluminum 16" sx="1.0" sy="1.0" x="440" y="355" z="2"/>
-        <actor a="0.0" aid="48" c="false" group="3" id="217" name="rItem_recyclingMachines 48" sx="1.0" sy="1.0" x="1007" y="127" z="3"/>
-        <actor a="0.0" aid="49" c="false" group="3" id="217" name="rItem_recyclingMachines 49" sx="1.0" sy="1.0" x="1005" y="245" z="3"/>
-        <actor a="0.0" aid="50" c="false" group="3" id="217" name="rItem_recyclingMachines 50" sx="1.0" sy="1.0" x="1001" y="367" z="3"/>
+        <actor a="0.0" aid="40" c="false" group="3" id="155" name="rItem_conveyerBelt 40" sx="1.0" sy="1.0" x="448" y="159" z="2"/>
+        <actor a="0.0" aid="41" c="false" group="3" id="155" name="rItem_conveyerBelt 41" sx="1.0" sy="1.0" x="450" y="375" z="2"/>
+        <actor a="0.0" aid="42" c="false" group="3" id="217" name="rItem_recyclingMachines 42" sx="1.0" sy="1.0" x="570" y="135" z="2"/>
+        <actor a="0.0" aid="43" c="false" group="3" id="217" name="rItem_recyclingMachines 43" sx="1.0" sy="1.0" x="570" y="246" z="2"/>
+        <actor a="0.0" aid="44" c="false" group="3" id="217" name="rItem_recyclingMachines 44" sx="1.0" sy="1.0" x="570" y="360" z="3"/>
+        <actor a="0.0" aid="12" c="false" group="3" id="155" name="rItem_conveyerBelt 12" sx="1.0" sy="1.0" x="-237" y="269" z="0"/>
+        <actor a="0.0" aid="13" c="false" group="3" id="155" name="rItem_conveyerBelt 13" sx="1.0" sy="1.0" x="-234" y="159" z="2"/>
+        <actor a="0.0" aid="14" c="false" group="6" id="157" name="rItem_BinPlastic 14" sx="1.0" sy="1.0" x="364" y="155" z="2"/>
+        <actor a="0.0" aid="15" c="false" group="6" id="161" name="rItem_BinGlass 15" sx="1.0" sy="1.0" x="362" y="264" z="2"/>
+        <actor a="0.0" aid="16" c="false" group="6" id="159" name="rItem_BinAluminum 16" sx="1.0" sy="1.0" x="369" y="373" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">

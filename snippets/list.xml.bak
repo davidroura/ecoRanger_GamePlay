@@ -570,6 +570,8 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashType" hidden="false" id="2" name="_trashType" order="1"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="spawnWait" hidden="false" id="3" name="_spawnWait" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashPos" hidden="false" id="4" name="_trashPos" order="3"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashSeed" hidden="false" id="5" name="_trashSeed" order="4"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="8" repeats="true"/>
@@ -720,8 +722,11 @@
         <events/>
     </snippet>
     <snippet actorid="157" attachedevent="true" class="scripts.ActorEvents_157" classname="scripts.ActorEvents_157" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="106" name="ActorEvents_157" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="dump" hidden="false" id="1" name="_dump" order="0"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_107_107_FadeAfterTime" classname="scripts.Design_107_107_FadeAfterTime" desc="Attach this behaviour to an actor to have it fade out after the specified time and over a specified duration" description="Attach this behaviour to an actor to have it fade out after the specified time and over a specified duration" design="true" drawOrder="0" id="107" name="Fade After Time" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
@@ -736,12 +741,18 @@
         </events>
     </snippet>
     <snippet actorid="159" attachedevent="true" class="scripts.ActorEvents_159" classname="scripts.ActorEvents_159" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="109" name="ActorEvents_159" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="dump" hidden="false" id="1" name="_dump" order="0"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="161" attachedevent="true" class="scripts.ActorEvents_161" classname="scripts.ActorEvents_161" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="110" name="ActorEvents_161" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="dump" hidden="false" id="1" name="_dump" order="0"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_139_139_recyclingtrashBehavior" classname="scripts.Design_139_139_recyclingtrashBehavior" desc="Allows the actor to be dragged and dropped by the mouse." description="Allows the actor to be dragged and dropped by the mouse." design="true" drawOrder="0" id="111" name="recycling_trashBehavior" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>

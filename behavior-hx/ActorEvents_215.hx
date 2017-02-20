@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_157 extends ActorScript
+class ActorEvents_215 extends ActorScript
 {
 	
 	
@@ -81,6 +81,18 @@ class ActorEvents_157 extends ActorScript
 	
 	override public function init()
 	{
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.setFont(getFont(59));
+				g.drawString("" + (("" + "plastic: ") + ("" + Engine.engine.getGameAttribute("plastic"))), actor.getXCenter(), actor.getScreenX());
+				g.drawString("" + (("" + "aluminum: ") + ("" + Engine.engine.getGameAttribute("glass"))), actor.getXCenter(), (actor.getScreenX() + 25));
+				g.drawString("" + (("" + "glass: ") + ("" + Engine.engine.getGameAttribute("aluminum"))), actor.getXCenter(), (actor.getScreenX() + 50));
+			}
+		});
 		
 	}
 	

@@ -602,19 +602,28 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="88" id="50" name="retryButton" shared="false" width="88">
         <anim across="1" down="1" durations="100" height="88" id="0" loop="true" name="Animation 0" numframes="1" originx="35" originy="35" sync="false" version="2" width="88"/>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="121" id="158" name="rItem_Bin" shared="false" width="90">
-        <anim across="1" down="1" durations="100" height="121" id="0" loop="true" name="Animation 0" numframes="1" originx="52" originy="49" sync="false" version="2" width="90">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="99" id="158" name="rItem_Bin" shared="false" width="73">
+        <anim across="1" down="1" durations="100" height="99" id="0" loop="true" name="Animation 0" numframes="1" originx="36" originy="49" sync="false" version="2" width="73">
             <poly data="4,8,10,93,10,93,95,8,95" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="113" id="1" loop="true" name="drop" numframes="1" originx="37" originy="56" sync="false" version="2" width="74">
+            <poly data="4,0,0,74,0,74,113,0,113" density="0.1" fric="0.2" gid="-1000" id="0" name="drop" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="121" id="160" name="rItem_Bin" shared="false" width="90">
-        <anim across="1" down="1" durations="100" height="121" id="0" loop="true" name="Animation 0" numframes="1" originx="52" originy="49" sync="false" version="2" width="90">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="99" id="160" name="rItem_Bin" shared="false" width="73">
+        <anim across="1" down="1" durations="100" height="99" id="0" loop="true" name="Animation 0" numframes="1" originx="36" originy="49" sync="false" version="2" width="73">
             <poly data="4,8,10,68,10,68,95,8,95" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="113" id="1" loop="true" name="drop" numframes="1" originx="37" originy="56" sync="false" version="2" width="74">
+            <poly data="4,0,0,74,0,74,113,0,113" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="121" id="162" name="rItem_Bin" shared="false" width="90">
-        <anim across="1" down="1" durations="100" height="121" id="0" loop="true" name="Animation 0" numframes="1" originx="52" originy="49" sync="false" version="2" width="90">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="99" id="162" name="rItem_Bin" shared="false" width="73">
+        <anim across="1" down="1" durations="100" height="99" id="0" loop="true" name="Animation 0" numframes="1" originx="36" originy="49" sync="false" version="2" width="73">
             <poly data="4,8,10,93,10,93,95,8,95" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="113" id="1" loop="true" name="drop" numframes="1" originx="37" originy="56" sync="false" version="2" width="74">
+            <poly data="4,0,0,74,0,74,113,0,113" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="109" fixedrot="false" fric="0.2" gid="6" id="159" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_BinAluminum" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="160" static="false">
@@ -670,16 +679,22 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="105" fixedrot="false" fric="0.2" gid="3" id="155" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_conveyerBelt" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="156" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="105" fixedrot="false" fric="0.2" gid="3" id="155" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_conveyerBelt" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="156" static="false">
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="156" name="rItem_conveyerBelt" shared="false" width="184">
-        <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="Animation 0" numframes="1" originx="159" originy="239" sync="false" version="2" width="184">
-            <poly data="4,30,0,162,0,162,479,30,479" density="0.1" fric="0.2" gid="3" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="110" id="156" name="rItem_conveyerBelt" shared="false" width="582">
+        <anim across="1" down="1" durations="100" height="110" id="0" loop="true" name="plastic" numframes="1" originx="291" originy="55" sync="false" version="2" width="582">
+            <poly data="4,0,5,578,5,578,80,0,80" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="123" id="1" loop="true" name="aluminum" numframes="1" originx="289" originy="53" sync="false" version="2" width="582">
+            <poly data="4,0,0,578,0,578,107,0,107" density="0.1" fric="0.2" gid="-1000" id="0" name="aluminum" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="111" id="2" loop="true" name="glass" numframes="1" originx="289" originy="47" sync="false" version="2" width="582">
+            <poly data="4,0,0,578,0,578,95,0,95" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="96" id="168" name="rItem_glass" shared="false" width="131">
@@ -698,16 +713,16 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="140" fixedrot="false" fric="0.2" gid="3" id="217" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_recyclingMachines" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="218" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="140" fixedrot="false" fric="0.2" gid="3" id="217" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rItem_recyclingMachines" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="218" static="false">
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="113" id="218" name="rItem_recyclingMachines" shared="false" width="105">
-        <anim across="1" down="1" durations="100" height="113" id="0" loop="true" name="washer" numframes="1" originx="52" originy="56" sync="false" version="2" width="105">
-            <poly data="4,0,0,105,0,105,113,0,113" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="2" defaultAnimation="2" desc="" height="125" id="218" name="rItem_recyclingMachines" shared="false" width="168">
+        <anim across="1" down="1" durations="100" height="125" id="2" loop="true" name="wash" numframes="1" originx="49" originy="58" sync="false" version="2" width="168">
+            <poly data="4,0,0,98,0,98,116,0,116" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="13" name="rock" shared="false" width="83">
