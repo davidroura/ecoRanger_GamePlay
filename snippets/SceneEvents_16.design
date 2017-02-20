@@ -5,33 +5,25 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <camera-move comment="false" x="37" y="80">
-                            <plus comment="false" id="0" x="0" y="0">
-                                <screen-xy comment="false" id="0" x="0" y="0">
-                                    <int id="0" val="2"/>
-                                </screen-xy>
-                                <int id="1" val="1"/>
-                            </plus>
-                            <screen-xy comment="false" id="1" x="0" y="0">
-                                <int id="0" val="2"/>
-                            </screen-xy>
-                        </camera-move>
-                        <print comment="false" x="37" y="118">
-                            <int id="0" val="moving camera"/>
-                        </print>
-                        <if comment="false" x="37" y="138">
+                        <if comment="false" x="37" y="80">
                             <group eventID="2" id="-1">
-                                <create-actor3 comment="false" x="48" y="168">
+                                <create-actor3 comment="false" x="48" y="110">
+                                    <actortype eid="215" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="15"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <create-actor3 comment="false" x="48" y="137">
                                     <actortype eid="175" id="0"/>
                                     <int id="1" val="0"/>
                                     <get-game-val-71 comment="false" id="2" x="0" y="0"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <setanim comment="false" x="48" y="200">
+                                <setanim comment="false" x="48" y="169">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="noMoreTrash"/>
                                 </setanim>
-                                <set-game-val-89 comment="false" x="48" y="227">
+                                <set-game-val-89 comment="false" x="48" y="196">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-89>
                             </group>
@@ -57,14 +49,14 @@
                         </lesseq>
                     </and>
                 </if>
-                <else comment="false" x="26" y="276">
+                <else comment="false" x="26" y="245">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="296">
+                        <if comment="false" x="37" y="265">
                             <group eventID="2" id="-1">
-                                <say-this comment="false" x="48" y="326">
+                                <say-this comment="false" x="48" y="295">
                                     <int id="0" val="randomSpawn"/>
                                 </say-this>
-                                <set-val-89-3 comment="false" x="48" y="346">
+                                <set-val-89-3 comment="false" x="48" y="315">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-89-3>
                             </group>
@@ -74,24 +66,6 @@
                         </if>
                     </group>
                 </else>
-                <set-font-new comment="false" x="26" y="395">
-                    <font eid="135" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="422">
-                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="15"/>
-                    <int id="2" val="10"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="447">
-                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="75"/>
-                    <int id="2" val="10"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="472">
-                    <get-game-val-65 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="135"/>
-                    <int id="2" val="10"/>
-                </draw-text>
             </group>
         </draw>
     </group>
@@ -363,6 +337,19 @@
                     </randint>
                     <int id="3" val="0"/>
                 </create-actor3>
+                <play-sound4 comment="false" x="42" y="112">
+                    <int id="0" val="0"/>
+                    <sound eid="212" id="1"/>
+                </play-sound4>
+                <set-game-val-91 comment="false" x="42" y="139">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-91 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-val-91>
+                <die comment="false" x="42" y="169">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
             </group>
             <int id="0" val="0"/>
             <REGION eid="0" id="1"/>
@@ -385,6 +372,19 @@
                     </randint>
                     <int id="3" val="0"/>
                 </create-actor3>
+                <play-sound4 comment="false" x="42" y="112">
+                    <int id="0" val="0"/>
+                    <sound eid="212" id="1"/>
+                </play-sound4>
+                <die comment="false" x="42" y="139">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+                <set-game-val-90 comment="false" x="42" y="171">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-90 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-val-90>
             </group>
             <int id="0" val="0"/>
             <REGION eid="2" id="1"/>
@@ -407,6 +407,19 @@
                     </randint>
                     <int id="3" val="0"/>
                 </create-actor3>
+                <play-sound4 comment="false" x="42" y="112">
+                    <int id="0" val="0"/>
+                    <sound eid="212" id="1"/>
+                </play-sound4>
+                <die comment="false" x="42" y="139">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+                <set-game-val-92 comment="false" x="42" y="171">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-92 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-val-92>
             </group>
             <int id="0" val="0"/>
             <REGION eid="1" id="1"/>
@@ -414,4 +427,106 @@
         </event-type-region>
     </group>
     <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-type-region comment="false" x="31" y="48">
+            <group eventID="6" id="-1">
+                <die comment="false" x="42" y="80">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+                <play-sound4 comment="false" x="42" y="112">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="1" id="1"/>
+            <actortype eid="131" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <event-type-region comment="false" x="31" y="48">
+            <group eventID="6" id="-1">
+                <die comment="false" x="42" y="80">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+                <play-sound4 comment="false" x="42" y="112">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <actortype eid="131" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-type-region comment="false" x="31" y="48">
+            <group eventID="6" id="-1">
+                <play-sound4 comment="false" x="42" y="80">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+                <die comment="false" x="42" y="107">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <actortype eid="137" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-type-region comment="false" x="43" y="23">
+            <group eventID="12" id="-1">
+                <play-sound4 comment="false" x="54" y="55">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+                <die comment="false" x="54" y="82">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="2" id="1"/>
+            <actortype eid="137" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-type-region comment="false" x="31" y="48">
+            <group eventID="6" id="-1">
+                <play-sound4 comment="false" x="42" y="80">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+                <die comment="false" x="42" y="107">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="1" id="1"/>
+            <actortype eid="139" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="13" id="-1"/>
+    <group eventID="14" id="0">
+        <event-type-region comment="false" x="31" y="48">
+            <group eventID="6" id="-1">
+                <play-sound4 comment="false" x="42" y="80">
+                    <int id="0" val="0"/>
+                    <sound eid="214" id="1"/>
+                </play-sound4>
+                <die comment="false" x="42" y="107">
+                    <actor-entered-exited comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="2" id="1"/>
+            <actortype eid="139" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="14" id="-1"/>
 </groups>

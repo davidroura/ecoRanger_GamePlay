@@ -184,7 +184,12 @@
                     </group>
                     <int id="0" val="put anything here that has to be initialized before next game round"/>
                 </comment-wrapper>
-                <set-val-0-3 comment="false" x="26" y="122">
+                <stop-sounds comment="false" x="26" y="122"/>
+                <play-sound4 comment="false" x="26" y="142">
+                    <int id="0" val="0"/>
+                    <sound eid="213" id="1"/>
+                </play-sound4>
+                <set-val-0-3 comment="false" x="26" y="169">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-59 comment="false" id="0" x="0" y="0"/>
                         <plus comment="false" id="1" x="0" y="0">
@@ -193,48 +198,48 @@
                         </plus>
                     </plus>
                 </set-val-0-3>
-                <set-game-val-65 comment="false" x="26" y="157">
+                <set-game-val-65 comment="false" x="26" y="204">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-65 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-60 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-65>
-                <set-game-val-63 comment="false" x="26" y="187">
+                <set-game-val-63 comment="false" x="26" y="234">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-63 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-61 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-63>
-                <set-game-val-64 comment="false" x="26" y="217">
+                <set-game-val-64 comment="false" x="26" y="264">
                     <plus comment="false" id="0" x="0" y="0">
                         <get-game-val-64 comment="false" id="0" x="0" y="0"/>
                         <get-game-val-59 comment="false" id="1" x="0" y="0"/>
                     </plus>
                 </set-game-val-64>
-                <create-bglayer-from-bg comment="false" x="26" y="247">
+                <create-bglayer-from-bg comment="false" x="26" y="294">
                     <int id="0" val="UIEnd"/>
                     <int id="1" val="EndUI"/>
                     <int id="2" val="5"/>
                 </create-bglayer-from-bg>
-                <create-actor3 comment="false" x="26" y="267">
+                <create-actor3 comment="false" x="26" y="314">
                     <actortype eid="49" id="0"/>
                     <int id="1" val="170"/>
                     <int id="2" val="290"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <create-actor3 comment="false" x="26" y="294">
+                <create-actor3 comment="false" x="26" y="341">
                     <actortype eid="51" id="0"/>
                     <int id="1" val="50"/>
                     <int id="2" val="290"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <save-game comment="false" x="26" y="321">
+                <save-game comment="false" x="26" y="368">
                     <group eventID="13" id="-1">
-                        <if comment="false" x="37" y="346">
+                        <if comment="false" x="37" y="393">
                             <group eventID="13" id="-1"/>
                             <save-success comment="false" id="0" x="0" y="0"/>
                         </if>
-                        <else comment="false" x="37" y="403">
+                        <else comment="false" x="37" y="450">
                             <group eventID="13" id="-1"/>
                         </else>
                     </group>

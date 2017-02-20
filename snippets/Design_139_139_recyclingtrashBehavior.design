@@ -217,11 +217,11 @@
         </step>
     </group>
     <group eventID="2" id="1">
-        <if comment="false" x="762" y="490">
+        <if comment="false" x="781" y="491">
             <group eventID="2" id="-1">
-                <dolater comment="false" x="773" y="515">
+                <dolater comment="false" x="792" y="516">
                     <group eventID="2" id="-1">
-                        <set-dxy comment="false" x="784" y="542">
+                        <set-dxy comment="false" x="803" y="543">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <get-game-val-39 comment="false" id="2" x="0" y="0"/>

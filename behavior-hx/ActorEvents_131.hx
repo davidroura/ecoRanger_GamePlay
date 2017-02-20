@@ -94,7 +94,6 @@ class ActorEvents_131 extends ActorScript
 			if(wrapper.enabled && sameAsAny(getActorType(159), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
 				recycleActor(actor);
-				Engine.engine.setGameAttribute("recycling_cans", (Engine.engine.getGameAttribute("recycling_cans") + 1));
 			}
 		});
 		
