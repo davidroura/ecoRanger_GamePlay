@@ -69,33 +69,36 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_215 extends ActorScript
+class ActorEvents_161 extends ActorScript
 {
+	public var _dump:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("dump", "_dump");
+		_dump = true;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("totalPlastic", (Engine.engine.getGameAttribute("totalPlastic") + Engine.engine.getGameAttribute("plastic")));
-		Engine.engine.setGameAttribute("totalGlass", (Engine.engine.getGameAttribute("totalGlass") + Engine.engine.getGameAttribute("glass")));
-		Engine.engine.setGameAttribute("totalAluminum", (Engine.engine.getGameAttribute("totalAluminum") + Engine.engine.getGameAttribute("aluminum")));
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				g.setFont(getFont(190));
-				g.drawString("" + Engine.engine.getGameAttribute("plastic"), 60, 45);
-				g.drawString("" + Engine.engine.getGameAttribute("aluminum"), 140, 45);
-				g.drawString("" + Engine.engine.getGameAttribute("glass"), 220, 45);
+				if(((actor.getAnimation() == "drop") && (_dump == true)))
+				{
+					for(index0 in 0...Std.int(5))
+					{
+						createRecycledActor(getActorType(137), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.FRONT);
+					}
+					_dump = false;
+					propertyChanged("_dump", _dump);
+				}
 			}
 		});
 		

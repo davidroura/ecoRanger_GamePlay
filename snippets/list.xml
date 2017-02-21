@@ -292,6 +292,7 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="217" attachedevent="true" class="scripts.ActorEvents_217" classname="scripts.ActorEvents_217" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="140" name="ActorEvents_217" oid="-1" package="scripts." shared="false" type="actor">

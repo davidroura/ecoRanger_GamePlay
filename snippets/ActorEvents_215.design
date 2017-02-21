@@ -4,58 +4,50 @@
         <draw comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <set-font-new comment="false" x="26" y="40">
-                    <font eid="59" id="0"/>
+                    <font eid="190" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="67">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="plastic: "/>
-                        <get-game-val-91 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <get-xy comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="2"/>
-                    </get-xy>
-                    <get-xy comment="false" id="2" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="4"/>
-                    </get-xy>
+                    <get-game-val-91 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="60"/>
+                    <int id="2" val="45"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="100">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="aluminum: "/>
-                        <get-game-val-92 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <get-xy comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="2"/>
-                    </get-xy>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="4"/>
-                        </get-xy>
-                        <int id="1" val="25"/>
-                    </plus>
+                <draw-text comment="false" x="26" y="92">
+                    <get-game-val-90 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="140"/>
+                    <int id="2" val="45"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="138">
-                    <str-combine comment="false" id="0" x="0" y="0">
-                        <int id="0" val="glass: "/>
-                        <get-game-val-90 comment="false" id="1" x="0" y="0"/>
-                    </str-combine>
-                    <get-xy comment="false" id="1" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="2"/>
-                    </get-xy>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="4"/>
-                        </get-xy>
-                        <int id="1" val="50"/>
-                    </plus>
+                <draw-text comment="false" x="26" y="117">
+                    <get-game-val-92 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="220"/>
+                    <int id="2" val="45"/>
                 </draw-text>
             </group>
         </draw>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-33 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-33 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-91 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-game-val-33>
+                <set-game-val-93 comment="false" x="26" y="70">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-93 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-92 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-game-val-93>
+                <set-game-val-94 comment="false" x="26" y="100">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-94 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-90 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-game-val-94>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>
