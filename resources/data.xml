@@ -4,6 +4,14 @@
     <custom-block blocktag="custom-193" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="193" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
     <custom-block blocktag="custom-194" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="194" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
     <custom-block blocktag="custom-195" blocktype="ACTION" code="sayToScene(&quot;SceneEvents_0&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="195" message="" name="" oid="-1" return="void" shared="false" snippetID="0"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="141" fixedrot="false" fric="0.2" gid="8" id="219" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_extraCollision" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="220" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="274" id="220" name="_extraCollision" shared="false" width="249">
+        <anim across="1" down="1" durations="100" height="274" id="0" loop="true" name="Animation 0" numframes="1" originx="124" originy="137" sync="false" version="2" width="249">
+            <poly data="3,248,47,6,42,124,276" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="138" fixedrot="true" fric="0.2" gid="2" id="210" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_symbols" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="211" static="false">
         <snippets>
             <s enabled="true" id="107">
@@ -248,13 +256,11 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="99" fixedrot="true" fric="0.2" gid="3" id="143" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gEffect_WirlWind" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="144" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="99" fixedrot="true" fric="0.2" gid="8" id="143" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gEffect_WirlWind" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="144" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="99" id="144" name="gEffect_WirlWind" shared="false" width="113">
-        <anim across="1" down="1" durations="100" height="99" id="0" loop="true" name="Animation 0" numframes="1" originx="56" originy="49" sync="false" version="2" width="113">
-            <poly data="4,0,0,113,0,113,99,0,99" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
-        </anim>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="103" id="144" name="gEffect_WirlWind" shared="false" width="107">
+        <anim across="1" down="1" durations="100" height="103" id="0" loop="true" name="Animation 0" numframes="1" originx="53" originy="103" sync="false" version="2" width="107"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="6" id="10" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_banana" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="11" static="false">
         <snippets>
@@ -276,6 +282,7 @@
                 <prop id="11" list="0" val="true"/>
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="false"/>
             </s>
         </snippets>
     </actor>
@@ -293,7 +300,7 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="7" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="6" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -313,10 +320,11 @@
                 <prop id="11" list="0" val="true"/>
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="false"/>
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="false" fric="0.2" gid="7" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_GlassBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="false" fric="0.2" gid="6" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_GlassBottle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -336,6 +344,7 @@
                 <prop id="11" list="0" val="true"/>
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="false"/>
             </s>
         </snippets>
     </actor>
@@ -351,7 +360,7 @@
             <poly data="5,12,27,14,48,33,56,69,39,61,24" density="0.1" fric="0.2" gid="7" id="0" name="" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="7" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="72" fixedrot="false" fric="0.2" gid="6" id="104" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_plastic" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="105" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -371,10 +380,11 @@
                 <prop id="11" list="0" val="true"/>
                 <prop id="12" list="0" val="false"/>
                 <prop id="13" list="0" val="0"/>
+                <prop id="14" list="0" val="false"/>
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="15" fixedrot="true" fric="0.75" gid="3" id="12" ignoreg="true" inertia="1.0" ldamp="0.0" mass="100.0" name="gItem_rock" oid="-1" pausable="true" physicsMode="0" rest="0.05" shared="false" sprite="13" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="15" fixedrot="true" fric="0.75" gid="7" id="12" ignoreg="true" inertia="1.0" ldamp="0.0" mass="100.0" name="gItem_rock" oid="-1" pausable="true" physicsMode="0" rest="0.05" shared="false" sprite="13" static="false">
         <snippets>
             <s enabled="false" id="18">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -736,6 +746,7 @@
         <anim across="1" down="1" durations="100" height="125" id="2" loop="true" name="wash" numframes="1" originx="49" originy="58" sync="false" version="2" width="168">
             <poly data="4,0,0,98,0,98,116,0,116" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="16" id="3" loop="true" name="crush" numframes="1" originx="0" originy="0" sync="false" version="2" width="16"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="13" name="rock" shared="false" width="83">
         <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="83">
@@ -776,10 +787,10 @@
         <anim across="1" down="1" durations="100" height="71" id="7" loop="false" name="upGadgetBoost" numframes="1" originx="28" originy="35" sync="false" version="2" width="56">
             <poly data="5,30,9,11,26,14,58,46,58,51,25" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="71" id="8" loop="true" name="leftGadgetBoost" numframes="1" originx="29" originy="35" sync="false" version="2" width="56">
+        <anim across="1" down="1" durations="100" height="71" id="8" loop="true" name="leftGadgetBoost" numframes="1" originx="28" originy="35" sync="false" version="2" width="56">
             <poly data="5,20,10,7,31,21,61,50,53,44,22" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="71" id="9" loop="true" name="rightGadgetBoost" numframes="1" originx="29" originy="34" sync="false" version="2" width="56">
+        <anim across="1" down="1" durations="100" height="71" id="9" loop="true" name="rightGadgetBoost" numframes="1" originx="28" originy="35" sync="false" version="2" width="56">
             <poly data="5,40,11,18,21,12,49,36,58,52,31" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>

@@ -269,6 +269,15 @@
                     <ACTOR eid="44" id="0"/>
                     <int id="1" val="aluminumWash"/>
                 </setanim>
+                <set-game-val-63 comment="false" x="26" y="249">
+                    <int id="0" val="10"/>
+                </set-game-val-63>
+                <set-game-val-64 comment="false" x="26" y="269">
+                    <int id="0" val="10"/>
+                </set-game-val-64>
+                <set-game-val-65 comment="false" x="26" y="289">
+                    <int id="0" val="10"/>
+                </set-game-val-65>
             </group>
         </init>
     </group>

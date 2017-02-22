@@ -5,7 +5,7 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-val-94-2 comment="false" x="37" y="65">
+                        <set-val-94-2 comment="false" x="37" y="70">
                             <minus comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <get-game-val-20 comment="false" id="0" x="0" y="0"/>
@@ -17,7 +17,7 @@
                                 </get-xy>
                             </minus>
                         </set-val-94-2>
-                        <set-val-94-3 comment="false" x="37" y="103">
+                        <set-val-94-3 comment="false" x="37" y="108">
                             <minus comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <get-game-val-5 comment="false" id="0" x="0" y="0"/>
@@ -29,7 +29,7 @@
                                 </get-xy>
                             </minus>
                         </set-val-94-3>
-                        <set-val-94-4 comment="false" x="37" y="141">
+                        <set-val-94-4 comment="false" x="37" y="146">
                             <sqrt comment="false" id="0" x="0" y="0">
                                 <plus comment="false" id="0" x="0" y="0">
                                     <pow comment="false" id="0" x="0" y="0">
@@ -43,42 +43,55 @@
                                 </plus>
                             </sqrt>
                         </set-val-94-4>
-                        <if comment="false" x="37" y="181">
-                            <group eventID="1" id="-1">
-                                <set-val-94-5 comment="false" x="48" y="211">
-                                    <to-degreesradians comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="0"/>
-                                        <atan2 comment="false" id="1" x="0" y="0">
-                                            <get-val-94-3 comment="false" id="0" x="0" y="0"/>
-                                            <get-val-94-2 comment="false" id="1" x="0" y="0"/>
-                                        </atan2>
-                                    </to-degreesradians>
-                                </set-val-94-5>
-                                <setvel comment="false" x="48" y="254">
-                                    <ACTOR eid="this" id="0"/>
-                                    <get-val-94-5 comment="false" id="1" x="0" y="0"/>
-                                    <plus comment="false" id="2" x="0" y="0">
-                                        <int id="0" val=".03"/>
-                                        <get-game-val-3 comment="false" id="1" x="0" y="0"/>
-                                    </plus>
-                                </setvel>
-                                <set-val-94-13 comment="false" x="48" y="291">
-                                    <times comment="false" id="0" x="0" y="0">
-                                        <int id="0" val=".03"/>
-                                        <int id="1" val="2"/>
-                                    </times>
-                                </set-val-94-13>
-                            </group>
-                            <less comment="false" id="0" x="0" y="0">
-                                <get-val-94-4 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="165"/>
-                            </less>
-                        </if>
+                        <set-val-94-5 comment="false" x="37" y="186">
+                            <to-degreesradians comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <atan2 comment="false" id="1" x="0" y="0">
+                                    <get-val-94-3 comment="false" id="0" x="0" y="0"/>
+                                    <get-val-94-2 comment="false" id="1" x="0" y="0"/>
+                                </atan2>
+                            </to-degreesradians>
+                        </set-val-94-5>
+                        <setvel comment="false" x="37" y="229">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-94-5 comment="false" id="1" x="0" y="0"/>
+                            <get-val-94-13 comment="false" id="2" x="0" y="0"/>
+                        </setvel>
+                        <set-val-94-13 comment="false" x="37" y="261">
+                            <times comment="false" id="0" x="0" y="0">
+                                <int id="0" val="30"/>
+                                <int id="1" val="1.4"/>
+                            </times>
+                        </set-val-94-13>
                     </group>
-                    <get-game-val-41 comment="false" id="0" x="0" y="0"/>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-game-val-41 comment="false" id="0" x="0" y="0"/>
+                        <get-val-94-14 comment="false" id="1" x="0" y="0"/>
+                    </and>
                 </if>
             </group>
         </step>
     </group>
+    <group eventID="1" id="1">
+        <if comment="false" x="181" y="412">
+            <group eventID="1" id="-1"/>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-94-4 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="165"/>
+            </less>
+        </if>
+    </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-collide-actortotype comment="false" x="56" y="46">
+            <group eventID="2" id="-1">
+                <set-val-94-14 comment="false" x="67" y="78">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-94-14>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="219" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

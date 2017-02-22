@@ -81,37 +81,30 @@
                 <set-volume comment="false" x="26" y="299">
                     <int id="0" val="20"/>
                 </set-volume>
-                <if comment="false" x="26" y="319">
-                    <group eventID="4" id="-1">
-                        <say-this comment="false" x="37" y="349">
-                            <int id="0" val="tutorial"/>
-                        </say-this>
-                    </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-game-val-26 comment="false" id="0" x="0" y="0"/>
-                    </not>
-                </if>
-                <setanim comment="false" x="26" y="381">
+                <setanim comment="false" x="26" y="319">
                     <ACTOR eid="15" id="0"/>
                     <get-item comment="false" id="1" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </get-item>
                 </setanim>
-                <setanim comment="false" x="26" y="418">
+                <setanim comment="false" x="26" y="356">
                     <ACTOR eid="14" id="0"/>
                     <get-item comment="false" id="1" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </get-item>
                 </setanim>
-                <setanim comment="false" x="26" y="455">
+                <setanim comment="false" x="26" y="393">
                     <ACTOR eid="13" id="0"/>
                     <get-item comment="false" id="1" x="0" y="0">
                         <get-game-val-79 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="2"/>
                     </get-item>
                 </setanim>
+                <set-game-val-26 comment="false" x="26" y="430">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-26>
             </group>
         </init>
     </group>
@@ -125,6 +118,18 @@
                 <int id="1" val="Center"/>
             </str-combine>
         </setanim>
+    </group>
+    <group eventID="4" id="2">
+        <if comment="false" x="23" y="499">
+            <group eventID="4" id="-1">
+                <say-this comment="false" x="34" y="529">
+                    <int id="0" val="tutorial"/>
+                </say-this>
+            </group>
+            <not comment="false" id="0" x="0" y="0">
+                <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+            </not>
+        </if>
     </group>
     <group eventID="4" id="-1"/>
     <group eventID="10" id="0">

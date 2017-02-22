@@ -126,7 +126,7 @@ class ActorEvents_1 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("playerXPos", actor.getX());
+				Engine.engine.setGameAttribute("playerXPos", actor.getScreenX());
 			}
 		});
 		
