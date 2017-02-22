@@ -88,6 +88,9 @@ class ActorEvents_139 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(2))));
+		
 	}
 	
 	override public function forwardMessage(msg:String)

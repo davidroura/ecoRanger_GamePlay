@@ -554,7 +554,7 @@
         <number default="60.0" defaultValue="60.0" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
         <blocks/>
         <events>
-            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_88_88_globalSettings" classname="scripts.Design_88_88_globalSettings" desc="" description="" design="true" drawOrder="0" id="88" name="globalSettings" oid="-1" package="scripts" shared="false" type="scene">
@@ -595,14 +595,16 @@
         <number default="60.0" defaultValue="60.0" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
         <blocks/>
         <events>
-            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="139" attachedevent="true" class="scripts.ActorEvents_139" classname="scripts.ActorEvents_139" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="91" name="ActorEvents_139" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="onPad" hidden="false" id="1" name="_onPad" order="0"/>
         <number default="60.0" defaultValue="60.0" desc="" dropdown="" fullname="beltSpeed" hidden="false" id="2" name="_beltSpeed" order="1"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_98_98_powerUpsucker" classname="scripts.Design_98_98_powerUpsucker" desc="Make the actor follow a given actor." description="Make the actor follow a given actor." design="true" drawOrder="0" id="94" name="powerUp_sucker" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
@@ -833,10 +835,6 @@
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
         </events>
-    </snippet>
-    <snippet actorid="178" attachedevent="true" class="scripts.ActorEvents_178" classname="scripts.ActorEvents_178" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="121" name="ActorEvents_178" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
-        <events/>
     </snippet>
     <snippet actorid="180" attachedevent="true" class="scripts.ActorEvents_180" classname="scripts.ActorEvents_180" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="122" name="ActorEvents_180" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>

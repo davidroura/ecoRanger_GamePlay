@@ -97,6 +97,10 @@ class Design_139_139_recyclingCameraMovement extends ActorScript
 					{
 						actor.setXVelocity(-10);
 					}, actor);
+					runLater(1000 * 7.5, function(timeTask:TimedTask):Void
+					{
+						actor.setXVelocity(0);
+					}, actor);
 				}
 			}
 		});

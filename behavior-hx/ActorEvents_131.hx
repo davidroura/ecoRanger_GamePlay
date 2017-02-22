@@ -88,14 +88,8 @@ class ActorEvents_131 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(159), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				recycleActor(actor);
-			}
-		});
+		/* ======================== When Creating ========================= */
+		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(2))));
 		
 	}
 	

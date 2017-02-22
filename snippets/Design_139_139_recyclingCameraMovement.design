@@ -16,6 +16,17 @@
                             <int id="0" val="2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
+                        <dolater comment="false" x="37" y="146">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="48" y="173">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                            <int id="0" val="7.5"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <and comment="false" id="0" x="0" y="0">
