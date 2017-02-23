@@ -270,8 +270,10 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="99" fixedrot="true" fric="0.2" gid="8" id="143" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gEffect_WirlWind" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="144" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="103" id="144" name="gEffect_WirlWind" shared="false" width="107">
-        <anim across="1" down="1" durations="100" height="103" id="0" loop="true" name="Animation 0" numframes="1" originx="53" originy="103" sync="false" version="2" width="107"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="248" id="144" name="gEffect_WirlWind" shared="false" width="416">
+        <anim across="3" down="2" durations="50,50,50,50,50,50" height="496" id="0" loop="true" name="Animation 0" numframes="6" originx="208" originy="248" sync="false" version="2" width="1248">
+            <poly data="4,0,0,416,0,416,248,0,248" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="6" id="10" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_banana" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="11" static="false">
         <snippets>
@@ -762,6 +764,9 @@
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="13" name="rock" shared="false" width="83">
         <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="83">
             <poly data="5,14,77,30,91,75,71,63,47,26,51" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100,100" height="513" id="1" loop="false" name="explode" numframes="9" originx="88" originy="85" sync="false" version="2" width="528">
+            <poly data="4,0,0,176,0,176,171,0,171" density="0.1" fric="0.2" gid="-1000" id="0" name="explode" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="139" fixedrot="false" fric="0.2" gid="3" id="215" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rUI_recyclingResults" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="216" static="false">

@@ -76,16 +76,13 @@
                         </if>
                         <if comment="false" x="37" y="433">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="471">
-                                    <int id="0" val="whirlwind created"/>
-                                </print>
-                                <create-actor3 comment="false" x="48" y="491">
+                                <create-actor3 comment="false" x="48" y="471">
                                     <actortype eid="143" id="0"/>
                                     <int id="1" val="50"/>
                                     <int id="2" val="50"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-46 comment="false" x="48" y="518">
+                                <set-game-val-46 comment="false" x="48" y="498">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-46>
                             </group>
@@ -96,31 +93,25 @@
                                 <int id="1" val="sucker"/>
                             </eq>
                         </if>
-                        <print comment="false" x="37" y="555">
-                            <get-xy comment="false" id="0" x="0" y="0">
-                                <ACTOR eid="this" id="0"/>
-                                <int id="1" val="1"/>
-                            </get-xy>
-                        </print>
-                        <set-dxy comment="false" x="37" y="588">
+                        <set-dxy comment="false" x="37" y="535">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="25"/>
                         </set-dxy>
-                        <comment-short comment="false" x="37" y="615">
+                        <comment-short comment="false" x="37" y="562">
                             <int id="0" val="this is not working"/>
                         </comment-short>
-                        <if comment="false" x="37" y="635">
+                        <if comment="false" x="37" y="582">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="673">
+                                <print comment="false" x="48" y="620">
                                     <int id="0" val="stopped"/>
                                 </print>
-                                <set-dxy comment="false" x="48" y="693">
+                                <set-dxy comment="false" x="48" y="640">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="0"/>
                                 </set-dxy>
-                                <print comment="false" x="48" y="720">
+                                <print comment="false" x="48" y="667">
                                     <get-xy comment="false" id="0" x="0" y="0">
                                         <ACTOR eid="this" id="0"/>
                                         <int id="1" val="1"/>
@@ -174,11 +165,11 @@
         </set-xy>
     </group>
     <group eventID="1" id="-1">
+        <get-game-val-20 comment="false" x="531" y="587"/>
         <minus comment="false" x="645" y="561">
             <get-game-val-5 comment="false" id="0" x="0" y="0"/>
             <get-game-val-40 comment="false" id="1" x="0" y="0"/>
         </minus>
-        <get-game-val-20 comment="false" x="531" y="587"/>
     </group>
     <group eventID="2" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
