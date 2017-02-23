@@ -9,9 +9,9 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="80" id="0" name="plastic" pts="4,-40.0,40.0,40.0,40.0,40.0,-40.0,-40.0,-40.0" r="64" type="box" w="80" x="328" y="174"/>
-        <region b="64" g="64" h="94" id="1" name="glass" pts="4,-40.0,47.0,40.0,47.0,40.0,-47.0,-40.0,-47.0" r="64" type="box" w="80" x="328" y="267"/>
-        <region b="64" g="64" h="84" id="2" name="aluminum" pts="4,-40.0,42.5,40.0,42.5,40.0,-42.5,-40.0,-42.5" r="64" type="box" w="80" x="330" y="378"/>
+        <region b="64" g="64" h="80" id="0" name="plastic" pts="4,-40.0,-40.0,40.0,-40.0,40.0,40.0,-40.0,40.0" r="64" type="box" w="80" x="328" y="174"/>
+        <region b="64" g="64" h="94" id="1" name="glass" pts="4,-40.0,-47.0,40.0,-47.0,40.0,47.0,-40.0,47.0" r="64" type="box" w="80" x="328" y="267"/>
+        <region b="64" g="64" h="84" id="2" name="aluminum" pts="4,-40.0,-42.5,40.0,-42.5,40.0,42.5,-40.0,42.5" r="64" type="box" w="80" x="330" y="378"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -25,9 +25,9 @@
         <actor a="0.0" aid="44" c="false" group="3" id="217" name="rItem_recyclingMachines 44" sx="1.0" sy="1.0" x="570" y="360" z="3"/>
         <actor a="0.0" aid="12" c="false" group="3" id="155" name="rItem_conveyerBelt 12" sx="1.0" sy="1.0" x="-237" y="269" z="0"/>
         <actor a="0.0" aid="13" c="false" group="3" id="155" name="rItem_conveyerBelt 13" sx="1.0" sy="1.0" x="-234" y="159" z="2"/>
-        <actor a="0.0" aid="14" c="false" group="6" id="157" name="rItem_BinPlastic 14" sx="1.0" sy="1.0" x="364" y="155" z="2"/>
-        <actor a="0.0" aid="15" c="false" group="6" id="161" name="rItem_BinGlass 15" sx="1.0" sy="1.0" x="362" y="264" z="2"/>
-        <actor a="0.0" aid="16" c="false" group="6" id="159" name="rItem_BinAluminum 16" sx="1.0" sy="1.0" x="369" y="373" z="2"/>
+        <actor a="0.0" aid="14" c="false" group="6" id="157" name="rItem_BinPlastic 14" sx="1.0" sy="1.0" x="364" y="158" z="2"/>
+        <actor a="0.0" aid="15" c="false" group="6" id="161" name="rItem_BinGlass 15" sx="1.0" sy="1.0" x="365" y="268" z="2"/>
+        <actor a="0.0" aid="16" c="false" group="6" id="159" name="rItem_BinAluminum 16" sx="1.0" sy="1.0" x="366" y="377" z="2"/>
     </actors>
     <snippets>
         <s enabled="true" id="88">
