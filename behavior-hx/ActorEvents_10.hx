@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_208 extends ActorScript
+class ActorEvents_10 extends ActorScript
 {
 	
 	
@@ -81,31 +81,6 @@ class ActorEvents_208 extends ActorScript
 	
 	override public function init()
 	{
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				createRecycledActor(getActorType(175), 10, 150, Script.FRONT);
-				getLastCreatedActor().setAnimation("" + "engineUpgraded");
-				if((Engine.engine.getGameAttribute("upgradeDescription") == "boost"))
-				{
-					Engine.engine.setGameAttribute("boostAdd", (Engine.engine.getGameAttribute("boostAdd") * 2));
-					trace("" + "Boost Upgrade happened");
-				}
-				if((Engine.engine.getGameAttribute("upgradeDescription") == "biofuel"))
-				{
-					/* yhe closer to 0 the better the fuel efficiency */
-					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .7));
-				}
-				if((Engine.engine.getGameAttribute("upgradeDescription") == "engineCharge"))
-				{
-					Engine.engine.setGameAttribute("acceleration", (Engine.engine.getGameAttribute("acceleration") + .25));
-					trace("" + "engineCharge Upgrade happened");
-				}
-			}
-		});
 		
 	}
 	

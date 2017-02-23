@@ -69,19 +69,8 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_180 extends ActorScript
+class ActorEvents_219 extends ActorScript
 {
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_findInBotlist():Void
-	{
-		/* check if it's in botSelectedList */
-		if(Utils.contains(Engine.engine.getGameAttribute("selectedBotList"), StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + ""))))
-		{
-			getLastCreatedActor().setAnimation("" + StringTools.replace(("" + getLastCreatedActor().getAnimation()), ("" + "Off"), ("" + "On")));
-			getLastCreatedActor().shout("_customEvent_" + "turnOn");
-		}
-	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -93,31 +82,14 @@ class ActorEvents_180 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		createRecycledActor(getActorType(182), 40, 100, Script.FRONT);
-		_customEvent_findInBotlist();
-		createRecycledActor(getActorType(182), 120, 100, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "dozeyOff");
-		_customEvent_findInBotlist();
-		createRecycledActor(getActorType(182), 200, 100, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "planterOff");
-		_customEvent_findInBotlist();
-		createRecycledActor(getActorType(182), 40, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "suckerOff");
-		_customEvent_findInBotlist();
-		createRecycledActor(getActorType(182), 120, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "QuestionMark");
-		_customEvent_findInBotlist();
-		createRecycledActor(getActorType(182), 200, 180, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "QuestionMark");
-		_customEvent_findInBotlist();
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
+				actor.setX((Engine.engine.getGameAttribute("playerXPos") - 70));
+				actor.setY((Engine.engine.getGameAttribute("playerYPos") - 230));
+				if(!(Engine.engine.getGameAttribute("suckingPowerOn")))
 				{
 					recycleActor(actor);
 				}

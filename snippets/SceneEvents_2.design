@@ -22,6 +22,14 @@
                 <set-color comment="false" x="26" y="40">
                     <color b="0" g="200" id="0" r="255"/>
                 </set-color>
+                <set-font-new comment="false" x="26" y="67">
+                    <font eid="59" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="94">
+                    <int id="0" val="set initial game stats"/>
+                    <int id="1" val="5"/>
+                    <int id="2" val="5"/>
+                </draw-text>
             </group>
         </draw>
     </group>
@@ -49,39 +57,41 @@
                 <save-game comment="false" x="26" y="154">
                     <group eventID="5" id="-1"/>
                 </save-game>
-                <if comment="false" x="26" y="211">
-                    <group eventID="5" id="-1">
-                        <dolater comment="false" x="37" y="241">
-                            <group eventID="5" id="-1">
-                                <periodic comment="false" x="48" y="268">
-                                    <group eventID="5" id="-1">
-                                        <create-actor3 comment="false" x="59" y="295">
-                                            <actortype eid="188" id="0"/>
-                                            <div comment="false" id="1" x="0" y="0">
-                                                <get-game-val-70 comment="false" id="0" x="0" y="0"/>
-                                                <int id="1" val="4"/>
-                                            </div>
-                                            <div comment="false" id="2" x="0" y="0">
-                                                <get-game-val-71 comment="false" id="0" x="0" y="0"/>
-                                                <int id="1" val="3"/>
-                                            </div>
-                                            <int id="3" val="0"/>
-                                        </create-actor3>
-                                    </group>
-                                    <int id="0" val="7"/>
-                                    <ACTOR eid="lastcreated" id="2"/>
-                                </periodic>
-                            </group>
-                            <int id="0" val="4"/>
-                            <ACTOR eid="lastcreated" id="2"/>
-                        </dolater>
-                    </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-game-val-72 comment="false" id="0" x="0" y="0"/>
-                    </not>
-                </if>
             </group>
         </init>
+    </group>
+    <group eventID="5" id="2">
+        <if comment="false" x="127" y="315">
+            <group eventID="5" id="-1">
+                <dolater comment="false" x="138" y="345">
+                    <group eventID="5" id="-1">
+                        <periodic comment="false" x="149" y="372">
+                            <group eventID="5" id="-1">
+                                <create-actor3 comment="false" x="160" y="399">
+                                    <actortype eid="188" id="0"/>
+                                    <div comment="false" id="1" x="0" y="0">
+                                        <get-game-val-70 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="4"/>
+                                    </div>
+                                    <div comment="false" id="2" x="0" y="0">
+                                        <get-game-val-71 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="3"/>
+                                    </div>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                            </group>
+                            <int id="0" val="7"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </periodic>
+                    </group>
+                    <int id="0" val="4"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <not comment="false" id="0" x="0" y="0">
+                <get-game-val-72 comment="false" id="0" x="0" y="0"/>
+            </not>
+        </if>
     </group>
     <group eventID="5" id="-1"/>
     <group eventID="6" id="0">
@@ -153,4 +163,30 @@
         </event-mouse-enter-exit-region>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <clear-list comment="false" x="26" y="42">
+                    <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+                </clear-list>
+                <clear-list comment="false" x="26" y="67">
+                    <get-game-val-95 comment="false" id="0" x="0" y="0"/>
+                </clear-list>
+                <add-list comment="false" x="26" y="92">
+                    <get-game-val-95 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="dozey"/>
+                </add-list>
+                <add-list comment="false" x="26" y="117">
+                    <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="dozey"/>
+                </add-list>
+                <set-game-val-80 comment="false" x="26" y="142">
+                    <int id="0" val="1"/>
+                </set-game-val-80>
+            </group>
+            <REGION eid="1" id="0"/>
+            <int id="1" val="4"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

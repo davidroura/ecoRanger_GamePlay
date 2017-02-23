@@ -172,6 +172,13 @@
         <number cid="2" id="47" name="sceneSpeedHold" save="true" value="0.0"/>
         <boolean cid="2" id="69" name="gadgetPower2" save="true" value="false"/>
         <boolean cid="3" id="4" name="playerControl" save="true" value="true"/>
+        <list cid="6" id="95" name="unlockedBotList" save="true" val="list">
+            <text order="0" value="dozey"/>
+            <text order="1" value="gadget"/>
+            <text order="2" value="maker"/>
+            <text order="3" value="planter"/>
+            <text order="4" value="sucker"/>
+        </list>
         <number cid="6" id="71" name="screenY_mid" save="true" value="0.0"/>
         <number cid="6" id="49" name="screenDiagonal" save="true" value="0.0"/>
         <boolean cid="2" id="36" name="clickingButton" save="true" value="false"/>

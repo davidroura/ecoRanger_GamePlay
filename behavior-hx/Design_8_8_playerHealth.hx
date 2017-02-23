@@ -300,7 +300,7 @@ class Design_8_8_playerHealth extends SceneScript
 		
 		/* ======================== When Creating ========================= */
 		Engine.engine.setGameAttribute("playerHealth", 100);
-		_healthFactor = asNumber(0.05);
+		_healthFactor = asNumber(0.075);
 		propertyChanged("_healthFactor", _healthFactor);
 		Engine.engine.setGameAttribute("collected_glassBottle", 0);
 		Engine.engine.setGameAttribute("collected_cans", 0);

@@ -80,16 +80,90 @@
             </group>
         </init>
     </group>
+    <group eventID="2" id="3">
+        <print comment="false" x="335" y="585">
+            <int id="0" val="*************************"/>
+        </print>
+        <print comment="false" x="335" y="605">
+            <int id="0" val="selected bot list"/>
+        </print>
+        <for-each comment="false" x="335" y="625">
+            <group eventID="2" id="-1">
+                <print comment="false" x="346" y="650">
+                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                </print>
+            </group>
+            <get-game-val-79 comment="false" id="0" x="0" y="0"/>
+        </for-each>
+        <print comment="false" x="335" y="687">
+            <int id="0" val="unlocked bot list"/>
+        </print>
+        <for-each comment="false" x="335" y="707">
+            <group eventID="2" id="-1">
+                <print comment="false" x="346" y="732">
+                    <for-each-item comment="false" id="0" x="0" y="0"/>
+                </print>
+            </group>
+            <get-game-val-95 comment="false" id="0" x="0" y="0"/>
+        </for-each>
+        <print comment="false" x="335" y="769">
+            <int id="0" val="******************************"/>
+        </print>
+    </group>
     <group eventID="2" id="-1"/>
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
                 <comment-short comment="false" x="26" y="40">
-                    <int id="0" val="check if it&amp;apos;s in botSelectedList"/>
+                    <int id="0" val="check if it&amp;apos;s in the unlocked bot list"/>
                 </comment-short>
                 <if comment="false" x="26" y="60">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="103">
+                        <print comment="false" x="37" y="108">
+                            <str-replace comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </getanim>
+                                <int id="1" val="Off"/>
+                                <int id="2" val=""/>
+                            </str-replace>
+                        </print>
+                        <print comment="false" x="37" y="146">
+                            <int id="0" val="turns to QuestionMark"/>
+                        </print>
+                        <setanim comment="false" x="37" y="166">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="QuestionMark"/>
+                        </setanim>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <contains-item comment="false" id="0" x="0" y="0">
+                            <get-game-val-95 comment="false" id="0" x="0" y="0"/>
+                            <str-replace comment="false" id="1" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </getanim>
+                                <int id="1" val="Off"/>
+                                <int id="2" val=""/>
+                            </str-replace>
+                        </contains-item>
+                    </not>
+                </if>
+                <comment-short comment="false" x="26" y="205">
+                    <int id="0" val="check if it&amp;apos;s in botSelectedList"/>
+                </comment-short>
+                <if comment="false" x="26" y="225">
+                    <group eventID="4" id="-1">
+                        <print comment="false" x="37" y="268">
+                            <str-replace comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                </getanim>
+                                <int id="1" val="Off"/>
+                                <int id="2" val=""/>
+                            </str-replace>
+                        </print>
+                        <setanim comment="false" x="37" y="306">
                             <ACTOR eid="lastcreated" id="0"/>
                             <str-replace comment="false" id="1" x="0" y="0">
                                 <getanim comment="false" id="0" x="0" y="0">
@@ -99,7 +173,22 @@
                                 <int id="2" val="On"/>
                             </str-replace>
                         </setanim>
-                        <shout comment="false" x="37" y="148">
+                        <print comment="false" x="37" y="351">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="found and turns to "/>
+                                <str-replace comment="false" id="1" x="0" y="0">
+                                    <getanim comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="lastcreated" id="0"/>
+                                    </getanim>
+                                    <int id="1" val="Off"/>
+                                    <int id="2" val="On"/>
+                                </str-replace>
+                            </str-combine>
+                        </print>
+                        <comment-short comment="false" x="37" y="394">
+                            <int id="0" val="this event happens in the actual icon actor"/>
+                        </comment-short>
+                        <shout comment="false" x="37" y="414">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="turnOn"/>
                         </shout>
@@ -119,7 +208,35 @@
             <int id="0" val="findInBotlist"/>
         </event-custom>
     </group>
-    <group eventID="4" id="-1"/>
+    <group eventID="4" id="1">
+        <setanim comment="false" x="247" y="703">
+            <ACTOR eid="lastcreated" id="0"/>
+            <str-replace comment="false" id="1" x="0" y="0">
+                <getanim comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </getanim>
+                <int id="1" val="Off"/>
+                <int id="2" val="On"/>
+            </str-replace>
+        </setanim>
+        <shout comment="false" x="247" y="748">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="turnOn"/>
+        </shout>
+    </group>
+    <group eventID="4" id="-1">
+        <str-combine comment="false" x="248" y="669">
+            <int id="0" val="found and turns to "/>
+            <str-replace comment="false" id="1" x="0" y="0">
+                <getanim comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="lastcreated" id="0"/>
+                </getanim>
+                <int id="1" val="Off"/>
+                <int id="2" val="On"/>
+            </str-replace>
+        </str-combine>
+        <get-game-val-79 comment="false" x="115" y="317"/>
+    </group>
     <group eventID="5" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="5" id="-1">
