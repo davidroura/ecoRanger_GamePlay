@@ -63,14 +63,14 @@
         </draw>
     </group>
     <group eventID="1" id="-1">
+        <get-game-val-71 comment="false" x="352" y="391"/>
+        <get-game-val-70 comment="false" x="378" y="315"/>
         <minus comment="false" x="160" y="543">
             <int id="0" val="300"/>
             <get-font-width comment="false" id="1" x="0" y="0">
                 <get-game-val-75 comment="false" id="0" x="0" y="0"/>
             </get-font-width>
         </minus>
-        <get-game-val-70 comment="false" x="378" y="315"/>
-        <get-game-val-71 comment="false" x="352" y="391"/>
     </group>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">

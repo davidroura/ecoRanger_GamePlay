@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_217 extends ActorScript
+class ActorEvents_143 extends ActorScript
 {
 	
 	
@@ -81,6 +81,29 @@ class ActorEvents_217 extends ActorScript
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("suckingPowerOn", true);
+		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		{
+			Engine.engine.setGameAttribute("botOn", false);
+			Engine.engine.setGameAttribute("suckingPowerOn", false);
+		}, actor);
+		createRecycledActor(getActorType(219), actor.getYCenter(), actor.getXCenter(), Script.FRONT);
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(!(Engine.engine.getGameAttribute("suckingPowerOn")))
+				{
+					recycleActor(actor);
+				}
+				actor.setX((Engine.engine.getGameAttribute("playerXPos") - 150));
+				actor.setY((Engine.engine.getGameAttribute("playerYPos") - 230));
+			}
+		});
 		
 	}
 	

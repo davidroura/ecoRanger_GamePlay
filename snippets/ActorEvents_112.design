@@ -55,7 +55,7 @@
                         <if comment="false" x="37" y="321">
                             <group eventID="1" id="-1">
                                 <create-actor3 comment="false" x="48" y="359">
-                                    <actortype eid="63" id="0"/>
+                                    <actortype eid="228" id="0"/>
                                     <get-game-val-20 comment="false" id="1" x="0" y="0"/>
                                     <minus comment="false" id="2" x="0" y="0">
                                         <get-game-val-5 comment="false" id="0" x="0" y="0"/>
@@ -165,7 +165,6 @@
         </set-xy>
     </group>
     <group eventID="1" id="-1">
-        <get-game-val-20 comment="false" x="531" y="587"/>
         <minus comment="false" x="645" y="561">
             <get-game-val-5 comment="false" id="0" x="0" y="0"/>
             <get-game-val-40 comment="false" id="1" x="0" y="0"/>

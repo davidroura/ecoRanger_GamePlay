@@ -269,13 +269,25 @@
                     <ACTOR eid="44" id="0"/>
                     <int id="1" val="aluminumWash"/>
                 </setanim>
-                <set-game-val-63 comment="false" x="26" y="249">
+                <setanim comment="false" x="26" y="249">
+                    <ACTOR eid="45" id="0"/>
+                    <int id="1" val="crush"/>
+                </setanim>
+                <setanim comment="false" x="26" y="276">
+                    <ACTOR eid="46" id="0"/>
+                    <int id="1" val="crush"/>
+                </setanim>
+                <setanim comment="false" x="26" y="303">
+                    <ACTOR eid="47" id="0"/>
+                    <int id="1" val="crush"/>
+                </setanim>
+                <set-game-val-63 comment="false" x="26" y="330">
                     <int id="0" val="10"/>
                 </set-game-val-63>
-                <set-game-val-64 comment="false" x="26" y="269">
+                <set-game-val-64 comment="false" x="26" y="350">
                     <int id="0" val="10"/>
                 </set-game-val-64>
-                <set-game-val-65 comment="false" x="26" y="289">
+                <set-game-val-65 comment="false" x="26" y="370">
                     <int id="0" val="10"/>
                 </set-game-val-65>
             </group>

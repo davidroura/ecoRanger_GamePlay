@@ -168,11 +168,6 @@
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="64" name="dozerTop" shared="false" width="59">
-        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="29" originy="36" sync="false" version="2" width="59">
-            <poly data="4,8,0,50,0,50,75,8,75" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
-    </sprite>
     <custom-block blocktag="custom-224" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropObstacle&quot;, [, , ]);" desc="droping at obstacle at a specific position" global="false" gui="drop %0 at ( %1 , %2 )" id="224" message="dropObstacle" name="dropObstacle" oid="-1" return="void" shared="false" snippetID="128">
         <blank name="obstacle" order="0" type="actortype"/>
         <blank name="xPosition" order="1" type="number"/>
@@ -207,9 +202,14 @@
     </sprite>
     <music atlasID="0" desc="" id="103" loop="true" name="gamePlay" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="213" loop="true" name="gameplay_Victory" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="48" fixedrot="true" fric="0.2" gid="0" id="63" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_Dozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="64" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="142" fixedrot="true" fric="0.2" gid="3" id="228" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gB_Dozey" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="229" static="false">
         <snippets/>
     </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="229" name="gB_Dozey" shared="false" width="59">
+        <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="29" originy="36" sync="false" version="2" width="59">
+            <poly data="4,0,0,59,0,59,73,0,73" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="97" fixedrot="true" fric="0.2" gid="3" id="141" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="gBot_Gadget" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="142" static="false">
         <snippets>
             <s enabled="false" id="96">
@@ -759,7 +759,7 @@
         <anim across="1" down="1" durations="100" height="125" id="2" loop="true" name="wash" numframes="1" originx="49" originy="58" sync="false" version="2" width="168">
             <poly data="4,0,0,98,0,98,116,0,116" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="16" id="3" loop="true" name="crush" numframes="1" originx="0" originy="0" sync="false" version="2" width="16"/>
+        <anim across="1" down="1" durations="100" height="172" id="3" loop="true" name="crush" numframes="1" originx="0" originy="0" sync="false" version="2" width="178"/>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="13" name="rock" shared="false" width="83">
         <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="83">

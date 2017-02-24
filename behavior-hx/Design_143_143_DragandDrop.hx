@@ -69,49 +69,32 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_1 extends ActorScript
+class Design_143_143_DragandDrop extends ActorScript
 {
-	public var _DistanceX:Float;
-	public var _DistanceY:Float;
-	public var _Distance:Float;
-	public var _Direction:Float;
-	public var _MinimumEasingSpeed:Float;
-	public var _Speed:Float;
-	public var _Margin:Float;
-	public var _ScreenDiagonal:Float;
-	public var _Easing:Bool;
-	public var _StopwhenColliding:Bool;
-	public var _Collided:Bool;
-	public var _screenDiagonal:Float;
+	public var _Grabbed:Bool;
+	public var _XOffset:Float;
+	public var _YOffset:Float;
+	public var _OldX:Float;
+	public var _OldY:Float;
+	public var _CannotExitScreen:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Distance X", "_DistanceX");
-		_DistanceX = 0.0;
-		nameMap.set("Distance Y", "_DistanceY");
-		_DistanceY = 0.0;
-		nameMap.set("Distance", "_Distance");
-		_Distance = 0.0;
-		nameMap.set("Direction", "_Direction");
-		_Direction = 0.0;
-		nameMap.set("Minimum Easing Speed", "_MinimumEasingSpeed");
-		_MinimumEasingSpeed = 5.0;
-		nameMap.set("Speed", "_Speed");
-		_Speed = 30.0;
-		nameMap.set("Margin", "_Margin");
-		_Margin = 0.0;
-		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
-		_ScreenDiagonal = 0.0;
-		nameMap.set("Easing", "_Easing");
-		_Easing = true;
-		nameMap.set("Stop when Colliding", "_StopwhenColliding");
-		_StopwhenColliding = true;
-		nameMap.set("Collided", "_Collided");
-		_Collided = false;
-		nameMap.set("screenDiagonal", "_screenDiagonal");
-		_screenDiagonal = 0.0;
+		nameMap.set("Actor", "actor");
+		nameMap.set("Grabbed", "_Grabbed");
+		_Grabbed = false;
+		nameMap.set("X Offset", "_XOffset");
+		_XOffset = 0.0;
+		nameMap.set("Y Offset", "_YOffset");
+		_YOffset = 0.0;
+		nameMap.set("Old X", "_OldX");
+		_OldX = 0.0;
+		nameMap.set("Old Y", "_OldY");
+		_OldY = 0.0;
+		nameMap.set("Cannot Exit Screen", "_CannotExitScreen");
+		_CannotExitScreen = true;
 		
 	}
 	
@@ -119,14 +102,70 @@ class ActorEvents_1 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("" + "Animation Up");
+		actor.makeAlwaysSimulate();
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("playerXPos", actor.getScreenX());
+				if(_Grabbed)
+				{
+					if(isMouseDown())
+					{
+						if(_CannotExitScreen)
+						{
+							actor.setX((getScreenX() + Math.max(0, Math.min((getScreenWidth() - (actor.getWidth())), (getMouseX() + _XOffset)))));
+							actor.setY((getScreenY() + Math.max(0, Math.min((getScreenHeight() - (actor.getHeight())), (getMouseY() + _YOffset)))));
+						}
+						else
+						{
+							actor.setX(((getScreenX() + getMouseX()) + _XOffset));
+							actor.setY(((getScreenY() + getMouseY()) + _YOffset));
+						}
+						actor.setVelocity(0, 0);
+						actor.setAngularVelocity(Utils.RAD * (0));
+					}
+					if(isMouseReleased())
+					{
+						_Grabbed = false;
+						propertyChanged("_Grabbed", _Grabbed);
+					}
+				}
+				else
+				{
+					if(actor.isMousePressed())
+					{
+						_XOffset = asNumber((actor.getX() - (getScreenX() + getMouseX())));
+						propertyChanged("_XOffset", _XOffset);
+						_YOffset = asNumber((actor.getY() - (getScreenY() + getMouseY())));
+						propertyChanged("_YOffset", _YOffset);
+						_OldX = asNumber((getScreenX() + getMouseX()));
+						propertyChanged("_OldX", _OldX);
+						_OldY = asNumber((getScreenY() + getMouseY()));
+						propertyChanged("_OldY", _OldY);
+						_Grabbed = true;
+						propertyChanged("_Grabbed", _Grabbed);
+					}
+				}
+			}
+		});
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(_Grabbed)
+				{
+					if((sceneHasBehavior("Game Debugger") && asBoolean(getValueForScene("Game Debugger", "_Enabled"))))
+					{
+						g.strokeColor = getValueForScene("Game Debugger", "_CustomColor");
+						g.strokeSize = Std.int(getValueForScene("Game Debugger", "_StrokeThickness"));
+						g.translateToScreen();
+						g.drawLine((_OldX - getScreenX()), (_OldY - getScreenY()), getMouseX(), getMouseY());
+					}
+				}
 			}
 		});
 		
