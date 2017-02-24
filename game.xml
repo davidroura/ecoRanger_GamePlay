@@ -122,7 +122,7 @@
         <boolean cid="6" id="34" name="debugText" save="true" value="false"/>
         <number cid="6" id="80" name="totalSelectedBots" save="true" value="3.0"/>
         <text cid="4" id="86" name="upgradeDescription" save="true" value="0"/>
-        <number cid="2" id="87" name="acceleration" save="true" value="0.4"/>
+        <number cid="10" id="87" name="acceleration" save="true" value="0.4"/>
         <boolean cid="2" id="29" name="gameStart" save="true" value="false"/>
         <number cid="8" id="62" name="collected_plasticBottles" save="true" value="0.0"/>
         <boolean cid="6" id="84" name="communicationBoxEarlyKill" save="true" value="false"/>

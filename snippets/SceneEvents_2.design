@@ -30,6 +30,11 @@
                     <int id="1" val="5"/>
                     <int id="2" val="5"/>
                 </draw-text>
+                <draw-text comment="false" x="26" y="114">
+                    <int id="0" val="reset power ups and "/>
+                    <int id="1" val="5"/>
+                    <int id="2" val="55"/>
+                </draw-text>
             </group>
         </draw>
     </group>
@@ -60,7 +65,7 @@
             </group>
         </init>
     </group>
-    <group eventID="5" id="2">
+    <group eventID="5" id="1">
         <if comment="false" x="127" y="315">
             <group eventID="5" id="-1">
                 <dolater comment="false" x="138" y="345">
@@ -189,4 +194,40 @@
         </event-mouse-enter-exit-region>
     </group>
     <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-mouse-enter-exit-region comment="false" x="16" y="15">
+            <group eventID="13" id="-1">
+                <set-game-val-87 comment="false" x="27" y="42">
+                    <int id="0" val=".4"/>
+                </set-game-val-87>
+                <set-game-val-88 comment="false" x="27" y="62">
+                    <int id="0" val="10"/>
+                </set-game-val-88>
+                <set-game-val-51 comment="false" x="27" y="82">
+                    <int id="0" val="1.5"/>
+                </set-game-val-51>
+                <set-game-val-33 comment="false" x="27" y="102">
+                    <int id="0" val="5"/>
+                </set-game-val-33>
+                <set-game-val-93 comment="false" x="27" y="122">
+                    <int id="0" val="5"/>
+                </set-game-val-93>
+                <set-game-val-94 comment="false" x="27" y="142">
+                    <int id="0" val="5"/>
+                </set-game-val-94>
+                <set-game-val-63 comment="false" x="27" y="162">
+                    <int id="0" val="10"/>
+                </set-game-val-63>
+                <set-game-val-64 comment="false" x="27" y="182">
+                    <int id="0" val="10"/>
+                </set-game-val-64>
+                <set-game-val-65 comment="false" x="27" y="202">
+                    <int id="0" val="10"/>
+                </set-game-val-65>
+            </group>
+            <REGION eid="2" id="0"/>
+            <int id="1" val="4"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="13" id="-1"/>
 </groups>

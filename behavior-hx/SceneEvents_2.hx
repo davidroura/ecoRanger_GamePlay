@@ -124,6 +124,7 @@ class SceneEvents_2 extends SceneScript
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(59));
 				g.drawString("" + "set initial game stats", 5, 5);
+				g.drawString("" + "reset power ups and ", 5, 55);
 			}
 		});
 		
@@ -137,6 +138,23 @@ class SceneEvents_2 extends SceneScript
 				Engine.engine.getGameAttribute("unlockedBotList").push("dozey");
 				Engine.engine.getGameAttribute("selectedBotList").push("dozey");
 				Engine.engine.setGameAttribute("totalSelectedBots", 1);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(2), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("acceleration", .4);
+				Engine.engine.setGameAttribute("boostAdd", 10);
+				Engine.engine.setGameAttribute("fuelEfficiency", 1.5);
+				Engine.engine.setGameAttribute("totalPlastic", 5);
+				Engine.engine.setGameAttribute("totalGlass", 5);
+				Engine.engine.setGameAttribute("totalAluminum", 5);
+				Engine.engine.setGameAttribute("total_cans", 10);
+				Engine.engine.setGameAttribute("total_plasticBottles", 10);
+				Engine.engine.setGameAttribute("total_glassBottles", 10);
 			}
 		});
 		

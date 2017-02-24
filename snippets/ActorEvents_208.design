@@ -33,7 +33,7 @@
                 <if comment="false" x="26" y="188">
                     <group eventID="1" id="-1">
                         <comment-short comment="false" x="37" y="218">
-                            <int id="0" val="yhe closer to 0 the better the fuel efficiency"/>
+                            <int id="0" val="the closer to 0 the better the fuel efficiency"/>
                         </comment-short>
                         <set-game-val-51 comment="false" x="37" y="238">
                             <times comment="false" id="0" x="0" y="0">

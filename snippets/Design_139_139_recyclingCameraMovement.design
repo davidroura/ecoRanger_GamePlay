@@ -5,9 +5,9 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="80">
+                        <dolater comment="false" x="37" y="65">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="107">
+                                <set-dxy comment="false" x="48" y="92">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="-10"/>
@@ -16,39 +16,41 @@
                             <int id="0" val="2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="146">
+                        <dolater comment="false" x="37" y="131">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="173">
+                                <set-dxy comment="false" x="48" y="158">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="7.5"/>
+                            <int id="0" val="6.5"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <and comment="false" id="0" x="0" y="0">
-                            <lesseq comment="false" id="0" x="0" y="0">
-                                <get-game-val-63 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0"/>
-                            </lesseq>
-                            <lesseq comment="false" id="1" x="0" y="0">
-                                <get-game-val-64 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="0"/>
-                            </lesseq>
-                        </and>
-                        <lesseq comment="false" id="1" x="0" y="0">
-                            <get-game-val-65 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="0"/>
-                        </lesseq>
-                    </and>
+                    <get-game-val-89 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1"/>
+    <group eventID="1" id="-1">
+        <and comment="false" x="98" y="412">
+            <and comment="false" id="0" x="0" y="0">
+                <lesseq comment="false" id="0" x="0" y="0">
+                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="0"/>
+                </lesseq>
+                <lesseq comment="false" id="1" x="0" y="0">
+                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="0"/>
+                </lesseq>
+            </and>
+            <lesseq comment="false" id="1" x="0" y="0">
+                <get-game-val-65 comment="false" id="0" x="0" y="0"/>
+                <int id="1" val="0"/>
+            </lesseq>
+        </and>
+    </group>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">

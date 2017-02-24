@@ -69,41 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_139_139_recyclingCameraMovement extends ActorScript
+class ActorEvents_217 extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		actor.makeAlwaysSimulate();
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(Engine.engine.getGameAttribute("recycleScoreAnimation"))
-				{
-					runLater(1000 * 2, function(timeTask:TimedTask):Void
-					{
-						actor.setXVelocity(-10);
-					}, actor);
-					runLater(1000 * 6.5, function(timeTask:TimedTask):Void
-					{
-						actor.setXVelocity(0);
-					}, actor);
-				}
-			}
-		});
 		
 	}
 	

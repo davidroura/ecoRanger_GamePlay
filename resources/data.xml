@@ -313,7 +313,7 @@
             </s>
         </snippets>
     </actor>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="6" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="false" desc="" eventsnippetid="19" fixedrot="false" fric="0.2" gid="6" id="15" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="gItem_Can" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="16" static="false">
         <snippets>
             <s enabled="true" id="56">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -765,9 +765,7 @@
         <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="83">
             <poly data="5,14,77,30,91,75,71,63,47,26,51" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100,100" height="513" id="1" loop="false" name="explode" numframes="9" originx="88" originy="85" sync="false" version="2" width="528">
-            <poly data="4,0,0,176,0,176,171,0,171" density="0.1" fric="0.2" gid="-1000" id="0" name="explode" rest="0.0" sensor="false"/>
-        </anim>
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100,100" height="513" id="1" loop="false" name="explode" numframes="9" originx="88" originy="85" sync="false" version="2" width="528"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="139" fixedrot="false" fric="0.2" gid="3" id="215" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="rUI_recyclingResults" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="216" static="false">
         <snippets/>
