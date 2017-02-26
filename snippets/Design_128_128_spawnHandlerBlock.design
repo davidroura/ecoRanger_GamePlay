@@ -1051,7 +1051,7 @@
             <group eventID="24" id="-1">
                 <create-actor-on-layer comment="false" x="26" y="45">
                     <get-byobval-128-224-0 comment="false" id="0" x="0" y="0"/>
-                    <get-val-128-7 comment="false" id="1" x="0" y="0"/>
+                    <get-byobval-128-224-1 comment="false" id="1" x="0" y="0"/>
                     <int id="2" val="-5"/>
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
@@ -1066,7 +1066,7 @@
                 <set-xy comment="false" x="26" y="131">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="1"/>
-                    <get-val-128-8 comment="false" id="2" x="0" y="0"/>
+                    <get-byobval-128-224-2 comment="false" id="2" x="0" y="0"/>
                 </set-xy>
             </group>
             <get-byobval-128-224-0 comment="false" id="0" x="0" y="0"/>
