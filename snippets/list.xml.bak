@@ -279,7 +279,8 @@
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_139_139_recyclingCameraMovement" classname="scripts.Design_139_139_recyclingCameraMovement" desc="" description="" design="true" drawOrder="0" id="137" name="recycling_CameraMovement" oid="-1" package="scripts" shared="false" type="actor">
-        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="camera trigger" hidden="false" id="1" name="_cameratrigger" order="1"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -354,6 +355,15 @@
             <event displayName="Updated" enabled="true" id="2" name="step" order="3" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_144_144_recyclingFunctions" classname="scripts.Design_144_144_recyclingFunctions" desc="" description="" design="true" drawOrder="0" id="144" name="recyclingFunctions" oid="-1" package="scripts" shared="false" type="scene">
+        <blocks>
+            <receiver blockID="230" id="1"/>
+            <receiver blockID="231" id="2"/>
+        </blocks>
+        <events>
+            <event displayName="Global Block" enabled="true" id="2" name="event-custom-block-global" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_5" classname="scripts.SceneEvents_5" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="17" name="SceneEvents_5" oid="-1" package="scripts." sceneid="5" shared="false" type="scene">
@@ -770,6 +780,7 @@
     </snippet>
     <snippet actorid="159" attachedevent="true" class="scripts.ActorEvents_159" classname="scripts.ActorEvents_159" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="109" name="ActorEvents_159" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="dump" hidden="false" id="1" name="_dump" order="0"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="trash" hidden="false" id="2" name="_trash" order="1"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>

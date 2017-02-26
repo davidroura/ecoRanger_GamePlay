@@ -5,9 +5,12 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <dolater comment="false" x="37" y="65">
+                        <set-val-137-1 comment="false" x="37" y="70">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-137-1>
+                        <dolater comment="false" x="37" y="95">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="92">
+                                <set-dxy comment="false" x="48" y="122">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="-10"/>
@@ -16,19 +19,25 @@
                             <int id="0" val="2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="131">
+                        <dolater comment="false" x="37" y="161">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="158">
+                                <comment-short comment="false" x="48" y="188">
+                                    <int id="0" val="make it slow down"/>
+                                </comment-short>
+                                <set-dxy comment="false" x="48" y="208">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="6.5"/>
+                            <int id="0" val="7"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
-                    <get-game-val-89 comment="false" id="0" x="0" y="0"/>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-game-val-89 comment="false" id="0" x="0" y="0"/>
+                        <get-val-137-1 comment="false" id="1" x="0" y="0"/>
+                    </and>
                 </if>
             </group>
         </step>

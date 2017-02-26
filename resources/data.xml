@@ -173,6 +173,11 @@
         <blank name="xPosition" order="1" type="number"/>
         <blank name="yPosition" order="2" type="number"/>
     </custom-block>
+    <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="144">
+        <blank name="trashType" order="0" type="text"/>
+        <blank name="trashPosX" order="1" type="number"/>
+        <blank name="trashPosy" order="2" type="number"/>
+    </custom-block>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="6" name="emptyRoom" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="53" name="endShotBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <custom-block blocktag="custom-197" blocktype="NORMAL" code="cast(.say(&quot;ActorEvents_182&quot;, &quot;_customBlock_findInList&quot;, [, ]), Float)" desc="" global="false" gui="Find index of %1 in %2" id="197" message="findInList" name="findInList" oid="-1" return="number" shared="false" snippetID="124">

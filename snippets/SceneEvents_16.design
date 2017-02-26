@@ -10,7 +10,7 @@
                                 <dolater comment="false" x="48" y="100">
                                     <group eventID="2" id="-1">
                                         <set-game-val-39 comment="false" x="59" y="127">
-                                            <int id="0" val="5"/>
+                                            <int id="0" val="4"/>
                                         </set-game-val-39>
                                         <setanim comment="false" x="59" y="147">
                                             <ACTOR eid="14" id="0"/>
@@ -52,16 +52,13 @@
                     <group eventID="2" id="-1">
                         <if comment="false" x="37" y="336">
                             <group eventID="2" id="-1">
-                                <print comment="false" x="48" y="366">
-                                    <get-val-89-6 comment="false" id="0" x="0" y="0"/>
-                                </print>
-                                <say-this comment="false" x="48" y="391">
+                                <say-this comment="false" x="48" y="366">
                                     <int id="0" val="randomSpawn"/>
                                 </say-this>
-                                <set-val-89-3 comment="false" x="48" y="411">
+                                <set-val-89-3 comment="false" x="48" y="386">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-89-3>
-                                <set-val-89-6 comment="false" x="48" y="436">
+                                <set-val-89-6 comment="false" x="48" y="411">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <get-val-89-6 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="1"/>
@@ -77,9 +74,7 @@
             </group>
         </draw>
     </group>
-    <group eventID="2" id="-1">
-        <get-game-val-89 comment="false" x="543" y="93"/>
-    </group>
+    <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="3" id="-1">
