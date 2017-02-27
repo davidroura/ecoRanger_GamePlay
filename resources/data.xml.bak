@@ -168,6 +168,9 @@
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <custom-block blocktag="custom-232" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock Copy&quot;, &quot;_customBlock_dropBlock&quot;, []);" desc="" global="false" gui="Drop block. Level %0" id="232" message="dropBlock" name="dropBlock" oid="-1" return="void" shared="false" snippetID="145">
+        <blank name="difficulty" order="0" type="number"/>
+    </custom-block>
     <custom-block blocktag="custom-224" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropObstacle&quot;, [, , ]);" desc="droping at obstacle at a specific position" global="false" gui="drop %0 at ( %1 , %2 )" id="224" message="dropObstacle" name="dropObstacle" oid="-1" return="void" shared="false" snippetID="128">
         <blank name="obstacle" order="0" type="actortype"/>
         <blank name="xPosition" order="1" type="number"/>
@@ -676,6 +679,7 @@
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
@@ -683,6 +687,7 @@
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
@@ -690,6 +695,7 @@
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
@@ -723,6 +729,7 @@
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
@@ -757,6 +764,7 @@
         <snippets>
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="true"/>
             </s>
         </snippets>
     </actor>
@@ -766,9 +774,9 @@
         </anim>
         <anim across="1" down="1" durations="100" height="172" id="3" loop="true" name="crush" numframes="1" originx="0" originy="0" sync="false" version="2" width="178"/>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="13" name="rock" shared="false" width="83">
-        <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="83">
-            <poly data="5,14,77,30,91,75,71,63,47,26,51" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="55" id="13" name="rock" shared="false" width="50">
+        <anim across="1" down="1" durations="100" height="55" id="0" loop="true" name="Animation 0" numframes="1" originx="41" originy="55" sync="false" version="2" width="50">
+            <poly data="4,29,31,40,34,21,46,13,38" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="false"/>
         </anim>
         <anim across="3" down="3" durations="100,100,100,100,100,100,100,100,100" height="513" id="1" loop="false" name="explode" numframes="9" originx="88" originy="85" sync="false" version="2" width="528"/>
     </sprite>

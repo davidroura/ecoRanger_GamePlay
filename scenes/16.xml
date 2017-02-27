@@ -17,7 +17,7 @@
     <actors>
         <actor a="0.0" aid="5" c="false" group="3" id="155" name="rItem_conveyerBelt 5" sx="1.0" sy="1.0" x="-231" y="378" z="3"/>
         <actor a="0.0" aid="39" c="false" group="3" id="155" name="rItem_conveyerBelt 39" sx="1.0" sy="1.0" x="448" y="269" z="2"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="1.0" sy="1.0" x="279" y="12" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="3" id="163" name="mUI_X 8" sx="0.75" sy="0.75" x="281" y="7" z="0"/>
         <actor a="0.0" aid="40" c="false" group="3" id="155" name="rItem_conveyerBelt 40" sx="1.0" sy="1.0" x="448" y="159" z="2"/>
         <actor a="0.0" aid="41" c="false" group="3" id="155" name="rItem_conveyerBelt 41" sx="1.0" sy="1.0" x="450" y="375" z="2"/>
         <actor a="0.0" aid="42" c="false" group="3" id="217" name="rItem_recyclingMachines 42" sx="1.0" sy="1.0" x="571" y="135" z="2"/>

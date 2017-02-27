@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,54 +69,38 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_88_88_globalSettings extends SceneScript
+class ActorEvents_159 extends ActorScript
 {
-	public var _ScreenDiagonal:Float;
+	public var _dump:Bool;
+	public var _trash:Actor;
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_gameSettings():Void
+	
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		Engine.engine.setGameAttribute("sceneSpeed", 30);
-		Engine.engine.setGameAttribute("lateralSpeed", 0);
-		Engine.engine.setGameAttribute("gameStart", false);
-		Engine.engine.setGameAttribute("spawnThings", false);
-		if(Engine.engine.getGameAttribute("tutorialDone"))
-		{
-			Engine.engine.setGameAttribute("spawnThings", true);
-		}
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_playerSettings():Void
-	{
-		Engine.engine.setGameAttribute("playerControl", true);
-		Engine.engine.setGameAttribute("dozerPlaying", false);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_globalConstants():Void
-	{
-		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
-		Engine.engine.setGameAttribute("screenX_mid", (getScreenWidth() / 2));
-		Engine.engine.setGameAttribute("screenY_mid", (getScreenHeight() / 2));
-	}
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
-	{
-		super();
-		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
-		_ScreenDiagonal = 0.0;
+		super(actor);
+		nameMap.set("dump", "_dump");
+		_dump = true;
+		nameMap.set("trash", "_trash");
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		_customEvent_playerSettings();
-		_customEvent_gameSettings();
-		_customEvent_globalConstants();
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(((actor.getAnimation() == "drop") && (_dump == true)))
+				{
+					/* adds a few of "Actor" randomly around Position */
+					scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash("cans", actor.getXCenter(), actor.getYCenter());
+					_dump = false;
+					propertyChanged("_dump", _dump);
+				}
+			}
+		});
 		
 	}
 	

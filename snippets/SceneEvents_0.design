@@ -603,6 +603,30 @@
             </group>
         </draw>
     </group>
+    <group eventID="16" id="1">
+        <if comment="false" x="714" y="191">
+            <group eventID="16" id="-1">
+                <draw-text comment="false" x="725" y="221">
+                    <get-val-0-8 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="45"/>
+                    <int id="2" val="245"/>
+                </draw-text>
+            </group>
+            <less comment="false" id="0" x="0" y="0">
+                <get-val-0-8 comment="false" id="0" x="0" y="0"/>
+                <get-game-val-61 comment="false" id="1" x="0" y="0"/>
+            </less>
+        </if>
+        <else comment="false" x="714" y="258">
+            <group eventID="16" id="-1">
+                <draw-text comment="false" x="725" y="278">
+                    <get-game-val-61 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="37"/>
+                    <int id="2" val="245"/>
+                </draw-text>
+            </group>
+        </else>
+    </group>
     <group eventID="16" id="-1"/>
     <group eventID="19" id="0">
         <event-device-swipe comment="false" x="15" y="15">

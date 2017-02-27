@@ -148,7 +148,7 @@
         <number cid="8" id="59" name="collected_PlasticBottles" save="true" value="0.0"/>
         <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
         <number cid="8" id="64" name="total_plasticBottles" save="true" value="10.0"/>
-        <number cid="0" id="3" name="sceneSpeed" save="true" value="0.0"/>
+        <number cid="2" id="3" name="sceneSpeed" save="true" value="0.0"/>
         <text cid="-1" id="45" name="flag" save="true" value="0"/>
         <boolean cid="2" id="26" name="tutorialDone" save="true" value="false"/>
         <number cid="8" id="60" name="collected_glassBottle" save="true" value="0.0"/>

@@ -253,9 +253,12 @@
     <group eventID="5" id="0">
         <event-collide-actortotype comment="false" x="15" y="14">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="46">
+                <comment-short comment="false" x="26" y="46">
+                    <int id="0" val="if it lands on a conveyor belt speed up"/>
+                </comment-short>
+                <if comment="false" x="26" y="66">
                     <group eventID="5" id="-1">
-                        <set-dxy comment="false" x="37" y="76">
+                        <set-dxy comment="false" x="37" y="96">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <get-game-val-39 comment="false" id="2" x="0" y="0"/>

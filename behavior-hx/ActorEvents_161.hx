@@ -69,99 +69,32 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_139_139_recyclingtrashBehavior extends ActorScript
+class ActorEvents_161 extends ActorScript
 {
-	public var _Grabbed:Bool;
-	public var _XOffset:Float;
-	public var _YOffset:Float;
-	public var _OldX:Float;
-	public var _OldY:Float;
-	public var _CannotExitScreen:Bool;
+	public var _dump:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("Grabbed", "_Grabbed");
-		_Grabbed = false;
-		nameMap.set("X Offset", "_XOffset");
-		_XOffset = 0.0;
-		nameMap.set("Y Offset", "_YOffset");
-		_YOffset = 0.0;
-		nameMap.set("Old X", "_OldX");
-		_OldX = 0.0;
-		nameMap.set("Old Y", "_OldY");
-		_OldY = 0.0;
-		nameMap.set("Cannot Exit Screen", "_CannotExitScreen");
-		_CannotExitScreen = true;
+		nameMap.set("dump", "_dump");
+		_dump = true;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
-		actor.makeAlwaysSimulate();
-		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				/* drag and drop functionality */
-				if(_Grabbed)
+				if(((actor.getAnimation() == "drop") && (_dump == true)))
 				{
-					if(isMouseDown())
-					{
-						if(_CannotExitScreen)
-						{
-							actor.setX((getScreenX() + Math.max(0, Math.min((getScreenWidth() - (actor.getWidth())), (getMouseX() + _XOffset)))));
-							actor.setY((getScreenY() + Math.max(0, Math.min((getScreenHeight() - (actor.getHeight())), (getMouseY() + _YOffset)))));
-						}
-						else
-						{
-							actor.setX(((getScreenX() + getMouseX()) + _XOffset));
-							actor.setY(((getScreenY() + getMouseY()) + _YOffset));
-						}
-						actor.setVelocity(0, 0);
-						actor.setAngularVelocity(Utils.RAD * (0));
-					}
-					if(isMouseReleased())
-					{
-						_Grabbed = false;
-						propertyChanged("_Grabbed", _Grabbed);
-					}
-				}
-				else
-				{
-					if(actor.isMousePressed())
-					{
-						_XOffset = asNumber((actor.getX() - (getScreenX() + getMouseX())));
-						propertyChanged("_XOffset", _XOffset);
-						_YOffset = asNumber((actor.getY() - (getScreenY() + getMouseY())));
-						propertyChanged("_YOffset", _YOffset);
-						_OldX = asNumber((getScreenX() + getMouseX()));
-						propertyChanged("_OldX", _OldX);
-						_OldY = asNumber((getScreenY() + getMouseY()));
-						propertyChanged("_OldY", _OldY);
-						_Grabbed = true;
-						propertyChanged("_Grabbed", _Grabbed);
-					}
-				}
-			}
-		});
-		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorType(155), event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				/* if it lands on a conveyor belt speed up */
-				if(!(_Grabbed))
-				{
-					actor.setXVelocity(Engine.engine.getGameAttribute("recyclingBeltSpeed"));
+					createRecycledActor(getActorType(137), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.FRONT);
+					_dump = false;
+					propertyChanged("_dump", _dump);
 				}
 			}
 		});

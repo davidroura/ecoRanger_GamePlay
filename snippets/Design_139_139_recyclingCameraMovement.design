@@ -3,34 +3,40 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <comment-short comment="false" x="26" y="40">
+                    <int id="0" val="after recycling is done it moves everything to the left for a few seconds"/>
+                </comment-short>
+                <if comment="false" x="26" y="60">
                     <group eventID="1" id="-1">
-                        <set-val-137-1 comment="false" x="37" y="70">
+                        <set-val-137-2 comment="false" x="37" y="90">
+                            <int id="0" val="-10"/>
+                        </set-val-137-2>
+                        <set-val-137-1 comment="false" x="37" y="110">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-137-1>
-                        <dolater comment="false" x="37" y="95">
+                        <dolater comment="false" x="37" y="135">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="122">
+                                <set-dxy comment="false" x="48" y="162">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
-                                    <int id="2" val="-10"/>
+                                    <get-val-137-2 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
                             </group>
                             <int id="0" val="2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="161">
+                        <dolater comment="false" x="37" y="206">
                             <group eventID="1" id="-1">
-                                <comment-short comment="false" x="48" y="188">
-                                    <int id="0" val="make it slow down"/>
+                                <comment-short comment="false" x="48" y="233">
+                                    <int id="0" val="makes it slow down"/>
                                 </comment-short>
-                                <set-dxy comment="false" x="48" y="208">
+                                <set-dxy comment="false" x="48" y="253">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="0"/>
                                 </set-dxy>
                             </group>
-                            <int id="0" val="7"/>
+                            <int id="0" val="10"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
@@ -42,24 +48,7 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="-1">
-        <and comment="false" x="98" y="412">
-            <and comment="false" id="0" x="0" y="0">
-                <lesseq comment="false" id="0" x="0" y="0">
-                    <get-game-val-63 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="0"/>
-                </lesseq>
-                <lesseq comment="false" id="1" x="0" y="0">
-                    <get-game-val-64 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="0"/>
-                </lesseq>
-            </and>
-            <lesseq comment="false" id="1" x="0" y="0">
-                <get-game-val-65 comment="false" id="0" x="0" y="0"/>
-                <int id="1" val="0"/>
-            </lesseq>
-        </and>
-    </group>
+    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">

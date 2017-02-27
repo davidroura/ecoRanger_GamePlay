@@ -124,7 +124,7 @@ class SceneEvents_2 extends SceneScript
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(59));
 				g.drawString("" + "set initial game stats", 5, 5);
-				g.drawString("" + "reset power ups and ", 5, 55);
+				g.drawString("" + "reset power ups and resources", 5, 55);
 			}
 		});
 		
