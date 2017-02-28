@@ -168,13 +168,8 @@
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <custom-block blocktag="custom-232" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock Copy&quot;, &quot;_customBlock_dropBlock&quot;, []);" desc="" global="false" gui="Drop block. Level %0" id="232" message="dropBlock" name="dropBlock" oid="-1" return="void" shared="false" snippetID="145">
+    <custom-block blocktag="custom-246" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock2&quot;, &quot;_customBlock_dropObstacle&quot;, []);" desc="" global="false" gui="drop obstacle level %0" id="246" message="dropObstacle" name="dropObstacle" oid="-1" return="void" shared="false" snippetID="145">
         <blank name="difficulty" order="0" type="number"/>
-    </custom-block>
-    <custom-block blocktag="custom-224" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropObstacle&quot;, [, , ]);" desc="droping at obstacle at a specific position" global="false" gui="drop %0 at ( %1 , %2 )" id="224" message="dropObstacle" name="dropObstacle" oid="-1" return="void" shared="false" snippetID="128">
-        <blank name="obstacle" order="0" type="actortype"/>
-        <blank name="xPosition" order="1" type="number"/>
-        <blank name="yPosition" order="2" type="number"/>
     </custom-block>
     <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="144">
         <blank name="trashType" order="0" type="text"/>

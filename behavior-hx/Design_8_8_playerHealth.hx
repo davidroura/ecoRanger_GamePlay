@@ -223,7 +223,7 @@ class Design_8_8_playerHealth extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_tookBanana():Void
 	{
-		Engine.engine.setGameAttribute("extraLife", 25);
+		Engine.engine.setGameAttribute("extraLife", 27);
 		Engine.engine.setGameAttribute("boosted", true);
 		runLater(1000 * 2, function(timeTask:TimedTask):Void
 		{

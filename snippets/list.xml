@@ -379,7 +379,7 @@
             <event displayName="exit" enabled="true" id="8" name="event-mouse-enter-exit-region" order="8" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_145_145" classname="scripts.Design_145_145" desc="" description="" design="true" drawOrder="0" id="145" name="spawnHandlerBlock Copy" oid="-1" package="scripts" shared="false" type="scene">
+    <snippet attachedevent="false" class="scripts.Design_146_146_spawnHandlerBlock2" classname="scripts.Design_146_146_spawnHandlerBlock2" desc="" description="" design="true" drawOrder="0" id="145" name="spawnHandlerBlock2" oid="-1" package="scripts" shared="false" type="scene">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceTree" hidden="false" id="1" name="_distanceTree" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="distanceBlock" hidden="false" id="2" name="_distanceBlock" order="1"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="xTree" hidden="false" id="3" name="_xTree" order="2"/>
@@ -396,35 +396,38 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashPos" hidden="false" id="14" name="_trashPos" order="13"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="spawnWait" hidden="false" id="15" name="_spawnWait" order="14"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="lifeWait" hidden="false" id="16" name="_lifeWait" order="15"/>
+        <number default="300" defaultValue="300" desc="" dropdown="" fullname="itemRange" hidden="false" id="17" name="_itemRange" order="16"/>
+        <number default="50" defaultValue="50" desc="" dropdown="" fullname="itemRangeMin" hidden="false" id="18" name="_itemRangeMin" order="17"/>
+        <number default="10.0" defaultValue="10.0" desc="" dropdown="" fullname="nextDropObstacle" hidden="false" id="19" name="_nextDropObstacle" order="18"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>
             <receiver blockID="227" id="3"/>
             <receiver blockID="232" id="4"/>
+            <receiver blockID="246" id="5"/>
         </blocks>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="3" repeats="true"/>
-            <event displayName="blockOne" enabled="true" id="2" name="event-custom" order="12" repeats="true"/>
-            <event displayName="spawnTrees" enabled="true" id="3" name="event-custom" order="16" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="30" repeats="true"/>
-            <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="22" repeats="true"/>
-            <event displayName="spawnLife" enabled="true" id="6" name="event-custom" order="21" repeats="true"/>
+            <event displayName="blockOne" enabled="true" id="2" name="event-custom" order="13" repeats="true"/>
+            <event displayName="spawnTrees" enabled="true" id="3" name="event-custom" order="17" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="31" repeats="true"/>
+            <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="23" repeats="true"/>
+            <event displayName="spawnLife" enabled="true" id="6" name="event-custom" order="22" repeats="true"/>
             <event displayName="Created" enabled="true" id="8" name="init" order="1" repeats="true"/>
-            <event displayName="level1" enabled="true" id="9" name="event-custom" order="14" repeats="true"/>
-            <event displayName="dropRock" enabled="true" id="10" name="event-custom" order="9" repeats="true"/>
-            <event displayName="spawnTrash" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
-            <event displayName="dropTrash" enabled="true" id="13" name="event-custom" order="24" repeats="true"/>
-            <event displayName="dropBridge" enabled="true" id="15" name="event-custom" order="28" repeats="true"/>
-            <event displayName="dropBonusCard" enabled="true" id="18" name="event-custom" order="29" repeats="true"/>
-            <event displayName="level2" enabled="true" id="19" name="event-custom" order="15" repeats="true"/>
-            <event displayName="spawnTrashRight" enabled="true" id="20" name="event-custom" order="20" repeats="true"/>
-            <event displayName="spawnTrashLeft" enabled="true" id="21" name="event-custom" order="19" repeats="true"/>
+            <event displayName="level1" enabled="true" id="9" name="event-custom" order="15" repeats="true"/>
+            <event displayName="dropRock" enabled="true" id="10" name="event-custom" order="10" repeats="true"/>
+            <event displayName="spawnTrash" enabled="true" id="12" name="event-custom" order="18" repeats="true"/>
+            <event displayName="dropTrash" enabled="true" id="13" name="event-custom" order="25" repeats="true"/>
+            <event displayName="dropBridge" enabled="true" id="15" name="event-custom" order="29" repeats="true"/>
+            <event displayName="dropBonusCard" enabled="true" id="18" name="event-custom" order="30" repeats="true"/>
+            <event displayName="level2" enabled="true" id="19" name="event-custom" order="16" repeats="true"/>
+            <event displayName="spawnTrashRight" enabled="true" id="20" name="event-custom" order="21" repeats="true"/>
+            <event displayName="spawnTrashLeft" enabled="true" id="21" name="event-custom" order="20" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="22" name="draw" order="2" repeats="true"/>
-            <event displayName="dropObstacle" enabled="true" id="24" name="event-custom-block" order="27" repeats="true"/>
-            <event displayName="spawnTrashRamdom" enabled="true" id="25" name="event-custom-block" order="18" repeats="true"/>
-            <event displayName="dropBlock" enabled="true" id="26" name="event-custom-block" order="7" repeats="true"/>
-            <event displayName="dropMud" enabled="true" id="27" name="event-custom" order="10" repeats="true"/>
-            <event displayName="dropLife" enabled="true" id="28" name="event-custom" order="11" repeats="true"/>
+            <event displayName="spawnTrashRamdom" enabled="true" id="25" name="event-custom-block" order="19" repeats="true"/>
+            <event displayName="dropMud" enabled="true" id="27" name="event-custom" order="11" repeats="true"/>
+            <event displayName="dropLife" enabled="true" id="28" name="event-custom" order="12" repeats="true"/>
+            <event displayName="drop obstacle" enabled="true" id="29" name="event-custom-block" order="8" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_18_18_rockExplode" classname="scripts.Design_18_18_rockExplode" desc="" description="" design="true" drawOrder="0" id="18" name="rockExplode" oid="-1" package="scripts" shared="false" type="actor">

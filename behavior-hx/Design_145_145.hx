@@ -88,15 +88,18 @@ class Design_145_145 extends SceneScript
 	public var _trashPos:Float;
 	public var _spawnWait:Bool;
 	public var _lifeWait:Bool;
+	public var _itemRange:Float;
+	public var _itemRangeMin:Float;
+	public var _nextDropObstacle:Float;
 	
 	/* ========================= Custom Block ========================= */
-	public function _customBlock_dropBlock(__difficulty:Float):Void
+	public function _customBlock_dropObstacle(__difficulty:Float):Void
 	{
 		_trashType = asNumber(randomInt(Math.floor(0), Math.floor(1)));
 		propertyChanged("_trashType", _trashType);
-		runLater(1000 * randomFloatBetween(.3, 1.5), function(timeTask:TimedTask):Void
+		if((Engine.engine.getGameAttribute("playerDistance") >= _nextDropObstacle))
 		{
-			trace("" + (("" + "Difficulty ") + ("" + __difficulty)));
+			trace("" + (("" + "Difficulty ") + ("" + "")));
 			if(((_trashType == 0) && (__difficulty > randomInt(Math.floor(0), Math.floor(20)))))
 			{
 				_customEvent_dropRock();
@@ -107,14 +110,17 @@ class Design_145_145 extends SceneScript
 			}
 			_spawnWait = false;
 			propertyChanged("_spawnWait", _spawnWait);
-		}, null);
+			_nextDropObstacle = asNumber((Engine.engine.getGameAttribute("playerDistance") + (randomInt(Math.floor(200), Math.floor(400)) / __difficulty)));
+			propertyChanged("_nextDropObstacle", _nextDropObstacle);
+			trace("" + (("" + "next obstacle ") + ("" + _nextDropObstacle)));
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropRock():Void
 	{
 		trace("" + "rock Dropped");
-		createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(50), Math.floor(400)), -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(12), randomInt(Math.floor(_itemRangeMin), Math.floor(_itemRange)), -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 	}
@@ -123,7 +129,7 @@ class Design_145_145 extends SceneScript
 	public function _customEvent_dropMud():Void
 	{
 		trace("" + "mud Dropped");
-		createRecycledActorOnLayer(getActorType(145), randomInt(Math.floor(50), Math.floor(400)), -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(145), randomInt(Math.floor(_itemRangeMin), Math.floor(_itemRange)), -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 	}
@@ -132,7 +138,7 @@ class Design_145_145 extends SceneScript
 	public function _customEvent_droplife():Void
 	{
 		trace("" + "life Dropped");
-		createRecycledActorOnLayer(getActorType(10), randomInt(Math.floor(50), Math.floor(350)), -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(10), randomInt(Math.floor(_itemRangeMin), Math.floor(_itemRange)), -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
 	}
@@ -165,31 +171,22 @@ otherwise => sides */
 			propertyChanged("_temporalVar", _temporalVar);
 			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, 100, -30]);
 			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [(Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4), 200, -120]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(145), 100, -20]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(10), 200, -50]);
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(10), 150, -16]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(145), 150, -6]);
 			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [0.5, (_ramdomBlockNumber * 120), -(((_ramdomBlockNumber * 900) + 10))]);
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
 			_temporalVar = "3";
 			propertyChanged("_temporalVar", _temporalVar);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(10), ((_ramdomBlockNumber * 120) + 80), -16]);
 			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, ((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80), -30]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(12), 80, -100]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(145), 150, -20]);
 		}
 		else
 		{
 			_temporalVar = "4";
 			propertyChanged("_temporalVar", _temporalVar);
 			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, ((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80), -30]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(12), 100, -60]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(12), ((_ramdomBlockNumber * 120) + 80), -(((_ramdomBlockNumber * 100) + 50))]);
 		}
 	}
 	
@@ -272,7 +269,6 @@ otherwise => sides */
 		propertyChanged("_yobstacle", _yobstacle);
 		for(index0 in 0...Std.int(4))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropObstacle", [getActorType(15), _xobstacle, _yobstacle]);
 			if((__orientation < 0.33))
 			{
 				_xobstacle = asNumber((_xobstacle + 20));
@@ -379,15 +375,6 @@ otherwise => sides */
 		getLastCreatedActor().setAnimation("" + ("" + ("" + Math.round((Engine.engine.getGameAttribute("ramdomUniversalNumber") * _itemNumber)))));
 	}
 	
-	/* ========================= Custom Block ========================= */
-	public function _customBlock_dropObstacle(__obstacle:ActorType, __xPosition:Float, __yPosition:Float):Void
-	{
-		createRecycledActorOnLayer(__obstacle, __xPosition, -5, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(__yPosition);
-	}
-	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_dropBridge():Void
 	{
@@ -449,6 +436,12 @@ otherwise => sides */
 		_spawnWait = false;
 		nameMap.set("lifeWait", "_lifeWait");
 		_lifeWait = false;
+		nameMap.set("itemRange", "_itemRange");
+		_itemRange = 300;
+		nameMap.set("itemRangeMin", "_itemRangeMin");
+		_itemRangeMin = 50;
+		nameMap.set("nextDropObstacle", "_nextDropObstacle");
+		_nextDropObstacle = 0;
 		
 	}
 	
@@ -480,7 +473,6 @@ otherwise => sides */
 					propertyChanged("_ramdomBlockNumber", _ramdomBlockNumber);
 					_spawnWait = true;
 					propertyChanged("_spawnWait", _spawnWait);
-					sayToScene("spawnHandlerBlock Copy", "_customBlock_dropBlock", [Math.floor((Engine.engine.getGameAttribute("playerDistance") / 100))]);
 					_distanceBlock = asNumber(Engine.engine.getGameAttribute("playerDistance"));
 					propertyChanged("_distanceBlock", _distanceBlock);
 				}
@@ -488,7 +480,7 @@ otherwise => sides */
 				{
 					_lifeWait = true;
 					propertyChanged("_lifeWait", _lifeWait);
-					runLater(1000 * randomFloatBetween(2, 4), function(timeTask:TimedTask):Void
+					runLater(1000 * randomFloatBetween(1.8, 3.3), function(timeTask:TimedTask):Void
 					{
 						_customEvent_droplife();
 						_lifeWait = false;

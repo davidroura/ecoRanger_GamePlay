@@ -77,7 +77,7 @@ class Design_88_88_globalSettings extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_gameSettings():Void
 	{
-		Engine.engine.setGameAttribute("sceneSpeed", 25);
+		Engine.engine.setGameAttribute("sceneSpeed", 15);
 		Engine.engine.setGameAttribute("lateralSpeed", 0);
 		Engine.engine.setGameAttribute("gameStart", false);
 		Engine.engine.setGameAttribute("spawnThings", false);

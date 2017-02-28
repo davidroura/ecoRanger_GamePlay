@@ -5,36 +5,34 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-val-145-10 comment="false" x="37" y="75">
-                            <random comment="false" id="0" x="0" y="0"/>
-                        </set-val-145-10>
-                        <set-val-145-15 comment="false" x="37" y="100">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-145-15>
-                        <set-val-145-2 comment="false" x="37" y="125">
+                        <custom-246 comment="false" x="37" y="70">
+                            <roundnew comment="false" id="0" x="0" y="0">
+                                <int id="0" val="2"/>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="200"/>
+                                </div>
+                            </roundnew>
+                        </custom-246>
+                        <set-val-145-2 comment="false" x="37" y="113">
                             <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                         </set-val-145-2>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <not comment="false" id="0" x="0" y="0">
-                            <get-game-val-81 comment="false" id="0" x="0" y="0"/>
-                        </not>
-                        <not comment="false" id="1" x="0" y="0">
-                            <get-val-145-15 comment="false" id="0" x="0" y="0"/>
-                        </not>
-                    </and>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-81 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
-                <if comment="false" x="26" y="162">
+                <if comment="false" x="26" y="150">
                     <group eventID="1" id="-1">
-                        <set-val-145-16 comment="false" x="37" y="192">
+                        <set-val-145-16 comment="false" x="37" y="180">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-145-16>
-                        <dolater comment="false" x="37" y="217">
+                        <dolater comment="false" x="37" y="205">
                             <group eventID="1" id="-1">
-                                <say-this comment="false" x="48" y="249">
+                                <say-this comment="false" x="48" y="237">
                                     <int id="0" val="droplife"/>
                                 </say-this>
-                                <set-val-145-16 comment="false" x="48" y="269">
+                                <set-val-145-16 comment="false" x="48" y="257">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-145-16>
                             </group>
@@ -69,27 +67,20 @@
             <int id="0" val="play"/>
         </say-this>
     </group>
-    <group eventID="1" id="-1">
-        <and comment="false" x="380" y="532">
-            <not comment="false" id="0" x="0" y="0">
-                <get-game-val-81 comment="false" id="0" x="0" y="0"/>
-            </not>
-            <get-val-145-15 comment="false" id="1" x="0" y="0"/>
-        </and>
-        <and comment="false" x="58" y="420">
-            <noteq comment="false" id="0" x="0" y="0">
-                <get-val-145-2 comment="false" id="0" x="0" y="0"/>
-                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
-            </noteq>
-            <eq comment="false" id="1" x="0" y="0">
-                <mod comment="false" id="0" x="0" y="0">
-                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="50"/>
-                </mod>
-                <int id="1" val="0"/>
-            </eq>
-        </and>
+    <group eventID="1" id="2">
+        <set-val-145-10 comment="false" x="162" y="547">
+            <random comment="false" id="0" x="0" y="0"/>
+        </set-val-145-10>
     </group>
+    <group eventID="1" id="3">
+        <print comment="false" x="505" y="414">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="distance  "/>
+                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+        </print>
+    </group>
+    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="2" id="-1">
@@ -1041,10 +1032,7 @@
     <group eventID="28" id="0">
         <event-custom comment="false" x="16" y="21">
             <group eventID="27" id="-1">
-                <print comment="false" x="27" y="46">
-                    <int id="0" val="life Dropped"/>
-                </print>
-                <create-actor-on-layer comment="false" x="27" y="66">
+                <create-actor-on-layer comment="false" x="27" y="46">
                     <actortype eid="10" id="0"/>
                     <randint comment="false" id="1" x="0" y="0">
                         <get-val-145-18 comment="false" id="0" x="0" y="0"/>
@@ -1054,16 +1042,21 @@
                     <int id="3" val="1"/>
                     <int id="4" val="gamePlay"/>
                 </create-actor-on-layer>
-                <ignore-screen-tolerance comment="false" x="27" y="103">
+                <ignore-screen-tolerance comment="false" x="27" y="83">
                     <ACTOR eid="lastcreated" id="0"/>
                 </ignore-screen-tolerance>
-                <movewithinlayer comment="false" x="27" y="130">
+                <movewithinlayer comment="false" x="27" y="110">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="2"/>
                 </movewithinlayer>
             </group>
             <int id="0" val="droplife"/>
         </event-custom>
+    </group>
+    <group eventID="28" id="1">
+        <print comment="false" x="140" y="290">
+            <int id="0" val="life Dropped"/>
+        </print>
     </group>
     <group eventID="28" id="-1"/>
     <group eventID="29" id="0">
@@ -1077,15 +1070,9 @@
                 </set-val-145-13>
                 <if comment="false" x="26" y="70">
                     <group eventID="29" id="-1">
-                        <print comment="false" x="37" y="100">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="Difficulty "/>
-                                <int id="1" val=""/>
-                            </str-combine>
-                        </print>
-                        <if comment="false" x="37" y="125">
+                        <if comment="false" x="37" y="100">
                             <group eventID="29" id="-1">
-                                <say-this comment="false" x="48" y="160">
+                                <say-this comment="false" x="48" y="135">
                                     <int id="0" val="dropRock"/>
                                 </say-this>
                             </group>
@@ -1103,9 +1090,9 @@
                                 </more>
                             </and>
                         </if>
-                        <if comment="false" x="37" y="192">
+                        <if comment="false" x="37" y="167">
                             <group eventID="29" id="-1">
-                                <say-this comment="false" x="48" y="227">
+                                <say-this comment="false" x="48" y="202">
                                     <int id="0" val="dropMud"/>
                                 </say-this>
                             </group>
@@ -1117,33 +1104,27 @@
                                 <more comment="false" id="1" x="0" y="0">
                                     <get-byobval-145-246-0 comment="false" id="0" x="0" y="0"/>
                                     <randint comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="-5"/>
-                                        <int id="1" val="10"/>
+                                        <int id="0" val="-10"/>
+                                        <int id="1" val="15"/>
                                     </randint>
                                 </more>
                             </and>
                         </if>
-                        <set-val-145-15 comment="false" x="37" y="259">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-145-15>
-                        <set-val-145-19 comment="false" x="37" y="284">
+                        <set-val-145-19 comment="false" x="37" y="234">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                                 <div comment="false" id="1" x="0" y="0">
                                     <randint comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="200"/>
-                                        <int id="1" val="400"/>
+                                        <int id="0" val="20"/>
+                                        <int id="1" val="60"/>
                                     </randint>
-                                    <get-byobval-145-246-0 comment="false" id="1" x="0" y="0"/>
+                                    <times comment="false" id="1" x="0" y="0">
+                                        <get-byobval-145-246-0 comment="false" id="0" x="0" y="0"/>
+                                        <get-byobval-145-246-0 comment="false" id="1" x="0" y="0"/>
+                                    </times>
                                 </div>
                             </plus>
                         </set-val-145-19>
-                        <print comment="false" x="37" y="319">
-                            <str-combine comment="false" id="0" x="0" y="0">
-                                <int id="0" val="next obstacle "/>
-                                <get-val-145-19 comment="false" id="1" x="0" y="0"/>
-                            </str-combine>
-                        </print>
                     </group>
                     <moreeq comment="false" id="0" x="0" y="0">
                         <get-game-val-37 comment="false" id="0" x="0" y="0"/>
@@ -1154,5 +1135,49 @@
             <get-byobval-145-246-0 comment="false" id="0" x="0" y="0"/>
         </receiver-5-246>
     </group>
-    <group eventID="29" id="-1"/>
+    <group eventID="29" id="1">
+        <set-val-145-15 comment="false" x="162" y="588">
+            <false comment="false" id="0" x="0" y="0"/>
+        </set-val-145-15>
+    </group>
+    <group eventID="29" id="2">
+        <print comment="false" x="515" y="458">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="Difficulty "/>
+                <int id="1" val=""/>
+            </str-combine>
+        </print>
+        <print comment="false" x="515" y="483">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="distance "/>
+                <get-game-val-37 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+        </print>
+        <print comment="false" x="515" y="513">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <int id="0" val="next obstacle "/>
+                <get-val-145-19 comment="false" id="1" x="0" y="0"/>
+            </str-combine>
+        </print>
+    </group>
+    <group eventID="29" id="3">
+        <print comment="false" x="71" y="387">
+            <str-combine comment="false" id="0" x="0" y="0">
+                <get-game-val-37 comment="false" id="0" x="0" y="0"/>
+                <str-combine comment="false" id="1" x="0" y="0">
+                    <int id="0" val=" plus "/>
+                    <div comment="false" id="1" x="0" y="0">
+                        <randint comment="false" id="0" x="0" y="0">
+                            <int id="0" val="60"/>
+                            <int id="1" val="150"/>
+                        </randint>
+                        <get-byobval-145-246-0 comment="false" id="1" x="0" y="0"/>
+                    </div>
+                </str-combine>
+            </str-combine>
+        </print>
+    </group>
+    <group eventID="29" id="-1">
+        <get-val-145-19 comment="false" x="211" y="543"/>
+    </group>
 </groups>

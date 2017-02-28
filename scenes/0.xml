@@ -11,7 +11,7 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,0.0,0.0,0.0,40.0,363.0,40.0,363.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
+        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,363.0,0.0,363.0,40.0,0.0,40.0,0.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -26,7 +26,7 @@
         <actor a="0.0" aid="15" c="false" group="3" id="112" name="gUI_powerUp 15" sx="1.0" sy="1.0" x="3" y="369" z="3"/>
     </actors>
     <snippets>
-        <s enabled="true" id="128">
+        <s enabled="false" id="128">
             <prop id="1" list="0" val="0.0"/>
             <prop id="2" list="0" val="0"/>
             <prop id="3" list="0" val="0"/>
@@ -40,7 +40,7 @@
             <prop id="11" list="0" val="0"/>
             <prop id="12" list="0" val=""/>
         </s>
-        <s enabled="false" id="145">
+        <s enabled="true" id="145">
             <prop id="1" list="0" val="0.0"/>
             <prop id="2" list="0" val="0.0"/>
             <prop id="3" list="0" val="0.0"/>
@@ -57,6 +57,9 @@
             <prop id="14" list="0" val="0.0"/>
             <prop id="15" list="0" val="false"/>
             <prop id="16" list="0" val="false"/>
+            <prop id="17" list="0" val="300"/>
+            <prop id="18" list="0" val="50"/>
+            <prop id="19" list="0" val="10"/>
         </s>
         <s enabled="true" id="8">
             <prop id="1" list="0" val="0"/>
