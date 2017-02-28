@@ -115,8 +115,8 @@ class SceneEvents_5 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		playSoundOnChannel(getSound(78), Std.int(0));
-		setVolumeForAllSounds(20/100);
+		setVolumeForAllSounds(75/100);
+		playSoundOnChannel(getSound(78), Std.int(1));
 		/* after a few seconds you can switch the conversation, we will also implement an exit comfirmation notification */
 		runLater(1000 * 2, function(timeTask:TimedTask):Void
 		{
@@ -132,7 +132,7 @@ class SceneEvents_5 extends SceneScript
 		}, null);
 		runLater(1000 * 28, function(timeTask:TimedTask):Void
 		{
-			playSoundOnChannel(getSound(80), Std.int(0));
+			playSoundOnChannel(getSound(80), Std.int(1));
 		}, null);
 		runLater(1000 * 34, function(timeTask:TimedTask):Void
 		{

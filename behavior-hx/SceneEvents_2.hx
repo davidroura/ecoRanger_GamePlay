@@ -84,12 +84,9 @@ class SceneEvents_2 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		if(!(Engine.engine.getGameAttribute("musicOn")))
-		{
-			setVolumeForAllSounds(50/100);
-			playSound(getSound(121));
-			Engine.engine.setGameAttribute("musicOn", true);
-		}
+		setVolumeForAllSounds(40/100);
+		playSoundOnChannel(getSound(121), Std.int(1));
+		
 		saveGame("mySave", function(success:Bool):Void
 		{
 			

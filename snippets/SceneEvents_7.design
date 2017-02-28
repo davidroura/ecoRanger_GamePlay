@@ -33,8 +33,53 @@
                 <set-game-val-72 comment="false" x="26" y="40">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-game-val-72>
+                <set-volume comment="false" x="26" y="65">
+                    <int id="0" val="100"/>
+                </set-volume>
+                <play-sound-channel comment="false" x="26" y="85">
+                    <int id="0" val="1"/>
+                    <sound eid="245" id="1"/>
+                    <int id="2" val="1"/>
+                </play-sound-channel>
+                <say-this comment="false" x="26" y="112">
+                    <int id="0" val="playRandomSound"/>
+                </say-this>
             </group>
         </init>
     </group>
     <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <play-sound4 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                    <text-to-sound comment="false" id="1" x="0" y="0">
+                        <get-item comment="false" id="0" x="0" y="0">
+                            <get-val-22-1 comment="false" id="0" x="0" y="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <length-list comment="false" id="1" x="0" y="0">
+                                    <get-val-22-1 comment="false" id="0" x="0" y="0"/>
+                                </length-list>
+                            </randint>
+                        </get-item>
+                    </text-to-sound>
+                </play-sound4>
+                <dolater comment="false" x="26" y="92">
+                    <group eventID="7" id="-1">
+                        <say-this comment="false" x="37" y="124">
+                            <int id="0" val="playRandomSound"/>
+                        </say-this>
+                    </group>
+                    <randint comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <int id="1" val="6"/>
+                    </randint>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="playRandomSound"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
 </groups>

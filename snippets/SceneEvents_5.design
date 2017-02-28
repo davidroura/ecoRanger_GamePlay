@@ -3,14 +3,14 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <play-sound-channel comment="false" x="26" y="40">
+                <set-volume comment="false" x="26" y="40">
+                    <int id="0" val="75"/>
+                </set-volume>
+                <play-sound-channel comment="false" x="26" y="60">
                     <int id="0" val="0"/>
                     <sound eid="78" id="1"/>
-                    <int id="2" val="0"/>
+                    <int id="2" val="1"/>
                 </play-sound-channel>
-                <set-volume comment="false" x="26" y="67">
-                    <int id="0" val="20"/>
-                </set-volume>
                 <comment-long comment="false" x="26" y="87">
                     <int id="0" val="after a few seconds you can switch the conversation, we will also implement an exit comfirmation notification"/>
                 </comment-long>
@@ -46,7 +46,7 @@
                         <play-sound-channel comment="false" x="37" y="376">
                             <int id="0" val="0"/>
                             <sound eid="80" id="1"/>
-                            <int id="2" val="0"/>
+                            <int id="2" val="1"/>
                         </play-sound-channel>
                     </group>
                     <int id="0" val="28"/>

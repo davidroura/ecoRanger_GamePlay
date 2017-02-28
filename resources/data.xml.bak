@@ -680,6 +680,7 @@
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -688,6 +689,7 @@
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -696,6 +698,7 @@
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -730,6 +733,7 @@
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -765,6 +769,7 @@
             <s enabled="true" id="137">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="true"/>
+                <prop id="2" list="0" val="0.0"/>
             </s>
         </snippets>
     </actor>
@@ -868,6 +873,13 @@
             <poly data="4,121,448,146,478,183,452,148,384" density="0.1" fric="0.2" gid="-1000" id="2" name="" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="243" loop="true" name="UI_factory_amb_sfx_1" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="235" loop="true" name="UI_factory_amb_sfx_2" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="238" loop="true" name="UI_factory_amb_sfx_3" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="239" loop="true" name="UI_factory_amb_sfx_4" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="242" loop="true" name="UI_factory_amb_sfx_5" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="244" loop="true" name="UI_factory_amb_sfx_6" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="245" loop="true" name="UI_factory_ambience" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="7" name="UIEnd" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="60" id="61" name="upgradeBoxes" shared="false" width="159">
         <anim across="1" down="1" durations="100" height="60" id="0" loop="true" name="Animation 0" numframes="1" originx="79" originy="30" sync="false" version="2" width="159">

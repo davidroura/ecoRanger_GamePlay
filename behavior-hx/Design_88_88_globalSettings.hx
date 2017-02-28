@@ -70,26 +70,44 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_7 extends SceneScript
+class Design_88_88_globalSettings extends SceneScript
 {
-	public var _sfxlist:Array<Dynamic>;
+	public var _ScreenDiagonal:Float;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_playRandomSound():Void
+	public function _customEvent_gameSettings():Void
 	{
-		playSound(getSoundByName(_sfxlist[Std.int(randomInt(Math.floor(0), Math.floor(_sfxlist.length)))]));
-		runLater(1000 * randomInt(Math.floor(2), Math.floor(6)), function(timeTask:TimedTask):Void
+		Engine.engine.setGameAttribute("sceneSpeed", 25);
+		Engine.engine.setGameAttribute("lateralSpeed", 0);
+		Engine.engine.setGameAttribute("gameStart", false);
+		Engine.engine.setGameAttribute("spawnThings", false);
+		if(Engine.engine.getGameAttribute("tutorialDone"))
 		{
-			_customEvent_playRandomSound();
-		}, null);
+			Engine.engine.setGameAttribute("spawnThings", true);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_playerSettings():Void
+	{
+		Engine.engine.setGameAttribute("playerControl", true);
+		Engine.engine.setGameAttribute("dozerPlaying", false);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_globalConstants():Void
+	{
+		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
+		Engine.engine.setGameAttribute("screenX_mid", (getScreenWidth() / 2));
+		Engine.engine.setGameAttribute("screenY_mid", (getScreenHeight() / 2));
 	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("sfx_list", "_sfxlist");
-		_sfxlist = ["UI_factory_amb_sfx_1", "UI_factory_amb_sfx_2", "UI_factory_amb_sfx_3", "UI_factory_amb_sfx_4", "UI_factory_amb_sfx_5", "UI_factory_amb_sfx_6"];
+		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
+		_ScreenDiagonal = 0.0;
 		
 	}
 	
@@ -97,28 +115,9 @@ class SceneEvents_7 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("found_GadgetScreen", true);
-		setVolumeForAllSounds(100/100);
-		loopSoundOnChannel(getSound(245), Std.int(1));
-		_customEvent_playRandomSound();
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && Input.swipedRight)
-			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
-			}
-		});
+		_customEvent_playerSettings();
+		_customEvent_gameSettings();
+		_customEvent_globalConstants();
 		
 	}
 	
