@@ -307,7 +307,9 @@
     </snippet>
     <snippet actorid="217" attachedevent="true" class="scripts.ActorEvents_217" classname="scripts.ActorEvents_217" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="140" name="ActorEvents_217" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_13_13_spawnLife" classname="scripts.Design_13_13_spawnLife" desc="" description="" design="true" drawOrder="0" id="13" name="spawnLife" oid="-1" package="scripts" shared="false" type="scene">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="frameCount" hidden="true" id="1" name="_frameCount" order="0"/>

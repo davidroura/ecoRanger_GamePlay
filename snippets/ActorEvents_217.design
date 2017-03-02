@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <setanim comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <str-replace comment="false" id="1" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="ing"/>
+                        <int id="2" val=""/>
+                    </str-replace>
+                </setanim>
+                <setanim comment="false" x="26" y="87">
+                    <ACTOR eid="this" id="0"/>
+                    <str-combine comment="false" id="1" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="ing"/>
+                    </str-combine>
+                </setanim>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="4"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="1" id="-1">
+        <str-combine comment="false" x="609" y="378">
+            <int id="0" val=""/>
+            <int id="1" val="ing"/>
+        </str-combine>
+    </group>
+</groups>
