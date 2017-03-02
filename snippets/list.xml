@@ -75,7 +75,7 @@
             <event displayName="spawnTrashLeft" enabled="true" id="21" name="event-custom" order="14" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="22" name="draw" order="2" repeats="true"/>
             <event displayName="dropObstacle" enabled="true" id="24" name="event-custom-block" order="23" repeats="true"/>
-            <event displayName="spawnTrashRamdom" enabled="true" id="25" name="event-custom-block" order="13" repeats="true"/>
+            <event displayName="spawnTrashRandom" enabled="true" id="25" name="event-custom-block" order="13" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">
