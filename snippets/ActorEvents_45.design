@@ -22,4 +22,36 @@
         </event-mouse-enter-exit-actor>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="23" y="21">
+            <group eventID="2" id="-1">
+                <scaleTo comment="false" x="34" y="48">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="104.06"/>
+                    <int id="2" val="104.06"/>
+                    <int id="3" val=".3"/>
+                    <int id="4" val="9"/>
+                </scaleTo>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="78" y="88">
+            <group eventID="4" id="-1">
+                <scaleTo comment="false" x="89" y="115">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="96.1"/>
+                    <int id="2" val="96.1"/>
+                    <int id="3" val=".3"/>
+                    <int id="4" val="7"/>
+                </scaleTo>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
