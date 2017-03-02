@@ -377,15 +377,15 @@
         </event-custom>
     </group>
     <group eventID="14" id="1">
-        <dolater comment="false" x="644" y="550">
+        <dolater comment="false" x="433" y="576">
             <group eventID="14" id="-1">
-                <comment-short comment="false" x="655" y="577">
+                <comment-short comment="false" x="444" y="603">
                     <int id="0" val="this box should say someting like &amp;quot;Glad you could make it. Pick up as much trash as you can&amp;quot;"/>
                 </comment-short>
-                <set-game-val-3 comment="false" x="655" y="597">
+                <set-game-val-3 comment="false" x="444" y="623">
                     <int id="0" val="6"/>
                 </set-game-val-3>
-                <create-actor3 comment="false" x="655" y="617">
+                <create-actor3 comment="false" x="444" y="643">
                     <actortype eid="198" id="0"/>
                     <div comment="false" id="1" x="0" y="0">
                         <screen-wh comment="false" id="0" x="0" y="0">
@@ -405,7 +405,7 @@
             <int id="0" val="3"/>
             <ACTOR eid="lastcreated" id="2"/>
         </dolater>
-        <if comment="false" x="644" y="674">
+        <if comment="false" x="433" y="700">
             <group eventID="14" id="-1"/>
             <get-game-val-84 comment="false" id="0" x="0" y="0"/>
         </if>

@@ -56,6 +56,11 @@
             <int id="0" val="blockOne"/>
         </event-custom>
     </group>
+    <group eventID="2" id="1">
+        <say-this comment="false" x="156" y="393">
+            <int id="0" val="spawnTrees"/>
+        </say-this>
+    </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <event-custom comment="false" x="15" y="15">

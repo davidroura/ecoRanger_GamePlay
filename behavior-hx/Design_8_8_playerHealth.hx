@@ -135,7 +135,7 @@ class Design_8_8_playerHealth extends SceneScript
 					}
 					if((Engine.engine.getGameAttribute("playerHealth") <= 25))
 					{
-						Engine.engine.setGameAttribute("sceneSpeed", Engine.engine.getGameAttribute("playerHealth"));
+						Engine.engine.setGameAttribute("sceneSpeed", (1.32 * Engine.engine.getGameAttribute("playerHealth")));
 					}
 				}
 				_customEvent_extraLife();
