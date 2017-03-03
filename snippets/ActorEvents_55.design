@@ -33,7 +33,7 @@
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
-    <group eventID="1" id="6">
+    <group eventID="1" id="1">
         <setanim comment="false" x="75" y="422">
             <ACTOR eid="this" id="0"/>
             <str-replace comment="false" id="1" x="0" y="0">
@@ -101,7 +101,7 @@
             </group>
         </step>
     </group>
-    <group eventID="2" id="8">
+    <group eventID="2" id="1">
         <else comment="false" x="357" y="342">
             <group eventID="2" id="-1"/>
         </else>

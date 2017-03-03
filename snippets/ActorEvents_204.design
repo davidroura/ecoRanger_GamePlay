@@ -5,14 +5,14 @@
             <group eventID="1" id="-1">
                 <create-actor3 comment="false" x="26" y="40">
                     <actortype eid="55" id="0"/>
-                    <int id="1" val="25"/>
-                    <int id="2" val="72"/>
+                    <int id="1" val="18"/>
+                    <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
                 <create-actor3 comment="false" x="26" y="67">
                     <actortype eid="55" id="0"/>
                     <int id="1" val="110"/>
-                    <int id="2" val="72"/>
+                    <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
                 <setanim comment="false" x="26" y="94">
@@ -22,7 +22,7 @@
                 <create-actor3 comment="false" x="26" y="121">
                     <actortype eid="55" id="0"/>
                     <int id="1" val="195"/>
-                    <int id="2" val="72"/>
+                    <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
                 <setanim comment="false" x="26" y="148">
@@ -31,17 +31,10 @@
                 </setanim>
                 <create-actor3 comment="false" x="26" y="175">
                     <actortype eid="208" id="0"/>
-                    <int id="1" val="150"/>
-                    <int id="2" val="200"/>
+                    <int id="1" val="30"/>
+                    <int id="2" val="210"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <scaleTo comment="false" x="26" y="202">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="85"/>
-                    <int id="2" val="85"/>
-                    <int id="3" val="0"/>
-                    <int id="4" val="0"/>
-                </scaleTo>
             </group>
         </init>
     </group>
@@ -56,13 +49,13 @@
                         </set-font-new>
                         <draw-text comment="false" x="37" y="97">
                             <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="50"/>
+                            <int id="1" val="30"/>
                             <int id="2" val="150"/>
                         </draw-text>
                     </group>
                     <noteq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="empty"/>
+                        <int id="1" val="0"/>
                     </noteq>
                 </if>
             </group>

@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_55 extends ActorScript
+class ActorEvents_45 extends ActorScript
 {
 	
 	
@@ -87,28 +87,28 @@ class ActorEvents_55 extends ActorScript
 		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
-				/* index returns -1 if not found. "If not On" */
-				if((("" + actor.getAnimation()).indexOf("On") == -1))
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					Engine.engine.setGameAttribute("upgradeDescription", StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "")));
+					createRecycledActor(getActorType(204), 8, 28, Script.FRONT);
 				}
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && -1 == mouseState)
 			{
-				/* if this button is the upgrade description button keep on, otherwise be off */
-				if(((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "Off")) == actor.getAnimation()))
-				{
-					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "On")));
-				}
-				else if(!((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "On")) == actor.getAnimation()))
-				{
-					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "On"), ("" + "Off")));
-				}
+				actor.growTo(104.06/100, 104.06/100, .3, Quad.easeOut);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				actor.growTo(96.1/100, 96.1/100, .3, Quad.easeIn);
 			}
 		});
 		

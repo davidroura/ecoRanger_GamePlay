@@ -148,23 +148,23 @@
         <anim across="1" down="1" durations="100" height="128" id="0" loop="true" name="Animation 0" numframes="1" originx="71" originy="64" sync="false" version="2" width="142"/>
     </sprite>
     <music atlasID="0" desc="" id="88" loop="true" name="crashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="72" id="56" name="dozerButton" shared="false" width="77">
-        <anim across="1" down="1" durations="100" height="72" id="0" loop="true" name="bioFuelOn" numframes="1" originx="33" originy="31" sync="false" version="2" width="77">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="76" id="56" name="dozerButton" shared="false" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="0" loop="true" name="bioFuelOn" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="72" id="1" loop="true" name="bioFuelOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="77">
+        <anim across="1" down="1" durations="100" height="76" id="1" loop="true" name="bioFuelOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,81,0,81,77,0,77" density="0.1" fric="0.2" gid="-1000" id="0" name="bioFuelOff" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="72" id="2" loop="true" name="boostOn" numframes="1" originx="33" originy="31" sync="false" version="2" width="77">
+        <anim across="1" down="1" durations="100" height="76" id="2" loop="true" name="boostOn" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="boostOn" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="72" id="3" loop="true" name="boostOff" numframes="1" originx="33" originy="31" sync="false" version="2" width="77">
+        <anim across="1" down="1" durations="100" height="76" id="3" loop="true" name="boostOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="boostOff" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="72" id="4" loop="true" name="engineChargeOff" numframes="1" originx="38" originy="36" sync="false" version="2" width="77">
+        <anim across="1" down="1" durations="100" height="76" id="4" loop="true" name="engineChargeOff" numframes="1" originx="38" originy="36" sync="false" version="2" width="81">
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="72" id="5" loop="true" name="engineChargeOn" numframes="1" originx="38" originy="36" sync="false" version="2" width="77">
+        <anim across="1" down="1" durations="100" height="76" id="5" loop="true" name="engineChargeOn" numframes="1" originx="38" originy="36" sync="false" version="2" width="81">
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -459,8 +459,8 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="136" fixedrot="false" fric="0.2" gid="3" id="208" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_Build" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="209" static="true">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="63" id="209" name="mUI_Build" shared="false" width="152">
-        <anim across="1" down="1" durations="100" height="63" id="0" loop="true" name="Animation 0" numframes="1" originx="76" originy="31" sync="false" version="2" width="152"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="27" id="209" name="mUI_Build" shared="false" width="82">
+        <anim across="1" down="1" durations="100" height="27" id="0" loop="true" name="Animation 0" numframes="1" originx="76" originy="31" sync="false" version="2" width="82"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="122" fixedrot="false" fric="0.2" gid="3" id="180" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_chooseBot" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="181" static="true">
         <snippets/>

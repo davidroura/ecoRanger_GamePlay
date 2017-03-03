@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_204 extends ActorScript
+class ActorEvents_47 extends ActorScript
 {
 	
 	
@@ -82,25 +82,33 @@ class ActorEvents_204 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		createRecycledActor(getActorType(55), 25, 72, Script.FRONT);
-		createRecycledActor(getActorType(55), 110, 72, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "boostOff");
-		createRecycledActor(getActorType(55), 195, 72, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "engineChargeOff");
-		createRecycledActor(getActorType(208), 150, 200, Script.FRONT);
-		getLastCreatedActor().growTo(85/100, 85/100, 0, Linear.easeNone);
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && -1 == mouseState)
 			{
-				if(!(Engine.engine.getGameAttribute("upgradeDescription") == "empty"))
+				actor.growTo(104.06/100, 104.06/100, .3, Quad.easeOut);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					g.setFont(getFont(59));
-					g.drawString("" + Engine.engine.getGameAttribute("upgradeDescription"), 50, 150);
+					switchScene(GameModel.get().scenes.get(16).getID(), null, createCrossfadeTransition(0));
 				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				actor.growTo(96.1/100, 96.1/100, .3, Quad.easeIn);
 			}
 		});
 		

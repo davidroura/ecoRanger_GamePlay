@@ -26,11 +26,16 @@
                     <font eid="59" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="94">
-                    <int id="0" val="set initial game stats"/>
+                    <int id="0" val="Build #2"/>
                     <int id="1" val="5"/>
                     <int id="2" val="5"/>
                 </draw-text>
                 <draw-text comment="false" x="26" y="114">
+                    <int id="0" val="set initial game stats"/>
+                    <int id="1" val="5"/>
+                    <int id="2" val="30"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="134">
                     <int id="0" val="reset power ups and resources"/>
                     <int id="1" val="5"/>
                     <int id="2" val="55"/>
