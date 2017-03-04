@@ -454,6 +454,13 @@
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="248" attachedevent="true" class="scripts.ActorEvents_248" classname="scripts.ActorEvents_248" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="148" name="ActorEvents_248" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+        </events>
+    </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_7" classname="scripts.SceneEvents_7" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="22" name="SceneEvents_7" oid="-1" package="scripts." sceneid="7" shared="false" type="scene">
         <list default="list" defaultValue="list" desc="List of random sounds to play" dropdown="" fullname="sfx_list" hidden="false" id="1" name="_sfxlist" order="0">
             <text order="0" value="UI_factory_amb_sfx_1"/>

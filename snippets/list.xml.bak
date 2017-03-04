@@ -403,7 +403,7 @@
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="trashPosList" hidden="false" id="23" name="_trashPosList" order="19"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="trashWait" hidden="false" id="24" name="_trashWait" order="20"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashCurveWidth" hidden="false" id="25" name="_trashCurveWidth" order="21"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashCurveLength" hidden="false" id="26" name="_trashCurveLength" order="22"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashCurveLength" hidden="false" id="26" name="_trashCurveLength" order="22"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>
@@ -452,6 +452,13 @@
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="248" attachedevent="true" class="scripts.ActorEvents_248" classname="scripts.ActorEvents_248" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="148" name="ActorEvents_248" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_7" classname="scripts.SceneEvents_7" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="22" name="SceneEvents_7" oid="-1" package="scripts." sceneid="7" shared="false" type="scene">

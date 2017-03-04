@@ -105,6 +105,12 @@
                 <set-game-val-26 comment="false" x="26" y="430">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-game-val-26>
+                <create-actor3 comment="false" x="26" y="455">
+                    <actortype eid="248" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="130"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
             </group>
         </init>
     </group>
