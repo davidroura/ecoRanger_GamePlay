@@ -27,7 +27,7 @@
                     <int id="0" val="100"/>
                 </set-game-val-28>
                 <set-val-8-2 comment="false" x="26" y="60">
-                    <int id="0" val="0.073"/>
+                    <int id="0" val="0.038"/>
                 </set-val-8-2>
                 <set-game-val-60 comment="false" x="26" y="80">
                     <int id="0" val="0"/>
@@ -213,7 +213,7 @@
                 <else comment="false" x="26" y="278">
                     <group eventID="12" id="-1">
                         <set-val-8-16 comment="false" x="37" y="298">
-                            <int id="0" val="30"/>
+                            <int id="0" val="35"/>
                         </set-val-8-16>
                     </group>
                 </else>
@@ -590,7 +590,7 @@
                                                 <set-val-8-16 comment="false" x="70" y="436">
                                                     <minus comment="false" id="0" x="0" y="0">
                                                         <get-val-8-16 comment="false" id="0" x="0" y="0"/>
-                                                        <int id="1" val=".06"/>
+                                                        <int id="1" val=".05"/>
                                                     </minus>
                                                 </set-val-8-16>
                                             </group>
