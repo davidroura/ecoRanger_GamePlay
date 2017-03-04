@@ -144,7 +144,6 @@
             <event displayName="Drawing" enabled="true" id="4" name="draw" order="11" repeats="true"/>
             <event displayName="Created" enabled="true" id="5" name="init" order="14" repeats="true"/>
             <event displayName="Swipe-left" enabled="true" id="6" name="event-device-swipe" order="17" repeats="true"/>
-            <event displayName="playBPressed" enabled="true" id="9" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
             <event displayName="playBReleased" enabled="true" id="10" name="event-mouse-enter-exit-actor" order="9" repeats="true"/>
             <event displayName="exit" enabled="true" id="11" name="event-mouse-enter-exit-region" order="16" repeats="true"/>
             <event displayName="initialStats" enabled="true" id="12" name="event-mouse-enter-exit-region" order="12" repeats="true"/>
@@ -403,6 +402,8 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="tempCounter" hidden="false" id="22" name="_tempCounter" order="6"/>
         <list default="list" defaultValue="list" desc="" dropdown="" fullname="trashPosList" hidden="false" id="23" name="_trashPosList" order="19"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="trashWait" hidden="false" id="24" name="_trashWait" order="20"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashCurveWidth" hidden="false" id="25" name="_trashCurveWidth" order="21"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="trashCurveLength" hidden="false" id="26" name="_trashCurveLength" order="22"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>
@@ -413,15 +414,16 @@
         </blocks>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="3" repeats="true"/>
-            <event displayName="spawnTrees" enabled="true" id="3" name="event-custom" order="18" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="32" repeats="true"/>
-            <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="20" repeats="true"/>
+            <event displayName="spawnTrees" enabled="true" id="3" name="event-custom" order="20" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="34" repeats="true"/>
+            <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="22" repeats="true"/>
             <event displayName="Created" enabled="true" id="8" name="init" order="1" repeats="true"/>
-            <event displayName="dropRock" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
-            <event displayName="dropMud" enabled="true" id="27" name="event-custom" order="12" repeats="true"/>
-            <event displayName="dropLife" enabled="true" id="28" name="event-custom" order="13" repeats="true"/>
+            <event displayName="dropRock" enabled="true" id="10" name="event-custom" order="13" repeats="true"/>
+            <event displayName="dropMud" enabled="true" id="27" name="event-custom" order="14" repeats="true"/>
+            <event displayName="dropLife" enabled="true" id="28" name="event-custom" order="15" repeats="true"/>
             <event displayName="drop obstacle" enabled="true" id="29" name="event-custom-block" order="9" repeats="true"/>
             <event displayName="drop trash" enabled="true" id="30" name="event-custom-block" order="4" repeats="true"/>
+            <event displayName="dropSingleTrash" enabled="true" id="31" name="event-custom" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_18_18_rockExplode" classname="scripts.Design_18_18_rockExplode" desc="" description="" design="true" drawOrder="0" id="18" name="rockExplode" oid="-1" package="scripts" shared="false" type="actor">

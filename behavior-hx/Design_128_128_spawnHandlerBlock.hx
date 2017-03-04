@@ -131,24 +131,20 @@ otherwise => sides */
 		{
 			_temporalVar = "1";
 			propertyChanged("_temporalVar", _temporalVar);
-			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, 100, -30]);
-			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [(Engine.engine.getGameAttribute("ramdomUniversalNumber") * 4), 200, -120]);
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [0.5, (_ramdomBlockNumber * 120), -(((_ramdomBlockNumber * 900) + 10))]);
+			
 		}
 		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
 		{
 			_temporalVar = "3";
 			propertyChanged("_temporalVar", _temporalVar);
-			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, ((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80), -30]);
 		}
 		else
 		{
 			_temporalVar = "4";
 			propertyChanged("_temporalVar", _temporalVar);
-			sayToScene("spawnHandlerBlock", "_customBlock_spawnTrashRamdom", [_ramdomBlockNumber, ((Engine.engine.getGameAttribute("ramdomUniversalNumber") * 120) + 80), -30]);
 		}
 	}
 	
@@ -266,31 +262,6 @@ otherwise => sides */
 		_yobstacle = asNumber((_yobstacle - 20));
 		propertyChanged("_yobstacle", _yobstacle);
 		_customEvent_dropTrash();
-	}
-	
-	/* ========================= Custom Block ========================= */
-	public function _customBlock_spawnTrashRamdom(__orientation:Float, __xPosition:Float, __yPosition:Float):Void
-	{
-		_xobstacle = asNumber(__xPosition);
-		propertyChanged("_xobstacle", _xobstacle);
-		_yobstacle = asNumber(__yPosition);
-		propertyChanged("_yobstacle", _yobstacle);
-		for(index0 in 0...Std.int(4))
-		{
-			if((__orientation < 0.33))
-			{
-				_xobstacle = asNumber((_xobstacle + 20));
-				propertyChanged("_xobstacle", _xobstacle);
-			}
-			else if((__orientation < 0.66))
-			{
-				_xobstacle = asNumber((_xobstacle - 20));
-				propertyChanged("_xobstacle", _xobstacle);
-			}
-			_yobstacle = asNumber((_yobstacle - 20));
-			propertyChanged("_yobstacle", _yobstacle);
-			_customEvent_dropTrash();
-		}
 	}
 	
 	/* ========================= Custom Event ========================= */

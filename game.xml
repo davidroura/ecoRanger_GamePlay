@@ -96,7 +96,7 @@
     <attributes>
         <boolean cid="3" id="72" name="found_GadgetScreen" save="true" value="false"/>
         <number cid="2" id="85" name="distanceHighScore" save="true" value="0.0"/>
-        <number cid="10" id="88" name="boostAdd" save="true" value="15.0"/>
+        <number cid="10" id="88" name="boostAdd" save="true" value="22.0"/>
         <number cid="6" id="93" name="totalGlass" save="true" value="0.0"/>
         <boolean cid="2" id="30" name="spawnThings" save="true" value="false"/>
         <number cid="8" id="61" name="collected_cans" save="true" value="0.0"/>

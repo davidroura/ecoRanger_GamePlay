@@ -95,20 +95,10 @@ class SceneEvents_2 extends SceneScript
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(getActor(10), function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				getActor(10).growTo(95/100, 95/100, 0, Linear.easeNone);
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(10), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
 			if(wrapper.enabled && 5 == mouseState)
 			{
 				stopAllSounds();
 				Engine.engine.setGameAttribute("musicOn", false);
-				getActor(10).growTo(100/100, 100/100, .02, Linear.easeNone);
 				switchScene(GameModel.get().scenes.get(0).getID(), null, createCrossfadeTransition(0));
 			}
 		});

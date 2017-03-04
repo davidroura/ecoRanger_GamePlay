@@ -250,7 +250,7 @@ class Design_7_7_movement extends ActorScript
 		}
 		else if((((Engine.engine.getGameAttribute("virtualX") + getScreenWidth()) > 490) && (90 < actor.getX())))
 		{
-			actor.setX((actor.getX() - 1.6));
+			actor.setX((actor.getX() - 1.85));
 			Engine.engine.setGameAttribute("lateralSpeed", 0);
 		}
 		else
@@ -266,13 +266,13 @@ class Design_7_7_movement extends ActorScript
 		{
 			if((_width > (actor.getX() + (actor.getWidth()))))
 			{
-				actor.setX((actor.getX() + 1.5));
+				actor.setX((actor.getX() + 1.85));
 			}
 			Engine.engine.setGameAttribute("lateralSpeed", 0);
 		}
 		else if(((5 > Engine.engine.getGameAttribute("virtualX")) && (actor.getX() < 90)))
 		{
-			actor.setX((actor.getX() + 1.5));
+			actor.setX((actor.getX() + 1.85));
 			Engine.engine.setGameAttribute("lateralSpeed", 0);
 		}
 		else

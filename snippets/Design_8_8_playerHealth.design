@@ -27,7 +27,7 @@
                     <int id="0" val="100"/>
                 </set-game-val-28>
                 <set-val-8-2 comment="false" x="26" y="60">
-                    <int id="0" val="0.038"/>
+                    <int id="0" val="0.045"/>
                 </set-val-8-2>
                 <set-game-val-60 comment="false" x="26" y="80">
                     <int id="0" val="0"/>
