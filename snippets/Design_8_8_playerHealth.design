@@ -590,7 +590,7 @@
                                                 <set-val-8-16 comment="false" x="70" y="436">
                                                     <minus comment="false" id="0" x="0" y="0">
                                                         <get-val-8-16 comment="false" id="0" x="0" y="0"/>
-                                                        <int id="1" val=".05"/>
+                                                        <int id="1" val=".03"/>
                                                     </minus>
                                                 </set-val-8-16>
                                             </group>

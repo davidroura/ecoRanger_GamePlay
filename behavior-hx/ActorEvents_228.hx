@@ -116,7 +116,6 @@ class ActorEvents_228 extends ActorScript
 				else
 				{
 					Engine.engine.setGameAttribute("botOn", false);
-					recycleActor(actor);
 				}
 			}
 		});

@@ -26,15 +26,12 @@
                 </if>
                 <else comment="false" x="34" y="139">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="45" y="159">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
-                        <set-game-val-3 comment="false" x="45" y="186">
+                        <set-game-val-3 comment="false" x="45" y="159">
                             <get-game-val-47 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-3>
-                        <set-game-val-46 comment="false" x="45" y="211">
+                        <set-game-val-69 comment="false" x="45" y="184">
                             <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-46>
+                        </set-game-val-69>
                     </group>
                 </else>
             </group>

@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,17 +70,44 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_120_120_powerUpGadget2 extends ActorScript
+class Design_88_88_globalSettings extends SceneScript
 {
-	public var _sceneSpeedHold:Float;
+	public var _ScreenDiagonal:Float;
 	
-	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_gameSettings():Void
 	{
-		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("sceneSpeedHold", "_sceneSpeedHold");
-		_sceneSpeedHold = 0.0;
+		Engine.engine.setGameAttribute("sceneSpeed", 22);
+		Engine.engine.setGameAttribute("lateralSpeed", 0);
+		Engine.engine.setGameAttribute("gameStart", false);
+		Engine.engine.setGameAttribute("spawnThings", false);
+		if(Engine.engine.getGameAttribute("tutorialDone"))
+		{
+			Engine.engine.setGameAttribute("spawnThings", true);
+		}
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_playerSettings():Void
+	{
+		Engine.engine.setGameAttribute("playerControl", true);
+		Engine.engine.setGameAttribute("dozerPlaying", false);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_globalConstants():Void
+	{
+		Engine.engine.setGameAttribute("screenDiagonal", Math.sqrt((Math.pow(getScreenWidth(), 2) + Math.pow(getScreenHeight(), 2))));
+		Engine.engine.setGameAttribute("screenX_mid", (getScreenWidth() / 2));
+		Engine.engine.setGameAttribute("screenY_mid", (getScreenHeight() / 2));
+	}
+	
+	
+	public function new(dummy:Int, dummy2:Engine)
+	{
+		super();
+		nameMap.set("Screen Diagonal", "_ScreenDiagonal");
+		_ScreenDiagonal = 0.0;
 		
 	}
 	
@@ -87,14 +115,9 @@ class Design_120_120_powerUpGadget2 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		/* gadgetPower2 affects player health function */
-		Engine.engine.setGameAttribute("gadgetPower2", true);
-		Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
-		runLater(1000 * 5, function(timeTask:TimedTask):Void
-		{
-			Engine.engine.setGameAttribute("gadgetPower2", false);
-			Engine.engine.setGameAttribute("botOn", false);
-		}, actor);
+		_customEvent_playerSettings();
+		_customEvent_gameSettings();
+		_customEvent_globalConstants();
 		
 	}
 	

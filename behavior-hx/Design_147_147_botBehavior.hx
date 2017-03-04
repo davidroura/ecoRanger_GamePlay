@@ -69,13 +69,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_141 extends ActorScript
+class Design_147_147_botBehavior extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
 		
 	}
 	
@@ -87,16 +88,9 @@ class ActorEvents_141 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(Engine.engine.getGameAttribute("botOn"))
-				{
-					actor.setX((Engine.engine.getGameAttribute("playerXPos") + 13));
-					actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
-				}
-				else
+				if(!(Engine.engine.getGameAttribute("botOn")))
 				{
 					recycleActor(actor);
-					Engine.engine.setGameAttribute("sceneSpeed", Engine.engine.getGameAttribute("sceneSpeedHold"));
-					Engine.engine.setGameAttribute("botOn", false);
 				}
 			}
 		});

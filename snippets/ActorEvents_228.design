@@ -60,13 +60,22 @@
                         <set-game-val-46 comment="false" x="37" y="176">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-game-val-46>
-                        <die comment="false" x="37" y="201">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
                     </group>
                 </else>
             </group>
         </draw>
+    </group>
+    <group eventID="2" id="5">
+        <if comment="false" x="185" y="337">
+            <group eventID="2" id="-1">
+                <die comment="false" x="196" y="367">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <not comment="false" id="0" x="0" y="0">
+                <get-game-val-46 comment="false" id="0" x="0" y="0"/>
+            </not>
+        </if>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
