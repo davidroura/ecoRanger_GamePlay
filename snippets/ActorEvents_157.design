@@ -29,10 +29,10 @@
                                             <int id="1" val="15"/>
                                         </randint>
                                     </plus>
-                                    <int id="3" val="0"/>
+                                    <int id="3" val="1"/>
                                 </create-actor3>
                             </group>
-                            <int id="0" val="1"/>
+                            <int id="0" val="3"/>
                         </repeat>
                         <set-val-106-1 comment="false" x="37" y="165">
                             <false comment="false" id="0" x="0" y="0"/>

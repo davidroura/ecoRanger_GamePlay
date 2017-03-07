@@ -95,7 +95,7 @@ class ActorEvents_159 extends ActorScript
 				if(((actor.getAnimation() == "drop") && (_dump == true)))
 				{
 					/* adds a few of "Actor" randomly around Position */
-					scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash("cans", actor.getXCenter(), actor.getYCenter());
+					createRecycledActor(getActorType(131), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.MIDDLE);
 					_dump = false;
 					propertyChanged("_dump", _dump);
 				}

@@ -92,7 +92,7 @@ class ActorEvents_161 extends ActorScript
 			{
 				if(((actor.getAnimation() == "drop") && (_dump == true)))
 				{
-					createRecycledActor(getActorType(137), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.FRONT);
+					createRecycledActor(getActorType(137), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.MIDDLE);
 					_dump = false;
 					propertyChanged("_dump", _dump);
 				}

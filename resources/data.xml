@@ -44,12 +44,15 @@
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="77" name="audobonMessBG" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="33" id="11" name="banana" shared="false" width="53">
-        <anim across="1" down="1" durations="100" height="33" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="13" sync="false" version="2" width="53">
+        <anim across="1" down="1" durations="100" height="33" id="0" loop="true" name="0" numframes="1" originx="26" originy="16" sync="false" version="2" width="53">
             <poly data="4,5,0,50,0,50,32,5,32" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="43" id="1" loop="true" name="1" numframes="1" originx="33" originy="25" sync="false" version="2" width="57">
+            <poly data="4,0,0,67,0,67,51,0,51" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="86" loop="true" name="bananaS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <background atlasID="0" desc="" durations="100" dx="-10.0" dy="-10.0" height="480" id="0" name="bgLong" numframes="1" oid="-1" repeats="true" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-10.0" height="480" id="0" name="bgLong" numframes="1" oid="-1" repeats="true" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="53" id="75" name="bonusCard" shared="false" width="40">
         <anim across="1" down="1" durations="100" height="53" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="26" sync="false" version="2" width="40">
             <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="false"/>
@@ -106,37 +109,37 @@
             <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="132" name="canCoke" shared="false" width="35">
-        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="0" numframes="1" originx="20" originy="14" sync="false" version="2" width="35">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="37" id="132" name="canCoke" shared="false" width="43">
+        <anim across="1" down="1" durations="100" height="37" id="0" loop="true" name="0" numframes="1" originx="17" originy="12" sync="false" version="2" width="43">
             <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="25" id="1" loop="true" name="1" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
-            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="31" id="1" loop="true" name="1" numframes="1" originx="17" originy="12" sync="false" version="2" width="43">
+            <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="25" id="2" loop="true" name="2" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
-            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="31" id="2" loop="true" name="2" numframes="1" originx="17" originy="12" sync="false" version="2" width="43">
+            <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="61" id="138" name="canCoke" shared="false" width="24">
-        <anim across="1" down="1" durations="100" height="61" id="0" loop="true" name="0" numframes="1" originx="12" originy="30" sync="false" version="2" width="24">
-            <poly data="4,5,0,25,0,25,60,5,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="50" id="138" name="canCoke" shared="false" width="42">
+        <anim across="1" down="1" durations="100" height="50" id="0" loop="true" name="0" numframes="1" originx="12" originy="30" sync="false" version="2" width="42">
+            <poly data="4,0,0,50,0,50,50,0,50" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="46" id="1" loop="true" name="1" numframes="1" originx="17" originy="15" sync="false" version="2" width="54">
+        <anim across="1" down="1" durations="100" height="46" id="1" loop="true" name="1" numframes="1" originx="27" originy="23" sync="false" version="2" width="54">
             <poly data="4,0,0,52,0,52,50,0,50" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="46" id="2" loop="true" name="2" numframes="1" originx="23" originy="20" sync="false" version="2" width="54">
-            <poly data="4,0,0,47,0,47,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="46" id="2" loop="true" name="2" numframes="1" originx="27" originy="23" sync="false" version="2" width="54">
+            <poly data="4,0,0,50,0,50,50,0,50" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="25" id="140" name="canCoke" shared="false" width="35">
-        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="0" numframes="1" originx="17" originy="12" sync="false" version="2" width="35">
-            <poly data="4,0,0,52,0,52,35,0,35" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="31" id="140" name="canCoke" shared="false" width="43">
+        <anim across="1" down="1" durations="100" height="31" id="0" loop="true" name="0" numframes="1" originx="17" originy="12" sync="false" version="2" width="43">
+            <poly data="4,0,0,52,0,52,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="29" id="1" loop="true" name="1" numframes="1" originx="17" originy="12" sync="false" version="2" width="40">
-            <poly data="4,0,0,35,0,35,25,0,25" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="32" id="1" loop="true" name="1" numframes="1" originx="20" originy="14" sync="false" version="2" width="45">
+            <poly data="4,0,0,52,0,52,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="true"/>
         </anim>
         <anim across="1" down="1" durations="100" height="32" id="2" loop="true" name="2" numframes="1" originx="22" originy="16" sync="false" version="2" width="44">
-            <poly data="4,0,0,44,0,44,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
+            <poly data="4,0,0,52,0,52,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <music atlasID="0" desc="" id="212" loop="true" name="canRecycle" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
@@ -172,7 +175,7 @@
         <blank name="difficulty" order="0" type="number"/>
     </custom-block>
     <custom-block blocktag="custom-247" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock2&quot;, &quot;_customBlock_dropTrash&quot;);" desc="" global="false" gui="Drop Trash" id="247" message="dropTrash" name="dropTrash" oid="-1" return="void" shared="false" snippetID="145"/>
-    <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="144">
+    <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="trashType" order="0" type="text"/>
         <blank name="trashPosX" order="1" type="number"/>
         <blank name="trashPosy" order="2" type="number"/>

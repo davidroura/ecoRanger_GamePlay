@@ -21,22 +21,58 @@
                                     <int id="1" val="0"/>
                                     <get-val-137-2 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
+                                <comment-short comment="false" x="48" y="194">
+                                    <int id="0" val="this doesn&amp;apos;t work :("/>
+                                </comment-short>
+                                <set-bg-speed comment="false" x="48" y="214">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="recyclingBG"/>
+                                    <get-val-137-2 comment="false" id="2" x="0" y="0"/>
+                                    <int id="3" val="0"/>
+                                </set-bg-speed>
                             </group>
                             <int id="0" val="2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="206">
+                        <comment-short comment="false" x="37" y="258">
+                            <int id="0" val="makes it slow down"/>
+                        </comment-short>
+                        <dolater comment="false" x="37" y="278">
                             <group eventID="1" id="-1">
-                                <comment-short comment="false" x="48" y="233">
-                                    <int id="0" val="makes it slow down"/>
-                                </comment-short>
-                                <set-dxy comment="false" x="48" y="253">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="0"/>
-                                </set-dxy>
+                                <periodic comment="false" x="48" y="305">
+                                    <group eventID="1" id="-1">
+                                        <print comment="false" x="59" y="332">
+                                            <get-val-137-2 comment="false" id="0" x="0" y="0"/>
+                                        </print>
+                                        <set-val-137-2 comment="false" x="59" y="357">
+                                            <plus comment="false" id="0" x="0" y="0">
+                                                <get-val-137-2 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="1"/>
+                                            </plus>
+                                        </set-val-137-2>
+                                        <set-dxy comment="false" x="59" y="387">
+                                            <ACTOR eid="this" id="0"/>
+                                            <int id="1" val="0"/>
+                                            <get-val-137-2 comment="false" id="2" x="0" y="0"/>
+                                        </set-dxy>
+                                        <if comment="false" x="59" y="419">
+                                            <group eventID="1" id="-1">
+                                                <set-val-137-2 comment="false" x="70" y="449">
+                                                    <int id="0" val="0"/>
+                                                </set-val-137-2>
+                                                <cancel comment="false" x="70" y="469"/>
+                                            </group>
+                                            <moreeq comment="false" id="0" x="0" y="0">
+                                                <get-val-137-2 comment="false" id="0" x="0" y="0"/>
+                                                <int id="1" val="0"/>
+                                            </moreeq>
+                                        </if>
+                                    </group>
+                                    <int id="0" val=".12"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </periodic>
                             </group>
-                            <int id="0" val="10"/>
+                            <int id="0" val="8.5"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>

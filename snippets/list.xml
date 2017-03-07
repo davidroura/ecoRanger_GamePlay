@@ -330,7 +330,9 @@
     </snippet>
     <snippet actorid="10" attachedevent="true" class="scripts.ActorEvents_10" classname="scripts.ActorEvents_10" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="14" name="ActorEvents_10" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="228" attachedevent="true" class="scripts.ActorEvents_228" classname="scripts.ActorEvents_228" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="142" name="ActorEvents_228" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -357,15 +359,6 @@
             <event displayName="Updated" enabled="true" id="2" name="step" order="3" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
-        </events>
-    </snippet>
-    <snippet attachedevent="false" class="scripts.Design_144_144_recyclingFunctions" classname="scripts.Design_144_144_recyclingFunctions" desc="" description="" design="true" drawOrder="0" id="144" name="recyclingFunctions" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks>
-            <receiver blockID="230" id="1"/>
-            <receiver blockID="231" id="2"/>
-        </blocks>
-        <events>
-            <event displayName="Global Block" enabled="true" id="2" name="event-custom-block-global" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_5" classname="scripts.SceneEvents_5" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="17" name="SceneEvents_5" oid="-1" package="scripts." sceneid="5" shared="false" type="scene">
