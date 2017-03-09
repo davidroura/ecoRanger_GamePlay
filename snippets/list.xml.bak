@@ -50,6 +50,7 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="temporalVar" hidden="false" id="12" name="_temporalVar" order="11"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="difficulty" hidden="false" id="13" name="_difficulty" order="12"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="ramdomX" hidden="false" id="14" name="_ramdomX" order="13"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="trashHold" hidden="false" id="15" name="_trashHold" order="14"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>

@@ -399,9 +399,20 @@
                 <say-this comment="false" x="26" y="40">
                     <int id="0" val="spawnTrees"/>
                 </say-this>
-                <say-this comment="false" x="26" y="60">
-                    <int id="0" val="spawnLife"/>
-                </say-this>
+                <if comment="false" x="26" y="60">
+                    <group eventID="26" id="-1">
+                        <say-this comment="false" x="37" y="90">
+                            <int id="0" val="spawnLife"/>
+                        </say-this>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <int id="0" val="2"/>
+                        <randint comment="false" id="1" x="0" y="0">
+                            <int id="0" val="1"/>
+                            <int id="1" val="6"/>
+                        </randint>
+                    </less>
+                </if>
             </group>
             <int id="0" val="50mts"/>
         </event-custom>
@@ -439,14 +450,33 @@
                             <get-val-128-7 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="-5"/>
                         </custom-257>
+                        <if comment="false" x="37" y="150">
+                            <group eventID="28" id="-1">
+                                <set-val-128-15 comment="false" x="48" y="180">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-128-15>
+                                <dolater comment="false" x="48" y="205">
+                                    <group eventID="28" id="-1">
+                                        <set-val-128-15 comment="false" x="59" y="232">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-128-15>
+                                    </group>
+                                    <int id="0" val="2"/>
+                                    <ACTOR eid="lastcreated" id="2"/>
+                                </dolater>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-val-128-13 comment="false" id="0" x="0" y="0"/>
+                                <randint comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                    <int id="1" val="500"/>
+                                </randint>
+                            </more>
+                        </if>
                     </group>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-val-128-13 comment="false" id="0" x="0" y="0"/>
-                        <randint comment="false" id="1" x="0" y="0">
-                            <int id="0" val="1"/>
-                            <int id="1" val="1"/>
-                        </randint>
-                    </more>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-128-15 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
             </group>
             <int id="0" val="ramdomBlock"/>

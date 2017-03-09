@@ -74,7 +74,7 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-10.0" height="480" id="0" name="bgLong" numframes="1" oid="-1" repeats="true" resized="false" shared="false" width="320" xpf="1.0" ypf="1.0"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="53" id="75" name="bonusCard" shared="false" width="40">
         <anim across="1" down="1" durations="100" height="53" id="0" loop="true" name="Animation 0" numframes="1" originx="20" originy="26" sync="false" version="2" width="40">
-            <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+            <poly data="4,0,0,40,0,40,53,0,53" density="0.1" fric="0.2" gid="7" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="102" id="73" name="bridge" shared="false" width="450">

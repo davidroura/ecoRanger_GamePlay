@@ -69,21 +69,21 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_74 extends ActorScript
+class ActorEvents_15 extends ActorScript
 {
-	public var _card:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("card", "_card");
-		_card = 0.0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(4))));
 		
 	}
 	
