@@ -301,9 +301,11 @@ class Design_146_146_spawnHandlerBlock2 extends SceneScript
 		nameMap.set("randomInt", "_randomInt");
 		_randomInt = 0.0;
 		nameMap.set("trashShapes", "_trashShapes");
+		_trashShapes = [];
 		nameMap.set("tempCounter", "_tempCounter");
 		_tempCounter = 0.0;
 		nameMap.set("trashPosList", "_trashPosList");
+		_trashPosList = [];
 		nameMap.set("trashWait", "_trashWait");
 		_trashWait = false;
 		nameMap.set("trashCurveWidth", "_trashCurveWidth");

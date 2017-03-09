@@ -190,8 +190,20 @@
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <custom-block blocktag="custom-258" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropLife&quot;, [, ]);" desc="Drop Life at (x,y) position" global="false" gui="Drop life at (x,y) %0 %1" id="258" message="dropLife" name="dropLife" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
+    </custom-block>
     <custom-block blocktag="custom-246" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock2&quot;, &quot;_customBlock_dropObstacle&quot;, []);" desc="" global="false" gui="drop obstacle level %0" id="246" message="dropObstacle" name="dropObstacle" oid="-1" return="void" shared="false" snippetID="145">
         <blank name="difficulty" order="0" type="number"/>
+    </custom-block>
+    <custom-block blocktag="custom-256" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropRock&quot;, [, ]);" desc="Drop a rock at x,y position" global="false" gui="Drop rock at (x,y) %0 %1" id="256" message="dropRock" name="dropRock" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
+    </custom-block>
+    <custom-block blocktag="custom-257" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropTrash&quot;, [, ]);" desc="Drop trash at (x,y) position" global="false" gui="DropTrash at (x,y) %0 %1" id="257" message="dropTrash" name="dropTrash" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
     </custom-block>
     <custom-block blocktag="custom-247" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock2&quot;, &quot;_customBlock_dropTrash&quot;);" desc="" global="false" gui="Drop Trash" id="247" message="dropTrash" name="dropTrash" oid="-1" return="void" shared="false" snippetID="145"/>
     <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="-1">
