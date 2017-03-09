@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-dxy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </set-dxy>
+                <dolater comment="false" x="26" y="67">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="37" y="94">
+                            <actortype eid="253" id="0"/>
+                            <int id="1" val="-78"/>
+                            <int id="2" val="188"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <setanim comment="false" x="37" y="121">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="minibot"/>
+                        </setanim>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="160">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="187">
+                            <ACTOR eid="lastcreated" id="0"/>
+                        </die>
+                        <setanim comment="false" x="37" y="214">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="static"/>
+                        </setanim>
+                        <scaleTo comment="false" x="37" y="241">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="250"/>
+                            <int id="2" val="250"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                        <set-dxy comment="false" x="37" y="268">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <set-dxy comment="false" x="37" y="295">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="1"/>
+                        </set-dxy>
+                    </group>
+                    <int id="0" val="6"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="334">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="361">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val="9"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="1">
+        <if comment="false" x="154" y="442">
+            <group eventID="1" id="-1"/>
+            <eq comment="false" id="0" x="0" y="0">
+                <getanim comment="false" id="0" x="0" y="0">
+                    <ACTOR eid="this" id="0"/>
+                </getanim>
+                <int id="1" val="park"/>
+            </eq>
+        </if>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

@@ -18,6 +18,22 @@
             <poly data="3,248,47,6,42,124,276" density="0.1" fric="0.2" gid="-1000" id="0" name="" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="150" fixedrot="false" fric="0.2" gid="3" id="253" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_introItems" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="254" static="true">
+        <snippets/>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="149" fixedrot="false" fric="0.2" gid="3" id="251" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_IntroScenes" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="252" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="480" id="252" name="_IntroScenes" shared="false" width="673">
+        <anim across="1" down="1" durations="100" height="480" id="0" loop="true" name="park" numframes="1" originx="673" originy="0" sync="false" version="2" width="673"/>
+        <anim across="1" down="1" durations="100" height="654" id="1" loop="true" name="static" numframes="1" originx="0" originy="0" sync="false" version="2" width="917">
+            <poly data="4,0,0,480,0,480,270,0,270" density="0.1" fric="0.2" gid="-1000" id="0" name="static" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="111" id="254" name="_newsBanner" shared="false" width="588">
+        <anim across="1" down="1" durations="100" height="111" id="0" loop="true" name="banner" numframes="1" originx="294" originy="55" sync="false" version="2" width="588"/>
+        <anim across="1" down="1" durations="100" height="340" id="1" loop="true" name="minibot" numframes="1" originx="179" originy="170" sync="false" version="2" width="358"/>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="138" fixedrot="true" fric="0.2" gid="2" id="210" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="_symbols" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="211" static="false">
         <snippets>
             <s enabled="true" id="107">
