@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_204 extends ActorScript
+class ActorEvents_10 extends ActorScript
 {
 	
 	
@@ -83,25 +83,7 @@ class ActorEvents_204 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		createRecycledActor(getActorType(55), 18, 65, Script.FRONT);
-		createRecycledActor(getActorType(55), 110, 65, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "boostOff");
-		createRecycledActor(getActorType(55), 195, 65, Script.FRONT);
-		getLastCreatedActor().setAnimation("" + "engineChargeOff");
-		createRecycledActor(getActorType(208), 30, 210, Script.FRONT);
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(!(Engine.engine.getGameAttribute("upgradeDescription") == 0))
-				{
-					g.setFont(getFont(59));
-					g.drawString("" + Engine.engine.getGameAttribute("upgradeDescription"), 30, 150);
-				}
-			}
-		});
+		actor.setAnimation("" + ("" + randomInt(Math.floor(0), Math.floor(2))));
 		
 	}
 	

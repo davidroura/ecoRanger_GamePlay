@@ -71,11 +71,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_248 extends ActorScript
 {
+	public var _displayText:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("displayText", "_displayText");
+		_displayText = true;
 		
 	}
 	
@@ -87,6 +90,8 @@ class ActorEvents_248 extends ActorScript
 		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
 		runLater(1000 * 4, function(timeTask:TimedTask):Void
 		{
+			_displayText = false;
+			propertyChanged("_displayText", _displayText);
 			actor.growTo(100/100, 0/100, .2, Linear.easeNone);
 			runLater(1000 * .5, function(timeTask:TimedTask):Void
 			{
@@ -99,8 +104,11 @@ class ActorEvents_248 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				g.setFont(getFont(59));
-				g.drawString("" + "Placeholder Achievement Text", (actor.getX() + 25), (actor.getY() - 120));
+				if(_displayText)
+				{
+					g.setFont(getFont(59));
+					g.drawString("" + "Placeholder Achievement Text", (actor.getX() + 25), (actor.getY() - 120));
+				}
 			}
 		});
 		

@@ -47,11 +47,69 @@
                         <set-font-new comment="false" x="37" y="70">
                             <font eid="59" id="0"/>
                         </set-font-new>
-                        <draw-text comment="false" x="37" y="97">
-                            <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="30"/>
-                            <int id="2" val="150"/>
-                        </draw-text>
+                        <if comment="false" x="37" y="97">
+                            <group eventID="2" id="-1">
+                                <draw-text comment="false" x="48" y="127">
+                                    <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="130"/>
+                                </draw-text>
+                                <set-font-new comment="false" x="48" y="152">
+                                    <font eid="250" id="0"/>
+                                </set-font-new>
+                                <draw-text comment="false" x="48" y="179">
+                                    <int id="0" val="Better fuel efficiency"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="150"/>
+                                </draw-text>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="bioFuel"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="211">
+                            <group eventID="2" id="-1">
+                                <draw-text comment="false" x="48" y="241">
+                                    <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="130"/>
+                                </draw-text>
+                                <set-font-new comment="false" x="48" y="266">
+                                    <font eid="250" id="0"/>
+                                </set-font-new>
+                                <draw-text comment="false" x="48" y="293">
+                                    <int id="0" val="More Boost From Compost"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="150"/>
+                                </draw-text>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="boost"/>
+                            </eq>
+                        </if>
+                        <if comment="false" x="37" y="325">
+                            <group eventID="2" id="-1">
+                                <draw-text comment="false" x="48" y="355">
+                                    <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="130"/>
+                                </draw-text>
+                                <set-font-new comment="false" x="48" y="380">
+                                    <font eid="250" id="0"/>
+                                </set-font-new>
+                                <draw-text comment="false" x="48" y="407">
+                                    <int id="0" val="Recover Faster from stops"/>
+                                    <int id="1" val="30"/>
+                                    <int id="2" val="150"/>
+                                </draw-text>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="engineCharge"/>
+                            </eq>
+                        </if>
                     </group>
                     <noteq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>

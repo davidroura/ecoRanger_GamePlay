@@ -19,16 +19,19 @@
                 </scaleTo>
                 <dolater comment="false" x="26" y="94">
                     <group eventID="1" id="-1">
-                        <scaleTo comment="false" x="37" y="121">
+                        <set-val-148-1 comment="false" x="37" y="121">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-148-1>
+                        <scaleTo comment="false" x="37" y="146">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="100"/>
                             <int id="2" val="0"/>
                             <int id="3" val=".2"/>
                             <int id="4" val="0"/>
                         </scaleTo>
-                        <dolater comment="false" x="37" y="148">
+                        <dolater comment="false" x="37" y="173">
                             <group eventID="1" id="-1">
-                                <die comment="false" x="48" y="175">
+                                <die comment="false" x="48" y="200">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
@@ -46,26 +49,31 @@
     <group eventID="2" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <font eid="59" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <int id="0" val="Placeholder Achievement Text"/>
-                    <plus comment="false" id="1" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                        </get-xy>
-                        <int id="1" val="25"/>
-                    </plus>
-                    <minus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                        </get-xy>
-                        <int id="1" val="120"/>
-                    </minus>
-                </draw-text>
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <set-font-new comment="false" x="37" y="65">
+                            <font eid="59" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="92">
+                            <int id="0" val="Placeholder Achievement Text"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="25"/>
+                            </plus>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <int id="1" val="120"/>
+                            </minus>
+                        </draw-text>
+                    </group>
+                    <get-val-148-1 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </draw>
     </group>
