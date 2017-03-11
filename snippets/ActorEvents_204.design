@@ -4,32 +4,38 @@
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <create-actor3 comment="false" x="26" y="40">
-                    <actortype eid="55" id="0"/>
+                    <actortype eid="259" id="0"/>
                     <int id="1" val="18"/>
                     <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
                 <create-actor3 comment="false" x="26" y="67">
                     <actortype eid="55" id="0"/>
-                    <int id="1" val="110"/>
+                    <int id="1" val="40"/>
                     <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="94">
+                <create-actor3 comment="false" x="26" y="94">
+                    <actortype eid="55" id="0"/>
+                    <int id="1" val="130"/>
+                    <int id="2" val="65"/>
+                    <int id="3" val="0"/>
+                </create-actor3>
+                <setanim comment="false" x="26" y="121">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="boostOff"/>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="121">
+                <create-actor3 comment="false" x="26" y="148">
                     <actortype eid="55" id="0"/>
-                    <int id="1" val="195"/>
+                    <int id="1" val="220"/>
                     <int id="2" val="65"/>
                     <int id="3" val="0"/>
                 </create-actor3>
-                <setanim comment="false" x="26" y="148">
+                <setanim comment="false" x="26" y="175">
                     <ACTOR eid="lastcreated" id="0"/>
                     <int id="1" val="engineChargeOff"/>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="175">
+                <create-actor3 comment="false" x="26" y="202">
                     <actortype eid="208" id="0"/>
                     <int id="1" val="30"/>
                     <int id="2" val="210"/>

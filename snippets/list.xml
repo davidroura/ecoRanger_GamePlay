@@ -484,6 +484,10 @@
         <blocks/>
         <events/>
     </snippet>
+    <snippet actorid="259" attachedevent="true" class="scripts.ActorEvents_259" classname="scripts.ActorEvents_259" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="151" name="ActorEvents_259" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_37_37_autoKill" classname="scripts.Design_37_37_autoKill" desc="" description="" design="true" drawOrder="0" id="37" name="autoKill" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="timeCounter" hidden="true" id="1" name="_timeCounter" order="1"/>
