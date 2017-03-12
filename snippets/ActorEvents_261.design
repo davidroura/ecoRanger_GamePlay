@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <set-dxy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </set-dxy>
+                <dolater comment="false" x="26" y="67">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="94">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val="14.5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="1">
+        <setanim comment="false" x="347" y="416">
+            <ACTOR eid="lastcreated" id="0"/>
+            <int id="1" val="minibot"/>
+        </setanim>
+    </group>
+    <group eventID="1" id="2">
+        <dolater comment="false" x="425" y="151">
+            <group eventID="1" id="-1"/>
+            <int id="0" val="14"/>
+            <ACTOR eid="this" id="2"/>
+        </dolater>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
