@@ -98,18 +98,31 @@
                         </getanim>
                     </noteq>
                 </else-if>
+                <set-xy comment="false" x="26" y="250">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-game-val-96 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-xy>
+                <comment-short comment="false" x="26" y="295">
+                    <int id="0" val="not working. it&amp;apos;s setting itself to the same number again"/>
+                </comment-short>
+                <print comment="false" x="26" y="315">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </get-xy>
+                        <get-game-val-96 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </print>
             </group>
         </step>
     </group>
-    <group eventID="2" id="1">
-        <else comment="false" x="357" y="342">
-            <group eventID="2" id="-1"/>
-        </else>
-    </group>
-    <group eventID="2" id="-1">
-        <eq comment="false" x="35" y="480">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </eq>
-    </group>
+    <group eventID="2" id="-1"/>
 </groups>

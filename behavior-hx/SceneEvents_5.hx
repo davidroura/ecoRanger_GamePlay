@@ -70,26 +70,37 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_7 extends SceneScript
+class SceneEvents_5 extends SceneScript
 {
-	public var _sfxlist:Array<Dynamic>;
+	public var _skipNews:Region;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_playRandomSound():Void
+	public function _customEvent_audobonMess():Void
 	{
-		playSound(getSoundByName(_sfxlist[Std.int(randomInt(Math.floor(0), Math.floor(_sfxlist.length)))]));
-		runLater(1000 * randomInt(Math.floor(2), Math.floor(6)), function(timeTask:TimedTask):Void
-		{
-			_customEvent_playRandomSound();
-		}, null);
+		_customEvent_removeAllBG();
+		addBackground("audobonMessBG", "audobonMessBG", Std.int(1));
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_introHQBG():Void
+	{
+		_customEvent_removeAllBG();
+		addBackground("introHQBG", "introHQBG", Std.int(1));
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_removeAllBG():Void
+	{
+		removeBackground(1, "introHQBG");
+		removeBackground(1, "newsRoomBG");
+		removeBackground(1, "audobonMessBG");
 	}
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("sfx_list", "_sfxlist");
-		_sfxlist = ["UI_factory_amb_sfx_1", "UI_factory_amb_sfx_2", "UI_factory_amb_sfx_3", "UI_factory_amb_sfx_4", "UI_factory_amb_sfx_5", "UI_factory_amb_sfx_6"];
+		nameMap.set("skipNews", "_skipNews");
 		
 	}
 	
@@ -97,26 +108,48 @@ class SceneEvents_7 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("found_GadgetScreen", true);
-		setVolumeForAllSounds(100/100);
-		loopSoundOnChannel(getSound(245), Std.int(1));
-		_customEvent_playRandomSound();
-		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
+		setVolumeForAllSounds(75/100);
+		playSoundOnChannel(getSound(78), Std.int(1));
+		/* after a few seconds you can switch the conversation, we will also implement an exit comfirmation notification */
+		runLater(1000 * 2, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled && Input.swipedRight)
-			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
-			}
-		});
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(getActor(4), function(mouseState:Int, list:Array<Dynamic>):Void
+			Engine.engine.setGameAttribute("presentationWatched", true);
+		}, null);
+		runLater(1000 * 14, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled && 3 == mouseState)
+			createRecycledActor(getActorType(253), 19, 270, Script.MIDDLE);
+			getLastCreatedActor().setAnimation("" + "minibot");
+		}, null);
+		runLater(1000 * 14.5, function(timeTask:TimedTask):Void
+		{
+			recycleActor(getLastCreatedActor());
+			recycleActor(getActor(2));
+			createRecycledActor(getActorType(263), 0, 0, Script.FRONT);
+		}, null);
+		runLater(1000 * 19, function(timeTask:TimedTask):Void
+		{
+			recycleActor(getLastCreatedActor());
+			_customEvent_introHQBG();
+		}, null);
+		runLater(1000 * 28, function(timeTask:TimedTask):Void
+		{
+			playSoundOnChannel(getSound(80), Std.int(1));
+		}, null);
+		runLater(1000 * 34, function(timeTask:TimedTask):Void
+		{
+			switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(1));
+		}, null);
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
 			{
-				switchScene(GameModel.get().scenes.get(17).getID(), null, createCrossfadeTransition(0));
+				if(Engine.engine.getGameAttribute("presentationWatched"))
+				{
+					stopSoundOnChannel(Std.int(0));
+					switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(.2));
+				}
 			}
 		});
 		

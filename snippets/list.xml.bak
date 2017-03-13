@@ -479,7 +479,11 @@
     </snippet>
     <snippet actorid="259" attachedevent="true" class="scripts.ActorEvents_259" classname="scripts.ActorEvents_259" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="151" name="ActorEvents_259" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="rrelease" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="exits" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="261" attachedevent="true" class="scripts.ActorEvents_261" classname="scripts.ActorEvents_261" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="152" name="ActorEvents_261" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
