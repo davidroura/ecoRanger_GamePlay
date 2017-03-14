@@ -6,14 +6,35 @@
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
                         <set-game-val-96 comment="false" x="37" y="80">
-                            <int id="0" val="-.5"/>
+                            <int id="0" val="-1"/>
                         </set-game-val-96>
+                        <setanim comment="false" x="37" y="100">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="leftDown"/>
+                        </setanim>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <getanim comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
                         </getanim>
                         <int id="1" val="left"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="139">
+                    <group eventID="1" id="-1">
+                        <set-game-val-96 comment="false" x="37" y="177">
+                            <int id="0" val="1"/>
+                        </set-game-val-96>
+                        <setanim comment="false" x="37" y="197">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="rightDown"/>
+                        </setanim>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="right"/>
                     </eq>
                 </if>
             </group>
@@ -28,6 +49,19 @@
                 <set-game-val-96 comment="false" x="26" y="42">
                     <int id="0" val="0"/>
                 </set-game-val-96>
+                <set-game-val-98 comment="false" x="26" y="62">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-98>
+                <setanim comment="false" x="26" y="87">
+                    <ACTOR eid="this" id="0"/>
+                    <str-replace comment="false" id="1" x="0" y="0">
+                        <getanim comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </getanim>
+                        <int id="1" val="Down"/>
+                        <int id="2" val=""/>
+                    </str-replace>
+                </setanim>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="4"/>
@@ -40,6 +74,9 @@
                 <set-game-val-96 comment="false" x="26" y="42">
                     <int id="0" val="0"/>
                 </set-game-val-96>
+                <set-game-val-98 comment="false" x="26" y="62">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-98>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="1"/>

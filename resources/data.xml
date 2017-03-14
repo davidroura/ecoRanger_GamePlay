@@ -159,28 +159,28 @@
     </sprite>
     <music atlasID="0" desc="" id="88" loop="true" name="crashS" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="76" id="56" name="dozerButton" shared="false" width="81">
-        <anim across="1" down="1" durations="100" height="76" id="0" loop="true" name="bioFuelOn" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="0" loop="true" name="1On" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="76" id="1" loop="true" name="bioFuelOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="1" loop="true" name="1Off" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,81,0,81,77,0,77" density="0.1" fric="0.2" gid="-1000" id="0" name="bioFuelOff" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="76" id="2" loop="true" name="boostOn" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="2" loop="true" name="2On" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="boostOn" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="76" id="3" loop="true" name="boostOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="3" loop="true" name="2Off" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,67,0,67,62,0,62" density="0.1" fric="0.2" gid="-1000" id="0" name="boostOff" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="76" id="4" loop="true" name="engineChargeOff" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="4" loop="true" name="3Off" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="76" id="5" loop="true" name="engineChargeOn" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="76" id="5" loop="true" name="3On" numframes="1" originx="40" originy="38" sync="false" version="2" width="81">
             <poly data="4,0,0,77,0,77,72,0,72" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="75" id="6" loop="true" name="dozeyStrengthOff" numframes="1" originx="40" originy="37" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="75" id="6" loop="true" name="4Off" numframes="1" originx="40" originy="37" sync="false" version="2" width="81">
             <poly data="4,0,0,81,0,81,75,0,75" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 6" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="75" id="7" loop="true" name="dozeyStrengthOn" numframes="1" originx="40" originy="37" sync="false" version="2" width="81">
+        <anim across="1" down="1" durations="100" height="75" id="7" loop="true" name="4On" numframes="1" originx="40" originy="37" sync="false" version="2" width="81">
             <poly data="4,0,0,81,0,81,75,0,75" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 7" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -582,6 +582,9 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="76" id="260" name="mUI_sideButton" shared="false" width="16">
         <anim across="1" down="1" durations="100" height="76" id="0" loop="true" name="left" numframes="1" originx="8" originy="38" sync="false" version="2" width="16"/>
+        <anim across="1" down="1" durations="100" height="76" id="1" loop="true" name="right" numframes="1" originx="8" originy="38" sync="false" version="2" width="16"/>
+        <anim across="1" down="1" durations="100" height="76" id="2" loop="true" name="leftDown" numframes="1" originx="8" originy="38" sync="false" version="2" width="16"/>
+        <anim across="1" down="1" durations="100" height="76" id="3" loop="true" name="rightDown" numframes="1" originx="8" originy="38" sync="false" version="2" width="16"/>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="116" fixedrot="false" fric="0.2" gid="3" id="169" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="mUI_totalCans" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="170" static="true">
         <snippets/>

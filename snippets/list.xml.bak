@@ -481,7 +481,7 @@
         <blocks/>
         <events>
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
-            <event displayName="rrelease" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="release" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="false"/>
             <event displayName="exits" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
         </events>
     </snippet>
@@ -542,6 +542,8 @@
         </events>
     </snippet>
     <snippet actorid="55" attachedevent="true" class="scripts.ActorEvents_55" classname="scripts.ActorEvents_55" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="44" name="ActorEvents_55" oid="-1" package="scripts." shared="false" type="actor">
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="currentButton" hidden="false" id="1" name="_currentButton" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="buttonClicked" hidden="false" id="2" name="_buttonClicked" order="1"/>
         <blocks>
             <receiver blockID="210" id="1"/>
         </blocks>

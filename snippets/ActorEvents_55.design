@@ -98,29 +98,78 @@
                         </getanim>
                     </noteq>
                 </else-if>
-                <set-xy comment="false" x="26" y="250">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="0"/>
-                    <plus comment="false" id="2" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
+                <if comment="false" x="26" y="250">
+                    <group eventID="2" id="-1">
+                        <set-val-44-1 comment="false" x="37" y="285">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <as-number comment="false" id="0" x="0" y="0">
+                                    <str-replace comment="false" id="0" x="0" y="0">
+                                        <getanim comment="false" id="0" x="0" y="0">
+                                            <ACTOR eid="this" id="0"/>
+                                        </getanim>
+                                        <int id="1" val="Off"/>
+                                        <int id="2" val=""/>
+                                    </str-replace>
+                                </as-number>
+                                <get-game-val-96 comment="false" id="1" x="0" y="0"/>
+                            </plus>
+                        </set-val-44-1>
+                        <setanim comment="false" x="37" y="333">
                             <ACTOR eid="this" id="0"/>
+                            <str-combine comment="false" id="1" x="0" y="0">
+                                <tostring comment="false" id="0" x="0" y="0">
+                                    <get-val-44-1 comment="false" id="0" x="0" y="0"/>
+                                </tostring>
+                                <int id="1" val="Off"/>
+                            </str-combine>
+                        </setanim>
+                        <print comment="false" x="37" y="375">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <getanim comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getanim>
+                                <str-combine comment="false" id="1" x="0" y="0">
+                                    <int id="0" val=" to "/>
+                                    <str-combine comment="false" id="1" x="0" y="0">
+                                        <tostring comment="false" id="0" x="0" y="0">
+                                            <get-val-44-1 comment="false" id="0" x="0" y="0"/>
+                                        </tostring>
+                                        <int id="1" val="Off"/>
+                                    </str-combine>
+                                </str-combine>
+                            </str-combine>
+                        </print>
+                        <set-game-val-99 comment="false" x="37" y="420">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-99 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-game-val-99>
+                        <if comment="false" x="37" y="450">
+                            <group eventID="2" id="-1">
+                                <set-game-val-98 comment="false" x="48" y="480">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-98>
+                                <set-game-val-99 comment="false" x="48" y="505">
+                                    <int id="0" val="0"/>
+                                </set-game-val-99>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-99 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="3"/>
+                            </eq>
+                        </if>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <noteq comment="false" id="0" x="0" y="0">
+                            <get-game-val-96 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
-                        </get-xy>
-                        <get-game-val-96 comment="false" id="1" x="0" y="0"/>
-                    </plus>
-                </set-xy>
-                <comment-short comment="false" x="26" y="295">
-                    <int id="0" val="not working. it&amp;apos;s setting itself to the same number again"/>
-                </comment-short>
-                <print comment="false" x="26" y="315">
-                    <plus comment="false" id="0" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                        </get-xy>
-                        <get-game-val-96 comment="false" id="1" x="0" y="0"/>
-                    </plus>
-                </print>
+                        </noteq>
+                        <not comment="false" id="1" x="0" y="0">
+                            <get-game-val-98 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                    </and>
+                </if>
             </group>
         </step>
     </group>
