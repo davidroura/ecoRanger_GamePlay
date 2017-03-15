@@ -69,66 +69,67 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_139_139_recyclingCameraMovement extends ActorScript
+class ActorEvents_259 extends ActorScript
 {
-	public var _cameratrigger:Bool;
-	public var _tempNumber:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("camera trigger", "_cameratrigger");
-		_cameratrigger = true;
-		nameMap.set("tempNumber", "_tempNumber");
-		_tempNumber = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		actor.makeAlwaysSimulate();
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				if((actor.getAnimation() == "left"))
+				{
+					Engine.engine.setGameAttribute("moveUpgradeButtons", -3);
+					actor.setAnimation("" + "leftDown");
+				}
+				if((actor.getAnimation() == "right"))
+				{
+					Engine.engine.setGameAttribute("moveUpgradeButtons", 3);
+					actor.setAnimation("" + "rightDown");
+				}
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				/* after recycling is done it moves everything to the left for a few seconds */
-				if((Engine.engine.getGameAttribute("recycleScoreAnimation") && _cameratrigger))
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					_tempNumber = asNumber(-10);
-					propertyChanged("_tempNumber", _tempNumber);
-					_cameratrigger = false;
-					propertyChanged("_cameratrigger", _cameratrigger);
-					runLater(1000 * 2, function(timeTask:TimedTask):Void
-					{
-						actor.setXVelocity(_tempNumber);
-						/* this doesn't work :( */
-						setScrollSpeedForBackground(1, "" + "recyclingBG", _tempNumber, 0);
-					}, actor);
-					/* makes it slow down */
-					runLater(1000 * 8.5, function(timeTask:TimedTask):Void
-					{
-						runPeriodically(1000 * .12, function(timeTask:TimedTask):Void
-						{
-							trace("" + _tempNumber);
-							_tempNumber = asNumber((_tempNumber + 1));
-							propertyChanged("_tempNumber", _tempNumber);
-							actor.setXVelocity(_tempNumber);
-							if((_tempNumber >= 0))
-							{
-								_tempNumber = asNumber(0);
-								propertyChanged("_tempNumber", _tempNumber);
-								timeTask.repeats = false;
-								return;
-							}
-						}, actor);
-					}, actor);
+					recycleActor(actor);
 				}
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				Engine.engine.setGameAttribute("moveUpgradeButtons", 0);
+				Engine.engine.setGameAttribute("scrollButtonClicked", false);
+				actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "Down"), ("" + "")));
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && -1 == mouseState)
+			{
+				Engine.engine.setGameAttribute("moveUpgradeButtons", 0);
+				Engine.engine.setGameAttribute("scrollButtonClicked", false);
 			}
 		});
 		

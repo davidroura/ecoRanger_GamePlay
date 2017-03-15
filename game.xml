@@ -149,7 +149,7 @@
         <number cid="6" id="94" name="totalAluminum" save="true" value="0.0"/>
         <boolean cid="4" id="82" name="foregroundMenuCalled" save="true" value="false"/>
         <number cid="8" id="59" name="collected_PlasticBottles" save="true" value="0.0"/>
-        <number cid="11" id="99" name="buttonsMoved" save="true" value="0"/>
+        <number cid="11" id="99" name="buttonsMoved" save="true" value="0.0"/>
         <number cid="2" id="37" name="playerDistance" save="true" value="0.0"/>
         <number cid="8" id="64" name="total_plasticBottles" save="true" value="10.0"/>
         <number cid="2" id="3" name="sceneSpeed" save="true" value="0.0"/>

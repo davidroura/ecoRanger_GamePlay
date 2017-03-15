@@ -33,18 +33,6 @@
             <int id="1" val="4"/>
         </event-mouse-enter-exit-actor>
     </group>
-    <group eventID="1" id="1">
-        <setanim comment="false" x="75" y="422">
-            <ACTOR eid="this" id="0"/>
-            <str-replace comment="false" id="1" x="0" y="0">
-                <getanim comment="false" id="0" x="0" y="0">
-                    <ACTOR eid="this" id="0"/>
-                </getanim>
-                <int id="1" val="Off"/>
-                <int id="2" val="On"/>
-            </str-replace>
-        </setanim>
-    </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <step comment="false" x="15" y="15">
@@ -170,8 +158,28 @@
                         </not>
                     </and>
                 </if>
+                <if comment="false" x="26" y="549">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="579">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-82 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
         </step>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-game-val-82 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-82>
+            </group>
+        </init>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>

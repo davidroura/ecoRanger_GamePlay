@@ -7,7 +7,9 @@
         <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Layer 2" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="238" id="0" name="exit" pts="4,478.0,0.0,478.0,238.0,0.0,238.0,0.0,0.0" r="64" type="box" w="478" x="-55" y="281"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="45" name="mUI_upgrade 1" sx="1.0" sy="1.0" x="159" y="409" z="2"/>

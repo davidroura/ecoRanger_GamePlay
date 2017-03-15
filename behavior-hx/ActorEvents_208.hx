@@ -107,6 +107,18 @@ class ActorEvents_208 extends ActorScript
 			}
 		});
 		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

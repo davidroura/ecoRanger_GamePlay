@@ -69,32 +69,71 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_161 extends ActorScript
+class ActorEvents_55 extends ActorScript
 {
-	public var _dump:Bool;
+	public var _currentButton:Float;
+	public var _buttonClicked:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("dump", "_dump");
-		_dump = true;
+		nameMap.set("currentButton", "_currentButton");
+		_currentButton = 0.0;
+		nameMap.set("buttonClicked", "_buttonClicked");
+		_buttonClicked = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("foregroundMenuCalled", true);
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				/* index returns -1 if not found. "If not On" */
+				if((("" + actor.getAnimation()).indexOf("On") == -1))
+				{
+					Engine.engine.setGameAttribute("upgradeDescription", StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "")));
+				}
+			}
+		});
+		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(((actor.getAnimation() == "drop") && (_dump == true)))
+				/* if this button is the upgrade description button keep on, otherwise be off */
+				if(((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "Off")) == actor.getAnimation()))
 				{
-					createRecycledActor(getActorType(137), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.MIDDLE);
-					_dump = false;
-					propertyChanged("_dump", _dump);
+					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "On")));
+				}
+				else if(!((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "On")) == actor.getAnimation()))
+				{
+					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "On"), ("" + "Off")));
+				}
+				if((!(Engine.engine.getGameAttribute("moveUpgradeButtons") == 0) && !(Engine.engine.getGameAttribute("scrollButtonClicked"))))
+				{
+					_currentButton = asNumber((asNumber(StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + ""))) + Engine.engine.getGameAttribute("moveUpgradeButtons")));
+					propertyChanged("_currentButton", _currentButton);
+					actor.setAnimation("" + (("" + ("" + _currentButton)) + ("" + "Off")));
+					trace("" + (("" + actor.getAnimation()) + ("" + (("" + " to ") + ("" + (("" + ("" + _currentButton)) + ("" + "Off")))))));
+					Engine.engine.setGameAttribute("buttonsMoved", (Engine.engine.getGameAttribute("buttonsMoved") + 1));
+					if((Engine.engine.getGameAttribute("buttonsMoved") == 3))
+					{
+						Engine.engine.setGameAttribute("scrollButtonClicked", true);
+						Engine.engine.setGameAttribute("buttonsMoved", 0);
+					}
+				}
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
+				{
+					recycleActor(actor);
 				}
 			}
 		});

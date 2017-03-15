@@ -69,35 +69,78 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_157 extends ActorScript
+class ActorEvents_204 extends ActorScript
 {
-	public var _dump:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("dump", "_dump");
-		_dump = true;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		createRecycledActor(getActorType(259), 18, 65, Script.FRONT);
+		createRecycledActor(getActorType(259), 290, 65, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "right");
+		createRecycledActor(getActorType(55), 35, 65, Script.FRONT);
+		createRecycledActor(getActorType(55), 120, 65, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "2Off");
+		createRecycledActor(getActorType(55), 205, 65, Script.FRONT);
+		getLastCreatedActor().setAnimation("" + "3Off");
+		createRecycledActor(getActorType(208), 30, 210, Script.FRONT);
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(((actor.getAnimation() == "drop") && (_dump == true)))
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					for(index0 in 0...Std.int(3))
+					recycleActor(actor);
+				}
+				if(!(Engine.engine.getGameAttribute("upgradeDescription") == 0))
+				{
+					g.setFont(getFont(59));
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 1))
 					{
-						createRecycledActor(getActorType(139), (actor.getScreenX() + randomInt(Math.floor(0), Math.floor(10))), (actor.getScreenY() + randomInt(Math.floor(-10), Math.floor(15))), Script.MIDDLE);
+						g.drawString("" + "FUEL EFFICIENT", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "Use Less Fuel", 30, 150);
 					}
-					_dump = false;
-					propertyChanged("_dump", _dump);
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 2))
+					{
+						g.drawString("" + "ORGANIC BOOST", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "More Boost From Compost", 30, 150);
+					}
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 3))
+					{
+						g.drawString("" + "SUPER CHARGE", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "Recover Faster from stops", 30, 150);
+					}
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 4))
+					{
+						g.drawString("" + "IRON ARMOR", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "Dozey hits more rocks", 30, 150);
+					}
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 5))
+					{
+						g.drawString("" + "SONIC BOOST", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "Gadget lasts twice as long", 30, 150);
+					}
+					if((Engine.engine.getGameAttribute("upgradeDescription") == 6))
+					{
+						g.drawString("" + "BULLDOZE BUILD", 30, 130);
+						g.setFont(getFont(250));
+						g.drawString("" + "Planter can dig longer", 30, 150);
+					}
 				}
 			}
 		});

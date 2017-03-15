@@ -291,13 +291,25 @@
                     <ACTOR eid="47" id="0"/>
                     <int id="1" val="crush"/>
                 </setanim>
-                <set-game-val-63 comment="false" x="26" y="370">
+                <setanim comment="false" x="26" y="370">
+                    <ACTOR eid="48" id="0"/>
+                    <int id="1" val="full"/>
+                </setanim>
+                <setanim comment="false" x="26" y="397">
+                    <ACTOR eid="49" id="0"/>
+                    <int id="1" val="full"/>
+                </setanim>
+                <setanim comment="false" x="26" y="424">
+                    <ACTOR eid="50" id="0"/>
+                    <int id="1" val="full"/>
+                </setanim>
+                <set-game-val-63 comment="false" x="26" y="451">
                     <int id="0" val="10"/>
                 </set-game-val-63>
-                <set-game-val-64 comment="false" x="26" y="390">
+                <set-game-val-64 comment="false" x="26" y="471">
                     <int id="0" val="10"/>
                 </set-game-val-64>
-                <set-game-val-65 comment="false" x="26" y="410">
+                <set-game-val-65 comment="false" x="26" y="491">
                     <int id="0" val="10"/>
                 </set-game-val-65>
             </group>
