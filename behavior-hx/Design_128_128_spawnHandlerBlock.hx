@@ -87,6 +87,15 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _difficulty:Float;
 	public var _ramdomX:Float;
 	public var _trashHold:Bool;
+	public var _treeLeve1:Float;
+	public var _treeDificulty:Float;
+	public var _treeLevel2:Float;
+	public var _treeLevel3:Float;
+	public var _trashHolTime:Float;
+	public var _obstacleDifficulty:Float;
+	public var _obstacleLevel1:Float;
+	public var _obstacleLevel2:Float;
+	public var _obstacleLevel3:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
@@ -128,6 +137,25 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		{
 			_customEvent_spawnLife();
 		}
+		_obstacleDifficulty = asNumber(randomInt(Math.floor(0), Math.floor((Engine.engine.getGameAttribute("playerDistance") + 10))));
+		propertyChanged("_obstacleDifficulty", _obstacleDifficulty);
+		if((_obstacleDifficulty < _obstacleLevel1))
+		{
+			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+		}
+		else if((_obstacleDifficulty < _obstacleLevel2))
+		{
+			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+		}
+		else if((_obstacleDifficulty < _obstacleLevel3))
+		{
+			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+		}
+		else
+		{
+			sayToScene("spawnHandlerBlock", "_customBlock_dropBridge", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+		}
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -144,7 +172,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 			{
 				_trashHold = true;
 				propertyChanged("_trashHold", _trashHold);
-				runLater(1000 * 2, function(timeTask:TimedTask):Void
+				runLater(1000 * _trashHolTime, function(timeTask:TimedTask):Void
 				{
 					_trashHold = false;
 					propertyChanged("_trashHold", _trashHold);
@@ -156,53 +184,29 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_spawnTrees():Void
 	{
-		if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.25))
+		_treeDificulty = asNumber(randomInt(Math.floor(0), Math.floor((Engine.engine.getGameAttribute("playerDistance") + 10))));
+		propertyChanged("_treeDificulty", _treeDificulty);
+		if((_treeDificulty < _treeLeve1))
 		{
-			_xTree = asNumber(-165);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xTree = asNumber(225);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xobstacle = asNumber(100);
-			propertyChanged("_xobstacle", _xobstacle);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [165, -600]);
 		}
-		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.50))
+		else if((_treeDificulty < _treeLevel2))
 		{
-			_xTree = asNumber(-85);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xTree = asNumber(275);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xobstacle = asNumber(200);
-			propertyChanged("_xobstacle", _xobstacle);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [225, -600]);
 		}
-		else if((Engine.engine.getGameAttribute("ramdomUniversalNumber") < 0.75))
+		else if((_treeDificulty < _treeLevel3))
 		{
-			_xTree = asNumber(-165);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xTree = asNumber(165);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xobstacle = asNumber(150);
-			propertyChanged("_xobstacle", _xobstacle);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-85, -600]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [275, -600]);
 		}
 		else
 		{
-			_xTree = asNumber(55);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [55, -600]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
 			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
-			_xTree = asNumber(-165);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xTree = asNumber(275);
-			propertyChanged("_xTree", _xTree);
-			_customEvent_dropTree();
-			_xobstacle = asNumber(100);
-			propertyChanged("_xobstacle", _xobstacle);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [275, -600]);
 		}
 	}
 	
@@ -221,7 +225,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		createRecycledActorOnLayer(getActorType(12), __x, -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(-5);
+		getLastCreatedActor().setY(__y);
 	}
 	
 	/* ========================= Custom Block ========================= */
@@ -251,37 +255,37 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	/* ========================= Custom Block ========================= */
 	public function _customBlock_dropLife(__x:Float, __y:Float):Void
 	{
-		createRecycledActorOnLayer(getActorType(10), _xobstacle, -5, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(10), __x, -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(_yobstacle);
+		getLastCreatedActor().setY(__y);
 	}
 	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_dropTree():Void
+	/* ========================= Custom Block ========================= */
+	public function _customBlock_dropMud(__x:Float, __y:Float):Void
 	{
-		createRecycledActorOnLayer(getActorType(70), _xTree, 0, 1, "" + "gamePlay");
+		createRecycledActorOnLayer(getActorType(145), __x, -5, 1, "" + "gamePlay");
 		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().setY(-600);
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().setY(__y);
+	}
+	
+	/* ========================= Custom Block ========================= */
+	public function _customBlock_dropBridge(__x:Float, __y:Float):Void
+	{
+		createRecycledActorOnLayer(getActorType(72), __x, -5, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().moveToBottom();
+		getLastCreatedActor().setY(__y);
+	}
+	
+	/* ========================= Custom Block ========================= */
+	public function _customBlock_dropTree(__x:Float, __y:Float):Void
+	{
+		createRecycledActorOnLayer(getActorType(70), __x, 0, 1, "" + "gamePlay");
+		getLastCreatedActor().makeAlwaysSimulate();
+		getLastCreatedActor().setY(__y);
 		_customEvent_treeType();
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_dropMud():Void
-	{
-		createRecycledActorOnLayer(getActorType(145), _xobstacle, -5, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(_yobstacle);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_dropBridge():Void
-	{
-		createRecycledActorOnLayer(getActorType(72), 0, -5, 1, "" + "gamePlay");
-		getLastCreatedActor().makeAlwaysSimulate();
-		getLastCreatedActor().moveToBottom();
-		getLastCreatedActor().setY(_yobstacle);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -334,6 +338,24 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		_ramdomX = 0.0;
 		nameMap.set("trashHold", "_trashHold");
 		_trashHold = false;
+		nameMap.set("treeLeve1", "_treeLeve1");
+		_treeLeve1 = 0;
+		nameMap.set("treeDificulty", "_treeDificulty");
+		_treeDificulty = 0;
+		nameMap.set("treeLevel2", "_treeLevel2");
+		_treeLevel2 = 0;
+		nameMap.set("treeLevel3", "_treeLevel3");
+		_treeLevel3 = 0;
+		nameMap.set("trashHolTime", "_trashHolTime");
+		_trashHolTime = 0;
+		nameMap.set("obstacleDifficulty", "_obstacleDifficulty");
+		_obstacleDifficulty = 0;
+		nameMap.set("obstacleLevel1", "_obstacleLevel1");
+		_obstacleLevel1 = 0;
+		nameMap.set("obstacleLevel2", "_obstacleLevel2");
+		_obstacleLevel2 = 0;
+		nameMap.set("obstacleLevel3", "_obstacleLevel3");
+		_obstacleLevel3 = 0;
 		
 	}
 	
@@ -347,6 +369,20 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		propertyChanged("_lifehold", _lifehold);
 		_bonusCard = false;
 		propertyChanged("_bonusCard", _bonusCard);
+		_treeLeve1 = asNumber(200);
+		propertyChanged("_treeLeve1", _treeLeve1);
+		_treeLevel2 = asNumber(500);
+		propertyChanged("_treeLevel2", _treeLevel2);
+		_treeLevel3 = asNumber(800);
+		propertyChanged("_treeLevel3", _treeLevel3);
+		_obstacleLevel1 = asNumber(100);
+		propertyChanged("_obstacleLevel1", _obstacleLevel1);
+		_obstacleLevel2 = asNumber(200);
+		propertyChanged("_obstacleLevel2", _obstacleLevel2);
+		_obstacleLevel3 = asNumber(500);
+		propertyChanged("_obstacleLevel3", _obstacleLevel3);
+		_trashHolTime = asNumber(1);
+		propertyChanged("_trashHolTime", _trashHolTime);
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void

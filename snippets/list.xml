@@ -51,6 +51,15 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="difficulty" hidden="false" id="13" name="_difficulty" order="12"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="ramdomX" hidden="false" id="14" name="_ramdomX" order="13"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="trashHold" hidden="false" id="15" name="_trashHold" order="14"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="treeLeve1" hidden="false" id="16" name="_treeLeve1" order="15"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="treeDificulty" hidden="false" id="17" name="_treeDificulty" order="16"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="treeLevel2" hidden="false" id="18" name="_treeLevel2" order="17"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="treeLevel3" hidden="false" id="19" name="_treeLevel3" order="18"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="trashHolTime" hidden="false" id="20" name="_trashHolTime" order="19"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleDifficulty" hidden="false" id="21" name="_obstacleDifficulty" order="20"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel1" hidden="false" id="22" name="_obstacleLevel1" order="21"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel2" hidden="false" id="23" name="_obstacleLevel2" order="22"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel3" hidden="false" id="24" name="_obstacleLevel3" order="23"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>
@@ -59,18 +68,22 @@
             <receiver blockID="256" id="5"/>
             <receiver blockID="257" id="6"/>
             <receiver blockID="258" id="7"/>
+            <receiver blockID="265" id="8"/>
+            <receiver blockID="266" id="9"/>
+            <receiver blockID="267" id="10"/>
+            <receiver blockID="268" id="11"/>
         </blocks>
         <events>
+            <event displayName="dropMud" enabled="true" id="32" name="event-custom-block" order="23" repeats="true"/>
             <event displayName="Updating" enabled="true" id="1" name="step" order="3" repeats="true"/>
+            <event displayName="dropBridge" enabled="true" id="33" name="event-custom-block" order="24" repeats="true"/>
+            <event displayName="dropTree" enabled="true" id="34" name="event-custom-block" order="25" repeats="true"/>
             <event displayName="spawnTrees" enabled="true" id="3" name="event-custom" order="14" repeats="true"/>
-            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="33" repeats="true"/>
-            <event displayName="dropTree" enabled="true" id="5" name="event-custom" order="24" repeats="true"/>
+            <event displayName="treeType" enabled="true" id="4" name="event-custom" order="37" repeats="true"/>
             <event displayName="spawnLife" enabled="true" id="6" name="event-custom" order="19" repeats="true"/>
             <event displayName="Created" enabled="true" id="8" name="init" order="1" repeats="true"/>
-            <event displayName="dropMud" enabled="true" id="14" name="event-custom" order="29" repeats="true"/>
-            <event displayName="dropBridge" enabled="true" id="15" name="event-custom" order="31" repeats="true"/>
             <event displayName="play" enabled="true" id="16" name="event-custom" order="6" repeats="true"/>
-            <event displayName="dropBonusCard" enabled="true" id="18" name="event-custom" order="32" repeats="true"/>
+            <event displayName="dropBonusCard" enabled="true" id="18" name="event-custom" order="36" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="22" name="draw" order="2" repeats="true"/>
             <event displayName="50mts" enabled="true" id="26" name="event-custom" order="8" repeats="true"/>
             <event displayName="10mts" enabled="true" id="27" name="event-custom" order="7" repeats="true"/>

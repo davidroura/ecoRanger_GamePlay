@@ -196,7 +196,15 @@
             <poly data="4,0,0,81,0,81,75,0,75" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 11" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <custom-block blocktag="custom-267" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropBridge&quot;, [, ]);" desc="drop Bridge at (x,y) position" global="false" gui="drop bridge at (x,y)  %0 %1" id="267" message="dropBridge" name="dropBridge" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
+    </custom-block>
     <custom-block blocktag="custom-258" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropLife&quot;, [, ]);" desc="Drop Life at (x,y) position" global="false" gui="Drop life at (x,y) %0 %1" id="258" message="dropLife" name="dropLife" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
+    </custom-block>
+    <custom-block blocktag="custom-266" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropMud&quot;, [, ]);" desc="drop mud at (x,y) position" global="false" gui="drop mud at (x,y) %0 %1" id="266" message="dropMud" name="dropMud" oid="-1" return="void" shared="false" snippetID="128">
         <blank name="x" order="0" type="number"/>
         <blank name="y" order="1" type="number"/>
     </custom-block>
@@ -212,6 +220,10 @@
         <blank name="y" order="1" type="number"/>
     </custom-block>
     <custom-block blocktag="custom-247" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock2&quot;, &quot;_customBlock_dropTrash&quot;);" desc="" global="false" gui="Drop Trash" id="247" message="dropTrash" name="dropTrash" oid="-1" return="void" shared="false" snippetID="145"/>
+    <custom-block blocktag="custom-268" blocktype="ACTION" code="sayToScene(&quot;spawnHandlerBlock&quot;, &quot;_customBlock_dropTree&quot;, [, ]);" desc="drop tree at (x,y) position" global="false" gui="drop tree at (x,y) %0 %1" id="268" message="dropTree" name="dropTree" oid="-1" return="void" shared="false" snippetID="128">
+        <blank name="x" order="0" type="number"/>
+        <blank name="y" order="1" type="number"/>
+    </custom-block>
     <custom-block blocktag="custom-231" blocktype="ACTION" code="scripts.Design_144_144_recyclingFunctions._customBlock_dumpTrash(, , );" desc="" global="true" gui="dump %0 at %1 %2" id="231" message="dumpTrash" name="dumpTrash" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="trashType" order="0" type="text"/>
         <blank name="trashPosX" order="1" type="number"/>
