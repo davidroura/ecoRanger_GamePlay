@@ -20,19 +20,20 @@
             <receiver blockID="198" id="4"/>
         </blocks>
         <events>
-            <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="1" repeats="true"/>
-            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="21" repeats="true"/>
-            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="26" repeats="false"/>
-            <event displayName="Created" enabled="true" id="4" name="init" order="31" repeats="true"/>
-            <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="5" repeats="true"/>
-            <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="4" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="12" name="step" order="8" repeats="false"/>
-            <event displayName="gameOverIU" enabled="true" id="13" name="event-custom" order="13" repeats="true"/>
-            <event displayName="tutorial" enabled="true" id="14" name="event-custom" order="11" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="16" name="draw" order="22" repeats="true"/>
-            <event displayName="pause" enabled="true" id="19" name="event-device-swipe" order="2" repeats="true"/>
-            <event displayName="unpause" enabled="true" id="20" name="event-device-swipe" order="3" repeats="true"/>
-            <event displayName="play" enabled="true" id="21" name="event-custom" order="9" repeats="true"/>
+            <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="2" repeats="true"/>
+            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="23" repeats="true"/>
+            <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="32" repeats="false"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="1" repeats="true"/>
+            <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="8" repeats="true"/>
+            <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="5" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="12" name="step" order="9" repeats="false"/>
+            <event displayName="gameOverIU" enabled="true" id="13" name="event-custom" order="21" repeats="true"/>
+            <event displayName="tutorial" enabled="true" id="14" name="event-custom" order="13" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="16" name="draw" order="27" repeats="true"/>
+            <event displayName="pause" enabled="true" id="19" name="event-device-swipe" order="3" repeats="true"/>
+            <event displayName="unpause" enabled="true" id="20" name="event-device-swipe" order="4" repeats="true"/>
+            <event displayName="play" enabled="true" id="21" name="event-custom" order="11" repeats="true"/>
+            <event displayName="checkAchievements" enabled="true" id="22" name="event-custom" order="22" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_128_128_spawnHandlerBlock" classname="scripts.Design_128_128_spawnHandlerBlock" desc="" description="" design="true" drawOrder="0" id="128" name="spawnHandlerBlock" oid="-1" package="scripts" shared="false" type="scene">
@@ -464,6 +465,7 @@
     </snippet>
     <snippet actorid="248" attachedevent="true" class="scripts.ActorEvents_248" classname="scripts.ActorEvents_248" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="148" name="ActorEvents_248" oid="-1" package="scripts." shared="false" type="actor">
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="displayText" hidden="false" id="1" name="_displayText" order="0"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="AchievementText" hidden="false" id="2" name="_AchievementText" order="1"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
