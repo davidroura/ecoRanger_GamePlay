@@ -204,7 +204,7 @@
         <boolean cid="6" id="83" name="mainMenuNotification" save="true" value="false"/>
         <number cid="1" id="5" name="playerYPos" save="true" value="300.0"/>
         <boolean cid="2" id="21" name="dozerPlaying" save="true" value="false"/>
-        <number cid="-1" id="102" name="currentAchievementBox" save="true" value="0"/>
+        <number cid="-1" id="102" name="currentAchievementBox" save="true" value="0.0"/>
         <boolean cid="9" id="81" name="game_paused" save="true" value="false"/>
         <number cid="2" id="23" name="virtualX" save="true" value="0.0"/>
         <number cid="6" id="70" name="screenX_mid" save="true" value="0.0"/>

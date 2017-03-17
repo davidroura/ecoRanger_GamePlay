@@ -111,8 +111,15 @@ class SceneEvents_2 extends SceneScript
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(59));
 				g.drawString("" + "Build #2", 5, 5);
-				g.drawString("" + "set initial game stats", 5, 30);
-				g.drawString("" + "reset power ups and resources", 5, 55);
+				g.setFont(getFont(190));
+				g.drawString("" + Engine.engine.getGameAttribute("totalPlastic"), 30, 29);
+				g.drawString("" + Engine.engine.getGameAttribute("totalAluminum"), 100, 29);
+				g.drawString("" + Engine.engine.getGameAttribute("totalGlass"), 170, 29);
+				if(Engine.engine.getGameAttribute("debugText"))
+				{
+					g.drawString("" + "set initial game stats", 5, 30);
+					g.drawString("" + "reset power ups and resources", 5, 55);
+				}
 			}
 		});
 		
