@@ -102,6 +102,12 @@
                 <say-this comment="false" x="26" y="136">
                     <int id="0" val="treeType"/>
                 </say-this>
+                <set-val-128-7 comment="false" x="26" y="156">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-byobval-128-268-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="20"/>
+                    </plus>
+                </set-val-128-7>
             </group>
             <get-byobval-128-268-0 comment="false" id="0" x="0" y="0"/>
             <get-byobval-128-268-1 comment="false" id="1" x="0" y="0"/>
@@ -122,73 +128,158 @@
                 </set-val-128-17>
                 <if comment="false" x="26" y="75">
                     <group eventID="3" id="-1">
-                        <custom-268 comment="false" x="37" y="105">
-                            <int id="0" val="-165"/>
+                        <set-val-128-3 comment="false" x="37" y="105">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="-200"/>
+                                <int id="1" val="-100"/>
+                            </randint>
+                        </set-val-128-3>
+                        <custom-268 comment="false" x="37" y="130">
+                            <get-val-128-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="-600"/>
                         </custom-268>
-                        <custom-268 comment="false" x="37" y="125">
-                            <int id="0" val="165"/>
+                        <set-val-128-25 comment="false" x="37" y="155">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="0"/>
+                            </plus>
+                        </set-val-128-25>
+                        <custom-268 comment="false" x="37" y="193">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-128-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="350"/>
+                            </plus>
                             <int id="1" val="-600"/>
                         </custom-268>
+                        <set-val-128-26 comment="false" x="37" y="223">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </set-val-128-26>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-val-128-17 comment="false" id="0" x="0" y="0"/>
                         <get-val-128-16 comment="false" id="1" x="0" y="0"/>
                     </less>
                 </if>
-                <else-if comment="false" x="26" y="157">
+                <else-if comment="false" x="26" y="268">
                     <group eventID="3" id="-1">
-                        <custom-268 comment="false" x="37" y="187">
-                            <int id="0" val="-165"/>
+                        <set-val-128-3 comment="false" x="37" y="298">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="-200"/>
+                                <int id="1" val="-100"/>
+                            </randint>
+                        </set-val-128-3>
+                        <custom-268 comment="false" x="37" y="323">
+                            <get-val-128-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="-600"/>
                         </custom-268>
-                        <custom-268 comment="false" x="37" y="207">
-                            <int id="0" val="225"/>
+                        <set-val-128-25 comment="false" x="37" y="348">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="0"/>
+                            </plus>
+                        </set-val-128-25>
+                        <custom-268 comment="false" x="37" y="386">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-128-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="400"/>
+                            </plus>
                             <int id="1" val="-600"/>
                         </custom-268>
+                        <set-val-128-26 comment="false" x="37" y="416">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </set-val-128-26>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-val-128-17 comment="false" id="0" x="0" y="0"/>
                         <get-val-128-18 comment="false" id="1" x="0" y="0"/>
                     </less>
                 </else-if>
-                <else-if comment="false" x="26" y="239">
+                <else-if comment="false" x="26" y="461">
                     <group eventID="3" id="-1">
-                        <custom-268 comment="false" x="37" y="269">
-                            <int id="0" val="-85"/>
+                        <set-val-128-3 comment="false" x="37" y="491">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="-150"/>
+                                <int id="1" val="80"/>
+                            </randint>
+                        </set-val-128-3>
+                        <custom-268 comment="false" x="37" y="516">
+                            <get-val-128-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="-600"/>
                         </custom-268>
-                        <custom-268 comment="false" x="37" y="289">
-                            <int id="0" val="275"/>
+                        <set-val-128-25 comment="false" x="37" y="541">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="0"/>
+                            </plus>
+                        </set-val-128-25>
+                        <custom-268 comment="false" x="37" y="579">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-128-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="400"/>
+                            </plus>
                             <int id="1" val="-600"/>
                         </custom-268>
+                        <set-val-128-26 comment="false" x="37" y="609">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </set-val-128-26>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
                         <get-val-128-17 comment="false" id="0" x="0" y="0"/>
                         <get-val-128-19 comment="false" id="1" x="0" y="0"/>
                     </less>
                 </else-if>
-                <else comment="false" x="26" y="321">
+                <else comment="false" x="26" y="654">
                     <group eventID="3" id="-1">
-                        <custom-268 comment="false" x="37" y="341">
-                            <int id="0" val="55"/>
+                        <set-val-128-3 comment="false" x="37" y="674">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="-150"/>
+                                <int id="1" val="80"/>
+                            </randint>
+                        </set-val-128-3>
+                        <custom-268 comment="false" x="37" y="699">
+                            <get-val-128-3 comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="-600"/>
                         </custom-268>
-                        <custom-268 comment="false" x="37" y="361">
-                            <int id="0" val="-165"/>
+                        <set-val-128-25 comment="false" x="37" y="724">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <int id="1" val="0"/>
+                            </plus>
+                        </set-val-128-25>
+                        <custom-268 comment="false" x="37" y="762">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-val-128-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="200"/>
+                            </plus>
                             <int id="1" val="-600"/>
                         </custom-268>
-                        <scaleTo comment="false" x="37" y="381">
-                            <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="50"/>
-                            <int id="2" val="50"/>
-                            <int id="3" val="0"/>
-                            <int id="4" val="0"/>
-                        </scaleTo>
-                        <custom-268 comment="false" x="37" y="408">
-                            <int id="0" val="275"/>
-                            <int id="1" val="-600"/>
-                        </custom-268>
+                        <set-val-128-26 comment="false" x="37" y="792">
+                            <get-xy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="lastcreated" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-xy>
+                        </set-val-128-26>
                     </group>
                 </else>
             </group>
@@ -199,14 +290,7 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <scaleTo comment="false" x="26" y="40">
-                    <ACTOR eid="lastcreated" id="0"/>
-                    <int id="1" val="100"/>
-                    <int id="2" val="100"/>
-                    <int id="3" val="0"/>
-                    <int id="4" val="0"/>
-                </scaleTo>
-                <setanim comment="false" x="26" y="67">
+                <setanim comment="false" x="26" y="40">
                     <ACTOR eid="lastcreated" id="0"/>
                     <tostring comment="false" id="1" x="0" y="0">
                         <roundnew comment="false" id="0" x="0" y="0">
@@ -228,7 +312,7 @@
             <group eventID="6" id="-1">
                 <if comment="false" x="29" y="35">
                     <group eventID="6" id="-1">
-                        <custom-258 comment="false" x="40" y="65">
+                        <custom-258 comment="false" x="40" y="70">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-128-7 comment="false" id="0" x="0" y="0"/>
                                 <randint comment="false" id="1" x="0" y="0">
@@ -243,7 +327,7 @@
                         <get-val-128-13 comment="false" id="0" x="0" y="0"/>
                         <randint comment="false" id="1" x="0" y="0">
                             <int id="0" val="35"/>
-                            <int id="1" val="200"/>
+                            <get-game-val-85 comment="false" id="1" x="0" y="0"/>
                         </randint>
                     </less>
                 </if>
@@ -326,7 +410,7 @@
                             </group>
                             <eq comment="false" id="0" x="0" y="0">
                                 <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="100"/>
+                                <get-game-val-85 comment="false" id="1" x="0" y="0"/>
                             </eq>
                         </if>
                         <say-this comment="false" x="37" y="276">
@@ -432,7 +516,7 @@
                                 <int id="0" val="50"/>
                                 <int id="1" val="250"/>
                             </randint>
-                            <int id="1" val="-10"/>
+                            <int id="1" val="-100"/>
                         </custom-266>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
@@ -447,7 +531,7 @@
                                 <int id="0" val="50"/>
                                 <int id="1" val="250"/>
                             </randint>
-                            <int id="1" val="-10"/>
+                            <int id="1" val="-50"/>
                         </custom-256>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
@@ -460,16 +544,16 @@
                         <custom-266 comment="false" x="37" y="321">
                             <randint comment="false" id="0" x="0" y="0">
                                 <int id="0" val="50"/>
-                                <int id="1" val="250"/>
+                                <int id="1" val="180"/>
                             </randint>
                             <int id="1" val="-10"/>
                         </custom-266>
                         <custom-256 comment="false" x="37" y="346">
                             <randint comment="false" id="0" x="0" y="0">
-                                <int id="0" val="50"/>
+                                <int id="0" val="130"/>
                                 <int id="1" val="250"/>
                             </randint>
-                            <int id="1" val="-10"/>
+                            <int id="1" val="-160"/>
                         </custom-256>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
@@ -480,11 +564,8 @@
                 <else comment="false" x="26" y="383">
                     <group eventID="26" id="-1">
                         <custom-267 comment="false" x="37" y="403">
-                            <randint comment="false" id="0" x="0" y="0">
-                                <int id="0" val="50"/>
-                                <int id="1" val="250"/>
-                            </randint>
-                            <int id="1" val="-10"/>
+                            <get-val-128-25 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="-50"/>
                         </custom-267>
                     </group>
                 </else>

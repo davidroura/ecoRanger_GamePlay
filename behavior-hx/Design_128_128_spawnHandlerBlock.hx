@@ -96,6 +96,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _obstacleLevel1:Float;
 	public var _obstacleLevel2:Float;
 	public var _obstacleLevel3:Float;
+	public var _marginLeft:Float;
+	public var _marginRight:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
@@ -108,7 +110,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 			{
 				_customEvent_50mts();
 			}
-			if((Engine.engine.getGameAttribute("playerDistance") == 100))
+			if((Engine.engine.getGameAttribute("playerDistance") == Engine.engine.getGameAttribute("distanceHighScore")))
 			{
 				if(!(_bonusCard))
 				{
@@ -141,20 +143,20 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		propertyChanged("_obstacleDifficulty", _obstacleDifficulty);
 		if((_obstacleDifficulty < _obstacleLevel1))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), -100]);
 		}
 		else if((_obstacleDifficulty < _obstacleLevel2))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), -50]);
 		}
 		else if((_obstacleDifficulty < _obstacleLevel3))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), -10]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(180)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(130), Math.floor(250)), -160]);
 		}
 		else
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropBridge", [randomInt(Math.floor(50), Math.floor(250)), -10]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropBridge", [_marginLeft, -50]);
 		}
 	}
 	
@@ -188,32 +190,54 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		propertyChanged("_treeDificulty", _treeDificulty);
 		if((_treeDificulty < _treeLeve1))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [165, -600]);
+			_xTree = asNumber(randomInt(Math.floor(-200), Math.floor(-100)));
+			propertyChanged("_xTree", _xTree);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [_xTree, -600]);
+			_marginLeft = asNumber((getLastCreatedActor().getX() + 0));
+			propertyChanged("_marginLeft", _marginLeft);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [(_xTree + 350), -600]);
+			_marginRight = asNumber(getLastCreatedActor().getX());
+			propertyChanged("_marginRight", _marginRight);
 		}
 		else if((_treeDificulty < _treeLevel2))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [225, -600]);
+			_xTree = asNumber(randomInt(Math.floor(-200), Math.floor(-100)));
+			propertyChanged("_xTree", _xTree);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [_xTree, -600]);
+			_marginLeft = asNumber((getLastCreatedActor().getX() + 0));
+			propertyChanged("_marginLeft", _marginLeft);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [(_xTree + 400), -600]);
+			_marginRight = asNumber(getLastCreatedActor().getX());
+			propertyChanged("_marginRight", _marginRight);
 		}
 		else if((_treeDificulty < _treeLevel3))
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-85, -600]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [275, -600]);
+			_xTree = asNumber(randomInt(Math.floor(-150), Math.floor(80)));
+			propertyChanged("_xTree", _xTree);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [_xTree, -600]);
+			_marginLeft = asNumber((getLastCreatedActor().getX() + 0));
+			propertyChanged("_marginLeft", _marginLeft);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [(_xTree + 400), -600]);
+			_marginRight = asNumber(getLastCreatedActor().getX());
+			propertyChanged("_marginRight", _marginRight);
 		}
 		else
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [55, -600]);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [-165, -600]);
-			getLastCreatedActor().growTo(50/100, 50/100, 0, Linear.easeNone);
-			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [275, -600]);
+			_xTree = asNumber(randomInt(Math.floor(-150), Math.floor(80)));
+			propertyChanged("_xTree", _xTree);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [_xTree, -600]);
+			_marginLeft = asNumber((getLastCreatedActor().getX() + 0));
+			propertyChanged("_marginLeft", _marginLeft);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropTree", [(_xTree + 200), -600]);
+			_marginRight = asNumber(getLastCreatedActor().getX());
+			propertyChanged("_marginRight", _marginRight);
 		}
 	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_spawnLife():Void
 	{
-		if((_difficulty < randomInt(Math.floor(35), Math.floor(200))))
+		if((_difficulty < randomInt(Math.floor(35), Math.floor(Engine.engine.getGameAttribute("distanceHighScore")))))
 		{
 			sayToScene("spawnHandlerBlock", "_customBlock_dropLife", [(_xobstacle + randomInt(Math.floor(-50), Math.floor(50))), -5]);
 		}
@@ -286,6 +310,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(__y);
 		_customEvent_treeType();
+		_xobstacle = asNumber((__x + 20));
+		propertyChanged("_xobstacle", _xobstacle);
 	}
 	
 	/* ========================= Custom Event ========================= */
@@ -300,7 +326,6 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_treeType():Void
 	{
-		getLastCreatedActor().growTo(100/100, 100/100, 0, Linear.easeNone);
 		getLastCreatedActor().setAnimation("" + ("" + Math.round((_ramdomBlockNumber * 4))));
 	}
 	
@@ -339,23 +364,27 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		nameMap.set("trashHold", "_trashHold");
 		_trashHold = false;
 		nameMap.set("treeLeve1", "_treeLeve1");
-		_treeLeve1 = 0;
+		_treeLeve1 = 0.0;
 		nameMap.set("treeDificulty", "_treeDificulty");
-		_treeDificulty = 0;
+		_treeDificulty = 0.0;
 		nameMap.set("treeLevel2", "_treeLevel2");
-		_treeLevel2 = 0;
+		_treeLevel2 = 0.0;
 		nameMap.set("treeLevel3", "_treeLevel3");
-		_treeLevel3 = 0;
+		_treeLevel3 = 0.0;
 		nameMap.set("trashHolTime", "_trashHolTime");
-		_trashHolTime = 0;
+		_trashHolTime = 0.0;
 		nameMap.set("obstacleDifficulty", "_obstacleDifficulty");
-		_obstacleDifficulty = 0;
+		_obstacleDifficulty = 0.0;
 		nameMap.set("obstacleLevel1", "_obstacleLevel1");
-		_obstacleLevel1 = 0;
+		_obstacleLevel1 = 0.0;
 		nameMap.set("obstacleLevel2", "_obstacleLevel2");
-		_obstacleLevel2 = 0;
+		_obstacleLevel2 = 0.0;
 		nameMap.set("obstacleLevel3", "_obstacleLevel3");
-		_obstacleLevel3 = 0;
+		_obstacleLevel3 = 0.0;
+		nameMap.set("marginLeft", "_marginLeft");
+		_marginLeft = 0;
+		nameMap.set("marginRight", "_marginRight");
+		_marginRight = 0;
 		
 	}
 	

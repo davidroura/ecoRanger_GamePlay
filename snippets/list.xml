@@ -60,7 +60,9 @@
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleDifficulty" hidden="false" id="21" name="_obstacleDifficulty" order="20"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel1" hidden="false" id="22" name="_obstacleLevel1" order="21"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel2" hidden="false" id="23" name="_obstacleLevel2" order="22"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="obstacleLevel3" hidden="false" id="24" name="_obstacleLevel3" order="23"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="obstacleLevel3" hidden="false" id="24" name="_obstacleLevel3" order="23"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="marginLeft" hidden="false" id="25" name="_marginLeft" order="24"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="marginRight" hidden="false" id="26" name="_marginRight" order="25"/>
         <blocks>
             <receiver blockID="222" id="1"/>
             <receiver blockID="224" id="2"/>
