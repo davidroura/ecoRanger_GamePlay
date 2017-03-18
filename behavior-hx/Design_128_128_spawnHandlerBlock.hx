@@ -98,6 +98,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 	public var _obstacleLevel3:Float;
 	public var _marginLeft:Float;
 	public var _marginRight:Float;
+	public var _obstacleLevel4:Float;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_play():Void
@@ -154,9 +155,23 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 			sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(180)), -10]);
 			sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(130), Math.floor(250)), -160]);
 		}
+		else if((_obstacleDifficulty < _obstacleLevel4))
+		{
+			_yobstacle = asNumber(-10);
+			propertyChanged("_yobstacle", _yobstacle);
+			for(index0 in 0...Std.int(randomInt(Math.floor(1), Math.floor(3))))
+			{
+				sayToScene("spawnHandlerBlock", "_customBlock_dropMud", [randomInt(Math.floor(50), Math.floor(250)), _yobstacle]);
+				_yobstacle = asNumber((_yobstacle - 100));
+				propertyChanged("_yobstacle", _yobstacle);
+				sayToScene("spawnHandlerBlock", "_customBlock_dropRock", [randomInt(Math.floor(50), Math.floor(250)), _yobstacle]);
+				_yobstacle = asNumber((_yobstacle - 100));
+				propertyChanged("_yobstacle", _yobstacle);
+			}
+		}
 		else
 		{
-			sayToScene("spawnHandlerBlock", "_customBlock_dropBridge", [_marginLeft, -50]);
+			sayToScene("spawnHandlerBlock", "_customBlock_dropBridge", [(_marginLeft + 20), -50]);
 		}
 	}
 	
@@ -310,7 +325,7 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		getLastCreatedActor().makeAlwaysSimulate();
 		getLastCreatedActor().setY(__y);
 		_customEvent_treeType();
-		_xobstacle = asNumber((__x + 20));
+		_xobstacle = asNumber((__x + 10));
 		propertyChanged("_xobstacle", _xobstacle);
 	}
 	
@@ -385,6 +400,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		_marginLeft = 0;
 		nameMap.set("marginRight", "_marginRight");
 		_marginRight = 0;
+		nameMap.set("obstacleLevel4", "_obstacleLevel4");
+		_obstacleLevel4 = 0;
 		
 	}
 	
@@ -410,6 +427,8 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		propertyChanged("_obstacleLevel2", _obstacleLevel2);
 		_obstacleLevel3 = asNumber(500);
 		propertyChanged("_obstacleLevel3", _obstacleLevel3);
+		_obstacleLevel4 = asNumber(800);
+		propertyChanged("_obstacleLevel4", _obstacleLevel4);
 		_trashHolTime = asNumber(1);
 		propertyChanged("_trashHolTime", _trashHolTime);
 		
