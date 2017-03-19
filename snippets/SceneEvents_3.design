@@ -44,6 +44,45 @@
                     <int id="3" val="17"/>
                     <int id="4" val="18"/>
                 </drawfill-rect>
+                <comment-wrapper comment="false" x="26" y="228">
+                    <group eventID="2" id="-1">
+                        <set-font-new comment="false" x="37" y="248">
+                            <get-val-6-8 comment="false" id="0" x="0" y="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="280">
+                            <get-val-6-5 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-3 comment="false" id="1" x="0" y="0"/>
+                            <get-val-6-4 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
+                <comment-wrapper comment="false" x="26" y="317">
+                    <group eventID="2" id="-1">
+                        <set-font-new comment="false" x="37" y="337">
+                            <get-val-6-9 comment="false" id="0" x="0" y="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="369">
+                            <get-val-6-11 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-12 comment="false" id="1" x="0" y="0"/>
+                            <get-val-6-13 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
+                <comment-wrapper comment="false" x="26" y="406">
+                    <group eventID="2" id="-1">
+                        <set-font-new comment="false" x="37" y="426">
+                            <get-val-6-15 comment="false" id="0" x="0" y="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="458">
+                            <get-val-6-17 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-18 comment="false" id="1" x="0" y="0"/>
+                            <get-val-6-19 comment="false" id="2" x="0" y="0"/>
+                        </draw-text>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
             </group>
         </draw>
     </group>
@@ -86,4 +125,209 @@
         </event-mouse-enter-exit-region>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <comment-wrapper comment="false" x="26" y="40">
+                    <group eventID="6" id="-1">
+                        <set-val-6-8 comment="false" x="37" y="60">
+                            <font eid="128" id="0"/>
+                        </set-val-6-8>
+                        <set-val-6-7 comment="false" x="37" y="87">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-7>
+                        <set-val-6-5 comment="false" x="37" y="112">
+                            <int id="0" val="Exit Game"/>
+                        </set-val-6-5>
+                        <set-val-6-3 comment="false" x="37" y="132">
+                            <int id="0" val="20"/>
+                        </set-val-6-3>
+                        <set-val-6-4 comment="false" x="37" y="152">
+                            <int id="0" val="100"/>
+                        </set-val-6-4>
+                        <create-region comment="false" x="37" y="172">
+                            <get-val-6-3 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-4 comment="false" id="1" x="0" y="0"/>
+                            <get-font-width2-new comment="false" id="2" x="0" y="0">
+                                <get-val-6-8 comment="false" id="0" x="0" y="0"/>
+                                <get-val-6-5 comment="false" id="1" x="0" y="0"/>
+                            </get-font-width2-new>
+                            <get-font-height2-new comment="false" id="3" x="0" y="0">
+                                <get-val-6-8 comment="false" id="0" x="0" y="0"/>
+                            </get-font-height2-new>
+                        </create-region>
+                        <set-val-6-6 comment="false" x="37" y="210">
+                            <REGION eid="lastcreated" id="0"/>
+                        </set-val-6-6>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
+                <comment-wrapper comment="false" x="26" y="249">
+                    <group eventID="6" id="-1">
+                        <set-val-6-9 comment="false" x="37" y="269">
+                            <font eid="128" id="0"/>
+                        </set-val-6-9>
+                        <set-val-6-10 comment="false" x="37" y="296">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-10>
+                        <set-val-6-11 comment="false" x="37" y="321">
+                            <int id="0" val="Turn Off Volume"/>
+                        </set-val-6-11>
+                        <set-val-6-12 comment="false" x="37" y="341">
+                            <int id="0" val="20"/>
+                        </set-val-6-12>
+                        <set-val-6-13 comment="false" x="37" y="361">
+                            <int id="0" val="150"/>
+                        </set-val-6-13>
+                        <create-region comment="false" x="37" y="381">
+                            <get-val-6-12 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-13 comment="false" id="1" x="0" y="0"/>
+                            <get-font-width2-new comment="false" id="2" x="0" y="0">
+                                <get-val-6-9 comment="false" id="0" x="0" y="0"/>
+                                <get-val-6-11 comment="false" id="1" x="0" y="0"/>
+                            </get-font-width2-new>
+                            <get-font-height2-new comment="false" id="3" x="0" y="0">
+                                <get-val-6-9 comment="false" id="0" x="0" y="0"/>
+                            </get-font-height2-new>
+                        </create-region>
+                        <set-val-6-14 comment="false" x="37" y="419">
+                            <REGION eid="lastcreated" id="0"/>
+                        </set-val-6-14>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
+                <comment-wrapper comment="false" x="26" y="458">
+                    <group eventID="6" id="-1">
+                        <set-val-6-15 comment="false" x="37" y="478">
+                            <font eid="128" id="0"/>
+                        </set-val-6-15>
+                        <set-val-6-16 comment="false" x="37" y="505">
+                            <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-16>
+                        <set-val-6-17 comment="false" x="37" y="530">
+                            <int id="0" val="Tilt On"/>
+                        </set-val-6-17>
+                        <if comment="false" x="37" y="550">
+                            <group eventID="6" id="-1">
+                                <set-val-6-17 comment="false" x="48" y="575">
+                                    <int id="0" val="Tilt Off"/>
+                                </set-val-6-17>
+                            </group>
+                            <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <set-val-6-18 comment="false" x="37" y="607">
+                            <int id="0" val="20"/>
+                        </set-val-6-18>
+                        <set-val-6-19 comment="false" x="37" y="627">
+                            <int id="0" val="200"/>
+                        </set-val-6-19>
+                        <create-region comment="false" x="37" y="647">
+                            <get-val-6-18 comment="false" id="0" x="0" y="0"/>
+                            <get-val-6-19 comment="false" id="1" x="0" y="0"/>
+                            <get-font-width2-new comment="false" id="2" x="0" y="0">
+                                <get-val-6-15 comment="false" id="0" x="0" y="0"/>
+                                <get-val-6-17 comment="false" id="1" x="0" y="0"/>
+                            </get-font-width2-new>
+                            <get-font-height2-new comment="false" id="3" x="0" y="0">
+                                <get-val-6-15 comment="false" id="0" x="0" y="0"/>
+                            </get-font-height2-new>
+                        </create-region>
+                        <set-val-6-20 comment="false" x="37" y="685">
+                            <REGION eid="lastcreated" id="0"/>
+                        </set-val-6-20>
+                    </group>
+                    <int id="0" val=""/>
+                </comment-wrapper>
+            </group>
+        </init>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <exit-game comment="false" x="26" y="42"/>
+            </group>
+            <REGION eid="var" id="0" vid="6"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="8" id="-1">
+                        <set-val-6-10 comment="false" x="37" y="67">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-10>
+                        <set-val-6-11 comment="false" x="37" y="92">
+                            <int id="0" val="Turn On Volume"/>
+                        </set-val-6-11>
+                        <set-val-6-9 comment="false" x="37" y="112">
+                            <font eid="128" id="0"/>
+                        </set-val-6-9>
+                        <set-volume comment="false" x="37" y="139">
+                            <int id="0" val="0"/>
+                        </set-volume>
+                    </group>
+                    <get-val-6-10 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="171">
+                    <group eventID="8" id="-1">
+                        <set-val-6-10 comment="false" x="37" y="191">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-10>
+                        <set-val-6-11 comment="false" x="37" y="216">
+                            <int id="0" val="Turn Off Volume"/>
+                        </set-val-6-11>
+                        <set-val-6-9 comment="false" x="37" y="236">
+                            <font eid="128" id="0"/>
+                        </set-val-6-9>
+                        <set-volume comment="false" x="37" y="263">
+                            <int id="0" val="100"/>
+                        </set-volume>
+                    </group>
+                </else>
+            </group>
+            <REGION eid="var" id="0" vid="14"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-mouse-enter-exit-region comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="9" id="-1">
+                        <set-val-6-16 comment="false" x="37" y="67">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-16>
+                        <set-game-val-0 comment="false" x="37" y="92">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-0>
+                        <set-val-6-17 comment="false" x="37" y="117">
+                            <int id="0" val="Tilt On"/>
+                        </set-val-6-17>
+                    </group>
+                    <get-val-6-16 comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="149">
+                    <group eventID="9" id="-1">
+                        <set-val-6-16 comment="false" x="37" y="169">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-6-16>
+                        <set-game-val-0 comment="false" x="37" y="194">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-0>
+                        <set-val-6-17 comment="false" x="37" y="219">
+                            <int id="0" val="Tilt Off"/>
+                        </set-val-6-17>
+                    </group>
+                </else>
+            </group>
+            <REGION eid="var" id="0" vid="20"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="9" id="-1"/>
 </groups>

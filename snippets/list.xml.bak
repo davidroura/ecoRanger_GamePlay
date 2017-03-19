@@ -179,13 +179,35 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="recXPos" hidden="false" id="1" name="_recXPos" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="recYPos" hidden="false" id="2" name="_recYPos" order="1"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="exitGameX" hidden="false" id="3" name="_exitGameX" order="2"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="exitGameY" hidden="false" id="4" name="_exitGameY" order="3"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="exitGameText" hidden="false" id="5" name="_exitGameText" order="4"/>
+        <region default="" defaultValue="" desc="" dropdown="" fullname="exitGameRegion" hidden="false" id="6" name="_exitGameRegion" order="5"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="exitGameClicked" hidden="false" id="7" name="_exitGameClicked" order="6"/>
+        <font default="" defaultValue="" desc="" dropdown="" fullname="exitGameFont" hidden="false" id="8" name="_exitGameFont" order="7"/>
+        <font default="" defaultValue="" desc="" dropdown="" fullname="soundButtonFont" hidden="false" id="9" name="_soundButtonFont" order="8"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="soundButtonClicked" hidden="false" id="10" name="_soundButtonClicked" order="9"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="soundButtonText" hidden="false" id="11" name="_soundButtonText" order="10"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="soundButtonX" hidden="false" id="12" name="_soundButtonX" order="11"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="soundButtonY" hidden="false" id="13" name="_soundButtonY" order="12"/>
+        <region default="" defaultValue="" desc="" dropdown="" fullname="suondButtonRegion" hidden="false" id="14" name="_suondButtonRegion" order="13"/>
+        <font default="" defaultValue="" desc="" dropdown="" fullname="tiltControlFont" hidden="false" id="15" name="_tiltControlFont" order="14"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="tiltButtonClicked" hidden="false" id="16" name="_tiltButtonClicked" order="15"/>
+        <text default="" defaultValue="" desc="" dropdown="" fullname="tiltButtonText" hidden="false" id="17" name="_tiltButtonText" order="16"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="tiltButtonX" hidden="false" id="18" name="_tiltButtonX" order="17"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="tiltButtonY" hidden="false" id="19" name="_tiltButtonY" order="18"/>
+        <region default="" defaultValue="" desc="" dropdown="" fullname="tiltButtonRegion" hidden="false" id="20" name="_tiltButtonRegion" order="19"/>
         <blocks/>
         <events>
-            <event displayName="Swipe" enabled="true" id="1" name="event-device-swipe" order="1" repeats="true"/>
+            <event displayName="Swipe" enabled="true" id="1" name="event-device-swipe" order="6" repeats="true"/>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="3" name="event-mouse-enter-exit-region" order="5" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="4" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="5" name="event-mouse-enter-exit-region" order="4" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="3" name="event-mouse-enter-exit-region" order="9" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="4" name="event-mouse-enter-exit-region" order="7" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="5" name="event-mouse-enter-exit-region" order="8" repeats="true"/>
+            <event displayName="Created" enabled="true" id="6" name="init" order="1" repeats="true"/>
+            <event displayName="OnExit" enabled="true" id="7" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
+            <event displayName="OnSoundButton" enabled="true" id="8" name="event-mouse-enter-exit-region" order="4" repeats="true"/>
+            <event displayName="OnTiltButton" enabled="true" id="9" name="event-mouse-enter-exit-region" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="206" attachedevent="true" class="scripts.ActorEvents_206" classname="scripts.ActorEvents_206" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="134" name="ActorEvents_206" oid="-1" package="scripts." shared="false" type="actor">

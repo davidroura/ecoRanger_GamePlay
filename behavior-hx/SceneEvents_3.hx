@@ -74,6 +74,24 @@ class SceneEvents_3 extends SceneScript
 {
 	public var _recXPos:Float;
 	public var _recYPos:Float;
+	public var _exitGameX:Float;
+	public var _exitGameY:Float;
+	public var _exitGameText:String;
+	public var _exitGameRegion:Region;
+	public var _exitGameClicked:Bool;
+	public var _exitGameFont:Font;
+	public var _soundButtonFont:Font;
+	public var _soundButtonClicked:Bool;
+	public var _soundButtonText:String;
+	public var _soundButtonX:Float;
+	public var _soundButtonY:Float;
+	public var _suondButtonRegion:Region;
+	public var _tiltControlFont:Font;
+	public var _tiltButtonClicked:Bool;
+	public var _tiltButtonText:String;
+	public var _tiltButtonX:Float;
+	public var _tiltButtonY:Float;
+	public var _tiltButtonRegion:Region;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
@@ -83,20 +101,87 @@ class SceneEvents_3 extends SceneScript
 		_recXPos = 0.0;
 		nameMap.set("recYPos", "_recYPos");
 		_recYPos = 0.0;
+		nameMap.set("exitGameX", "_exitGameX");
+		_exitGameX = 0;
+		nameMap.set("exitGameY", "_exitGameY");
+		_exitGameY = 0;
+		nameMap.set("exitGameText", "_exitGameText");
+		_exitGameText = "";
+		nameMap.set("exitGameRegion", "_exitGameRegion");
+		nameMap.set("exitGameClicked", "_exitGameClicked");
+		_exitGameClicked = false;
+		nameMap.set("exitGameFont", "_exitGameFont");
+		nameMap.set("soundButtonFont", "_soundButtonFont");
+		nameMap.set("soundButtonClicked", "_soundButtonClicked");
+		_soundButtonClicked = false;
+		nameMap.set("soundButtonText", "_soundButtonText");
+		_soundButtonText = "";
+		nameMap.set("soundButtonX", "_soundButtonX");
+		_soundButtonX = 0;
+		nameMap.set("soundButtonY", "_soundButtonY");
+		_soundButtonY = 0;
+		nameMap.set("suondButtonRegion", "_suondButtonRegion");
+		nameMap.set("tiltControlFont", "_tiltControlFont");
+		nameMap.set("tiltButtonClicked", "_tiltButtonClicked");
+		_tiltButtonClicked = false;
+		nameMap.set("tiltButtonText", "_tiltButtonText");
+		_tiltButtonText = "";
+		nameMap.set("tiltButtonX", "_tiltButtonX");
+		_tiltButtonX = 0;
+		nameMap.set("tiltButtonY", "_tiltButtonY");
+		_tiltButtonY = 0;
+		nameMap.set("tiltButtonRegion", "_tiltButtonRegion");
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ============================ Swipe ============================= */
-		addSwipeListener(function(list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		/* "" */ _exitGameFont = getFont(128);
+		propertyChanged("_exitGameFont", _exitGameFont);
+		_exitGameClicked = false;
+		propertyChanged("_exitGameClicked", _exitGameClicked);
+		_exitGameText = "Exit Game";
+		propertyChanged("_exitGameText", _exitGameText);
+		_exitGameX = asNumber(20);
+		propertyChanged("_exitGameX", _exitGameX);
+		_exitGameY = asNumber(100);
+		propertyChanged("_exitGameY", _exitGameY);
+		createBoxRegion(_exitGameX, _exitGameY, _exitGameFont.font.getTextWidth(_exitGameText)/Engine.SCALE, _exitGameFont.getHeight()/Engine.SCALE);
+		_exitGameRegion = getLastCreatedRegion();
+		propertyChanged("_exitGameRegion", _exitGameRegion);
+		/* "" */ _soundButtonFont = getFont(128);
+		propertyChanged("_soundButtonFont", _soundButtonFont);
+		_soundButtonClicked = true;
+		propertyChanged("_soundButtonClicked", _soundButtonClicked);
+		_soundButtonText = "Turn Off Volume";
+		propertyChanged("_soundButtonText", _soundButtonText);
+		_soundButtonX = asNumber(20);
+		propertyChanged("_soundButtonX", _soundButtonX);
+		_soundButtonY = asNumber(150);
+		propertyChanged("_soundButtonY", _soundButtonY);
+		createBoxRegion(_soundButtonX, _soundButtonY, _soundButtonFont.font.getTextWidth(_soundButtonText)/Engine.SCALE, _soundButtonFont.getHeight()/Engine.SCALE);
+		_suondButtonRegion = getLastCreatedRegion();
+		propertyChanged("_suondButtonRegion", _suondButtonRegion);
+		/* "" */ _tiltControlFont = getFont(128);
+		propertyChanged("_tiltControlFont", _tiltControlFont);
+		_tiltButtonClicked = Engine.engine.getGameAttribute("accelerometerControl");
+		propertyChanged("_tiltButtonClicked", _tiltButtonClicked);
+		_tiltButtonText = "Tilt On";
+		propertyChanged("_tiltButtonText", _tiltButtonText);
+		if(Engine.engine.getGameAttribute("accelerometerControl"))
 		{
-			if(wrapper.enabled && Input.swipedLeft)
-			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideRightTransition(0.3));
-			}
-		});
+			_tiltButtonText = "Tilt Off";
+			propertyChanged("_tiltButtonText", _tiltButtonText);
+		}
+		_tiltButtonX = asNumber(20);
+		propertyChanged("_tiltButtonX", _tiltButtonX);
+		_tiltButtonY = asNumber(200);
+		propertyChanged("_tiltButtonY", _tiltButtonY);
+		createBoxRegion(_tiltButtonX, _tiltButtonY, _tiltControlFont.font.getTextWidth(_tiltButtonText)/Engine.SCALE, _tiltControlFont.getHeight()/Engine.SCALE);
+		_tiltButtonRegion = getLastCreatedRegion();
+		propertyChanged("_tiltButtonRegion", _tiltButtonRegion);
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
@@ -117,6 +202,82 @@ class SceneEvents_3 extends SceneScript
 					propertyChanged("_recYPos", _recYPos);
 				}
 				g.fillRect(_recXPos, _recYPos, 17, 18);
+				/* "" */ g.setFont(_exitGameFont);
+				g.drawString("" + _exitGameText, _exitGameX, _exitGameY);
+				/* "" */ g.setFont(_soundButtonFont);
+				g.drawString("" + _soundButtonText, _soundButtonX, _soundButtonY);
+				/* "" */ g.setFont(_tiltControlFont);
+				g.drawString("" + _tiltButtonText, _tiltButtonX, _tiltButtonY);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_exitGameRegion, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				exitGame();
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_suondButtonRegion, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				if(_soundButtonClicked)
+				{
+					_soundButtonClicked = false;
+					propertyChanged("_soundButtonClicked", _soundButtonClicked);
+					_soundButtonText = "Turn On Volume";
+					propertyChanged("_soundButtonText", _soundButtonText);
+					_soundButtonFont = getFont(128);
+					propertyChanged("_soundButtonFont", _soundButtonFont);
+					setVolumeForAllSounds(0/100);
+				}
+				else
+				{
+					_soundButtonClicked = true;
+					propertyChanged("_soundButtonClicked", _soundButtonClicked);
+					_soundButtonText = "Turn Off Volume";
+					propertyChanged("_soundButtonText", _soundButtonText);
+					_soundButtonFont = getFont(128);
+					propertyChanged("_soundButtonFont", _soundButtonFont);
+					setVolumeForAllSounds(100/100);
+				}
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_tiltButtonRegion, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				if(_tiltButtonClicked)
+				{
+					_tiltButtonClicked = false;
+					propertyChanged("_tiltButtonClicked", _tiltButtonClicked);
+					Engine.engine.setGameAttribute("accelerometerControl", false);
+					_tiltButtonText = "Tilt On";
+					propertyChanged("_tiltButtonText", _tiltButtonText);
+				}
+				else
+				{
+					_tiltButtonClicked = true;
+					propertyChanged("_tiltButtonClicked", _tiltButtonClicked);
+					Engine.engine.setGameAttribute("accelerometerControl", true);
+					_tiltButtonText = "Tilt Off";
+					propertyChanged("_tiltButtonText", _tiltButtonText);
+				}
+			}
+		});
+		
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && Input.swipedLeft)
+			{
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideRightTransition(0.3));
 			}
 		});
 		
