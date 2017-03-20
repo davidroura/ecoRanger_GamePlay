@@ -863,10 +863,10 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="2" defaultAnimation="2" desc="" height="125" id="218" name="rItem_recyclingMachines" shared="false" width="168">
-        <anim across="1" down="1" durations="100" height="125" id="2" loop="true" name="wash" numframes="1" originx="49" originy="58" sync="false" version="2" width="168">
+        <anim across="1" down="1" durations="100" height="125" id="2" loop="true" name="wash" numframes="1" originx="84" originy="62" sync="false" version="2" width="168">
             <poly data="4,0,0,98,0,98,116,0,116" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="125" id="3" loop="true" name="crush" numframes="1" originx="0" originy="0" sync="false" version="2" width="138"/>
+        <anim across="1" down="1" durations="100" height="125" id="3" loop="true" name="crush" numframes="1" originx="69" originy="62" sync="false" version="2" width="138"/>
         <anim across="3" down="3" durations="50,50,50,50,50,50,50,50" height="375" id="4" loop="false" name="crushing" numframes="8" originx="69" originy="62" sync="false" version="2" width="414">
             <poly data="4,0,0,138,0,138,125,0,125" density="0.1" fric="0.2" gid="-1000" id="0" name="crushing" rest="0.0" sensor="false"/>
         </anim>

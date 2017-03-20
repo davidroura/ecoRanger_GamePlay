@@ -397,11 +397,11 @@ class Design_128_128_spawnHandlerBlock extends SceneScript
 		nameMap.set("obstacleLevel3", "_obstacleLevel3");
 		_obstacleLevel3 = 0.0;
 		nameMap.set("marginLeft", "_marginLeft");
-		_marginLeft = 0;
+		_marginLeft = 0.0;
 		nameMap.set("marginRight", "_marginRight");
-		_marginRight = 0;
+		_marginRight = 0.0;
 		nameMap.set("obstacleLevel4", "_obstacleLevel4");
-		_obstacleLevel4 = 0;
+		_obstacleLevel4 = 0.0;
 		
 	}
 	

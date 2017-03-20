@@ -93,39 +93,43 @@
                                 <int id="1" val="sucker"/>
                             </eq>
                         </if>
-                        <set-dxy comment="false" x="37" y="535">
+                        <set-val-76-2 comment="false" x="37" y="535">
+                            <getanim comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getanim>
+                        </set-val-76-2>
+                        <fadeTo comment="false" x="37" y="568">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <int id="2" val="25"/>
-                        </set-dxy>
-                        <comment-short comment="false" x="37" y="562">
-                            <int id="0" val="this is not working"/>
-                        </comment-short>
-                        <if comment="false" x="37" y="582">
+                            <int id="1" val="0"/>
+                            <int id="2" val=".1"/>
+                            <int id="3" val="0"/>
+                        </fadeTo>
+                        <dolater comment="false" x="37" y="595">
                             <group eventID="1" id="-1">
-                                <print comment="false" x="48" y="620">
-                                    <int id="0" val="stopped"/>
-                                </print>
-                                <set-dxy comment="false" x="48" y="640">
+                                <setanim comment="false" x="48" y="622">
                                     <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="1"/>
-                                    <int id="2" val="0"/>
-                                </set-dxy>
-                                <print comment="false" x="48" y="667">
-                                    <get-xy comment="false" id="0" x="0" y="0">
-                                        <ACTOR eid="this" id="0"/>
-                                        <int id="1" val="1"/>
-                                    </get-xy>
-                                </print>
+                                    <int id="1" val="none"/>
+                                </setanim>
                             </group>
-                            <more comment="false" id="0" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
+                            <int id="0" val=".1"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="661">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="688">
                                     <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="1"/>
-                                </get-xy>
-                                <int id="1" val="400"/>
-                            </more>
-                        </if>
+                                    <get-val-76-2 comment="false" id="1" x="0" y="0"/>
+                                </setanim>
+                                <fadeTo comment="false" x="48" y="720">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="100"/>
+                                    <int id="2" val=".3"/>
+                                    <int id="3" val="0"/>
+                                </fadeTo>
+                            </group>
+                            <int id="0" val="5"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-game-val-46 comment="false" id="0" x="0" y="0"/>
@@ -164,12 +168,7 @@
             </plus>
         </set-xy>
     </group>
-    <group eventID="1" id="-1">
-        <minus comment="false" x="645" y="561">
-            <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-            <get-game-val-40 comment="false" id="1" x="0" y="0"/>
-        </minus>
-    </group>
+    <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="17" id="-1">
