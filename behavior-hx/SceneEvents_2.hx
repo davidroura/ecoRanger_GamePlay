@@ -110,8 +110,8 @@ class SceneEvents_2 extends SceneScript
 			{
 				g.fillColor = Utils.getColorRGB(255,200,0);
 				g.setFont(getFont(59));
-				g.drawString("" + "Build #2", 5, 5);
-				g.setFont(getFont(190));
+				g.drawString("" + "Build #3", 5, 5);
+				g.setFont(getFont(273));
 				g.drawString("" + Engine.engine.getGameAttribute("totalPlastic"), 30, 29);
 				g.drawString("" + Engine.engine.getGameAttribute("totalAluminum"), 100, 29);
 				g.drawString("" + Engine.engine.getGameAttribute("totalGlass"), 170, 29);

@@ -6,7 +6,7 @@
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
                         <set-font-new comment="false" x="37" y="70">
-                            <font eid="128" id="0"/>
+                            <font eid="190" id="0"/>
                         </set-font-new>
                         <set-val-127-3 comment="false" x="37" y="97">
                             <minus comment="false" id="0" x="0" y="0">
@@ -31,7 +31,7 @@
                                 <minus comment="false" id="0" x="0" y="0">
                                     <int id="0" val="320"/>
                                     <get-font-width2-new comment="false" id="1" x="0" y="0">
-                                        <font eid="128" id="0"/>
+                                        <font eid="190" id="0"/>
                                         <get-game-val-75 comment="false" id="1" x="0" y="0"/>
                                     </get-font-width2-new>
                                 </minus>

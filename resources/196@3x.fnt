@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<font>
+<info zoom="2.0" lspace="0" space="9" line="78" bg="-12237499" face="0" size="16" bold="0" italic="0" charset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="1,1"/>
+<common lineHeight="78" base="26" scaleW="1536" scaleH="192" pages="1" packed="0"/>
+<pages>
+<page id="0" file="font-196.png"/>
+</pages>
+<chars count="4">
+<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="23" xadvance="9" page="0" chnl="0"/>
+<char character="T" id="84" x="141" y="18" width="60" height="93" xoffset="0" yoffset="0" padding="0" xadvance="60" page="0" chnl="0"/>
+<char character="E" id="69" x="87" y="18" width="57" height="93" xoffset="0" yoffset="0" padding="0" xadvance="57" page="0" chnl="0"/>
+<char character="M" id="77" x="3" y="18" width="84" height="93" xoffset="0" yoffset="0" padding="0" xadvance="84" page="0" chnl="0"/>
+</chars>
+</font>

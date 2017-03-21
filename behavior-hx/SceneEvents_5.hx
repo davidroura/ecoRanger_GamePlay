@@ -135,6 +135,10 @@ class SceneEvents_5 extends SceneScript
 		{
 			playSoundOnChannel(getSound(80), Std.int(1));
 		}, null);
+		runLater(1000 * 31, function(timeTask:TimedTask):Void
+		{
+			createRecycledActor(getActorType(269), 0, 0, Script.FRONT);
+		}, null);
 		runLater(1000 * 34, function(timeTask:TimedTask):Void
 		{
 			switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(1));

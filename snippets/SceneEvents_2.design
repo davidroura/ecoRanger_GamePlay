@@ -26,12 +26,12 @@
                     <font eid="59" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="94">
-                    <int id="0" val="Build #2"/>
+                    <int id="0" val="Build #3"/>
                     <int id="1" val="5"/>
                     <int id="2" val="5"/>
                 </draw-text>
                 <set-font-new comment="false" x="26" y="114">
-                    <font eid="190" id="0"/>
+                    <font eid="273" id="0"/>
                 </set-font-new>
                 <draw-text comment="false" x="26" y="141">
                     <get-game-val-33 comment="false" id="0" x="0" y="0"/>

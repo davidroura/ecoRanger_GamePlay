@@ -82,7 +82,19 @@
                 </dolater>
                 <dolater comment="false" x="26" y="596">
                     <group eventID="1" id="-1">
-                        <scene-change-through comment="false" x="37" y="623">
+                        <create-actor3 comment="false" x="37" y="623">
+                            <actortype eid="269" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                    </group>
+                    <int id="0" val="31"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="662">
+                    <group eventID="1" id="-1">
+                        <scene-change-through comment="false" x="37" y="689">
                             <scene eid="2" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>

@@ -1,5 +1,5 @@
 #
-#Sat Mar 04 18:26:52 EST 2017
+#Tue Mar 21 14:52:33 EDT 2017
 style=plain
 alphabet=
 color=\#f4fbff
@@ -12,4 +12,4 @@ shadow.blur=0
 chars=all
 stroke.size=0
 antialias=true
-size=16
+size=14

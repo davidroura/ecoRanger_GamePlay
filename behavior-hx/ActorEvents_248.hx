@@ -114,7 +114,7 @@ class ActorEvents_248 extends ActorScript
 				if(_displayText)
 				{
 					g.setFont(getFont(59));
-					g.drawString("" + _AchievementText, 50, 20);
+					g.drawString("" + _AchievementText, ((320 - getFont(59).font.getTextWidth(_AchievementText)/Engine.SCALE) / 2), 20);
 				}
 			}
 		});

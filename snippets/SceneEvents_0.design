@@ -455,33 +455,59 @@
                 </set-font-new>
                 <draw-text comment="false" x="57" y="84">
                     <get-game-val-61 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="88"/>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <int id="0" val="105"/>
+                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                            <font eid="136" id="0"/>
+                            <get-game-val-61 comment="false" id="1" x="0" y="0"/>
+                        </get-font-width2-new>
+                    </minus>
                     <int id="2" val="2"/>
                 </draw-text>
-                <draw-text comment="false" x="57" y="109">
+                <draw-text comment="false" x="57" y="127">
                     <get-game-val-59 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="135"/>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <int id="0" val="150"/>
+                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                            <font eid="136" id="0"/>
+                            <get-game-val-59 comment="false" id="1" x="0" y="0"/>
+                        </get-font-width2-new>
+                    </minus>
                     <int id="2" val="2"/>
                 </draw-text>
-                <draw-text comment="false" x="57" y="134">
+                <draw-text comment="false" x="57" y="170">
                     <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="195"/>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <int id="0" val="206"/>
+                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                            <font eid="136" id="0"/>
+                            <get-game-val-60 comment="false" id="1" x="0" y="0"/>
+                        </get-font-width2-new>
+                    </minus>
                     <int id="2" val="2"/>
                 </draw-text>
-                <if comment="false" x="57" y="159">
+                <if comment="false" x="57" y="213">
                     <group eventID="16" id="-1">
-                        <comment-short comment="false" x="68" y="184">
+                        <comment-short comment="false" x="68" y="238">
                             <int id="0" val="Game Over Stats that count up from 0"/>
                         </comment-short>
-                        <set-font-new comment="false" x="68" y="204">
+                        <set-font-new comment="false" x="68" y="258">
                             <font eid="190" id="0"/>
                         </set-font-new>
-                        <if comment="false" x="68" y="231">
+                        <if comment="false" x="68" y="285">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="261">
+                                <draw-text comment="false" x="79" y="315">
                                     <get-val-0-8 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="45"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="56"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <tostring comment="false" id="1" x="0" y="0">
+                                                <get-val-0-8 comment="false" id="0" x="0" y="0"/>
+                                            </tostring>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -489,21 +515,35 @@
                                 <get-game-val-61 comment="false" id="1" x="0" y="0"/>
                             </less>
                         </if>
-                        <else comment="false" x="68" y="298">
+                        <else comment="false" x="68" y="375">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="318">
+                                <draw-text comment="false" x="79" y="395">
                                     <get-game-val-61 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="37"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="56"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <get-game-val-61 comment="false" id="1" x="0" y="0"/>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                         </else>
-                        <if comment="false" x="68" y="355">
+                        <if comment="false" x="68" y="450">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="385">
+                                <draw-text comment="false" x="79" y="480">
                                     <get-val-0-8 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="150"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="161"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <tostring comment="false" id="1" x="0" y="0">
+                                                <get-val-0-8 comment="false" id="0" x="0" y="0"/>
+                                            </tostring>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -511,21 +551,35 @@
                                 <get-game-val-59 comment="false" id="1" x="0" y="0"/>
                             </less>
                         </if>
-                        <else comment="false" x="68" y="422">
+                        <else comment="false" x="68" y="540">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="442">
+                                <draw-text comment="false" x="79" y="560">
                                     <get-game-val-59 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="150"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="161"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <get-game-val-59 comment="false" id="1" x="0" y="0"/>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                         </else>
-                        <if comment="false" x="68" y="479">
+                        <if comment="false" x="68" y="615">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="509">
+                                <draw-text comment="false" x="79" y="645">
                                     <get-val-0-8 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="230"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="250"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <tostring comment="false" id="1" x="0" y="0">
+                                                <get-val-0-8 comment="false" id="0" x="0" y="0"/>
+                                            </tostring>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -533,21 +587,27 @@
                                 <get-game-val-60 comment="false" id="1" x="0" y="0"/>
                             </less>
                         </if>
-                        <else comment="false" x="68" y="546">
+                        <else comment="false" x="68" y="705">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="566">
+                                <draw-text comment="false" x="79" y="725">
                                     <get-game-val-60 comment="false" id="0" x="0" y="0"/>
-                                    <int id="1" val="230"/>
-                                    <int id="2" val="245"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <int id="0" val="250"/>
+                                        <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                            <font eid="136" id="0"/>
+                                            <get-game-val-60 comment="false" id="1" x="0" y="0"/>
+                                        </get-font-width2-new>
+                                    </minus>
+                                    <int id="2" val="250"/>
                                 </draw-text>
                             </group>
                         </else>
-                        <set-font-new comment="false" x="68" y="603">
-                            <font eid="196" id="0"/>
+                        <set-font-new comment="false" x="68" y="780">
+                            <font eid="274" id="0"/>
                         </set-font-new>
-                        <if comment="false" x="68" y="630">
+                        <if comment="false" x="68" y="807">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="660">
+                                <draw-text comment="false" x="79" y="837">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <get-val-0-9 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val=" METERS"/>
@@ -556,7 +616,7 @@
                                         <minus comment="false" id="0" x="0" y="0">
                                             <int id="0" val="320"/>
                                             <get-font-width2-new comment="false" id="1" x="0" y="0">
-                                                <font eid="196" id="0"/>
+                                                <font eid="274" id="0"/>
                                                 <str-combine comment="false" id="1" x="0" y="0">
                                                     <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                                                     <int id="1" val=" METERS"/>
@@ -573,9 +633,9 @@
                                 <get-game-val-37 comment="false" id="1" x="0" y="0"/>
                             </less>
                         </if>
-                        <else comment="false" x="68" y="725">
+                        <else comment="false" x="68" y="902">
                             <group eventID="16" id="-1">
-                                <draw-text comment="false" x="79" y="745">
+                                <draw-text comment="false" x="79" y="922">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val=" METERS"/>
@@ -584,7 +644,7 @@
                                         <minus comment="false" id="0" x="0" y="0">
                                             <int id="0" val="320"/>
                                             <get-font-width2-new comment="false" id="1" x="0" y="0">
-                                                <font eid="196" id="0"/>
+                                                <font eid="274" id="0"/>
                                                 <str-combine comment="false" id="1" x="0" y="0">
                                                     <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                                                     <int id="1" val=" METERS"/>
@@ -597,10 +657,10 @@
                                 </draw-text>
                             </group>
                         </else>
-                        <set-font-new comment="false" x="68" y="810">
+                        <set-font-new comment="false" x="68" y="987">
                             <font eid="201" id="0"/>
                         </set-font-new>
-                        <draw-text comment="false" x="68" y="837">
+                        <draw-text comment="false" x="68" y="1014">
                             <str-combine comment="false" id="0" x="0" y="0">
                                 <int id="0" val="HIGHSCORE "/>
                                 <get-game-val-85 comment="false" id="1" x="0" y="0"/>
@@ -620,16 +680,16 @@
                             </div>
                             <int id="2" val="175"/>
                         </draw-text>
-                        <comment-short comment="false" x="68" y="890">
+                        <comment-short comment="false" x="68" y="1067">
                             <int id="0" val="these are the increases in the score counter"/>
                         </comment-short>
-                        <set-val-0-8 comment="false" x="68" y="910">
+                        <set-val-0-8 comment="false" x="68" y="1087">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-0-8 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </plus>
                         </set-val-0-8>
-                        <set-val-0-9 comment="false" x="68" y="940">
+                        <set-val-0-9 comment="false" x="68" y="1117">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-val-0-9 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="9"/>
@@ -638,17 +698,17 @@
                     </group>
                     <get-game-val-38 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <comment-short comment="false" x="57" y="982">
+                <comment-short comment="false" x="57" y="1159">
                     <int id="0" val="NotificationText sets an animated form of that text in middle of screen"/>
                 </comment-short>
-                <set-font-new comment="false" x="57" y="1002">
+                <set-font-new comment="false" x="57" y="1179">
                     <font eid="128" id="0"/>
                 </set-font-new>
-                <if comment="false" x="57" y="1029">
+                <if comment="false" x="57" y="1206">
                     <group eventID="16" id="-1">
-                        <if comment="false" x="68" y="1064">
+                        <if comment="false" x="68" y="1241">
                             <group eventID="16" id="-1">
-                                <set-game-val-75 comment="false" x="79" y="1094">
+                                <set-game-val-75 comment="false" x="79" y="1271">
                                     <str-combine comment="false" id="0" x="0" y="0">
                                         <get-game-val-37 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val=" METERS"/>
@@ -675,13 +735,7 @@
     <group eventID="16" id="-1">
         <minus comment="false" x="574" y="251">
             <int id="0" val="320"/>
-            <get-font-width2-new comment="false" id="1" x="0" y="0">
-                <font eid="196" id="0"/>
-                <str-combine comment="false" id="1" x="0" y="0">
-                    <get-game-val-37 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val=" METERS"/>
-                </str-combine>
-            </get-font-width2-new>
+            <int id="1" val=""/>
         </minus>
         <div comment="false" x="488" y="135">
             <int id="0" val=""/>

@@ -1,17 +1,14 @@
-#
-#Sun Jan 08 13:14:24 EST 2017
-style=bold
-alphabet=
-stroke.color=\#ffcc00
-color=\#ffff99
-shadow.y=3
-family=Oswald-Bold.ttf
-shadow.x=2
-shadow.color=\#000000
-gradient.offset=0
-shadow.blur=0
-chars=all
-gradient.color=\#ffff00
-stroke.size=2
-antialias=true
-size=44
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<font>
+<info zoom="2.0" lspace="0" space="3" line="26" bg="-12237499" face="0" size="16" bold="0" italic="0" charset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="1,1"/>
+<common lineHeight="26" base="26" scaleW="512" scaleH="64" pages="1" packed="0"/>
+<pages>
+<page id="0" file="font-196.png"/>
+</pages>
+<chars count="4">
+<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="23" xadvance="3" page="0" chnl="0"/>
+<char character="T" id="84" x="47" y="6" width="20" height="31" xoffset="0" yoffset="0" padding="0" xadvance="20" page="0" chnl="0"/>
+<char character="E" id="69" x="29" y="6" width="19" height="31" xoffset="0" yoffset="0" padding="0" xadvance="19" page="0" chnl="0"/>
+<char character="M" id="77" x="1" y="6" width="28" height="31" xoffset="0" yoffset="0" padding="0" xadvance="28" page="0" chnl="0"/>
+</chars>
+</font>

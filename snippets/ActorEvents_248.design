@@ -74,7 +74,16 @@
                         </set-font-new>
                         <draw-text comment="false" x="37" y="92">
                             <get-val-148-2 comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="50"/>
+                            <div comment="false" id="1" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="320"/>
+                                    <get-font-width2-new comment="false" id="1" x="0" y="0">
+                                        <font eid="59" id="0"/>
+                                        <get-val-148-2 comment="false" id="1" x="0" y="0"/>
+                                    </get-font-width2-new>
+                                </minus>
+                                <int id="1" val="2"/>
+                            </div>
                             <int id="2" val="20"/>
                         </draw-text>
                     </group>
@@ -84,18 +93,6 @@
         </draw>
     </group>
     <group eventID="2" id="-1">
-        <get-xy comment="false" x="342" y="187">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="3"/>
-        </get-xy>
-        <plus comment="false" x="142" y="348">
-            <int id="0" val=""/>
-            <int id="1" val="35"/>
-        </plus>
-        <minus comment="false" x="495" y="229">
-            <int id="0" val=""/>
-            <int id="1" val="120"/>
-        </minus>
         <get-item comment="false" x="420" y="478">
             <get-game-val-101 comment="false" id="0" x="0" y="0"/>
             <minus comment="false" id="1" x="0" y="0">
@@ -103,5 +100,17 @@
                 <int id="1" val="1"/>
             </minus>
         </get-item>
+        <minus comment="false" x="495" y="229">
+            <int id="0" val=""/>
+            <int id="1" val="120"/>
+        </minus>
+        <plus comment="false" x="142" y="348">
+            <int id="0" val=""/>
+            <int id="1" val="35"/>
+        </plus>
+        <get-xy comment="false" x="342" y="187">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="3"/>
+        </get-xy>
     </group>
 </groups>
