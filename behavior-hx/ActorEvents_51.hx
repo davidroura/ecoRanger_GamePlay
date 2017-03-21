@@ -88,6 +88,7 @@ class ActorEvents_51 extends ActorScript
 			if(wrapper.enabled && 5 == mouseState)
 			{
 				stopAllSounds();
+				Engine.engine.setGameAttribute("gameOver", false);
 				switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(0));
 			}
 		});

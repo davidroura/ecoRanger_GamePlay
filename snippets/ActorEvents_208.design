@@ -27,7 +27,7 @@
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="boost"/>
+                        <int id="1" val="1"/>
                     </eq>
                 </if>
                 <if comment="false" x="26" y="188">
@@ -44,7 +44,7 @@
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="biofuel"/>
+                        <int id="1" val="2"/>
                     </eq>
                 </if>
                 <if comment="false" x="26" y="280">
@@ -61,7 +61,43 @@
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-86 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="engineCharge"/>
+                        <int id="1" val="3"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="372">
+                    <group eventID="1" id="-1">
+                        <set-game-val-104 comment="false" x="37" y="402">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-104>
+                        <print comment="false" x="37" y="427">
+                            <int id="0" val="dozey boost Upgrade happened"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="4"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="459">
+                    <group eventID="1" id="-1">
+                        <print comment="false" x="37" y="489">
+                            <int id="0" val="gadget banana boost upgrade"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="5"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="521">
+                    <group eventID="1" id="-1">
+                        <print comment="false" x="37" y="551">
+                            <int id="0" val="planter gather upgrade happened"/>
+                        </print>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-86 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="6"/>
                     </eq>
                 </if>
             </group>

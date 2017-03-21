@@ -302,7 +302,6 @@
             <event displayName="paused" enabled="true" id="28" name="event-custom" order="21" repeats="true"/>
             <event displayName="unpaused" enabled="true" id="29" name="event-custom" order="23" repeats="true"/>
             <event displayName="dropFunFactCard" enabled="true" id="30" name="event-custom" order="19" repeats="true"/>
-            <event displayName="clickOnFunFactCard" enabled="false" id="31" name="event-mouse-enter-exit-actor" order="20" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="208" attachedevent="true" class="scripts.ActorEvents_208" classname="scripts.ActorEvents_208" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="136" name="ActorEvents_208" oid="-1" package="scripts." shared="false" type="actor">

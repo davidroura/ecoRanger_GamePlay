@@ -195,26 +195,26 @@
                     <group eventID="12" id="-1">
                         <if comment="false" x="37" y="199">
                             <group eventID="12" id="-1">
-                                <set-val-8-16 comment="false" x="48" y="224">
+                                <set-game-val-105 comment="false" x="48" y="224">
                                     <plus comment="false" id="0" x="0" y="0">
-                                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-105 comment="false" id="0" x="0" y="0"/>
                                         <get-game-val-88 comment="false" id="1" x="0" y="0"/>
                                     </plus>
-                                </set-val-8-16>
+                                </set-game-val-105>
                             </group>
                             <get-val-8-5 comment="false" id="0" x="0" y="0"/>
                         </if>
                     </group>
                     <less comment="false" id="0" x="0" y="0">
-                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-105 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="30"/>
                     </less>
                 </if>
                 <else comment="false" x="26" y="278">
                     <group eventID="12" id="-1">
-                        <set-val-8-16 comment="false" x="37" y="298">
+                        <set-game-val-105 comment="false" x="37" y="298">
                             <int id="0" val="35"/>
-                        </set-val-8-16>
+                        </set-game-val-105>
                     </group>
                 </else>
             </group>
@@ -503,9 +503,9 @@
                 </comment-short>
                 <if comment="false" x="26" y="67">
                     <group eventID="25" id="-1">
-                        <set-val-8-16 comment="false" x="37" y="97">
+                        <set-game-val-105 comment="false" x="37" y="97">
                             <int id="0" val="0"/>
-                        </set-val-8-16>
+                        </set-game-val-105>
                         <set-game-val-3 comment="false" x="37" y="117">
                             <times comment="false" id="0" x="0" y="0">
                                 <get-game-val-76 comment="false" id="0" x="0" y="0"/>
@@ -587,16 +587,16 @@
                                         </comment-short>
                                         <if comment="false" x="59" y="406">
                                             <group eventID="27" id="-1">
-                                                <set-val-8-16 comment="false" x="70" y="436">
+                                                <set-game-val-105 comment="false" x="70" y="436">
                                                     <minus comment="false" id="0" x="0" y="0">
-                                                        <get-val-8-16 comment="false" id="0" x="0" y="0"/>
+                                                        <get-game-val-105 comment="false" id="0" x="0" y="0"/>
                                                         <int id="1" val=".03"/>
                                                     </minus>
-                                                </set-val-8-16>
+                                                </set-game-val-105>
                                             </group>
                                             <lesseq comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
-                                                <get-val-8-16 comment="false" id="1" x="0" y="0"/>
+                                                <get-game-val-105 comment="false" id="1" x="0" y="0"/>
                                             </lesseq>
                                         </if>
                                         <comment-short comment="false" x="59" y="478">
@@ -621,7 +621,7 @@
                                                 <set-game-val-3 comment="false" x="70" y="590">
                                                     <plus comment="false" id="0" x="0" y="0">
                                                         <get-game-val-76 comment="false" id="0" x="0" y="0"/>
-                                                        <get-val-8-16 comment="false" id="1" x="0" y="0"/>
+                                                        <get-game-val-105 comment="false" id="1" x="0" y="0"/>
                                                     </plus>
                                                 </set-game-val-3>
                                             </group>
@@ -745,24 +745,4 @@
         </event-custom>
     </group>
     <group eventID="30" id="-1"/>
-    <group eventID="31" id="0">
-        <event-mouse-enter-exit-actor comment="false" x="13" y="38">
-            <group eventID="31" id="-1">
-                <comment-long comment="false" x="24" y="65">
-                    <int id="0" val="disabled this function. It makes an error in log that says &amp;quot;cannot add listener function to null actor&amp;quot;"/>
-                </comment-long>
-            </group>
-            <ACTOR eid="var" id="0" vid="23"/>
-            <int id="1" val="0"/>
-        </event-mouse-enter-exit-actor>
-    </group>
-    <group eventID="31" id="1">
-        <die comment="false" x="23" y="171">
-            <ACTOR eid="var" id="0" vid="23"/>
-        </die>
-        <say-this comment="false" x="23" y="198">
-            <int id="0" val="unpaused"/>
-        </say-this>
-    </group>
-    <group eventID="31" id="-1"/>
 </groups>

@@ -4,7 +4,10 @@
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <stop-sounds comment="false" x="26" y="42"/>
-                <scene-change-through comment="false" x="26" y="62">
+                <set-game-val-38 comment="false" x="26" y="62">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-game-val-38>
+                <scene-change-through comment="false" x="26" y="87">
                     <scene eid="2" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0"/>

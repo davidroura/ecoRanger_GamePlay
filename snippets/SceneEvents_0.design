@@ -467,7 +467,7 @@
                 <draw-text comment="false" x="57" y="127">
                     <get-game-val-59 comment="false" id="0" x="0" y="0"/>
                     <minus comment="false" id="1" x="0" y="0">
-                        <int id="0" val="150"/>
+                        <int id="0" val="165"/>
                         <get-font-width2-new comment="false" id="1" x="0" y="0">
                             <font eid="136" id="0"/>
                             <get-game-val-59 comment="false" id="1" x="0" y="0"/>
@@ -507,7 +507,7 @@
                                             </tostring>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -526,7 +526,7 @@
                                             <get-game-val-61 comment="false" id="1" x="0" y="0"/>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                         </else>
@@ -535,7 +535,7 @@
                                 <draw-text comment="false" x="79" y="480">
                                     <get-val-0-8 comment="false" id="0" x="0" y="0"/>
                                     <minus comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="161"/>
+                                        <int id="0" val="156"/>
                                         <get-font-width2-new comment="false" id="1" x="0" y="0">
                                             <font eid="136" id="0"/>
                                             <tostring comment="false" id="1" x="0" y="0">
@@ -543,7 +543,7 @@
                                             </tostring>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -556,13 +556,13 @@
                                 <draw-text comment="false" x="79" y="560">
                                     <get-game-val-59 comment="false" id="0" x="0" y="0"/>
                                     <minus comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="161"/>
+                                        <int id="0" val="156"/>
                                         <get-font-width2-new comment="false" id="1" x="0" y="0">
                                             <font eid="136" id="0"/>
                                             <get-game-val-59 comment="false" id="1" x="0" y="0"/>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                         </else>
@@ -571,7 +571,7 @@
                                 <draw-text comment="false" x="79" y="645">
                                     <get-val-0-8 comment="false" id="0" x="0" y="0"/>
                                     <minus comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="250"/>
+                                        <int id="0" val="255"/>
                                         <get-font-width2-new comment="false" id="1" x="0" y="0">
                                             <font eid="136" id="0"/>
                                             <tostring comment="false" id="1" x="0" y="0">
@@ -579,7 +579,7 @@
                                             </tostring>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -592,13 +592,13 @@
                                 <draw-text comment="false" x="79" y="725">
                                     <get-game-val-60 comment="false" id="0" x="0" y="0"/>
                                     <minus comment="false" id="1" x="0" y="0">
-                                        <int id="0" val="250"/>
+                                        <int id="0" val="255"/>
                                         <get-font-width2-new comment="false" id="1" x="0" y="0">
                                             <font eid="136" id="0"/>
                                             <get-game-val-60 comment="false" id="1" x="0" y="0"/>
                                         </get-font-width2-new>
                                     </minus>
-                                    <int id="2" val="250"/>
+                                    <int id="2" val="260"/>
                                 </draw-text>
                             </group>
                         </else>
@@ -625,7 +625,7 @@
                                         </minus>
                                         <int id="1" val="2"/>
                                     </div>
-                                    <int id="2" val="120"/>
+                                    <int id="2" val="130"/>
                                 </draw-text>
                             </group>
                             <less comment="false" id="0" x="0" y="0">
@@ -653,7 +653,7 @@
                                         </minus>
                                         <int id="1" val="2"/>
                                     </div>
-                                    <int id="2" val="120"/>
+                                    <int id="2" val="130"/>
                                 </draw-text>
                             </group>
                         </else>
@@ -733,14 +733,14 @@
         </draw>
     </group>
     <group eventID="16" id="-1">
-        <minus comment="false" x="574" y="251">
-            <int id="0" val="320"/>
-            <int id="1" val=""/>
-        </minus>
         <div comment="false" x="488" y="135">
             <int id="0" val=""/>
             <int id="1" val="2"/>
         </div>
+        <minus comment="false" x="574" y="251">
+            <int id="0" val="320"/>
+            <int id="1" val=""/>
+        </minus>
     </group>
     <group eventID="19" id="0">
         <event-device-swipe comment="false" x="15" y="15">
