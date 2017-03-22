@@ -12,11 +12,11 @@
                             <actortype eid="275" id="0"/>
                             <minus comment="false" id="1" x="0" y="0">
                                 <get-game-val-20 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="30"/>
+                                <int id="1" val="50"/>
                             </minus>
                             <minus comment="false" id="2" x="0" y="0">
                                 <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="60"/>
+                                <int id="1" val="80"/>
                             </minus>
                             <int id="3" val="0"/>
                         </create-actor3>
@@ -145,7 +145,7 @@
                                     <ACTOR eid="this" id="2"/>
                                 </dolater>
                             </group>
-                            <int id="0" val=".6"/>
+                            <int id="0" val=".3"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
@@ -165,15 +165,6 @@
         </get-dxy>
     </group>
     <group eventID="1" id="2">
-        <while comment="false" x="154" y="847">
-            <group eventID="1" id="-1"/>
-            <less comment="false" id="0" x="0" y="0">
-                <int id="0" val=""/>
-                <int id="1" val="455"/>
-            </less>
-        </while>
-    </group>
-    <group eventID="1" id="3">
         <set-xy comment="false" x="303" y="932">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="1"/>

@@ -69,19 +69,19 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_248 extends ActorScript
+class ActorEvents_55 extends ActorScript
 {
-	public var _displayText:Bool;
-	public var _AchievementText:String;
+	public var _currentButton:Float;
+	public var _buttonClicked:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("displayText", "_displayText");
-		_displayText = true;
-		nameMap.set("AchievementText", "_AchievementText");
-		_AchievementText = "";
+		nameMap.set("currentButton", "_currentButton");
+		_currentButton = 0.0;
+		nameMap.set("buttonClicked", "_buttonClicked");
+		_buttonClicked = 0.0;
 		
 	}
 	
@@ -89,31 +89,51 @@ class ActorEvents_248 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_AchievementText = Engine.engine.getGameAttribute("achievementsText")[Std.int(Engine.engine.getGameAttribute("currentAchievementBox"))];
-		propertyChanged("_AchievementText", _AchievementText);
-		Engine.engine.setGameAttribute("currentAchievementBox", (Engine.engine.getGameAttribute("currentAchievementBox") + 1));
-		actor.growTo(100/100, 0/100, 0, Linear.easeNone);
-		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
-		runLater(1000 * 3, function(timeTask:TimedTask):Void
-		{
-			_displayText = false;
-			propertyChanged("_displayText", _displayText);
-			actor.growTo(100/100, 0/100, .2, Linear.easeNone);
-			runLater(1000 * .2, function(timeTask:TimedTask):Void
-			{
-				recycleActor(actor);
-			}, actor);
-		}, actor);
+		Engine.engine.setGameAttribute("foregroundMenuCalled", true);
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 5 == mouseState)
+			{
+				/* index returns -1 if not found. "If not On" */
+				if((("" + actor.getAnimation()).indexOf("On") == -1))
+				{
+					Engine.engine.setGameAttribute("upgradeDescription", StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "")));
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(_displayText)
+				/* if this button is the upgrade description button keep on, otherwise be off */
+				if(((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "Off")) == actor.getAnimation()))
 				{
-					g.setFont(getFont(59));
-					g.drawString("" + _AchievementText, ((320 - getFont(59).font.getTextWidth(_AchievementText)/Engine.SCALE) / 2), 10);
+					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + "On")));
+				}
+				else if(!((("" + Engine.engine.getGameAttribute("upgradeDescription")) + ("" + "On")) == actor.getAnimation()))
+				{
+					actor.setAnimation("" + StringTools.replace(("" + actor.getAnimation()), ("" + "On"), ("" + "Off")));
+				}
+				if((!(Engine.engine.getGameAttribute("moveUpgradeButtons") == 0) && !(Engine.engine.getGameAttribute("scrollButtonClicked"))))
+				{
+					_currentButton = asNumber((asNumber(StringTools.replace(("" + actor.getAnimation()), ("" + "Off"), ("" + ""))) + Engine.engine.getGameAttribute("moveUpgradeButtons")));
+					propertyChanged("_currentButton", _currentButton);
+					actor.setAnimation("" + (("" + ("" + _currentButton)) + ("" + "Off")));
+					trace("" + (("" + actor.getAnimation()) + ("" + (("" + " to ") + ("" + (("" + ("" + _currentButton)) + ("" + "Off")))))));
+					Engine.engine.setGameAttribute("buttonsMoved", (Engine.engine.getGameAttribute("buttonsMoved") + 1));
+					if((Engine.engine.getGameAttribute("buttonsMoved") == 3))
+					{
+						Engine.engine.setGameAttribute("scrollButtonClicked", true);
+						Engine.engine.setGameAttribute("buttonsMoved", 0);
+					}
+				}
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
+				{
+					recycleActor(actor);
 				}
 			}
 		});

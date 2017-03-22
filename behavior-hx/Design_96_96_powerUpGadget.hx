@@ -72,6 +72,8 @@ import com.stencyl.graphics.shaders.BloomShader;
 class Design_96_96_powerUpGadget extends ActorScript
 {
 	public var _sceneSpeedHold:Float;
+	public var _gadgetOnDuration:Float;
+	public var _timeCounter:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -80,6 +82,10 @@ class Design_96_96_powerUpGadget extends ActorScript
 		nameMap.set("Actor", "actor");
 		nameMap.set("sceneSpeedHold", "_sceneSpeedHold");
 		_sceneSpeedHold = 0.0;
+		nameMap.set("gadgetOnDuration", "_gadgetOnDuration");
+		_gadgetOnDuration = 3;
+		nameMap.set("timeCounter", "_timeCounter");
+		_timeCounter = 0;
 		
 	}
 	
@@ -89,11 +95,33 @@ class Design_96_96_powerUpGadget extends ActorScript
 		/* ======================== When Creating ========================= */
 		Engine.engine.setGameAttribute("gadgetPower", true);
 		Engine.engine.setGameAttribute("sceneSpeedHold", Engine.engine.getGameAttribute("sceneSpeed"));
-		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		runPeriodically(1000 * 1, function(timeTask:TimedTask):Void
 		{
-			Engine.engine.setGameAttribute("gadgetPower", false);
-			Engine.engine.setGameAttribute("botOn", false);
+			if((_gadgetOnDuration <= _timeCounter))
+			{
+				Engine.engine.setGameAttribute("gadgetPower", false);
+				Engine.engine.setGameAttribute("botOn", false);
+			}
+			else
+			{
+				_timeCounter = asNumber((_timeCounter + 1));
+				propertyChanged("_timeCounter", _timeCounter);
+			}
 		}, actor);
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(10), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if(Engine.engine.getGameAttribute("gadgetUpgrade"))
+				{
+					recycleActor(event.otherActor);
+					_gadgetOnDuration = asNumber((_gadgetOnDuration + 2));
+					propertyChanged("_gadgetOnDuration", _gadgetOnDuration);
+				}
+			}
+		});
 		
 	}
 	

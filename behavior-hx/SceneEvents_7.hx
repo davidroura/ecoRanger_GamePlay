@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,19 +70,26 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_248 extends ActorScript
+class SceneEvents_7 extends SceneScript
 {
-	public var _displayText:Bool;
-	public var _AchievementText:String;
+	public var _sfxlist:Array<Dynamic>;
 	
-	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_playRandomSound():Void
 	{
-		super(actor);
-		nameMap.set("displayText", "_displayText");
-		_displayText = true;
-		nameMap.set("AchievementText", "_AchievementText");
-		_AchievementText = "";
+		playSound(getSoundByName(_sfxlist[Std.int(randomInt(Math.floor(0), Math.floor(_sfxlist.length)))]));
+		runLater(1000 * randomInt(Math.floor(2), Math.floor(6)), function(timeTask:TimedTask):Void
+		{
+			_customEvent_playRandomSound();
+		}, null);
+	}
+	
+	
+	public function new(dummy:Int, dummy2:Engine)
+	{
+		super();
+		nameMap.set("sfx_list", "_sfxlist");
+		_sfxlist = ["UI_factory_amb_sfx_1", "UI_factory_amb_sfx_2", "UI_factory_amb_sfx_3", "UI_factory_amb_sfx_4", "UI_factory_amb_sfx_5", "UI_factory_amb_sfx_6"];
 		
 	}
 	
@@ -89,32 +97,26 @@ class ActorEvents_248 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_AchievementText = Engine.engine.getGameAttribute("achievementsText")[Std.int(Engine.engine.getGameAttribute("currentAchievementBox"))];
-		propertyChanged("_AchievementText", _AchievementText);
-		Engine.engine.setGameAttribute("currentAchievementBox", (Engine.engine.getGameAttribute("currentAchievementBox") + 1));
-		actor.growTo(100/100, 0/100, 0, Linear.easeNone);
-		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
-		runLater(1000 * 3, function(timeTask:TimedTask):Void
-		{
-			_displayText = false;
-			propertyChanged("_displayText", _displayText);
-			actor.growTo(100/100, 0/100, .2, Linear.easeNone);
-			runLater(1000 * .2, function(timeTask:TimedTask):Void
-			{
-				recycleActor(actor);
-			}, actor);
-		}, actor);
+		Engine.engine.setGameAttribute("found_GadgetScreen", true);
+		setVolumeForAllSounds(100/100);
+		loopSoundOnChannel(getSound(245), Std.int(1));
+		_customEvent_playRandomSound();
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ============================ Swipe ============================= */
+		addSwipeListener(function(list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && Input.swipedRight)
 			{
-				if(_displayText)
-				{
-					g.setFont(getFont(59));
-					g.drawString("" + _AchievementText, ((320 - getFont(59).font.getTextWidth(_AchievementText)/Engine.SCALE) / 2), 10);
-				}
+				switchScene(GameModel.get().scenes.get(2).getID(), null, createSlideLeftTransition(0.3));
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(getRegion(0), function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				Engine.engine.setGameAttribute("foregroundMenuCalled", false);
 			}
 		});
 		

@@ -16,4 +16,27 @@
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-xy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="5"/>
+                    </plus>
+                </set-xy>
+                <set-xy comment="false" x="26" y="77">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <minus comment="false" id="2" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-xy>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

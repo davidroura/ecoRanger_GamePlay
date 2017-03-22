@@ -16,20 +16,39 @@
                     <int id="0" val="2"/>
                     <ACTOR eid="this" id="2"/>
                 </dolater>
-                <set-game-val-18 comment="false" x="26" y="150">
-                    <minus comment="false" id="0" x="0" y="0">
-                        <get-game-val-18 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
-                    </minus>
-                </set-game-val-18>
-                <if comment="false" x="26" y="180">
+                <dolater comment="false" x="26" y="150">
                     <group eventID="1" id="-1">
-                        <set-game-val-105 comment="false" x="37" y="205">
+                        <set-game-val-46 comment="false" x="37" y="177">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-46>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+                <print comment="false" x="26" y="214">
+                    <str-combine comment="false" id="0" x="0" y="0">
+                        <int id="0" val="Dozey Boost: "/>
+                        <tostring comment="false" id="1" x="0" y="0">
+                            <get-game-val-104 comment="false" id="0" x="0" y="0"/>
+                        </tostring>
+                    </str-combine>
+                </print>
+                <if comment="false" x="26" y="249">
+                    <group eventID="1" id="-1">
+                        <set-game-val-105 comment="false" x="37" y="274">
                             <plus comment="false" id="0" x="0" y="0">
                                 <get-game-val-105 comment="false" id="0" x="0" y="0"/>
                                 <get-game-val-88 comment="false" id="1" x="0" y="0"/>
                             </plus>
                         </set-game-val-105>
+                        <print comment="false" x="37" y="304">
+                            <str-combine comment="false" id="0" x="0" y="0">
+                                <int id="0" val="Boost: "/>
+                                <tostring comment="false" id="1" x="0" y="0">
+                                    <get-game-val-105 comment="false" id="0" x="0" y="0"/>
+                                </tostring>
+                            </str-combine>
+                        </print>
                     </group>
                     <get-game-val-104 comment="false" id="0" x="0" y="0"/>
                 </if>
@@ -42,51 +61,24 @@
     <group eventID="2" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="2" id="-1">
-                        <set-xy comment="false" x="37" y="70">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <plus comment="false" id="2" x="0" y="0">
-                                <get-game-val-20 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="5"/>
-                            </plus>
-                        </set-xy>
-                        <set-xy comment="false" x="37" y="107">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <minus comment="false" id="2" x="0" y="0">
-                                <get-game-val-5 comment="false" id="0" x="0" y="0"/>
-                                <get-game-val-40 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </set-xy>
-                    </group>
-                    <noteq comment="false" id="0" x="0" y="0">
-                        <get-game-val-18 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </noteq>
-                </if>
-                <else comment="false" x="26" y="156">
-                    <group eventID="2" id="-1">
-                        <set-game-val-46 comment="false" x="37" y="176">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-game-val-46>
-                    </group>
-                </else>
+                <set-xy comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <plus comment="false" id="2" x="0" y="0">
+                        <get-game-val-20 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="5"/>
+                    </plus>
+                </set-xy>
+                <set-xy comment="false" x="26" y="77">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <minus comment="false" id="2" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-40 comment="false" id="1" x="0" y="0"/>
+                    </minus>
+                </set-xy>
             </group>
         </draw>
-    </group>
-    <group eventID="2" id="1">
-        <if comment="false" x="185" y="337">
-            <group eventID="2" id="-1">
-                <die comment="false" x="196" y="367">
-                    <ACTOR eid="this" id="0"/>
-                </die>
-            </group>
-            <not comment="false" id="0" x="0" y="0">
-                <get-game-val-46 comment="false" id="0" x="0" y="0"/>
-            </not>
-        </if>
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">

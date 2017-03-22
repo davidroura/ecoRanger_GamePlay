@@ -69,19 +69,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_248 extends ActorScript
+class ActorEvents_228 extends ActorScript
 {
-	public var _displayText:Bool;
-	public var _AchievementText:String;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("displayText", "_displayText");
-		_displayText = true;
-		nameMap.set("AchievementText", "_AchievementText");
-		_AchievementText = "";
 		
 	}
 	
@@ -89,32 +83,42 @@ class ActorEvents_248 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_AchievementText = Engine.engine.getGameAttribute("achievementsText")[Std.int(Engine.engine.getGameAttribute("currentAchievementBox"))];
-		propertyChanged("_AchievementText", _AchievementText);
-		Engine.engine.setGameAttribute("currentAchievementBox", (Engine.engine.getGameAttribute("currentAchievementBox") + 1));
-		actor.growTo(100/100, 0/100, 0, Linear.easeNone);
-		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
-		runLater(1000 * 3, function(timeTask:TimedTask):Void
+		runLater(1000 * 9, function(timeTask:TimedTask):Void
 		{
-			_displayText = false;
-			propertyChanged("_displayText", _displayText);
-			actor.growTo(100/100, 0/100, .2, Linear.easeNone);
-			runLater(1000 * .2, function(timeTask:TimedTask):Void
-			{
-				recycleActor(actor);
-			}, actor);
+			recycleActor(actor);
+			Engine.engine.setGameAttribute("botOn", false);
 		}, actor);
+		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(228).ID, getActorType(12).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				event.otherActor.setAnimation("" + "explode");
+				runLater(1000 * 2, function(timeTask:TimedTask):Void
+				{
+					recycleActor(event.otherActor);
+				}, actor);
+				runLater(1000 * 1, function(timeTask:TimedTask):Void
+				{
+					Engine.engine.setGameAttribute("botOn", false);
+				}, actor);
+				trace("" + (("" + "Dozey Boost: ") + ("" + ("" + Engine.engine.getGameAttribute("dozeyBoost")))));
+				if(Engine.engine.getGameAttribute("dozeyBoost"))
+				{
+					Engine.engine.setGameAttribute("boostSpeed", (Engine.engine.getGameAttribute("boostSpeed") + Engine.engine.getGameAttribute("boostAdd")));
+					trace("" + (("" + "Boost: ") + ("" + ("" + Engine.engine.getGameAttribute("boostSpeed")))));
+				}
+			}
+		});
 		
 		/* ========================= When Drawing ========================= */
 		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(_displayText)
-				{
-					g.setFont(getFont(59));
-					g.drawString("" + _AchievementText, ((320 - getFont(59).font.getTextWidth(_AchievementText)/Engine.SCALE) / 2), 10);
-				}
+				actor.setX((Engine.engine.getGameAttribute("playerXPos") + 5));
+				actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
 			}
 		});
 		

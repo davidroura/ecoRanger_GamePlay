@@ -88,6 +88,16 @@ class ActorEvents_275 extends ActorScript
 			recycleActor(actor);
 		}, actor);
 		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				actor.setX((Engine.engine.getGameAttribute("playerXPos") + 5));
+				actor.setY((Engine.engine.getGameAttribute("playerYPos") - Engine.engine.getGameAttribute("botOffset")));
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

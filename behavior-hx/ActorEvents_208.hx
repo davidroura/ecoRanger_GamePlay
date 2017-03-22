@@ -69,51 +69,66 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_248 extends ActorScript
+class ActorEvents_208 extends ActorScript
 {
-	public var _displayText:Bool;
-	public var _AchievementText:String;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("displayText", "_displayText");
-		_displayText = true;
-		nameMap.set("AchievementText", "_AchievementText");
-		_AchievementText = "";
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		_AchievementText = Engine.engine.getGameAttribute("achievementsText")[Std.int(Engine.engine.getGameAttribute("currentAchievementBox"))];
-		propertyChanged("_AchievementText", _AchievementText);
-		Engine.engine.setGameAttribute("currentAchievementBox", (Engine.engine.getGameAttribute("currentAchievementBox") + 1));
-		actor.growTo(100/100, 0/100, 0, Linear.easeNone);
-		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
-		runLater(1000 * 3, function(timeTask:TimedTask):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			_displayText = false;
-			propertyChanged("_displayText", _displayText);
-			actor.growTo(100/100, 0/100, .2, Linear.easeNone);
-			runLater(1000 * .2, function(timeTask:TimedTask):Void
+			if(wrapper.enabled && 5 == mouseState)
 			{
-				recycleActor(actor);
-			}, actor);
-		}, actor);
+				createRecycledActor(getActorType(175), 10, 150, Script.FRONT);
+				getLastCreatedActor().setAnimation("" + "engineUpgraded");
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 1))
+				{
+					Engine.engine.setGameAttribute("boostAdd", (Engine.engine.getGameAttribute("boostAdd") * 2));
+					trace("" + "Boost Upgrade happened");
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 2))
+				{
+					/* the closer to 0 the better the fuel efficiency */
+					Engine.engine.setGameAttribute("fuelEfficiency", (Engine.engine.getGameAttribute("fuelEfficiency") * .7));
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 3))
+				{
+					Engine.engine.setGameAttribute("acceleration", (Engine.engine.getGameAttribute("acceleration") + .25));
+					trace("" + "engineCharge Upgrade happened");
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 4))
+				{
+					Engine.engine.setGameAttribute("dozeyBoost", true);
+					trace("" + "dozey boost Upgrade happened");
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 5))
+				{
+					Engine.engine.setGameAttribute("gadgetUpgrade", true);
+					trace("" + "gadget banana boost upgrade");
+				}
+				if((Engine.engine.getGameAttribute("upgradeDescription") == 6))
+				{
+					trace("" + "planter gather upgrade happened");
+				}
+			}
+		});
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(_displayText)
+				if(!(Engine.engine.getGameAttribute("foregroundMenuCalled")))
 				{
-					g.setFont(getFont(59));
-					g.drawString("" + _AchievementText, ((320 - getFont(59).font.getTextWidth(_AchievementText)/Engine.SCALE) / 2), 10);
+					recycleActor(actor);
 				}
 			}
 		});

@@ -22,42 +22,36 @@
                     <int id="3" val="0"/>
                     <int id="4" val="0"/>
                 </scaleTo>
-                <print comment="false" x="26" y="127">
-                    <get-xy comment="false" id="0" x="0" y="0">
-                        <ACTOR eid="this" id="0"/>
-                        <int id="1" val="1"/>
-                    </get-xy>
-                </print>
-                <scaleTo comment="false" x="26" y="160">
+                <scaleTo comment="false" x="26" y="127">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="100"/>
                     <int id="2" val="100"/>
                     <int id="3" val=".2"/>
                     <int id="4" val="0"/>
                 </scaleTo>
-                <dolater comment="false" x="26" y="187">
+                <dolater comment="false" x="26" y="154">
                     <group eventID="1" id="-1">
-                        <set-val-148-1 comment="false" x="37" y="214">
+                        <set-val-148-1 comment="false" x="37" y="181">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-148-1>
-                        <scaleTo comment="false" x="37" y="239">
+                        <scaleTo comment="false" x="37" y="206">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="100"/>
                             <int id="2" val="0"/>
                             <int id="3" val=".2"/>
                             <int id="4" val="0"/>
                         </scaleTo>
-                        <dolater comment="false" x="37" y="266">
+                        <dolater comment="false" x="37" y="233">
                             <group eventID="1" id="-1">
-                                <die comment="false" x="48" y="293">
+                                <die comment="false" x="48" y="260">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
-                            <int id="0" val=".5"/>
+                            <int id="0" val=".2"/>
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
-                    <int id="0" val="4"/>
+                    <int id="0" val="3"/>
                     <ACTOR eid="this" id="2"/>
                 </dolater>
             </group>
@@ -84,7 +78,7 @@
                                 </minus>
                                 <int id="1" val="2"/>
                             </div>
-                            <int id="2" val="20"/>
+                            <int id="2" val="10"/>
                         </draw-text>
                     </group>
                     <get-val-148-1 comment="false" id="0" x="0" y="0"/>
@@ -93,6 +87,18 @@
         </draw>
     </group>
     <group eventID="2" id="-1">
+        <get-xy comment="false" x="342" y="187">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="3"/>
+        </get-xy>
+        <plus comment="false" x="142" y="348">
+            <int id="0" val=""/>
+            <int id="1" val="35"/>
+        </plus>
+        <minus comment="false" x="495" y="229">
+            <int id="0" val=""/>
+            <int id="1" val="120"/>
+        </minus>
         <get-item comment="false" x="420" y="478">
             <get-game-val-101 comment="false" id="0" x="0" y="0"/>
             <minus comment="false" id="1" x="0" y="0">
@@ -100,17 +106,5 @@
                 <int id="1" val="1"/>
             </minus>
         </get-item>
-        <minus comment="false" x="495" y="229">
-            <int id="0" val=""/>
-            <int id="1" val="120"/>
-        </minus>
-        <plus comment="false" x="142" y="348">
-            <int id="0" val=""/>
-            <int id="1" val="35"/>
-        </plus>
-        <get-xy comment="false" x="342" y="187">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="3"/>
-        </get-xy>
     </group>
 </groups>
