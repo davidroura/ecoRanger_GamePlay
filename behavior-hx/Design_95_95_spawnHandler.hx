@@ -408,8 +408,11 @@ class Design_95_95_spawnHandler extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				g.setFont(getFont(190));
-				g.drawString("" + _nextDistance, 100, 100);
+				if(Engine.engine.getGameAttribute("debugText"))
+				{
+					g.setFont(getFont(190));
+					g.drawString("" + _nextDistance, 100, 100);
+				}
 			}
 		});
 		

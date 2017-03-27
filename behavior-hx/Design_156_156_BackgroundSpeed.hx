@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,18 +70,37 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_83 extends ActorScript
+class Design_156_156_BackgroundSpeed extends SceneScript
 {
 	
-	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_play():Void
 	{
-		super(actor);
+		Engine.engine.setGameAttribute("flag", "playerMovement");
+		setScrollSpeedForBackground(1, "" + "bgLong", Engine.engine.getGameAttribute("lateralSpeed"), Engine.engine.getGameAttribute("sceneSpeed"));
+	}
+	
+	
+	public function new(dummy:Int, dummy2:Engine)
+	{
+		super();
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(!(Engine.engine.getGameAttribute("game_paused")))
+				{
+					_customEvent_play();
+				}
+			}
+		});
 		
 	}
 	

@@ -82,6 +82,31 @@ class ActorEvents_81 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
+		{
+			actor.setAnimation("" + "right");
+		}, actor);
+		runPeriodically(1000 * 1, function(timeTask:TimedTask):Void
+		{
+			actor.setAnimation("" + "left");
+		}, actor);
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
+		{
+			runLater(1000 * 1, function(timeTask:TimedTask):Void
+			{
+				getLastCreatedActor().fadeTo(0 / 100, 2, Expo.easeOut);
+			}, actor);
+			runPeriodically(1000 * 1, function(timeTask:TimedTask):Void
+			{
+				actor.setAnimation("" + "right");
+			}, actor);
+		}, actor);
+		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		{
+			recycleActor(actor);
+		}, actor);
+		
 	}
 	
 	override public function forwardMessage(msg:String)

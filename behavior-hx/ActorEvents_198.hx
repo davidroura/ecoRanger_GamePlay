@@ -86,16 +86,10 @@ class ActorEvents_198 extends ActorScript
 		Engine.engine.setGameAttribute("communicationBoxEarlyKill", false);
 		actor.growTo(100/100, 10/100, 0, Linear.easeNone);
 		actor.growTo(100/100, 100/100, .2, Linear.easeNone);
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		runLater(1000 * 3, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled && 5 == mouseState)
-			{
-				Engine.engine.setGameAttribute("communicationBoxEarlyKill", true);
-				recycleActor(actor);
-			}
-		});
+			recycleActor(actor);
+		}, actor);
 		
 	}
 	

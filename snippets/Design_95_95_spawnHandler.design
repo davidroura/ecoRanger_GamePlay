@@ -770,14 +770,19 @@
     <group eventID="28" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="28" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <font eid="190" id="0"/>
-                </set-font-new>
-                <draw-text comment="false" x="26" y="67">
-                    <get-val-95-35 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="100"/>
-                    <int id="2" val="100"/>
-                </draw-text>
+                <if comment="false" x="26" y="40">
+                    <group eventID="28" id="-1">
+                        <set-font-new comment="false" x="37" y="65">
+                            <font eid="190" id="0"/>
+                        </set-font-new>
+                        <draw-text comment="false" x="37" y="92">
+                            <get-val-95-35 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="100"/>
+                            <int id="2" val="100"/>
+                        </draw-text>
+                    </group>
+                    <get-game-val-34 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
         </draw>
     </group>

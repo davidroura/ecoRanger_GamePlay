@@ -1,2 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="67">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="right"/>
+                        </setanim>
+                    </group>
+                    <int id="0" val=".5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+                <periodic comment="false" x="26" y="106">
+                    <group eventID="1" id="-1">
+                        <setanim comment="false" x="37" y="133">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="left"/>
+                        </setanim>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+                <dolater comment="false" x="26" y="172">
+                    <group eventID="1" id="-1">
+                        <dolater comment="false" x="37" y="199">
+                            <group eventID="1" id="-1">
+                                <fadeTo comment="false" x="48" y="226">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="2"/>
+                                    <int id="3" val="12"/>
+                                </fadeTo>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <periodic comment="false" x="37" y="265">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="48" y="292">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="right"/>
+                                </setanim>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="this" id="2"/>
+                        </periodic>
+                    </group>
+                    <int id="0" val=".5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="343">
+                    <group eventID="1" id="-1">
+                        <die comment="false" x="37" y="370">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

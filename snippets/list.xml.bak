@@ -13,6 +13,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentSpeed" hidden="false" id="10" name="_currentSpeed" order="9"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="lowFuel" hidden="false" id="11" name="_lowFuel" order="10"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="distanceHighReached" hidden="false" id="12" name="_distanceHighReached" order="11"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="tutorialStarted" hidden="false" id="13" name="_tutorialStarted" order="12"/>
         <blocks>
             <receiver blockID="191" id="1"/>
             <receiver blockID="196" id="2"/>
@@ -20,20 +21,20 @@
             <receiver blockID="198" id="4"/>
         </blocks>
         <events>
-            <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="2" repeats="true"/>
-            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="23" repeats="true"/>
+            <event displayName="killBottle" enabled="true" id="1" name="event-type-region" order="11" repeats="true"/>
+            <event displayName="killBanana" enabled="true" id="2" name="event-type-region" order="22" repeats="true"/>
             <event displayName="killRock" enabled="true" id="3" name="event-type-region" order="32" repeats="false"/>
             <event displayName="Created" enabled="true" id="4" name="init" order="1" repeats="true"/>
-            <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="8" repeats="true"/>
-            <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="5" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="12" name="step" order="9" repeats="false"/>
-            <event displayName="gameOverIU" enabled="true" id="13" name="event-custom" order="21" repeats="true"/>
-            <event displayName="tutorial" enabled="true" id="14" name="event-custom" order="13" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="16" name="draw" order="27" repeats="true"/>
-            <event displayName="pause" enabled="true" id="19" name="event-device-swipe" order="3" repeats="true"/>
-            <event displayName="unpause" enabled="true" id="20" name="event-device-swipe" order="4" repeats="true"/>
-            <event displayName="play" enabled="true" id="21" name="event-custom" order="11" repeats="true"/>
-            <event displayName="checkAchievements" enabled="true" id="22" name="event-custom" order="22" repeats="true"/>
+            <event displayName="killCan" enabled="true" id="10" name="event-type-region" order="21" repeats="true"/>
+            <event displayName="killPlastic" enabled="true" id="11" name="event-type-region" order="13" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="12" name="step" order="2" repeats="false"/>
+            <event displayName="gameOverIU" enabled="true" id="13" name="event-custom" order="23" repeats="true"/>
+            <event displayName="tutorial" enabled="true" id="14" name="event-custom" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="16" name="draw" order="5" repeats="true"/>
+            <event displayName="pause" enabled="true" id="19" name="event-device-swipe" order="8" repeats="true"/>
+            <event displayName="unpause" enabled="true" id="20" name="event-device-swipe" order="9" repeats="true"/>
+            <event displayName="play" enabled="true" id="21" name="event-custom" order="4" repeats="true"/>
+            <event displayName="checkAchievements" enabled="true" id="22" name="event-custom" order="27" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_128_128_spawnHandlerBlock" classname="scripts.Design_128_128_spawnHandlerBlock" desc="" description="" design="true" drawOrder="0" id="128" name="spawnHandlerBlock" oid="-1" package="scripts" shared="false" type="scene">
@@ -133,7 +134,6 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_18" classname="scripts.SceneEvents_18" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="131" name="SceneEvents_18" oid="-1" package="scripts." sceneid="18" shared="false" type="scene">
@@ -259,7 +259,7 @@
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_8_8_playerHealth" classname="scripts.Design_8_8_playerHealth" desc="" description="" design="true" drawOrder="0" id="8" name="playerHealth" oid="-1" package="scripts" shared="false" type="scene">
+    <snippet attachedevent="false" class="scripts.Design_156_156_playerHealthAndVelocity" classname="scripts.Design_156_156_playerHealthAndVelocity" desc="" description="" design="true" drawOrder="0" id="8" name="playerHealthAndVelocity" oid="-1" package="scripts" shared="false" type="scene">
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="healthFactor" hidden="true" id="2" name="_healthFactor" order="0"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="lifeBar" hidden="true" id="3" name="_lifeBar" order="1"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="warning" hidden="true" id="4" name="_warning" order="2"/>
@@ -280,6 +280,8 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="cardName" hidden="false" id="21" name="_cardName" order="17"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="currentSpeed" hidden="false" id="22" name="_currentSpeed" order="18"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="funFactCard" hidden="false" id="23" name="_funFactCard" order="19"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="TopSpeedAcceleration" hidden="false" id="24" name="_TopSpeedAcceleration" order="20"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="initialSpeed" hidden="false" id="25" name="_initialSpeed" order="21"/>
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="9" repeats="true"/>
@@ -311,7 +313,7 @@
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
-    <snippet attachedevent="false" class="scripts.Design_9_9_playerMovement" classname="scripts.Design_9_9_playerMovement" desc="" description="" design="true" drawOrder="0" id="9" name="playerMovement" oid="-1" package="scripts" shared="false" type="scene">
+    <snippet attachedevent="false" class="scripts.Design_156_156_BackgroundSpeed" classname="scripts.Design_156_156_BackgroundSpeed" desc="" description="" design="true" drawOrder="0" id="9" name="BackgroundSpeed" oid="-1" package="scripts" shared="false" type="scene">
         <blocks/>
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -547,6 +549,10 @@
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="277" attachedevent="true" class="scripts.ActorEvents_277" classname="scripts.ActorEvents_277" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="156" name="ActorEvents_277" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
     <snippet attachedevent="false" class="scripts.Design_37_37_autoKill" classname="scripts.Design_37_37_autoKill" desc="" description="" design="true" drawOrder="0" id="37" name="autoKill" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="timeCounter" hidden="true" id="1" name="_timeCounter" order="1"/>
@@ -653,11 +659,9 @@
     </snippet>
     <snippet actorid="81" attachedevent="true" class="scripts.ActorEvents_81" classname="scripts.ActorEvents_81" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="61" name="ActorEvents_81" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
-    </snippet>
-    <snippet actorid="83" attachedevent="true" class="scripts.ActorEvents_83" classname="scripts.ActorEvents_83" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="62" name="ActorEvents_83" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="104" attachedevent="true" class="scripts.ActorEvents_104" classname="scripts.ActorEvents_104" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="72" name="ActorEvents_104" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>

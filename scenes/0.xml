@@ -11,7 +11,7 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,363.0,0.0,363.0,40.0,0.0,40.0,0.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
+        <region b="64" g="64" h="40" id="0" name="Region 0" pts="4,0.0,0.0,0.0,40.0,363.0,40.0,363.0,0.0" r="64" type="box" w="363" x="-16" y="436"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -107,6 +107,7 @@
             <prop id="21" list="0" val=""/>
             <prop id="22" list="0" val="0.0"/>
             <prop id="23" list="0" val="-1"/>
+            <prop id="24" list="0" val="0"/>
         </s>
         <s enabled="true" id="88">
             <prop id="1" list="0" val="0.0"/>

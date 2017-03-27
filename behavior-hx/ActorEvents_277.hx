@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,57 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_127_127_notificationAnimated extends SceneScript
+class ActorEvents_277 extends ActorScript
 {
-	public var _yTranslate:Float;
-	public var _opacity:Float;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("yTranslate", "_yTranslate");
-		_yTranslate = 0.0;
-		nameMap.set("opacity", "_opacity");
-		_opacity = 150.0;
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		_yTranslate = asNumber(175);
-		propertyChanged("_yTranslate", _yTranslate);
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(!(Engine.engine.getGameAttribute("notificationText") == "empty"))
-				{
-					g.setFont(getFont(190));
-					_opacity = asNumber((_opacity - 1.5));
-					propertyChanged("_opacity", _opacity);
-					if((100 > _opacity))
-					{
-						g.alpha = (_opacity/100);
-					}
-					g.drawString("" + Engine.engine.getGameAttribute("notificationText"), ((320 - getFont(190).font.getTextWidth(Engine.engine.getGameAttribute("notificationText"))/Engine.SCALE) / 2), _yTranslate);
-					_yTranslate = asNumber((_yTranslate - .1));
-					propertyChanged("_yTranslate", _yTranslate);
-					if((0 > _opacity))
-					{
-						_opacity = asNumber(150);
-						propertyChanged("_opacity", _opacity);
-						_yTranslate = asNumber(175);
-						propertyChanged("_yTranslate", _yTranslate);
-						Engine.engine.setGameAttribute("notificationText", "empty");
-					}
-				}
-			}
-		});
 		
 	}
 	
