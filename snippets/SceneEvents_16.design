@@ -39,11 +39,18 @@
                                             <int id="2" val="26"/>
                                             <int id="3" val="0"/>
                                         </create-actor3>
+                                        <scaleTo comment="false" x="59" y="314">
+                                            <ACTOR eid="lastcreated" id="0"/>
+                                            <int id="1" val="100"/>
+                                            <int id="2" val="100"/>
+                                            <int id="3" val="3"/>
+                                            <int id="4" val="7"/>
+                                        </scaleTo>
                                     </group>
                                     <int id="0" val="2"/>
                                     <ACTOR eid="lastcreated" id="2"/>
                                 </dolater>
-                                <set-game-val-89 comment="false" x="48" y="326">
+                                <set-game-val-89 comment="false" x="48" y="353">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-89>
                             </group>
@@ -57,20 +64,20 @@
                         <int id="1" val="0"/>
                     </lesseq>
                 </if>
-                <comment-short comment="false" x="26" y="375">
+                <comment-short comment="false" x="26" y="402">
                     <int id="0" val="if you aren&amp;apos;t waiting for next trash spawn, then create trash"/>
                 </comment-short>
-                <else comment="false" x="26" y="395">
+                <else comment="false" x="26" y="422">
                     <group eventID="2" id="-1">
-                        <if comment="false" x="37" y="415">
+                        <if comment="false" x="37" y="442">
                             <group eventID="2" id="-1">
-                                <say-this comment="false" x="48" y="445">
+                                <say-this comment="false" x="48" y="472">
                                     <int id="0" val="randomSpawn"/>
                                 </say-this>
-                                <set-val-89-3 comment="false" x="48" y="465">
+                                <set-val-89-3 comment="false" x="48" y="492">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-89-3>
-                                <set-val-89-6 comment="false" x="48" y="490">
+                                <set-val-89-6 comment="false" x="48" y="517">
                                     <minus comment="false" id="0" x="0" y="0">
                                         <get-val-89-6 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="1"/>
@@ -208,7 +215,14 @@
                                 </moreeq>
                             </and>
                         </if>
-                        <set-val-89-3 comment="false" x="37" y="590">
+                        <scaleTo comment="false" x="37" y="590">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="125"/>
+                            <int id="2" val="125"/>
+                            <int id="3" val="0"/>
+                            <int id="4" val="0"/>
+                        </scaleTo>
+                        <set-val-89-3 comment="false" x="37" y="617">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-89-3>
                     </group>
