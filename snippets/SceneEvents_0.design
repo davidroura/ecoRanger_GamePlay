@@ -129,24 +129,37 @@
                         <int id="1" val="2"/>
                     </get-item>
                 </setanim>
-                <create-actor3 comment="false" x="26" y="565">
-                    <actortype eid="248" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="130"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <create-actor3 comment="false" x="26" y="592">
-                    <actortype eid="248" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="180"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <create-actor3 comment="false" x="26" y="619">
-                    <actortype eid="248" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val="230"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
+                <if comment="false" x="26" y="565">
+                    <group eventID="4" id="-1">
+                        <dolater comment="false" x="37" y="595">
+                            <group eventID="4" id="-1">
+                                <create-actor3 comment="false" x="48" y="622">
+                                    <actortype eid="248" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="130"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <create-actor3 comment="false" x="48" y="649">
+                                    <actortype eid="248" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="180"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <create-actor3 comment="false" x="48" y="676">
+                                    <actortype eid="248" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="230"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                            </group>
+                            <int id="0" val="16"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-26 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
             </group>
         </init>
     </group>
@@ -160,18 +173,6 @@
                 <int id="1" val="Center"/>
             </str-combine>
         </setanim>
-    </group>
-    <group eventID="4" id="2">
-        <if comment="false" x="553" y="696">
-            <group eventID="4" id="-1">
-                <say-this comment="false" x="564" y="726">
-                    <int id="0" val="tutorial"/>
-                </say-this>
-            </group>
-            <not comment="false" id="0" x="0" y="0">
-                <get-game-val-26 comment="false" id="0" x="0" y="0"/>
-            </not>
-        </if>
     </group>
     <group eventID="4" id="-1"/>
     <group eventID="10" id="0">
@@ -320,53 +321,79 @@
                                     <int id="2" val="100"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-75 comment="false" x="48" y="174">
-                                    <int id="0" val="Glad you joined us. Grab the trash so we can recycle it."/>
-                                </set-game-val-75>
-                                <create-actor3 comment="false" x="48" y="194">
-                                    <actortype eid="81" id="0"/>
-                                    <int id="1" val="170"/>
-                                    <int id="2" val="260"/>
-                                    <int id="3" val="0"/>
-                                </create-actor3>
+                                <dolater comment="false" x="48" y="174">
+                                    <group eventID="14" id="-1">
+                                        <create-actor3 comment="false" x="59" y="201">
+                                            <actortype eid="81" id="0"/>
+                                            <int id="1" val="140"/>
+                                            <int id="2" val="280"/>
+                                            <int id="3" val="0"/>
+                                        </create-actor3>
+                                    </group>
+                                    <int id="0" val="1"/>
+                                    <ACTOR eid="lastcreated" id="2"/>
+                                </dolater>
                             </group>
                             <int id="0" val="2"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="233">
+                        <dolater comment="false" x="37" y="252">
                             <group eventID="14" id="-1">
-                                <create-actor3 comment="false" x="48" y="260">
+                                <create-actor3 comment="false" x="48" y="279">
                                     <actortype eid="198" id="0"/>
                                     <int id="1" val="25"/>
                                     <int id="2" val="100"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <set-game-val-75 comment="false" x="48" y="287">
-                                    <int id="0" val="Don&amp;apos;t forget to use your power ups"/>
-                                </set-game-val-75>
-                                <create-actor3 comment="false" x="48" y="307">
+                                <setanim comment="false" x="48" y="306">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="2"/>
+                                </setanim>
+                                <create-actor3 comment="false" x="48" y="333">
                                     <actortype eid="277" id="0"/>
                                     <int id="1" val="15"/>
-                                    <int id="2" val="280"/>
+                                    <int id="2" val="380"/>
                                     <int id="3" val="0"/>
                                 </create-actor3>
-                                <fadeTo comment="false" x="48" y="334">
-                                    <ACTOR eid="lastcreated" id="0"/>
-                                    <int id="1" val="0"/>
-                                    <int id="2" val="4"/>
-                                    <int id="3" val="12"/>
-                                </fadeTo>
+                                <dolater comment="false" x="48" y="360">
+                                    <group eventID="14" id="-1">
+                                        <fadeTo comment="false" x="59" y="387">
+                                            <ACTOR eid="lastcreated" id="0"/>
+                                            <int id="1" val="0"/>
+                                            <int id="2" val="2"/>
+                                            <int id="3" val="12"/>
+                                        </fadeTo>
+                                    </group>
+                                    <int id="0" val="1"/>
+                                    <ACTOR eid="lastcreated" id="2"/>
+                                </dolater>
                             </group>
-                            <int id="0" val="6.5"/>
+                            <int id="0" val="8"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
-                        <dolater comment="false" x="37" y="373">
+                        <dolater comment="false" x="37" y="438">
                             <group eventID="14" id="-1">
-                                <set-game-val-26 comment="false" x="48" y="400">
+                                <create-actor3 comment="false" x="48" y="465">
+                                    <actortype eid="198" id="0"/>
+                                    <int id="1" val="25"/>
+                                    <int id="2" val="100"/>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <setanim comment="false" x="48" y="492">
+                                    <ACTOR eid="lastcreated" id="0"/>
+                                    <int id="1" val="3"/>
+                                </setanim>
+                            </group>
+                            <int id="0" val="14"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                        <dolater comment="false" x="37" y="531">
+                            <group eventID="14" id="-1">
+                                <set-game-val-26 comment="false" x="48" y="558">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-26>
                             </group>
-                            <int id="0" val="11.5"/>
+                            <int id="0" val="16"/>
                             <ACTOR eid="lastcreated" id="2"/>
                         </dolater>
                     </group>

@@ -140,7 +140,7 @@
         <number cid="2" id="19" name="dozerStrengthUnits" save="true" value="0.0"/>
         <boolean cid="5" id="89" name="recycleScoreAnimation" save="true" value="false"/>
         <boolean cid="3" id="25" name="presentationWatched" save="true" value="false"/>
-        <number cid="2" id="76" name="playerDefaultSpeed" save="true" value="0"/>
+        <number cid="2" id="76" name="playerDefaultSpeed" save="true" value="0.0"/>
         <number cid="4" id="96" name="moveUpgradeButtons" save="true" value="0.0"/>
         <boolean cid="7" id="42" name="spawnTrash" save="true" value="false"/>
         <number cid="2" id="74" name="ramdomUniversalNumber" save="true" value="0.0"/>
