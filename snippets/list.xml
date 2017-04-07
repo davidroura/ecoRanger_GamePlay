@@ -725,8 +725,8 @@
             <event displayName="glassCorrect" enabled="true" id="8" name="event-type-region" order="12" repeats="true"/>
             <event displayName="aluminumWrong" enabled="true" id="9" name="event-type-region" order="16" repeats="true"/>
             <event displayName="aluminumWrong" enabled="true" id="10" name="event-type-region" order="17" repeats="true"/>
-            <event displayName="glassWrong" enabled="true" id="11" name="event-type-region" order="14" repeats="true"/>
-            <event displayName="glassWrong" enabled="true" id="12" name="event-type-region" order="13" repeats="true"/>
+            <event displayName="glassWrong" enabled="true" id="11" name="event-type-region" order="13" repeats="true"/>
+            <event displayName="glassWrong" enabled="true" id="12" name="event-type-region" order="14" repeats="true"/>
             <event displayName="plasticWrong" enabled="true" id="13" name="event-type-region" order="10" repeats="true"/>
             <event displayName="plasticWrong" enabled="true" id="14" name="event-type-region" order="11" repeats="true"/>
         </events>
