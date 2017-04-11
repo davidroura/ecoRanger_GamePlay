@@ -269,23 +269,29 @@
                         <set-volume comment="false" x="37" y="139">
                             <int id="0" val="0"/>
                         </set-volume>
+                        <set-game-val-107 comment="false" x="37" y="159">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-107>
                     </group>
                     <get-val-6-10 comment="false" id="0" x="0" y="0"/>
                 </if>
-                <else comment="false" x="26" y="171">
+                <else comment="false" x="26" y="196">
                     <group eventID="8" id="-1">
-                        <set-val-6-10 comment="false" x="37" y="191">
+                        <set-val-6-10 comment="false" x="37" y="216">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-6-10>
-                        <set-val-6-11 comment="false" x="37" y="216">
+                        <set-val-6-11 comment="false" x="37" y="241">
                             <int id="0" val="Turn Off Volume"/>
                         </set-val-6-11>
-                        <set-val-6-9 comment="false" x="37" y="236">
+                        <set-val-6-9 comment="false" x="37" y="261">
                             <font eid="128" id="0"/>
                         </set-val-6-9>
-                        <set-volume comment="false" x="37" y="263">
+                        <set-volume comment="false" x="37" y="288">
                             <int id="0" val="100"/>
                         </set-volume>
+                        <set-game-val-107 comment="false" x="37" y="308">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-107>
                     </group>
                 </else>
             </group>
