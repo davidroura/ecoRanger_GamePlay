@@ -246,7 +246,7 @@
                     <int id="0" val="15"/>
                 </set-val-89-6>
                 <set-game-val-39 comment="false" x="26" y="60">
-                    <int id="0" val="15"/>
+                    <int id="0" val="8"/>
                 </set-game-val-39>
                 <comment-short comment="false" x="26" y="80">
                     <int id="0" val="picking the right asset animations"/>
